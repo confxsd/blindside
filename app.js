@@ -1411,7 +1411,7 @@ async function submitAnswers() {
   // Solo packs — skip API, go straight to solo results
   if (isSoloPack(selectedPackKey)) {
     goTo('results');
-    buildSoloReceipt();
+    await buildSoloReceipt();
     return;
   }
 
@@ -1995,125 +1995,13 @@ function buildReceiptWithName(partnerName) {
   if (isGuest) setTimeout(showSaveAccountModal, 2000);
 }
 
-// ==================== SOLO RESULT DEFINITIONS ====================
-const soloResultDefs = {
-  attachment: {
-    traits: ['anxious', 'avoidant', 'secure'],
-    results: {
-      anxious: { emoji: '💗', title: 'Anxious Attachment', desc: 'You love deeply and fear losing it. You crave closeness, reassurance, and can sense distance before it\'s spoken.', advice: 'Your capacity to love is a strength. Practice self-soothing and trust that silence doesn\'t mean abandonment.' },
-      avoidant: { emoji: '🛡️', title: 'Avoidant Attachment', desc: 'Independence is your armor. You value space, freedom, and tend to pull away when things get too close.', advice: 'Your need for space is valid. Try letting one person in past the walls — vulnerability isn\'t weakness.' },
-      secure: { emoji: '🌱', title: 'Secure Attachment', desc: 'You can be close without losing yourself. You communicate, trust, and handle conflict with grounded presence.', advice: 'You\'re the anchor. Keep modeling healthy relating — and don\'t forget to check in with your own needs too.' },
-    }
-  },
-  innermirror: {
-    traits: ['introvert', 'extrovert', 'thinker', 'feeler'],
-    results: {
-      introvert: { emoji: '🌙', title: 'The Inner World', desc: 'You recharge in solitude, process deeply, and prefer meaningful connection over surface-level interaction.', advice: 'Your depth is rare. Make sure you\'re not isolating — the right people deserve access to your inner world.' },
-      extrovert: { emoji: '☀️', title: 'The Social Force', desc: 'People are your fuel. You thrive in groups, think out loud, and bring energy wherever you go.', advice: 'Your energy lights rooms up. Just remember: stillness isn\'t stagnation — rest is part of the rhythm.' },
-      thinker: { emoji: '🧠', title: 'The Analyst', desc: 'Logic is your compass. You approach life with reason, structure, and a need to understand before you feel.', advice: 'Your clarity is powerful. Don\'t forget that feelings aren\'t inefficiencies — they\'re data too.' },
-      feeler: { emoji: '🫀', title: 'The Empath', desc: 'You feel everything — yours and everyone else\'s. Emotion is your first language and your deepest strength.', advice: 'Your empathy is a gift. Set boundaries so you don\'t carry what isn\'t yours to hold.' },
-    }
-  },
-  stresstype: {
-    traits: ['fight', 'flight', 'fawn', 'freeze'],
-    results: {
-      fight: { emoji: '🔥', title: 'Fight Response', desc: 'Under pressure, you take control. You push harder, get louder, and channel stress into action — sometimes too much.', advice: 'Your drive is incredible. Learn to pause before reacting — not every stress needs a battle.' },
-      flight: { emoji: '💨', title: 'Flight Response', desc: 'When things get heavy, you escape. Physically, mentally, digitally — you find a way out before the walls close in.', advice: 'Leaving is sometimes wisdom. But notice when you\'re running from growth, not danger.' },
-      fawn: { emoji: '🕊️', title: 'Fawn Response', desc: 'You survive by pleasing. You read rooms, adjust yourself, and prioritize others\' comfort over your own truth.', advice: 'Your kindness is real. Start asking: "Am I being kind, or am I being safe?" They\'re not always the same.' },
-      freeze: { emoji: '🧊', title: 'Freeze Response', desc: 'Overwhelm makes you still. You go quiet, numb, and wait for the storm to pass — often from the inside.', advice: 'Stillness can be wisdom. But practice small movements when frozen — one action can break the spell.' },
-    }
-  },
-  lovelang: {
-    traits: ['touch', 'words', 'acts', 'gifts', 'time'],
-    results: {
-      touch: { emoji: '🤲', title: 'Physical Touch', tagline: 'your love speaks through skin', desc: 'You communicate love through closeness — a hand on the back, a long hug, sitting pressed together on the couch. Words can lie. Touch doesn\'t. For you, presence is physical.', advice: 'Not everyone expresses love this way. Tell people what you need — they can\'t read your body if they speak a different love language.', youProbably: ['Hold people a beat longer than expected', 'Reach for someone\'s hand without thinking', 'Feel most hurt when someone flinches away', 'Judge relationships by how much physical warmth exists'] },
-      words: { emoji: '💬', title: 'Words of Affirmation', tagline: 'you hear love before you feel it', desc: 'A well-timed "I\'m proud of you" can carry you for weeks. You remember compliments word-for-word, and silence from someone you love feels deafening.', advice: 'You give what you need — so you probably over-compliment and under-ask. Say it: "I need to hear that you value me."', youProbably: ['Screenshot meaningful texts', 'Remember exact words of a compliment from years ago', 'Feel crushed by a passive-aggressive tone', 'Write long heartfelt messages at 2am'] },
-      acts: { emoji: '🔧', title: 'Acts of Service', tagline: 'love is a verb, not a word', desc: 'You don\'t want to hear "I love you" — you want to see it. A filled gas tank, a meal when you\'re tired, a solved problem you didn\'t ask for help with. That\'s romance.', advice: 'Be careful not to over-give and resent the imbalance. Notice when someone serves you in their own language, even if it\'s not yours.', youProbably: ['Do things for people without being asked', 'Feel deeply loved when someone handles your stress', 'Get frustrated by empty promises', 'Show love by fixing, carrying, handling logistics'] },
-      gifts: { emoji: '🎁', title: 'Receiving Gifts', tagline: 'it\'s the thought that proves the love', desc: 'It was never about the price tag. It\'s the proof that someone thought of you when you weren\'t there. A random snack, a playlist, a "saw this and thought of you" — that\'s everything.', advice: 'People might misread this as materialism. Help them understand: the gift is evidence of attention, not transaction.', youProbably: ['Keep small meaningful objects forever', 'Feel hurt when someone forgets an occasion', 'Notice when someone remembers a tiny thing you mentioned', 'Put thought into every gift you give'] },
-      time: { emoji: '⏳', title: 'Quality Time', tagline: 'your love currency is undivided attention', desc: 'A phone on the table during dinner is a rejection. You don\'t need activities — you need someone fully present, with nowhere else to be and no one else to text.', advice: 'In a distracted world, this is the hardest language to have. Be explicit: "I need your eyes, not your schedule."', youProbably: ['Notice immediately when someone checks their phone mid-conversation', 'Treasure lazy mornings with no plans', 'Feel rejected by chronic busyness', 'Fall hardest for people who make time stop'] },
-    }
-  },
-  shadow: {
-    traits: ['repressed_selfishness', 'repressed_vulnerability', 'repressed_authenticity', 'repressed_need'],
-    results: {
-      repressed_selfishness: { emoji: '👹', title: 'The Repressed Self', tagline: 'the part of you that wants without guilt', desc: 'You learned early that wanting things for yourself is dangerous. So you became the giver, the selfless one. But underneath, there\'s a version of you that\'s exhausted from never taking.', advice: 'Selfishness isn\'t your shadow — it\'s your unmet need for reciprocity. Start with small acts of self-priority. Taking doesn\'t make you bad.', youProbably: ['Say "I don\'t mind" when you absolutely do', 'Feel rage when someone takes without asking', 'Resent being "the reliable one"', 'Judge selfish people hardest because you envy their freedom'] },
-      repressed_vulnerability: { emoji: '🥀', title: 'The Hidden Softness', tagline: 'strength was never a choice — it was survival', desc: 'You\'ve built an identity around being strong, capable, unbreakable. But your shadow holds the tears you never let fall, the help you never asked for, the softness you buried because someone once made it feel unsafe.', advice: 'Vulnerability isn\'t the opposite of strength — it\'s the upgrade. Let one person see the real weight. You don\'t have to shatter. Just crack the door.', youProbably: ['Cry alone but never in front of people', 'Feel uncomfortable when someone takes care of you', 'Get praised for "handling it so well" and feel like screaming', 'Attract people who lean on you but never ask how you are'] },
-      repressed_authenticity: { emoji: '🎭', title: 'The Curated Self', tagline: 'the mask fits so well you forgot it\'s there', desc: 'You\'re not lying — you\'re performing. A version of you that\'s palatable, agreeable, conflict-free. Your shadow holds your real opinions, your anger, your "actually, no." You\'re so good at reading rooms that you forgot you\'re allowed to disrupt them.', advice: 'Honesty doesn\'t require cruelty. Start by noticing the moments you edit yourself. What would you say if you couldn\'t lose anyone for saying it?', youProbably: ['Agree with opinions you don\'t hold', 'Feel exhausted after social events from performing', 'Have different personalities for different groups', 'Fear being "too much" more than "not enough"'] },
-      repressed_need: { emoji: '🕳️', title: 'The Hidden Need', tagline: 'you need people more than you let anyone see', desc: 'Independence is your brand. But it\'s also your prison. You\'ve convinced everyone — and almost yourself — that you\'re fine alone. Your shadow holds the ache for connection and the quiet loneliness of proving you don\'t need anyone.', advice: 'Needing someone doesn\'t make you weak. It makes you alive. Try saying "I missed you" without deflecting. Let it land.', youProbably: ['Leave conversations feeling disconnected but can\'t name why', 'Feel relief and panic in equal measure when someone gets close', 'Have acquaintances everywhere but few deep bonds', 'Push away people who try to check in'] },
-    }
-  },
-  emotionalage: {
-    traits: ['child', 'teen', 'adult', 'elder'],
-    results: {
-      child: { emoji: '🧒', title: 'The Inner Child', tagline: 'you feel everything at full volume', desc: 'Your emotional world is vivid, raw, and unfiltered. Joy is electric, rejection is catastrophic, and the need for safety drives more of your decisions than you realize. This isn\'t immaturity — it\'s a sign that some part of you is still waiting to be seen.', advice: 'You don\'t need to grow up faster. You need to parent yourself the way you deserved to be parented. Safety first. Then the feelings get quieter.', youProbably: ['Take things very personally', 'Need reassurance after any sign of distance', 'Feel emotions in your body — stomach drops, chest tightness', 'Have a younger voice that speaks loudest when tired or scared'] },
-      teen: { emoji: '⚡', title: 'The Rebel', tagline: 'proving, pushing, performing — always', desc: 'You\'re in the era of proving yourself. To the world, to doubters, maybe to yourself. There\'s a restless energy — achievement feels urgent, rest feels lazy, and identity is still something you\'re building in real time.', advice: 'You don\'t have to earn your place. You\'re already here. The grinding, the proving — it\'s exhausting because it\'s not sustainable. Stop performing and still be valued.', youProbably: ['Compare yourself to people constantly', 'Struggle to sit still without productivity guilt', 'Have a harsh inner critic that sounds like someone from your past', 'Alternate between overconfidence and deep self-doubt'] },
-      adult: { emoji: '🌿', title: 'The Grounded One', tagline: 'you feel it, name it, and choose what to do', desc: 'You can hold difficult emotions without drowning. You communicate, reflect, and take responsibility without collapsing into guilt. You\'re not perfect, but you\'re present.', advice: 'Don\'t let emotional maturity become emotional suppression. Grounded doesn\'t mean numb. Keep making room for messiness — that\'s where aliveness lives.', youProbably: ['Apologize without needing the other person to apologize first', 'Hold space for others without losing yourself', 'Recognize childhood patterns without being ruled by them', 'Feel proud of how far you\'ve come, quietly'] },
-      elder: { emoji: '🦉', title: 'The Wise Observer', tagline: 'you\'ve stopped fighting the river', desc: 'You see the bigger picture. Emotions arrive and you watch them instead of becoming them. There\'s a calm from having survived enough storms to know: this too passes. People are drawn to your presence because it feels like rest.', advice: 'Don\'t detach so far that you stop feeling. Wisdom without warmth becomes distance. Stay close to people who still surprise you.', youProbably: ['Rarely feel urgency about things that used to destroy you', 'Give advice that lands because you\'ve earned it', 'Feel occasional loneliness from being emotionally "ahead"', 'Value peace over passion — and sometimes miss the fire'] },
-    }
-  },
-  boundaries: {
-    traits: ['porous', 'passive', 'healthy', 'rigid'],
-    results: {
-      porous: { emoji: '🫗', title: 'Porous Boundaries', tagline: 'you let everyone in — and it costs you', desc: 'You absorb other people\'s emotions, take on their problems, and struggle to tell where you end and someone else begins. Saying no feels like a betrayal. You over-share, over-give, and then wonder why you feel hollow.', advice: 'A boundary isn\'t a wall — it\'s a filter. Start with one small "no" this week. The discomfort fades but the self-respect doesn\'t.', youProbably: ['Feel responsible for other people\'s emotions', 'Over-share personal details with strangers', 'Attract people who take more than they give', 'Feel guilty for having needs'] },
-      passive: { emoji: '😶', title: 'Passive Boundaries', tagline: 'you know what you need — you just can\'t say it', desc: 'You have the words. You even rehearse them in the shower. But in the moment, they dissolve. You hint, you hope, you swallow. The boundary exists inside you — it just hasn\'t made it to your mouth yet.', advice: 'Start with low-stakes situations. Text the boundary before saying it face-to-face. Every rep makes the next one easier. Your voice deserves volume.', youProbably: ['Say "it\'s fine" when it absolutely is not', 'Rehearse confrontations that never happen', 'Build resentment silently until you explode', 'Feel surprised when people cross lines you never voiced'] },
-      healthy: { emoji: '💚', title: 'Healthy Boundaries', tagline: 'you can love and still say no', desc: 'You\'ve learned — maybe the hard way — that protecting your energy isn\'t selfish. You say no without cruelty, yes without resentment, and hold space without losing yourself.', advice: 'Boundaries are muscles, not achievements. They need maintenance. Watch for situations where old patterns creep back — usually with the people who matter most.', youProbably: ['Leave conversations feeling intact', 'Disagree without it becoming a crisis', 'Know when to engage and when to walk away', 'Attract people who respect your space because you model it'] },
-      rigid: { emoji: '🧱', title: 'Rigid Boundaries', tagline: 'the walls work — but they\'re lonely', desc: 'You built your defenses for a reason, and they work. Almost too well. People can\'t hurt you, but they also can\'t reach you. Intimacy feels like a security risk, and vulnerability is a door you sealed shut.', advice: 'The walls kept you safe once. Ask yourself if they still need to be this high, or if they\'re protecting you from a threat that\'s no longer there.', youProbably: ['Cut people off cleanly and quickly', 'Prefer independence over connection when stressed', 'Have very few close relationships', 'Feel proud of needing no one — and sometimes empty because of it'] },
-    }
-  },
-  selfsabotage: {
-    traits: ['doom', 'unworthiness', 'perfectionism', 'impostor'],
-    results: {
-      doom: { emoji: '🌪️', title: 'The Doom Pattern', tagline: 'you leave before the leaving happens to you', desc: 'Somewhere along the way, you learned that good things end — and it\'s better to brace than to trust. So you pull away, self-destruct, or wait for the crash. It\'s not pessimism. It\'s preemptive grief.', advice: 'You\'re time-traveling to a pain that hasn\'t happened yet. Try staying in the present — even if it feels dangerously good. Not every good thing is a setup.', youProbably: ['Mentally prepare for breakups during happy moments', 'Leave jobs or cities before they can disappoint you', 'Feel suspicious when life is calm', 'Say "I knew it" when things go wrong, like you predicted it'] },
-      unworthiness: { emoji: '🪫', title: 'The Unworthiness Pattern', tagline: 'you dim yourself so the light doesn\'t scare you', desc: 'You sabotage because deep down, you believe you don\'t deserve the good thing. So you make yourself small, give it away, or let it slip — because keeping it feels like stealing.', advice: 'You don\'t need to earn your place at the table. You were invited. Start treating yourself like someone whose happiness matters.', youProbably: ['Deflect compliments like they\'re attacks', 'Give away credit for your own work', 'Feel uncomfortable when things are going well', 'Believe other people deserve things more'] },
-      perfectionism: { emoji: '🔬', title: 'The Perfectionism Pattern', tagline: 'nothing is ever finished because nothing is ever enough', desc: 'You don\'t procrastinate from laziness — you procrastinate from fear. If it\'s not perfect, it reflects on your worth. So you tweak, redo, delay, and polish until the deadline forces a release you\'re never happy with.', advice: 'Perfectionism isn\'t high standards — it\'s fear of being seen as flawed. Done is better than perfect. Ship it. The people who love you aren\'t grading you.', youProbably: ['Spend 3 hours on an email that takes 10 minutes', 'Feel physical discomfort at "good enough"', 'Criticize your own work before anyone else can', 'Have unfinished projects everywhere'] },
-      impostor: { emoji: '🎪', title: 'The Impostor Pattern', tagline: 'everyone else belongs here — you just snuck in', desc: 'You look around and see people who know what they\'re doing. Then you look at yourself and see a convincing act. Every success is luck, every compliment a mistake, and every room one question away from exposure.', advice: 'The impostor feeling is, ironically, a sign that you care about quality and truth. The actual impostors don\'t feel this way. Your seat is yours. Sit in it.', youProbably: ['Over-prepare for everything because winging it feels dangerous', 'Attribute success to timing, luck, or other people', 'Feel anxious in rooms of "more qualified" people', 'Keep waiting for the day someone calls you out'] },
-    }
-  },
-  // Character archetype decks
-  partnertype: {
-    traits: ['golden_retriever', 'dark_academic', 'mysterious_poet', 'chaos_agent'],
-    results: {
-      golden_retriever: { emoji: '🐕', title: 'Golden Retriever', tagline: 'warm, loyal, and impossibly sweet', desc: 'The one who drops everything when you need them. They remember the small things — your coffee order, the song you hummed once, the way you like your pillows. Their love is loud, consistent, and feels like sunlight.', advice: 'They give so much that they sometimes forget to ask for what they need. Don\'t let their warmth make you forget they have storms too.', youProbably: ['Get "good morning" texts every single day', 'Feel like the most important person in the room when they look at you', 'Know they\'d apologize first even when they\'re right', 'Catch them smiling at you when they think you\'re not looking'] },
-      dark_academic: { emoji: '📚', title: 'Dark Academic', tagline: 'quiet depth wrapped in sharp intellect', desc: 'The one who brings you books instead of flowers, who debates philosophy at midnight, and whose silence says more than most people\'s words. Their love is thoughtful, intentional, and sometimes hard to decode — but when it lands, it hits deep.', advice: 'Their need for space isn\'t distance — it\'s how they process. Don\'t mistake their quiet for coldness; they\'re feeling everything, just internally.', youProbably: ['Have the most interesting conversations at 2am', 'Receive song or book recommendations that feel like love letters', 'Notice they observe everything but share selectively', 'Feel intellectually challenged in the best way'] },
-      mysterious_poet: { emoji: '🌙', title: 'Mysterious Poet', tagline: 'they feel everything and turn it into art', desc: 'The one who writes you letters they\'ll never send, who sees beauty in things others miss, and whose inner world is richer than most people will ever know. Their love is deep, quiet, and expressed in ways that catch you off guard.', advice: 'They need to be seen for who they really are, not who you imagine them to be. Give them space to be messy — not every feeling needs to be poetic.', youProbably: ['Find handwritten notes in unexpected places', 'Feel like they understand parts of you no one else reaches', 'Notice they disappear sometimes — then come back with something beautiful', 'Know their playlist is basically a diary of your relationship'] },
-      chaos_agent: { emoji: '⚡', title: 'Chaos Agent', tagline: 'life is never boring with them in it', desc: 'The one who turns a grocery run into an adventure, who makes you laugh until you cry, and whose energy is so contagious it rewires your whole mood. Their love is loud, unpredictable, and never, ever dull.', advice: 'Behind the chaos is someone who\'s terrified of stillness — because stillness means sitting with feelings. Let them know it\'s safe to be quiet with you.', youProbably: ['Have the wildest stories that all start with "so they had this idea..."', 'Laugh harder with them than with anyone else', 'Feel like every day is different when they\'re around', 'Know that under the jokes, they care more than they let on'] },
-    }
-  },
-  partnerera: {
-    traits: ['main_character', 'healer', 'ride_or_die', 'soft_villain'],
-    results: {
-      main_character: { emoji: '👑', title: 'Main Character', tagline: 'the world revolves around your energy', desc: 'You walk into a room and the vibe shifts. You set the pace, curate the aesthetic, and lead with confidence that others admire (and sometimes envy). Your love story isn\'t a side plot — it\'s the whole movie.', advice: 'Your light is magnetic, but make sure the spotlight has room for two. The best love stories have a co-lead, not an audience.', youProbably: ['Plan dates that feel like movie scenes', 'Have an aesthetic that people screenshot', 'Set the tone in every group chat and friend circle', 'Know exactly what you want — and refuse to settle for less'] },
-      healer: { emoji: '🌿', title: 'The Healer', tagline: 'you love so deeply it becomes medicine', desc: 'You\'re the one people come to when they\'re broken. You listen without judgment, hold space without flinching, and love with a patience that borders on supernatural. Your presence alone makes people feel safe.', advice: 'You pour so much into others that your cup runs dry. Healing isn\'t your job in a relationship — it\'s something you both do for each other.', youProbably: ['Know exactly what someone needs before they say it', 'Attract people who need fixing (and sometimes forget to fix yourself)', 'Have friends who say "I don\'t know what I\'d do without you"', 'Feel responsible for everyone\'s emotional wellbeing'] },
-      ride_or_die: { emoji: '🔥', title: 'Ride or Die', tagline: 'your loyalty is legendary and unbreakable', desc: 'When you love someone, you love them with everything. 3am calls, across-town drives, no questions asked. Your commitment isn\'t conditional — it\'s a promise you keep even when it costs you.', advice: 'Loyalty without boundaries becomes self-sacrifice. Make sure the people you\'d go to war for would do the same for you.', youProbably: ['Show up for people even when they don\'t ask', 'Have a small circle but would die for every person in it', 'Go from zero to "I\'ll fight them" in seconds when someone hurts your person', 'Love with an intensity that scares people who aren\'t ready for it'] },
-      soft_villain: { emoji: '🖤', title: 'Soft Villain', tagline: 'mysterious, magnetic, and unapologetically yourself', desc: 'You\'re the one they can\'t figure out — and that\'s the point. You test people, keep them guessing, and only let in those who prove they can handle your full complexity. Your love isn\'t easy, but it\'s unforgettable.', advice: 'Not everything has to be a test. Sometimes the bravest thing isn\'t keeping people guessing — it\'s letting them stay.', youProbably: ['Have an energy that people are drawn to but can\'t explain', 'Give the hard truth when everyone else is sugarcoating', 'Keep people at arm\'s length until they\'ve earned your trust', 'Love fiercely but leave before you get left'] },
-    }
-  },
-  couplestory: {
-    traits: ['soulmates', 'adventure_duo', 'chaos_couple', 'slow_burn'],
-    results: {
-      soulmates: { emoji: '✨', title: 'Soulmates', tagline: 'written in the stars before you even met', desc: 'Your connection feels cosmic — like you\'ve known each other in a past life, or were always meant to collide. You finish each other\'s sentences, feel each other\'s moods, and have a bond that makes other people believe in fate.', advice: 'Destiny brought you together, but choice keeps you there. Don\'t coast on "meant to be" — keep actively choosing each other every day.', youProbably: ['Say the same thing at the same time constantly', 'Have friends who say "you two are disgusting" (lovingly)', 'Feel like home is a person, not a place', 'Know what the other is thinking with just a look'] },
-      adventure_duo: { emoji: '🗺️', title: 'Adventure Duo', tagline: 'your love story is a highlight reel', desc: 'You two don\'t just exist together — you experience the world together. Every trip, every spontaneous plan, every "what if we just...?" is another chapter. Your relationship lives in motion.', advice: 'Adventures are beautiful, but so is stillness. Make sure you can sit in silence together without needing the next thrill to feel connected.', youProbably: ['Have more travel photos together than normal photos', 'Plan your next adventure before the current one is over', 'Bond deepest during chaotic, unplanned moments', 'Feel most alive when you\'re exploring something new together'] },
-      chaos_couple: { emoji: '🎪', title: 'Chaos Couple', tagline: 'it shouldn\'t work but it absolutely does', desc: 'You two are the couple that makes no sense on paper but perfect sense in real life. The fights are loud, the love is louder, and your inside jokes need a glossary. It\'s messy, magnetic, and no one else could survive it.', advice: 'Chaos is fun until it\'s not. Learn to tell the difference between passion and patterns that need breaking. The best chaos has a safe landing.', youProbably: ['Have a relationship that confuses outsiders', 'Go from arguing to laughing in under 5 minutes', 'Have inside jokes that would take 30 minutes to explain', 'Know that boring was never an option for you two'] },
-      slow_burn: { emoji: '🕯️', title: 'Slow Burn', tagline: 'the love that was worth the wait', desc: 'You didn\'t rush into this — and that\'s what makes it real. Built on friendship, trust, and a thousand small moments that added up to something undeniable. Your love story isn\'t loud, but it\'s deep.', advice: 'Your patience is your superpower. Just make sure "taking it slow" doesn\'t become "avoiding vulnerability." The deepest love requires the deepest risk.', youProbably: ['Were friends for a suspiciously long time before anything happened', 'Have a love story that makes people say "finally!"', 'Feel more secure in this relationship than any you\'ve had', 'Value the quiet moments more than the grand gestures'] },
-    }
-  },
-  whattheyhide: {
-    traits: ['hopeless_romantic', 'secret_overthinker', 'soft_protector', 'guarded_dreamer'],
-    results: {
-      hopeless_romantic: { emoji: '💘', title: 'Hopeless Romantic', tagline: 'they love harder than they\'ll ever let you see', desc: 'Behind every casual "yeah it was cool" is someone who replayed every second of your last date. They imagine futures, save your photos, and fall asleep thinking about your laugh. They\'re not playing it cool — they\'re terrified of how much they feel.', advice: 'They need to know that loving openly won\'t scare you away. Show them that their tenderness is strength, not weakness — and that you want all of it.', youProbably: ['Catch them looking at you with an expression they\'d deny', 'Find out they remember things you said months ago', 'Notice they plan things for "someday" that include you', 'Know they love you more than their words can carry'] },
-      secret_overthinker: { emoji: '🧠', title: 'Secret Overthinker', tagline: 'their mind never stops running scenarios', desc: 'They\'re replaying your last conversation at 3am, analyzing your tone, and wondering if that emoji meant something different. They\'re not anxious — they\'re deeply invested and terrified of getting it wrong. Every silence feels like a clue they need to decode.', advice: 'Reassurance isn\'t clingy — for them, it\'s oxygen. A simple "we\'re good" can quiet the noise in their head for days. Be direct, not vague.', youProbably: ['Get carefully worded texts that they rewrote four times', 'Notice they pick up on mood shifts before you mention them', 'Know they\'ve already thought of every possible outcome', 'Feel like they\'re always one step ahead — because they are, in their head'] },
-      soft_protector: { emoji: '🛡️', title: 'Soft Protector', tagline: 'they carry weight you\'ll never know about', desc: 'They walk on the traffic side of the sidewalk. They check if you\'ve eaten. They stay calm in chaos so you don\'t have to be scared. Their love isn\'t loud — it\'s structural. They build safety around you without ever asking for credit.', advice: 'They need to know that protecting you doesn\'t mean carrying everything alone. Let them be soft too. They\'ve been strong for so long they forgot they\'re allowed to rest.', youProbably: ['Feel inexplicably safe when they\'re around', 'Notice they handle problems before you even know they exist', 'Know they put your comfort above their own — always', 'See them carry stress silently and wish they\'d let you help'] },
-      guarded_dreamer: { emoji: '🔐', title: 'Guarded Dreamer', tagline: 'they want to let you in but the walls are high', desc: 'They have a whole world inside them — dreams, fears, tenderness — but it\'s behind a door they rarely open. They want to be vulnerable with you. They\'ve just been burned enough to know that openness has a price, and they\'re still deciding if it\'s safe to pay it.', advice: 'Don\'t force the door. Show them through consistency — not just words — that you\'re not going anywhere. The day they open up will be worth every patient moment.', youProbably: ['Feel like you\'re always almost seeing the real them', 'Notice them start to open up then pull back', 'Know there\'s more beneath the surface than they show anyone', 'Catch small moments of vulnerability they quickly cover up'] },
-    }
-  },
-};
+// ==================== SOLO RESULT DEFINITIONS (loaded from /data/{lang}/results/) ====================
+async function buildSoloReceipt() {
+  // Load translated result definitions
+  const packResult = await loadResults(selectedPackKey, i18n.current);
+  if (!packResult) { buildReceipt(); return; }
 
-function tResult(packKey, traitKey, field, fallback) {
-  return soloResultTranslations[i18n.current]?.[packKey]?.[traitKey]?.[field] ?? fallback;
-}
-
-function buildSoloReceipt() {
-  // Tally trait scores (handles both single and multi-select answers)
+  // Tally trait scores
   const scores = {};
   questions.forEach((q, i) => {
     const raw = selectedAnswers[i];
@@ -2127,10 +2015,6 @@ function buildSoloReceipt() {
       });
     });
   });
-
-  // Get pack result definitions
-  const packResult = soloResultDefs[selectedPackKey];
-  if (!packResult) { buildReceipt(); return; } // fallback
 
   // Find dominant trait
   const sortedTraits = Object.entries(scores).sort((a, b) => b[1] - a[1]);
@@ -2148,7 +2032,7 @@ function buildSoloReceipt() {
       <div class="solo-trait-bar">
         <div class="solo-trait-header">
           <span class="solo-trait-emoji">${r.emoji}</span>
-          <span class="solo-trait-name">${tResult(selectedPackKey, trait, 'title', r.title)}</span>
+          <span class="solo-trait-name">${r.title}</span>
           <span class="solo-trait-pct">${pct}%</span>
         </div>
         <div class="solo-bar-track">
@@ -2183,7 +2067,7 @@ function buildSoloReceipt() {
     youProbablyHtml = `
       <div class="solo-youprobably glass">
         <div class="solo-youprobably-title">${i18n.t('solo_you_probably')}</div>
-        ${result.youProbably.map((item, idx) => `<div class="solo-yp-item"><span class="solo-yp-dot"></span>${tResult(selectedPackKey, dominantKey, 'yp_' + idx, item)}</div>`).join('')}
+        ${result.youProbably.map(item => `<div class="solo-yp-item"><span class="solo-yp-dot"></span>${item}</div>`).join('')}
       </div>
     `;
   }
@@ -2191,7 +2075,7 @@ function buildSoloReceipt() {
   const packDef = packDefs.find(p => p.key === selectedPackKey);
   const now = new Date();
   const dateStr = now.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-  const taglineHtml = result.tagline ? `<div class="solo-tagline">${tResult(selectedPackKey, dominantKey, 'tagline', result.tagline)}</div>` : '';
+  const taglineHtml = result.tagline ? `<div class="solo-tagline">${result.tagline}</div>` : '';
 
   const scroll = document.getElementById('storyScroll');
   scroll.innerHTML = `
@@ -2199,16 +2083,16 @@ function buildSoloReceipt() {
       <div class="story-hero-top">
         <div class="story-hero-emoji">${result.emoji}</div>
       </div>
-      <div class="story-hero-vibe">${tResult(selectedPackKey, dominantKey, 'title', result.title)}</div>
+      <div class="story-hero-vibe">${result.title}</div>
       ${taglineHtml}
       <div class="story-hero-sub">${i18n.t(packDef.nameKey)}</div>
       <div class="story-hero-names"><span class="solo-badge-tag">${i18n.t('solo_badge')}</span></div>
     </div>
-    <div class="story-intro"><p>${tResult(selectedPackKey, dominantKey, 'desc', result.desc)}</p></div>
+    <div class="story-intro"><p>${result.desc}</p></div>
     ${youProbablyHtml}
     <div class="solo-advice-card glass">
       <div class="solo-advice-label">${i18n.t('solo_note_to_self')}</div>
-      <div class="solo-advice-text">${tResult(selectedPackKey, dominantKey, 'advice', result.advice)}</div>
+      <div class="solo-advice-text">${result.advice}</div>
     </div>
     <div class="solo-breakdown-section">
       <div class="solo-breakdown-title">${i18n.t('solo_breakdown')}</div>
@@ -2228,7 +2112,6 @@ function buildSoloReceipt() {
   scroll.scrollTop = 0;
   spawnConfetti();
 }
-
 function buildReceipt() {
   const data = revealData.length ? revealData : questions.map((q, i) => {
     const raw = selectedAnswers[i];

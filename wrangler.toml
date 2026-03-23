@@ -1,0 +1,8 @@
+name = "blindside"
+compatibility_date = "2024-09-25"
+pages_build_output_dir = "."
+
+[[d1_databases]]
+binding = "DB"
+database_name = "blindside"
+database_id = "542ed460-3efa-46b2-91cc-3ee13c0f91c7"
