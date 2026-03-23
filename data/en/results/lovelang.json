@@ -1,0 +1,70 @@
+{
+  "traits": ["touch", "words", "acts", "gifts", "time"],
+  "results": {
+    "touch": {
+      "emoji": "🤲",
+      "title": "Physical Touch",
+      "tagline": "your love speaks through skin",
+      "desc": "You communicate love through closeness — a hand on the back, a long hug, sitting pressed together on the couch. Words can lie. Touch doesn't. For you, presence is physical.",
+      "advice": "Not everyone expresses love this way. Tell people what you need — they can't read your body if they speak a different love language.",
+      "youProbably": [
+        "Hold people a beat longer than expected",
+        "Reach for someone's hand without thinking",
+        "Feel most hurt when someone flinches away",
+        "Judge relationships by how much physical warmth exists"
+      ]
+    },
+    "words": {
+      "emoji": "💬",
+      "title": "Words of Affirmation",
+      "tagline": "you hear love before you feel it",
+      "desc": "A well-timed \"I'm proud of you\" can carry you for weeks. You remember compliments word-for-word, and silence from someone you love feels deafening.",
+      "advice": "You give what you need — so you probably over-compliment and under-ask. Say it: \"I need to hear that you value me.\"",
+      "youProbably": [
+        "Screenshot meaningful texts",
+        "Remember exact words of a compliment from years ago",
+        "Feel crushed by a passive-aggressive tone",
+        "Write long heartfelt messages at 2am"
+      ]
+    },
+    "acts": {
+      "emoji": "🔧",
+      "title": "Acts of Service",
+      "tagline": "love is a verb, not a word",
+      "desc": "You don't want to hear \"I love you\" — you want to see it. A filled gas tank, a meal when you're tired, a solved problem you didn't ask for help with. That's romance.",
+      "advice": "Be careful not to over-give and resent the imbalance. Notice when someone serves you in their own language, even if it's not yours.",
+      "youProbably": [
+        "Do things for people without being asked",
+        "Feel deeply loved when someone handles your stress",
+        "Get frustrated by empty promises",
+        "Show love by fixing, carrying, handling logistics"
+      ]
+    },
+    "gifts": {
+      "emoji": "🎁",
+      "title": "Receiving Gifts",
+      "tagline": "it's the thought that proves the love",
+      "desc": "It was never about the price tag. It's the proof that someone thought of you when you weren't there. A random snack, a playlist, a \"saw this and thought of you\" — that's everything.",
+      "advice": "People might misread this as materialism. Help them understand: the gift is evidence of attention, not transaction.",
+      "youProbably": [
+        "Keep small meaningful objects forever",
+        "Feel hurt when someone forgets an occasion",
+        "Notice when someone remembers a tiny thing you mentioned",
+        "Put thought into every gift you give"
+      ]
+    },
+    "time": {
+      "emoji": "⏳",
+      "title": "Quality Time",
+      "tagline": "your love currency is undivided attention",
+      "desc": "A phone on the table during dinner is a rejection. You don't need activities — you need someone fully present, with nowhere else to be and no one else to text.",
+      "advice": "In a distracted world, this is the hardest language to have. Be explicit: \"I need your eyes, not your schedule.\"",
+      "youProbably": [
+        "Notice immediately when someone checks their phone mid-conversation",
+        "Treasure lazy mornings with no plans",
+        "Feel rejected by chronic busyness",
+        "Fall hardest for people who make time stop"
+      ]
+    }
+  }
+}

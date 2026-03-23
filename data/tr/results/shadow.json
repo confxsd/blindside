@@ -1,0 +1,37 @@
+{
+  "traits": ["repressed_selfishness", "repressed_vulnerability", "repressed_authenticity", "repressed_need"],
+  "results": {
+    "repressed_selfishness": {
+      "emoji": "👹",
+      "title": "Bastırılmış Benlik",
+      "tagline": "suçluluk duymadan isteyen yanın",
+      "desc": "Erken yaşta kendin için bir şey istemenin tehlikeli olduğunu öğrendin. Bu yüzden veren, fedakar olan sen oldun. Ama altında, hiç almamaktan bitkin düşmüş bir versiyonun var.",
+      "advice": "Bencillik senin gölgen değil — karşılıklılığa olan karşılanmamış ihtiyacın. Kendini öncelemekle başla, küçük adımlarla. Almak seni kötü biri yapmaz.",
+      "youProbably": ["Kesinlikle umursadığın halde \"benim için fark etmez\" dersin", "Biri sormadan aldığında öfke hissedersin", "\"Güvenilir olan\" olmaktan bıkarsın", "Bencil insanları en sert sen yargılarsın çünkü özgürlüklerini kıskandığın için"]
+    },
+    "repressed_vulnerability": {
+      "emoji": "🥀",
+      "title": "Gizli Yumuşaklık",
+      "tagline": "güçlü olmak bir tercih değildi — hayatta kalmaktı",
+      "desc": "Güçlü, becerikli, kırılmaz olmak üzerine bir kimlik inşa ettin. Ama gölgen hiç dökmediğin gözyaşlarını, hiç istemediğin yardımı, biri güvensiz hissettirdiği için gömdüğün yumuşaklığı barındırıyor.",
+      "advice": "Kırılganlık gücün zıttı değil — bir üst versiyonu. Bir kişinin gerçek ağırlığı görmesine izin ver. Paramparça olmak zorunda değilsin. Kapıyı biraz arala yeter.",
+      "youProbably": ["Yalnızken ağlarsın ama insanların önünde asla", "Biri sana baktığında rahatsız hissedersin", "\"Çok iyi idare ediyorsun\" diye övülürsün ve içinden çığlık atmak istersin", "Sana dayanan ama nasıl olduğunu hiç sormayan insanları çekersin"]
+    },
+    "repressed_authenticity": {
+      "emoji": "🎭",
+      "title": "Küratlü Benlik",
+      "tagline": "maske o kadar iyi oturuyor ki orada olduğunu unuttun",
+      "desc": "Yalan söylemiyorsun — performans sergiliyorsun. Kabul edilebilir, uyumlu, çatışmasız bir versiyon. Gölgen gerçek fikirlerini, öfkeni, \"aslında hayır\"ını barındırıyor. Ortam okumada o kadar iyisin ki ortamı bozma hakkın olduğunu unuttun.",
+      "advice": "Dürüstlük acımasızlık gerektirmez. Kendini düzenlediğin anları fark etmeye başla. Biri kaybetme riskin olmasa ne söylerdin?",
+      "youProbably": ["Katılmadığın fikirlere katılırsın", "Performans sergilediğin için sosyal etkinliklerden bitkin çıkarsın", "Farklı gruplar için farklı kişiliklerin vardır", "\"Yetersiz\" olmaktan çok \"fazla\" olmaktan korkarsın"]
+    },
+    "repressed_need": {
+      "emoji": "🕳️",
+      "title": "Gizli İhtiyaç",
+      "tagline": "insanlara gösterdiğinden çok daha fazla ihtiyacın var",
+      "desc": "Bağımsızlık senin markan. Ama aynı zamanda hapisanen. Herkesi — ve neredeyse kendini de — yalnız başına iyi olduğuna ikna ettin. Gölgen bağlantı özlemini ve kimseye ihtiyacın olmadığını kanıtlamanın sessiz yalnızlığını barındırıyor.",
+      "advice": "Birine ihtiyaç duymak seni zayıf yapmaz. Canlı yapar. \"Seni özledim\" demeyi dene, geçiştirmeden. Olduğu yerde kalsın.",
+      "youProbably": ["Sohbetlerden kopuk hissederek ayrılırsın ama nedenini koyamazsın", "Biri yaklaştığında eşit ölçüde rahatlama ve panik hissedersin", "Her yerde tanıdıkların vardır ama derin bağların azdır", "Hal hatır sormaya çalışan insanları itersin"]
+    }
+  }
+}

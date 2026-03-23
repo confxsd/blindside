@@ -1,0 +1,57 @@
+{
+  "traits": ["golden_retriever", "dark_academic", "mysterious_poet", "chaos_agent"],
+  "results": {
+    "golden_retriever": {
+      "emoji": "🐕",
+      "title": "Golden Retriever",
+      "tagline": "warm, loyal, and impossibly sweet",
+      "desc": "The one who drops everything when you need them. They remember the small things — your coffee order, the song you hummed once, the way you like your pillows. Their love is loud, consistent, and feels like sunlight.",
+      "advice": "They give so much that they sometimes forget to ask for what they need. Don't let their warmth make you forget they have storms too.",
+      "youProbably": [
+        "Get \"good morning\" texts every single day",
+        "Feel like the most important person in the room when they look at you",
+        "Know they'd apologize first even when they're right",
+        "Catch them smiling at you when they think you're not looking"
+      ]
+    },
+    "dark_academic": {
+      "emoji": "📚",
+      "title": "Dark Academic",
+      "tagline": "quiet depth wrapped in sharp intellect",
+      "desc": "The one who brings you books instead of flowers, who debates philosophy at midnight, and whose silence says more than most people's words. Their love is thoughtful, intentional, and sometimes hard to decode — but when it lands, it hits deep.",
+      "advice": "Their need for space isn't distance — it's how they process. Don't mistake their quiet for coldness; they're feeling everything, just internally.",
+      "youProbably": [
+        "Have the most interesting conversations at 2am",
+        "Receive song or book recommendations that feel like love letters",
+        "Notice they observe everything but share selectively",
+        "Feel intellectually challenged in the best way"
+      ]
+    },
+    "mysterious_poet": {
+      "emoji": "🌙",
+      "title": "Mysterious Poet",
+      "tagline": "they feel everything and turn it into art",
+      "desc": "The one who writes you letters they'll never send, who sees beauty in things others miss, and whose inner world is richer than most people will ever know. Their love is deep, quiet, and expressed in ways that catch you off guard.",
+      "advice": "They need to be seen for who they really are, not who you imagine them to be. Give them space to be messy — not every feeling needs to be poetic.",
+      "youProbably": [
+        "Find handwritten notes in unexpected places",
+        "Feel like they understand parts of you no one else reaches",
+        "Notice they disappear sometimes — then come back with something beautiful",
+        "Know their playlist is basically a diary of your relationship"
+      ]
+    },
+    "chaos_agent": {
+      "emoji": "⚡",
+      "title": "Chaos Agent",
+      "tagline": "life is never boring with them in it",
+      "desc": "The one who turns a grocery run into an adventure, who makes you laugh until you cry, and whose energy is so contagious it rewires your whole mood. Their love is loud, unpredictable, and never, ever dull.",
+      "advice": "Behind the chaos is someone who's terrified of stillness — because stillness means sitting with feelings. Let them know it's safe to be quiet with you.",
+      "youProbably": [
+        "Have the wildest stories that all start with \"so they had this idea...\"",
+        "Laugh harder with them than with anyone else",
+        "Feel like every day is different when they're around",
+        "Know that under the jokes, they care more than they let on"
+      ]
+    }
+  }
+}

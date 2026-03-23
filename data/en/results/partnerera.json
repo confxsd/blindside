@@ -1,0 +1,57 @@
+{
+  "traits": ["main_character", "healer", "ride_or_die", "soft_villain"],
+  "results": {
+    "main_character": {
+      "emoji": "👑",
+      "title": "Main Character",
+      "tagline": "the world revolves around your energy",
+      "desc": "You walk into a room and the vibe shifts. You set the pace, curate the aesthetic, and lead with confidence that others admire (and sometimes envy). Your love story isn't a side plot — it's the whole movie.",
+      "advice": "Your light is magnetic, but make sure the spotlight has room for two. The best love stories have a co-lead, not an audience.",
+      "youProbably": [
+        "Plan dates that feel like movie scenes",
+        "Have an aesthetic that people screenshot",
+        "Set the tone in every group chat and friend circle",
+        "Know exactly what you want — and refuse to settle for less"
+      ]
+    },
+    "healer": {
+      "emoji": "🌿",
+      "title": "The Healer",
+      "tagline": "you love so deeply it becomes medicine",
+      "desc": "You're the one people come to when they're broken. You listen without judgment, hold space without flinching, and love with a patience that borders on supernatural. Your presence alone makes people feel safe.",
+      "advice": "You pour so much into others that your cup runs dry. Healing isn't your job in a relationship — it's something you both do for each other.",
+      "youProbably": [
+        "Know exactly what someone needs before they say it",
+        "Attract people who need fixing (and sometimes forget to fix yourself)",
+        "Have friends who say \"I don't know what I'd do without you\"",
+        "Feel responsible for everyone's emotional wellbeing"
+      ]
+    },
+    "ride_or_die": {
+      "emoji": "🔥",
+      "title": "Ride or Die",
+      "tagline": "your loyalty is legendary and unbreakable",
+      "desc": "When you love someone, you love them with everything. 3am calls, across-town drives, no questions asked. Your commitment isn't conditional — it's a promise you keep even when it costs you.",
+      "advice": "Loyalty without boundaries becomes self-sacrifice. Make sure the people you'd go to war for would do the same for you.",
+      "youProbably": [
+        "Show up for people even when they don't ask",
+        "Have a small circle but would die for every person in it",
+        "Go from zero to \"I'll fight them\" in seconds when someone hurts your person",
+        "Love with an intensity that scares people who aren't ready for it"
+      ]
+    },
+    "soft_villain": {
+      "emoji": "🖤",
+      "title": "Soft Villain",
+      "tagline": "mysterious, magnetic, and unapologetically yourself",
+      "desc": "You're the one they can't figure out — and that's the point. You test people, keep them guessing, and only let in those who prove they can handle your full complexity. Your love isn't easy, but it's unforgettable.",
+      "advice": "Not everything has to be a test. Sometimes the bravest thing isn't keeping people guessing — it's letting them stay.",
+      "youProbably": [
+        "Have an energy that people are drawn to but can't explain",
+        "Give the hard truth when everyone else is sugarcoating",
+        "Keep people at arm's length until they've earned your trust",
+        "Love fiercely but leave before you get left"
+      ]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "traits": ["introvert", "extrovert", "thinker", "feeler"],
+  "results": {
+    "introvert": {
+      "emoji": "🌙",
+      "title": "The Inner World",
+      "desc": "You recharge in solitude, process deeply, and prefer meaningful connection over surface-level interaction.",
+      "advice": "Your depth is rare. Make sure you're not isolating — the right people deserve access to your inner world."
+    },
+    "extrovert": {
+      "emoji": "☀️",
+      "title": "The Social Force",
+      "desc": "People are your fuel. You thrive in groups, think out loud, and bring energy wherever you go.",
+      "advice": "Your energy lights rooms up. Just remember: stillness isn't stagnation — rest is part of the rhythm."
+    },
+    "thinker": {
+      "emoji": "🧠",
+      "title": "The Analyst",
+      "desc": "Logic is your compass. You approach life with reason, structure, and a need to understand before you feel.",
+      "advice": "Your clarity is powerful. Don't forget that feelings aren't inefficiencies — they're data too."
+    },
+    "feeler": {
+      "emoji": "🫀",
+      "title": "The Empath",
+      "desc": "You feel everything — yours and everyone else's. Emotion is your first language and your deepest strength.",
+      "advice": "Your empathy is a gift. Set boundaries so you don't carry what isn't yours to hold."
+    }
+  }
+}

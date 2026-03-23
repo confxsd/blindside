@@ -1,0 +1,23 @@
+{
+  "traits": ["anxious", "avoidant", "secure"],
+  "results": {
+    "anxious": {
+      "emoji": "💗",
+      "title": "Anxious Attachment",
+      "desc": "You love deeply and fear losing it. You crave closeness, reassurance, and can sense distance before it's spoken.",
+      "advice": "Your capacity to love is a strength. Practice self-soothing and trust that silence doesn't mean abandonment."
+    },
+    "avoidant": {
+      "emoji": "🛡️",
+      "title": "Avoidant Attachment",
+      "desc": "Independence is your armor. You value space, freedom, and tend to pull away when things get too close.",
+      "advice": "Your need for space is valid. Try letting one person in past the walls — vulnerability isn't weakness."
+    },
+    "secure": {
+      "emoji": "🌱",
+      "title": "Secure Attachment",
+      "desc": "You can be close without losing yourself. You communicate, trust, and handle conflict with grounded presence.",
+      "advice": "You're the anchor. Keep modeling healthy relating — and don't forget to check in with your own needs too."
+    }
+  }
+}

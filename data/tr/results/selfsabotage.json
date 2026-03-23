@@ -1,0 +1,37 @@
+{
+  "traits": ["doom", "unworthiness", "perfectionism", "impostor"],
+  "results": {
+    "doom": {
+      "emoji": "🌪️",
+      "title": "Kıyamet Kalıbı",
+      "tagline": "terk edilmeden önce sen terk edersin",
+      "desc": "Bir yerde güzel şeylerin bittiğini öğrendin — ve güvenmektense hazırlanmanın daha iyi olduğunu. Bu yüzden geri çekilirsin, kendini sabote edersin veya çöküşü beklersin. Bu kötümserlik değil. Erken yas tutmak.",
+      "advice": "Henüz yaşanmamış bir acıya zaman yolculuğu yapıyorsun. Şimdiki anda kalmayı dene — tehlikeli derecede güzel hissetse bile. Her güzel şey bir tuzak değil.",
+      "youProbably": ["Mutlu anlarda zihinsel olarak ayrılığa hazırlanırsın", "İşleri veya şehirleri hayal kırıklığına uğratmadan önce terk edersin", "Hayat sakin olduğunda şüphelenir", "İşler kötüye gittiğinde \"biliyordum\" dersin, sanki tahmin etmişsin gibi"]
+    },
+    "unworthiness": {
+      "emoji": "🪫",
+      "title": "Değersizlik Kalıbı",
+      "tagline": "ışık seni korkutmasın diye kendini kısarsın",
+      "desc": "Sabote ediyorsun çünkü derinlerde güzel şeyi hak etmediğine inanıyorsun. Bu yüzden kendini küçültürsün, onu başkasına verirsin veya elinden kaymasına izin verirsin — çünkü tutmak çalmak gibi hissettiriyor.",
+      "advice": "Masadaki yerini hak etmek zorunda değilsin. Davet edildin. Kendine mutluluğu önemseyen biri gibi davranmaya başla.",
+      "youProbably": ["İltifatları saldırıymış gibi savuştururusun", "Kendi işinin takdirini başkalarına verirsin", "İşler yolunda giderken rahatsız hissedersin", "Başkalarının şeyleri daha çok hak ettiğine inanırsın"]
+    },
+    "perfectionism": {
+      "emoji": "🔬",
+      "title": "Mükemmeliyetçilik Kalıbı",
+      "tagline": "hiçbir şey bitmez çünkü hiçbir şey yeterince iyi değildir",
+      "desc": "Tembellikten ertelemiyorsun — korkudan erteliyorsun. Mükemmel değilse değerine yansır. Bu yüzden oynarsın, yeniden yaparsın, ertelersin ve son teslim tarihi seni asla mutlu olmadığın bir bırakmaya zorlayana kadar cilalamaya devam edersin.",
+      "advice": "Mükemmeliyetçilik yüksek standartlar değil — kusurlu görünme korkusu. Bitmişi mükemmelden iyidir. Gönder gitsin. Seni sevenler not vermiyor.",
+      "youProbably": ["10 dakika süren bir e-postaya 3 saat harcarsın", "\"Yeterince iyi\" ifadesinde fiziksel rahatsızlık hissedersin", "Başkası eleştirmeden önce kendi işini eleştirirsin", "Her yerde yarım kalmış projelerin vardır"]
+    },
+    "impostor": {
+      "emoji": "🎪",
+      "title": "Sahtekar Kalıbı",
+      "tagline": "herkes buraya ait — sen sadece gizlice girdin",
+      "desc": "Etrafına bakıyorsun ve ne yaptığını bilen insanlar görüyorsun. Sonra kendine bakıyorsun ve ikna edici bir oyun görüyorsun. Her başarı şans, her iltifat bir hata ve her oda ifşa olmaktan bir soru uzakta.",
+      "advice": "Sahtekar hissi ironik bir şekilde kalite ve gerçeği önemsediğinin işareti. Gerçek sahtekarlar böyle hissetmez. Koltuk senin. Otur.",
+      "youProbably": ["Her şeye aşırı hazırlanırsın çünkü doğaçlama tehlikeli hissettirir", "Başarıyı zamanlama, şans veya başkalarına bağlarsın", "\"Daha nitelikli\" insanların olduğu odalarda kaygı hissedersin", "Birinin seni ifşa edeceği günü beklemeye devam edersin"]
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "traits": ["doom", "unworthiness", "perfectionism", "impostor"],
+  "results": {
+    "doom": {
+      "emoji": "🌪️",
+      "title": "The Doom Pattern",
+      "tagline": "you leave before the leaving happens to you",
+      "desc": "Somewhere along the way, you learned that good things end — and it's better to brace than to trust. So you pull away, self-destruct, or wait for the crash. It's not pessimism. It's preemptive grief.",
+      "advice": "You're time-traveling to a pain that hasn't happened yet. Try staying in the present — even if it feels dangerously good. Not every good thing is a setup.",
+      "youProbably": [
+        "Mentally prepare for breakups during happy moments",
+        "Leave jobs or cities before they can disappoint you",
+        "Feel suspicious when life is calm",
+        "Say \"I knew it\" when things go wrong, like you predicted it"
+      ]
+    },
+    "unworthiness": {
+      "emoji": "🪫",
+      "title": "The Unworthiness Pattern",
+      "tagline": "you dim yourself so the light doesn't scare you",
+      "desc": "You sabotage because deep down, you believe you don't deserve the good thing. So you make yourself small, give it away, or let it slip — because keeping it feels like stealing.",
+      "advice": "You don't need to earn your place at the table. You were invited. Start treating yourself like someone whose happiness matters.",
+      "youProbably": [
+        "Deflect compliments like they're attacks",
+        "Give away credit for your own work",
+        "Feel uncomfortable when things are going well",
+        "Believe other people deserve things more"
+      ]
+    },
+    "perfectionism": {
+      "emoji": "🔬",
+      "title": "The Perfectionism Pattern",
+      "tagline": "nothing is ever finished because nothing is ever enough",
+      "desc": "You don't procrastinate from laziness — you procrastinate from fear. If it's not perfect, it reflects on your worth. So you tweak, redo, delay, and polish until the deadline forces a release you're never happy with.",
+      "advice": "Perfectionism isn't high standards — it's fear of being seen as flawed. Done is better than perfect. Ship it. The people who love you aren't grading you.",
+      "youProbably": [
+        "Spend 3 hours on an email that takes 10 minutes",
+        "Feel physical discomfort at \"good enough\"",
+        "Criticize your own work before anyone else can",
+        "Have unfinished projects everywhere"
+      ]
+    },
+    "impostor": {
+      "emoji": "🎪",
+      "title": "The Impostor Pattern",
+      "tagline": "everyone else belongs here — you just snuck in",
+      "desc": "You look around and see people who know what they're doing. Then you look at yourself and see a convincing act. Every success is luck, every compliment a mistake, and every room one question away from exposure.",
+      "advice": "The impostor feeling is, ironically, a sign that you care about quality and truth. The actual impostors don't feel this way. Your seat is yours. Sit in it.",
+      "youProbably": [
+        "Over-prepare for everything because winging it feels dangerous",
+        "Attribute success to timing, luck, or other people",
+        "Feel anxious in rooms of \"more qualified\" people",
+        "Keep waiting for the day someone calls you out"
+      ]
+    }
+  }
+}

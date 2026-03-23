@@ -1,0 +1,37 @@
+{
+  "traits": ["porous", "passive", "healthy", "rigid"],
+  "results": {
+    "porous": {
+      "emoji": "🫗",
+      "title": "Gözenekli Sınırlar",
+      "tagline": "herkesi içeri alıyorsun — ve bunun bedeli var",
+      "desc": "Başkalarının duygularını emiyorsun, sorunlarını üstleniyorsun ve nerede bittiğini, başkasının nerede başladığını ayırt etmekte zorlanıyorsun. Hayır demek ihanet gibi geliyor. Aşırı paylaşıyorsun, aşırı veriyorsun ve sonra neden içinin boş olduğunu merak ediyorsun.",
+      "advice": "Sınır duvar değil — filtredir. Bu hafta küçük bir \"hayır\" ile başla. Rahatsızlık geçer ama özsaygı geçmez.",
+      "youProbably": ["Başkalarının duygularından sorumlu hissedersin", "Yabancılarla fazla kişisel detay paylaşırsın", "Aldığından fazlasını veren insanları çekersin", "İhtiyaçların olduğu için suçluluk duyarsın"]
+    },
+    "passive": {
+      "emoji": "😶",
+      "title": "Pasif Sınırlar",
+      "tagline": "neye ihtiyacın olduğunu biliyorsun — sadece söyleyemiyorsun",
+      "desc": "Kelimelerin var. Hatta duşta prova bile ediyorsun. Ama o anda eriyip gidiyorlar. İma ediyorsun, umuyorsun, yutkunuyorsun. Sınır içinde var — sadece henüz ağzına ulaşmadı.",
+      "advice": "Düşük riskli durumlarla başla. Yüz yüze söylemeden önce sınırı mesajla yaz. Her tekrar bir sonrakini kolaylaştırır. Sesin yüksek sesle duyulmayı hak ediyor.",
+      "youProbably": ["Kesinlikle öyle olmadığında \"sorun yok\" dersin", "Hiç gerçekleşmeyen yüzleşmeleri prova edersin", "Patlayıncaya kadar sessizce kin biriktirirsin", "Hiç dile getirmediğin çizgiler aşıldığında şaşırırsın"]
+    },
+    "healthy": {
+      "emoji": "💚",
+      "title": "Sağlıklı Sınırlar",
+      "tagline": "sevebiliyorsun ve yine de hayır diyebiliyorsun",
+      "desc": "Belki zor yoldan öğrendin — enerjini korumanın bencillik olmadığını. Acımasızlık olmadan hayır, kin olmadan evet diyorsun ve kendini kaybetmeden alan tutuyorsun.",
+      "advice": "Sınırlar başarı değil, kas. Bakıma ihtiyaçları var. Eski kalıpların geri süründüğü durumları izle — genellikle en çok önemsediğin insanlarla olur.",
+      "youProbably": ["Sohbetlerden bütün hissederek ayrılırsın", "Bir krize dönüşmeden aynı fikirde olmayabilirsin", "Ne zaman müdahale edip ne zaman uzaklaşacağını bilirsin", "Alanına saygı duyan insanları çekersin çünkü bunu sen modelliyorsun"]
+    },
+    "rigid": {
+      "emoji": "🧱",
+      "title": "Katı Sınırlar",
+      "tagline": "duvarlar işe yarıyor — ama yalnızlar",
+      "desc": "Savunmalarını bir sebeple inşa ettin ve işe yarıyorlar. Neredeyse fazlasıyla. İnsanlar sana zarar veremez ama sana ulaşamaz da. Yakınlık bir güvenlik riski gibi hissettiriyor ve kırılganlık mühürlediğin bir kapı.",
+      "advice": "Duvarlar bir zamanlar seni korudu. Kendine sor: hâlâ bu kadar yüksek olmaları mı gerekiyor, yoksa artık var olmayan bir tehdide karşı mı koruyorlar?",
+      "youProbably": ["İnsanları temiz ve hızlı şekilde hayatından çıkarırsın", "Stresli olduğunda bağlantı yerine bağımsızlığı tercih edersin", "Çok az yakın ilişkin vardır", "Kimseye ihtiyaç duymamakla gurur duyarsın — ve bazen bu yüzden boşluk hissedersin"]
+    }
+  }
+}

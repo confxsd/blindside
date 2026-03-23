@@ -1,0 +1,57 @@
+{
+  "traits": ["hopeless_romantic", "secret_overthinker", "soft_protector", "guarded_dreamer"],
+  "results": {
+    "hopeless_romantic": {
+      "emoji": "💘",
+      "title": "Hopeless Romantic",
+      "tagline": "they love harder than they'll ever let you see",
+      "desc": "Behind every casual \"yeah it was cool\" is someone who replayed every second of your last date. They imagine futures, save your photos, and fall asleep thinking about your laugh. They're not playing it cool — they're terrified of how much they feel.",
+      "advice": "They need to know that loving openly won't scare you away. Show them that their tenderness is strength, not weakness — and that you want all of it.",
+      "youProbably": [
+        "Catch them looking at you with an expression they'd deny",
+        "Find out they remember things you said months ago",
+        "Notice they plan things for \"someday\" that include you",
+        "Know they love you more than their words can carry"
+      ]
+    },
+    "secret_overthinker": {
+      "emoji": "🧠",
+      "title": "Secret Overthinker",
+      "tagline": "their mind never stops running scenarios",
+      "desc": "They're replaying your last conversation at 3am, analyzing your tone, and wondering if that emoji meant something different. They're not anxious — they're deeply invested and terrified of getting it wrong. Every silence feels like a clue they need to decode.",
+      "advice": "Reassurance isn't clingy — for them, it's oxygen. A simple \"we're good\" can quiet the noise in their head for days. Be direct, not vague.",
+      "youProbably": [
+        "Get carefully worded texts that they rewrote four times",
+        "Notice they pick up on mood shifts before you mention them",
+        "Know they've already thought of every possible outcome",
+        "Feel like they're always one step ahead — because they are, in their head"
+      ]
+    },
+    "soft_protector": {
+      "emoji": "🛡️",
+      "title": "Soft Protector",
+      "tagline": "they carry weight you'll never know about",
+      "desc": "They walk on the traffic side of the sidewalk. They check if you've eaten. They stay calm in chaos so you don't have to be scared. Their love isn't loud — it's structural. They build safety around you without ever asking for credit.",
+      "advice": "They need to know that protecting you doesn't mean carrying everything alone. Let them be soft too. They've been strong for so long they forgot they're allowed to rest.",
+      "youProbably": [
+        "Feel inexplicably safe when they're around",
+        "Notice they handle problems before you even know they exist",
+        "Know they put your comfort above their own — always",
+        "See them carry stress silently and wish they'd let you help"
+      ]
+    },
+    "guarded_dreamer": {
+      "emoji": "🔐",
+      "title": "Guarded Dreamer",
+      "tagline": "they want to let you in but the walls are high",
+      "desc": "They have a whole world inside them — dreams, fears, tenderness — but it's behind a door they rarely open. They want to be vulnerable with you. They've just been burned enough to know that openness has a price, and they're still deciding if it's safe to pay it.",
+      "advice": "Don't force the door. Show them through consistency — not just words — that you're not going anywhere. The day they open up will be worth every patient moment.",
+      "youProbably": [
+        "Feel like you're always almost seeing the real them",
+        "Notice them start to open up then pull back",
+        "Know there's more beneath the surface than they show anyone",
+        "Catch small moments of vulnerability they quickly cover up"
+      ]
+    }
+  }
+}

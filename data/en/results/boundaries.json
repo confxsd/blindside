@@ -1,0 +1,57 @@
+{
+  "traits": ["porous", "passive", "healthy", "rigid"],
+  "results": {
+    "porous": {
+      "emoji": "🫗",
+      "title": "Porous Boundaries",
+      "tagline": "you let everyone in — and it costs you",
+      "desc": "You absorb other people's emotions, take on their problems, and struggle to tell where you end and someone else begins. Saying no feels like a betrayal. You over-share, over-give, and then wonder why you feel hollow.",
+      "advice": "A boundary isn't a wall — it's a filter. Start with one small \"no\" this week. The discomfort fades but the self-respect doesn't.",
+      "youProbably": [
+        "Feel responsible for other people's emotions",
+        "Over-share personal details with strangers",
+        "Attract people who take more than they give",
+        "Feel guilty for having needs"
+      ]
+    },
+    "passive": {
+      "emoji": "😶",
+      "title": "Passive Boundaries",
+      "tagline": "you know what you need — you just can't say it",
+      "desc": "You have the words. You even rehearse them in the shower. But in the moment, they dissolve. You hint, you hope, you swallow. The boundary exists inside you — it just hasn't made it to your mouth yet.",
+      "advice": "Start with low-stakes situations. Text the boundary before saying it face-to-face. Every rep makes the next one easier. Your voice deserves volume.",
+      "youProbably": [
+        "Say \"it's fine\" when it absolutely is not",
+        "Rehearse confrontations that never happen",
+        "Build resentment silently until you explode",
+        "Feel surprised when people cross lines you never voiced"
+      ]
+    },
+    "healthy": {
+      "emoji": "💚",
+      "title": "Healthy Boundaries",
+      "tagline": "you can love and still say no",
+      "desc": "You've learned — maybe the hard way — that protecting your energy isn't selfish. You say no without cruelty, yes without resentment, and hold space without losing yourself.",
+      "advice": "Boundaries are muscles, not achievements. They need maintenance. Watch for situations where old patterns creep back — usually with the people who matter most.",
+      "youProbably": [
+        "Leave conversations feeling intact",
+        "Disagree without it becoming a crisis",
+        "Know when to engage and when to walk away",
+        "Attract people who respect your space because you model it"
+      ]
+    },
+    "rigid": {
+      "emoji": "🧱",
+      "title": "Rigid Boundaries",
+      "tagline": "the walls work — but they're lonely",
+      "desc": "You built your defenses for a reason, and they work. Almost too well. People can't hurt you, but they also can't reach you. Intimacy feels like a security risk, and vulnerability is a door you sealed shut.",
+      "advice": "The walls kept you safe once. Ask yourself if they still need to be this high, or if they're protecting you from a threat that's no longer there.",
+      "youProbably": [
+        "Cut people off cleanly and quickly",
+        "Prefer independence over connection when stressed",
+        "Have very few close relationships",
+        "Feel proud of needing no one — and sometimes empty because of it"
+      ]
+    }
+  }
+}

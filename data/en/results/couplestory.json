@@ -1,0 +1,57 @@
+{
+  "traits": ["soulmates", "adventure_duo", "chaos_couple", "slow_burn"],
+  "results": {
+    "soulmates": {
+      "emoji": "✨",
+      "title": "Soulmates",
+      "tagline": "written in the stars before you even met",
+      "desc": "Your connection feels cosmic — like you've known each other in a past life, or were always meant to collide. You finish each other's sentences, feel each other's moods, and have a bond that makes other people believe in fate.",
+      "advice": "Destiny brought you together, but choice keeps you there. Don't coast on \"meant to be\" — keep actively choosing each other every day.",
+      "youProbably": [
+        "Say the same thing at the same time constantly",
+        "Have friends who say \"you two are disgusting\" (lovingly)",
+        "Feel like home is a person, not a place",
+        "Know what the other is thinking with just a look"
+      ]
+    },
+    "adventure_duo": {
+      "emoji": "🗺️",
+      "title": "Adventure Duo",
+      "tagline": "your love story is a highlight reel",
+      "desc": "You two don't just exist together — you experience the world together. Every trip, every spontaneous plan, every \"what if we just...?\" is another chapter. Your relationship lives in motion.",
+      "advice": "Adventures are beautiful, but so is stillness. Make sure you can sit in silence together without needing the next thrill to feel connected.",
+      "youProbably": [
+        "Have more travel photos together than normal photos",
+        "Plan your next adventure before the current one is over",
+        "Bond deepest during chaotic, unplanned moments",
+        "Feel most alive when you're exploring something new together"
+      ]
+    },
+    "chaos_couple": {
+      "emoji": "🎪",
+      "title": "Chaos Couple",
+      "tagline": "it shouldn't work but it absolutely does",
+      "desc": "You two are the couple that makes no sense on paper but perfect sense in real life. The fights are loud, the love is louder, and your inside jokes need a glossary. It's messy, magnetic, and no one else could survive it.",
+      "advice": "Chaos is fun until it's not. Learn to tell the difference between passion and patterns that need breaking. The best chaos has a safe landing.",
+      "youProbably": [
+        "Have a relationship that confuses outsiders",
+        "Go from arguing to laughing in under 5 minutes",
+        "Have inside jokes that would take 30 minutes to explain",
+        "Know that boring was never an option for you two"
+      ]
+    },
+    "slow_burn": {
+      "emoji": "🕯️",
+      "title": "Slow Burn",
+      "tagline": "the love that was worth the wait",
+      "desc": "You didn't rush into this — and that's what makes it real. Built on friendship, trust, and a thousand small moments that added up to something undeniable. Your love story isn't loud, but it's deep.",
+      "advice": "Your patience is your superpower. Just make sure \"taking it slow\" doesn't become \"avoiding vulnerability.\" The deepest love requires the deepest risk.",
+      "youProbably": [
+        "Were friends for a suspiciously long time before anything happened",
+        "Have a love story that makes people say \"finally!\"",
+        "Feel more secure in this relationship than any you've had",
+        "Value the quiet moments more than the grand gestures"
+      ]
+    }
+  }
+}

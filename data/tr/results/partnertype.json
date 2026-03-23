@@ -1,0 +1,37 @@
+{
+  "traits": ["golden_retriever", "dark_academic", "mysterious_poet", "chaos_agent"],
+  "results": {
+    "golden_retriever": {
+      "emoji": "🐕",
+      "title": "Golden Retriever",
+      "tagline": "sıcak, sadık ve inanılmaz tatlı",
+      "desc": "İhtiyacın olduğunda her şeyi bırakan kişi. Küçük şeyleri hatırlar — kahve siparişini, bir kere mırıldandığın şarkıyı, yastıkları nasıl sevdiğini. Aşkı yüksek sesle, tutarlı ve güneş ışığı gibi hissettiren biri.",
+      "advice": "O kadar çok verir ki bazen neye ihtiyacı olduğunu sormayı unutur. Sıcaklığı, onun da fırtınaları olduğunu unutturmasın.",
+      "youProbably": ["Her gün \"günaydın\" mesajı alırsın", "Sana baktığında dünyanın en önemli insanı gibi hissedersin", "Haklı olsa bile önce onun özür dileyeceğini bilirsin", "Bakmadığını sandığın anlarda sana gülümsediğini yakalarsın"]
+    },
+    "dark_academic": {
+      "emoji": "📚",
+      "title": "Karanlık Akademisyen",
+      "tagline": "keskin zekaya sarılmış sessiz derinlik",
+      "desc": "Çiçek yerine kitap getiren, gece yarısı felsefe tartışan ve sessizliği çoğu insanın sözlerinden fazlasını söyleyen kişi. Aşkı düşünceli, kasıtlı ve bazen çözülmesi zor — ama ulaştığında derinden etkiler.",
+      "advice": "Alan ihtiyacı mesafe değil — işleme şekli. Sessizliğini soğukluk sanma; her şeyi hissediyor, sadece içsel olarak.",
+      "youProbably": ["En ilginç sohbetlerin gece ikide olur", "Aşk mektubu gibi hissettiren şarkı veya kitap önerileri alırsın", "Her şeyi gözlemlediğini ama seçici paylaştığını fark edersin", "En iyi şekilde entelektüel olarak meydan okunmuş hissedersin"]
+    },
+    "mysterious_poet": {
+      "emoji": "🌙",
+      "title": "Gizemli Şair",
+      "tagline": "her şeyi hisseder ve sanata dönüştürür",
+      "desc": "Sana asla göndermeyeceği mektuplar yazan, başkalarının kaçırdığı güzellikleri gören ve iç dünyası çoğu insanın asla bilemeyeceği kadar zengin olan kişi. Aşkı derin, sessiz ve seni hazırlıksız yakalayan şekillerde ifade edilen.",
+      "advice": "Gerçekte kim olduğu için görülmesi gerekiyor, hayal ettiğin kişi için değil. Dağınık olmasına alan ver — her duygunun şiirsel olması gerekmiyor.",
+      "youProbably": ["Beklenmedik yerlerde el yazısı notlar bulursun", "Başka kimsenin ulaşamadığı yanlarını anladığını hissedersin", "Bazen kaybolduğunu fark edersin — sonra güzel bir şeyle geri döner", "Çalma listesinin aslında ilişkinizin günlüğü olduğunu bilirsin"]
+    },
+    "chaos_agent": {
+      "emoji": "⚡",
+      "title": "Kaos Ajanı",
+      "tagline": "hayat onunla asla sıkıcı değil",
+      "desc": "Market alışverişini maceraya çeviren, ağlayana kadar güldüren ve enerjisi öyle bulaşıcı ki tüm ruh halini yeniden programlayan kişi. Aşkı yüksek sesle, öngörülemeyen ve asla ama asla sıkıcı olmayan.",
+      "advice": "Kaosun arkasında hareketsizlikten korkan biri var — çünkü hareketsizlik duygularla yüzleşmek demek. Seninle sessiz olmanın güvenli olduğunu bilmesini sağla.",
+      "youProbably": ["Hep \"bir fikri vardı...\" diye başlayan çılgın hikayelerin olur", "Onunla herkesten daha çok gülersin", "Yanındayken her günün farklı olduğunu hissedersin", "Şakaların altında gösterdiğinden çok daha fazla önemsediğini bilirsin"]
+    }
+  }
+}

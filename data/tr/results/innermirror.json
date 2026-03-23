@@ -1,0 +1,29 @@
+{
+  "traits": ["introvert", "extrovert", "thinker", "feeler"],
+  "results": {
+    "introvert": {
+      "emoji": "🌙",
+      "title": "İç Dünya",
+      "desc": "Yalnızlıkta şarj oluyorsun, derinden işliyorsun ve yüzeysel etkileşim yerine anlamlı bağlantıyı tercih ediyorsun.",
+      "advice": "Derinliğin nadir bir şey. İzole olmadığından emin ol — doğru insanlar iç dünyana erişimi hak ediyor."
+    },
+    "extrovert": {
+      "emoji": "☀️",
+      "title": "Sosyal Güç",
+      "desc": "İnsanlar senin yakıtın. Gruplarda parlıyorsun, yüksek sesle düşünüyorsun ve gittiğin her yere enerji taşıyorsun.",
+      "advice": "Enerjin odaları aydınlatıyor. Sadece şunu unutma: durağanlık gerileme değil — dinlenmek de ritmin bir parçası."
+    },
+    "thinker": {
+      "emoji": "🧠",
+      "title": "Analist",
+      "desc": "Mantık senin pusulan. Hayata akıl, düzen ve hissetmeden önce anlama ihtiyacıyla yaklaşıyorsun.",
+      "advice": "Berraklığın güçlü. Duyguların verimsizlik olmadığını unutma — onlar da birer veri."
+    },
+    "feeler": {
+      "emoji": "🫀",
+      "title": "Empat",
+      "desc": "Her şeyi hissediyorsun — kendininkini de başkalarınkini de. Duygu senin ilk dilin ve en derin gücün.",
+      "advice": "Empatin bir armağan. Sana ait olmayan yükleri taşımaman için sınırlar koy."
+    }
+  }
+}

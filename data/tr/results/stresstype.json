@@ -1,0 +1,29 @@
+{
+  "traits": ["fight", "flight", "fawn", "freeze"],
+  "results": {
+    "fight": {
+      "emoji": "🔥",
+      "title": "Savaş Tepkisi",
+      "desc": "Baskı altında kontrolü ele alırsın. Daha sert itersin, daha yüksek sesle konuşursun ve stresi eyleme dönüştürürsün — bazen fazlasıyla.",
+      "advice": "Azmin inanılmaz. Tepki vermeden önce durmayı öğren — her stres bir savaş gerektirmiyor."
+    },
+    "flight": {
+      "emoji": "💨",
+      "title": "Kaçış Tepkisi",
+      "desc": "İşler ağırlaştığında kaçarsın. Fiziksel, zihinsel, dijital — duvarlar kapanmadan bir çıkış yolu bulursun.",
+      "advice": "Ayrılmak bazen bilgeliktir. Ama tehlikeden değil, büyümekten kaçtığın anları fark et."
+    },
+    "fawn": {
+      "emoji": "🕊️",
+      "title": "Uyum Tepkisi",
+      "desc": "Hoşnutsuzluğu yatıştırarak hayatta kalırsın. Ortamları okursun, kendini ayarlarsın ve başkalarının rahatını kendi gerçeğinin önüne koyarsın.",
+      "advice": "Nezaketin gerçek. Şunu sormaya başla: \"İyi mi davranıyorum, yoksa güvende mi kalmaya çalışıyorum?\" İkisi her zaman aynı şey değil."
+    },
+    "freeze": {
+      "emoji": "🧊",
+      "title": "Donma Tepkisi",
+      "desc": "Bunalmışlık seni hareketsiz bırakır. Sessizleşirsin, hissizleşirsin ve fırtınanın geçmesini beklersin — çoğu zaman içinden.",
+      "advice": "Hareketsizlik bilgelik olabilir. Ama donduğunda küçük hareketler dene — tek bir eylem büyüyü bozabilir."
+    }
+  }
+}

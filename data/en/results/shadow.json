@@ -1,0 +1,57 @@
+{
+  "traits": ["repressed_selfishness", "repressed_vulnerability", "repressed_authenticity", "repressed_need"],
+  "results": {
+    "repressed_selfishness": {
+      "emoji": "👹",
+      "title": "The Repressed Self",
+      "tagline": "the part of you that wants without guilt",
+      "desc": "You learned early that wanting things for yourself is dangerous. So you became the giver, the selfless one. But underneath, there's a version of you that's exhausted from never taking.",
+      "advice": "Selfishness isn't your shadow — it's your unmet need for reciprocity. Start with small acts of self-priority. Taking doesn't make you bad.",
+      "youProbably": [
+        "Say \"I don't mind\" when you absolutely do",
+        "Feel rage when someone takes without asking",
+        "Resent being \"the reliable one\"",
+        "Judge selfish people hardest because you envy their freedom"
+      ]
+    },
+    "repressed_vulnerability": {
+      "emoji": "🥀",
+      "title": "The Hidden Softness",
+      "tagline": "strength was never a choice — it was survival",
+      "desc": "You've built an identity around being strong, capable, unbreakable. But your shadow holds the tears you never let fall, the help you never asked for, the softness you buried because someone once made it feel unsafe.",
+      "advice": "Vulnerability isn't the opposite of strength — it's the upgrade. Let one person see the real weight. You don't have to shatter. Just crack the door.",
+      "youProbably": [
+        "Cry alone but never in front of people",
+        "Feel uncomfortable when someone takes care of you",
+        "Get praised for \"handling it so well\" and feel like screaming",
+        "Attract people who lean on you but never ask how you are"
+      ]
+    },
+    "repressed_authenticity": {
+      "emoji": "🎭",
+      "title": "The Curated Self",
+      "tagline": "the mask fits so well you forgot it's there",
+      "desc": "You're not lying — you're performing. A version of you that's palatable, agreeable, conflict-free. Your shadow holds your real opinions, your anger, your \"actually, no.\" You're so good at reading rooms that you forgot you're allowed to disrupt them.",
+      "advice": "Honesty doesn't require cruelty. Start by noticing the moments you edit yourself. What would you say if you couldn't lose anyone for saying it?",
+      "youProbably": [
+        "Agree with opinions you don't hold",
+        "Feel exhausted after social events from performing",
+        "Have different personalities for different groups",
+        "Fear being \"too much\" more than \"not enough\""
+      ]
+    },
+    "repressed_need": {
+      "emoji": "🕳️",
+      "title": "The Hidden Need",
+      "tagline": "you need people more than you let anyone see",
+      "desc": "Independence is your brand. But it's also your prison. You've convinced everyone — and almost yourself — that you're fine alone. Your shadow holds the ache for connection and the quiet loneliness of proving you don't need anyone.",
+      "advice": "Needing someone doesn't make you weak. It makes you alive. Try saying \"I missed you\" without deflecting. Let it land.",
+      "youProbably": [
+        "Leave conversations feeling disconnected but can't name why",
+        "Feel relief and panic in equal measure when someone gets close",
+        "Have acquaintances everywhere but few deep bonds",
+        "Push away people who try to check in"
+      ]
+    }
+  }
+}

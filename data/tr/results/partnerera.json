@@ -1,0 +1,37 @@
+{
+  "traits": ["main_character", "healer", "ride_or_die", "soft_villain"],
+  "results": {
+    "main_character": {
+      "emoji": "👑",
+      "title": "Ana Karakter",
+      "tagline": "dünyanın enerjin etrafında dönmesi",
+      "desc": "Bir odaya giriyorsun ve enerji değişiyor. Tempoyu sen belirlersin, estetiği sen kürasyonlarsın ve başkalarının hayranlık duyduğu (ve bazen kıskandığı) bir özgüvenle liderlik edersin. Aşk hikayen bir yan olay değil — filmin ta kendisi.",
+      "advice": "Işığın manyetik ama spot ışığında ikiye yer olduğundan emin ol. En iyi aşk hikayelerinin seyircisi değil, ortak başrol oyuncusu olur.",
+      "youProbably": ["Film sahnesi gibi hissettiren buluşmalar planlarsın", "İnsanların ekran görüntüsü aldığı bir estetiğin vardır", "Her grup sohbetinde ve arkadaş çevresinde tonu sen belirlersin", "Ne istediğini tam olarak bilirsin — ve daha azına razı olmazsın"]
+    },
+    "healer": {
+      "emoji": "🌿",
+      "title": "Şifacı",
+      "tagline": "o kadar derinden seviyorsun ki şifaya dönüşüyor",
+      "desc": "Kırıldıklarında insanların geldiği kişi sensin. Yargılamadan dinlersin, yılmadan alan tutarsın ve doğaüstüne yakın bir sabırla seversin. Varlığın tek başına insanlara güvende hissettiriyor.",
+      "advice": "Başkalarına o kadar çok döküyorsun ki kendi bardağın kuruyor. İyileştirmek bir ilişkide senin görevin değil — birbiriniz için yaptığınız bir şey.",
+      "youProbably": ["Biri söylemeden neye ihtiyacı olduğunu tam olarak bilirsin", "Tamir edilmeye ihtiyacı olan insanları çekersin (ve bazen kendini tamir etmeyi unutursun)", "\"Sensiz ne yapardım bilmiyorum\" diyen arkadaşların vardır", "Herkesin duygusal refahından sorumlu hissedersin"]
+    },
+    "ride_or_die": {
+      "emoji": "🔥",
+      "title": "Ölümüne Sadık",
+      "tagline": "sadakatin efsanevi ve kırılmaz",
+      "desc": "Birini sevdiğinde her şeyinle seversin. Gece üçte aramalar, şehrin öbür ucuna sürüşler, soru sorulmaz. Bağlılığın koşullu değil — bedeline rağmen tuttuğun bir söz.",
+      "advice": "Sınırsız sadakat kendini feda etmeye dönüşür. Savaşa gideceğin insanların senin için de aynısını yapacağından emin ol.",
+      "youProbably": ["İstemeseler bile insanlar için ortaya çıkarsın", "Küçük bir çevren vardır ama içindeki herkes için canını verirsin", "Birisi senin insanına zarar verdiğinde sıfırdan \"savaş moduna\" saniyeler içinde geçersin", "Hazır olmayanları korkutan bir yoğunlukla seversin"]
+    },
+    "soft_villain": {
+      "emoji": "🖤",
+      "title": "Yumuşak Kötü",
+      "tagline": "gizemli, manyetik ve özür dilemeden kendin",
+      "desc": "Çözemedikleri kişi sensin — ve mesele de bu. İnsanları test edersin, merak içinde bırakırsın ve sadece tüm karmaşıklığını kaldırabileceğini kanıtlayanları içeri alırsın. Aşkın kolay değil ama unutulmaz.",
+      "advice": "Her şeyin bir sınav olması gerekmiyor. Bazen en cesur şey insanları merakta bırakmak değil — kalmalarına izin vermek.",
+      "youProbably": ["İnsanların çekildiği ama açıklayamadığı bir enerjin vardır", "Herkes güzellerken sen sert gerçeği söylersin", "İnsanları güvenini kazanana kadar bir kol mesafesinde tutarsın", "Şiddetle seversin ama terk edilmeden önce terk edersin"]
+    }
+  }
+}

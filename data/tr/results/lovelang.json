@@ -1,0 +1,45 @@
+{
+  "traits": ["touch", "words", "acts", "gifts", "time"],
+  "results": {
+    "touch": {
+      "emoji": "🤲",
+      "title": "Fiziksel Dokunuş",
+      "tagline": "aşkın ten aracılığıyla konuşuyor",
+      "desc": "Aşkı yakınlıkla ifade ediyorsun — sırtına konan bir el, uzun bir sarılma, koltukta birbirine yaslanmak. Sözler yalan söyleyebilir. Dokunuş söyleyemez. Senin için varlık fizikseldir.",
+      "advice": "Herkes aşkı böyle ifade etmez. İnsanlara neye ihtiyacın olduğunu söyle — farklı bir aşk dili konuşuyorlarsa bedenini okuyamazlar.",
+      "youProbably": ["İnsanlara beklenenden bir an daha uzun sarılırsın", "Düşünmeden birinin elini tutarsın", "Biri senin dokunuşundan kaçındığında en çok incinirsin", "İlişkileri ne kadar fiziksel sıcaklık olduğuna göre değerlendirirsin"]
+    },
+    "words": {
+      "emoji": "💬",
+      "title": "Onaylayıcı Sözler",
+      "tagline": "aşkı hissetmeden önce duyarsın",
+      "desc": "Tam zamanında söylenen bir \"seninle gurur duyuyorum\" seni haftalarca taşıyabilir. İltifatları kelimesi kelimesine hatırlarsın ve sevdiğin birinin sessizliği sağır edici gelir.",
+      "advice": "İhtiyacın olanı verirsin — bu yüzden muhtemelen çok iltifat edip az istiyorsun. Söyle şunu: \"Bana değer verdiğini duymam lazım.\"",
+      "youProbably": ["Anlamlı mesajların ekran görüntüsünü alırsın", "Yıllar önceki bir iltifatın tam kelimelerini hatırlarsın", "Pasif-agresif bir ton seni yıkar", "Gece ikide uzun, içten mesajlar yazarsın"]
+    },
+    "acts": {
+      "emoji": "🔧",
+      "title": "Hizmet Eylemleri",
+      "tagline": "aşk bir söz değil, bir eylem",
+      "desc": "\"Seni seviyorum\" duymak istemiyorsun — görmek istiyorsun. Dolu bir depo, yorgunken hazırlanmış bir yemek, yardım istemediğin bir sorunun çözülmesi. İşte romantizm bu.",
+      "advice": "Çok fazla verip dengesizliğe kızmamaya dikkat et. Biri kendi dilinde sana hizmet ettiğinde fark et, senin dilin olmasa bile.",
+      "youProbably": ["İstenmeden insanlar için bir şeyler yaparsın", "Biri senin stresini üstlendiğinde derinden sevildiğini hissedersin", "Boş sözlerden sinirlenirsin", "Aşkı tamir ederek, taşıyarak, lojistik halledip gösterirsin"]
+    },
+    "gifts": {
+      "emoji": "🎁",
+      "title": "Hediye Alma",
+      "tagline": "aşkı kanıtlayan, düşüncenin ta kendisi",
+      "desc": "Hiçbir zaman fiyat etiketiyle ilgili değildi. Orada olmadığında birinin seni düşündüğünün kanıtı. Rastgele bir atıştırmalık, bir çalma listesi, bir \"bunu görünce seni düşündüm\" — her şey bu.",
+      "advice": "İnsanlar bunu materyalizm sanabilir. Anlamalarına yardım et: hediye ilginin kanıtı, bir alışveriş değil.",
+      "youProbably": ["Küçük anlamlı nesneleri sonsuza kadar saklarsın", "Biri özel bir günü unuttuğunda incinirsin", "Birinin bahsettiğin ufak bir şeyi hatırladığını fark edersin", "Verdiğin her hediyeye kafa yorarsın"]
+    },
+    "time": {
+      "emoji": "⏳",
+      "title": "Nitelikli Zaman",
+      "tagline": "aşk paran bölünmemiş ilgi",
+      "desc": "Yemekte masadaki telefon bir reddediştir. Aktiviteye ihtiyacın yok — tamamen orada olan, başka yere gitmesi ve başka birine yazması gerekmeyen birine ihtiyacın var.",
+      "advice": "Dikkat dağınıklığı çağında bu en zor dil. Açık ol: \"Ajandana değil, gözlerine ihtiyacım var.\"",
+      "youProbably": ["Biri konuşma ortasında telefonuna baktığında anında fark edersin", "Plansız tembel sabahları hazine gibi saklarsın", "Sürekli meşguliyetten reddedilmiş hissedersin", "Zamanı durduran insanlara en çok aşık olursun"]
+    }
+  }
+}

@@ -477,12 +477,27 @@ function switchUser() {
 // ==================== HOME SESSIONS ====================
 let _cachedSessions = null;
 let _homeFilter = 'all';
+const HOME_PAGE_SIZE = 5;
+let _activePageCount = 1;
+let _donePageCount = 1;
 
 function setHomeFilter(filter) {
   _homeFilter = filter;
+  _activePageCount = 1;
+  _donePageCount = 1;
   document.querySelectorAll('.home-tab').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.filter === filter);
   });
+  renderHomeSessions();
+}
+
+function showMoreActive() {
+  _activePageCount++;
+  renderHomeSessions();
+}
+
+function showMoreDone() {
+  _donePageCount++;
   renderHomeSessions();
 }
 
@@ -515,7 +530,9 @@ function renderHomeSessions() {
 
   if (showActive && active.length) {
     if (_homeFilter === 'all') html += `<div class="section-label">${i18n.t('home_active')}</div>`;
-    active.forEach(s => {
+    const activeLimit = _activePageCount * HOME_PAGE_SIZE;
+    const visibleActive = active.slice(0, activeLimit);
+    visibleActive.forEach(s => {
       const partner = s.creator_id === currentUser.id ? s.partner_username : s.creator_username;
       const pk = resolvePackKey(s.pack_key);
       const emoji = packEmojis[pk] || '📦';
@@ -536,11 +553,16 @@ function renderHomeSessions() {
         <button class="delete-btn" onclick="openDeleteModal('${s.code}')">${i18n.t('delete_label')}</button>
       </div>`;
     });
+    if (active.length > activeLimit) {
+      html += `<button class="show-more-btn" onclick="showMoreActive()">${i18n.t('home_show_more')} (${active.length - activeLimit})</button>`;
+    }
   }
 
   if (showDone && done.length) {
     if (_homeFilter === 'all') html += `<div class="section-label">${i18n.t('home_completed')}</div>`;
-    done.forEach(s => {
+    const doneLimit = _donePageCount * HOME_PAGE_SIZE;
+    const visibleDone = done.slice(0, doneLimit);
+    visibleDone.forEach(s => {
       const partner = s.creator_id === currentUser.id ? s.partner_username : s.creator_username;
       const pk = resolvePackKey(s.pack_key);
       const emoji = packEmojis[pk] || '📦';
@@ -557,6 +579,9 @@ function renderHomeSessions() {
         <button class="delete-btn" onclick="openDeleteModal('${s.code}')">${i18n.t('delete_label')}</button>
       </div>`;
     });
+    if (done.length > doneLimit) {
+      html += `<button class="show-more-btn" onclick="showMoreDone()">${i18n.t('home_show_more')} (${done.length - doneLimit})</button>`;
+    }
   }
 
   if (!html) {

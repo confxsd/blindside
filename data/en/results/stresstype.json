@@ -1,0 +1,29 @@
+{
+  "traits": ["fight", "flight", "fawn", "freeze"],
+  "results": {
+    "fight": {
+      "emoji": "🔥",
+      "title": "Fight Response",
+      "desc": "Under pressure, you take control. You push harder, get louder, and channel stress into action — sometimes too much.",
+      "advice": "Your drive is incredible. Learn to pause before reacting — not every stress needs a battle."
+    },
+    "flight": {
+      "emoji": "💨",
+      "title": "Flight Response",
+      "desc": "When things get heavy, you escape. Physically, mentally, digitally — you find a way out before the walls close in.",
+      "advice": "Leaving is sometimes wisdom. But notice when you're running from growth, not danger."
+    },
+    "fawn": {
+      "emoji": "🕊️",
+      "title": "Fawn Response",
+      "desc": "You survive by pleasing. You read rooms, adjust yourself, and prioritize others' comfort over your own truth.",
+      "advice": "Your kindness is real. Start asking: \"Am I being kind, or am I being safe?\" They're not always the same."
+    },
+    "freeze": {
+      "emoji": "🧊",
+      "title": "Freeze Response",
+      "desc": "Overwhelm makes you still. You go quiet, numb, and wait for the storm to pass — often from the inside.",
+      "advice": "Stillness can be wisdom. But practice small movements when frozen — one action can break the spell."
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "traits": ["child", "teen", "adult", "elder"],
+  "results": {
+    "child": {
+      "emoji": "🧒",
+      "title": "İç Çocuk",
+      "tagline": "her şeyi son ses hissediyorsun",
+      "desc": "Duygusal dünyan canlı, çiğ ve filtresiz. Neşe elektrik gibi, reddedilme felaket gibi ve güvenlik ihtiyacı farkında olduğundan daha çok kararını yönlendiriyor. Bu olgunlaşmamışlık değil — bir parçanın hâlâ görülmeyi beklediğinin işareti.",
+      "advice": "Daha hızlı büyümene gerek yok. Hak ettiğin şekilde kendine ebeveynlik etmen gerekiyor. Önce güvenlik. Sonra duygular sessizleşir.",
+      "youProbably": ["Her şeyi çok kişisel alırsın", "Herhangi bir mesafe işaretinden sonra güvenceye ihtiyaç duyarsın", "Duyguları bedeninde hissedersin — mide düşmesi, göğüste sıkışma", "Yorgun veya korkmuşken en yüksek sesle konuşan genç bir sesin vardır"]
+    },
+    "teen": {
+      "emoji": "⚡",
+      "title": "Asi",
+      "tagline": "kanıtlamak, zorlamak, performans göstermek — her zaman",
+      "desc": "Kendini kanıtlama döneminde olduğun çağdasın. Dünyaya, şüphecilere, belki kendine. Huzursuz bir enerji var — başarı acil hissettiriyor, dinlenmek tembellik gibi ve kimlik hâlâ gerçek zamanlı inşa ettiğin bir şey.",
+      "advice": "Yerini kazanmak zorunda değilsin. Zaten buradasın. Didinme, kanıtlama — sürdürülebilir olmadığı için yorucu. Performans sergilemeyi bırak ve yine de değerli ol.",
+      "youProbably": ["Kendini sürekli insanlarla kıyaslarsın", "Üretkenlik suçluluğu olmadan yerinde duramazsın", "Geçmişten birinin sesine benzeyen sert bir iç eleştirmenin vardır", "Aşırı özgüven ile derin öz-şüphe arasında gidip gelirsin"]
+    },
+    "adult": {
+      "emoji": "🌿",
+      "title": "Dengeli Olan",
+      "tagline": "hissediyorsun, adlandırıyorsun ve ne yapacağını seçiyorsun",
+      "desc": "Zor duyguları boğulmadan tutabiliyorsun. İletişim kuruyorsun, düşünüyorsun ve suçluluğa gömülmeden sorumluluk alıyorsun. Mükemmel değilsin ama burada ve şimdidasın.",
+      "advice": "Duygusal olgunluğun duygusal bastırmaya dönüşmesine izin verme. Dengeli olmak hissizlik değil. Dağınıklığa yer aç — canlılık orada yaşıyor.",
+      "youProbably": ["Karşındakinin özür dilemesine gerek kalmadan özür dilersin", "Kendini kaybetmeden başkalarına alan tutarsın", "Çocukluk kalıplarını fark edersin ama onlara yönetilmezsin", "Ne kadar yol aldığınla sessizce gurur duyarsın"]
+    },
+    "elder": {
+      "emoji": "🦉",
+      "title": "Bilge Gözlemci",
+      "tagline": "akıntıyla savaşmayı bıraktın",
+      "desc": "Büyük resmi görüyorsun. Duygular geliyor ve sen onlara dönüşmek yerine izliyorsun. Yeterince fırtınadan sağ çıkmış olmanın verdiği bir huzur var: bu da geçer. İnsanlar varlığına çekilir çünkü dinlenmek gibi hissettiriyorsun.",
+      "advice": "O kadar uzaklaşma ki hissetmeyi bırakma. Sıcaklığı olmayan bilgelik mesafeye dönüşür. Seni hâlâ şaşırtan insanlara yakın kal.",
+      "youProbably": ["Eskiden seni mahveden şeyler için nadiren aciliyet hissedersin", "Hak ettiğin için etkili tavsiyeler verirsin", "Duygusal olarak \"ileride\" olmaktan ara sıra yalnızlık hissedersin", "Tutkudan çok huzura değer verirsin — ve bazen ateşi özlersin"]
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "traits": ["child", "teen", "adult", "elder"],
+  "results": {
+    "child": {
+      "emoji": "🧒",
+      "title": "The Inner Child",
+      "tagline": "you feel everything at full volume",
+      "desc": "Your emotional world is vivid, raw, and unfiltered. Joy is electric, rejection is catastrophic, and the need for safety drives more of your decisions than you realize. This isn't immaturity — it's a sign that some part of you is still waiting to be seen.",
+      "advice": "You don't need to grow up faster. You need to parent yourself the way you deserved to be parented. Safety first. Then the feelings get quieter.",
+      "youProbably": [
+        "Take things very personally",
+        "Need reassurance after any sign of distance",
+        "Feel emotions in your body — stomach drops, chest tightness",
+        "Have a younger voice that speaks loudest when tired or scared"
+      ]
+    },
+    "teen": {
+      "emoji": "⚡",
+      "title": "The Rebel",
+      "tagline": "proving, pushing, performing — always",
+      "desc": "You're in the era of proving yourself. To the world, to doubters, maybe to yourself. There's a restless energy — achievement feels urgent, rest feels lazy, and identity is still something you're building in real time.",
+      "advice": "You don't have to earn your place. You're already here. The grinding, the proving — it's exhausting because it's not sustainable. Stop performing and still be valued.",
+      "youProbably": [
+        "Compare yourself to people constantly",
+        "Struggle to sit still without productivity guilt",
+        "Have a harsh inner critic that sounds like someone from your past",
+        "Alternate between overconfidence and deep self-doubt"
+      ]
+    },
+    "adult": {
+      "emoji": "🌿",
+      "title": "The Grounded One",
+      "tagline": "you feel it, name it, and choose what to do",
+      "desc": "You can hold difficult emotions without drowning. You communicate, reflect, and take responsibility without collapsing into guilt. You're not perfect, but you're present.",
+      "advice": "Don't let emotional maturity become emotional suppression. Grounded doesn't mean numb. Keep making room for messiness — that's where aliveness lives.",
+      "youProbably": [
+        "Apologize without needing the other person to apologize first",
+        "Hold space for others without losing yourself",
+        "Recognize childhood patterns without being ruled by them",
+        "Feel proud of how far you've come, quietly"
+      ]
+    },
+    "elder": {
+      "emoji": "🦉",
+      "title": "The Wise Observer",
+      "tagline": "you've stopped fighting the river",
+      "desc": "You see the bigger picture. Emotions arrive and you watch them instead of becoming them. There's a calm from having survived enough storms to know: this too passes. People are drawn to your presence because it feels like rest.",
+      "advice": "Don't detach so far that you stop feeling. Wisdom without warmth becomes distance. Stay close to people who still surprise you.",
+      "youProbably": [
+        "Rarely feel urgency about things that used to destroy you",
+        "Give advice that lands because you've earned it",
+        "Feel occasional loneliness from being emotionally \"ahead\"",
+        "Value peace over passion — and sometimes miss the fire"
+      ]
+    }
+  }
+}

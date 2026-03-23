@@ -1,0 +1,23 @@
+{
+  "traits": ["anxious", "avoidant", "secure"],
+  "results": {
+    "anxious": {
+      "emoji": "💗",
+      "title": "Kaygılı Bağlanma",
+      "desc": "Derinden seviyorsun ve kaybetmekten korkuyorsun. Yakınlık ve güvence arıyorsun, mesafeyi konuşulmadan önce hissedebiliyorsun.",
+      "advice": "Sevme kapasiten bir güç. Kendini yatıştırmayı öğren ve sessizliğin terk edilmek anlamına gelmediğine güven."
+    },
+    "avoidant": {
+      "emoji": "🛡️",
+      "title": "Kaçıngan Bağlanma",
+      "desc": "Bağımsızlık senin zırhın. Alana, özgürlüğe değer veriyorsun ve işler yakınlaştığında geri çekilme eğiliminde oluyorsun.",
+      "advice": "Alan ihtiyacın gayet geçerli. Bir kişiyi duvarların ötesine geçirmeyi dene — kırılganlık zayıflık değil."
+    },
+    "secure": {
+      "emoji": "🌱",
+      "title": "Güvenli Bağlanma",
+      "desc": "Kendini kaybetmeden yakın olabiliyorsun. İletişim kuruyorsun, güveniyorsun ve çatışmalarla ayakları yere basan bir duruşla başa çıkıyorsun.",
+      "advice": "Sen çıpasın. Sağlıklı ilişki kurmaya örnek olmaya devam et — ve kendi ihtiyaçlarını kontrol etmeyi de unutma."
+    }
+  }
+}
