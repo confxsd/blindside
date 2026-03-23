@@ -21,10 +21,10 @@ const PACK_NAMES = {
   emotionalage: '🎭 Emotional Age',
   boundaries: '🚧 Boundaries',
   selfsabotage: '🪤 Self Sabotage',
-  hisarchetype: '🐕 His Archetype',
-  girlfriendera: '👑 Girlfriend Era',
+  partnertype: '🐕 Partner Archetype',
+  partnerera: '👑 Partner Era',
   couplestory: '📖 Couple Story',
-  whathehides: '🎭 What He Hides',
+  whattheyhide: '🎭 What They Hide',
 };
 
 const OG_BOT_UA = /bot|crawl|slurp|spider|facebookexternalhit|whatsapp|telegrambot|twitterbot|linkedinbot|discordbot|slack/i;
