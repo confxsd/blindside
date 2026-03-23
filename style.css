@@ -1,0 +1,20 @@
+/* ========================================
+   BLINDSIDE — Main stylesheet
+
+   Modules:
+   1. base.css        — Reset, variables, themes, typography, utilities
+   2. animations.css  — All @keyframes
+   3. components.css  — Buttons, glass, inputs, nav, modals, settings
+   4. home.css        — Splash, auth, onboarding, home, sessions
+   5. packs.css       — Pack browsing, collections, featured, solo
+   6. quiz.css        — Quiz, answers, mini-game modes
+   7. reveal.css      — Invite, waiting, reveal, results, vibe report
+   ======================================== */
+
+@import url('css/base.css');
+@import url('css/animations.css');
+@import url('css/components.css');
+@import url('css/home.css');
+@import url('css/packs.css');
+@import url('css/quiz.css');
+@import url('css/reveal.css');
