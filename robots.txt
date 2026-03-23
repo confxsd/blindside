@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /analytics/
+
+Sitemap: https://blindside.to/sitemap.xml
