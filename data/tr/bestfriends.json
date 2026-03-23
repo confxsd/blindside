@@ -1,0 +1,106 @@
+[
+  {
+    "q": "Vazgeçemediğin comfort food nedir?",
+    "options": [
+      "Pizza",
+      "Ramen",
+      "Taco",
+      "Dondurma"
+    ],
+    "pi": 2,
+    "format": "bubble"
+  },
+  {
+    "q": "Hafta sonu planı seç:",
+    "options": [
+      "Brunch + vintage alışveriş",
+      "Netflix maratonu",
+      "Yolculuk",
+      "Hiçbir şey yapma"
+    ],
+    "pi": 1,
+    "format": "swipe"
+  },
+  {
+    "q": "Bir arkadaşta en iyi özellik nedir?",
+    "options": [
+      "Sadakat",
+      "Espri",
+      "Dürüstlük",
+      "Spontanlık"
+    ],
+    "pi": 0,
+    "format": "bubble"
+  },
+  {
+    "q": "Arkadaşlık marşınızın türü:",
+    "options": [
+      "Pop hit'leri",
+      "Nostalji şarkıları",
+      "Indie",
+      "Hip-hop"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Birbirinizi nasıl neşelendirirsiniz?",
+    "options": [
+      "Meme'ler",
+      "Yemek siparişi"
+    ],
+    "pi": 0,
+    "format": "vs"
+  },
+  {
+    "q": "İlk bağ kurduğunuz şey:",
+    "options": [
+      "Aynı kişiden nefret etmek",
+      "Ortak bir takıntı",
+      "Doğru zamanda doğru yerde olmak",
+      "Anında kaotik enerji"
+    ],
+    "pi": 0,
+    "format": "bubble"
+  },
+  {
+    "q": "Arkadaşın gece 2'de 'sana ihtiyacım var' yazıyor:",
+    "options": [
+      "Ayakkabıları çoktan giyiyorum",
+      "Hemen arıyorum",
+      "'Ne oldu??' yazıyorum",
+      "Konum atıyorum — yarı yolda buluşalım"
+    ],
+    "pi": 0,
+    "format": "swipe"
+  },
+  {
+    "q": "Sadece ona söyleyeceğin sır:",
+    "options": [
+      "Gerçek body count'um",
+      "Eski sevgilisi hakkında gerçekten ne düşündüğüm",
+      "En utanç verici arama geçmişim",
+      "Hiç yüksek sesle söylemediğim şey"
+    ],
+    "pi": 3,
+    "format": "bubble"
+  },
+  {
+    "q": "Arkadaşlığınızda sen:",
+    "options": [
+      "Plancı",
+      "Kaos ajanı"
+    ],
+    "pi": 1,
+    "format": "vs"
+  },
+  {
+    "q": "Arkadaşlığınız bir reality show olsa:",
+    "options": [
+      "Komedi — her gün viral olurduk",
+      "Drama — ama tatlı drama",
+      "Gezi programı — yolda olmak için yaratılmışız",
+      "Gece programı — derin sohbet ve kahkaha"
+    ],
+    "pi": 2
+  }
+]

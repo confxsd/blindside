@@ -1,0 +1,232 @@
+[
+  {
+    "q": "When you're upset, your partner:",
+    "options": [
+      "Drops everything and holds you",
+      "Gets quiet and brings you tea later",
+      "Writes you a long message at 2am",
+      "Makes a chaotic joke until you crack a smile"
+    ],
+    "traits": [
+      {
+        "golden_retriever": 2
+      },
+      {
+        "dark_academic": 2
+      },
+      {
+        "mysterious_poet": 2
+      },
+      {
+        "chaos_agent": 2
+      }
+    ]
+  },
+  {
+    "q": "Their ideal Saturday:",
+    "options": [
+      "Farmers market and cooking together",
+      "Bookstore, coffee, no talking needed",
+      "A spontaneous road trip with no map",
+      "Something unhinged — go-karts, karaoke, midnight swim"
+    ],
+    "traits": [
+      {
+        "golden_retriever": 2
+      },
+      {
+        "dark_academic": 2
+      },
+      {
+        "mysterious_poet": 2
+      },
+      {
+        "chaos_agent": 2
+      }
+    ]
+  },
+  {
+    "q": "How do they text you?",
+    "options": [
+      "Constant check-ins, morning and night",
+      "Carefully worded, sometimes poetic",
+      "Disappears then sends a voice note essay",
+      "Memes, chaos, 47 messages in a row"
+    ],
+    "traits": [
+      {
+        "golden_retriever": 2
+      },
+      {
+        "dark_academic": 2
+      },
+      {
+        "mysterious_poet": 2
+      },
+      {
+        "chaos_agent": 2
+      }
+    ]
+  },
+  {
+    "q": "When they find a song they love:",
+    "options": [
+      "Plays it on speaker and dances badly",
+      "Sends it to you with no caption",
+      "Learns the lyrics and sings it quietly",
+      "Puts it on repeat and makes it their entire personality"
+    ],
+    "traits": [
+      {
+        "golden_retriever": 2
+      },
+      {
+        "dark_academic": 2
+      },
+      {
+        "mysterious_poet": 2
+      },
+      {
+        "chaos_agent": 2
+      }
+    ]
+  },
+  {
+    "q": "Their vibe at a party:",
+    "options": [
+      "Talks to everyone, remembers every name",
+      "Leans on the wall looking effortlessly cool",
+      "Deep 1-on-1 convo in the corner",
+      "Starts a dare, breaks something, apologizes charmingly"
+    ],
+    "traits": [
+      {
+        "golden_retriever": 2
+      },
+      {
+        "dark_academic": 2
+      },
+      {
+        "mysterious_poet": 2
+      },
+      {
+        "chaos_agent": 2
+      }
+    ]
+  },
+  {
+    "q": "How do they say 'I love you'?",
+    "options": [
+      "Out loud, often, without hesitation",
+      "Rarely — but when they do, you feel it in your bones",
+      "Through playlists, letters, things they made",
+      "By surprising you when you least expect it"
+    ],
+    "traits": [
+      {
+        "golden_retriever": 2
+      },
+      {
+        "dark_academic": 2
+      },
+      {
+        "mysterious_poet": 2
+      },
+      {
+        "chaos_agent": 2
+      }
+    ]
+  },
+  {
+    "q": "Their biggest green flag:",
+    "options": [
+      "They remember the small things",
+      "They challenge you intellectually",
+      "They see parts of you no one else notices",
+      "They make every boring moment an adventure"
+    ],
+    "traits": [
+      {
+        "golden_retriever": 2
+      },
+      {
+        "dark_academic": 2
+      },
+      {
+        "mysterious_poet": 2
+      },
+      {
+        "chaos_agent": 2
+      }
+    ]
+  },
+  {
+    "q": "When you two fight:",
+    "options": [
+      "They apologize first even if they're right",
+      "They need space then come back with a thesis",
+      "They go quiet and write you a message",
+      "They make it dramatic, then defuse it with humor"
+    ],
+    "traits": [
+      {
+        "golden_retriever": 2
+      },
+      {
+        "dark_academic": 2
+      },
+      {
+        "mysterious_poet": 2
+      },
+      {
+        "chaos_agent": 2
+      }
+    ]
+  },
+  {
+    "q": "Their friends describe them as:",
+    "options": [
+      "The sweetest person they know",
+      "The smart one who's secretly deep",
+      "The mysterious one no one fully gets",
+      "The one who turns everything into chaos"
+    ],
+    "traits": [
+      {
+        "golden_retriever": 2
+      },
+      {
+        "dark_academic": 2
+      },
+      {
+        "mysterious_poet": 2
+      },
+      {
+        "chaos_agent": 2
+      }
+    ]
+  },
+  {
+    "q": "What drew you to them first?",
+    "options": [
+      "How safe and warm they felt",
+      "Their mind — the way they think",
+      "Something you couldn't name — just a pull",
+      "Their energy — they made everything electric"
+    ],
+    "traits": [
+      {
+        "golden_retriever": 2
+      },
+      {
+        "dark_academic": 2
+      },
+      {
+        "mysterious_poet": 2
+      },
+      {
+        "chaos_agent": 2
+      }
+    ]
+  }
+]

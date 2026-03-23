@@ -1,0 +1,105 @@
+[
+  {
+    "q": "Sabahçı mısın gececi mi?",
+    "options": [
+      "6'da kalkarım",
+      "Kesinlikle gececi",
+      "Güne bağlı",
+      "Sürekli yorgun"
+    ],
+    "pi": 3,
+    "format": "bubble"
+  },
+  {
+    "q": "İdeal çalışma ortamı:",
+    "options": [
+      "Kafe",
+      "Ev ofisi",
+      "Açık ofis",
+      "Kütüphane sessizliği"
+    ],
+    "pi": 1,
+    "format": "swipe"
+  },
+  {
+    "q": "Toplantı tarzın:",
+    "options": [
+      "Kamera açık, ilgili",
+      "Kamera kapalı, multitask",
+      "Bu e-posta olabilirdi",
+      "Beyaz tahta sevdalısı"
+    ],
+    "pi": 2,
+    "format": "bubble"
+  },
+  {
+    "q": "Mesaj tarzın:",
+    "options": [
+      "Tek uzun paragraf",
+      "20 kısa mesaj",
+      "Sesli mesaj",
+      "Sadece emoji"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Öğle arası tercihin:",
+    "options": [
+      "Masada yemek",
+      "Dışarıda yürüyüş",
+      "Grup yemeği",
+      "Kısa uyku"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Patron 'kısa bir toplantı' deyince:",
+    "options": [
+      "Anında korku",
+      "Tamam, hazırım"
+    ],
+    "pi": 0,
+    "format": "vs"
+  },
+  {
+    "q": "Gerçek verimli saatlerin:",
+    "options": [
+      "9-12, sonra bittim",
+      "Öğleden sonra herkes susunca",
+      "6'dan sonra ofis boşalınca",
+      "Rastgele 20 dakikalık deha anları"
+    ],
+    "pi": 2,
+    "format": "bubble"
+  },
+  {
+    "q": "Gizliden olduğun iş arkadaşı tipi:",
+    "options": [
+      "Tüm dedikoduları bilen",
+      "Herkesin işini sessizce yapan",
+      "Her zaman mute'ta olan",
+      "İstese şirketi yönetebilecek"
+    ],
+    "pi": 0,
+    "format": "swipe"
+  },
+  {
+    "q": "Takım etkinlikleri:",
+    "options": [
+      "Bazen gerçekten eğlenceli",
+      "Kurumsal işkence"
+    ],
+    "pi": 1,
+    "format": "vs"
+  },
+  {
+    "q": "Mesai dışı enerjin:",
+    "options": [
+      "Sınır koyarım, temiz çıkış yaparım",
+      "Maillerimi 'her ihtimale karşı' kontrol ederim",
+      "Ofis dışındayım ama kafam hâlâ toplantıda",
+      "Her seferinde otomatik yanıtı kurmayı unuturum"
+    ],
+    "pi": 3
+  }
+]

@@ -1,0 +1,104 @@
+[
+  {
+    "q": "Ömür boyu sınırsız pizza mı sushi mi?",
+    "options": [
+      "Pizza sonsuza dek",
+      "Sushi şüphesiz"
+    ],
+    "pi": 0,
+    "format": "vs"
+  },
+  {
+    "q": "Sonsuza dek tek müzik türü:",
+    "options": [
+      "Pop",
+      "Hip-hop",
+      "Nostalji klasikleri",
+      "Lo-fi / chill"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Doğruluk mu cesaret mi?",
+    "options": [
+      "Doğruluk — her zaman",
+      "Cesaret — tehlikeli yaşarım"
+    ],
+    "pi": 0,
+    "format": "vs"
+  },
+  {
+    "q": "Issız adada tek bir eşya:",
+    "options": [
+      "Telefon (sinyal yok lol)",
+      "Sınırsız atıştırmalık",
+      "Bir bıçak",
+      "İyi bir kitap"
+    ],
+    "pi": 1,
+    "format": "swipe"
+  },
+  {
+    "q": "En kötü süper güç:",
+    "options": [
+      "7/24 zihin okuma",
+      "Görünmezlik ama hep üşüyorsun",
+      "Uçmak ama 60 cm yükseklikte",
+      "Süper hız ama hep tökezliyorsun"
+    ],
+    "pi": 2,
+    "format": "bubble"
+  },
+  {
+    "q": "Bir günlüğüne biriyle hayat değiştir:",
+    "options": [
+      "Bir ünlü",
+      "Evcil hayvanın",
+      "Patronun",
+      "Küçüklükteki sen"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "1 milyon TL için en utanç verici şey:",
+    "options": [
+      "Ayık karaoke yapmak",
+      "Eski sevgiliye 'özledim' yazmak",
+      "İşe kostümle gitmek",
+      "Arama geçmişini paylaşmak"
+    ],
+    "pi": 0,
+    "format": "bubble"
+  },
+  {
+    "q": "Rüya yarışma programın:",
+    "options": [
+      "Survivor",
+      "Yer Lav Oldu",
+      "Love Island",
+      "Kim 500 Milyar İster"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "İki doğru bir yalan — hangisini yanlış tahmin ederler?",
+    "options": [
+      "Çılgın olanı",
+      "Sıkıcı olanı",
+      "Hep doğru tahmin ederler",
+      "Berbat yalancıyım"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Akşam yemeği partisi veriyorsun. Ortam:",
+    "options": [
+      "Şık, şarap, caz",
+      "Rahat, pizza, masa oyunları",
+      "Potluck kaos",
+      "Sadece biz, paket servis, derin sohbet"
+    ],
+    "pi": 3,
+    "format": "swipe"
+  }
+]

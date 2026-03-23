@@ -1,0 +1,107 @@
+[
+  {
+    "q": "Your reaction when the food arrives: 🍕",
+    "options": [
+      "😍 pure joy",
+      "📸 photo first",
+      "🤤 already eating",
+      "😐 it looks different from the menu"
+    ],
+    "pi": 2,
+    "format": "bubble"
+  },
+  {
+    "q": "Group chat is blowing up at 3am:",
+    "options": [
+      "👀 reading everything",
+      "🔥 adding fuel"
+    ],
+    "pi": 1,
+    "format": "vs"
+  },
+  {
+    "q": "You accidentally like a 3-year-old photo:",
+    "options": [
+      "😱 panic unlike",
+      "💀 my social life is over",
+      "🤷 own it",
+      "😂 laugh and move on"
+    ],
+    "pi": 3,
+    "format": "swipe"
+  },
+  {
+    "q": "Someone says 'we need to talk':",
+    "options": [
+      "😰 instant anxiety",
+      "🙄 here we go",
+      "🧘 I'm calm",
+      "🏃 time to run"
+    ],
+    "pi": 0,
+    "format": "bubble"
+  },
+  {
+    "q": "You see your ex in public:",
+    "options": [
+      "👻 become invisible",
+      "😎 act unbothered",
+      "👋 say hi like a normal person",
+      "📱 pretend to be on the phone"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Plot twist in the movie you're watching:",
+    "options": [
+      "😮 jaw dropped",
+      "🤓 called it",
+      "😭 emotional wreck",
+      "😴 wait what happened"
+    ],
+    "pi": 1,
+    "format": "bubble"
+  },
+  {
+    "q": "Your best friend cancels plans last minute:",
+    "options": [
+      "😤 never forgiving this",
+      "😌 lowkey relieved"
+    ],
+    "pi": 1,
+    "format": "vs"
+  },
+  {
+    "q": "WiFi goes down during an important moment:",
+    "options": [
+      "🤯 existential crisis",
+      "📖 guess I'll read",
+      "🕯️ candle time, it's a vibe",
+      "😡 calling the provider NOW"
+    ],
+    "pi": 3,
+    "format": "swipe"
+  },
+  {
+    "q": "Someone gives you a compliment:",
+    "options": [
+      "😊 melting inside",
+      "🤨 what do they want",
+      "😅 awkward deflect",
+      "💅 I know"
+    ],
+    "pi": 0,
+    "format": "bubble"
+  },
+  {
+    "q": "Monday morning energy:",
+    "options": [
+      "☕ don't talk to me yet",
+      "🏃 let's get this bread",
+      "😩 already counting to Friday",
+      "🎵 vibing, surprisingly"
+    ],
+    "pi": 2,
+    "format": "swipe"
+  }
+]

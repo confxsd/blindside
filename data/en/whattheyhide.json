@@ -1,0 +1,233 @@
+[
+  {
+    "q": "When you catch your partner staring at you:",
+    "options": [
+      "They smile and look away shyly",
+      "They overthink whether you noticed",
+      "They say 'just making sure you're okay'",
+      "They pretend they weren't looking"
+    ],
+    "traits": [
+      {
+        "hopeless_romantic": 2
+      },
+      {
+        "secret_overthinker": 2
+      },
+      {
+        "soft_protector": 2
+      },
+      {
+        "guarded_dreamer": 2
+      }
+    ]
+  },
+  {
+    "q": "When something worries your partner:",
+    "options": [
+      "They try to fix it before you even know",
+      "They replay every scenario at 3am",
+      "They ask if you're safe first, deal with themselves later",
+      "They say 'I'm fine' and change the subject"
+    ],
+    "traits": [
+      {
+        "hopeless_romantic": 1,
+        "soft_protector": 1
+      },
+      {
+        "secret_overthinker": 2
+      },
+      {
+        "soft_protector": 2
+      },
+      {
+        "guarded_dreamer": 2
+      }
+    ]
+  },
+  {
+    "q": "Their phone wallpaper:",
+    "options": [
+      "A photo of you they think you don't know about",
+      "Something aesthetic they chose after way too much thought",
+      "Family or something meaningful",
+      "Default — they don't do sentimental (or so they say)"
+    ],
+    "traits": [
+      {
+        "hopeless_romantic": 2
+      },
+      {
+        "secret_overthinker": 2
+      },
+      {
+        "soft_protector": 2
+      },
+      {
+        "guarded_dreamer": 2
+      }
+    ]
+  },
+  {
+    "q": "After a really good date:",
+    "options": [
+      "They text 'tonight was perfect' before you're even home",
+      "They replay every moment wondering if they said something weird",
+      "They walk slow on purpose to make the night last longer",
+      "They act casual but you can tell they're buzzing inside"
+    ],
+    "traits": [
+      {
+        "hopeless_romantic": 2
+      },
+      {
+        "secret_overthinker": 2
+      },
+      {
+        "soft_protector": 2
+      },
+      {
+        "guarded_dreamer": 2
+      }
+    ]
+  },
+  {
+    "q": "How they handle their emotions:",
+    "options": [
+      "Feel deeply and need to express it to someone",
+      "Feel deeply but spiral trying to understand it alone",
+      "Feel deeply but channel it into protecting others",
+      "Feel deeply but lock it in a vault"
+    ],
+    "traits": [
+      {
+        "hopeless_romantic": 2
+      },
+      {
+        "secret_overthinker": 2
+      },
+      {
+        "soft_protector": 2
+      },
+      {
+        "guarded_dreamer": 2
+      }
+    ]
+  },
+  {
+    "q": "The thing they'd never say out loud:",
+    "options": [
+      "How much they've imagined a future with you",
+      "How scared they are of messing this up",
+      "How much responsibility they put on themselves for your happiness",
+      "How much they wish they could let their guard down"
+    ],
+    "traits": [
+      {
+        "hopeless_romantic": 2
+      },
+      {
+        "secret_overthinker": 2
+      },
+      {
+        "soft_protector": 2
+      },
+      {
+        "guarded_dreamer": 2
+      }
+    ]
+  },
+  {
+    "q": "When they see a couple in a movie doing something romantic:",
+    "options": [
+      "They secretly want that and file it away for later",
+      "They wonder if you'd think it's cheesy",
+      "They think about how they'd make you feel that safe",
+      "They roll their eyes but you catch a micro-smile"
+    ],
+    "traits": [
+      {
+        "hopeless_romantic": 2
+      },
+      {
+        "secret_overthinker": 2
+      },
+      {
+        "soft_protector": 2
+      },
+      {
+        "guarded_dreamer": 2
+      }
+    ]
+  },
+  {
+    "q": "Their biggest unspoken fear in your relationship:",
+    "options": [
+      "That they'll never be romantic enough for you",
+      "That they're reading everything wrong",
+      "That they can't protect you from everything",
+      "That if they open up fully, you'll leave"
+    ],
+    "traits": [
+      {
+        "hopeless_romantic": 2
+      },
+      {
+        "secret_overthinker": 2
+      },
+      {
+        "soft_protector": 2
+      },
+      {
+        "guarded_dreamer": 2
+      }
+    ]
+  },
+  {
+    "q": "The way they sleep next to you:",
+    "options": [
+      "Facing you, arm around you, as close as possible",
+      "Tossing and turning — their brain doesn't stop",
+      "Between you and the door — always",
+      "On their side, back turned but hand reaching yours"
+    ],
+    "traits": [
+      {
+        "hopeless_romantic": 2
+      },
+      {
+        "secret_overthinker": 2
+      },
+      {
+        "soft_protector": 2
+      },
+      {
+        "guarded_dreamer": 2
+      }
+    ]
+  },
+  {
+    "q": "If they could tell you one truth:",
+    "options": [
+      "'I've loved you longer than you think'",
+      "'I overthink everything because I don't want to lose you'",
+      "'I'd carry every hard thing so you never have to'",
+      "'I want to let you in but I don't know how'"
+    ],
+    "traits": [
+      {
+        "hopeless_romantic": 2
+      },
+      {
+        "secret_overthinker": 2
+      },
+      {
+        "soft_protector": 2
+      },
+      {
+        "guarded_dreamer": 2
+      }
+    ]
+  }
+]

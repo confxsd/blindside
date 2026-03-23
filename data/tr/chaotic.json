@@ -1,0 +1,105 @@
+[
+  {
+    "q": "Yangında son alacağın şey:",
+    "options": [
+      "Şarj aleti",
+      "Atıştırmalık",
+      "Onurum",
+      "Öylece dururdum"
+    ],
+    "pi": 2,
+    "format": "swipe"
+  },
+  {
+    "q": "Sürekli düşündüğün şey:",
+    "options": [
+      "O utanç verici anı",
+      "Karşılıksız aşk",
+      "Alternatif evrenler",
+      "Dinozorlar cidden"
+    ],
+    "pi": 0,
+    "format": "bubble"
+  },
+  {
+    "q": "Kötü karakter olsan silahın:",
+    "options": [
+      "Pasif agresif mesajlar",
+      "Silah olarak sessizlik"
+    ],
+    "pi": 0,
+    "format": "vs"
+  },
+  {
+    "q": "Gerçek hayatta kalma becerin:",
+    "options": [
+      "Her yerde uyuyabilirim",
+      "Şüpheli yemek yeme",
+      "Paralel park",
+      "İstediğimde ağlarım"
+    ],
+    "pi": 0,
+    "format": "bubble"
+  },
+  {
+    "q": "Sahte iş unvanı seç:",
+    "options": [
+      "Baş Overthinker",
+      "Profesyonel Geveze",
+      "Vibe Danışmanı",
+      "Uyku Mimarı"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "FBI ajanın seni nasıl görüyor:",
+    "options": [
+      "Çılgın",
+      "Sıkıcı açıkçası",
+      "Endişe verici",
+      "En sevdiği görev"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Gece 3 düşüncesi:",
+    "options": [
+      "Ya yerçekimi durursa",
+      "Eski sevgilime yazmalıyım",
+      "Gerçek miyim",
+      "Peynir lazım"
+    ],
+    "pi": 3,
+    "format": "bubble"
+  },
+  {
+    "q": "Ağız alışkanlığın:",
+    "options": [
+      "Olan olmuş",
+      "Kafamda sıfır düşünce"
+    ],
+    "pi": 0,
+    "format": "vs"
+  },
+  {
+    "q": "Korku filminde sen:",
+    "options": [
+      "İlk ölen",
+      "Son hayatta kalan",
+      "Katil",
+      "Hemen düşüp yere seren"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Toksik özelliğin:",
+    "options": [
+      "Ana karakter sendromu",
+      "Her şeyi aşırı düşünmek",
+      "Yanlış anda gülmek",
+      "'Buluşalım' deyip hiç buluşmamak"
+    ],
+    "pi": 1,
+    "format": "bubble"
+  }
+]

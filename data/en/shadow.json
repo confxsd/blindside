@@ -1,0 +1,233 @@
+[
+  {
+    "q": "What trait do you judge hardest in others?",
+    "options": [
+      "Selfishness",
+      "Weakness",
+      "Dishonesty",
+      "Neediness"
+    ],
+    "traits": [
+      {
+        "repressed_selfishness": 2
+      },
+      {
+        "repressed_vulnerability": 2
+      },
+      {
+        "repressed_authenticity": 2
+      },
+      {
+        "repressed_need": 2
+      }
+    ]
+  },
+  {
+    "q": "When you're alone and no one's watching:",
+    "options": [
+      "I finally let myself be lazy",
+      "I cry more than people think",
+      "I'm meaner in my thoughts than I'd admit",
+      "I need people more than I show"
+    ],
+    "traits": [
+      {
+        "repressed_selfishness": 2
+      },
+      {
+        "repressed_vulnerability": 2
+      },
+      {
+        "repressed_authenticity": 2
+      },
+      {
+        "repressed_need": 2
+      }
+    ]
+  },
+  {
+    "q": "The compliment that makes you uncomfortable:",
+    "options": [
+      "'You deserve to rest'",
+      "'It's okay to not be strong'",
+      "'You don't have to be nice all the time'",
+      "'You're allowed to ask for help'"
+    ],
+    "traits": [
+      {
+        "repressed_selfishness": 2
+      },
+      {
+        "repressed_vulnerability": 2
+      },
+      {
+        "repressed_authenticity": 2
+      },
+      {
+        "repressed_need": 2
+      }
+    ]
+  },
+  {
+    "q": "Your secret fantasy that feels 'wrong':",
+    "options": [
+      "Dropping everything and being irresponsible",
+      "Breaking down in front of someone",
+      "Telling everyone what I really think",
+      "Being completely taken care of"
+    ],
+    "traits": [
+      {
+        "repressed_selfishness": 2
+      },
+      {
+        "repressed_vulnerability": 2
+      },
+      {
+        "repressed_authenticity": 2
+      },
+      {
+        "repressed_need": 2
+      }
+    ]
+  },
+  {
+    "q": "The version of you that scares you:",
+    "options": [
+      "The one who doesn't care about anyone",
+      "The one who falls apart completely",
+      "The one who says the cruel quiet part out loud",
+      "The one who can't function alone"
+    ],
+    "traits": [
+      {
+        "repressed_selfishness": 2
+      },
+      {
+        "repressed_vulnerability": 2
+      },
+      {
+        "repressed_authenticity": 2
+      },
+      {
+        "repressed_need": 2
+      }
+    ]
+  },
+  {
+    "q": "You were taught as a child that:",
+    "options": [
+      "Being selfish is the worst thing",
+      "Crying is weakness",
+      "You must always be kind and agreeable",
+      "You shouldn't need anyone"
+    ],
+    "traits": [
+      {
+        "repressed_selfishness": 2
+      },
+      {
+        "repressed_vulnerability": 2
+      },
+      {
+        "repressed_authenticity": 2
+      },
+      {
+        "repressed_need": 2
+      }
+    ]
+  },
+  {
+    "q": "The emotion you suppress the most:",
+    "options": [
+      "Anger — I swallow it",
+      "Sadness — I perform being okay",
+      "Resentment — I smile through it",
+      "Loneliness — I'd never admit it"
+    ],
+    "traits": [
+      {
+        "repressed_selfishness": 1,
+        "repressed_authenticity": 1
+      },
+      {
+        "repressed_vulnerability": 2
+      },
+      {
+        "repressed_authenticity": 2
+      },
+      {
+        "repressed_need": 2
+      }
+    ]
+  },
+  {
+    "q": "People would be shocked to learn:",
+    "options": [
+      "How little I actually want to give sometimes",
+      "How fragile I feel inside",
+      "How much I curate what I show",
+      "How afraid I am of being alone"
+    ],
+    "traits": [
+      {
+        "repressed_selfishness": 2
+      },
+      {
+        "repressed_vulnerability": 2
+      },
+      {
+        "repressed_authenticity": 2
+      },
+      {
+        "repressed_need": 2
+      }
+    ]
+  },
+  {
+    "q": "Your recurring dream or fear:",
+    "options": [
+      "Everyone leaves because I took too much",
+      "I collapse and no one catches me",
+      "My mask falls off and everyone sees",
+      "I call out and no one comes"
+    ],
+    "traits": [
+      {
+        "repressed_selfishness": 2
+      },
+      {
+        "repressed_vulnerability": 2
+      },
+      {
+        "repressed_authenticity": 2
+      },
+      {
+        "repressed_need": 2
+      }
+    ]
+  },
+  {
+    "q": "If your shadow could speak, it would say:",
+    "options": [
+      "'Let me want things without guilt'",
+      "'Let me be soft without shame'",
+      "'Let me be honest without punishment'",
+      "'Let me need someone without losing myself'"
+    ],
+    "traits": [
+      {
+        "repressed_selfishness": 2
+      },
+      {
+        "repressed_vulnerability": 2
+      },
+      {
+        "repressed_authenticity": 2
+      },
+      {
+        "repressed_need": 2
+      }
+    ]
+  }
+]

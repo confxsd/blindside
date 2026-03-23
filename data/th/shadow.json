@@ -1,0 +1,233 @@
+[
+  {
+    "q": "ลักษณะที่ตัดสินคนอื่นรุนแรงที่สุด:",
+    "options": [
+      "ความเห็นแก่ตัว",
+      "ความอ่อนแอ",
+      "ความไม่จริงใจ",
+      "ความต้องการมากเกิน"
+    ],
+    "traits": [
+      {
+        "repressed_selfishness": 2
+      },
+      {
+        "repressed_vulnerability": 2
+      },
+      {
+        "repressed_authenticity": 2
+      },
+      {
+        "repressed_need": 2
+      }
+    ]
+  },
+  {
+    "q": "เมื่ออยู่คนเดียวไม่มีใครเห็น:",
+    "options": [
+      "ปล่อยตัวขี้เกียจ",
+      "ร้องไห้มากกว่าที่คนคิด",
+      "ความคิดร้ายกว่าที่ยอมรับ",
+      "ต้องการคนมากกว่าที่แสดง"
+    ],
+    "traits": [
+      {
+        "repressed_selfishness": 2
+      },
+      {
+        "repressed_vulnerability": 2
+      },
+      {
+        "repressed_authenticity": 2
+      },
+      {
+        "repressed_need": 2
+      }
+    ]
+  },
+  {
+    "q": "คำชมที่ทำให้อึดอัด:",
+    "options": [
+      "'คุณสมควรได้พัก'",
+      "'ไม่เป็นไรที่ไม่เข้มแข็ง'",
+      "'ไม่จำเป็นต้องดีตลอดเวลา'",
+      "'คุณขอความช่วยเหลือได้'"
+    ],
+    "traits": [
+      {
+        "repressed_selfishness": 2
+      },
+      {
+        "repressed_vulnerability": 2
+      },
+      {
+        "repressed_authenticity": 2
+      },
+      {
+        "repressed_need": 2
+      }
+    ]
+  },
+  {
+    "q": "จินตนาการลับที่รู้สึก 'ผิด':",
+    "options": [
+      "ทิ้งทุกอย่างแล้วไร้ความรับผิดชอบ",
+      "พังทลายต่อหน้าใครสักคน",
+      "บอกทุกคนว่าคิดอะไรจริงๆ",
+      "ถูกดูแลทุกอย่าง"
+    ],
+    "traits": [
+      {
+        "repressed_selfishness": 2
+      },
+      {
+        "repressed_vulnerability": 2
+      },
+      {
+        "repressed_authenticity": 2
+      },
+      {
+        "repressed_need": 2
+      }
+    ]
+  },
+  {
+    "q": "เวอร์ชันที่น่ากลัวของตัวเอง:",
+    "options": [
+      "คนที่ไม่แคร์ใคร",
+      "คนที่พังทลายสิ้นเชิง",
+      "คนที่พูดสิ่งโหดร้ายออกมา",
+      "คนที่ทำอะไรคนเดียวไม่ได้"
+    ],
+    "traits": [
+      {
+        "repressed_selfishness": 2
+      },
+      {
+        "repressed_vulnerability": 2
+      },
+      {
+        "repressed_authenticity": 2
+      },
+      {
+        "repressed_need": 2
+      }
+    ]
+  },
+  {
+    "q": "ตอนเด็กถูกสอนว่า:",
+    "options": [
+      "เห็นแก่ตัวคือสิ่งเลวร้ายที่สุด",
+      "ร้องไห้คือความอ่อนแอ",
+      "ต้องใจดีและเข้ากับคนเสมอ",
+      "ไม่ควรต้องการใคร"
+    ],
+    "traits": [
+      {
+        "repressed_selfishness": 2
+      },
+      {
+        "repressed_vulnerability": 2
+      },
+      {
+        "repressed_authenticity": 2
+      },
+      {
+        "repressed_need": 2
+      }
+    ]
+  },
+  {
+    "q": "อารมณ์ที่กดทับมากที่สุด:",
+    "options": [
+      "ความโกรธ — กลืนมัน",
+      "ความเศร้า — แสร้งว่าโอเค",
+      "ความขุ่นเคือง — ยิ้มผ่าน",
+      "ความเหงา — ไม่มีวันยอมรับ"
+    ],
+    "traits": [
+      {
+        "repressed_selfishness": 1,
+        "repressed_authenticity": 1
+      },
+      {
+        "repressed_vulnerability": 2
+      },
+      {
+        "repressed_authenticity": 2
+      },
+      {
+        "repressed_need": 2
+      }
+    ]
+  },
+  {
+    "q": "คนจะช็อคถ้ารู้:",
+    "options": [
+      "บางทีอยากให้น้อยแค่ไหน",
+      "เปราะบางแค่ไหนข้างใน",
+      "คัดสรรสิ่งที่แสดงมากแค่ไหน",
+      "กลัวการอยู่คนเดียวมากแค่ไหน"
+    ],
+    "traits": [
+      {
+        "repressed_selfishness": 2
+      },
+      {
+        "repressed_vulnerability": 2
+      },
+      {
+        "repressed_authenticity": 2
+      },
+      {
+        "repressed_need": 2
+      }
+    ]
+  },
+  {
+    "q": "ฝันร้ายหรือความกลัวที่กลับมา:",
+    "options": [
+      "ทุกคนจากไปเพราะเอามากเกิน",
+      "ล้มลงและไม่มีใครรับ",
+      "หน้ากากหลุดและทุกคนเห็น",
+      "เรียกหาและไม่มีใครมา"
+    ],
+    "traits": [
+      {
+        "repressed_selfishness": 2
+      },
+      {
+        "repressed_vulnerability": 2
+      },
+      {
+        "repressed_authenticity": 2
+      },
+      {
+        "repressed_need": 2
+      }
+    ]
+  },
+  {
+    "q": "ถ้าเงาพูดได้ จะบอกว่า:",
+    "options": [
+      "'ให้ฉันอยากได้โดยไม่รู้สึกผิด'",
+      "'ให้ฉันอ่อนโยนโดยไม่อาย'",
+      "'ให้ฉันซื่อสัตย์โดยไม่ถูกลงโทษ'",
+      "'ให้ฉันต้องการใครโดยไม่สูญเสียตัวเอง'"
+    ],
+    "traits": [
+      {
+        "repressed_selfishness": 2
+      },
+      {
+        "repressed_vulnerability": 2
+      },
+      {
+        "repressed_authenticity": 2
+      },
+      {
+        "repressed_need": 2
+      }
+    ]
+  }
+]

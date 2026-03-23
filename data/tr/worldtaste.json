@@ -1,0 +1,102 @@
+[
+  {
+    "q": "Hayalindeki seyahat noktası:",
+    "options": [
+      "Tokyo, Japonya",
+      "Marakeş, Fas",
+      "Santorini, Yunanistan",
+      "Medellín, Kolombiya"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Dünyanın en iyi sokak yemeği:",
+    "options": [
+      "Meksika takosu",
+      "Tayland pad thai",
+      "Türk kebabı",
+      "Çin mantısı"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Başka kültürden benimseyeceğin gelenek:",
+    "options": [
+      "Siesta (İspanya)",
+      "Hygge (Danimarka)",
+      "Hanami (Japonya)",
+      "Fika (İsveç)"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Akıcı konuşmak istediğin dil:",
+    "options": [
+      "Japonca",
+      "Fransızca",
+      "Arapça",
+      "Korece"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Gitmek istediğin dünya festivali:",
+    "options": [
+      "Karnaval (Brezilya)",
+      "Holi (Hindistan)",
+      "Ölüler Günü (Meksika)",
+      "Fener Festivali (Tayland)"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Dünyanın en iyi rahatlatıcı içeceği:",
+    "options": [
+      "Chai (Hindistan)",
+      "Matcha (Japonya)",
+      "Türk kahvesi",
+      "Horchata (Meksika)"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Ruhunu hareketlendiren müzik:",
+    "options": [
+      "Afrobeats",
+      "K-Pop",
+      "Latin reggaeton",
+      "Arap ud müziği"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "En çok saygı duyduğun kültürel değer:",
+    "options": [
+      "Misafirperverlik (Ortadoğu)",
+      "Büyüklere saygı (Asya)",
+      "Topluluk ruhu (Afrika)",
+      "İş-yaşam dengesi (İskandinav)"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Bir yıl yurt dışında yaşasan:",
+    "options": [
+      "İtalya — yemek ve hava",
+      "Güney Kore — kültür dalgası",
+      "Brezilya — enerji ve sıcaklık",
+      "Yeni Zelanda — doğa ve huzur"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "En iyi tatlı geleneği:",
+    "options": [
+      "Fransız pastaneleri",
+      "Türk baklavası",
+      "Japon mochisi",
+      "Hint gulab jamunu"
+    ],
+    "pi": 1
+  }
+]

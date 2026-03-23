@@ -1,0 +1,232 @@
+[
+  {
+    "q": "Nasıl başladınız?",
+    "options": [
+      "Kader gibi hissettirdi — birbirimizi bulmamız kaçınılmazdı",
+      "Çılgın bir hikaye — seyahat, rastgele tanışma, macera",
+      "Kaos olarak başladık ama bir şekilde yürüdü",
+      "Yavaş yavaş — önce arkadaştık, sonra çarptı"
+    ],
+    "traits": [
+      {
+        "soulmates": 2
+      },
+      {
+        "adventure_duo": 2
+      },
+      {
+        "chaos_couple": 2
+      },
+      {
+        "slow_burn": 2
+      }
+    ]
+  },
+  {
+    "q": "Sabah rutininiz:",
+    "options": [
+      "Sarmaş dolaş uyanıp yatakta kahve",
+      "Daha kahvaltı etmeden günün macerasını planlıyoruz",
+      "Birimiz geç, diğeri sevgiyle bağırıyor",
+      "Ayrı sabahlar ama huzurlu, uzak değil"
+    ],
+    "traits": [
+      {
+        "soulmates": 2
+      },
+      {
+        "adventure_duo": 2
+      },
+      {
+        "chaos_couple": 2
+      },
+      {
+        "slow_burn": 2
+      }
+    ]
+  },
+  {
+    "q": "Anlaşamadığınızda:",
+    "options": [
+      "Konuşuruz — her zaman yolumuzu buluruz",
+      "Birlikte bir şey yaparız ve kendiliğinden düzelir",
+      "Gürültülü, dramatik, sonra beş dakika sonra öpüşüyoruz",
+      "Her birimiz alan alır, düşünür, sonra daha yumuşak döneriz"
+    ],
+    "traits": [
+      {
+        "soulmates": 2
+      },
+      {
+        "adventure_duo": 2
+      },
+      {
+        "chaos_couple": 2
+      },
+      {
+        "slow_burn": 2
+      }
+    ]
+  },
+  {
+    "q": "Çift estetiğiniz:",
+    "options": [
+      "Uyumlu kıyafetler, ortak playlistler, cümleleri tamamlamak",
+      "Sırt çantaları, havalimanı selfieleri, spontane planlar",
+      "Çılgın mesajlar, kimsenin anlamadığı iç şakalar",
+      "Rahat geceler, derin sohbetler, acele yok"
+    ],
+    "traits": [
+      {
+        "soulmates": 2
+      },
+      {
+        "adventure_duo": 2
+      },
+      {
+        "chaos_couple": 2
+      },
+      {
+        "slow_burn": 2
+      }
+    ]
+  },
+  {
+    "q": "Arkadaşlarınız ikiniz hakkında:",
+    "options": [
+      "'Resmen aynı kişiler'",
+      "'Hep çılgın bir şey yapıyorlar'",
+      "'Kaotik ama bir şekilde işliyor'",
+      "'Çok sürdü ama mükemmeller'"
+    ],
+    "traits": [
+      {
+        "soulmates": 2
+      },
+      {
+        "adventure_duo": 2
+      },
+      {
+        "chaos_couple": 2
+      },
+      {
+        "slow_burn": 2
+      }
+    ]
+  },
+  {
+    "q": "İdeal yıl dönümünüz:",
+    "options": [
+      "İlk buluşmayı her detayıyla tekrarlamak",
+      "İkinizin de düzgün planlamadığı sürpriz bir gezi",
+      "Tamamen plansız ama efsane olan bir şey",
+      "Saatlerce sadece konuştuğunuz sessiz bir akşam yemeği"
+    ],
+    "traits": [
+      {
+        "soulmates": 2
+      },
+      {
+        "adventure_duo": 2
+      },
+      {
+        "chaos_couple": 2
+      },
+      {
+        "slow_burn": 2
+      }
+    ]
+  },
+  {
+    "q": "Sizi bir arada tutan:",
+    "options": [
+      "Ruhani hissettiren bir bağ",
+      "Her şeyi birlikte deneyimlemenin heyecanı",
+      "Bu enerjiyi başkasının kaldıramayacağı gerçeği",
+      "Gerçek dostluk üzerine kurulu bir temel"
+    ],
+    "traits": [
+      {
+        "soulmates": 2
+      },
+      {
+        "adventure_duo": 2
+      },
+      {
+        "chaos_couple": 2
+      },
+      {
+        "slow_burn": 2
+      }
+    ]
+  },
+  {
+    "q": "Çift olarak zayıf noktanız:",
+    "options": [
+      "O kadar uyumluyuz ki bireysel büyümeyi unutuyoruz",
+      "Durağanlıktan kaçınıyoruz — hep bir sonraki şey lazım",
+      "Drama bazen yorucu oluyor",
+      "O kadar yavaş ilerliyoruz ki neredeyse birbirimizi kaçırıyorduk"
+    ],
+    "traits": [
+      {
+        "soulmates": 2
+      },
+      {
+        "adventure_duo": 2
+      },
+      {
+        "chaos_couple": 2
+      },
+      {
+        "slow_burn": 2
+      }
+    ]
+  },
+  {
+    "q": "İlişkiniz bir film türü olsaydı:",
+    "options": [
+      "Romantik — epik, duygusal, kadersel",
+      "Aksiyon-macera — hızlı tempolu, unutulmaz",
+      "Komedi — absürt, tahmin edilemez, iki kez izlersin",
+      "Bağımsız drama — sessiz, güzel, derinden hissedilen"
+    ],
+    "traits": [
+      {
+        "soulmates": 2
+      },
+      {
+        "adventure_duo": 2
+      },
+      {
+        "chaos_couple": 2
+      },
+      {
+        "slow_burn": 2
+      }
+    ]
+  },
+  {
+    "q": "Anladığın an:",
+    "options": [
+      "Gözlerimiz ilk buluştuğunda — sadece bildim",
+      "Birlikte atlattığımız çılgın bir şey sırasında",
+      "Yine de birbirimizi seçtiğimiz bir kavgadan sonra",
+      "Rastgele bir salı günü her şey yerli yerine oturduğunda"
+    ],
+    "traits": [
+      {
+        "soulmates": 2
+      },
+      {
+        "adventure_duo": 2
+      },
+      {
+        "chaos_couple": 2
+      },
+      {
+        "slow_burn": 2
+      }
+    ]
+  }
+]

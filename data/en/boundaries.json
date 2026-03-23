@@ -1,0 +1,235 @@
+[
+  {
+    "q": "A friend asks a favor you don't have energy for:",
+    "options": [
+      "I say yes and resent them later",
+      "I say yes but drop hints I'm tired",
+      "I say no honestly",
+      "I offer an alternative that works for me"
+    ],
+    "traits": [
+      {
+        "porous": 2
+      },
+      {
+        "passive": 2
+      },
+      {
+        "healthy": 2
+      },
+      {
+        "healthy": 1,
+        "rigid": 1
+      }
+    ]
+  },
+  {
+    "q": "Someone crosses a line. You:",
+    "options": [
+      "Say nothing and stew internally",
+      "Laugh it off but feel hurt",
+      "Address it directly",
+      "Cut them off without explanation"
+    ],
+    "traits": [
+      {
+        "porous": 2
+      },
+      {
+        "passive": 2
+      },
+      {
+        "healthy": 2
+      },
+      {
+        "rigid": 2
+      }
+    ]
+  },
+  {
+    "q": "How do you feel about saying no?",
+    "options": [
+      "Physically painful",
+      "I can do it but I feel guilty for days",
+      "Uncomfortable but necessary",
+      "Easy — no is a complete sentence"
+    ],
+    "traits": [
+      {
+        "porous": 2
+      },
+      {
+        "passive": 2
+      },
+      {
+        "healthy": 2
+      },
+      {
+        "rigid": 2
+      }
+    ]
+  },
+  {
+    "q": "Your energy after socializing:",
+    "options": [
+      "Drained — I gave too much",
+      "Fine but I masked the whole time",
+      "Energized — I showed up as myself",
+      "Relieved it's over"
+    ],
+    "traits": [
+      {
+        "porous": 2
+      },
+      {
+        "passive": 2
+      },
+      {
+        "healthy": 2
+      },
+      {
+        "rigid": 2
+      }
+    ]
+  },
+  {
+    "q": "When someone's mad at you:",
+    "options": [
+      "I'll do anything to fix it",
+      "I obsess over what I did wrong",
+      "I hold space for their feelings and mine",
+      "Their problem, not mine"
+    ],
+    "traits": [
+      {
+        "porous": 2
+      },
+      {
+        "passive": 2
+      },
+      {
+        "healthy": 2
+      },
+      {
+        "rigid": 2
+      }
+    ]
+  },
+  {
+    "q": "You overhear someone talking about you:",
+    "options": [
+      "Devastated — I need everyone to like me",
+      "Pretend I didn't hear it, think about it for weeks",
+      "Curious but it doesn't define me",
+      "Don't care at all"
+    ],
+    "traits": [
+      {
+        "porous": 2
+      },
+      {
+        "passive": 2
+      },
+      {
+        "healthy": 2
+      },
+      {
+        "rigid": 2
+      }
+    ]
+  },
+  {
+    "q": "How much do you share with new people?",
+    "options": [
+      "Everything — I'm an open book from minute one",
+      "Too much, then I regret it",
+      "Gradually — trust is earned",
+      "Almost nothing — they have to prove themselves"
+    ],
+    "traits": [
+      {
+        "porous": 2
+      },
+      {
+        "passive": 1,
+        "porous": 1
+      },
+      {
+        "healthy": 2
+      },
+      {
+        "rigid": 2
+      }
+    ]
+  },
+  {
+    "q": "Your work-life balance:",
+    "options": [
+      "Work bleeds into everything",
+      "I try but feel guilty logging off",
+      "I protect my off-hours",
+      "I keep work and life completely separate — no exceptions"
+    ],
+    "traits": [
+      {
+        "porous": 2
+      },
+      {
+        "passive": 2
+      },
+      {
+        "healthy": 2
+      },
+      {
+        "rigid": 2
+      }
+    ]
+  },
+  {
+    "q": "When you need space in a relationship:",
+    "options": [
+      "I don't ask — I just disappear for a bit",
+      "I hint at it and hope they notice",
+      "I communicate it clearly",
+      "I don't need space — I need walls"
+    ],
+    "traits": [
+      {
+        "porous": 1,
+        "passive": 1
+      },
+      {
+        "passive": 2
+      },
+      {
+        "healthy": 2
+      },
+      {
+        "rigid": 2
+      }
+    ]
+  },
+  {
+    "q": "Which statement hits different?",
+    "options": [
+      "'I'm responsible for how everyone around me feels'",
+      "'If I set a boundary, they'll leave'",
+      "'I can love you and still say no'",
+      "'I don't owe anyone access to me'"
+    ],
+    "traits": [
+      {
+        "porous": 2
+      },
+      {
+        "passive": 2
+      },
+      {
+        "healthy": 2
+      },
+      {
+        "rigid": 2
+      }
+    ]
+  }
+]

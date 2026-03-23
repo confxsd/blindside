@@ -1,0 +1,232 @@
+[
+  {
+    "q": "Sen üzgünken partnerin:",
+    "options": [
+      "Her şeyi bırakıp sarılır",
+      "Sessizleşir, sonra çay getirir",
+      "Gece 2'de uzun bir mesaj yazar",
+      "Gülene kadar saçma şakalar yapar"
+    ],
+    "traits": [
+      {
+        "golden_retriever": 2
+      },
+      {
+        "dark_academic": 2
+      },
+      {
+        "mysterious_poet": 2
+      },
+      {
+        "chaos_agent": 2
+      }
+    ]
+  },
+  {
+    "q": "Onun ideal cumartesisi:",
+    "options": [
+      "Pazar ve birlikte yemek yapmak",
+      "Kitapçı, kahve, sessizlik yeterli",
+      "Haritasız spontane bir yolculuk",
+      "Çılgınca bir şey — go-kart, karaoke, gece yarısı yüzme"
+    ],
+    "traits": [
+      {
+        "golden_retriever": 2
+      },
+      {
+        "dark_academic": 2
+      },
+      {
+        "mysterious_poet": 2
+      },
+      {
+        "chaos_agent": 2
+      }
+    ]
+  },
+  {
+    "q": "Sana nasıl mesaj atar?",
+    "options": [
+      "Sürekli kontrol, sabah akşam",
+      "Dikkatle yazılmış, bazen şiirsel",
+      "Kaybolur sonra sesli mesaj denemesi gönderir",
+      "Memler, kaos, art arda 47 mesaj"
+    ],
+    "traits": [
+      {
+        "golden_retriever": 2
+      },
+      {
+        "dark_academic": 2
+      },
+      {
+        "mysterious_poet": 2
+      },
+      {
+        "chaos_agent": 2
+      }
+    ]
+  },
+  {
+    "q": "Sevdiği bir şarkı bulunca:",
+    "options": [
+      "Hoparlörden açar ve kötü dans eder",
+      "Sana açıklama yapmadan gönderir",
+      "Sözlerini öğrenip sessizce söyler",
+      "Tekrara alır ve bütün kişiliği o şarkı olur"
+    ],
+    "traits": [
+      {
+        "golden_retriever": 2
+      },
+      {
+        "dark_academic": 2
+      },
+      {
+        "mysterious_poet": 2
+      },
+      {
+        "chaos_agent": 2
+      }
+    ]
+  },
+  {
+    "q": "Partideki hali:",
+    "options": [
+      "Herkesle konuşur, her ismi hatırlar",
+      "Duvara yaslanıp zahmetsizce cool görünür",
+      "Köşede biriyle derin sohbet",
+      "Cesaret oyunu başlatır, bir şey kırar, tatlılıkla özür diler"
+    ],
+    "traits": [
+      {
+        "golden_retriever": 2
+      },
+      {
+        "dark_academic": 2
+      },
+      {
+        "mysterious_poet": 2
+      },
+      {
+        "chaos_agent": 2
+      }
+    ]
+  },
+  {
+    "q": "'Seni seviyorum' nasıl der?",
+    "options": [
+      "Yüksek sesle, sık sık, tereddütsüz",
+      "Nadiren — ama dediğinde kemiklerine kadar hissedersin",
+      "Playlistler, mektuplar, yaptığı şeylerle",
+      "En beklemediğin anda sürprizle"
+    ],
+    "traits": [
+      {
+        "golden_retriever": 2
+      },
+      {
+        "dark_academic": 2
+      },
+      {
+        "mysterious_poet": 2
+      },
+      {
+        "chaos_agent": 2
+      }
+    ]
+  },
+  {
+    "q": "En büyük yeşil bayrağı:",
+    "options": [
+      "Küçük şeyleri hatırlaması",
+      "Seni entelektüel olarak zorlaması",
+      "Kimsenin fark etmediği yanlarını görmesi",
+      "Her sıkıcı anı maceraya çevirmesi"
+    ],
+    "traits": [
+      {
+        "golden_retriever": 2
+      },
+      {
+        "dark_academic": 2
+      },
+      {
+        "mysterious_poet": 2
+      },
+      {
+        "chaos_agent": 2
+      }
+    ]
+  },
+  {
+    "q": "Kavga ettiğinizde:",
+    "options": [
+      "Haklı olsa bile ilk o özür diler",
+      "Alana ihtiyaç duyar, sonra tezle döner",
+      "Sessizleşir ve sana mesaj yazar",
+      "Dramatikleştirir, sonra espriyle çözer"
+    ],
+    "traits": [
+      {
+        "golden_retriever": 2
+      },
+      {
+        "dark_academic": 2
+      },
+      {
+        "mysterious_poet": 2
+      },
+      {
+        "chaos_agent": 2
+      }
+    ]
+  },
+  {
+    "q": "Arkadaşları onu nasıl tanımlar:",
+    "options": [
+      "Tanıdıkları en tatlı insan",
+      "Gizliden derin olan akıllı biri",
+      "Kimsenin tam anlayamadığı gizemli biri",
+      "Her şeyi kaosa çeviren kişi"
+    ],
+    "traits": [
+      {
+        "golden_retriever": 2
+      },
+      {
+        "dark_academic": 2
+      },
+      {
+        "mysterious_poet": 2
+      },
+      {
+        "chaos_agent": 2
+      }
+    ]
+  },
+  {
+    "q": "Onda seni ilk çeken ne oldu?",
+    "options": [
+      "Ne kadar güvenli ve sıcak hissettirdiği",
+      "Zihni — düşünme şekli",
+      "Adını koyamadığın bir çekim",
+      "Enerjisi — her şeyi elektrikli yapıyordu"
+    ],
+    "traits": [
+      {
+        "golden_retriever": 2
+      },
+      {
+        "dark_academic": 2
+      },
+      {
+        "mysterious_poet": 2
+      },
+      {
+        "chaos_agent": 2
+      }
+    ]
+  }
+]

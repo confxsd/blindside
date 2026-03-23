@@ -1,0 +1,102 @@
+[
+  {
+    "q": "Do you believe in something bigger than us?",
+    "options": [
+      "Yes, deeply",
+      "I'm spiritual, not religious",
+      "I'm not sure yet",
+      "No, I trust science"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Where do you find peace?",
+    "options": [
+      "Nature",
+      "Prayer or meditation",
+      "Music",
+      "Being with loved ones"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Fate vs. free will:",
+    "options": [
+      "Everything happens for a reason",
+      "We create our own path",
+      "A mix of both",
+      "I go back and forth honestly"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "What happens after we die?",
+    "options": [
+      "Something beautiful",
+      "Nothing — and that's okay",
+      "I prefer not to think about it",
+      "Reincarnation maybe?"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "A ritual or practice that grounds you:",
+    "options": [
+      "Journaling",
+      "Prayer",
+      "Meditation or breathwork",
+      "Long walks alone"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Can people truly change?",
+    "options": [
+      "Yes, with real effort",
+      "Only if they want to",
+      "Core personality stays the same",
+      "I've seen it happen"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Forgiveness — easy or hard for you?",
+    "options": [
+      "I forgive quickly",
+      "Takes time but I get there",
+      "I forgive but never forget",
+      "Depends on what they did"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Your relationship with gratitude:",
+    "options": [
+      "I practice it daily",
+      "I try but forget",
+      "I feel it but don't express it",
+      "Working on it"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "What gives life meaning?",
+    "options": [
+      "Love and relationships",
+      "Purpose and contribution",
+      "Experiences and growth",
+      "I'm still figuring it out"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Respect for different beliefs:",
+    "options": [
+      "I respect all paths",
+      "I'm curious about others",
+      "I stick to my own",
+      "Beliefs shape who we are"
+    ],
+    "pi": 0
+  }
+]

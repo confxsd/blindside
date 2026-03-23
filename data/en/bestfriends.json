@@ -1,0 +1,106 @@
+[
+  {
+    "q": "What's your go-to comfort food?",
+    "options": [
+      "Pizza",
+      "Ramen",
+      "Tacos",
+      "Ice cream"
+    ],
+    "pi": 2,
+    "format": "bubble"
+  },
+  {
+    "q": "Pick a weekend plan:",
+    "options": [
+      "Brunch + thrifting",
+      "Netflix marathon",
+      "Road trip",
+      "Do absolutely nothing"
+    ],
+    "pi": 1,
+    "format": "swipe"
+  },
+  {
+    "q": "What's the best quality in a friend?",
+    "options": [
+      "Loyalty",
+      "Humor",
+      "Honesty",
+      "Spontaneity"
+    ],
+    "pi": 0,
+    "format": "bubble"
+  },
+  {
+    "q": "Your friendship anthem genre:",
+    "options": [
+      "Pop bangers",
+      "Throwback hits",
+      "Indie vibes",
+      "Hip-hop"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "How do you cheer each other up?",
+    "options": [
+      "Memes",
+      "Food delivery"
+    ],
+    "pi": 0,
+    "format": "vs"
+  },
+  {
+    "q": "The thing you bonded over first:",
+    "options": [
+      "Hating the same person",
+      "A shared obsession",
+      "Being in the same place at the right time",
+      "Instant chaotic energy"
+    ],
+    "pi": 0,
+    "format": "bubble"
+  },
+  {
+    "q": "Your friend texts 'I need you' at 2am:",
+    "options": [
+      "Already putting on shoes",
+      "Calling immediately",
+      "Texting 'what happened??'",
+      "Sending location — meet me halfway"
+    ],
+    "pi": 0,
+    "format": "swipe"
+  },
+  {
+    "q": "The secret you'd only tell them:",
+    "options": [
+      "My actual body count",
+      "What I really think about their ex",
+      "My most embarrassing search history",
+      "The thing I've never said out loud"
+    ],
+    "pi": 3,
+    "format": "bubble"
+  },
+  {
+    "q": "In your friendship, you're the:",
+    "options": [
+      "Planner",
+      "Chaos agent"
+    ],
+    "pi": 1,
+    "format": "vs"
+  },
+  {
+    "q": "If your friendship was a reality show:",
+    "options": [
+      "Comedy — we'd go viral daily",
+      "Drama — but make it wholesome",
+      "Travel show — we belong on the road",
+      "Late night talk show — deep convos and laughs"
+    ],
+    "pi": 2
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "q": "Dream travel destination:",
+    "options": [
+      "Tokyo, Japan",
+      "Marrakech, Morocco",
+      "Santorini, Greece",
+      "Medellín, Colombia"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Best street food in the world:",
+    "options": [
+      "Tacos from Mexico",
+      "Pad Thai from Thailand",
+      "Kebab from Turkey",
+      "Dumplings from China"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "A tradition you'd adopt from another culture:",
+    "options": [
+      "Siesta (Spain)",
+      "Hygge (Denmark)",
+      "Hanami (Japan)",
+      "Fika (Sweden)"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Language you'd love to speak fluently:",
+    "options": [
+      "Japanese",
+      "French",
+      "Arabic",
+      "Korean"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Pick a world festival to attend:",
+    "options": [
+      "Carnival (Brazil)",
+      "Holi (India)",
+      "Día de los Muertos (Mexico)",
+      "Lantern Festival (Thailand)"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Best comfort drink worldwide:",
+    "options": [
+      "Chai (India)",
+      "Matcha (Japan)",
+      "Turkish coffee",
+      "Horchata (Mexico)"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Music that moves your soul:",
+    "options": [
+      "Afrobeats",
+      "K-Pop",
+      "Latin reggaeton",
+      "Arabic oud music"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Cultural value you respect most:",
+    "options": [
+      "Hospitality (Middle East)",
+      "Respect for elders (Asia)",
+      "Community spirit (Africa)",
+      "Work-life balance (Nordic)"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "If you lived abroad for a year:",
+    "options": [
+      "Italy — food and vibes",
+      "South Korea — culture wave",
+      "Brazil — energy and warmth",
+      "New Zealand — nature and peace"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Best dessert tradition:",
+    "options": [
+      "French pastries",
+      "Turkish baklava",
+      "Japanese mochi",
+      "Indian gulab jamun"
+    ],
+    "pi": 1
+  }
+]

@@ -1,0 +1,232 @@
+[
+  {
+    "q": "Someone cancels on you last minute:",
+    "options": [
+      "Meltdown. Spiral. Done.",
+      "Annoyed but I move on fast",
+      "I check in — are they okay?",
+      "I was already making backup plans"
+    ],
+    "traits": [
+      {
+        "child": 2
+      },
+      {
+        "teen": 2
+      },
+      {
+        "adult": 2
+      },
+      {
+        "elder": 2
+      }
+    ]
+  },
+  {
+    "q": "How do you handle being wrong?",
+    "options": [
+      "I don't handle it — I shut down",
+      "I get defensive, then feel bad later",
+      "I apologize and try to learn",
+      "I find it interesting — being wrong means growth"
+    ],
+    "traits": [
+      {
+        "child": 2
+      },
+      {
+        "teen": 2
+      },
+      {
+        "adult": 2
+      },
+      {
+        "elder": 2
+      }
+    ]
+  },
+  {
+    "q": "Your relationship with anger:",
+    "options": [
+      "It explodes and I regret it",
+      "I perform calm but I'm seething",
+      "I feel it, name it, and process it",
+      "I rarely feel anger anymore — mostly sadness underneath"
+    ],
+    "traits": [
+      {
+        "child": 2
+      },
+      {
+        "teen": 2
+      },
+      {
+        "adult": 2
+      },
+      {
+        "elder": 2
+      }
+    ]
+  },
+  {
+    "q": "When life gets hard, you:",
+    "options": [
+      "Want someone to fix it for me",
+      "Push through on pure willpower",
+      "Lean on my support system",
+      "Sit with it — I've learned that storms pass"
+    ],
+    "traits": [
+      {
+        "child": 2
+      },
+      {
+        "teen": 2
+      },
+      {
+        "adult": 2
+      },
+      {
+        "elder": 2
+      }
+    ]
+  },
+  {
+    "q": "Your inner voice sounds like:",
+    "options": [
+      "A scared kid who needs reassurance",
+      "A critic who's never satisfied",
+      "A supportive friend",
+      "A calm narrator watching the story"
+    ],
+    "traits": [
+      {
+        "child": 2
+      },
+      {
+        "teen": 2
+      },
+      {
+        "adult": 2
+      },
+      {
+        "elder": 2
+      }
+    ]
+  },
+  {
+    "q": "How do you love?",
+    "options": [
+      "Intensely — all or nothing",
+      "Carefully — I protect myself first",
+      "Openly — with communication and trust",
+      "Gently — I love without needing to own"
+    ],
+    "traits": [
+      {
+        "child": 2
+      },
+      {
+        "teen": 2
+      },
+      {
+        "adult": 2
+      },
+      {
+        "elder": 2
+      }
+    ]
+  },
+  {
+    "q": "What makes you jealous?",
+    "options": [
+      "Everything — I compare constantly",
+      "When someone has what I've been chasing",
+      "Rarely — but I notice it and reflect",
+      "Other people's peace of mind"
+    ],
+    "traits": [
+      {
+        "child": 2
+      },
+      {
+        "teen": 2
+      },
+      {
+        "adult": 2
+      },
+      {
+        "elder": 2
+      }
+    ]
+  },
+  {
+    "q": "Your relationship with time:",
+    "options": [
+      "I live in the moment without thinking ahead",
+      "I'm always rushing to the next thing",
+      "I try to balance present and future",
+      "I've made peace with how fast it moves"
+    ],
+    "traits": [
+      {
+        "child": 2
+      },
+      {
+        "teen": 2
+      },
+      {
+        "adult": 2
+      },
+      {
+        "elder": 2
+      }
+    ]
+  },
+  {
+    "q": "What do you need most from people?",
+    "options": [
+      "Validation — tell me I'm okay",
+      "Respect — acknowledge what I've done",
+      "Honesty — even when it's hard",
+      "Presence — just be here"
+    ],
+    "traits": [
+      {
+        "child": 2
+      },
+      {
+        "teen": 2
+      },
+      {
+        "adult": 2
+      },
+      {
+        "elder": 2
+      }
+    ]
+  },
+  {
+    "q": "If you met your younger self:",
+    "options": [
+      "I'd cry — they needed so much",
+      "I'd cringe a little but understand",
+      "I'd be proud of how far I've come",
+      "I'd tell them: 'You'll stop trying so hard, and that's when it gets good'"
+    ],
+    "traits": [
+      {
+        "child": 2
+      },
+      {
+        "teen": 2
+      },
+      {
+        "adult": 2
+      },
+      {
+        "elder": 2
+      }
+    ]
+  }
+]

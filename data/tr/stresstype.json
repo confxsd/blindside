@@ -1,0 +1,232 @@
+[
+  {
+    "q": "Bunaldığında ilk içgüdün:",
+    "options": [
+      "Kontrolü ele al, devam et",
+      "Kapat ve çekil",
+      "Birinden destek ara",
+      "Don ve hiçbir şey yapma"
+    ],
+    "traits": [
+      {
+        "fight": 2
+      },
+      {
+        "flight": 2
+      },
+      {
+        "fawn": 2
+      },
+      {
+        "freeze": 2
+      }
+    ]
+  },
+  {
+    "q": "Hararetli bir tartışmada:",
+    "options": [
+      "Yerimi korurum",
+      "Sakinleşmek için uzaklaşırım",
+      "Hemen barışmaya çalışırım",
+      "Sessizleşir ve donarım"
+    ],
+    "traits": [
+      {
+        "fight": 2
+      },
+      {
+        "flight": 2
+      },
+      {
+        "fawn": 2
+      },
+      {
+        "freeze": 2
+      }
+    ]
+  },
+  {
+    "q": "Teslim tarihi yaklaşıyor, gerideysin:",
+    "options": [
+      "Koştur modu, uyku yok",
+      "Kaçış — scroll, uyku, her şey",
+      "Birinden yardım iste",
+      "Ekrana bak, felç ol"
+    ],
+    "traits": [
+      {
+        "fight": 2
+      },
+      {
+        "flight": 2
+      },
+      {
+        "fawn": 2
+      },
+      {
+        "freeze": 2
+      }
+    ]
+  },
+  {
+    "q": "Biri sana bağırınca:",
+    "options": [
+      "Aynı enerjiyle karşılık ver",
+      "Odayı terk et",
+      "Benim suçum olmasa da özür dile",
+      "Tamamen kapan"
+    ],
+    "traits": [
+      {
+        "fight": 2
+      },
+      {
+        "flight": 2
+      },
+      {
+        "fawn": 2
+      },
+      {
+        "freeze": 2
+      }
+    ]
+  },
+  {
+    "q": "Öz bakımın nasıl görünür?",
+    "options": [
+      "Yoğun egzersiz veya temizlik",
+      "Bir süreliğine kaybol",
+      "Bir arkadaşı ara",
+      "Comfort içerikle dalıp git"
+    ],
+    "traits": [
+      {
+        "fight": 2
+      },
+      {
+        "flight": 2
+      },
+      {
+        "fawn": 2
+      },
+      {
+        "freeze": 2
+      }
+    ]
+  },
+  {
+    "q": "Duygusal olarak güvensiz hissettiğinde:",
+    "options": [
+      "Sinirli veya huysuz ol",
+      "Kaçış planı yap",
+      "Hayatta kalmak için insanlara uyum sağla",
+      "Dal ve uyuş"
+    ],
+    "traits": [
+      {
+        "fight": 2
+      },
+      {
+        "flight": 2
+      },
+      {
+        "fawn": 2
+      },
+      {
+        "freeze": 2
+      }
+    ]
+  },
+  {
+    "q": "Hayal kırıklığıyla nasıl başa çıkarsın?",
+    "options": [
+      "Motivasyona dönüştür",
+      "Hemen dikkatimi dağıt",
+      "Biriyle konuş",
+      "İçimde bırак"
+    ],
+    "traits": [
+      {
+        "fight": 2
+      },
+      {
+        "flight": 2
+      },
+      {
+        "fawn": 2
+      },
+      {
+        "freeze": 2
+      }
+    ]
+  },
+  {
+    "q": "Kaygın kendini nasıl gösterir?",
+    "options": [
+      "Huzursuzluk ve eylem",
+      "Kaçınma ve geri çekilme",
+      "Başkalarına aşırı uyum",
+      "Zihinsel sis ve felç"
+    ],
+    "traits": [
+      {
+        "fight": 2
+      },
+      {
+        "flight": 2
+      },
+      {
+        "fawn": 2
+      },
+      {
+        "freeze": 2
+      }
+    ]
+  },
+  {
+    "q": "En kötü anında insanlar seni nasıl tanımlar?",
+    "options": [
+      "Yoğun veya agresif",
+      "Uzak veya ulaşılmaz",
+      "Uysal veya çok iyi",
+      "Kopuk veya yok"
+    ],
+    "traits": [
+      {
+        "fight": 2
+      },
+      {
+        "flight": 2
+      },
+      {
+        "fawn": 2
+      },
+      {
+        "freeze": 2
+      }
+    ]
+  },
+  {
+    "q": "Stresli olduğunda en çok neye ihtiyacın var?",
+    "options": [
+      "Çözecek bir sorun",
+      "Gitme izni",
+      "Birinin her şey yolunda demesi",
+      "Sadece var olma zamanı"
+    ],
+    "traits": [
+      {
+        "fight": 2
+      },
+      {
+        "flight": 2
+      },
+      {
+        "fawn": 2
+      },
+      {
+        "freeze": 2
+      }
+    ]
+  }
+]

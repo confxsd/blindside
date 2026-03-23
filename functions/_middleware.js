@@ -25,6 +25,8 @@ const PACK_NAMES = {
   partnerera: '👑 Partner Era',
   couplestory: '📖 Couple Story',
   whattheyhide: '🎭 What They Hide',
+  flirtguess: '😏 Flirt & Guess',
+  desirematch: '🔥 Desire Match',
 };
 
 const OG_BOT_UA = /bot|crawl|slurp|spider|facebookexternalhit|whatsapp|telegrambot|twitterbot|linkedinbot|discordbot|slack/i;

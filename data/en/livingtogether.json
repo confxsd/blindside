@@ -1,0 +1,102 @@
+[
+  {
+    "q": "Who's cooking tonight?",
+    "options": [
+      "I'll cook",
+      "You cook, I clean",
+      "Let's order in",
+      "Whoever's less tired"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "The thermostat debate:",
+    "options": [
+      "Always cold, blanket person",
+      "Always hot, window open",
+      "We compromise somehow",
+      "Whoever touches it last wins"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Ideal sleeping arrangement:",
+    "options": [
+      "Same bed, cuddling",
+      "Same bed, separate blankets",
+      "Same room, separate beds",
+      "I need my own space sometimes"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "How do you handle chores?",
+    "options": [
+      "Strict schedule",
+      "Whoever sees it does it",
+      "Trade off week by week",
+      "Argue about it every time"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Groceries philosophy:",
+    "options": [
+      "Meal plan and list",
+      "Wander the aisles",
+      "Online delivery only",
+      "Buy snacks, figure out meals later"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "The bathroom situation:",
+    "options": [
+      "I need at least 45 minutes",
+      "In and out, 10 minutes",
+      "We can share, it's fine",
+      "Do not talk to me in there"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "TV remote control:",
+    "options": [
+      "I choose, you agree",
+      "We take turns",
+      "Scroll for 30 min, watch nothing",
+      "Separate screens honestly"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "When guests come over:",
+    "options": [
+      "Deep clean everything",
+      "Quick tidy is fine",
+      "Our home, our mess",
+      "I need 3 days notice minimum"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Morning routine compatibility:",
+    "options": [
+      "We wake up together",
+      "One of us is a zombie",
+      "Completely different schedules",
+      "Silent coexistence until coffee"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Money talk in the household:",
+    "options": [
+      "Split everything 50/50",
+      "One account, shared everything",
+      "Each pays their strengths",
+      "We don't talk about it enough"
+    ],
+    "pi": 0
+  }
+]

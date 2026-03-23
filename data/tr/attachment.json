@@ -1,0 +1,242 @@
+[
+  {
+    "q": "Önemsediğin biri uzaklaşınca:",
+    "options": [
+      "Daha çok peşinden koşarım",
+      "Ben de uzaklaşırım",
+      "Alan veririm ama endişelenirim",
+      "Pek fark etmem"
+    ],
+    "traits": [
+      {
+        "anxious": 2
+      },
+      {
+        "avoidant": 2
+      },
+      {
+        "anxious": 1,
+        "secure": 1
+      },
+      {
+        "avoidant": 1,
+        "secure": 1
+      }
+    ]
+  },
+  {
+    "q": "Savunmasız olmak hakkında ne düşünüyorsun?",
+    "options": [
+      "Korkutucu ama özlüyorum",
+      "Her pahasına kaçınırım",
+      "Üzerinde çalışıyorum",
+      "Doğal geliyor"
+    ],
+    "traits": [
+      {
+        "anxious": 2
+      },
+      {
+        "avoidant": 2
+      },
+      {
+        "anxious": 1,
+        "secure": 1
+      },
+      {
+        "secure": 2
+      }
+    ]
+  },
+  {
+    "q": "Kavgadan sonra neye ihtiyacın var?",
+    "options": [
+      "Hemen güvence",
+      "Yalnız düşünme alanı",
+      "Sakin bir konuşma",
+      "Zaman, sonra sarılma"
+    ],
+    "traits": [
+      {
+        "anxious": 2
+      },
+      {
+        "avoidant": 2
+      },
+      {
+        "secure": 2
+      },
+      {
+        "secure": 1,
+        "anxious": 1
+      }
+    ]
+  },
+  {
+    "q": "En büyük ilişki korkun:",
+    "options": [
+      "Terk edilmek",
+      "Bağımsızlığımı kaybetmek",
+      "Yeterli olmamak",
+      "Tuzağa düşmek"
+    ],
+    "traits": [
+      {
+        "anxious": 2
+      },
+      {
+        "avoidant": 2
+      },
+      {
+        "anxious": 2
+      },
+      {
+        "avoidant": 2
+      }
+    ]
+  },
+  {
+    "q": "Birinden hoşlanınca:",
+    "options": [
+      "Sürekli onu düşünürüm",
+      "Soğuk davranırım, belki fazla",
+      "Açıkça ifade ederim",
+      "Açılmadan önce test ederim"
+    ],
+    "traits": [
+      {
+        "anxious": 2
+      },
+      {
+        "avoidant": 2
+      },
+      {
+        "secure": 2
+      },
+      {
+        "anxious": 1,
+        "avoidant": 1
+      }
+    ]
+  },
+  {
+    "q": "Mesajlarını ne sıklıkla kontrol edersin?",
+    "options": [
+      "Obsesif şekilde",
+      "Cevap vermeyi unuturum",
+      "Müsait olduğumda",
+      "Sadece güvende hissettiğimde"
+    ],
+    "traits": [
+      {
+        "anxious": 2
+      },
+      {
+        "avoidant": 2
+      },
+      {
+        "secure": 2
+      },
+      {
+        "secure": 1,
+        "anxious": 1
+      }
+    ]
+  },
+  {
+    "q": "Partner 'konuşmamız lazım' deyince:",
+    "options": [
+      "Anında panik",
+      "Sinirlenme",
+      "Merak",
+      "Dinlemeye hazırım"
+    ],
+    "traits": [
+      {
+        "anxious": 2
+      },
+      {
+        "avoidant": 2
+      },
+      {
+        "secure": 1,
+        "anxious": 1
+      },
+      {
+        "secure": 2
+      }
+    ]
+  },
+  {
+    "q": "İlişkilerdeki konfor alanın:",
+    "options": [
+      "Derin duygusal bağ",
+      "Kendi dünyam",
+      "Sınırlarla yakınlık",
+      "Kişiye bağlı"
+    ],
+    "traits": [
+      {
+        "anxious": 2
+      },
+      {
+        "avoidant": 2
+      },
+      {
+        "secure": 2
+      },
+      {
+        "anxious": 1,
+        "secure": 1
+      }
+    ]
+  },
+  {
+    "q": "Kıskançlıkla nasıl başa çıkarsın?",
+    "options": [
+      "Beni tüketir",
+      "Kıskanç olmam",
+      "Konuşurum",
+      "İçimde tutarım"
+    ],
+    "traits": [
+      {
+        "anxious": 2
+      },
+      {
+        "avoidant": 2
+      },
+      {
+        "secure": 2
+      },
+      {
+        "anxious": 1,
+        "avoidant": 1
+      }
+    ]
+  },
+  {
+    "q": "İdeal ilişki dinamiği:",
+    "options": [
+      "Ayrılmaz, hep birlikte",
+      "Birlikte ama bağımsız",
+      "Dengeli yakınlık",
+      "Ne istediğimden emin değilim"
+    ],
+    "traits": [
+      {
+        "anxious": 2
+      },
+      {
+        "avoidant": 2
+      },
+      {
+        "secure": 2
+      },
+      {
+        "anxious": 1,
+        "avoidant": 1
+      }
+    ]
+  }
+]

@@ -1,0 +1,107 @@
+[
+  {
+    "q": "Hayatta senin için en önemli olan ne?",
+    "options": [
+      "Özgürlük",
+      "Bağlantı",
+      "Gelişim",
+      "Güvenlik"
+    ],
+    "pi": 1,
+    "format": "bubble"
+  },
+  {
+    "q": "En büyük korkun:",
+    "options": [
+      "Unutulmak",
+      "Yalnız kalmak",
+      "Zaman kaybetmek",
+      "Kendimi kaybetmek"
+    ],
+    "pi": 2,
+    "format": "swipe"
+  },
+  {
+    "q": "Sence sevgi nasıl görünür?",
+    "options": [
+      "Küçük günlük jestler",
+      "Büyük sürprizler",
+      "Sadece orada olmak",
+      "Sevgi dolu sözler"
+    ],
+    "pi": 0,
+    "format": "bubble"
+  },
+  {
+    "q": "Dünyada bir şeyi değiştirebilsen:",
+    "options": [
+      "Daha çok empati",
+      "Daha çok dürüstlük",
+      "Daha çok eşitlik",
+      "Daha çok merak"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Duygusal süper gücün ne?",
+    "options": [
+      "Ortamı okumak",
+      "Sakin kalmak",
+      "İnsanları güldürmek",
+      "Derin dinleme"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Hiç kaçınamadığın en zor konuşma:",
+    "options": [
+      "Birine incindiğimi söylemek",
+      "Hatalı olduğumu kabul etmek",
+      "'Yardıma ihtiyacım var' demek",
+      "Birine artık sevmediğimi söylemek"
+    ],
+    "pi": 2,
+    "format": "bubble"
+  },
+  {
+    "q": "'Ev' senin için ne demek?",
+    "options": [
+      "Bir mekan değil, bir kişi",
+      "Güvende hissettiğim her yer",
+      "Kendim için kurduğum hayat",
+      "Hâlâ aradığım bir yer"
+    ],
+    "pi": 0,
+    "format": "swipe"
+  },
+  {
+    "q": "Sadece gece 3'te var olan versiyonun:",
+    "options": [
+      "Acımasızca dürüst",
+      "Derinden duygusal",
+      "Endişeli ve sarmal halinde",
+      "Garip bir şekilde huzurlu"
+    ],
+    "pi": 3,
+    "format": "bubble"
+  },
+  {
+    "q": "Affet ve unut mu, affet ve hatırla mı?",
+    "options": [
+      "Affet ve unut",
+      "Affet ve hatırla"
+    ],
+    "pi": 1,
+    "format": "vs"
+  },
+  {
+    "q": "İnsanların sende yanlış anladığı şey:",
+    "options": [
+      "Soğuk olduğumu — sadece enerjimi koruyorum",
+      "İyi olduğumu — sadece iyi saklıyorum",
+      "Özgüvenli olduğumu — çoğunu uyduruyorum",
+      "Umursamadığımı — çok fazla umursuyorum"
+    ],
+    "pi": 2
+  }
+]

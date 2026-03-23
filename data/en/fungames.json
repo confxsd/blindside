@@ -1,0 +1,104 @@
+[
+  {
+    "q": "Unlimited pizza or unlimited sushi for life?",
+    "options": [
+      "Pizza forever",
+      "Sushi no doubt"
+    ],
+    "pi": 0,
+    "format": "vs"
+  },
+  {
+    "q": "You can only listen to one genre forever:",
+    "options": [
+      "Pop",
+      "Hip-hop",
+      "Throwback classics",
+      "Lo-fi / chill"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Truth or dare?",
+    "options": [
+      "Truth — always",
+      "Dare — I live dangerously"
+    ],
+    "pi": 0,
+    "format": "vs"
+  },
+  {
+    "q": "You're on a deserted island. One item:",
+    "options": [
+      "Phone (no signal lol)",
+      "Unlimited snacks",
+      "A knife",
+      "A good book"
+    ],
+    "pi": 1,
+    "format": "swipe"
+  },
+  {
+    "q": "Worst superpower to have:",
+    "options": [
+      "Reading minds 24/7",
+      "Invisibility but always cold",
+      "Flying but only 2 feet high",
+      "Super speed but you trip a lot"
+    ],
+    "pi": 2,
+    "format": "bubble"
+  },
+  {
+    "q": "You switch lives with someone for a day:",
+    "options": [
+      "A celebrity",
+      "Your pet",
+      "Your boss",
+      "Your younger self"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Most embarrassing thing you'd do for $1 million:",
+    "options": [
+      "Sing karaoke sober",
+      "Text your ex 'I miss you'",
+      "Wear a costume to work",
+      "Post your search history"
+    ],
+    "pi": 0,
+    "format": "bubble"
+  },
+  {
+    "q": "Your dream game show:",
+    "options": [
+      "Survivor",
+      "The Floor Is Lava",
+      "Love Island",
+      "Are You Smarter Than a 5th Grader"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Two truths and a lie — which do people guess wrong?",
+    "options": [
+      "The wild one",
+      "The boring one",
+      "They always guess right",
+      "I'm a terrible liar"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "You're hosting a dinner party. Vibe check:",
+    "options": [
+      "Fancy dress, wine, jazz",
+      "Casual, pizza, board games",
+      "Potluck chaos",
+      "Just us, takeout, real talk"
+    ],
+    "pi": 3,
+    "format": "swipe"
+  }
+]

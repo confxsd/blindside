@@ -1,0 +1,105 @@
+[
+  {
+    "q": "Last thing you'd grab in a fire:",
+    "options": [
+      "Phone charger",
+      "Snacks",
+      "My dignity",
+      "I'd just stand there"
+    ],
+    "pi": 2,
+    "format": "swipe"
+  },
+  {
+    "q": "Your Roman Empire:",
+    "options": [
+      "That one embarrassing memory",
+      "Unrequited love",
+      "Alternate timelines",
+      "Dinosaurs honestly"
+    ],
+    "pi": 0,
+    "format": "bubble"
+  },
+  {
+    "q": "You're a villain. Your weapon:",
+    "options": [
+      "Passive aggressive texts",
+      "Weaponized silence"
+    ],
+    "pi": 0,
+    "format": "vs"
+  },
+  {
+    "q": "Survival skill you actually have:",
+    "options": [
+      "Can nap anywhere",
+      "Eating questionable leftovers",
+      "Parallel parking",
+      "Crying on command"
+    ],
+    "pi": 0,
+    "format": "bubble"
+  },
+  {
+    "q": "Pick a fake job title:",
+    "options": [
+      "Chief Overthinker",
+      "Professional Yapper",
+      "Vibe Consultant",
+      "Nap Architect"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Your FBI agent thinks you're:",
+    "options": [
+      "Unhinged",
+      "Boring honestly",
+      "Concerning",
+      "Their favorite assignment"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "3am thought:",
+    "options": [
+      "What if gravity stops",
+      "I should text my ex",
+      "Am I real",
+      "I need cheese"
+    ],
+    "pi": 3,
+    "format": "bubble"
+  },
+  {
+    "q": "Your catchphrase:",
+    "options": [
+      "It is what it is",
+      "No thoughts head empty"
+    ],
+    "pi": 0,
+    "format": "vs"
+  },
+  {
+    "q": "In a horror movie you'd:",
+    "options": [
+      "Die first",
+      "Be the final survivor",
+      "Be the killer",
+      "Trip and fall immediately"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Your toxic trait:",
+    "options": [
+      "Main character syndrome",
+      "Overthinking everything",
+      "Laughing at the wrong time",
+      "Saying 'we should hang' and never following up"
+    ],
+    "pi": 1,
+    "format": "bubble"
+  }
+]

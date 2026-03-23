@@ -1,0 +1,112 @@
+[
+  {
+    "q": "Partnerinin 1 numaralı gizli zevki?",
+    "options": [
+      "Reality TV",
+      "Gece yarısı abur cubur",
+      "Kendi sosyal medyasını stalklama",
+      "Online alışveriş çılgınlığı"
+    ],
+    "pi": 1,
+    "format": "blindguess"
+  },
+  {
+    "q": "Partnerini gizlice ne cezbeder?",
+    "options": [
+      "Özgüven",
+      "Espri",
+      "Göz teması",
+      "Fısıldanan bir iltifat"
+    ],
+    "pi": 2,
+    "format": "blindguess"
+  },
+  {
+    "q": "Partnerinin mükemmel buluşma fikri?",
+    "options": [
+      "Mum ışığında akşam yemeği",
+      "Spontane yolculuk",
+      "Netflix ve sarılma",
+      "Mutfakta dans"
+    ],
+    "pi": 3,
+    "format": "blindguess"
+  },
+  {
+    "q": "Partnerin seni etkilemek için ne giyer?",
+    "options": [
+      "Baştan aşağı siyah",
+      "Sevdiğimi bildiği bir şey",
+      "Rahat ama çekici",
+      "Yeni ve cesur bir şey"
+    ],
+    "pi": 0,
+    "format": "blindguess"
+  },
+  {
+    "q": "Partnerinin ilişkideki en büyük kozu?",
+    "options": [
+      "Her zaman ne söyleyeceğini bilmesi",
+      "Ne olursa olsun güldürmesi",
+      "Küçük detayları hatırlaması",
+      "Bana bakış şekli"
+    ],
+    "pi": 2,
+    "format": "blindguess"
+  },
+  {
+    "q": "Partnerin bir gün aklını okuyabilse:",
+    "options": [
+      "Bütün gün kızarırdı",
+      "Çok sevildiğini hissederdi",
+      "Şok olurdu",
+      "Sonunda anlardı"
+    ],
+    "pi": 1,
+    "format": "blindguess"
+  },
+  {
+    "q": "Kimse görmüyorken partnerinin sevgi dili?",
+    "options": [
+      "Fiziksel temas — hep uzanır",
+      "Tatlı fısıltılar",
+      "Sorulmadan bir şeyler yapmak",
+      "Sadece orada olmak, yakın olmak"
+    ],
+    "pi": 0,
+    "format": "blindguess"
+  },
+  {
+    "q": "Partnerine işe yarayacak açılış repliği?",
+    "options": [
+      "Zeki ve esprili bir şey",
+      "Samimi ve yumuşak bir şey",
+      "Cesur ve direkt bir şey",
+      "Replik yok — sadece bir bakış"
+    ],
+    "pi": 3,
+    "format": "blindguess"
+  },
+  {
+    "q": "Partnerinin gizli romantik fantezisi?",
+    "options": [
+      "Yıldızların altında dans",
+      "Sürpriz kaçamak",
+      "Yastığa bırakılmış aşk mektubu",
+      "Zamanı durduran bir öpücük"
+    ],
+    "pi": 0,
+    "format": "blindguess"
+  },
+  {
+    "q": "Partnerin uyumadan önce ne düşünür?",
+    "options": [
+      "Yarının planları",
+      "Bugün söylediğin o şey",
+      "Mutlu olup olmadığın",
+      "Ne kadar şanslı olduğu"
+    ],
+    "pi": 3,
+    "format": "blindguess"
+  }
+]

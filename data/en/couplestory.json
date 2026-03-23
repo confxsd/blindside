@@ -1,0 +1,232 @@
+[
+  {
+    "q": "How did you two start?",
+    "options": [
+      "It felt destined — like we were always going to find each other",
+      "Through a wild story — travel, random meet, adventure",
+      "We started as chaos and somehow made it work",
+      "Slowly — we were friends first, then it hit us"
+    ],
+    "traits": [
+      {
+        "soulmates": 2
+      },
+      {
+        "adventure_duo": 2
+      },
+      {
+        "chaos_couple": 2
+      },
+      {
+        "slow_burn": 2
+      }
+    ]
+  },
+  {
+    "q": "Your couple morning routine:",
+    "options": [
+      "Wake up tangled, coffee in bed, slow start",
+      "Already planning the day's adventure before breakfast",
+      "One of us is late, the other's yelling lovingly",
+      "Separate mornings that feel peaceful, not distant"
+    ],
+    "traits": [
+      {
+        "soulmates": 2
+      },
+      {
+        "adventure_duo": 2
+      },
+      {
+        "chaos_couple": 2
+      },
+      {
+        "slow_burn": 2
+      }
+    ]
+  },
+  {
+    "q": "When you disagree:",
+    "options": [
+      "We talk it through — we always find our way back",
+      "We go do something together and it fixes itself",
+      "It's loud, dramatic, then we're kissing five minutes later",
+      "We each take space, process, then come back softer"
+    ],
+    "traits": [
+      {
+        "soulmates": 2
+      },
+      {
+        "adventure_duo": 2
+      },
+      {
+        "chaos_couple": 2
+      },
+      {
+        "slow_burn": 2
+      }
+    ]
+  },
+  {
+    "q": "Your couple aesthetic:",
+    "options": [
+      "Matching outfits, shared playlists, finishing sentences",
+      "Backpacks, airport selfies, spontaneous plans",
+      "Unhinged texts, inside jokes no one else gets",
+      "Cozy nights, deep talks, no rush"
+    ],
+    "traits": [
+      {
+        "soulmates": 2
+      },
+      {
+        "adventure_duo": 2
+      },
+      {
+        "chaos_couple": 2
+      },
+      {
+        "slow_burn": 2
+      }
+    ]
+  },
+  {
+    "q": "Your friends say about you two:",
+    "options": [
+      "'They're literally the same person'",
+      "'They're always doing something wild'",
+      "'They're chaotic but it works somehow'",
+      "'They took forever but they're perfect'"
+    ],
+    "traits": [
+      {
+        "soulmates": 2
+      },
+      {
+        "adventure_duo": 2
+      },
+      {
+        "chaos_couple": 2
+      },
+      {
+        "slow_burn": 2
+      }
+    ]
+  },
+  {
+    "q": "Your ideal anniversary:",
+    "options": [
+      "Recreating your first date, every detail",
+      "A surprise trip neither of you planned properly",
+      "Something completely unplanned that becomes iconic",
+      "A quiet dinner where you both just talk for hours"
+    ],
+    "traits": [
+      {
+        "soulmates": 2
+      },
+      {
+        "adventure_duo": 2
+      },
+      {
+        "chaos_couple": 2
+      },
+      {
+        "slow_burn": 2
+      }
+    ]
+  },
+  {
+    "q": "What keeps you together:",
+    "options": [
+      "A connection that feels spiritual",
+      "The thrill of experiencing everything together",
+      "The fact that no one else could handle this energy",
+      "A foundation built on genuine friendship"
+    ],
+    "traits": [
+      {
+        "soulmates": 2
+      },
+      {
+        "adventure_duo": 2
+      },
+      {
+        "chaos_couple": 2
+      },
+      {
+        "slow_burn": 2
+      }
+    ]
+  },
+  {
+    "q": "Your couple weakness:",
+    "options": [
+      "You're so in sync you forget to grow individually",
+      "You avoid stillness — always needing the next thing",
+      "The drama gets exhausting sometimes",
+      "You move so slowly you almost missed each other"
+    ],
+    "traits": [
+      {
+        "soulmates": 2
+      },
+      {
+        "adventure_duo": 2
+      },
+      {
+        "chaos_couple": 2
+      },
+      {
+        "slow_burn": 2
+      }
+    ]
+  },
+  {
+    "q": "If your relationship was a movie genre:",
+    "options": [
+      "Romance — epic, emotional, destined",
+      "Action-adventure — fast-paced, unforgettable",
+      "Comedy — absurd, unpredictable, you'd watch it twice",
+      "Indie drama — quiet, beautiful, deeply felt"
+    ],
+    "traits": [
+      {
+        "soulmates": 2
+      },
+      {
+        "adventure_duo": 2
+      },
+      {
+        "chaos_couple": 2
+      },
+      {
+        "slow_burn": 2
+      }
+    ]
+  },
+  {
+    "q": "The moment you knew:",
+    "options": [
+      "The first time our eyes met — I just knew",
+      "During something wild we survived together",
+      "After a fight where we chose each other anyway",
+      "One random Tuesday when everything felt right"
+    ],
+    "traits": [
+      {
+        "soulmates": 2
+      },
+      {
+        "adventure_duo": 2
+      },
+      {
+        "chaos_couple": 2
+      },
+      {
+        "slow_burn": 2
+      }
+    ]
+  }
+]

@@ -1,0 +1,362 @@
+[
+  {
+    "q": "Dünyadaki herhangi biriyle akşam yemeği yiyebilsen, kim olurdu?",
+    "options": [
+      "Çocukluk kahramanım",
+      "Tarihi bir figür",
+      "İletişimi kopan biri",
+      "Hayran olduğum bir ünlü"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Ünlü olmak ister misin? Nasıl?",
+    "options": [
+      "Evet — yeteneğimle",
+      "Evet — fark yaratarak",
+      "Belki — biraz tanınan",
+      "Hayır — gizliliği tercih ederim"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Telefon etmeden önce ne söyleyeceğini prova eder misin?",
+    "options": [
+      "Her seferinde",
+      "Sadece önemli aramalarda",
+      "Nadiren",
+      "Asla — doğaçlama yaparım"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Mükemmel bir gün senin için nasıl olurdu?",
+    "options": [
+      "Yavaş sabah, plan yok",
+      "Şafaktan akşama macera",
+      "Sevdiklerimle vakit",
+      "Anlamlı bir şey yaratmak"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "En son ne zaman kendi kendine şarkı söyledin? Başkasına?",
+    "options": [
+      "Bugün — hep söylerim",
+      "Bu hafta, duşta",
+      "Hatırlamıyorum",
+      "Mırıldanırım, sayılır mı?"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "90 yaşına kadar yaşayıp 30 yaşındaki aklını mı bedenini mi korumak istersin?",
+    "options": [
+      "Aklımı, kesinlikle",
+      "Bedenimi, tartışmasız",
+      "Aklımı — düşüncelerim benim",
+      "Bedenimi — gerisini hallederim"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Nasıl öleceğine dair gizli bir önsezin var mı?",
+    "options": [
+      "Evet, tuhaf derecede spesifik",
+      "Belli belirsiz düşündüm",
+      "Düşünmemeye çalışıyorum",
+      "Hayır — bilmemeyi tercih ederim"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Seninle partnerinin ortak gibi görünen üç şeyini say.",
+    "options": [
+      "Mizah anlayışımız",
+      "Değerlerimiz ve inançlarımız",
+      "Müzik veya yemek zevkimiz",
+      "Duygularla başa çıkma şeklimiz"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Hayatında en çok neye minnettarsın?",
+    "options": [
+      "Aileme",
+      "Sağlığıma",
+      "Kalmayı seçen insanlara",
+      "Zor zamanlardan çıkan derslere"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Yetiştirilme şeklinde bir şeyi değiştirebilsen, ne olurdu?",
+    "options": [
+      "Daha fazla duygusal açıklık",
+      "Daha az başarı baskısı",
+      "Daha fazla birlikte vakit",
+      "Hiçbir şey — beni ben yapan o"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Dört dakikada hayat hikayeni mümkün olduğunca detaylı anlat.",
+    "options": [
+      "Çocukluktan başlardım",
+      "Dönüm noktalarına atlardım",
+      "Beni şekillendirenlere odaklanırdım",
+      "Nereden başlayacağımı bilemezdim"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Yarın bir yetenek veya özellik kazanarak uyanabilsen, ne olurdu?",
+    "options": [
+      "Sarsılmaz özgüven",
+      "Her dili akıcı konuşmak",
+      "İnsanları okuyabilmek",
+      "Ne olursa olsun iç huzur"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Bir kristal küre sana kendin, hayatın veya gelecek hakkında bir gerçeği söyleyebilse, ne bilmek isterdin?",
+    "options": [
+      "Mutlu olacak mıyım?",
+      "Amacım ne?",
+      "Beni gerçekten kim seviyor?",
+      "Hiçbir şey bilmemeyi tercih ederim"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Uzun zamandır yapmayı hayal ettiğin bir şey var mı? Neden yapmadın?",
+    "options": [
+      "Evet — korku engelliyor",
+      "Evet — para sorunu",
+      "Evet — zamanlama hiç uygun olmadı",
+      "Aslında hayalimi yaşıyorum"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Hayatının en büyük başarısı ne?",
+    "options": [
+      "Kariyerle ilgili bir şey",
+      "Kurduğum bir ilişki",
+      "Zor bir şeyden sağ çıkmak",
+      "Bugün olduğum kişi olmak"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Bir dostlukta en çok neye değer verirsin?",
+    "options": [
+      "Acıtsa bile dürüstlük",
+      "Her şeye rağmen sadakat",
+      "İstenmeden orada olmak",
+      "Yanlarında tamamen kendin olmak"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "En değerli anın hangisi?",
+    "options": [
+      "Çocukluktan bir an",
+      "Beni değiştiren bir yolculuk",
+      "Biriyle sessiz bir an",
+      "Şimdiye kadar unuttuğum bir şey"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "En kötü anın hangisi?",
+    "options": [
+      "Hazır olmadığım bir kayıp",
+      "Görmediğim bir ihanet",
+      "Geri alamayacağım bir an",
+      "Söylememyi tercih ederim"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Bir yıl içinde aniden öleceğini bilsen, yaşam şeklinde bir şeyi değiştirir misin?",
+    "options": [
+      "Hemen işimi bırakırdım",
+      "İnsanlara gerçekten ne hissettiğimi söylerdim",
+      "Seyahat eder, planlamayı bırakırdım",
+      "Çok değil — sadece daha anı yaşardım"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Dostluk senin için ne ifade ediyor?",
+    "options": [
+      "Gerçek beni gören biri",
+      "Zorunluluk değil, seçim",
+      "Dağılabileceğim güvenli bir alan",
+      "Birlikte büyümek, ayrılmak değil"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Aşk ve sevgi hayatında nasıl bir rol oynuyor?",
+    "options": [
+      "Her şey — onsuz yapamam",
+      "Önemli ama göstermekte zorlanırım",
+      "Aldığımdan fazlasını veririm",
+      "İçeri almayı hâlâ öğreniyorum"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Partnerinin olumlu bir özelliğini paylaş. Toplam beş madde paylaşın.",
+    "options": [
+      "İlk göze çarpan nezaketi",
+      "Mizahı her şeyi hafifletiyor",
+      "Gücü bana ilham veriyor",
+      "Dürüstlüğü, zor olsa bile"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Ailen ne kadar yakın ve sıcak? Çocukluğunun çoğu insandan daha mutlu olduğunu düşünür müsün?",
+    "options": [
+      "Çok yakın — şanslıyım",
+      "Karmaşık ama sevgi dolu",
+      "Yakın değil — kendi ailemi kurdum",
+      "Yeterince mutlu, karşılaştırmam"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Annenle ilişkin hakkında ne hissediyorsun?",
+    "options": [
+      "O benim en yakın arkadaşım",
+      "Karmaşık ama iyileşiyor",
+      "Uzağız ve sorun yok",
+      "Hâlâ üzerinde çalıştığım bir şey"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Üçer tane 'biz' cümlesi kurun. Örneğin: 'İkimiz de bu odada hissediyoruz ki...'",
+    "options": [
+      "İkimiz de biraz gerginiz",
+      "İkimiz de normalden açığız",
+      "İkimiz de bunun anlamlı olmasını istiyoruz",
+      "İkimiz de sakin görünmeye çalışıyoruz"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Bu cümleyi tamamla: 'Keşke paylaşabileceğim birim olsa...'",
+    "options": [
+      "Garip, rastgele düşüncelerimi",
+      "Korktuğum şeyleri",
+      "Gariplik olmadan sessizliği",
+      "Filtresiz gerçek benliğimi"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Partnerinle yakın arkadaş olacak olsan, bilmesi gereken önemli şey ne?",
+    "options": [
+      "Tam güvenmem zaman alır",
+      "Her şeyi aşırı düşünürüm",
+      "Gösterdiğimden fazla önemserim",
+      "Alana ihtiyacım var ama hep dönerim"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Partnerinde neyi sevdiğini söyle; bu sefer çok dürüst ol.",
+    "options": [
+      "Enerjin beni rahatlatıyor",
+      "Gerçekten önemsiyormuş gibi dinliyorsun",
+      "Sende tanıdık bir şey var",
+      "Fazla çabalamaman hoşuma gidiyor"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Hayatından utanç verici bir anı paylaş.",
+    "options": [
+      "Okul günlerinden bir şey",
+      "Hâlâ utandığım halka açık bir başarısızlık",
+      "Keşke göndermesem dediğim bir mesaj",
+      "Kimsenin bilmediği bir şey"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "En son ne zaman birinin önünde ağladın? Yalnızken?",
+    "options": [
+      "Yakın zamanda — saklamam",
+      "Uzun zaman önce, yalnızdım",
+      "Gerçekten hatırlamıyorum",
+      "Yalnız ağlarım, başkalarının önünde asla"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Partnerinde şimdiden sevdiğin bir şeyi söyle.",
+    "options": [
+      "Dürüstlüğün",
+      "Beni düşündürme şeklin",
+      "Bunun ne kadar kolay hissettirdiği",
+      "Gerçekten dikkat etmen"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Şaka yapılamayacak kadar ciddi olan bir şey var mı?",
+    "options": [
+      "Kayıp ve yas",
+      "Birinin güvensizlikleri",
+      "Hiçbir şey — mizah her şeyi iyileştirir",
+      "Kimin şaka yaptığına bağlı"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Bu akşam kimseyle iletişim kuramadan ölecek olsan, birine söylemediğin için en çok neyi pişman olurdun?",
+    "options": [
+      "Onu sevdiğimi",
+      "Özür dilediğimi",
+      "Hayatımı değiştirdiğini",
+      "Onunla gurur duyduğumu"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Evin yanıyor. Sevdiklerini kurtardıktan sonra bir eşya için son şansın var. Ne alırdın?",
+    "options": [
+      "Fotoğraflar ve anılar",
+      "Kaybettiğim birinden kalan bir şey",
+      "Günlüğüm veya mektuplarım",
+      "Telefonum — her şey onda"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Ailende kimin ölümü seni en çok sarsardı? Neden?",
+    "options": [
+      "Anne/babam — hazır değilim",
+      "Kardeşim — beni en iyi o tanır",
+      "Büyükannem/babam — beni şekillendirdiler",
+      "Bunu düşünemiyorum bile"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Kişisel bir sorununu paylaş ve partnerinden nasıl çözeceğini sor.",
+    "options": [
+      "Kariyer yolum hakkında",
+      "Yönetmeye çalıştığım bir ilişki",
+      "Henüz yüzleşmediğim bir korku",
+      "Öz değerimle ilgili bir şey"
+    ],
+    "pi": 2
+  }
+]

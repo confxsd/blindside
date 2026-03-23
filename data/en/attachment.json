@@ -1,0 +1,242 @@
+[
+  {
+    "q": "When someone you care about pulls away, you:",
+    "options": [
+      "Chase harder",
+      "Pull away too",
+      "Give space but feel anxious",
+      "Barely notice"
+    ],
+    "traits": [
+      {
+        "anxious": 2
+      },
+      {
+        "avoidant": 2
+      },
+      {
+        "anxious": 1,
+        "secure": 1
+      },
+      {
+        "avoidant": 1,
+        "secure": 1
+      }
+    ]
+  },
+  {
+    "q": "How do you feel about being vulnerable?",
+    "options": [
+      "Terrifying but I crave it",
+      "I avoid it at all costs",
+      "I'm working on it",
+      "It comes naturally to me"
+    ],
+    "traits": [
+      {
+        "anxious": 2
+      },
+      {
+        "avoidant": 2
+      },
+      {
+        "anxious": 1,
+        "secure": 1
+      },
+      {
+        "secure": 2
+      }
+    ]
+  },
+  {
+    "q": "After a fight, you need:",
+    "options": [
+      "Immediate reassurance",
+      "Space to process alone",
+      "A calm conversation",
+      "Time, then a hug"
+    ],
+    "traits": [
+      {
+        "anxious": 2
+      },
+      {
+        "avoidant": 2
+      },
+      {
+        "secure": 2
+      },
+      {
+        "secure": 1,
+        "anxious": 1
+      }
+    ]
+  },
+  {
+    "q": "Your biggest relationship fear:",
+    "options": [
+      "Being abandoned",
+      "Losing my independence",
+      "Not being enough",
+      "Being trapped"
+    ],
+    "traits": [
+      {
+        "anxious": 2
+      },
+      {
+        "avoidant": 2
+      },
+      {
+        "anxious": 2
+      },
+      {
+        "avoidant": 2
+      }
+    ]
+  },
+  {
+    "q": "When you like someone, you:",
+    "options": [
+      "Think about them constantly",
+      "Play it cool, maybe too cool",
+      "Express it openly",
+      "Test them before opening up"
+    ],
+    "traits": [
+      {
+        "anxious": 2
+      },
+      {
+        "avoidant": 2
+      },
+      {
+        "secure": 2
+      },
+      {
+        "anxious": 1,
+        "avoidant": 1
+      }
+    ]
+  },
+  {
+    "q": "How often do you check your phone for their messages?",
+    "options": [
+      "Obsessively",
+      "I forget to reply",
+      "When I have a moment",
+      "Only when I feel secure"
+    ],
+    "traits": [
+      {
+        "anxious": 2
+      },
+      {
+        "avoidant": 2
+      },
+      {
+        "secure": 2
+      },
+      {
+        "secure": 1,
+        "anxious": 1
+      }
+    ]
+  },
+  {
+    "q": "A partner says 'we need to talk'. You feel:",
+    "options": [
+      "Instant panic",
+      "Annoyance",
+      "Curiosity",
+      "Ready to listen"
+    ],
+    "traits": [
+      {
+        "anxious": 2
+      },
+      {
+        "avoidant": 2
+      },
+      {
+        "secure": 1,
+        "anxious": 1
+      },
+      {
+        "secure": 2
+      }
+    ]
+  },
+  {
+    "q": "Your comfort zone in relationships:",
+    "options": [
+      "Deep emotional fusion",
+      "Having my own world",
+      "Closeness with boundaries",
+      "It depends on the person"
+    ],
+    "traits": [
+      {
+        "anxious": 2
+      },
+      {
+        "avoidant": 2
+      },
+      {
+        "secure": 2
+      },
+      {
+        "anxious": 1,
+        "secure": 1
+      }
+    ]
+  },
+  {
+    "q": "How do you handle jealousy?",
+    "options": [
+      "It consumes me",
+      "I don't get jealous",
+      "I talk about it",
+      "I internalize it"
+    ],
+    "traits": [
+      {
+        "anxious": 2
+      },
+      {
+        "avoidant": 2
+      },
+      {
+        "secure": 2
+      },
+      {
+        "anxious": 1,
+        "avoidant": 1
+      }
+    ]
+  },
+  {
+    "q": "Ideal relationship dynamic:",
+    "options": [
+      "Inseparable, always together",
+      "Together but independent",
+      "Balanced closeness",
+      "I'm not sure what I want"
+    ],
+    "traits": [
+      {
+        "anxious": 2
+      },
+      {
+        "avoidant": 2
+      },
+      {
+        "secure": 2
+      },
+      {
+        "anxious": 1,
+        "avoidant": 1
+      }
+    ]
+  }
+]

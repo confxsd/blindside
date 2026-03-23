@@ -1,0 +1,102 @@
+[
+  {
+    "q": "Bu akşam kim yemek yapıyor?",
+    "options": [
+      "Ben yaparım",
+      "Sen pişir, ben toplayım",
+      "Sipariş verelim",
+      "Hangimiz daha az yorgunsa"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Termostat tartışması:",
+    "options": [
+      "Hep üşürüm, battaniye insanıyım",
+      "Hep sıcak, pencere açık",
+      "Bir şekilde uzlaşırız",
+      "Son dokunan kazanır"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "İdeal uyku düzeni:",
+    "options": [
+      "Aynı yatak, sarılarak",
+      "Aynı yatak, ayrı battaniye",
+      "Aynı oda, ayrı yatak",
+      "Bazen kendi alanım lazım"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Ev işlerini nasıl hallediyorsun?",
+    "options": [
+      "Sıkı program",
+      "Gören yapar",
+      "Haftalık sırayla",
+      "Her seferinde tartışırız"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Market alışverişi felsefesi:",
+    "options": [
+      "Yemek planı ve liste",
+      "Reyonlarda gezin",
+      "Sadece online sipariş",
+      "Atıştırmalık al, yemeği sonra düşün"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Banyo durumu:",
+    "options": [
+      "En az 45 dakika lazım",
+      "Gir çık, 10 dakika",
+      "Paylaşabiliriz, sorun yok",
+      "Orada benimle konuşma"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "TV kumanda kontrolü:",
+    "options": [
+      "Ben seçerim, sen kabul et",
+      "Sırayla",
+      "30 dk gezin, hiçbir şey izleme",
+      "Ayrı ekranlar dürüst olmak gerekirse"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Misafir geldiğinde:",
+    "options": [
+      "Her yeri derinlemesine temizle",
+      "Hızlı toparlama yeter",
+      "Evimiz, dağınıklığımız",
+      "En az 3 gün önceden haber lazım"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Sabah rutini uyumu:",
+    "options": [
+      "Birlikte uyanırız",
+      "Birimiz zombi",
+      "Tamamen farklı saatler",
+      "Kahveye kadar sessiz birlikte var olma"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Evde para konuşması:",
+    "options": [
+      "Her şeyi yarı yarıya böl",
+      "Tek hesap, her şey ortak",
+      "Herkes güçlü olduğu yeri öder",
+      "Bu konuyu yeterince konuşmuyoruz"
+    ],
+    "pi": 0
+  }
+]

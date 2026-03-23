@@ -1,0 +1,106 @@
+[
+  {
+    "q": "Karşındaki kişide ilk fark ettiğin şey neydi?",
+    "options": [
+      "Gülümsemesi",
+      "Enerjisi",
+      "Tarzı",
+      "Espri anlayışı"
+    ],
+    "pi": 0,
+    "format": "bubble"
+  },
+  {
+    "q": "İkinizin bir şarkısı olsa türü ne olurdu?",
+    "options": [
+      "R&B / Soul",
+      "Pop",
+      "Indie",
+      "Lo-fi"
+    ],
+    "pi": 2,
+    "format": "swipe"
+  },
+  {
+    "q": "Onda gizlice en çok neye hayransın?",
+    "options": [
+      "Özgüveni",
+      "Nezaketi",
+      "Yaratıcılığı",
+      "Dayanıklılığı"
+    ],
+    "pi": 1,
+    "format": "bubble"
+  },
+  {
+    "q": "İdeal buluşma vibes'ını seç:",
+    "options": [
+      "Çatıda gün batımı",
+      "Gece araba turu",
+      "Film gecesi",
+      "Spontane macera"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Bağınızı tek kelimeyle tanımlayın:",
+    "options": [
+      "Kaotik",
+      "Huzur"
+    ],
+    "pi": 1,
+    "format": "vs"
+  },
+  {
+    "q": "Yaptığı küçük bir şey tüm gününü güzelleştirir:",
+    "options": [
+      "'Seni düşündüm' mesajı",
+      "Hiç beklemediğim anda güldürmesi",
+      "Unuttuğum bir şeyi hatırlaması",
+      "Ben bakmıyorken bana bakış şekli"
+    ],
+    "pi": 2,
+    "format": "bubble"
+  },
+  {
+    "q": "İlişkinizin aşk dili en yüksek seviyede olsa:",
+    "options": [
+      "Fiziksel yakınlık — hep birbirimize dokunuruz",
+      "Sözler — her şeyi konuşuruz",
+      "Eylemler — hayatı birlikte idare ederiz",
+      "Birlikte zaman — hiçbir şey yapmak bile yeter"
+    ],
+    "pi": 0,
+    "format": "swipe"
+  },
+  {
+    "q": "Yarın kaybolsa en çok neyi özlerdin:",
+    "options": [
+      "Sesini",
+      "Yanımdaki varlığını",
+      "Kimsenin anlamadığı iç şakalarımızı",
+      "Yanında ne kadar güvende hissettiğimi"
+    ],
+    "pi": 3,
+    "format": "bubble"
+  },
+  {
+    "q": "Dürüstçe — ilk kim uyuyor?",
+    "options": [
+      "Ben, her seferinde",
+      "O, dakikalar içinde"
+    ],
+    "pi": 0,
+    "format": "vs"
+  },
+  {
+    "q": "Çift süper gücünüz:",
+    "options": [
+      "Konuşmadan anlaşırız",
+      "Marketten bile eğlence çıkarırız",
+      "Birbirimizi mükemmel dengeleriz",
+      "Her şeyi birlikte atlatırız"
+    ],
+    "pi": 1
+  }
+]

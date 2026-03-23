@@ -1,0 +1,272 @@
+[
+  {
+    "q": "Berbat bir gün geçirdin. Seni en çabuk ne iyileştirir?",
+    "options": [
+      "Sessiz uzun bir sarılma",
+      "'Seninle gurur duyuyorum' duymak",
+      "Birinin bulaşıkları yıkaması",
+      "Yastığında sürpriz bir hediye",
+      "Telefonlar kapalı, bütün bir akşam birlikte"
+    ],
+    "traits": [
+      {
+        "touch": 2
+      },
+      {
+        "words": 2
+      },
+      {
+        "acts": 2
+      },
+      {
+        "gifts": 2
+      },
+      {
+        "time": 2
+      }
+    ]
+  },
+  {
+    "q": "Partnerin doğum gününü unuttu. En çok ne acıtır?",
+    "options": [
+      "Kutlama mesajı yok",
+      "Plan yapma çabası yok",
+      "Hediye yok",
+      "İzin almadı",
+      "Sarılma bile yok"
+    ],
+    "traits": [
+      {
+        "words": 2
+      },
+      {
+        "acts": 2
+      },
+      {
+        "gifts": 2
+      },
+      {
+        "time": 2
+      },
+      {
+        "touch": 2
+      }
+    ]
+  },
+  {
+    "q": "Seni en çok ne sevilmiş hissettirir?",
+    "options": [
+      "Herkesin içinde elimi tutması",
+      "Gerçek, içten bir mesaj yazması",
+      "Korktuğum bir işi halletmesi",
+      "Küçük rastgele bir şey getirmesi",
+      "Sırf benimle olmak için planlarını iptal etmesi"
+    ],
+    "traits": [
+      {
+        "touch": 2
+      },
+      {
+        "words": 2
+      },
+      {
+        "acts": 2
+      },
+      {
+        "gifts": 2
+      },
+      {
+        "time": 2
+      }
+    ]
+  },
+  {
+    "q": "En romantik jest:",
+    "options": [
+      "Mutfakta dans etmek",
+      "El yazısıyla mektup",
+      "Sormadan arabamı yıkaması",
+      "Sadece bana özel playlist",
+      "Hiçbir dikkat dağıtıcı olmadan bütün bir gün"
+    ],
+    "traits": [
+      {
+        "touch": 2
+      },
+      {
+        "words": 2
+      },
+      {
+        "acts": 2
+      },
+      {
+        "gifts": 2
+      },
+      {
+        "time": 2
+      }
+    ]
+  },
+  {
+    "q": "Birine aşık oluyorsun. İlk işaret?",
+    "options": [
+      "Fiziksel olarak yakın olmak istiyorum",
+      "Sürekli iltifat etmeye başlıyorum",
+      "Hayatını kolaylaştırmak için şeyler yapıyorum",
+      "Hoşuna gidecek şeyleri fark edip alıyorum",
+      "Yanında zamanın nasıl geçtiğini anlamıyorum"
+    ],
+    "traits": [
+      {
+        "touch": 2
+      },
+      {
+        "words": 2
+      },
+      {
+        "acts": 2
+      },
+      {
+        "gifts": 2
+      },
+      {
+        "time": 2
+      }
+    ]
+  },
+  {
+    "q": "Kavgada barışmanın en hızlı yolu:",
+    "options": [
+      "Sadece sarıl bana",
+      "Özür dile ve ciddi ol",
+      "Göster, söyleme",
+      "Barış teklifi — çiçek, yemek, bir şey",
+      "Biz iyiyiz olana kadar yanımda kal"
+    ],
+    "traits": [
+      {
+        "touch": 2
+      },
+      {
+        "words": 2
+      },
+      {
+        "acts": 2
+      },
+      {
+        "gifts": 2
+      },
+      {
+        "time": 2
+      }
+    ]
+  },
+  {
+    "q": "Partnerden en çok ne incitir?",
+    "options": [
+      "Bana hiç dokunmaması",
+      "Hissettiklerini söylememesi",
+      "Her şeyi tek başıma halletmem",
+      "Dışarıdayken beni düşünmemesi",
+      "Benim için hiç zamanı olmaması"
+    ],
+    "traits": [
+      {
+        "touch": 2
+      },
+      {
+        "words": 2
+      },
+      {
+        "acts": 2
+      },
+      {
+        "gifts": 2
+      },
+      {
+        "time": 2
+      }
+    ]
+  },
+  {
+    "q": "Arkadaşlarına sevgini nasıl gösterirsin?",
+    "options": [
+      "Sarılmalar, kol dokunuşları",
+      "Övgü ve yüksek sesle söyleme",
+      "Taşınmalarına yardım, onları bir yere bırakma",
+      "Bahsettikleri şeyi hatırlayıp alma",
+      "Gelip zamanımı verme"
+    ],
+    "traits": [
+      {
+        "touch": 2
+      },
+      {
+        "words": 2
+      },
+      {
+        "acts": 2
+      },
+      {
+        "gifts": 2
+      },
+      {
+        "time": 2
+      }
+    ]
+  },
+  {
+    "q": "Biriyle mükemmel sabahın:",
+    "options": [
+      "İç içe uyanmak",
+      "Yanımızdayken bile tatlı sabah mesajları",
+      "Kahve ve kahvaltıyı hazırlamış olması",
+      "Komodinin üstünde küçük bir not",
+      "Gidecek yer yok — sadece biz, bütün sabah"
+    ],
+    "traits": [
+      {
+        "touch": 2
+      },
+      {
+        "words": 2
+      },
+      {
+        "acts": 2
+      },
+      {
+        "gifts": 2
+      },
+      {
+        "time": 2
+      }
+    ]
+  },
+  {
+    "q": "Sevgi bir dil olsaydı, seninki:",
+    "options": [
+      "Tene temas",
+      "Unutulmayan sözler",
+      "Sözlerden güçlü eylemler",
+      "Şeyin arkasındaki düşünce",
+      "Bölünmemiş varlık"
+    ],
+    "traits": [
+      {
+        "touch": 2
+      },
+      {
+        "words": 2
+      },
+      {
+        "acts": 2
+      },
+      {
+        "gifts": 2
+      },
+      {
+        "time": 2
+      }
+    ]
+  }
+]

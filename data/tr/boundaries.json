@@ -1,0 +1,235 @@
+[
+  {
+    "q": "Arkadaş enerjin olmadığı bir iyilik istiyor:",
+    "options": [
+      "Evet derim, sonra kızarım",
+      "Evet derim ama yorgun olduğumu ima ederim",
+      "Dürüstçe hayır derim",
+      "Bana uyan bir alternatif sunarım"
+    ],
+    "traits": [
+      {
+        "porous": 2
+      },
+      {
+        "passive": 2
+      },
+      {
+        "healthy": 2
+      },
+      {
+        "healthy": 1,
+        "rigid": 1
+      }
+    ]
+  },
+  {
+    "q": "Biri sınırı aşıyor:",
+    "options": [
+      "Bir şey demem, içimde biriktiririm",
+      "Gülerim ama incinmiş hissederim",
+      "Doğrudan ele alırım",
+      "Açıklama yapmadan keserim"
+    ],
+    "traits": [
+      {
+        "porous": 2
+      },
+      {
+        "passive": 2
+      },
+      {
+        "healthy": 2
+      },
+      {
+        "rigid": 2
+      }
+    ]
+  },
+  {
+    "q": "Hayır demek hakkında ne düşünüyorsun?",
+    "options": [
+      "Fiziksel olarak acı verici",
+      "Yapabiliyorum ama günlerce suçluluk",
+      "Rahatsız ama gerekli",
+      "Kolay — hayır cümlenin tamamı"
+    ],
+    "traits": [
+      {
+        "porous": 2
+      },
+      {
+        "passive": 2
+      },
+      {
+        "healthy": 2
+      },
+      {
+        "rigid": 2
+      }
+    ]
+  },
+  {
+    "q": "Sosyalleştikten sonra enerjin:",
+    "options": [
+      "Tükenmiş — çok fazla verdim",
+      "İdare eder ama maske taktım",
+      "Enerji dolu — kendim olarak geldim",
+      "Bittiğine memnunum"
+    ],
+    "traits": [
+      {
+        "porous": 2
+      },
+      {
+        "passive": 2
+      },
+      {
+        "healthy": 2
+      },
+      {
+        "rigid": 2
+      }
+    ]
+  },
+  {
+    "q": "Biri sana kızgın olduğunda:",
+    "options": [
+      "Düzeltmek için her şeyi yaparım",
+      "Ne yaptığımı düşünüp dururum",
+      "Onun ve benim hislerime alan açarım",
+      "Onun sorunu, benim değil"
+    ],
+    "traits": [
+      {
+        "porous": 2
+      },
+      {
+        "passive": 2
+      },
+      {
+        "healthy": 2
+      },
+      {
+        "rigid": 2
+      }
+    ]
+  },
+  {
+    "q": "Birinin hakkında konuştuğunu duyuyorsun:",
+    "options": [
+      "Yıkılırım — herkesin beni sevmesi lazım",
+      "Duymamış gibi yaparım, haftalarca düşünürüm",
+      "Merak ederim ama beni tanımlamaz",
+      "Hiç umursamam"
+    ],
+    "traits": [
+      {
+        "porous": 2
+      },
+      {
+        "passive": 2
+      },
+      {
+        "healthy": 2
+      },
+      {
+        "rigid": 2
+      }
+    ]
+  },
+  {
+    "q": "Yeni insanlarla ne kadar paylaşırsın?",
+    "options": [
+      "Her şeyi — ilk dakikadan açık kitabım",
+      "Çok fazla, sonra pişman olurum",
+      "Yavaş yavaş — güven kazanılır",
+      "Neredeyse hiç — kendilerini kanıtlamaları lazım"
+    ],
+    "traits": [
+      {
+        "porous": 2
+      },
+      {
+        "passive": 1,
+        "porous": 1
+      },
+      {
+        "healthy": 2
+      },
+      {
+        "rigid": 2
+      }
+    ]
+  },
+  {
+    "q": "İş-yaşam dengen:",
+    "options": [
+      "İş her şeye sızıyor",
+      "Deniyorum ama çıkış yapmaktan suçluluk",
+      "Mesai dışı saatlerimi koruyorum",
+      "İş ve hayatı tamamen ayırırım — istisna yok"
+    ],
+    "traits": [
+      {
+        "porous": 2
+      },
+      {
+        "passive": 2
+      },
+      {
+        "healthy": 2
+      },
+      {
+        "rigid": 2
+      }
+    ]
+  },
+  {
+    "q": "İlişkide alana ihtiyaç duyduğunda:",
+    "options": [
+      "İstemem — bir süreliğine kaybolurım",
+      "İma ederim ve fark etmelerini umarım",
+      "Net şekilde iletirim",
+      "Alana değil — duvarlara ihtiyacım var"
+    ],
+    "traits": [
+      {
+        "porous": 1,
+        "passive": 1
+      },
+      {
+        "passive": 2
+      },
+      {
+        "healthy": 2
+      },
+      {
+        "rigid": 2
+      }
+    ]
+  },
+  {
+    "q": "Hangi cümle farklı çarpar?",
+    "options": [
+      "'Etrafımdaki herkesin hislerinden sorumluyum'",
+      "'Sınır koyarsam giderler'",
+      "'Seni sevebilir ve yine de hayır diyebilirim'",
+      "'Kimseye bana erişim borçlu değilim'"
+    ],
+    "traits": [
+      {
+        "porous": 2
+      },
+      {
+        "passive": 2
+      },
+      {
+        "healthy": 2
+      },
+      {
+        "rigid": 2
+      }
+    ]
+  }
+]

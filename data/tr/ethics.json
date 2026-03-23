@@ -1,0 +1,102 @@
+[
+  {
+    "q": "İçinde 500 dolar ve kimlik olan bir cüzdan buldun:",
+    "options": [
+      "Hepsini iade ederim",
+      "Parayı alır, cüzdanı iade ederim",
+      "Sahibini bulmaya çalışırım",
+      "Ne kadar parasız olduğuma bağlı"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Birini korumak için yalan söylemek doğru mu?",
+    "options": [
+      "Evet, her zaman",
+      "Sadece aşırı durumlarda",
+      "Asla — doğruluk önemli",
+      "Neyi koruduğuna bağlı"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Arkadaşın partnerini aldatıyor:",
+    "options": [
+      "Partnere söylerim",
+      "Kendi işime bakarım",
+      "Önce arkadaşımla konuşurum",
+      "Karmaşık bir durum"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "İş arkadaşın küçük şeyler çalıyor, ihbar eder misin?",
+    "options": [
+      "Evet, kurallar kural",
+      "Hayır, beni ilgilendirmez",
+      "Önce onunla konuşurum",
+      "Ne çaldığına bağlı"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "İptal kültürü haklı mı?",
+    "options": [
+      "Evet — hesap verebilirlik önemli",
+      "Bazen, her zaman değil",
+      "Hayır — herkes ikinci şansı hak eder",
+      "Daha karmaşık bir konu"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "5 yabancıyı mı 1 sevdiğini mi kurtarırsın?",
+    "options": [
+      "5 yabancı",
+      "1 sevdiğim kişi",
+      "Seçemem",
+      "Senaryoyu tamamen reddederim"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Gizlilik mi güvenlik mi?",
+    "options": [
+      "Her zaman gizlilik",
+      "Her zaman güvenlik",
+      "İkisinin dengesi",
+      "Duruma bağlı"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Kötü bir buluşmadan sonra ghostlamak doğru mu?",
+    "options": [
+      "Evet, zorunluluk yok",
+      "En azından mesaj at",
+      "Asla, saygılı ol",
+      "Ne kadar kötü olduğuna bağlı"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Zenginler daha çok vergilendirilmeli:",
+    "options": [
+      "Kesinlikle katılıyorum",
+      "Kısmen katılıyorum",
+      "Katılmıyorum",
+      "O kadar basit değil"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "En yakın arkadaşın senin yerine yalan söylemeni istiyor:",
+    "options": [
+      "Yaparım, sorgusuz",
+      "Yalana bağlı",
+      "Asla — dürüstlüğümden ödün vermem",
+      "Bir çözüm yolu bulurum"
+    ],
+    "pi": 3
+  }
+]

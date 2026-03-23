@@ -1,0 +1,233 @@
+[
+  {
+    "q": "Her şey iyi gidiyor. Beynin diyor ki:",
+    "options": [
+      "'Bu sürmeyecek'",
+      "'Bunu hak etmiyorum'",
+      "'Onlar bulmadan bir kusur bulayım'",
+      "'Ya sadece tesadüfen başarılıysam?'"
+    ],
+    "traits": [
+      {
+        "doom": 2
+      },
+      {
+        "unworthiness": 2
+      },
+      {
+        "perfectionism": 2
+      },
+      {
+        "impostor": 2
+      }
+    ]
+  },
+  {
+    "q": "Büyük bir başarıya yakınsın:",
+    "options": [
+      "Yavaşlarım ya da tamamen dururum",
+      "Kavga çıkarırım ya da drama yaratırım",
+      "Çıtayı ulaşamayacağım kadar yükseltirim",
+      "Kimse daha fazla beklemesin diye küçümserim"
+    ],
+    "traits": [
+      {
+        "doom": 2
+      },
+      {
+        "unworthiness": 2
+      },
+      {
+        "perfectionism": 2
+      },
+      {
+        "impostor": 2
+      }
+    ]
+  },
+  {
+    "q": "Erteleme kalıbın:",
+    "options": [
+      "Felaketin motive etmesini beklerim",
+      "Zaten önemli olmadığına kendimi ikna ederim",
+      "Her şeyi yeniden yaparım, hiçbir şey bitmez",
+      "Sonucun yeterli olmadığımı kanıtlamasından korkuyorum"
+    ],
+    "traits": [
+      {
+        "doom": 2
+      },
+      {
+        "unworthiness": 2
+      },
+      {
+        "perfectionism": 2
+      },
+      {
+        "impostor": 2
+      }
+    ]
+  },
+  {
+    "q": "Biri gerçek bir iltifat veriyor:",
+    "options": [
+      "Hemen savuştururum",
+      "Kibarlık ettiklerini düşünürüm",
+      "Kaçırdıkları bir şey bulurum",
+      "Yanıldıklarını ne zaman anlayacaklarını merak ederim"
+    ],
+    "traits": [
+      {
+        "doom": 1,
+        "unworthiness": 1
+      },
+      {
+        "unworthiness": 2
+      },
+      {
+        "perfectionism": 2
+      },
+      {
+        "impostor": 2
+      }
+    ]
+  },
+  {
+    "q": "Başarıyla ilişkin:",
+    "options": [
+      "Geçici ve tehlike takip eder",
+      "Başkaları için, benim için değil",
+      "Asla yeterli değil — hep düzeltecek daha fazla var",
+      "Liyakatle değil, şansla oldu"
+    ],
+    "traits": [
+      {
+        "doom": 2
+      },
+      {
+        "unworthiness": 2
+      },
+      {
+        "perfectionism": 2
+      },
+      {
+        "impostor": 2
+      }
+    ]
+  },
+  {
+    "q": "Hata yaptığında:",
+    "options": [
+      "Gördün mü? Sadece zaman meselesiydi",
+      "Bu benim hakkımda hep korktuğum şeyi kanıtlıyor",
+      "Ne yapmalıydım diye tekrar tekrar oynatırım",
+      "Umarım kimse fark etmemiştir"
+    ],
+    "traits": [
+      {
+        "doom": 2
+      },
+      {
+        "unworthiness": 2
+      },
+      {
+        "perfectionism": 2
+      },
+      {
+        "impostor": 2
+      }
+    ]
+  },
+  {
+    "q": "İyi haberle nasıl başa çıkarsın?",
+    "options": [
+      "Diğer ayakkabının düşmesini bekle",
+      "Başkalarında yok diye suçluluk duy",
+      "Hâlâ doğru olmayan şeyi düşün",
+      "Şanslı bir dolandırıcı gibi hisset"
+    ],
+    "traits": [
+      {
+        "doom": 2
+      },
+      {
+        "unworthiness": 2
+      },
+      {
+        "perfectionism": 2
+      },
+      {
+        "impostor": 2
+      }
+    ]
+  },
+  {
+    "q": "İç sabotajcın fısıldıyor:",
+    "options": [
+      "'Mutluluk her zaman bir bedel ister'",
+      "'Sahip olduklarını hak etmiyorsun'",
+      "'Mükemmel değilse çöp'",
+      "'Rol yaptığını anlayacaklar'"
+    ],
+    "traits": [
+      {
+        "doom": 2
+      },
+      {
+        "unworthiness": 2
+      },
+      {
+        "perfectionism": 2
+      },
+      {
+        "impostor": 2
+      }
+    ]
+  },
+  {
+    "q": "Kendinde fark ettiğin kalıp:",
+    "options": [
+      "Bırakılmadan önce giderim",
+      "Kimse kıskanmasın diye küçülürüm",
+      "Yeterli hissetmemek için aşırı çalışırım",
+      "Kimse bildiklerimi test etmesin diye sessiz kalırım"
+    ],
+    "traits": [
+      {
+        "doom": 2
+      },
+      {
+        "unworthiness": 2
+      },
+      {
+        "perfectionism": 2
+      },
+      {
+        "impostor": 2
+      }
+    ]
+  },
+  {
+    "q": "Unutman gereken inanç:",
+    "options": [
+      "'Benim gibi insanlara iyi şeyler olmaz'",
+      "'Sevgiyi kazanmak zorundayım'",
+      "'Mükemmelden azı başarısızlık'",
+      "'Buraya sadece kimse yakından bakmadığı için geldim'"
+    ],
+    "traits": [
+      {
+        "doom": 2
+      },
+      {
+        "unworthiness": 2
+      },
+      {
+        "perfectionism": 2
+      },
+      {
+        "impostor": 2
+      }
+    ]
+  }
+]

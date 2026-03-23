@@ -1,0 +1,102 @@
+[
+  {
+    "q": "3 gün sonra cevap yazıyor:",
+    "options": [
+      "Red flag",
+      "Belki meşguldür"
+    ],
+    "pi": 0,
+    "format": "vs"
+  },
+  {
+    "q": "Köpekleri sevmiyor:",
+    "options": [
+      "Anında biter",
+      "Kediler > köpekler zaten",
+      "Herkesin olayı değil",
+      "Şüpheli ama tamam"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Her şeyi sosyal medyaya atıyor:",
+    "options": [
+      "Özgüvene bak",
+      "Büyük red flag",
+      "Ben de varım yeter",
+      "Ben de aynısını yaparım"
+    ],
+    "pi": 1,
+    "format": "bubble"
+  },
+  {
+    "q": "Eski sevgilisiyle hâlâ arkadaş:",
+    "options": [
+      "Olgun hamle",
+      "Kesinlikle olmaz"
+    ],
+    "pi": 0,
+    "format": "vs"
+  },
+  {
+    "q": "Gevreği suyla yiyor:",
+    "options": [
+      "Polisi ara",
+      "Gidiyorum",
+      "Merakı saygıyla karşılarım",
+      "Görmedim bile"
+    ],
+    "pi": 0,
+    "format": "bubble"
+  },
+  {
+    "q": "Hiç plan yapmıyor:",
+    "options": [
+      "Red flag",
+      "Belki utangaçtır",
+      "Plancı zaten benim",
+      "Hiç buluşamayız"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Hiç sosyal medyası yok:",
+    "options": [
+      "Green flag aslında",
+      "Ne saklıyor",
+      "Gizemli vibes",
+      "Ben de öyle"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Film izlerken uyuyor:",
+    "options": [
+      "Tatlı",
+      "Saygısızlık"
+    ],
+    "pi": 0,
+    "format": "vs"
+  },
+  {
+    "q": "Restoranda senin yerine sipariş veriyor:",
+    "options": [
+      "Romantik",
+      "Kontrol manyağı",
+      "Beni tanıyorsa tamam",
+      "Cesur hamle"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "'İyiyim' diyor ama değil:",
+    "options": [
+      "Derinleşirim",
+      "Alan bırakırım",
+      "Ben de yaparım aynısını",
+      "Hep yapıyorsa red flag"
+    ],
+    "pi": 0,
+    "format": "swipe"
+  }
+]

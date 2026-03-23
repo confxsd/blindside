@@ -1,0 +1,232 @@
+[
+  {
+    "q": "Bir arkadaşın zor günler geçiriyorsa:",
+    "options": [
+      "Devralırım — toparlanma planı hazır",
+      "Yargılamadan saatlerce dinlerim",
+      "Atıştırmalıkla kapıda beliririm",
+      "İhtiyacı olan sert gerçeği söylerim"
+    ],
+    "traits": [
+      {
+        "main_character": 2
+      },
+      {
+        "healer": 2
+      },
+      {
+        "ride_or_die": 2
+      },
+      {
+        "soft_villain": 2
+      }
+    ]
+  },
+  {
+    "q": "Instagram story enerjin:",
+    "options": [
+      "Küratörlü, estetik, hiçbir şey belli etmez",
+      "Sıcak, yumuşak, huzurlu",
+      "En yakınını 12 emoji ile paylaşırsın",
+      "Cesur fikirler ve filtresiz yorumlar"
+    ],
+    "traits": [
+      {
+        "main_character": 2
+      },
+      {
+        "healer": 2
+      },
+      {
+        "ride_or_die": 2
+      },
+      {
+        "soft_villain": 2
+      }
+    ]
+  },
+  {
+    "q": "Yazışma aşamasında ne yaparsın?",
+    "options": [
+      "Tempoyu ben belirlerim — peşimden gelsin ya da gitsin",
+      "Enerjisine uyar, sabırlı kalırım",
+      "Hemen all-in olurum, oyun yok",
+      "Biri kendini kanıtlayana kadar seçenekleri açık tutarım"
+    ],
+    "traits": [
+      {
+        "main_character": 2
+      },
+      {
+        "healer": 2
+      },
+      {
+        "ride_or_die": 2
+      },
+      {
+        "soft_villain": 2
+      }
+    ]
+  },
+  {
+    "q": "İlişkideki süper gücün:",
+    "options": [
+      "Onu da başrol gibi hissettirmek",
+      "Söylemeden önce neye ihtiyacı olduğunu bilmek",
+      "Kıyameti bile atlatacak sadakat",
+      "Sıkılmasına asla izin vermemek"
+    ],
+    "traits": [
+      {
+        "main_character": 2
+      },
+      {
+        "healer": 2
+      },
+      {
+        "ride_or_die": 2
+      },
+      {
+        "soft_villain": 2
+      }
+    ]
+  },
+  {
+    "q": "Eski sevgilin seni nasıl tanımlar:",
+    "options": [
+      "Kaçırdığı kişi",
+      "Çok iyi seven",
+      "Her şeyi yapacak olan",
+      "Onu sarsan kişi"
+    ],
+    "traits": [
+      {
+        "main_character": 2
+      },
+      {
+        "healer": 2
+      },
+      {
+        "ride_or_die": 2
+      },
+      {
+        "soft_villain": 2
+      }
+    ]
+  },
+  {
+    "q": "Ayrılıktan sonra:",
+    "options": [
+      "Öyle bir değişirim ki pişman olurlar",
+      "Ağlarım, iyileşirim, yazarım, büyürüm — tam döngü",
+      "Engelle, sil, huzurumu koru",
+      "Göz önünde parlayıp karmaya bırakırım"
+    ],
+    "traits": [
+      {
+        "main_character": 2
+      },
+      {
+        "healer": 2
+      },
+      {
+        "ride_or_die": 2
+      },
+      {
+        "soft_villain": 2
+      }
+    ]
+  },
+  {
+    "q": "Sevgi dilin pratikte:",
+    "options": [
+      "Buluşmaları, sürprizleri, estetiği ben planlarım",
+      "Dinlerim, alan açarım, fırtınada sakin kalırım",
+      "Ne olursa olsun gelirim — gece 3, şehrin öbür ucu, her zaman",
+      "Dirense bile daha iyi olmaya iterim"
+    ],
+    "traits": [
+      {
+        "main_character": 2
+      },
+      {
+        "healer": 2
+      },
+      {
+        "ride_or_die": 2
+      },
+      {
+        "soft_villain": 2
+      }
+    ]
+  },
+  {
+    "q": "En büyük ilişki kusurun (dürüst ol):",
+    "options": [
+      "İlgi merkezini biraz fazla seviyorum",
+      "Çok verip kendimi kaybediyorum",
+      "Çok yoğunum çok erken",
+      "İnsanları kalıp kalmayacaklarını görmek için test ediyorum"
+    ],
+    "traits": [
+      {
+        "main_character": 2
+      },
+      {
+        "healer": 2
+      },
+      {
+        "ride_or_die": 2
+      },
+      {
+        "soft_villain": 2
+      }
+    ]
+  },
+  {
+    "q": "Kendine yakın hissettiğin karakter:",
+    "options": [
+      "Hafife alınan ama hep kazanan",
+      "En büyük kalbi olan sessiz kişi",
+      "Sonuna kadar sadık — hata yapacak kadar",
+      "Herkesin takıntılı olduğu joker"
+    ],
+    "traits": [
+      {
+        "main_character": 2
+      },
+      {
+        "healer": 2
+      },
+      {
+        "ride_or_die": 2
+      },
+      {
+        "soft_villain": 2
+      }
+    ]
+  },
+  {
+    "q": "Arkadaş grubunda sen:",
+    "options": [
+      "Her şeyi organize eden",
+      "Duygusal destek arkadaşı",
+      "Herhangi biri için kavga edecek olan",
+      "Yine de sevdikleri tahmin edilemez kişi"
+    ],
+    "traits": [
+      {
+        "main_character": 2
+      },
+      {
+        "healer": 2
+      },
+      {
+        "ride_or_die": 2
+      },
+      {
+        "soft_villain": 2
+      }
+    ]
+  }
+]

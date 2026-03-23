@@ -137,7 +137,11 @@ let isGuest = JSON.parse(localStorage.getItem('bs-guest') || 'false');
 let pendingAuthUsername = null; // holds username between auth step 1 and step 2
 
 
-// packDefs + questionPacks are loaded from packs.js
+// Alias map for legacy pack keys from API → current keys
+const PACK_KEY_ALIASES = { whathehides: 'whattheyhide', hisarchetype: 'partnertype' };
+const resolvePackKey = (key) => PACK_KEY_ALIASES[key] || key;
+
+// packDefs loaded from packs.js, questions fetched on demand via loadQuestions()
 
 // Check if a pack is solo (no partner needed)
 function isSoloPack(key) {
@@ -146,9 +150,9 @@ function isSoloPack(key) {
 }
 
 // Get current language questions for a pack, sorted so swipe-format questions come last
-function getQuestions(packKey) {
+async function getQuestions(packKey) {
   const lang = i18n.current;
-  const pack = questionPacks[lang]?.[packKey] || questionPacks.en[packKey];
+  const pack = await loadQuestions(packKey, lang);
   const mapped = pack.map(q => ({
     q: q.q,
     options: q.options,
@@ -166,6 +170,10 @@ function getQuestions(packKey) {
 function hasAnswer(qi) {
   const a = selectedAnswers[qi];
   if (Array.isArray(a)) return a.length > 0;
+  // Blind guess: need both own and guess
+  if (a && typeof a === 'object' && 'own' in a) {
+    return a.own !== undefined && a.guess !== undefined;
+  }
   return a !== undefined && a !== null;
 }
 
@@ -174,6 +182,8 @@ function getAnswerText(qi, q) {
   const a = selectedAnswers[qi];
   if (a == null) return '—';
   if (Array.isArray(a)) return a.map(idx => q.options[idx]).join(', ');
+  // Blind guess: return own answer text
+  if (typeof a === 'object' && 'own' in a) return q.options[a.own] || '—';
   return q.options[a] || '—';
 }
 
@@ -181,10 +191,12 @@ function getAnswerText(qi, q) {
 function answerMatches(qi, partnerIdx) {
   const a = selectedAnswers[qi];
   if (Array.isArray(a)) return a.includes(partnerIdx);
+  // Blind guess: match on own answer
+  if (a && typeof a === 'object' && 'own' in a) return a.own === partnerIdx;
   return a === partnerIdx;
 }
 
-let questions = getQuestions('couples');
+let questions = [];
 
 // ==================== AUTH FLOW ====================
 function showAuth(target) {
@@ -493,7 +505,7 @@ function renderHomeSessions() {
     return;
   }
 
-  const packEmojis = { couples: '💕', bestfriends: '👯', deeptalk: '🌊', coworkers: '💼', '36questions': '❤️‍🔥', hottakes: '🌶️', redflags: '🚩', chaotic: '🎲', fungames: '🎉', worldtaste: '🌍', ethics: '⚖️', situations: '😱', livingtogether: '🏠', soulspirit: '🕊️', attachment: '🔗', innermirror: '🪞', stresstype: '🧊', lovelang: '💌', shadow: '🌑', emotionalage: '🎭', boundaries: '🚧', selfsabotage: '🪤', partnertype: '🐕', partnerera: '👑', couplestory: '📖', whattheyhide: '🎭' };
+  const packEmojis = { couples: '💕', bestfriends: '👯', deeptalk: '🌊', coworkers: '💼', '36questions': '❤️‍🔥', hottakes: '🌶️', redflags: '🚩', chaotic: '🎲', fungames: '🎉', worldtaste: '🌍', ethics: '⚖️', situations: '😱', livingtogether: '🏠', soulspirit: '🕊️', attachment: '🔗', innermirror: '🪞', stresstype: '🧊', lovelang: '💌', shadow: '🌑', emotionalage: '🎭', boundaries: '🚧', selfsabotage: '🪤', partnertype: '🐕', partnerera: '👑', couplestory: '📖', whattheyhide: '🎭', flirtguess: '😏', desirematch: '🔥' };
   let html = '';
   const active = sessions.filter(s => s.status !== 'complete');
   const done = sessions.filter(s => s.status === 'complete');
@@ -505,8 +517,9 @@ function renderHomeSessions() {
     if (_homeFilter === 'all') html += `<div class="section-label">${i18n.t('home_active')}</div>`;
     active.forEach(s => {
       const partner = s.creator_id === currentUser.id ? s.partner_username : s.creator_username;
-      const emoji = packEmojis[s.pack_key] || '📦';
-      const packName = i18n.t('pack_' + s.pack_key) || s.pack_key;
+      const pk = resolvePackKey(s.pack_key);
+      const emoji = packEmojis[pk] || '📦';
+      const packName = i18n.t('pack_' + pk) || s.pack_key;
       let badge = '';
       if (s.status === 'waiting') badge = `<div class="s-badge badge-waiting">${i18n.t('badge_waiting')}</div>`;
       else if (s.status === 'active') badge = `<div class="s-badge badge-progress">${i18n.t('badge_progress')}</div>`;
@@ -529,8 +542,9 @@ function renderHomeSessions() {
     if (_homeFilter === 'all') html += `<div class="section-label">${i18n.t('home_completed')}</div>`;
     done.forEach(s => {
       const partner = s.creator_id === currentUser.id ? s.partner_username : s.creator_username;
-      const emoji = packEmojis[s.pack_key] || '📦';
-      const packName = i18n.t('pack_' + s.pack_key) || s.pack_key;
+      const pk = resolvePackKey(s.pack_key);
+      const emoji = packEmojis[pk] || '📦';
+      const packName = i18n.t('pack_' + pk) || s.pack_key;
       html += `<div class="session-card-wrap" data-code="${s.code}">
         <div class="session-card glass" onclick="viewResults('${s.code}')">
           <div class="s-icon" style="background:var(--surface)">${emoji}</div>
@@ -576,8 +590,8 @@ async function resumeSession(code) {
     const data = await blindApi.getSession(code);
     const s = data.session;
     currentSession = s;
-    selectedPackKey = s.pack_key;
-    questions = getQuestions(s.pack_key);
+    selectedPackKey = resolvePackKey(s.pack_key);
+    questions = await getQuestions(selectedPackKey);
 
     if (s.status === 'complete') {
       viewResults(code);
@@ -610,8 +624,8 @@ async function resumeSession(code) {
 async function viewResults(code) {
   try {
     currentSession = (await blindApi.getSession(code)).session;
-    selectedPackKey = currentSession.pack_key;
-    questions = getQuestions(currentSession.pack_key);
+    selectedPackKey = resolvePackKey(currentSession.pack_key);
+    questions = await getQuestions(selectedPackKey);
     goTo('results');
     await buildReceiptFromApi(code);
   } catch (e) {
@@ -670,8 +684,8 @@ async function handleJoinCode(code) {
     // If user already submitted for this session, go to waiting
     if (session.user_submitted) {
       currentSession = session;
-      selectedPackKey = session.pack_key;
-      questions = getQuestions(session.pack_key);
+      selectedPackKey = resolvePackKey(session.pack_key);
+      questions = await getQuestions(selectedPackKey);
       goTo('waiting');
       document.getElementById('waitingCode').textContent = session.code;
       const pName = session.creator_id === currentUser?.id ? session.partner_username : session.creator_username;
@@ -688,8 +702,8 @@ async function handleJoinCode(code) {
     if (data.error) { alert(data.error); goTo('home'); return; }
 
     currentSession = data.session;
-    selectedPackKey = currentSession.pack_key;
-    questions = getQuestions(currentSession.pack_key);
+    selectedPackKey = resolvePackKey(currentSession.pack_key);
+    questions = await getQuestions(selectedPackKey);
 
     currentQuestion = 0;
     selectedAnswers = {};
@@ -856,7 +870,7 @@ function renderPacksGrid() {
   renderCollections();
   renderPacksGridCards();
 }
-renderPacksGrid();
+loadPackMeta().then(() => renderPacksGrid());
 
 // Navigation
 function goTo(screenId) {
@@ -898,7 +912,7 @@ function updateNav(active) {
 async function selectPack(key) {
   selectedPackKey = key;
   const def = packDefs.find(p => p.key === key);
-  questions = getQuestions(key);
+  questions = await getQuestions(key);
 
   // Solo packs skip invite — go straight to quiz
   if (def.solo) {
@@ -932,10 +946,11 @@ function startQuizAsCreator() {
 }
 
 // Quiz — Mini-game modes
-const QUIZ_MODES = ['classic', 'thisOrThat', 'bubblePop', 'blitz', 'swipe'];
-const FORMAT_TO_MODE = { vs: 'thisOrThat', bubble: 'bubblePop', swipe: 'swipe' };
-const MODE_LABELS = { classic: '✏️', thisOrThat: '⚔️ This or That', bubblePop: '🫧 Bubble Pop', blitz: '⚡ Blitz', swipe: '👆 Swipe Pick' };
+const QUIZ_MODES = ['classic', 'thisOrThat', 'bubblePop', 'blitz', 'swipe', 'blindGuess'];
+const FORMAT_TO_MODE = { vs: 'thisOrThat', bubble: 'bubblePop', swipe: 'swipe', blindguess: 'blindGuess' };
+const MODE_LABELS = { classic: '✏️', thisOrThat: '⚔️ This or That', bubblePop: '🫧 Bubble Pop', blitz: '⚡ Blitz', swipe: '👆 Swipe Pick', blindGuess: '🔮 Blind Guess' };
 let questionModes = [];
+let blindGuessPhase = 'own'; // 'own' or 'guess'
 let blitzInterval = null;
 
 function assignQuestionModes() {
@@ -956,6 +971,7 @@ function assignQuestionModes() {
 }
 
 function renderQuestion() {
+  blindGuessPhase = 'own'; // reset phase on question change
   if (!questionModes.length) assignQuestionModes();
   const q = questions[currentQuestion];
   const total = questions.length;
@@ -979,6 +995,7 @@ function renderQuestion() {
     case 'bubblePop': renderBubblePop(body, q); break;
     case 'blitz': renderBlitz(body, q); break;
     case 'swipe': renderSwipe(body, q); break;
+    case 'blindGuess': renderBlindGuess(body, q); break;
     default: renderClassic(body, q);
   }
 }
@@ -1142,6 +1159,75 @@ function toggleSwipeCard(qi, ans) {
   });
 }
 
+// --- BLIND GUESS (answer + predict partner) ---
+function renderBlindGuess(body, q) {
+  const ans = selectedAnswers[currentQuestion];
+  const isObj = ans && typeof ans === 'object' && !Array.isArray(ans);
+  const ownAnswer = isObj ? ans.own : undefined;
+  const guessAnswer = isObj ? ans.guess : undefined;
+
+  // Determine phase
+  if (ownAnswer === undefined) {
+    blindGuessPhase = 'own';
+  } else if (guessAnswer === undefined) {
+    blindGuessPhase = 'guess';
+  }
+
+  const isGuessPhase = blindGuessPhase === 'guess';
+  const selected = isGuessPhase ? guessAnswer : ownAnswer;
+  const phaseLabel = isGuessPhase
+    ? (i18n.t('blindguess_guess_label') || 'now guess their answer')
+    : (i18n.t('blindguess_own_label') || 'your answer');
+  const phaseIcon = isGuessPhase ? '🔮' : '💬';
+  const phaseClass = isGuessPhase ? 'bg-phase-guess' : 'bg-phase-own';
+
+  body.innerHTML = `
+    <div class="question-card bg-card ${phaseClass}" key="${currentQuestion}-${blindGuessPhase}">
+      <div class="mode-badge">${MODE_LABELS.blindGuess}</div>
+      <div class="bg-phase-indicator">
+        <div class="bg-phase-dot ${!isGuessPhase ? 'active' : 'done'}">1</div>
+        <div class="bg-phase-line ${isGuessPhase ? 'filled' : ''}"></div>
+        <div class="bg-phase-dot ${isGuessPhase ? 'active' : ''}">2</div>
+      </div>
+      <div class="bg-phase-label">${phaseIcon} ${phaseLabel}</div>
+      <div class="question-text" style="font-size:19px">${q.q}</div>
+      <div class="answer-options">
+        ${q.options.map((opt, oi) => {
+          const isOwnPick = isGuessPhase && ownAnswer === oi;
+          return `<button class="answer-opt ${selected === oi ? 'selected' : ''} ${isOwnPick ? 'bg-own-pick' : ''}"
+                  onclick="selectBlindGuess(${currentQuestion}, ${oi})">
+            ${isOwnPick ? '<span class="bg-your-badge">' + (i18n.t('blindguess_yours') || 'yours') + '</span>' : ''}${opt}
+          </button>`;
+        }).join('')}
+      </div>
+    </div>`;
+}
+
+function selectBlindGuess(qi, ans) {
+  const existing = selectedAnswers[qi];
+  const isObj = existing && typeof existing === 'object' && !Array.isArray(existing);
+
+  if (blindGuessPhase === 'own') {
+    selectedAnswers[qi] = { own: ans, guess: undefined };
+    // Immediately transition to guess phase
+    blindGuessPhase = 'guess';
+    const body = document.getElementById('quizBody');
+    renderBlindGuess(body, questions[qi]);
+    document.getElementById('quizNextBtn').disabled = true;
+    return;
+  }
+
+  // Guess phase
+  if (isObj) {
+    selectedAnswers[qi] = { own: existing.own, guess: ans };
+  }
+  document.getElementById('quizNextBtn').disabled = false;
+  const btns = document.querySelectorAll('.bg-card .answer-opt');
+  btns.forEach((btn, i) => {
+    btn.classList.toggle('selected', i === ans);
+  });
+}
+
 function selectAnswer(qIndex, answer, el) {
   selectedAnswers[qIndex] = answer;
   if (el && el.parentElement) {
@@ -1153,6 +1239,12 @@ function selectAnswer(qIndex, answer, el) {
 }
 
 function nextQuestion() {
+  // For blind guess, if still on own phase, don't advance
+  if (questionModes[currentQuestion] === 'blindGuess') {
+    const ans = selectedAnswers[currentQuestion];
+    const isObj = ans && typeof ans === 'object' && !Array.isArray(ans);
+    if (!isObj || ans.guess === undefined) return;
+  }
   if (!hasAnswer(currentQuestion)) return;
 
   if (currentQuestion === questions.length - 1) {
@@ -1729,6 +1821,17 @@ async function buildReceiptFromApi(code) {
       return null;
     }
     function resolveAnswer(raw, q) {
+      // Blind guess format: {own, guess}
+      if (raw && typeof raw === 'object' && !Array.isArray(raw) && 'own' in raw) {
+        const ownIdx = toIdx(raw.own);
+        const guessIdx = toIdx(raw.guess);
+        return {
+          text: ownIdx != null && q.options[ownIdx] ? q.options[ownIdx] : String(raw.own),
+          indices: ownIdx != null ? [ownIdx] : [],
+          guessText: guessIdx != null && q.options[guessIdx] ? q.options[guessIdx] : String(raw.guess),
+          guessIdx: guessIdx
+        };
+      }
       if (Array.isArray(raw)) {
         const texts = raw.map(r => {
           const idx = toIdx(r);
@@ -1750,7 +1853,17 @@ async function buildReceiptFromApi(code) {
       const matched = user.indices.length && partner.indices.length
         ? user.indices.some(idx => partner.indices.includes(idx))
         : user.text === partner.text;
-      return { q: q.q, userAns: user.text, partnerAns: partner.text, matched };
+      const entry = { q: q.q, userAns: user.text, partnerAns: partner.text, matched };
+      // Blind guess extras
+      if (user.guessText !== undefined) {
+        entry.userGuess = user.guessText;
+        entry.guessCorrect = partner.indices.length ? partner.indices.includes(user.guessIdx) : user.guessText === partner.text;
+      }
+      if (partner.guessText !== undefined) {
+        entry.partnerGuess = partner.guessText;
+        entry.partnerGuessCorrect = user.indices.length ? user.indices.includes(partner.guessIdx) : partner.guessText === user.text;
+      }
+      return entry;
     });
 
     buildReceiptWithName(partnerName || 'partner');
@@ -1778,7 +1891,27 @@ function buildReceiptWithName(partnerName) {
   const dateStr = now.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 
   let chaptersHtml = '';
+  const apiGuessResults = data.filter(d => d.userGuess !== undefined || d.partnerGuess !== undefined);
+  const apiHasGuesses = apiGuessResults.length > 0;
+  const apiGuessCorrectCount = data.filter(d => d.guessCorrect).length;
+  const apiPartnerGuessCorrectCount = data.filter(d => d.partnerGuessCorrect).length;
+
   data.forEach((d, i) => {
+    let guessHtml = '';
+    if (d.userGuess !== undefined) {
+      guessHtml += `<div class="ch-guess ${d.guessCorrect ? 'correct' : 'wrong'}">
+        <div class="ch-guess-label">${d.guessCorrect ? '🎯' : '😅'} ${i18n.t('blindguess_you_guessed') || 'you guessed'}</div>
+        <div class="ch-guess-text">${d.userGuess}</div>
+      </div>`;
+    }
+    if (d.partnerGuess !== undefined) {
+      guessHtml += `<div class="ch-guess ${d.partnerGuessCorrect ? 'correct' : 'wrong'}">
+        <div class="ch-guess-label">${d.partnerGuessCorrect ? '🎯' : '😅'} ${partnerName} ${i18n.t('blindguess_guessed') || 'guessed'}</div>
+        <div class="ch-guess-text">${d.partnerGuess}</div>
+      </div>`;
+    }
+    const guessRow = guessHtml ? `<div class="ch-guess-row">${guessHtml}</div>` : '';
+
     chaptersHtml += `
       <div class="story-chapter">
         <div class="ch-num">${i + 1} ${i18n.t('results_of')} ${total}</div>
@@ -1793,6 +1926,7 @@ function buildReceiptWithName(partnerName) {
             <div class="ch-text">${d.partnerAns}</div>
           </div>
         </div>
+        ${guessRow}
       </div>
     `;
   });
@@ -1816,6 +1950,7 @@ function buildReceiptWithName(partnerName) {
         <div><div class="story-stat-val">${matches}</div><div class="story-stat-lbl">${i18n.t('results_matches')}</div></div>
         <div><div class="story-stat-val">${total - matches}</div><div class="story-stat-lbl">${i18n.t('results_plot_twists')}</div></div>
         <div><div class="story-stat-val">${pct}%</div><div class="story-stat-lbl">${i18n.t('results_sync_rate')}</div></div>
+        ${apiHasGuesses ? `<div><div class="story-stat-val">${apiGuessCorrectCount}/${apiGuessResults.length}</div><div class="story-stat-lbl">${i18n.t('blindguess_read_score') || 'read them right'}</div></div>` : ''}
       </div>
       <div class="story-brand">blindside.</div>
       <div class="story-date">${dateStr}</div>
@@ -1948,6 +2083,10 @@ const soloResultDefs = {
   },
 };
 
+function tResult(packKey, traitKey, field, fallback) {
+  return soloResultTranslations[i18n.current]?.[packKey]?.[traitKey]?.[field] ?? fallback;
+}
+
 function buildSoloReceipt() {
   // Tally trait scores (handles both single and multi-select answers)
   const scores = {};
@@ -1984,7 +2123,7 @@ function buildSoloReceipt() {
       <div class="solo-trait-bar">
         <div class="solo-trait-header">
           <span class="solo-trait-emoji">${r.emoji}</span>
-          <span class="solo-trait-name">${r.title}</span>
+          <span class="solo-trait-name">${tResult(selectedPackKey, trait, 'title', r.title)}</span>
           <span class="solo-trait-pct">${pct}%</span>
         </div>
         <div class="solo-bar-track">
@@ -2019,7 +2158,7 @@ function buildSoloReceipt() {
     youProbablyHtml = `
       <div class="solo-youprobably glass">
         <div class="solo-youprobably-title">${i18n.t('solo_you_probably')}</div>
-        ${result.youProbably.map(item => `<div class="solo-yp-item"><span class="solo-yp-dot"></span>${item}</div>`).join('')}
+        ${result.youProbably.map((item, idx) => `<div class="solo-yp-item"><span class="solo-yp-dot"></span>${tResult(selectedPackKey, dominantKey, 'yp_' + idx, item)}</div>`).join('')}
       </div>
     `;
   }
@@ -2027,7 +2166,7 @@ function buildSoloReceipt() {
   const packDef = packDefs.find(p => p.key === selectedPackKey);
   const now = new Date();
   const dateStr = now.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-  const taglineHtml = result.tagline ? `<div class="solo-tagline">${result.tagline}</div>` : '';
+  const taglineHtml = result.tagline ? `<div class="solo-tagline">${tResult(selectedPackKey, dominantKey, 'tagline', result.tagline)}</div>` : '';
 
   const scroll = document.getElementById('storyScroll');
   scroll.innerHTML = `
@@ -2035,16 +2174,16 @@ function buildSoloReceipt() {
       <div class="story-hero-top">
         <div class="story-hero-emoji">${result.emoji}</div>
       </div>
-      <div class="story-hero-vibe">${result.title}</div>
+      <div class="story-hero-vibe">${tResult(selectedPackKey, dominantKey, 'title', result.title)}</div>
       ${taglineHtml}
       <div class="story-hero-sub">${i18n.t(packDef.nameKey)}</div>
       <div class="story-hero-names"><span class="solo-badge-tag">${i18n.t('solo_badge')}</span></div>
     </div>
-    <div class="story-intro"><p>${result.desc}</p></div>
+    <div class="story-intro"><p>${tResult(selectedPackKey, dominantKey, 'desc', result.desc)}</p></div>
     ${youProbablyHtml}
     <div class="solo-advice-card glass">
       <div class="solo-advice-label">${i18n.t('solo_note_to_self')}</div>
-      <div class="solo-advice-text">${result.advice}</div>
+      <div class="solo-advice-text">${tResult(selectedPackKey, dominantKey, 'advice', result.advice)}</div>
     </div>
     <div class="solo-breakdown-section">
       <div class="solo-breakdown-title">${i18n.t('solo_breakdown')}</div>
@@ -2069,8 +2208,14 @@ function buildReceipt() {
   const data = revealData.length ? revealData : questions.map((q, i) => {
     const raw = selectedAnswers[i];
     const partnerIdx = q.partnerAnswerIndex;
-    let userAns, matched;
-    if (Array.isArray(raw)) {
+    let userAns, matched, userGuess, guessCorrect;
+    // Blind guess: {own, guess}
+    if (raw && typeof raw === 'object' && !Array.isArray(raw) && 'own' in raw) {
+      userAns = q.options[raw.own];
+      matched = raw.own === partnerIdx;
+      userGuess = q.options[raw.guess];
+      guessCorrect = raw.guess === partnerIdx;
+    } else if (Array.isArray(raw)) {
       userAns = raw.map(idx => q.options[idx]).join(', ');
       matched = raw.includes(partnerIdx);
     } else {
@@ -2078,7 +2223,7 @@ function buildReceipt() {
       userAns = q.options[userIdx];
       matched = userIdx === partnerIdx;
     }
-    return { q: q.q, userAns, partnerAns: q.options[partnerIdx], matched };
+    return { q: q.q, userAns, partnerAns: q.options[partnerIdx], matched, userGuess, guessCorrect };
   });
 
   const matches = data.filter(d => d.matched).length;
@@ -2100,7 +2245,19 @@ function buildReceipt() {
 
   // Build chapters
   let chaptersHtml = '';
+  const guessResults = data.filter(d => d.userGuess !== undefined);
+  const hasGuesses = guessResults.length > 0;
+  const guessCorrectCount = guessResults.filter(d => d.guessCorrect).length;
+
   data.forEach((d, i) => {
+    const guessHtml = d.userGuess !== undefined ? `
+      <div class="ch-guess-row">
+        <div class="ch-guess ${d.guessCorrect ? 'correct' : 'wrong'}">
+          <div class="ch-guess-label">${d.guessCorrect ? '🎯' : '😅'} ${i18n.t('blindguess_you_guessed') || 'you guessed'}</div>
+          <div class="ch-guess-text">${d.userGuess}</div>
+        </div>
+      </div>` : '';
+
     chaptersHtml += `
       <div class="story-chapter">
         <div class="ch-num">${i + 1} ${i18n.t('results_of')} ${total}</div>
@@ -2115,6 +2272,7 @@ function buildReceipt() {
             <div class="ch-text">${d.partnerAns}</div>
           </div>
         </div>
+        ${guessHtml}
       </div>
     `;
   });
@@ -2153,6 +2311,10 @@ function buildReceipt() {
           <div class="story-stat-val">${pct}%</div>
           <div class="story-stat-lbl">${i18n.t('results_sync_rate')}</div>
         </div>
+        ${hasGuesses ? `<div>
+          <div class="story-stat-val">${guessCorrectCount}/${guessResults.length}</div>
+          <div class="story-stat-lbl">${i18n.t('blindguess_read_score') || 'read them right'}</div>
+        </div>` : ''}
       </div>
       <div class="story-brand">blindside.</div>
       <div class="story-date">${dateStr}</div>

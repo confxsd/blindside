@@ -1,0 +1,102 @@
+[
+  {
+    "q": "Pizzaya ananas?",
+    "options": [
+      "Efsane",
+      "Kesinlikle hayır"
+    ],
+    "pi": 0,
+    "format": "vs"
+  },
+  {
+    "q": "Üst üste mesaj atmak:",
+    "options": [
+      "Cesur ve ikonik",
+      "Çaresizlik",
+      "Gayet normal",
+      "Kime attığına bağlı"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Toplum içinde ağlamak:",
+    "options": [
+      "Güçlü",
+      "Utanç verici",
+      "Ağlamaya bağlı",
+      "Bugün yaptım zaten"
+    ],
+    "pi": 0,
+    "format": "bubble"
+  },
+  {
+    "q": "En iyi müzik dönemi:",
+    "options": [
+      "Şu an",
+      "2000'ler nostaljisi",
+      "90'lar sonsuza dek",
+      "70/80'ler klasikleri"
+    ],
+    "pi": 1,
+    "format": "swipe"
+  },
+  {
+    "q": "Astroloji:",
+    "options": [
+      "Ürkütücü derecede doğru",
+      "Tamamen saçmalık"
+    ],
+    "pi": 0,
+    "format": "vs"
+  },
+  {
+    "q": "Belirsiz ilişkiler:",
+    "options": [
+      "En kötü icat",
+      "Bi yere kadar ok",
+      "Sadece takılmak",
+      "Red flag fabrikası"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Cevap süresi önemli mi?",
+    "options": [
+      "Evet kesinlikle",
+      "Yok ben de unuturum",
+      "Sadece başlarda",
+      "Önemsiyorsan yazarsın"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Ick gerçek mi?",
+    "options": [
+      "Gerçek ve geçerli",
+      "Çok abartılıyor",
+      "Sadece bir bahane",
+      "Ben ick'in ta kendisiyim"
+    ],
+    "pi": 0,
+    "format": "bubble"
+  },
+  {
+    "q": "Yapay zeka ele geçiriyor:",
+    "options": [
+      "Çoktan oldu",
+      "Biraz korkuyorum",
+      "Gelsin",
+      "Hoş geldin diyorum"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Birini ghostlamak:",
+    "options": [
+      "Bazen gerekli",
+      "Her zaman yanlış"
+    ],
+    "pi": 0,
+    "format": "vs"
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "q": "Seni en çok ne istenmiş hissettirir?",
+    "options": [
+      "Bana bakış şekli",
+      "Ellerini üstümden çekememesi",
+      "Tam olarak hissettiklerini söylemesi",
+      "Her şeyin yerine beni seçmesi"
+    ],
+    "pi": 0,
+    "format": "blindguess"
+  },
+  {
+    "q": "Şu an ilişkide en çok neyi istiyorsun?",
+    "options": [
+      "Daha fazla spontanlık",
+      "Daha derin sohbetler",
+      "Daha fazla fiziksel yakınlık",
+      "Daha fazla baş başa kaliteli zaman"
+    ],
+    "pi": 2,
+    "format": "blindguess"
+  },
+  {
+    "q": "Birinin yapabileceği en çekici şey?",
+    "options": [
+      "Planları üstlenmek",
+      "Kırılgan ve gerçek olmak",
+      "Utanmadan flört etmek",
+      "Düşünceli bir sürpriz yapmak"
+    ],
+    "pi": 1,
+    "format": "blindguess"
+  },
+  {
+    "q": "İdeal 'sadece biz' akşamı?",
+    "options": [
+      "Birlikte yemek, müzik, şarap",
+      "Gece 3'e kadar derin sohbet",
+      "Bacaklar iç içe bir şey izlemek",
+      "Plansız yeni bir yere gitmek"
+    ],
+    "pi": 0,
+    "format": "blindguess"
+  },
+  {
+    "q": "Kalbine en hızlı yol?",
+    "options": [
+      "Nefes alamayana kadar güldürmek",
+      "Bir kez söylediğim bir şeyi hatırlamak",
+      "Beni hatırlatan bir şey göndermek",
+      "Filtresiz hissettiklerini söylemek"
+    ],
+    "pi": 3,
+    "format": "blindguess"
+  },
+  {
+    "q": "Bu ilişkide daha fazla istediğin enerji?",
+    "options": [
+      "Oyuncu kaos",
+      "Derin duygusal yakınlık",
+      "Romantik gerilim",
+      "Huzurlu konfor"
+    ],
+    "pi": 1,
+    "format": "blindguess"
+  },
+  {
+    "q": "Partnerinin en karşı konulmaz anı?",
+    "options": [
+      "Ağlayana kadar güldüğünde",
+      "Odaklanıp ciddi olduğunda",
+      "Sebepsiz şık giyindiğinde",
+      "Bana öyle baktığında"
+    ],
+    "pi": 3,
+    "format": "blindguess"
+  },
+  {
+    "q": "24 saat baş başa olsan ne yapardın?",
+    "options": [
+      "Bütün gün yatakta kal",
+      "Hedefsiz yolculuk",
+      "Sabahtan geceye tam bir buluşma günü",
+      "Birlikte var ol, hiçbir şey yapma"
+    ],
+    "pi": 2,
+    "format": "blindguess"
+  },
+  {
+    "q": "Kalbini hızlandıracak mesaj?",
+    "options": [
+      "'Gel. Hemen.'",
+      "'Seni düşünmekten kurtulamıyorum'",
+      "'Bu gece için plan yaptım'",
+      "'Sadece yanında olmak istiyorum'"
+    ],
+    "pi": 0,
+    "format": "blindguess"
+  },
+  {
+    "q": "Partnerinin bilmesini gizlice istediğin şey?",
+    "options": [
+      "Dokunuşunun benim için ne kadar önemli olduğu",
+      "En güzel anlarımızı ne sıklıkla tekrar yaşadığım",
+      "Her seferinde yeniden onu seçeceğim",
+      "Hâlâ ona aşık olmaya devam ettiğim"
+    ],
+    "pi": 2,
+    "format": "blindguess"
+  }
+]

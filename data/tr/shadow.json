@@ -1,0 +1,233 @@
+[
+  {
+    "q": "Başkalarında en sert yargıladığın özellik:",
+    "options": [
+      "Bencillik",
+      "Zayıflık",
+      "Sahtelik",
+      "Muhtaçlık"
+    ],
+    "traits": [
+      {
+        "repressed_selfishness": 2
+      },
+      {
+        "repressed_vulnerability": 2
+      },
+      {
+        "repressed_authenticity": 2
+      },
+      {
+        "repressed_need": 2
+      }
+    ]
+  },
+  {
+    "q": "Yalnızken ve kimse görmüyorken:",
+    "options": [
+      "Kendime tembel olmayı izin veririm",
+      "İnsanların düşündüğünden çok ağlarım",
+      "Düşüncelerimde itiraf edeceğimden daha acıyım",
+      "İnsanlara gösterdiğimden çok ihtiyacım var"
+    ],
+    "traits": [
+      {
+        "repressed_selfishness": 2
+      },
+      {
+        "repressed_vulnerability": 2
+      },
+      {
+        "repressed_authenticity": 2
+      },
+      {
+        "repressed_need": 2
+      }
+    ]
+  },
+  {
+    "q": "Rahatsız eden iltifat:",
+    "options": [
+      "'Dinlenmeyi hak ediyorsun'",
+      "'Güçlü olmamak sorun değil'",
+      "'Her zaman iyi olmak zorunda değilsin'",
+      "'Yardım isteyebilirsin'"
+    ],
+    "traits": [
+      {
+        "repressed_selfishness": 2
+      },
+      {
+        "repressed_vulnerability": 2
+      },
+      {
+        "repressed_authenticity": 2
+      },
+      {
+        "repressed_need": 2
+      }
+    ]
+  },
+  {
+    "q": "'Yanlış' hissettiren gizli fantezin:",
+    "options": [
+      "Her şeyi bırakıp sorumsuz olmak",
+      "Birinin önünde yıkılmak",
+      "Herkese gerçekten ne düşündüğümü söylemek",
+      "Tamamen ilgilenilmek"
+    ],
+    "traits": [
+      {
+        "repressed_selfishness": 2
+      },
+      {
+        "repressed_vulnerability": 2
+      },
+      {
+        "repressed_authenticity": 2
+      },
+      {
+        "repressed_need": 2
+      }
+    ]
+  },
+  {
+    "q": "Seni korkutan versiyonun:",
+    "options": [
+      "Kimseyi umursamayan",
+      "Tamamen dağılan",
+      "Acı gerçekleri yüzüne söyleyen",
+      "Yalnız başına işlev göremeyen"
+    ],
+    "traits": [
+      {
+        "repressed_selfishness": 2
+      },
+      {
+        "repressed_vulnerability": 2
+      },
+      {
+        "repressed_authenticity": 2
+      },
+      {
+        "repressed_need": 2
+      }
+    ]
+  },
+  {
+    "q": "Çocukken sana öğretilen:",
+    "options": [
+      "Bencil olmak en kötü şey",
+      "Ağlamak zayıflık",
+      "Her zaman nazik ve uyumlu olmalısın",
+      "Kimseye ihtiyaç duymamalısın"
+    ],
+    "traits": [
+      {
+        "repressed_selfishness": 2
+      },
+      {
+        "repressed_vulnerability": 2
+      },
+      {
+        "repressed_authenticity": 2
+      },
+      {
+        "repressed_need": 2
+      }
+    ]
+  },
+  {
+    "q": "En çok bastırdığın duygu:",
+    "options": [
+      "Öfke — yutarım",
+      "Üzüntü — iyi gibi davranırım",
+      "Kızgınlık — gülümserim",
+      "Yalnızlık — asla itiraf etmem"
+    ],
+    "traits": [
+      {
+        "repressed_selfishness": 1,
+        "repressed_authenticity": 1
+      },
+      {
+        "repressed_vulnerability": 2
+      },
+      {
+        "repressed_authenticity": 2
+      },
+      {
+        "repressed_need": 2
+      }
+    ]
+  },
+  {
+    "q": "İnsanlar öğrense şok olur:",
+    "options": [
+      "Bazen ne kadar az vermek istediğimi",
+      "İçimde ne kadar kırılgan hissettiğimi",
+      "Gösterdiklerimi ne kadar kurguladığımı",
+      "Yalnız kalmaktan ne kadar korktuğumu"
+    ],
+    "traits": [
+      {
+        "repressed_selfishness": 2
+      },
+      {
+        "repressed_vulnerability": 2
+      },
+      {
+        "repressed_authenticity": 2
+      },
+      {
+        "repressed_need": 2
+      }
+    ]
+  },
+  {
+    "q": "Tekrarlayan rüyan veya korkun:",
+    "options": [
+      "Çok fazla aldığım için herkes gider",
+      "Çökerim ve kimse tutmaz",
+      "Maskem düşer ve herkes görür",
+      "Seslenirim ve kimse gelmez"
+    ],
+    "traits": [
+      {
+        "repressed_selfishness": 2
+      },
+      {
+        "repressed_vulnerability": 2
+      },
+      {
+        "repressed_authenticity": 2
+      },
+      {
+        "repressed_need": 2
+      }
+    ]
+  },
+  {
+    "q": "Gölgen konuşabilse derdi ki:",
+    "options": [
+      "'Suçluluk duymadan bir şeyler isteyeyim'",
+      "'Utanmadan yumuşak olayım'",
+      "'Cezalandırılmadan dürüst olayım'",
+      "'Kendimi kaybetmeden birine ihtiyaç duyayım'"
+    ],
+    "traits": [
+      {
+        "repressed_selfishness": 2
+      },
+      {
+        "repressed_vulnerability": 2
+      },
+      {
+        "repressed_authenticity": 2
+      },
+      {
+        "repressed_need": 2
+      }
+    ]
+  }
+]

@@ -1,0 +1,104 @@
+[
+  {
+    "q": "Yemek geldiğinde tepkin: 🍕",
+    "options": [
+      "😍 saf mutluluk",
+      "📸 önce fotoğraf",
+      "🤤 çoktan yiyorum",
+      "😐 menüden farklı görünüyor"
+    ],
+    "pi": 0,
+    "format": "bubble"
+  },
+  {
+    "q": "Grup sohbeti gece 3'te çılgınca yazıyor:",
+    "options": [
+      "👀 her şeyi okuyorum",
+      "🔥 ateşe odun atıyorum"
+    ],
+    "pi": 0,
+    "format": "vs"
+  },
+  {
+    "q": "3 yıllık bir fotoğrafı yanlışlıkla beğendin:",
+    "options": [
+      "😱 panik beğeniyi geri al",
+      "💀 sosyal hayatım bitti",
+      "🤷 sahiplen",
+      "😂 gül geç"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Biri 'konuşmamız lazım' diyor:",
+    "options": [
+      "😰 anında kaygı",
+      "🙄 yine mi",
+      "🧘 sakinim",
+      "🏃 kaçma zamanı"
+    ],
+    "pi": 0,
+    "format": "bubble"
+  },
+  {
+    "q": "Eski sevgilini toplum içinde görüyorsun:",
+    "options": [
+      "👻 görünmez ol",
+      "😎 umursamaz davran",
+      "👋 normal selamla",
+      "📱 telefonda numarası yap"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "İzlediğin filmde plot twist:",
+    "options": [
+      "😮 çene düştü",
+      "🤓 biliyordum",
+      "😭 duygusal enkaz",
+      "😴 ne oldu şimdi"
+    ],
+    "pi": 0,
+    "format": "bubble"
+  },
+  {
+    "q": "Yakın arkadaşın son dakika plan iptal ediyor:",
+    "options": [
+      "😤 asla affetmem",
+      "😌 gizliden rahatladım"
+    ],
+    "pi": 0,
+    "format": "vs"
+  },
+  {
+    "q": "Önemli anda WiFi gidiyor:",
+    "options": [
+      "🤯 varoluşsal kriz",
+      "📖 kitap okuruz artık",
+      "🕯️ mum yak, vibe yap",
+      "😡 hemen sağlayıcıyı arıyorum"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Biri sana iltifat ediyor:",
+    "options": [
+      "😊 içten içe eriyorum",
+      "🤨 ne istiyorlar acaba",
+      "😅 garip şekilde geçiştir",
+      "💅 biliyorum"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Pazartesi sabah enerjisi:",
+    "options": [
+      "☕ henüz konuşma benimle",
+      "🏃 haydi kazanalım",
+      "😩 cumayı sayıyorum",
+      "🎵 şaşırtıcı şekilde keyifli"
+    ],
+    "pi": 0,
+    "format": "swipe"
+  }
+]

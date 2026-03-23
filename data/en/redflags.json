@@ -1,0 +1,102 @@
+[
+  {
+    "q": "They take 3 days to reply:",
+    "options": [
+      "Red flag",
+      "Maybe they're busy"
+    ],
+    "pi": 0,
+    "format": "vs"
+  },
+  {
+    "q": "They don't like dogs:",
+    "options": [
+      "Instant dealbreaker",
+      "Cats > dogs anyway",
+      "Not everyone's thing",
+      "Suspicious but ok"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "They post everything on social:",
+    "options": [
+      "Love the confidence",
+      "Major red flag",
+      "As long as I'm in it",
+      "I do the same lol"
+    ],
+    "pi": 1,
+    "format": "bubble"
+  },
+  {
+    "q": "They're still friends with their ex:",
+    "options": [
+      "Mature king/queen",
+      "Absolutely not"
+    ],
+    "pi": 0,
+    "format": "vs"
+  },
+  {
+    "q": "They eat cereal with water:",
+    "options": [
+      "Call the police",
+      "I'm leaving",
+      "Curiosity respected",
+      "I pretend I didn't see"
+    ],
+    "pi": 0,
+    "format": "bubble"
+  },
+  {
+    "q": "They never initiate plans:",
+    "options": [
+      "Red flag",
+      "Maybe they're shy",
+      "I'm the planner anyway",
+      "We'd never hang out"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "They have zero social media:",
+    "options": [
+      "Green flag honestly",
+      "What are they hiding",
+      "Mysterious vibes",
+      "Same tbh"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "They fall asleep during movies:",
+    "options": [
+      "Adorable",
+      "Disrespectful"
+    ],
+    "pi": 0,
+    "format": "vs"
+  },
+  {
+    "q": "They order for you at restaurants:",
+    "options": [
+      "Romantic",
+      "Controlling energy",
+      "Only if they know me",
+      "Bold move"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "They say 'I'm fine' when they're not:",
+    "options": [
+      "I'll dig deeper",
+      "Give them space",
+      "Same I do that",
+      "Red flag if always"
+    ],
+    "pi": 0,
+    "format": "swipe"
+  }
+]

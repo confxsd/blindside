@@ -1,0 +1,232 @@
+[
+  {
+    "q": "When a friend is going through it, you:",
+    "options": [
+      "Take over — I've already planned the recovery arc",
+      "Listen for hours without judgment",
+      "Show up with snacks and ride-or-die energy",
+      "Give them the hard truth they need to hear"
+    ],
+    "traits": [
+      {
+        "main_character": 2
+      },
+      {
+        "healer": 2
+      },
+      {
+        "ride_or_die": 2
+      },
+      {
+        "soft_villain": 2
+      }
+    ]
+  },
+  {
+    "q": "Your Instagram story energy:",
+    "options": [
+      "Curated, aesthetic, gives nothing away",
+      "Warm, soft, cozy vibes",
+      "Reposting your bestie with 12 hype emojis",
+      "Hot takes and unfiltered opinions"
+    ],
+    "traits": [
+      {
+        "main_character": 2
+      },
+      {
+        "healer": 2
+      },
+      {
+        "ride_or_die": 2
+      },
+      {
+        "soft_villain": 2
+      }
+    ]
+  },
+  {
+    "q": "How do you handle a talking stage?",
+    "options": [
+      "I set the pace — they chase or they leave",
+      "I match their energy and stay patient",
+      "I go all in immediately, no games",
+      "I keep options open until someone proves themselves"
+    ],
+    "traits": [
+      {
+        "main_character": 2
+      },
+      {
+        "healer": 2
+      },
+      {
+        "ride_or_die": 2
+      },
+      {
+        "soft_villain": 2
+      }
+    ]
+  },
+  {
+    "q": "Your relationship superpower:",
+    "options": [
+      "Making them feel like the main character too",
+      "Knowing exactly what they need before they say it",
+      "Loyalty that would survive an apocalypse",
+      "Keeping them on their toes — they never get bored"
+    ],
+    "traits": [
+      {
+        "main_character": 2
+      },
+      {
+        "healer": 2
+      },
+      {
+        "ride_or_die": 2
+      },
+      {
+        "soft_villain": 2
+      }
+    ]
+  },
+  {
+    "q": "Your ex would describe you as:",
+    "options": [
+      "The one that got away",
+      "The one who loved too well",
+      "The one who would've done anything",
+      "The one who left them shook"
+    ],
+    "traits": [
+      {
+        "main_character": 2
+      },
+      {
+        "healer": 2
+      },
+      {
+        "ride_or_die": 2
+      },
+      {
+        "soft_villain": 2
+      }
+    ]
+  },
+  {
+    "q": "After a breakup, you:",
+    "options": [
+      "Glow up so hard they regret everything",
+      "Cry, heal, journal, grow — the full cycle",
+      "Block, delete, protect my peace",
+      "Thrive visibly and let karma handle it"
+    ],
+    "traits": [
+      {
+        "main_character": 2
+      },
+      {
+        "healer": 2
+      },
+      {
+        "ride_or_die": 2
+      },
+      {
+        "soft_villain": 2
+      }
+    ]
+  },
+  {
+    "q": "Your love language in action:",
+    "options": [
+      "I plan the dates, the surprises, the aesthetic",
+      "I hold space, I listen, I stay calm in storms",
+      "I show up no matter what — 3am, across town, always",
+      "I push them to be better even when they resist"
+    ],
+    "traits": [
+      {
+        "main_character": 2
+      },
+      {
+        "healer": 2
+      },
+      {
+        "ride_or_die": 2
+      },
+      {
+        "soft_villain": 2
+      }
+    ]
+  },
+  {
+    "q": "Your biggest dating flaw (be honest):",
+    "options": [
+      "I need the spotlight a little too much",
+      "I give too much and lose myself",
+      "I'm too intense too fast",
+      "I test people to see if they'll stay"
+    ],
+    "traits": [
+      {
+        "main_character": 2
+      },
+      {
+        "healer": 2
+      },
+      {
+        "ride_or_die": 2
+      },
+      {
+        "soft_villain": 2
+      }
+    ]
+  },
+  {
+    "q": "Pick a character you relate to:",
+    "options": [
+      "The underestimated one who always wins",
+      "The quiet one with the biggest heart",
+      "The ride or die — loyal to a fault",
+      "The wildcard everyone's obsessed with"
+    ],
+    "traits": [
+      {
+        "main_character": 2
+      },
+      {
+        "healer": 2
+      },
+      {
+        "ride_or_die": 2
+      },
+      {
+        "soft_villain": 2
+      }
+    ]
+  },
+  {
+    "q": "In your friend group, you're:",
+    "options": [
+      "The one who organizes everything",
+      "The emotional support friend",
+      "The one who'd fight someone for any of them",
+      "The unpredictable one they love anyway"
+    ],
+    "traits": [
+      {
+        "main_character": 2
+      },
+      {
+        "healer": 2
+      },
+      {
+        "ride_or_die": 2
+      },
+      {
+        "soft_villain": 2
+      }
+    ]
+  }
+]

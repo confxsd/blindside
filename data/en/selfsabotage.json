@@ -1,0 +1,233 @@
+[
+  {
+    "q": "Things are going well. Your brain says:",
+    "options": [
+      "'This won't last'",
+      "'I don't deserve this'",
+      "'Let me find a flaw before they do'",
+      "'What if I'm only successful by accident?'"
+    ],
+    "traits": [
+      {
+        "doom": 2
+      },
+      {
+        "unworthiness": 2
+      },
+      {
+        "perfectionism": 2
+      },
+      {
+        "impostor": 2
+      }
+    ]
+  },
+  {
+    "q": "You're close to achieving something big:",
+    "options": [
+      "I slow down or stop completely",
+      "I pick a fight or create drama",
+      "I raise the bar so I can't possibly reach it",
+      "I downplay it so no one expects more"
+    ],
+    "traits": [
+      {
+        "doom": 2
+      },
+      {
+        "unworthiness": 2
+      },
+      {
+        "perfectionism": 2
+      },
+      {
+        "impostor": 2
+      }
+    ]
+  },
+  {
+    "q": "Your procrastination pattern:",
+    "options": [
+      "I wait for catastrophe to motivate me",
+      "I convince myself it doesn't matter anyway",
+      "I redo everything until nothing gets finished",
+      "I'm scared the result will prove I'm not good enough"
+    ],
+    "traits": [
+      {
+        "doom": 2
+      },
+      {
+        "unworthiness": 2
+      },
+      {
+        "perfectionism": 2
+      },
+      {
+        "impostor": 2
+      }
+    ]
+  },
+  {
+    "q": "Someone gives you a genuine compliment:",
+    "options": [
+      "I deflect immediately",
+      "I think they're being polite",
+      "I find something they missed",
+      "I wonder when they'll realize they're wrong"
+    ],
+    "traits": [
+      {
+        "doom": 1,
+        "unworthiness": 1
+      },
+      {
+        "unworthiness": 2
+      },
+      {
+        "perfectionism": 2
+      },
+      {
+        "impostor": 2
+      }
+    ]
+  },
+  {
+    "q": "Your relationship with success:",
+    "options": [
+      "It's temporary and danger follows",
+      "It's for other people, not really for me",
+      "It's never enough — there's always more to fix",
+      "It happened by luck, not merit"
+    ],
+    "traits": [
+      {
+        "doom": 2
+      },
+      {
+        "unworthiness": 2
+      },
+      {
+        "perfectionism": 2
+      },
+      {
+        "impostor": 2
+      }
+    ]
+  },
+  {
+    "q": "When you mess up:",
+    "options": [
+      "See? I knew it was only a matter of time",
+      "This proves what I've always feared about myself",
+      "I can't stop replaying what I should've done",
+      "I hope no one noticed"
+    ],
+    "traits": [
+      {
+        "doom": 2
+      },
+      {
+        "unworthiness": 2
+      },
+      {
+        "perfectionism": 2
+      },
+      {
+        "impostor": 2
+      }
+    ]
+  },
+  {
+    "q": "How do you handle good news?",
+    "options": [
+      "Wait for the other shoe to drop",
+      "Feel guilty that others don't have this",
+      "Immediately think about what's still not right",
+      "Feel like a fraud who got lucky"
+    ],
+    "traits": [
+      {
+        "doom": 2
+      },
+      {
+        "unworthiness": 2
+      },
+      {
+        "perfectionism": 2
+      },
+      {
+        "impostor": 2
+      }
+    ]
+  },
+  {
+    "q": "Your inner saboteur whispers:",
+    "options": [
+      "'Happiness always costs you something'",
+      "'You don't deserve what you have'",
+      "'If it's not perfect, it's garbage'",
+      "'They'll figure out you're faking it'"
+    ],
+    "traits": [
+      {
+        "doom": 2
+      },
+      {
+        "unworthiness": 2
+      },
+      {
+        "perfectionism": 2
+      },
+      {
+        "impostor": 2
+      }
+    ]
+  },
+  {
+    "q": "Pattern you recognize in yourself:",
+    "options": [
+      "I leave before I'm left",
+      "I make myself small so no one envies me",
+      "I overwork to compensate for feeling not enough",
+      "I stay quiet so no one tests what I know"
+    ],
+    "traits": [
+      {
+        "doom": 2
+      },
+      {
+        "unworthiness": 2
+      },
+      {
+        "perfectionism": 2
+      },
+      {
+        "impostor": 2
+      }
+    ]
+  },
+  {
+    "q": "The belief you need to unlearn:",
+    "options": [
+      "'Good things don't happen to people like me'",
+      "'I have to earn love'",
+      "'Anything less than perfect is failure'",
+      "'I only got here because no one looked closely'"
+    ],
+    "traits": [
+      {
+        "doom": 2
+      },
+      {
+        "unworthiness": 2
+      },
+      {
+        "perfectionism": 2
+      },
+      {
+        "impostor": 2
+      }
+    ]
+  }
+]

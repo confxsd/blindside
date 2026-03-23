@@ -1,0 +1,112 @@
+[
+  {
+    "q": "Your partner's #1 guilty pleasure?",
+    "options": [
+      "Reality TV",
+      "Junk food at midnight",
+      "Stalking their own socials",
+      "Online shopping sprees"
+    ],
+    "pi": 1,
+    "format": "blindguess"
+  },
+  {
+    "q": "What secretly turns your partner on?",
+    "options": [
+      "Confidence",
+      "Humor",
+      "Eye contact",
+      "A whispered compliment"
+    ],
+    "pi": 2,
+    "format": "blindguess"
+  },
+  {
+    "q": "Your partner's idea of a perfect date?",
+    "options": [
+      "Candlelit dinner",
+      "Spontaneous road trip",
+      "Netflix and cuddling",
+      "Dancing in the kitchen"
+    ],
+    "pi": 3,
+    "format": "blindguess"
+  },
+  {
+    "q": "What would your partner wear to impress you?",
+    "options": [
+      "All black everything",
+      "Something they know I love",
+      "Dressed down — effortless hot",
+      "Something new and bold"
+    ],
+    "pi": 0,
+    "format": "blindguess"
+  },
+  {
+    "q": "Your partner's biggest flex in the relationship?",
+    "options": [
+      "Always knowing what to say",
+      "Making me laugh no matter what",
+      "Remembering tiny details",
+      "The way they look at me"
+    ],
+    "pi": 2,
+    "format": "blindguess"
+  },
+  {
+    "q": "If your partner could read your mind for a day:",
+    "options": [
+      "They'd blush the whole time",
+      "They'd feel so loved",
+      "They'd be shocked",
+      "They'd finally get it"
+    ],
+    "pi": 1,
+    "format": "blindguess"
+  },
+  {
+    "q": "Your partner's love language when no one's watching?",
+    "options": [
+      "Physical touch — always reaching",
+      "Sweet nothings whispered",
+      "Doing things without being asked",
+      "Just being present and close"
+    ],
+    "pi": 0,
+    "format": "blindguess"
+  },
+  {
+    "q": "The pickup line that would actually work on your partner?",
+    "options": [
+      "Something clever and witty",
+      "Something genuine and soft",
+      "Something bold and direct",
+      "No line — just a look"
+    ],
+    "pi": 3,
+    "format": "blindguess"
+  },
+  {
+    "q": "Your partner's secret romantic fantasy?",
+    "options": [
+      "Slow dance under the stars",
+      "Surprise getaway",
+      "Love letter left on the pillow",
+      "A kiss that stops time"
+    ],
+    "pi": 0,
+    "format": "blindguess"
+  },
+  {
+    "q": "The thing your partner thinks about before falling asleep?",
+    "options": [
+      "Tomorrow's plans",
+      "That one thing you said today",
+      "Whether you're happy",
+      "How lucky they are"
+    ],
+    "pi": 3,
+    "format": "blindguess"
+  }
+]

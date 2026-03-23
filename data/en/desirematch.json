@@ -1,0 +1,112 @@
+[
+  {
+    "q": "What makes you feel most desired?",
+    "options": [
+      "The way they look at me",
+      "When they can't keep their hands off me",
+      "When they say exactly what they feel",
+      "When they choose me over everything else"
+    ],
+    "pi": 0,
+    "format": "blindguess"
+  },
+  {
+    "q": "Your biggest relationship craving right now?",
+    "options": [
+      "More spontaneity",
+      "Deeper conversations",
+      "More physical closeness",
+      "More quality time alone together"
+    ],
+    "pi": 2,
+    "format": "blindguess"
+  },
+  {
+    "q": "The most attractive thing someone can do?",
+    "options": [
+      "Take charge of plans",
+      "Be vulnerable and real",
+      "Tease and flirt shamelessly",
+      "Surprise me with something thoughtful"
+    ],
+    "pi": 1,
+    "format": "blindguess"
+  },
+  {
+    "q": "Your ideal 'just us' evening?",
+    "options": [
+      "Cook together, music on, wine open",
+      "Deep talk until 3am",
+      "Watch something with legs tangled",
+      "Go somewhere new, no plan"
+    ],
+    "pi": 0,
+    "format": "blindguess"
+  },
+  {
+    "q": "What's the fastest way to your heart?",
+    "options": [
+      "Make me laugh until I can't breathe",
+      "Remember something I mentioned once",
+      "Send me something that reminded you of me",
+      "Tell me what you actually feel, no filter"
+    ],
+    "pi": 3,
+    "format": "blindguess"
+  },
+  {
+    "q": "The energy you want more of in this relationship?",
+    "options": [
+      "Playful chaos",
+      "Deep emotional intimacy",
+      "Romantic tension",
+      "Peaceful comfort"
+    ],
+    "pi": 1,
+    "format": "blindguess"
+  },
+  {
+    "q": "Your partner's most irresistible moment?",
+    "options": [
+      "When they laugh so hard they cry",
+      "When they're focused and serious",
+      "When they dress up for no reason",
+      "When they look at me like that"
+    ],
+    "pi": 3,
+    "format": "blindguess"
+  },
+  {
+    "q": "What would you do with 24 hours alone together?",
+    "options": [
+      "Stay in bed literally all day",
+      "Road trip with no destination",
+      "A full date day — morning to midnight",
+      "Just exist together, doing nothing"
+    ],
+    "pi": 2,
+    "format": "blindguess"
+  },
+  {
+    "q": "The text that would make your heart skip?",
+    "options": [
+      "'Come over. Now.'",
+      "'I can't stop thinking about you'",
+      "'I made us a plan for tonight'",
+      "'I just want to be next to you'"
+    ],
+    "pi": 0,
+    "format": "blindguess"
+  },
+  {
+    "q": "What you secretly wish your partner knew?",
+    "options": [
+      "How much their touch means to me",
+      "How often I replay our best moments",
+      "That I'd choose them again every time",
+      "That I'm still falling for them"
+    ],
+    "pi": 2,
+    "format": "blindguess"
+  }
+]

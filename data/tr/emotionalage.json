@@ -1,0 +1,232 @@
+[
+  {
+    "q": "Biri son dakika iptal ediyor:",
+    "options": [
+      "Çökme. Spiral. Bitti.",
+      "Sinirli ama çabuk geçiyor",
+      "Kontrol ediyorum — iyi misin?",
+      "Zaten yedek plan yapıyordum"
+    ],
+    "traits": [
+      {
+        "child": 2
+      },
+      {
+        "teen": 2
+      },
+      {
+        "adult": 2
+      },
+      {
+        "elder": 2
+      }
+    ]
+  },
+  {
+    "q": "Hatalı olduğunu nasıl karşılarsın?",
+    "options": [
+      "Karşılamam — kapanırım",
+      "Savunmaya geçerim, sonra kötü hissederim",
+      "Özür diler, öğrenmeye çalışırım",
+      "İlginç bulurum — hata demek gelişme demek"
+    ],
+    "traits": [
+      {
+        "child": 2
+      },
+      {
+        "teen": 2
+      },
+      {
+        "adult": 2
+      },
+      {
+        "elder": 2
+      }
+    ]
+  },
+  {
+    "q": "Öfkeyle ilişkin:",
+    "options": [
+      "Patlar ve pişman olurum",
+      "Sakin görünürüm ama kaynıyorum",
+      "Hisseder, adlandırır, işlerim",
+      "Artık nadiren öfkelenirim — altında çoğunlukla üzüntü var"
+    ],
+    "traits": [
+      {
+        "child": 2
+      },
+      {
+        "teen": 2
+      },
+      {
+        "adult": 2
+      },
+      {
+        "elder": 2
+      }
+    ]
+  },
+  {
+    "q": "Hayat zorlaştığında:",
+    "options": [
+      "Birinin düzeltmesini istiyorum",
+      "Saf irade gücüyle devam ediyorum",
+      "Destek sistemime yaslanıyorum",
+      "Kabul edip oturuyorum — fırtınaların geçtiğini öğrendim"
+    ],
+    "traits": [
+      {
+        "child": 2
+      },
+      {
+        "teen": 2
+      },
+      {
+        "adult": 2
+      },
+      {
+        "elder": 2
+      }
+    ]
+  },
+  {
+    "q": "İç sesin nasıl:",
+    "options": [
+      "Güvenceye ihtiyaç duyan korkmuş bir çocuk",
+      "Asla tatmin olmayan bir eleştirmen",
+      "Destekleyici bir arkadaş",
+      "Hikayeyi izleyen sakin bir anlatıcı"
+    ],
+    "traits": [
+      {
+        "child": 2
+      },
+      {
+        "teen": 2
+      },
+      {
+        "adult": 2
+      },
+      {
+        "elder": 2
+      }
+    ]
+  },
+  {
+    "q": "Nasıl seversin?",
+    "options": [
+      "Yoğun — ya hep ya hiç",
+      "Dikkatli — önce kendimi korurum",
+      "Açık — iletişim ve güvenle",
+      "Nazik — sahiplenmeden severim"
+    ],
+    "traits": [
+      {
+        "child": 2
+      },
+      {
+        "teen": 2
+      },
+      {
+        "adult": 2
+      },
+      {
+        "elder": 2
+      }
+    ]
+  },
+  {
+    "q": "Seni kıskandıran ne?",
+    "options": [
+      "Her şey — sürekli karşılaştırırım",
+      "Birinin peşinden koştuğum şeye sahip olması",
+      "Nadiren — ama fark eder, düşünürüm",
+      "Başkalarının iç huzuru"
+    ],
+    "traits": [
+      {
+        "child": 2
+      },
+      {
+        "teen": 2
+      },
+      {
+        "adult": 2
+      },
+      {
+        "elder": 2
+      }
+    ]
+  },
+  {
+    "q": "Zamanla ilişkin:",
+    "options": [
+      "İlerisini düşünmeden anda yaşarım",
+      "Hep sonraki şeye koşturuyorum",
+      "Şimdi ve gelecek arasında denge kurmaya çalışırım",
+      "Ne kadar hızlı geçtiğiyle barıştım"
+    ],
+    "traits": [
+      {
+        "child": 2
+      },
+      {
+        "teen": 2
+      },
+      {
+        "adult": 2
+      },
+      {
+        "elder": 2
+      }
+    ]
+  },
+  {
+    "q": "İnsanlardan en çok neye ihtiyacın var?",
+    "options": [
+      "Onay — iyi olduğumu söyleyin",
+      "Saygı — yaptıklarımı kabul edin",
+      "Dürüstlük — zor olsa bile",
+      "Varlık — sadece burada olun"
+    ],
+    "traits": [
+      {
+        "child": 2
+      },
+      {
+        "teen": 2
+      },
+      {
+        "adult": 2
+      },
+      {
+        "elder": 2
+      }
+    ]
+  },
+  {
+    "q": "Küçüklükteki seninle karşılaşsan:",
+    "options": [
+      "Ağlardım — çok fazla şeye ihtiyacı vardı",
+      "Biraz utanır ama anlardım",
+      "Ne kadar yol geldiğimle gurur duyardım",
+      "Derdim ki: 'Bu kadar uğraşmayı bıraktığında güzelleşecek'"
+    ],
+    "traits": [
+      {
+        "child": 2
+      },
+      {
+        "teen": 2
+      },
+      {
+        "adult": 2
+      },
+      {
+        "elder": 2
+      }
+    ]
+  }
+]

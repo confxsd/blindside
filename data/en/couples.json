@@ -1,0 +1,106 @@
+[
+  {
+    "q": "What's the first thing you noticed about the other person?",
+    "options": [
+      "Their smile",
+      "Their energy",
+      "Their style",
+      "Their humor"
+    ],
+    "pi": 0,
+    "format": "bubble"
+  },
+  {
+    "q": "If you two had a song, what genre would it be?",
+    "options": [
+      "R&B / Soul",
+      "Pop",
+      "Indie",
+      "Lo-fi beats"
+    ],
+    "pi": 2,
+    "format": "swipe"
+  },
+  {
+    "q": "What do you secretly admire most about them?",
+    "options": [
+      "Their confidence",
+      "Their kindness",
+      "Their creativity",
+      "Their resilience"
+    ],
+    "pi": 1,
+    "format": "bubble"
+  },
+  {
+    "q": "Pick a vibe for your ideal date:",
+    "options": [
+      "Rooftop sunset",
+      "Late night drive",
+      "Cozy movie night",
+      "Spontaneous adventure"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Your bond in one word:",
+    "options": [
+      "Chaotic",
+      "Comfort"
+    ],
+    "pi": 1,
+    "format": "vs"
+  },
+  {
+    "q": "What's something small they do that makes your whole day?",
+    "options": [
+      "A random 'thinking of you' text",
+      "Making me laugh out of nowhere",
+      "Remembering something I forgot I mentioned",
+      "The way they look at me when I'm not paying attention"
+    ],
+    "pi": 2,
+    "format": "bubble"
+  },
+  {
+    "q": "If your relationship had a love language on max:",
+    "options": [
+      "Physical touch — always reaching for each other",
+      "Words — we talk about everything",
+      "Acts — we just handle life together",
+      "Quality time — we could do nothing and it's enough"
+    ],
+    "pi": 0,
+    "format": "swipe"
+  },
+  {
+    "q": "The thing you'd miss most if they disappeared tomorrow:",
+    "options": [
+      "Their voice",
+      "Their presence next to me",
+      "The inside jokes nobody else gets",
+      "How safe I feel around them"
+    ],
+    "pi": 3,
+    "format": "bubble"
+  },
+  {
+    "q": "Honestly — who falls asleep first?",
+    "options": [
+      "Me, every time",
+      "Them, within minutes"
+    ],
+    "pi": 0,
+    "format": "vs"
+  },
+  {
+    "q": "Your couple superpower:",
+    "options": [
+      "We communicate without words",
+      "We make everything fun, even errands",
+      "We balance each other perfectly",
+      "We can survive anything together"
+    ],
+    "pi": 1
+  }
+]

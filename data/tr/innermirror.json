@@ -1,0 +1,246 @@
+[
+  {
+    "q": "Uzun süre yalnız kalınca:",
+    "options": [
+      "Huzursuz ve kaygılı",
+      "Huzurlu ve şarj olmuş",
+      "Düşünceli ve yaratıcı",
+      "Yalnız ama kabul etmem"
+    ],
+    "traits": [
+      {
+        "extrovert": 2
+      },
+      {
+        "introvert": 2
+      },
+      {
+        "introvert": 1,
+        "thinker": 1
+      },
+      {
+        "feeler": 2
+      }
+    ]
+  },
+  {
+    "q": "Büyük kararları nasıl alırsın?",
+    "options": [
+      "İçgüdüyle, her zaman",
+      "Artı eksi listesi",
+      "Güvendiğim herkese sorarım",
+      "Zorlanana kadar kaçınırım"
+    ],
+    "traits": [
+      {
+        "feeler": 2
+      },
+      {
+        "thinker": 2
+      },
+      {
+        "extrovert": 1,
+        "feeler": 1
+      },
+      {
+        "introvert": 1,
+        "feeler": 1
+      }
+    ]
+  },
+  {
+    "q": "Bir partide sen:",
+    "options": [
+      "Gece yarısı herkesi tanıyan",
+      "Köpeği veya kitaplığı bulan",
+      "Tek bir derin sohbet yapan",
+      "Haber vermeden erken giden"
+    ],
+    "traits": [
+      {
+        "extrovert": 2
+      },
+      {
+        "introvert": 2
+      },
+      {
+        "introvert": 1,
+        "feeler": 1
+      },
+      {
+        "introvert": 2
+      }
+    ]
+  },
+  {
+    "q": "İç eleştirmenin sesi:",
+    "options": [
+      "Yeterince yapmıyorsun",
+      "Fazlasın",
+      "Daha ileride olmalıydın",
+      "Herkes çözmüş, sen hariç"
+    ],
+    "traits": [
+      {
+        "thinker": 2
+      },
+      {
+        "feeler": 2
+      },
+      {
+        "thinker": 1,
+        "feeler": 1
+      },
+      {
+        "feeler": 2
+      }
+    ]
+  },
+  {
+    "q": "Biri önünde ağlayınca:",
+    "options": [
+      "Onunla ağlarım",
+      "Çözmeye çalışırım",
+      "Sessizce dinlerim",
+      "Rahatsız olurum"
+    ],
+    "traits": [
+      {
+        "feeler": 2
+      },
+      {
+        "thinker": 2
+      },
+      {
+        "feeler": 1,
+        "introvert": 1
+      },
+      {
+        "thinker": 1,
+        "introvert": 1
+      }
+    ]
+  },
+  {
+    "q": "Enerjini nereden alırsın?",
+    "options": [
+      "İnsanların yanında olmak",
+      "Yalnız bir şey yaratmak",
+      "Derin sohbetler",
+      "Doğa ve sessizlik"
+    ],
+    "traits": [
+      {
+        "extrovert": 2
+      },
+      {
+        "introvert": 1,
+        "thinker": 1
+      },
+      {
+        "introvert": 1,
+        "feeler": 1
+      },
+      {
+        "introvert": 2
+      }
+    ]
+  },
+  {
+    "q": "Eleştiriyle nasıl başa çıkarsın?",
+    "options": [
+      "Kişisel alırım",
+      "Geçerli mi diye analiz ederim",
+      "Önce savunurum, sonra düşünürüm",
+      "Geri bildirimi takdir ederim"
+    ],
+    "traits": [
+      {
+        "feeler": 2
+      },
+      {
+        "thinker": 2
+      },
+      {
+        "feeler": 1,
+        "extrovert": 1
+      },
+      {
+        "thinker": 1,
+        "feeler": 1
+      }
+    ]
+  },
+  {
+    "q": "Seni en çok ne yorar?",
+    "options": [
+      "Yabancılarla havadan sudan",
+      "Çok uzun yalnız kalmak",
+      "Duygusal çatışma",
+      "Verimsiz hissetmek"
+    ],
+    "traits": [
+      {
+        "introvert": 2
+      },
+      {
+        "extrovert": 2
+      },
+      {
+        "feeler": 2
+      },
+      {
+        "thinker": 2
+      }
+    ]
+  },
+  {
+    "q": "Mutlu yerin:",
+    "options": [
+      "Gürültülü konser veya festival",
+      "Kulaklıkla odam",
+      "Bir arkadaşla kafe",
+      "Dağlarda bir patika"
+    ],
+    "traits": [
+      {
+        "extrovert": 2
+      },
+      {
+        "introvert": 2
+      },
+      {
+        "extrovert": 1,
+        "feeler": 1
+      },
+      {
+        "introvert": 1,
+        "feeler": 1
+      }
+    ]
+  },
+  {
+    "q": "Kendinde bir şeyi değiştirebilsen:",
+    "options": [
+      "Daha az düşünmek",
+      "Daha çok açılmak",
+      "Başkalarının ne düşündüğünü daha az önemsemek",
+      "Daha disiplinli olmak"
+    ],
+    "traits": [
+      {
+        "thinker": 2
+      },
+      {
+        "introvert": 2
+      },
+      {
+        "feeler": 2
+      },
+      {
+        "thinker": 1,
+        "introvert": 1
+      }
+    ]
+  }
+]

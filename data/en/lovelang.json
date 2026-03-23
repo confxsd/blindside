@@ -1,0 +1,272 @@
+[
+  {
+    "q": "You had a terrible day. What heals you fastest?",
+    "options": [
+      "A long hug without words",
+      "Hearing 'I'm proud of you'",
+      "Someone doing the dishes for you",
+      "A surprise gift on your pillow",
+      "A whole evening together, phones away"
+    ],
+    "traits": [
+      {
+        "touch": 2
+      },
+      {
+        "words": 2
+      },
+      {
+        "acts": 2
+      },
+      {
+        "gifts": 2
+      },
+      {
+        "time": 2
+      }
+    ]
+  },
+  {
+    "q": "Your partner forgot your birthday. What stings most?",
+    "options": [
+      "No 'happy birthday' text",
+      "No effort to plan anything",
+      "No present at all",
+      "They didn't take the day off",
+      "Not even a hug"
+    ],
+    "traits": [
+      {
+        "words": 2
+      },
+      {
+        "acts": 2
+      },
+      {
+        "gifts": 2
+      },
+      {
+        "time": 2
+      },
+      {
+        "touch": 2
+      }
+    ]
+  },
+  {
+    "q": "What makes you feel most loved?",
+    "options": [
+      "When they hold my hand in public",
+      "When they write me a real message",
+      "When they handle something I was dreading",
+      "When they bring me something small and random",
+      "When they cancel plans just to be with me"
+    ],
+    "traits": [
+      {
+        "touch": 2
+      },
+      {
+        "words": 2
+      },
+      {
+        "acts": 2
+      },
+      {
+        "gifts": 2
+      },
+      {
+        "time": 2
+      }
+    ]
+  },
+  {
+    "q": "Pick the most romantic gesture:",
+    "options": [
+      "Slow dancing in the kitchen",
+      "A handwritten letter",
+      "Filling up my gas tank without asking",
+      "A playlist made just for me",
+      "A whole day with zero distractions"
+    ],
+    "traits": [
+      {
+        "touch": 2
+      },
+      {
+        "words": 2
+      },
+      {
+        "acts": 2
+      },
+      {
+        "gifts": 2
+      },
+      {
+        "time": 2
+      }
+    ]
+  },
+  {
+    "q": "You're falling for someone. First sign?",
+    "options": [
+      "I want to be physically close",
+      "I start complimenting them constantly",
+      "I do things to make their life easier",
+      "I notice things they'd like and get them",
+      "I lose track of time around them"
+    ],
+    "traits": [
+      {
+        "touch": 2
+      },
+      {
+        "words": 2
+      },
+      {
+        "acts": 2
+      },
+      {
+        "gifts": 2
+      },
+      {
+        "time": 2
+      }
+    ]
+  },
+  {
+    "q": "In a fight, what's the fastest way back to good?",
+    "options": [
+      "Just hold me",
+      "Say you're sorry and mean it",
+      "Show me, don't tell me",
+      "A peace offering — flowers, food, something",
+      "Sit with me until we're okay"
+    ],
+    "traits": [
+      {
+        "touch": 2
+      },
+      {
+        "words": 2
+      },
+      {
+        "acts": 2
+      },
+      {
+        "gifts": 2
+      },
+      {
+        "time": 2
+      }
+    ]
+  },
+  {
+    "q": "What would hurt you most from a partner?",
+    "options": [
+      "Never touching me",
+      "Never saying how they feel about me",
+      "Letting me handle everything alone",
+      "Never thinking of me when they're out",
+      "Always being too busy for me"
+    ],
+    "traits": [
+      {
+        "touch": 2
+      },
+      {
+        "words": 2
+      },
+      {
+        "acts": 2
+      },
+      {
+        "gifts": 2
+      },
+      {
+        "time": 2
+      }
+    ]
+  },
+  {
+    "q": "How do you show love to your friends?",
+    "options": [
+      "Hugs, arm touches, physical warmth",
+      "Hyping them up and saying it out loud",
+      "Helping them move, driving them places",
+      "Remembering what they mentioned and getting it",
+      "Showing up and giving them my time"
+    ],
+    "traits": [
+      {
+        "touch": 2
+      },
+      {
+        "words": 2
+      },
+      {
+        "acts": 2
+      },
+      {
+        "gifts": 2
+      },
+      {
+        "time": 2
+      }
+    ]
+  },
+  {
+    "q": "Your perfect morning with someone:",
+    "options": [
+      "Waking up tangled together",
+      "Sweet morning texts even though we're right here",
+      "They made coffee and breakfast already",
+      "A little note on the nightstand",
+      "Nowhere to be — just us, all morning"
+    ],
+    "traits": [
+      {
+        "touch": 2
+      },
+      {
+        "words": 2
+      },
+      {
+        "acts": 2
+      },
+      {
+        "gifts": 2
+      },
+      {
+        "time": 2
+      }
+    ]
+  },
+  {
+    "q": "If love was a language, yours sounds like:",
+    "options": [
+      "Skin to skin",
+      "Words that stay with you",
+      "Actions louder than words",
+      "The thought behind the thing",
+      "Undivided presence"
+    ],
+    "traits": [
+      {
+        "touch": 2
+      },
+      {
+        "words": 2
+      },
+      {
+        "acts": 2
+      },
+      {
+        "gifts": 2
+      },
+      {
+        "time": 2
+      }
+    ]
+  }
+]

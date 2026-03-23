@@ -1,0 +1,233 @@
+[
+  {
+    "q": "Partnerini sana bakarken yakaladığında:",
+    "options": [
+      "Gülümser ve utangaçça başını çevirir",
+      "Fark edip etmediğini kafasında kurar",
+      "'Sadece iyi olduğundan emin oluyordum' der",
+      "Bakmıyormuş gibi yapar"
+    ],
+    "traits": [
+      {
+        "hopeless_romantic": 2
+      },
+      {
+        "secret_overthinker": 2
+      },
+      {
+        "soft_protector": 2
+      },
+      {
+        "guarded_dreamer": 2
+      }
+    ]
+  },
+  {
+    "q": "Partnerini bir şey endişelendirdiğinde:",
+    "options": [
+      "Sen fark etmeden çözmeye çalışır",
+      "Gece 3'te her senaryoyu tekrar tekrar oynatır",
+      "Önce senin güvende olup olmadığını sorar, kendisiyle sonra ilgilenir",
+      "'İyiyim' der ve konuyu değiştirir"
+    ],
+    "traits": [
+      {
+        "hopeless_romantic": 1,
+        "soft_protector": 1
+      },
+      {
+        "secret_overthinker": 2
+      },
+      {
+        "soft_protector": 2
+      },
+      {
+        "guarded_dreamer": 2
+      }
+    ]
+  },
+  {
+    "q": "Telefon duvar kağıdı:",
+    "options": [
+      "Bilmediğini sandığı bir fotoğrafın",
+      "Çok düşünerek seçtiği estetik bir şey",
+      "Aile ya da anlamlı bir şey",
+      "Varsayılan — duygusal takılmaz (ya da öyle der)"
+    ],
+    "traits": [
+      {
+        "hopeless_romantic": 2
+      },
+      {
+        "secret_overthinker": 2
+      },
+      {
+        "soft_protector": 2
+      },
+      {
+        "guarded_dreamer": 2
+      }
+    ]
+  },
+  {
+    "q": "Harika bir buluşmadan sonra:",
+    "options": [
+      "Sen eve varmadan 'bu gece mükemmeldi' yazar",
+      "Her anı tekrar oynatıp garip bir şey söylemiş mi diye düşünür",
+      "Gecenin uzaması için bilerek yavaş yürür",
+      "Rahat davranır ama içten içe uçtuğu belli"
+    ],
+    "traits": [
+      {
+        "hopeless_romantic": 2
+      },
+      {
+        "secret_overthinker": 2
+      },
+      {
+        "soft_protector": 2
+      },
+      {
+        "guarded_dreamer": 2
+      }
+    ]
+  },
+  {
+    "q": "Duygularıyla nasıl başa çıkar:",
+    "options": [
+      "Derinden hisseder ve birine anlatması gerekir",
+      "Derinden hisseder ama yalnız anlamaya çalışarak döner durur",
+      "Derinden hisseder ama başkalarını korumaya yönlendirir",
+      "Derinden hisseder ama bir kasaya kilitler"
+    ],
+    "traits": [
+      {
+        "hopeless_romantic": 2
+      },
+      {
+        "secret_overthinker": 2
+      },
+      {
+        "soft_protector": 2
+      },
+      {
+        "guarded_dreamer": 2
+      }
+    ]
+  },
+  {
+    "q": "Asla yüksek sesle söylemeyeceği şey:",
+    "options": [
+      "Seninle bir gelecek ne kadar hayal ettiği",
+      "Bunu mahvetmekten ne kadar korktuğu",
+      "Senin mutluluğun için ne kadar sorumluluk yüklendiği",
+      "Gardını ne kadar indirmek istediği"
+    ],
+    "traits": [
+      {
+        "hopeless_romantic": 2
+      },
+      {
+        "secret_overthinker": 2
+      },
+      {
+        "soft_protector": 2
+      },
+      {
+        "guarded_dreamer": 2
+      }
+    ]
+  },
+  {
+    "q": "Filmde romantik sahne gördüğünde:",
+    "options": [
+      "Gizlice ister ve sonrası için not eder",
+      "Bunun abartı olup olmadığını düşünür",
+      "Seni o kadar güvende hissettirmeyi düşünür",
+      "Gözlerini devirir ama mikro gülümseme yakalarsın"
+    ],
+    "traits": [
+      {
+        "hopeless_romantic": 2
+      },
+      {
+        "secret_overthinker": 2
+      },
+      {
+        "soft_protector": 2
+      },
+      {
+        "guarded_dreamer": 2
+      }
+    ]
+  },
+  {
+    "q": "İlişkinizdeki en büyük söylenmemiş korkusu:",
+    "options": [
+      "Senin için asla yeterince romantik olamayacağı",
+      "Her şeyi yanlış okuduğu",
+      "Seni her şeyden koruyamayacağı",
+      "Tamamen açılırsa gideceğin"
+    ],
+    "traits": [
+      {
+        "hopeless_romantic": 2
+      },
+      {
+        "secret_overthinker": 2
+      },
+      {
+        "soft_protector": 2
+      },
+      {
+        "guarded_dreamer": 2
+      }
+    ]
+  },
+  {
+    "q": "Yanında uyuma şekli:",
+    "options": [
+      "Sana dönük, kolu üstünde, olabildiğince yakın",
+      "Dönüp durur — beyni durmuyor",
+      "Senle kapı arasında — her zaman",
+      "Sırtı dönük ama eli seninkine uzanıyor"
+    ],
+    "traits": [
+      {
+        "hopeless_romantic": 2
+      },
+      {
+        "secret_overthinker": 2
+      },
+      {
+        "soft_protector": 2
+      },
+      {
+        "guarded_dreamer": 2
+      }
+    ]
+  },
+  {
+    "q": "Sana bir gerçek söyleyebilse:",
+    "options": [
+      "'Seni sandığından daha uzun süredir seviyorum'",
+      "'Her şeyi aşırı düşünüyorum çünkü seni kaybetmek istemiyorum'",
+      "'Hiç zor şey yaşamaman için hepsini taşırdım'",
+      "'Seni içeri almak istiyorum ama nasıl yapacağımı bilmiyorum'"
+    ],
+    "traits": [
+      {
+        "hopeless_romantic": 2
+      },
+      {
+        "secret_overthinker": 2
+      },
+      {
+        "soft_protector": 2
+      },
+      {
+        "guarded_dreamer": 2
+      }
+    ]
+  }
+]

@@ -1,0 +1,539 @@
+{
+  "packDefs": [
+    {
+      "key": "36questions",
+      "emoji": "❤️‍🔥",
+      "nameKey": "pack_36questions",
+      "countKey": "pack_count_36questions",
+      "wide": true,
+      "cat": "love",
+      "badge": "trending",
+      "plays": "24.1k",
+      "featured": true,
+      "featuredBadge": "trending",
+      "descKey": "pack_desc_36questions"
+    },
+    {
+      "key": "couples",
+      "emoji": "💕",
+      "nameKey": "pack_couples",
+      "countKey": "pack_count_couples",
+      "cat": "love",
+      "badge": "hot",
+      "plays": "18.3k"
+    },
+    {
+      "key": "bestfriends",
+      "emoji": "👯",
+      "nameKey": "pack_bestfriends",
+      "countKey": "pack_count_bestfriends",
+      "cat": "friends",
+      "badge": "popular",
+      "plays": "12.7k"
+    },
+    {
+      "key": "deeptalk",
+      "emoji": "🌊",
+      "nameKey": "pack_deeptalk",
+      "countKey": "pack_count_deeptalk",
+      "cat": "deep",
+      "plays": "9.4k"
+    },
+    {
+      "key": "coworkers",
+      "emoji": "💼",
+      "nameKey": "pack_coworkers",
+      "countKey": "pack_count_coworkers",
+      "cat": "work",
+      "plays": "5.2k"
+    },
+    {
+      "key": "hottakes",
+      "emoji": "🌶️",
+      "nameKey": "pack_hottakes",
+      "countKey": "pack_count_hottakes",
+      "cat": "spicy",
+      "badge": "hot",
+      "plays": "21.5k",
+      "featured": true,
+      "featuredBadge": "viral",
+      "descKey": "pack_desc_hottakes"
+    },
+    {
+      "key": "redflags",
+      "emoji": "🚩",
+      "nameKey": "pack_redflags",
+      "countKey": "pack_count_redflags",
+      "cat": "spicy",
+      "badge": "new",
+      "plays": "15.8k",
+      "featured": true,
+      "featuredBadge": "new-badge",
+      "descKey": "pack_desc_redflags"
+    },
+    {
+      "key": "chaotic",
+      "emoji": "🎲",
+      "nameKey": "pack_chaotic",
+      "countKey": "pack_count_chaotic",
+      "cat": "spicy",
+      "badge": "new",
+      "plays": "11.2k"
+    },
+    {
+      "key": "fungames",
+      "emoji": "🎉",
+      "nameKey": "pack_fungames",
+      "countKey": "pack_count_fungames",
+      "cat": "friends",
+      "badge": "new",
+      "plays": "8.9k",
+      "featured": true,
+      "featuredBadge": "new-badge",
+      "descKey": "pack_desc_fungames"
+    },
+    {
+      "key": "worldtaste",
+      "emoji": "🌍",
+      "nameKey": "pack_worldtaste",
+      "countKey": "pack_count_worldtaste",
+      "cat": "culture",
+      "badge": "trending",
+      "plays": "14.2k",
+      "featured": true,
+      "featuredBadge": "trending",
+      "descKey": "pack_desc_worldtaste"
+    },
+    {
+      "key": "ethics",
+      "emoji": "⚖️",
+      "nameKey": "pack_ethics",
+      "countKey": "pack_count_ethics",
+      "cat": "deep",
+      "plays": "7.6k"
+    },
+    {
+      "key": "situations",
+      "emoji": "😱",
+      "nameKey": "pack_situations",
+      "countKey": "pack_count_situations",
+      "cat": "spicy",
+      "badge": "hot",
+      "plays": "16.1k",
+      "featured": true,
+      "featuredBadge": "viral",
+      "descKey": "pack_desc_situations"
+    },
+    {
+      "key": "livingtogether",
+      "emoji": "🏠",
+      "nameKey": "pack_livingtogether",
+      "countKey": "pack_count_livingtogether",
+      "cat": "lifestyle",
+      "plays": "6.3k"
+    },
+    {
+      "key": "soulspirit",
+      "emoji": "🕊️",
+      "nameKey": "pack_soulspirit",
+      "countKey": "pack_count_soulspirit",
+      "cat": "culture",
+      "plays": "9.8k"
+    },
+    {
+      "key": "partnertype",
+      "emoji": "🐕",
+      "nameKey": "pack_partnertype",
+      "countKey": "pack_count_partnertype",
+      "cat": "love",
+      "badge": "trending",
+      "plays": "31.2k",
+      "featured": true,
+      "featuredBadge": "viral",
+      "descKey": "pack_desc_partnertype"
+    },
+    {
+      "key": "partnerera",
+      "emoji": "👑",
+      "nameKey": "pack_partnerera",
+      "countKey": "pack_count_partnerera",
+      "cat": "love",
+      "badge": "hot",
+      "plays": "28.7k",
+      "featured": true,
+      "featuredBadge": "trending",
+      "descKey": "pack_desc_partnerera"
+    },
+    {
+      "key": "couplestory",
+      "emoji": "📖",
+      "nameKey": "pack_couplestory",
+      "countKey": "pack_count_couplestory",
+      "cat": "love",
+      "badge": "new",
+      "plays": "19.4k",
+      "featured": true,
+      "featuredBadge": "new-badge",
+      "descKey": "pack_desc_couplestory"
+    },
+    {
+      "key": "whattheyhide",
+      "emoji": "🎭",
+      "nameKey": "pack_whattheyhide",
+      "countKey": "pack_count_whattheyhide",
+      "cat": "love",
+      "badge": "hot",
+      "plays": "25.6k",
+      "featured": true,
+      "featuredBadge": "viral",
+      "descKey": "pack_desc_whattheyhide"
+    },
+    {
+      "key": "flirtguess",
+      "emoji": "😏",
+      "nameKey": "pack_flirtguess",
+      "countKey": "pack_count_flirtguess",
+      "cat": "spicy",
+      "badge": "new",
+      "plays": "33.8k",
+      "featured": true,
+      "featuredBadge": "new-badge",
+      "descKey": "pack_desc_flirtguess"
+    },
+    {
+      "key": "desirematch",
+      "emoji": "🔥",
+      "nameKey": "pack_desirematch",
+      "countKey": "pack_count_desirematch",
+      "cat": "love",
+      "badge": "hot",
+      "plays": "29.1k",
+      "featured": true,
+      "featuredBadge": "viral",
+      "descKey": "pack_desc_desirematch"
+    },
+    {
+      "key": "attachment",
+      "emoji": "🔗",
+      "nameKey": "pack_attachment",
+      "countKey": "pack_count_attachment",
+      "cat": "self",
+      "badge": "new",
+      "plays": "19.7k",
+      "solo": true,
+      "featured": true,
+      "featuredBadge": "new-badge",
+      "descKey": "pack_desc_attachment"
+    },
+    {
+      "key": "innermirror",
+      "emoji": "🪞",
+      "nameKey": "pack_innermirror",
+      "countKey": "pack_count_innermirror",
+      "cat": "self",
+      "badge": "trending",
+      "plays": "15.3k",
+      "solo": true,
+      "featured": true,
+      "featuredBadge": "trending",
+      "descKey": "pack_desc_innermirror"
+    },
+    {
+      "key": "stresstype",
+      "emoji": "🧊",
+      "nameKey": "pack_stresstype",
+      "countKey": "pack_count_stresstype",
+      "cat": "self",
+      "plays": "11.4k",
+      "solo": true
+    },
+    {
+      "key": "lovelang",
+      "emoji": "💌",
+      "nameKey": "pack_lovelang",
+      "countKey": "pack_count_lovelang",
+      "cat": "self",
+      "badge": "hot",
+      "plays": "22.8k",
+      "solo": true,
+      "featured": true,
+      "featuredBadge": "viral",
+      "descKey": "pack_desc_lovelang"
+    },
+    {
+      "key": "shadow",
+      "emoji": "🌑",
+      "nameKey": "pack_shadow",
+      "countKey": "pack_count_shadow",
+      "cat": "self",
+      "badge": "new",
+      "plays": "13.6k",
+      "solo": true
+    },
+    {
+      "key": "emotionalage",
+      "emoji": "🎭",
+      "nameKey": "pack_emotionalage",
+      "countKey": "pack_count_emotionalage",
+      "cat": "self",
+      "badge": "trending",
+      "plays": "17.2k",
+      "solo": true,
+      "featured": true,
+      "featuredBadge": "trending",
+      "descKey": "pack_desc_emotionalage"
+    },
+    {
+      "key": "boundaries",
+      "emoji": "🚧",
+      "nameKey": "pack_boundaries",
+      "countKey": "pack_count_boundaries",
+      "cat": "self",
+      "plays": "10.1k",
+      "solo": true
+    },
+    {
+      "key": "selfsabotage",
+      "emoji": "🪤",
+      "nameKey": "pack_selfsabotage",
+      "countKey": "pack_count_selfsabotage",
+      "cat": "self",
+      "badge": "hot",
+      "plays": "14.9k",
+      "solo": true
+    }
+  ],
+  "packCategories": [
+    {
+      "key": "all",
+      "labelKey": "cat_all",
+      "icon": ""
+    },
+    {
+      "key": "love",
+      "labelKey": "cat_love",
+      "icon": ""
+    },
+    {
+      "key": "friends",
+      "labelKey": "cat_friends",
+      "icon": ""
+    },
+    {
+      "key": "spicy",
+      "labelKey": "cat_spicy",
+      "icon": ""
+    },
+    {
+      "key": "deep",
+      "labelKey": "cat_deep",
+      "icon": ""
+    },
+    {
+      "key": "work",
+      "labelKey": "cat_work",
+      "icon": ""
+    },
+    {
+      "key": "culture",
+      "labelKey": "cat_culture",
+      "icon": ""
+    },
+    {
+      "key": "lifestyle",
+      "labelKey": "cat_lifestyle",
+      "icon": ""
+    },
+    {
+      "key": "self",
+      "labelKey": "cat_self",
+      "icon": ""
+    }
+  ],
+  "packCollections": [
+    {
+      "key": "date_night",
+      "emoji": "🕯️",
+      "gradient": [
+        "#7C3AED",
+        "#EC4899"
+      ],
+      "nameKey": "coll_date_night",
+      "descKey": "coll_desc_date_night",
+      "packs": [
+        "couples",
+        "36questions",
+        "livingtogether"
+      ],
+      "mode": "partner",
+      "badge": "popular"
+    },
+    {
+      "key": "spicy_edition",
+      "emoji": "🔥",
+      "gradient": [
+        "#EF4444",
+        "#F97316"
+      ],
+      "nameKey": "coll_spicy_edition",
+      "descKey": "coll_desc_spicy_edition",
+      "packs": [
+        "hottakes",
+        "redflags",
+        "chaotic",
+        "situations"
+      ],
+      "mode": "partner",
+      "badge": "hot"
+    },
+    {
+      "key": "deep_bonds",
+      "emoji": "🌊",
+      "gradient": [
+        "#0EA5E9",
+        "#6366F1"
+      ],
+      "nameKey": "coll_deep_bonds",
+      "descKey": "coll_desc_deep_bonds",
+      "packs": [
+        "deeptalk",
+        "ethics",
+        "soulspirit"
+      ],
+      "mode": "partner"
+    },
+    {
+      "key": "friend_zone",
+      "emoji": "👯",
+      "gradient": [
+        "#10B981",
+        "#06B6D4"
+      ],
+      "nameKey": "coll_friend_zone",
+      "descKey": "coll_desc_friend_zone",
+      "packs": [
+        "bestfriends",
+        "fungames",
+        "coworkers"
+      ],
+      "mode": "partner",
+      "badge": "new"
+    },
+    {
+      "key": "culture_taste",
+      "emoji": "🌍",
+      "gradient": [
+        "#F59E0B",
+        "#EF4444"
+      ],
+      "nameKey": "coll_culture_taste",
+      "descKey": "coll_desc_culture_taste",
+      "packs": [
+        "worldtaste",
+        "soulspirit",
+        "livingtogether"
+      ],
+      "mode": "partner"
+    },
+    {
+      "key": "know_your_partner",
+      "emoji": "💌",
+      "gradient": [
+        "#EC4899",
+        "#F43F5E"
+      ],
+      "nameKey": "coll_know_your_partner",
+      "descKey": "coll_desc_know_your_partner",
+      "packs": [
+        "partnertype",
+        "partnerera",
+        "couplestory",
+        "whattheyhide"
+      ],
+      "mode": "partner",
+      "badge": "hot"
+    },
+    {
+      "key": "blind_guess",
+      "emoji": "🔮",
+      "gradient": [
+        "#F43F5E",
+        "#A855F7"
+      ],
+      "nameKey": "coll_blind_guess",
+      "descKey": "coll_desc_blind_guess",
+      "packs": [
+        "flirtguess",
+        "desirematch"
+      ],
+      "mode": "partner",
+      "badge": "new"
+    },
+    {
+      "key": "know_yourself",
+      "emoji": "🪞",
+      "gradient": [
+        "#8B5CF6",
+        "#EC4899"
+      ],
+      "nameKey": "coll_know_yourself",
+      "descKey": "coll_desc_know_yourself",
+      "packs": [
+        "innermirror",
+        "shadow",
+        "emotionalage",
+        "boundaries"
+      ],
+      "mode": "self",
+      "badge": "trending"
+    },
+    {
+      "key": "love_decoded",
+      "emoji": "💘",
+      "gradient": [
+        "#EC4899",
+        "#F43F5E"
+      ],
+      "nameKey": "coll_love_decoded",
+      "descKey": "coll_desc_love_decoded",
+      "packs": [
+        "attachment",
+        "lovelang"
+      ],
+      "mode": "self",
+      "badge": "hot"
+    },
+    {
+      "key": "relationship_xray",
+      "emoji": "🔍",
+      "gradient": [
+        "#6366F1",
+        "#0EA5E9"
+      ],
+      "nameKey": "coll_relationship_xray",
+      "descKey": "coll_desc_relationship_xray",
+      "packs": [
+        "selfsabotage"
+      ],
+      "mode": "self",
+      "badge": "new"
+    },
+    {
+      "key": "inner_work",
+      "emoji": "🧘",
+      "gradient": [
+        "#10B981",
+        "#6366F1"
+      ],
+      "nameKey": "coll_inner_work",
+      "descKey": "coll_desc_inner_work",
+      "packs": [
+        "stresstype",
+        "boundaries",
+        "selfsabotage",
+        "shadow"
+      ],
+      "mode": "self"
+    }
+  ]
+}

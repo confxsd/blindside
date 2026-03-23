@@ -1,0 +1,107 @@
+[
+  {
+    "q": "What matters most to you in life?",
+    "options": [
+      "Freedom",
+      "Connection",
+      "Growth",
+      "Security"
+    ],
+    "pi": 1,
+    "format": "bubble"
+  },
+  {
+    "q": "Your biggest fear:",
+    "options": [
+      "Being forgotten",
+      "Being alone",
+      "Wasting time",
+      "Losing myself"
+    ],
+    "pi": 2,
+    "format": "swipe"
+  },
+  {
+    "q": "What does love look like to you?",
+    "options": [
+      "Small daily acts",
+      "Grand gestures",
+      "Just being there",
+      "Words of affirmation"
+    ],
+    "pi": 0,
+    "format": "bubble"
+  },
+  {
+    "q": "If you could change one thing about the world:",
+    "options": [
+      "More empathy",
+      "More honesty",
+      "More equality",
+      "More curiosity"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "What's your emotional superpower?",
+    "options": [
+      "Reading the room",
+      "Staying calm",
+      "Making people laugh",
+      "Deep listening"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "The hardest conversation you've ever avoided:",
+    "options": [
+      "Telling someone I was hurt",
+      "Admitting I was wrong",
+      "Saying 'I need help'",
+      "Telling someone I don't love them anymore"
+    ],
+    "pi": 2,
+    "format": "bubble"
+  },
+  {
+    "q": "What does 'home' mean to you?",
+    "options": [
+      "A person, not a place",
+      "Wherever I feel safe",
+      "The life I've built for myself",
+      "Somewhere I'm still searching for"
+    ],
+    "pi": 0,
+    "format": "swipe"
+  },
+  {
+    "q": "The version of you that only exists at 3am:",
+    "options": [
+      "Brutally honest",
+      "Deeply sentimental",
+      "Anxious and spiraling",
+      "Strangely at peace"
+    ],
+    "pi": 3,
+    "format": "bubble"
+  },
+  {
+    "q": "Forgive and forget, or forgive and remember?",
+    "options": [
+      "Forgive and forget",
+      "Forgive and remember"
+    ],
+    "pi": 1,
+    "format": "vs"
+  },
+  {
+    "q": "What do you think people misunderstand about you?",
+    "options": [
+      "That I'm cold — I just protect my energy",
+      "That I'm fine — I'm just good at hiding it",
+      "That I'm confident — I'm faking most of it",
+      "That I don't care — I care too much"
+    ],
+    "pi": 2
+  }
+]

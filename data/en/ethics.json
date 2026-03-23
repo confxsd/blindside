@@ -1,0 +1,102 @@
+[
+  {
+    "q": "You find a wallet with $500 and an ID. You:",
+    "options": [
+      "Return it all",
+      "Keep the cash, return wallet",
+      "Try to find the owner",
+      "Depends how broke I am"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Is it ever okay to lie to protect someone?",
+    "options": [
+      "Yes, always",
+      "Only in extreme cases",
+      "Never — truth matters",
+      "Depends on what you're protecting"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "A friend cheats on their partner. You:",
+    "options": [
+      "Tell the partner",
+      "Mind my own business",
+      "Confront the friend first",
+      "It's complicated"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Would you report a coworker for stealing small things?",
+    "options": [
+      "Yes, rules are rules",
+      "No, it's not my problem",
+      "Talk to them first",
+      "Depends what they're taking"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Is cancel culture justified?",
+    "options": [
+      "Yes — accountability matters",
+      "Sometimes, not always",
+      "No — people deserve second chances",
+      "It's more complex than that"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "You can save 5 strangers or 1 person you love:",
+    "options": [
+      "5 strangers",
+      "1 person I love",
+      "I can't choose",
+      "Refuse the scenario entirely"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Privacy vs. security — what wins?",
+    "options": [
+      "Privacy always",
+      "Security always",
+      "A balance of both",
+      "Depends on the situation"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Is it okay to ghost someone after one bad date?",
+    "options": [
+      "Yes, no obligation",
+      "At least send a text",
+      "Never, be respectful",
+      "Depends how bad it was"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Rich people should be taxed more:",
+    "options": [
+      "100% agree",
+      "Somewhat agree",
+      "Disagree",
+      "It's not that simple"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Your best friend asks you to lie for them:",
+    "options": [
+      "I'd do it, no question",
+      "Depends on the lie",
+      "Never — can't compromise my integrity",
+      "I'd find a workaround"
+    ],
+    "pi": 3
+  }
+]

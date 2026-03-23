@@ -1,0 +1,246 @@
+[
+  {
+    "q": "When you're alone for a long time, you feel:",
+    "options": [
+      "Restless and anxious",
+      "Peaceful and recharged",
+      "Reflective and creative",
+      "Lonely but won't admit it"
+    ],
+    "traits": [
+      {
+        "extrovert": 2
+      },
+      {
+        "introvert": 2
+      },
+      {
+        "introvert": 1,
+        "thinker": 1
+      },
+      {
+        "feeler": 2
+      }
+    ]
+  },
+  {
+    "q": "How do you make big decisions?",
+    "options": [
+      "Gut feeling, always",
+      "Pros and cons list",
+      "Ask everyone I trust",
+      "Avoid until forced"
+    ],
+    "traits": [
+      {
+        "feeler": 2
+      },
+      {
+        "thinker": 2
+      },
+      {
+        "extrovert": 1,
+        "feeler": 1
+      },
+      {
+        "introvert": 1,
+        "feeler": 1
+      }
+    ]
+  },
+  {
+    "q": "At a party, you're the one who:",
+    "options": [
+      "Knows everyone by midnight",
+      "Found the dog or the bookshelf",
+      "Is having one deep conversation",
+      "Left early without saying bye"
+    ],
+    "traits": [
+      {
+        "extrovert": 2
+      },
+      {
+        "introvert": 2
+      },
+      {
+        "introvert": 1,
+        "feeler": 1
+      },
+      {
+        "introvert": 2
+      }
+    ]
+  },
+  {
+    "q": "Your inner critic sounds like:",
+    "options": [
+      "You're not doing enough",
+      "You're too much",
+      "You should be further along",
+      "Everyone else has it figured out"
+    ],
+    "traits": [
+      {
+        "thinker": 2
+      },
+      {
+        "feeler": 2
+      },
+      {
+        "thinker": 1,
+        "feeler": 1
+      },
+      {
+        "feeler": 2
+      }
+    ]
+  },
+  {
+    "q": "When someone cries in front of you:",
+    "options": [
+      "I cry with them",
+      "I try to fix it",
+      "I listen quietly",
+      "I feel uncomfortable"
+    ],
+    "traits": [
+      {
+        "feeler": 2
+      },
+      {
+        "thinker": 2
+      },
+      {
+        "feeler": 1,
+        "introvert": 1
+      },
+      {
+        "thinker": 1,
+        "introvert": 1
+      }
+    ]
+  },
+  {
+    "q": "Your energy comes from:",
+    "options": [
+      "Being around people",
+      "Creating things alone",
+      "Deep conversations",
+      "Nature and silence"
+    ],
+    "traits": [
+      {
+        "extrovert": 2
+      },
+      {
+        "introvert": 1,
+        "thinker": 1
+      },
+      {
+        "introvert": 1,
+        "feeler": 1
+      },
+      {
+        "introvert": 2
+      }
+    ]
+  },
+  {
+    "q": "How do you handle criticism?",
+    "options": [
+      "Take it personally",
+      "Analyze if it's valid",
+      "Get defensive first, reflect later",
+      "Appreciate the feedback"
+    ],
+    "traits": [
+      {
+        "feeler": 2
+      },
+      {
+        "thinker": 2
+      },
+      {
+        "feeler": 1,
+        "extrovert": 1
+      },
+      {
+        "thinker": 1,
+        "feeler": 1
+      }
+    ]
+  },
+  {
+    "q": "What drains you the most?",
+    "options": [
+      "Small talk with strangers",
+      "Being alone too long",
+      "Emotional conflict",
+      "Feeling unproductive"
+    ],
+    "traits": [
+      {
+        "introvert": 2
+      },
+      {
+        "extrovert": 2
+      },
+      {
+        "feeler": 2
+      },
+      {
+        "thinker": 2
+      }
+    ]
+  },
+  {
+    "q": "Your happy place is:",
+    "options": [
+      "A loud concert or festival",
+      "My room with headphones",
+      "A coffee shop with a friend",
+      "A trail in the mountains"
+    ],
+    "traits": [
+      {
+        "extrovert": 2
+      },
+      {
+        "introvert": 2
+      },
+      {
+        "extrovert": 1,
+        "feeler": 1
+      },
+      {
+        "introvert": 1,
+        "feeler": 1
+      }
+    ]
+  },
+  {
+    "q": "If you could change one thing about yourself:",
+    "options": [
+      "Overthink less",
+      "Open up more",
+      "Care less about what others think",
+      "Be more disciplined"
+    ],
+    "traits": [
+      {
+        "thinker": 2
+      },
+      {
+        "introvert": 2
+      },
+      {
+        "feeler": 2
+      },
+      {
+        "thinker": 1,
+        "introvert": 1
+      }
+    ]
+  }
+]

@@ -1,0 +1,232 @@
+[
+  {
+    "q": "When overwhelmed, your first instinct:",
+    "options": [
+      "Take control and push through",
+      "Shut down and withdraw",
+      "Seek comfort from someone",
+      "Freeze and do nothing"
+    ],
+    "traits": [
+      {
+        "fight": 2
+      },
+      {
+        "flight": 2
+      },
+      {
+        "fawn": 2
+      },
+      {
+        "freeze": 2
+      }
+    ]
+  },
+  {
+    "q": "In a heated argument, you:",
+    "options": [
+      "Stand your ground firmly",
+      "Walk away to cool down",
+      "Try to make peace quickly",
+      "Go silent and blank out"
+    ],
+    "traits": [
+      {
+        "fight": 2
+      },
+      {
+        "flight": 2
+      },
+      {
+        "fawn": 2
+      },
+      {
+        "freeze": 2
+      }
+    ]
+  },
+  {
+    "q": "A deadline is approaching and you're behind:",
+    "options": [
+      "Hustle mode, no sleep",
+      "Escape — scroll, nap, anything",
+      "Ask someone for help",
+      "Stare at the screen paralyzed"
+    ],
+    "traits": [
+      {
+        "fight": 2
+      },
+      {
+        "flight": 2
+      },
+      {
+        "fawn": 2
+      },
+      {
+        "freeze": 2
+      }
+    ]
+  },
+  {
+    "q": "Someone raises their voice at you:",
+    "options": [
+      "Match their energy",
+      "Leave the room",
+      "Apologize even if it's not my fault",
+      "Shut down completely"
+    ],
+    "traits": [
+      {
+        "fight": 2
+      },
+      {
+        "flight": 2
+      },
+      {
+        "fawn": 2
+      },
+      {
+        "freeze": 2
+      }
+    ]
+  },
+  {
+    "q": "Your self-care looks like:",
+    "options": [
+      "Intense workout or cleaning",
+      "Disappearing for a while",
+      "Calling a friend",
+      "Dissociating with comfort media"
+    ],
+    "traits": [
+      {
+        "fight": 2
+      },
+      {
+        "flight": 2
+      },
+      {
+        "fawn": 2
+      },
+      {
+        "freeze": 2
+      }
+    ]
+  },
+  {
+    "q": "When you feel unsafe emotionally:",
+    "options": [
+      "Get angry or irritable",
+      "Plan an escape route",
+      "People-please to survive",
+      "Zone out and feel numb"
+    ],
+    "traits": [
+      {
+        "fight": 2
+      },
+      {
+        "flight": 2
+      },
+      {
+        "fawn": 2
+      },
+      {
+        "freeze": 2
+      }
+    ]
+  },
+  {
+    "q": "How do you handle disappointment?",
+    "options": [
+      "Channel it into motivation",
+      "Distract myself immediately",
+      "Process it with someone",
+      "Let it sit inside me"
+    ],
+    "traits": [
+      {
+        "fight": 2
+      },
+      {
+        "flight": 2
+      },
+      {
+        "fawn": 2
+      },
+      {
+        "freeze": 2
+      }
+    ]
+  },
+  {
+    "q": "Your anxiety manifests as:",
+    "options": [
+      "Restlessness and action",
+      "Avoidance and withdrawal",
+      "Over-accommodating others",
+      "Mental fog and paralysis"
+    ],
+    "traits": [
+      {
+        "fight": 2
+      },
+      {
+        "flight": 2
+      },
+      {
+        "fawn": 2
+      },
+      {
+        "freeze": 2
+      }
+    ]
+  },
+  {
+    "q": "At your worst, people describe you as:",
+    "options": [
+      "Intense or aggressive",
+      "Distant or unreachable",
+      "A pushover or too nice",
+      "Checked out or absent"
+    ],
+    "traits": [
+      {
+        "fight": 2
+      },
+      {
+        "flight": 2
+      },
+      {
+        "fawn": 2
+      },
+      {
+        "freeze": 2
+      }
+    ]
+  },
+  {
+    "q": "What you need most when stressed:",
+    "options": [
+      "A challenge to solve",
+      "Permission to leave",
+      "Someone to say it's okay",
+      "Time to simply exist"
+    ],
+    "traits": [
+      {
+        "fight": 2
+      },
+      {
+        "flight": 2
+      },
+      {
+        "fawn": 2
+      },
+      {
+        "freeze": 2
+      }
+    ]
+  }
+]

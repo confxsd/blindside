@@ -1,0 +1,102 @@
+[
+  {
+    "q": "Bizden büyük bir şeye inanıyor musun?",
+    "options": [
+      "Evet, derinden",
+      "Manevi biriyim, dindar değil",
+      "Henüz emin değilim",
+      "Hayır, bilime güvenirim"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Huzuru nerede buluyorsun?",
+    "options": [
+      "Doğada",
+      "Dua veya meditasyonda",
+      "Müzikte",
+      "Sevdiklerimle"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Kader mi özgür irade mi?",
+    "options": [
+      "Her şey bir nedenle olur",
+      "Kendi yolumuzu biz yaratırız",
+      "İkisinin karışımı",
+      "Sürekli gidip geliyorum"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Öldükten sonra ne oluyor?",
+    "options": [
+      "Güzel bir şey",
+      "Hiçbir şey — ve sorun yok",
+      "Düşünmemeyi tercih ederim",
+      "Belki reenkarnasyon?"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Seni topraklayan bir ritüel:",
+    "options": [
+      "Günlük tutmak",
+      "Dua",
+      "Meditasyon veya nefes çalışması",
+      "Yalnız uzun yürüyüşler"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "İnsanlar gerçekten değişebilir mi?",
+    "options": [
+      "Evet, gerçek çabayla",
+      "Sadece isterlerse",
+      "Temel kişilik aynı kalır",
+      "Olduğunu gördüm"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Affetmek — senin için kolay mı zor mu?",
+    "options": [
+      "Hızlı affederim",
+      "Zaman alır ama oraya varırım",
+      "Affederim ama unutmam",
+      "Ne yaptıklarına bağlı"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Şükranla ilişkin:",
+    "options": [
+      "Her gün pratik yaparım",
+      "Denerim ama unuturum",
+      "Hissederim ama ifade etmem",
+      "Üzerinde çalışıyorum"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Hayata anlam veren ne?",
+    "options": [
+      "Sevgi ve ilişkiler",
+      "Amaç ve katkı",
+      "Deneyimler ve gelişim",
+      "Hâlâ çözmeye çalışıyorum"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Farklı inançlara saygı:",
+    "options": [
+      "Tüm yollara saygı duyarım",
+      "Diğerlerine meraklıyım",
+      "Kendiminkine bağlıyım",
+      "İnançlar bizi şekillendirir"
+    ],
+    "pi": 0
+  }
+]

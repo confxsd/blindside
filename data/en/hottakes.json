@@ -1,0 +1,102 @@
+[
+  {
+    "q": "Pineapple on pizza?",
+    "options": [
+      "Elite tier",
+      "Absolutely not"
+    ],
+    "pi": 0,
+    "format": "vs"
+  },
+  {
+    "q": "Double texting is:",
+    "options": [
+      "Brave and iconic",
+      "A cry for help",
+      "Totally normal",
+      "Depends who it is"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Crying in public:",
+    "options": [
+      "Powerful",
+      "Mortifying",
+      "Depends on the cry",
+      "I've done it today"
+    ],
+    "pi": 0,
+    "format": "bubble"
+  },
+  {
+    "q": "The best era of music:",
+    "options": [
+      "Right now",
+      "2000s nostalgia",
+      "90s forever",
+      "70s/80s classics"
+    ],
+    "pi": 1,
+    "format": "swipe"
+  },
+  {
+    "q": "Astrology is:",
+    "options": [
+      "Scarily accurate",
+      "Total nonsense"
+    ],
+    "pi": 0,
+    "format": "vs"
+  },
+  {
+    "q": "Situationships are:",
+    "options": [
+      "The worst invention",
+      "Kinda valid",
+      "Just vibing",
+      "A red flag factory"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Reply time matters?",
+    "options": [
+      "Yes 100%",
+      "Nah I forget too",
+      "Only at the start",
+      "If you care you reply"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "The ick is:",
+    "options": [
+      "Real and valid",
+      "Overused",
+      "Just an excuse",
+      "I'm the ick"
+    ],
+    "pi": 0,
+    "format": "bubble"
+  },
+  {
+    "q": "AI taking over:",
+    "options": [
+      "Already happened",
+      "Kinda scared",
+      "Bring it on",
+      "I for one welcome it"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Ghosting someone:",
+    "options": [
+      "Sometimes necessary",
+      "Always wrong"
+    ],
+    "pi": 0,
+    "format": "vs"
+  }
+]
