@@ -1,0 +1,37 @@
+{
+  "traits": ["soulmates", "adventure_duo", "chaos_couple", "slow_burn"],
+  "results": {
+    "soulmates": {
+      "emoji": "✨",
+      "title": "Ruh Eşleri",
+      "tagline": "daha tanışmadan yıldızlara yazılmış",
+      "desc": "Bağlantınız kozmik hissettiriyor — sanki geçmiş bir hayatta tanışmışsınız ya da hep çarpışmanız kadermiş. Birbirinizin cümlelerini tamamlarsınız, birbirinizin ruh halini hissedersiniz ve bağınız başkalarını kadere inandırır.",
+      "advice": "Kader sizi bir araya getirdi ama tercih orada tutar. \"Kadermiş\" deyip rahata kaçma — her gün aktif olarak birbirinizi seçmeye devam edin.",
+      "youProbably": ["Sürekli aynı anda aynı şeyi söylersiniz", "\"Siz ikiniz iğrençsiniz\" diyen arkadaşlarınız vardır (sevgiyle)", "Evin bir yer değil, bir insan olduğunu hissedersin", "Sadece bir bakışla diğerinin ne düşündüğünü bilirsiniz"]
+    },
+    "adventure_duo": {
+      "emoji": "🗺️",
+      "title": "Macera İkilisi",
+      "tagline": "aşk hikayen bir öne çıkanlar albümü",
+      "desc": "Sadece birlikte var olmuyorsunuz — dünyayı birlikte deneyimliyorsunuz. Her gezi, her spontane plan, her \"ya şöyle yapsak...?\" başka bir bölüm. İlişkiniz hareketle yaşıyor.",
+      "advice": "Maceralar güzel ama durağanlık da öyle. Bağlanmak için bir sonraki heyecana ihtiyaç duymadan birlikte sessiz kalabildiğinizden emin olun.",
+      "youProbably": ["Normal fotoğraflardan çok birlikte seyahat fotoğraflarınız vardır", "Mevcut macera bitmeden bir sonrakini planlarsınız", "Kaotik, plansız anlarda en derinden bağlanırsınız", "Birlikte yeni bir şey keşfederken en canlı hissedersiniz"]
+    },
+    "chaos_couple": {
+      "emoji": "🎪",
+      "title": "Kaos Çifti",
+      "tagline": "kağıt üzerinde tutmaması lazım ama kesinlikle tutuyor",
+      "desc": "Kağıt üzerinde hiç uyuşmayan ama gerçek hayatta mükemmel uyuşan çiftsiniz. Kavgalar gürültülü, aşk daha gürültülü ve iç espirileriniz bir sözlük gerektiriyor. Dağınık, manyetik ve başka kimse buna dayanamaz.",
+      "advice": "Kaos eğlencelidir ta ki olmayı bırakana kadar. Tutku ile kırılması gereken kalıplar arasındaki farkı ayırt etmeyi öğrenin. En iyi kaosun güvenli bir iniş noktası vardır.",
+      "youProbably": ["Dışarıdan bakanları şaşırtan bir ilişkiniz vardır", "Tartışmadan kahkahaya 5 dakikadan kısa sürede geçersiniz", "Açıklaması 30 dakika sürecek iç esprileriniz vardır", "Sıkıcı olmanın ikiniz için asla bir seçenek olmadığını bilirsiniz"]
+    },
+    "slow_burn": {
+      "emoji": "🕯️",
+      "title": "Yavaş Yanış",
+      "tagline": "beklemeye değen aşk",
+      "desc": "Buna acele etmediniz — ve onu gerçek yapan da bu. Arkadaşlık, güven ve inkar edilemez bir şeye dönüşen binlerce küçük an üzerine kurulu. Aşk hikayen gürültülü değil ama derin.",
+      "advice": "Sabrın süper gücün. Sadece \"yavaş almak\"ın \"kırılganlıktan kaçınmak\"a dönüşmediğinden emin ol. En derin aşk en derin riski gerektirir.",
+      "youProbably": ["Bir şey olmadan önce şüpheli derecede uzun süre arkadaştınız", "\"Sonunda!\" dedirten bir aşk hikayen vardır", "Bu ilişkide daha önce yaşadığın hiçbir ilişkiden daha güvende hissedersin", "Büyük jestlerden çok sessiz anların değerini bilirsin"]
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "traits": ["hopeless_romantic", "secret_overthinker", "soft_protector", "guarded_dreamer"],
+  "results": {
+    "hopeless_romantic": {
+      "emoji": "💘",
+      "title": "Umutsuz Romantik",
+      "tagline": "sana göstereceğinden çok daha sert seviyor",
+      "desc": "Her \"evet güzeldi\" ifadesinin arkasında son buluşmanızın her saniyesini tekrar tekrar oynatan biri var. Gelecekler hayal eder, fotoğraflarını kaydeder ve gülüşünü düşünerek uykuya dalar. Cool taklidi yapmıyor — ne kadar hissettiğinden dehşete düşüyor.",
+      "advice": "Açıkça sevmenin seni korkutup kaçırmayacağını bilmesi gerekiyor. Hassasiyetinin güç olduğunu göster, zayıflık değil — ve hepsini istediğini.",
+      "youProbably": ["İnkar edeceği bir ifadeyle sana baktığını yakalarsın", "Aylar önce söylediğin şeyleri hatırladığını öğrenirsin", "\"Bir gün\" için seni de içeren planlar yaptığını fark edersin", "Seni kelimelerinin taşıyabileceğinden daha çok sevdiğini bilirsin"]
+    },
+    "secret_overthinker": {
+      "emoji": "🧠",
+      "title": "Gizli Aşırı Düşünür",
+      "tagline": "zihni senaryo üretmeyi asla bırakmıyor",
+      "desc": "Gece üçte son konuşmanızı tekrar oynatıyor, tonunu analiz ediyor ve o emojinin farklı bir anlama gelip gelmediğini merak ediyor. Kaygılı değil — derinden yatırım yapmış ve yanlış yapmaktan korkuyor. Her sessizlik çözmesi gereken bir ipucu gibi.",
+      "advice": "Güvence yapışkanlık değil — onun için oksijen. Basit bir \"biz iyiyiz\" kafasındaki gürültüyü günlerce susturabilir. Doğrudan ol, belirsiz değil.",
+      "youProbably": ["Dört kere yeniden yazdığı özenle seçilmiş mesajlar alırsın", "Sen söylemeden ruh hali değişimlerini fark ettiğini görürsün", "Olası her sonucu çoktan düşündüğünü bilirsin", "Her zaman bir adım önde gibi hissedersin — çünkü kafasında öyledir"]
+    },
+    "soft_protector": {
+      "emoji": "🛡️",
+      "title": "Yumuşak Koruyucu",
+      "tagline": "asla bilemeyeceğin yükler taşıyor",
+      "desc": "Kaldırımın trafik tarafında yürür. Yemek yeyip yemediğini sorar. Kaosun içinde sakin kalır ki senin korkman gerekmesin. Aşkı gürültülü değil — yapısal. Kredi istemeden etrafına güvenlik inşa eder.",
+      "advice": "Seni korumanın her şeyi yalnız taşımak anlamına gelmediğini bilmesi gerekiyor. Onun da yumuşak olmasına izin ver. O kadar uzun süredir güçlü ki dinlenmeye hakkı olduğunu unuttu.",
+      "youProbably": ["Yanındayken açıklanamaz bir güvende hissedersin", "Sen daha varlığından haberdar olmadan sorunları çözdüğünü fark edersin", "Senin rahatını her zaman kendininkilerin önüne koyduğunu bilirsin", "Sessizce stres taşıdığını görür ve yardım etmesine izin vermesini dilersin"]
+    },
+    "guarded_dreamer": {
+      "emoji": "🔐",
+      "title": "Korunaklı Hayalperest",
+      "tagline": "seni içeri almak istiyor ama duvarlar yüksek",
+      "desc": "İçinde bütün bir dünya var — hayaller, korkular, hassasiyet — ama nadiren açtığı bir kapının arkasında. Seninle kırılgan olmak istiyor. Sadece açıklığın bir bedeli olduğunu bilecek kadar yanmış ve hâlâ ödemenin güvenli olup olmadığına karar veriyor.",
+      "advice": "Kapıyı zorla açma. Sadece sözlerle değil — tutarlılıkla — hiçbir yere gitmediğini göster. Açıldığı gün her sabırlı anına değecek.",
+      "youProbably": ["Her zaman gerçek onları neredeyse gördüğünü hissedersin", "Açılmaya başlayıp sonra geri çekildiğini fark edersin", "Yüzeyin altında herkese gösterdiğinden fazlası olduğunu bilirsin", "Hızla örttükleri küçük kırılganlık anları yakalarsın"]
+    }
+  }
+}
