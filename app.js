@@ -1,11 +1,14 @@
 // i18n + cycleLang + updateLangCycleBtn are loaded from lang.js
 
 // ==================== Premium system ====================
-const FREE_PACKS = ['couples', 'bestfriends', 'attachment', 'lovelang'];
-let isPremium = localStorage.getItem('bs-premium') === 'true';
+const PREMIUM_CONFIG = {
+  enabled: true,          // false = everyone is premium (bypass paywall entirely)
+  freePacks: ['couples', 'bestfriends', 'attachment', 'lovelang'],
+};
+let isPremium = !PREMIUM_CONFIG.enabled || localStorage.getItem('bs-premium') === 'true';
 
 function isPackFree(key) {
-  return FREE_PACKS.includes(key);
+  return PREMIUM_CONFIG.freePacks.includes(key);
 }
 
 function mockPurchasePremium() {
@@ -18,6 +21,7 @@ function mockPurchasePremium() {
 }
 
 function cancelPremium() {
+  if (!PREMIUM_CONFIG.enabled) return; // can't cancel when paywall disabled
   if (!confirm(i18n.t('profile_cancel_confirm'))) return;
   isPremium = false;
   localStorage.removeItem('bs-premium');
@@ -1110,11 +1114,6 @@ function renderProfile() {
         <span>${i18n.t('profile_theme')}</span>
         <span class="profile-menu-arrow">›</span>
       </button>
-      <button class="profile-menu-item" onclick="cycleLang()">
-        <span class="profile-menu-icon">🌐</span>
-        <span>${i18n.t('profile_language')}</span>
-        <span class="profile-menu-arrow">›</span>
-      </button>
     </div>
 
     <div class="profile-section-label">${i18n.t('profile_account')}</div>
@@ -2184,6 +2183,80 @@ async function buildReceiptFromApi(code) {
   }
 }
 
+// ==================== Premium teasers on results ====================
+function renderInsightsTeaser(mode) {
+  // mode: 'partner' or 'solo'
+  const insightItems = mode === 'partner'
+    ? [
+        { icon: '🧠', label: i18n.t('insight_communication') },
+        { icon: '❤️‍🔥', label: i18n.t('insight_compatibility') },
+        { icon: '🌱', label: i18n.t('insight_growth') },
+        { icon: '⚡', label: i18n.t('insight_tension') },
+      ]
+    : [
+        { icon: '🪞', label: i18n.t('insight_self_awareness') },
+        { icon: '🔑', label: i18n.t('insight_hidden_patterns') },
+        { icon: '🧭', label: i18n.t('insight_next_steps') },
+        { icon: '💡', label: i18n.t('insight_strengths') },
+      ];
+
+  const insightsHtml = insightItems.map(it =>
+    `<div class="insight-teaser-item"><span class="insight-teaser-icon">${it.icon}</span><span>${it.label}</span></div>`
+  ).join('');
+
+  const advisorPrompts = mode === 'partner'
+    ? [i18n.t('advisor_prompt_1'), i18n.t('advisor_prompt_2'), i18n.t('advisor_prompt_3')]
+    : [i18n.t('advisor_prompt_solo_1'), i18n.t('advisor_prompt_solo_2'), i18n.t('advisor_prompt_solo_3')];
+
+  const promptsHtml = advisorPrompts.map(p =>
+    `<div class="advisor-prompt-chip">${p}</div>`
+  ).join('');
+
+  if (isPremium) {
+    // For now show "coming soon" for premium users
+    return `
+      <div class="premium-results-section">
+        <div class="premium-results-label">${i18n.t('insights_title')}</div>
+        <div class="insight-items-unlocked">${insightsHtml}</div>
+        <div class="insight-coming-soon">${i18n.t('insights_coming_soon')}</div>
+      </div>
+      <div class="premium-results-section">
+        <div class="premium-results-label">${i18n.t('advisor_title')}</div>
+        <div class="advisor-prompts">${promptsHtml}</div>
+        <div class="insight-coming-soon">${i18n.t('advisor_coming_soon')}</div>
+      </div>
+    `;
+  }
+
+  // Non-premium: locked teasers
+  return `
+    <div class="premium-results-section premium-locked-section" onclick="showPremiumModal('')">
+      <div class="premium-results-label">${i18n.t('insights_title')}</div>
+      <div class="insight-teaser-grid">${insightsHtml}</div>
+      <div class="premium-locked-overlay">
+        <div class="premium-locked-cta">
+          <div class="premium-locked-icon">+</div>
+          <div class="premium-locked-text">${i18n.t('insights_unlock')}</div>
+        </div>
+      </div>
+    </div>
+    <div class="premium-results-section premium-locked-section" onclick="showPremiumModal('')">
+      <div class="premium-results-label">${i18n.t('advisor_title')}</div>
+      <div class="advisor-teaser">
+        <div class="advisor-teaser-avatar">✦</div>
+        <div class="advisor-teaser-bubble">${i18n.t('advisor_teaser_msg')}</div>
+      </div>
+      <div class="advisor-prompts advisor-prompts-locked">${promptsHtml}</div>
+      <div class="premium-locked-overlay">
+        <div class="premium-locked-cta">
+          <div class="premium-locked-icon">+</div>
+          <div class="premium-locked-text">${i18n.t('advisor_unlock')}</div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
 function getVibeLabels() {
   return [
     { min: 0,  emoji: '🫠', title: i18n.t('vibe_0_title'), desc: i18n.t('vibe_0_desc'), intro: i18n.t('vibe_0_intro') },
@@ -2274,6 +2347,7 @@ function buildReceiptWithName(partnerName) {
       <div class="story-brand">blindside.</div>
       <div class="story-date">${dateStr}</div>
     </div>
+    ${renderInsightsTeaser('partner')}
     <div class="story-actions">
       <button class="btn-share" onclick="shareReceipt()">${i18n.t('results_share')}</button>
       <button class="btn btn-primary" style="width:100%" onclick="goTo('packs')">${i18n.t('results_play_another')}</button>
@@ -2282,8 +2356,6 @@ function buildReceiptWithName(partnerName) {
   `;
   scroll.scrollTop = 0;
   spawnConfetti();
-  // AI vibe report disabled for now
-  // loadVibeReport(data, partnerName, pct, selectedPackKey);
 
   // Prompt guests to save their account
   if (isGuest) setTimeout(showSaveAccountModal, 2000);
@@ -2397,6 +2469,7 @@ async function buildSoloReceipt() {
       <div class="story-brand">blindside.</div>
       <div class="story-date">${dateStr}</div>
     </div>
+    ${renderInsightsTeaser('solo')}
     <div class="story-actions">
       <button class="btn-share" onclick="shareReceipt()">${i18n.t('results_share')}</button>
       <button class="btn btn-primary" style="width:100%" onclick="goTo('packs')">${i18n.t('solo_take_another')}</button>

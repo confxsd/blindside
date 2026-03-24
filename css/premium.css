@@ -588,6 +588,145 @@
   background: transparent;
 }
 
+/* ========================================
+   INSIGHTS & ADVISOR TEASERS (Results)
+   ======================================== */
+
+.premium-results-section {
+  margin: 0 20px 16px;
+  padding: 20px;
+  border-radius: var(--radius);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  position: relative;
+  overflow: hidden;
+}
+.premium-results-label {
+  font-family: 'Syne', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--accent-1);
+  margin-bottom: 14px;
+}
+
+/* Insight items grid */
+.insight-teaser-grid,
+.insight-items-unlocked {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.insight-teaser-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text);
+}
+.insight-teaser-icon {
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+/* Locked overlay */
+.premium-locked-section {
+  cursor: pointer;
+}
+.premium-locked-section .insight-teaser-grid,
+.premium-locked-section .advisor-teaser,
+.premium-locked-section .advisor-prompts-locked {
+  filter: blur(3px);
+  opacity: 0.5;
+  pointer-events: none;
+}
+.premium-locked-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+.premium-locked-cta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 100px;
+  background: var(--accent-1);
+  color: #fff;
+}
+.premium-locked-icon {
+  font-family: 'Syne', sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+}
+.premium-locked-text {
+  font-size: 13px;
+  font-weight: 700;
+  font-family: 'Syne', sans-serif;
+}
+
+/* Coming soon (premium unlocked) */
+.insight-coming-soon {
+  font-size: 12px;
+  color: var(--text-dim);
+  text-align: center;
+  margin-top: 14px;
+  font-style: italic;
+}
+
+/* Advisor teaser */
+.advisor-teaser {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+.advisor-teaser-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--accent-1);
+  color: #fff;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.advisor-teaser-bubble {
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  border-top-left-radius: 2px;
+  background: var(--surface);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+/* Advisor prompt chips */
+.advisor-prompts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.advisor-prompt-chip {
+  padding: 6px 12px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 500;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-mid);
+}
+
 /* ===== Section labels ===== */
 .profile-section-label {
   font-family: 'Syne', sans-serif;
