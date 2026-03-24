@@ -8,6 +8,13 @@ const meta = JSON.parse(fs.readFileSync(path.join(dataDir, 'packs.json'), 'utf8'
 const esc = (s) => s == null ? 'NULL' : `'${String(s).replace(/'/g, "''")}'`;
 const lines = [];
 
+// Clear existing data (order matters for FK-like constraints)
+lines.push('DELETE FROM questions;');
+lines.push('DELETE FROM collection_packs;');
+lines.push('DELETE FROM collections;');
+lines.push('DELETE FROM categories;');
+lines.push('DELETE FROM packs;');
+
 // --- Packs ---
 meta.packDefs.forEach((p, i) => {
   lines.push(`INSERT INTO packs (key, emoji, name_key, count_key, desc_key, cat, badge, plays, featured, featured_badge, solo, wide, sort_order) VALUES (${esc(p.key)}, ${esc(p.emoji)}, ${esc(p.nameKey)}, ${esc(p.countKey)}, ${esc(p.descKey || null)}, ${esc(p.cat)}, ${esc(p.badge || null)}, ${esc(p.plays || '0')}, ${p.featured ? 1 : 0}, ${esc(p.featuredBadge || null)}, ${p.solo ? 1 : 0}, ${p.wide ? 1 : 0}, ${i});`);

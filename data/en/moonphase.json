@@ -1,0 +1,152 @@
+[
+  {
+    "q": "When something ends — a job, a relationship — you:",
+    "options": [
+      "Already planning what's next",
+      "Slowly building momentum again",
+      "Feel everything at full volume",
+      "Retreat and process alone"
+    ],
+    "traits": [
+      { "newmoon": 2 },
+      { "waxing": 2 },
+      { "fullmoon": 2 },
+      { "waning": 2 }
+    ]
+  },
+  {
+    "q": "Your energy is highest when:",
+    "options": [
+      "Starting something brand new",
+      "Working toward a clear goal",
+      "Surrounded by people who match your vibe",
+      "Reflecting on what you've learned"
+    ],
+    "traits": [
+      { "newmoon": 2 },
+      { "waxing": 2 },
+      { "fullmoon": 2 },
+      { "waning": 2 }
+    ]
+  },
+  {
+    "q": "In relationships, you're the one who:",
+    "options": [
+      "Makes the first move, always",
+      "Invests slowly but deeply",
+      "Loves intensely and openly",
+      "Needs space to stay connected"
+    ],
+    "traits": [
+      { "newmoon": 2 },
+      { "waxing": 2 },
+      { "fullmoon": 2 },
+      { "waning": 2 }
+    ]
+  },
+  {
+    "q": "Your friends would describe you as:",
+    "options": [
+      "The one who always reinvents themselves",
+      "The reliable one with a plan",
+      "The life of the group",
+      "The wise old soul"
+    ],
+    "traits": [
+      { "newmoon": 2 },
+      { "waxing": 2 },
+      { "fullmoon": 2 },
+      { "waning": 2 }
+    ]
+  },
+  {
+    "q": "When you can't sleep at 3am, you're:",
+    "options": [
+      "Dreaming up a new idea",
+      "Making a to-do list for tomorrow",
+      "Replaying every interaction from today",
+      "Staring at the ceiling, existentially"
+    ],
+    "traits": [
+      { "newmoon": 2 },
+      { "waxing": 2 },
+      { "fullmoon": 2 },
+      { "waning": 2 }
+    ]
+  },
+  {
+    "q": "You feel most alive when:",
+    "options": [
+      "Everything is uncertain and wide open",
+      "You can see progress happening",
+      "You're fully seen by someone",
+      "You're alone and at peace"
+    ],
+    "traits": [
+      { "newmoon": 2 },
+      { "waxing": 2 },
+      { "fullmoon": 2 },
+      { "waning": 2 }
+    ]
+  },
+  {
+    "q": "Your biggest fear is:",
+    "options": [
+      "Being stuck in one place forever",
+      "Failing after trying so hard",
+      "Being misunderstood by those you love",
+      "Never finding inner peace"
+    ],
+    "traits": [
+      { "newmoon": 2 },
+      { "waxing": 2 },
+      { "fullmoon": 2 },
+      { "waning": 2 }
+    ]
+  },
+  {
+    "q": "Your ideal vacation:",
+    "options": [
+      "Somewhere you've never been, no itinerary",
+      "A planned trip with goals — hike that peak, see that museum",
+      "A festival or city full of energy and people",
+      "A cabin alone, or with one person who gets you"
+    ],
+    "traits": [
+      { "newmoon": 2 },
+      { "waxing": 2 },
+      { "fullmoon": 2 },
+      { "waning": 2 }
+    ]
+  },
+  {
+    "q": "Pick a word that resonates:",
+    "options": [
+      "Begin",
+      "Build",
+      "Bloom",
+      "Release"
+    ],
+    "traits": [
+      { "newmoon": 2 },
+      { "waxing": 2 },
+      { "fullmoon": 2 },
+      { "waning": 2 }
+    ]
+  },
+  {
+    "q": "Right now, you feel like you're:",
+    "options": [
+      "On the edge of something new",
+      "In the middle of becoming",
+      "At your peak, fully showing up",
+      "Letting go of what no longer serves you"
+    ],
+    "traits": [
+      { "newmoon": 2 },
+      { "waxing": 2 },
+      { "fullmoon": 2 },
+      { "waning": 2 }
+    ]
+  }
+]

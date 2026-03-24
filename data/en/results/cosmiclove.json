@@ -1,0 +1,57 @@
+{
+  "traits": ["venus", "mars", "moon", "jupiter"],
+  "results": {
+    "venus": {
+      "emoji": "💋",
+      "title": "Venus Lover",
+      "tagline": "love as art",
+      "desc": "You love beautifully. Romantic, sensual, and devoted to the aesthetic of connection — you turn relationships into something cinematic.",
+      "advice": "Your romantic heart is a gift. But real love is messy too. Don't leave when the movie scene ends — the real story starts after.",
+      "youProbably": [
+        "Remember what someone wore on your first date",
+        "Have a Love playlist that could make anyone cry",
+        "Fall for people who look like they belong in a painting",
+        "Write texts that read like poetry"
+      ]
+    },
+    "mars": {
+      "emoji": "⚔️",
+      "title": "Mars Lover",
+      "tagline": "love as fire",
+      "desc": "You love fiercely. Passionate, direct, and allergic to lukewarm — you want a love that matches your intensity or nothing at all.",
+      "advice": "Your passion is intoxicating. But love isn't a battle to win. Sometimes the strongest move is softening.",
+      "youProbably": [
+        "Said 'I love you' first and don't regret it",
+        "Turn arguments into foreplay sometimes",
+        "Need a partner who challenges you, not just agrees",
+        "Would rather fight than feel ignored"
+      ]
+    },
+    "moon": {
+      "emoji": "🌙",
+      "title": "Moon Lover",
+      "tagline": "love as sanctuary",
+      "desc": "You love from the deepest place. Emotional, nurturing, and achingly sincere — you don't date, you merge souls.",
+      "advice": "Your depth is what makes love real. But you can't pour from an empty cup. Fill yours first — the right person will wait.",
+      "youProbably": [
+        "Know your partner's moods better than they do",
+        "Create a home feeling wherever you go",
+        "Cry during the first dance at weddings",
+        "Have given someone a second chance you shouldn't have"
+      ]
+    },
+    "jupiter": {
+      "emoji": "🪐",
+      "title": "Jupiter Lover",
+      "tagline": "love as expansion",
+      "desc": "You love wide open. Adventurous, optimistic, and endlessly curious — you need a love that grows with you, not one that holds you back.",
+      "advice": "Your freedom-loving heart is magnetic. But depth requires staying. The person who makes you want to stay? That's the one.",
+      "youProbably": [
+        "Plan trips together before you're even official",
+        "Get restless in relationships that feel routine",
+        "Believe your soulmate exists — and you'll find them",
+        "Love harder when there's distance to cross"
+      ]
+    }
+  }
+}

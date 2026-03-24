@@ -1,0 +1,152 @@
+[
+  {
+    "q": "When you walk into a room full of strangers, you:",
+    "options": [
+      "Own the room immediately",
+      "Find a quiet corner and observe",
+      "Start chatting with everyone",
+      "Feel the energy and adapt"
+    ],
+    "traits": [
+      { "fire": 2 },
+      { "earth": 2 },
+      { "air": 2 },
+      { "water": 2 }
+    ]
+  },
+  {
+    "q": "Your ideal weekend looks like:",
+    "options": [
+      "Spontaneous adventure, no plan",
+      "Cozy routine — cook, clean, recharge",
+      "Brunch with friends, gallery hopping",
+      "Journaling by the water, deep music"
+    ],
+    "traits": [
+      { "fire": 2 },
+      { "earth": 2 },
+      { "air": 2 },
+      { "water": 2 }
+    ]
+  },
+  {
+    "q": "In an argument, you tend to:",
+    "options": [
+      "Explode, then forget about it",
+      "Stay calm and state facts",
+      "Talk circles around the other person",
+      "Go silent and feel everything deeply"
+    ],
+    "traits": [
+      { "fire": 2 },
+      { "earth": 2 },
+      { "air": 2 },
+      { "water": 2 }
+    ]
+  },
+  {
+    "q": "People are drawn to you because:",
+    "options": [
+      "Your confidence and energy",
+      "Your reliability and groundedness",
+      "Your wit and curiosity",
+      "Your depth and emotional intelligence"
+    ],
+    "traits": [
+      { "fire": 2 },
+      { "earth": 2 },
+      { "air": 2 },
+      { "water": 2 }
+    ]
+  },
+  {
+    "q": "When making a big decision, you follow:",
+    "options": [
+      "Your gut — no overthinking",
+      "A pros and cons list",
+      "Advice from 5 different people",
+      "Your heart, even if it's irrational"
+    ],
+    "traits": [
+      { "fire": 2 },
+      { "earth": 2 },
+      { "air": 2 },
+      { "water": 2 }
+    ]
+  },
+  {
+    "q": "Your love language is closest to:",
+    "options": [
+      "Grand gestures and passion",
+      "Acts of service and consistency",
+      "Words and deep conversations",
+      "Physical closeness and unspoken understanding"
+    ],
+    "traits": [
+      { "fire": 2 },
+      { "earth": 2 },
+      { "air": 2 },
+      { "water": 2 }
+    ]
+  },
+  {
+    "q": "Your biggest flaw?",
+    "options": [
+      "Impatience — you want it NOW",
+      "Stubbornness — you won't budge",
+      "Overthinking — you live in your head",
+      "Over-feeling — you absorb everything"
+    ],
+    "traits": [
+      { "fire": 2 },
+      { "earth": 2 },
+      { "air": 2 },
+      { "water": 2 }
+    ]
+  },
+  {
+    "q": "At a party, you're the one who:",
+    "options": [
+      "Starts the dance floor",
+      "Handles the playlist and snacks",
+      "Knows everyone's name by midnight",
+      "Has a deep 1-on-1 in the kitchen"
+    ],
+    "traits": [
+      { "fire": 2 },
+      { "earth": 2 },
+      { "air": 2 },
+      { "water": 2 }
+    ]
+  },
+  {
+    "q": "When stressed, you need:",
+    "options": [
+      "To move — gym, run, anything physical",
+      "To plan — lists, routines, control",
+      "To talk it out with someone smart",
+      "To be alone with your feelings"
+    ],
+    "traits": [
+      { "fire": 2 },
+      { "earth": 2 },
+      { "air": 2 },
+      { "water": 2 }
+    ]
+  },
+  {
+    "q": "Pick a superpower:",
+    "options": [
+      "Teleportation — go anywhere, now",
+      "Time control — never rush again",
+      "Telepathy — read every mind",
+      "Empathy shield — feel only what you choose"
+    ],
+    "traits": [
+      { "fire": 2 },
+      { "earth": 2 },
+      { "air": 2 },
+      { "water": 2 }
+    ]
+  }
+]

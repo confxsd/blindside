@@ -1,0 +1,57 @@
+{
+  "traits": ["fire", "earth", "air", "water"],
+  "results": {
+    "fire": {
+      "emoji": "🔥",
+      "title": "Fire Energy",
+      "tagline": "Aries · Leo · Sagittarius",
+      "desc": "You burn bright. Passionate, impulsive, magnetic — you live fast and love hard. People either adore you or can't keep up.",
+      "advice": "Your fire inspires everyone around you. Just remember: not everything needs to be conquered. Sometimes the bravest thing is sitting still.",
+      "youProbably": [
+        "Text back immediately or not for 3 days",
+        "Start 10 projects and finish 2 (but those 2 are legendary)",
+        "Give the best pep talks known to humanity",
+        "Fall in love with someone's energy before their name"
+      ]
+    },
+    "earth": {
+      "emoji": "🌿",
+      "title": "Earth Energy",
+      "tagline": "Taurus · Virgo · Capricorn",
+      "desc": "You are the ground others stand on. Patient, loyal, and quietly powerful — you build empires while others chase trends.",
+      "advice": "Your steadiness is rare and beautiful. But let yourself be messy sometimes. Not everything needs to be planned to be meaningful.",
+      "youProbably": [
+        "Have a skincare routine older than some friendships",
+        "Are everyone's emergency contact",
+        "Show love through actions, not words",
+        "Haven't changed your coffee order in 4 years"
+      ]
+    },
+    "air": {
+      "emoji": "💨",
+      "title": "Air Energy",
+      "tagline": "Gemini · Libra · Aquarius",
+      "desc": "You live in the world of ideas. Social, curious, and endlessly adaptable — your mind moves faster than most people can follow.",
+      "advice": "Your intellect is your gift. But don't forget to land sometimes. The best connections happen when you stop analyzing and start feeling.",
+      "youProbably": [
+        "Have 47 tabs open right now",
+        "Can argue any side of any debate",
+        "Get bored the moment something becomes predictable",
+        "Fall for someone's mind before anything else"
+      ]
+    },
+    "water": {
+      "emoji": "🌊",
+      "title": "Water Energy",
+      "tagline": "Cancer · Scorpio · Pisces",
+      "desc": "You feel everything. Intuitive, deep, and emotionally brave — you see what others miss and love in ways that change people.",
+      "advice": "Your sensitivity is a superpower, not a weakness. Protect your energy, but don't build walls so high that love can't swim in.",
+      "youProbably": [
+        "Cry at commercials and aren't even embarrassed",
+        "Know when someone's lying before they finish the sentence",
+        "Have a playlist for every emotional state",
+        "Love so deeply it sometimes scares you"
+      ]
+    }
+  }
+}

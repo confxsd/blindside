@@ -1,0 +1,57 @@
+{
+  "traits": ["newmoon", "waxing", "fullmoon", "waning"],
+  "results": {
+    "newmoon": {
+      "emoji": "🌑",
+      "title": "New Moon Soul",
+      "tagline": "the eternal beginner",
+      "desc": "You are wired for fresh starts. Restless, visionary, and magnetically drawn to the unknown — you shed old skins like it's nothing.",
+      "advice": "Your ability to start over is rare. But some things deserve to be stayed with. Not every discomfort means it's time to leave.",
+      "youProbably": [
+        "Have reinvented yourself at least 3 times",
+        "Get excited by blank pages more than finished books",
+        "Move cities, change careers, or cut your hair when restless",
+        "See potential in everything — including people who haven't earned it yet"
+      ]
+    },
+    "waxing": {
+      "emoji": "🌓",
+      "title": "Waxing Moon Soul",
+      "tagline": "the quiet builder",
+      "desc": "You're in growth mode — always. Disciplined, focused, and quietly ambitious, you plant seeds others don't see until they bloom.",
+      "advice": "Your patience will pay off. But don't forget to enjoy the in-between. The climb is the story, not just the summit.",
+      "youProbably": [
+        "Have a 5-year plan and a daily routine",
+        "Celebrate small wins in private",
+        "Push through when others give up",
+        "Underestimate how far you've already come"
+      ]
+    },
+    "fullmoon": {
+      "emoji": "🌕",
+      "title": "Full Moon Soul",
+      "tagline": "the one who feels it all",
+      "desc": "You live at full intensity. Emotional, expressive, and impossible to ignore — when you walk in, the room shifts.",
+      "advice": "Your fullness is your gift. But not every feeling needs to be acted on. Sometimes power is in the pause.",
+      "youProbably": [
+        "Have main character energy without trying",
+        "Love and fight with equal intensity",
+        "Are either everyone's favorite or too much for some",
+        "Can't hide your emotions even when you want to"
+      ]
+    },
+    "waning": {
+      "emoji": "🌘",
+      "title": "Waning Moon Soul",
+      "tagline": "the one who lets go",
+      "desc": "You carry wisdom beyond your years. Reflective, intuitive, and quietly powerful — you understand that endings are just beginnings in disguise.",
+      "advice": "Your depth is magnetic. But don't get so comfortable in the shadows that you forget to step into the light when it's your turn.",
+      "youProbably": [
+        "Give advice that sounds like it came from a therapist",
+        "Need alone time like you need oxygen",
+        "Have already forgiven things others are still angry about",
+        "See the beauty in goodbyes"
+      ]
+    }
+  }
+}

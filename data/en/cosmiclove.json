@@ -1,0 +1,152 @@
+[
+  {
+    "q": "What attracts you to someone first?",
+    "options": [
+      "Physical chemistry — instant spark",
+      "Their ambition and drive",
+      "Emotional depth and vulnerability",
+      "How they make everyone around them feel"
+    ],
+    "traits": [
+      { "venus": 2 },
+      { "mars": 2 },
+      { "moon": 2 },
+      { "jupiter": 2 }
+    ]
+  },
+  {
+    "q": "In a relationship, you need most:",
+    "options": [
+      "Romance and beauty — keep the magic alive",
+      "Passion and challenge — keep me on my toes",
+      "Safety and emotional honesty",
+      "Freedom and shared growth"
+    ],
+    "traits": [
+      { "venus": 2 },
+      { "mars": 2 },
+      { "moon": 2 },
+      { "jupiter": 2 }
+    ]
+  },
+  {
+    "q": "Your love red flag is:",
+    "options": [
+      "Someone who doesn't put in effort",
+      "Someone who avoids conflict",
+      "Someone who can't be emotionally present",
+      "Someone who tries to control or limit you"
+    ],
+    "traits": [
+      { "venus": 2 },
+      { "mars": 2 },
+      { "moon": 2 },
+      { "jupiter": 2 }
+    ]
+  },
+  {
+    "q": "The best date you can imagine:",
+    "options": [
+      "Candlelit dinner, flowers, the whole aesthetic",
+      "Something competitive — escape room, sports, a dare",
+      "Cooking together, deep talking until 4am",
+      "Road trip to somewhere neither of you has been"
+    ],
+    "traits": [
+      { "venus": 2 },
+      { "mars": 2 },
+      { "moon": 2 },
+      { "jupiter": 2 }
+    ]
+  },
+  {
+    "q": "When you fall in love, you:",
+    "options": [
+      "Romanticize everything about them",
+      "Want to conquer the world together",
+      "Open up in ways that terrify you",
+      "Feel like the universe just expanded"
+    ],
+    "traits": [
+      { "venus": 2 },
+      { "mars": 2 },
+      { "moon": 2 },
+      { "jupiter": 2 }
+    ]
+  },
+  {
+    "q": "After a breakup, you:",
+    "options": [
+      "Mourn the beauty of what was",
+      "Channel the pain into something productive",
+      "Feel broken for a while, then slowly heal",
+      "Take a trip or start something new"
+    ],
+    "traits": [
+      { "venus": 2 },
+      { "mars": 2 },
+      { "moon": 2 },
+      { "jupiter": 2 }
+    ]
+  },
+  {
+    "q": "Your love language in one word:",
+    "options": [
+      "Beauty",
+      "Intensity",
+      "Closeness",
+      "Adventure"
+    ],
+    "traits": [
+      { "venus": 2 },
+      { "mars": 2 },
+      { "moon": 2 },
+      { "jupiter": 2 }
+    ]
+  },
+  {
+    "q": "The thing that makes you stay in a relationship:",
+    "options": [
+      "They still give you butterflies",
+      "They match your energy and ambition",
+      "They feel like home",
+      "They help you become a better version of yourself"
+    ],
+    "traits": [
+      { "venus": 2 },
+      { "mars": 2 },
+      { "moon": 2 },
+      { "jupiter": 2 }
+    ]
+  },
+  {
+    "q": "Your toxic love pattern is:",
+    "options": [
+      "Falling for the idea of someone, not the reality",
+      "Turning love into a power struggle",
+      "Giving too much and losing yourself",
+      "Running when things get too real"
+    ],
+    "traits": [
+      { "venus": 2 },
+      { "mars": 2 },
+      { "moon": 2 },
+      { "jupiter": 2 }
+    ]
+  },
+  {
+    "q": "Love, at its best, feels like:",
+    "options": [
+      "A movie scene you'll never forget",
+      "Two warriors choosing each other every day",
+      "Being fully known and still wanted",
+      "A never-ending story that keeps surprising you"
+    ],
+    "traits": [
+      { "venus": 2 },
+      { "mars": 2 },
+      { "moon": 2 },
+      { "jupiter": 2 }
+    ]
+  }
+]

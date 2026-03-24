@@ -301,6 +301,43 @@
       "badge": "hot",
       "plays": "14.9k",
       "solo": true
+    },
+    {
+      "key": "zodiacenergy",
+      "emoji": "♈",
+      "nameKey": "pack_zodiacenergy",
+      "countKey": "pack_count_zodiacenergy",
+      "cat": "self",
+      "badge": "new",
+      "plays": "8.4k",
+      "solo": true,
+      "featured": true,
+      "featuredBadge": "new-badge",
+      "descKey": "pack_desc_zodiacenergy"
+    },
+    {
+      "key": "moonphase",
+      "emoji": "🌙",
+      "nameKey": "pack_moonphase",
+      "countKey": "pack_count_moonphase",
+      "cat": "self",
+      "badge": "trending",
+      "plays": "12.1k",
+      "solo": true,
+      "featured": true,
+      "featuredBadge": "trending",
+      "descKey": "pack_desc_moonphase"
+    },
+    {
+      "key": "cosmiclove",
+      "emoji": "💫",
+      "nameKey": "pack_cosmiclove",
+      "countKey": "pack_count_cosmiclove",
+      "cat": "self",
+      "badge": "hot",
+      "plays": "10.7k",
+      "solo": true,
+      "descKey": "pack_desc_cosmiclove"
     }
   ],
   "packCategories": [
@@ -534,6 +571,23 @@
         "shadow"
       ],
       "mode": "self"
+    },
+    {
+      "key": "cosmic_self",
+      "emoji": "✨",
+      "gradient": [
+        "#6366F1",
+        "#A855F7"
+      ],
+      "nameKey": "coll_cosmic_self",
+      "descKey": "coll_desc_cosmic_self",
+      "packs": [
+        "zodiacenergy",
+        "moonphase",
+        "cosmiclove"
+      ],
+      "mode": "self",
+      "badge": "new"
     }
   ]
 }
