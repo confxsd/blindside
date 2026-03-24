@@ -1,5 +1,67 @@
 // i18n + cycleLang + updateLangCycleBtn are loaded from lang.js
 
+// ==================== Premium system ====================
+const FREE_PACKS = ['couples', 'bestfriends', 'attachment', 'lovelang'];
+let isPremium = localStorage.getItem('bs-premium') === 'true';
+
+function isPackFree(key) {
+  return FREE_PACKS.includes(key);
+}
+
+function mockPurchasePremium() {
+  isPremium = true;
+  localStorage.setItem('bs-premium', 'true');
+  localStorage.setItem('bs-premium-date', new Date().toISOString());
+  closePremiumModal();
+  renderPacksGrid();
+  if (currentScreen === 'profile') renderProfile();
+}
+
+function cancelPremium() {
+  if (!confirm(i18n.t('profile_cancel_confirm'))) return;
+  isPremium = false;
+  localStorage.removeItem('bs-premium');
+  localStorage.removeItem('bs-premium-date');
+  renderProfile();
+  renderPacksGrid();
+}
+
+function showPremiumModal(packKey) {
+  const modal = document.getElementById('premiumModal');
+  if (!modal) return;
+  // Update dynamic content
+  const packDef = packDefs.find(p => p.key === packKey);
+  const banner = modal.querySelector('.premium-pack-banner');
+  if (banner && packDef) {
+    banner.innerHTML = `<span class="premium-pack-emoji">${packDef.emoji}</span> <span>${i18n.t(packDef.nameKey)}</span> <span class="premium-pack-badge">${i18n.t('premium_lock_label')}</span>`;
+    banner.style.display = '';
+  } else if (banner) {
+    banner.style.display = 'none';
+  }
+  // Update i18n texts (safe — skip if element missing)
+  const _t = (sel, key) => { const el = modal.querySelector(sel); if (el) el.textContent = i18n.t(key); };
+  _t('.premium-modal-title', 'premium_title');
+  _t('.premium-modal-subtitle', 'premium_subtitle');
+  _t('.premium-price-current', 'premium_price');
+  _t('.premium-price-period', 'premium_period');
+  _t('.premium-price-was', 'premium_was_price');
+  _t('.premium-limited-tag', 'premium_limited');
+  _t('.premium-cta-btn', 'premium_cta');
+  _t('.premium-trial-note', 'premium_trial_note');
+  _t('.premium-social-proof', 'premium_social_proof');
+  _t('.premium-guarantee', 'premium_guarantee');
+  _t('.premium-restore-btn', 'premium_restore');
+  const features = modal.querySelectorAll('.premium-feature-text');
+  const featureKeys = ['premium_feature_packs', 'premium_feature_insights', 'premium_feature_advisor', 'premium_feature_unlimited'];
+  features.forEach((el, i) => { if (featureKeys[i]) el.textContent = i18n.t(featureKeys[i]); });
+
+  modal.classList.add('show');
+}
+
+function closePremiumModal() {
+  document.getElementById('premiumModal')?.classList.remove('show');
+}
+
 // ==================== Theme system ====================
 let currentThemeMode = localStorage.getItem('bs-theme') || 'light';
 let currentAccent = localStorage.getItem('bs-accent') || 'sunset';
@@ -763,17 +825,21 @@ function renderPacksFeatured() {
   const featured = packDefs.filter(p => p.featured && (isSelf ? p.solo : !p.solo));
   const featuredSection = document.getElementById('packsFeaturedSection');
   if (featuredSection) featuredSection.style.display = featured.length ? '' : 'none';
-  el.innerHTML = featured.map((p, idx) =>
-    `<div class="featured-card" style="animation-delay:${idx * 0.1}s" onclick="selectPack('${p.key}')">
-      <div class="featured-badge ${p.featuredBadge}">${i18n.t('badge_' + p.featuredBadge)}</div>
+  el.innerHTML = featured.map((p, idx) => {
+    const locked = !isPremium && !isPackFree(p.key);
+    const badgeHtml = locked
+      ? `<span class="lock-pill"></span>`
+      : `<div class="featured-badge ${p.featuredBadge}">${i18n.t('badge_' + p.featuredBadge)}</div>`;
+    return `<div class="featured-card ${locked ? 'pack-locked' : ''}" style="animation-delay:${idx * 0.1}s" onclick="selectPack('${p.key}')">
+      ${badgeHtml}
       <div class="featured-emoji">${p.emoji}</div>
       <div class="featured-title">${i18n.t(p.nameKey)}</div>
       <div class="featured-desc">${i18n.t(p.descKey)}</div>
       <div class="featured-meta">
         <span class="meta-plays">${p.plays} ${i18n.t('packs_played')}</span>
       </div>
-    </div>`
-  ).join('');
+    </div>`;
+  }).join('');
 }
 
 // Render collection cards
@@ -797,12 +863,13 @@ function renderCollections() {
       const def = packDefs.find(p => p.key === key);
       return def ? def.emoji : '';
     }).join('');
-    return `<div class="collection-card" style="animation-delay:${idx * 0.06}s" onclick="openCollection('${c.key}')">
+    const collAllLocked = !isPremium && c.packs.every(k => !isPackFree(k));
+    return `<div class="collection-card ${collAllLocked ? 'pack-locked' : ''}" style="animation-delay:${idx * 0.06}s" onclick="openCollection('${c.key}')">
       <div class="coll-card-bg" style="background:linear-gradient(135deg,${c.gradient[0]},${c.gradient[1]})"></div>
       <div class="coll-card-content">
         <div class="coll-card-top">
           <span class="coll-emoji">${c.emoji}</span>
-          ${badgeHtml}
+          ${collAllLocked ? `<span class="lock-pill"></span>` : badgeHtml}
         </div>
         <div class="coll-card-title">${i18n.t(c.nameKey)}</div>
         <div class="coll-card-desc">${i18n.t(c.descKey)}</div>
@@ -848,10 +915,11 @@ function renderCollectionDetail() {
 
   const packs = coll.packs.map(key => packDefs.find(p => p.key === key)).filter(Boolean);
   grid.innerHTML = packs.map((p, idx) => {
-    const badgeHtml = p.badge
+    const locked = !isPremium && !isPackFree(p.key);
+    const badgeHtml = locked ? '' : (p.badge
       ? `<span class="pack-badge badge-${p.badge}">${i18n.t('badge_' + p.badge)}</span>`
-      : '';
-    return `<div class="pack-card glass" style="animation-delay:${idx * 0.04}s" onclick="selectPack('${p.key}')">
+      : '');
+    return `<div class="pack-card glass ${locked ? 'pack-locked' : ''}" style="animation-delay:${idx * 0.04}s" onclick="selectPack('${p.key}')">
       <div class="pack-emoji">${p.emoji}</div>
       <div class="pack-info">
         <div class="pack-title">${i18n.t(p.nameKey)}</div>
@@ -861,7 +929,7 @@ function renderCollectionDetail() {
           ${badgeHtml}
         </div>
       </div>
-      <span class="pack-arrow">›</span>
+      ${locked ? `<span class="lock-pill"></span>` : `<span class="pack-arrow">›</span>`}
     </div>`;
   }).join('');
 }
@@ -873,10 +941,11 @@ function renderPacksGridCards() {
   const isSelf = activePackMode === 'self';
   let filtered = packDefs.filter(p => isSelf ? p.solo : !p.solo);
   grid.innerHTML = filtered.map((p, idx) => {
-    const badgeHtml = p.badge
+    const locked = !isPremium && !isPackFree(p.key);
+    const badgeHtml = locked ? '' : (p.badge
       ? `<span class="pack-badge badge-${p.badge}">${i18n.t('badge_' + p.badge)}</span>`
-      : '';
-    return `<div class="pack-card glass" style="animation-delay:${idx * 0.04}s" onclick="selectPack('${p.key}')">
+      : '');
+    return `<div class="pack-card glass ${locked ? 'pack-locked' : ''}" style="animation-delay:${idx * 0.04}s" onclick="selectPack('${p.key}')">
       <div class="pack-emoji">${p.emoji}</div>
       <div class="pack-info">
         <div class="pack-title">${i18n.t(p.nameKey)}</div>
@@ -886,7 +955,7 @@ function renderPacksGridCards() {
           ${badgeHtml}
         </div>
       </div>
-      <span class="pack-arrow">›</span>
+      ${locked ? `<span class="lock-pill"></span>` : `<span class="pack-arrow">›</span>`}
     </div>`;
   }).join('');
 }
@@ -927,16 +996,150 @@ function goTo(screenId) {
     if (screenId === 'home') { updateNav('home'); stopPolling(); loadHomeSessions(); }
     if (screenId === 'packs') { updateNav('packs'); renderPacksGrid(); }
     if (screenId === 'collectionDetail') { updateNav('packs'); renderCollectionDetail(); }
+    if (screenId === 'profile') { updateNav('profile'); renderProfile(); }
   }, 200);
 }
 
 function updateNav(active) {
-  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
-  // This is cosmetic
+  document.querySelectorAll('.nav-item').forEach(n => {
+    n.classList.toggle('active', n.dataset.nav === active);
+  });
+}
+
+// ==================== Profile screen ====================
+function goToProfile() {
+  renderProfile();
+  goTo('profile');
+}
+
+function renderProfile() {
+  const container = document.getElementById('profileContent');
+  if (!container) return;
+
+  const username = currentUser ? currentUser.username : 'guest';
+  const initial = username.charAt(0).toUpperCase();
+  const sessionCount = _cachedSessions ? _cachedSessions.length : 0;
+  const completedCount = _cachedSessions ? _cachedSessions.filter(s => s.status === 'complete').length : 0;
+  const packsPlayed = _cachedSessions ? [...new Set(_cachedSessions.map(s => s.pack_key))].length : 0;
+
+  // Premium start date (mock — stored when purchased)
+  const premiumStart = localStorage.getItem('bs-premium-date') || '';
+  const renewDate = premiumStart ? new Date(new Date(premiumStart).getTime() + 30 * 86400000).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : '';
+
+  const premiumSection = isPremium ? `
+    <div class="profile-plan-card profile-plan-active">
+      <div class="profile-plan-top">
+        <div class="profile-plan-icon">+</div>
+        <div>
+          <div class="profile-plan-name">blindside+</div>
+          <div class="profile-plan-badge">${i18n.t('profile_plan_active')}</div>
+        </div>
+      </div>
+      <div class="profile-billing-rows">
+        <div class="profile-billing-row">
+          <span class="profile-billing-label">${i18n.t('profile_plan_label')}</span>
+          <span class="profile-billing-value">${i18n.t('premium_price')}${i18n.t('premium_period')}</span>
+        </div>
+        <div class="profile-billing-row">
+          <span class="profile-billing-label">${i18n.t('profile_next_billing')}</span>
+          <span class="profile-billing-value">${renewDate || '—'}</span>
+        </div>
+        <div class="profile-billing-row">
+          <span class="profile-billing-label">${i18n.t('profile_payment')}</span>
+          <span class="profile-billing-value">•••• 4242</span>
+        </div>
+      </div>
+      <div class="profile-plan-actions">
+        <button class="profile-plan-action-btn" onclick="alert('${i18n.t('profile_manage_info')}')">${i18n.t('profile_manage')}</button>
+        <button class="profile-plan-action-btn profile-plan-cancel" onclick="cancelPremium()">${i18n.t('profile_cancel')}</button>
+      </div>
+    </div>
+  ` : `
+    <div class="profile-upgrade-card" onclick="showPremiumModal('')">
+      <div class="profile-upgrade-top">
+        <div class="profile-upgrade-icon">+</div>
+        <div class="profile-upgrade-info">
+          <div class="profile-upgrade-title">${i18n.t('premium_title')}</div>
+          <div class="profile-upgrade-desc">${i18n.t('premium_subtitle')}</div>
+        </div>
+      </div>
+      <div class="profile-upgrade-features">
+        <span>${i18n.t('profile_feat_packs')}</span>
+        <span>${i18n.t('profile_feat_insights')}</span>
+        <span>${i18n.t('profile_feat_advisor')}</span>
+      </div>
+      <div class="profile-upgrade-bottom">
+        <div class="profile-upgrade-price">
+          <span class="profile-price-was">${i18n.t('premium_was_price')}</span>
+          <span class="profile-price-now">${i18n.t('premium_price')}${i18n.t('premium_period')}</span>
+        </div>
+        <div class="profile-upgrade-cta">${i18n.t('premium_cta')}</div>
+      </div>
+      <div class="profile-upgrade-note">${i18n.t('premium_trial_note')}</div>
+    </div>
+  `;
+
+  container.innerHTML = `
+    <div class="profile-header">
+      <div class="profile-avatar">${initial}</div>
+      <div class="profile-name">@${username}</div>
+      ${isGuest ? `<div class="profile-guest-tag">guest</div>` : ''}
+    </div>
+
+    <div class="profile-stats">
+      <div class="profile-stat">
+        <div class="profile-stat-val">${sessionCount}</div>
+        <div class="profile-stat-lbl">${i18n.t('profile_sessions')}</div>
+      </div>
+      <div class="profile-stat">
+        <div class="profile-stat-val">${completedCount}</div>
+        <div class="profile-stat-lbl">${i18n.t('profile_completed')}</div>
+      </div>
+      <div class="profile-stat">
+        <div class="profile-stat-val">${packsPlayed}</div>
+        <div class="profile-stat-lbl">${i18n.t('profile_packs_tried')}</div>
+      </div>
+    </div>
+
+    ${premiumSection}
+
+    <div class="profile-section-label">${i18n.t('profile_settings')}</div>
+    <div class="profile-menu">
+      <button class="profile-menu-item" onclick="toggleSettings()">
+        <span class="profile-menu-icon">🎨</span>
+        <span>${i18n.t('profile_theme')}</span>
+        <span class="profile-menu-arrow">›</span>
+      </button>
+      <button class="profile-menu-item" onclick="cycleLang()">
+        <span class="profile-menu-icon">🌐</span>
+        <span>${i18n.t('profile_language')}</span>
+        <span class="profile-menu-arrow">›</span>
+      </button>
+    </div>
+
+    <div class="profile-section-label">${i18n.t('profile_account')}</div>
+    <div class="profile-menu">
+      ${isGuest ? `<button class="profile-menu-item" onclick="showSaveAccountModal()">
+        <span class="profile-menu-icon">💾</span>
+        <span>${i18n.t('profile_save_account')}</span>
+        <span class="profile-menu-arrow">›</span>
+      </button>` : ''}
+      <button class="profile-menu-item profile-menu-danger" onclick="switchUser()">
+        <span class="profile-menu-icon">👋</span>
+        <span>${i18n.t('profile_logout')}</span>
+        <span class="profile-menu-arrow">›</span>
+      </button>
+    </div>
+  `;
 }
 
 // Pack selection
 async function selectPack(key) {
+  // Premium gate
+  if (!isPremium && !isPackFree(key)) {
+    showPremiumModal(key);
+    return;
+  }
   selectedPackKey = key;
   const def = packDefs.find(p => p.key === key);
   questions = await getQuestions(key);
@@ -1215,7 +1418,7 @@ function renderBlindGuess(body, q) {
     <div class="question-card bg-card ${phaseClass}" key="${currentQuestion}-${blindGuessPhase}">
       <div class="mode-badge">${MODE_LABELS.blindGuess}</div>
       <div class="bg-phase-indicator">
-        <div class="bg-phase-dot ${!isGuessPhase ? 'active' : 'done'}">1</div>
+        <div class="bg-phase-dot ${!isGuessPhase ? 'active' : 'done clickable'}" ${isGuessPhase ? `onclick="revertBlindGuessOwn(${currentQuestion})"` : ''}>1</div>
         <div class="bg-phase-line ${isGuessPhase ? 'filled' : ''}"></div>
         <div class="bg-phase-dot ${isGuessPhase ? 'active' : ''}">2</div>
       </div>
@@ -1256,6 +1459,14 @@ function selectBlindGuess(qi, ans) {
   btns.forEach((btn, i) => {
     btn.classList.toggle('selected', i === ans);
   });
+}
+
+function revertBlindGuessOwn(qi) {
+  selectedAnswers[qi] = undefined;
+  blindGuessPhase = 'own';
+  const body = document.getElementById('quizBody');
+  renderBlindGuess(body, questions[qi]);
+  document.getElementById('quizNextBtn').disabled = true;
 }
 
 function selectAnswer(qIndex, answer, el) {

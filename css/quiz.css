@@ -488,6 +488,22 @@
   border-color: var(--accent-1);
   color: var(--accent-1);
 }
+.bg-phase-dot.done.clickable {
+  cursor: pointer;
+  position: relative;
+}
+.bg-phase-dot.done.clickable::after {
+  content: '↩';
+  position: absolute;
+  top: -16px;
+  font-size: 11px;
+  color: var(--accent-1);
+  animation: badgePop 0.4s ease 0.3s forwards;
+  opacity: 0;
+}
+.bg-phase-dot.done.clickable:active {
+  transform: scale(0.9);
+}
 .bg-phase-line {
   flex: 0 0 40px;
   height: 2px;
@@ -515,19 +531,20 @@
   position: relative;
 }
 .bg-your-badge {
-  display: inline-block;
-  font-size: 10px;
+  position: absolute;
+  top: -8px;
+  right: 8px;
+  font-size: 9px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: var(--accent-1);
-  background: var(--accent-1-bg);
-  border: 1px solid var(--accent-1-border);
+  color: #A855F7;
+  background: rgba(168, 85, 247, 0.15);
+  border: 1px solid rgba(168, 85, 247, 0.3);
   border-radius: 4px;
-  padding: 2px 6px;
-  margin-right: 8px;
+  padding: 1px 6px;
   font-family: 'Syne', sans-serif;
-  vertical-align: middle;
+  line-height: 1.4;
 }
 /* Guess phase selected state uses purple accent */
 .bg-phase-guess .answer-opt.selected {

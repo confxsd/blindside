@@ -340,9 +340,9 @@
 
 /* Show more pagination */
 .show-more-btn {
-  width: 100%;
+  width: calc(100% - 48px);
   padding: 14px;
-  margin: 8px 0 16px;
+  margin: 8px 24px 16px;
   background: var(--surface);
   border: 1px solid rgba(255,255,255,0.06);
   border-radius: 14px;

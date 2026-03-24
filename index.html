@@ -1,624 +1,1287 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="light" data-accent="sunset">
-<script>
-  // Prevent flash — apply saved theme before render
-  (function(){
-    var t = localStorage.getItem('bs-theme') || 'light';
-    var a = localStorage.getItem('bs-accent') || 'sunset';
-    var l = localStorage.getItem('bs-lang') || 'en';
-    document.documentElement.setAttribute('data-theme', t);
-    document.documentElement.setAttribute('data-accent', a);
-    document.documentElement.setAttribute('lang', l);
-  })();
-</script>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<title>blindside. — the couples game that sparks real conversations</title>
-<meta name="description" content="Both answer the same questions blindly, then reveal together. Play the 36 Questions to Fall in Love, couples quizzes, date night games &amp; more. Free to play.">
-<meta name="keywords" content="couples game, relationship questions, date night game, 36 questions to fall in love, couples quiz, how well do you know your partner, questions for couples, blind answers game, relationship game app">
-<link rel="canonical" href="https://blindside.to/">
+  <script>
+    // Prevent flash — apply saved theme before render
+    (function () {
+      var t = localStorage.getItem("bs-theme") || "light";
+      var a = localStorage.getItem("bs-accent") || "sunset";
+      var l = localStorage.getItem("bs-lang") || "en";
+      document.documentElement.setAttribute("data-theme", t);
+      document.documentElement.setAttribute("data-accent", a);
+      document.documentElement.setAttribute("lang", l);
+    })();
+  </script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>blindside. — the couples game that sparks real conversations</title>
+    <meta
+      name="description"
+      content="Both answer the same questions blindly, then reveal together. Play the 36 Questions to Fall in Love, couples quizzes, date night games &amp; more. Free to play."
+    />
+    <meta
+      name="keywords"
+      content="couples game, relationship questions, date night game, 36 questions to fall in love, couples quiz, how well do you know your partner, questions for couples, blind answers game, relationship game app"
+    />
+    <link rel="canonical" href="https://blindside.to/" />
 
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://blindside.to/">
-<meta property="og:title" content="blindside. — same questions. blind answers. one reveal.">
-<meta property="og:description" content="The couples game where you both answer the same questions blindly, then reveal together. Play free — no app download needed.">
-<meta property="og:image" content="https://blindside.to/og-image.png">
-<meta property="og:site_name" content="blindside.">
-<meta property="og:locale" content="en_US">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://blindside.to/" />
+    <meta
+      property="og:title"
+      content="blindside. — same questions. blind answers. one reveal."
+    />
+    <meta
+      property="og:description"
+      content="The couples game where you both answer the same questions blindly, then reveal together. Play free — no app download needed."
+    />
+    <meta property="og:image" content="https://blindside.to/og-image.png" />
+    <meta property="og:site_name" content="blindside." />
+    <meta property="og:locale" content="en_US" />
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="blindside. — same questions. blind answers. one reveal.">
-<meta name="twitter:description" content="The couples game where you both answer the same questions blindly, then reveal together. Free to play.">
-<meta name="twitter:image" content="https://blindside.to/og-image.png">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="blindside. — same questions. blind answers. one reveal."
+    />
+    <meta
+      name="twitter:description"
+      content="The couples game where you both answer the same questions blindly, then reveal together. Free to play."
+    />
+    <meta name="twitter:image" content="https://blindside.to/og-image.png" />
 
-<!-- Structured Data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "blindside",
-  "url": "https://blindside.to",
-  "description": "A couples game where both partners answer the same questions blindly, then reveal answers together. Features 30+ question packs including the famous 36 Questions to Fall in Love, date night games, couples quizzes, and self-discovery tests.",
-  "applicationCategory": "GameApplication",
-  "operatingSystem": "Web",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "ratingCount": "2400"
-  },
-  "featureList": [
-    "36 Questions to Fall in Love",
-    "Couples quiz packs",
-    "Date night question games",
-    "Blind answer reveal mechanic",
-    "Self-discovery personality tests",
-    "Attachment style quiz",
-    "Love language quiz",
-    "Red flags quiz",
-    "Multiplayer with partner",
-    "No app download required"
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is blindside?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "blindside is a free couples game where both partners answer the same questions independently (blindly), and answers are only revealed once both have submitted. It sparks real, honest conversations about your relationship."
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "blindside",
+        "url": "https://blindside.to",
+        "description": "A couples game where both partners answer the same questions blindly, then reveal answers together. Features 30+ question packs including the famous 36 Questions to Fall in Love, date night games, couples quizzes, and self-discovery tests.",
+        "applicationCategory": "GameApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "ratingCount": "2400"
+        },
+        "featureList": [
+          "36 Questions to Fall in Love",
+          "Couples quiz packs",
+          "Date night question games",
+          "Blind answer reveal mechanic",
+          "Self-discovery personality tests",
+          "Attachment style quiz",
+          "Love language quiz",
+          "Red flags quiz",
+          "Multiplayer with partner",
+          "No app download required"
+        ]
       }
-    },
-    {
-      "@type": "Question",
-      "name": "How do you play blindside?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Pick a question pack, share the invite link with your partner, both answer the same questions privately, and then reveal your answers together. No app download needed — it works in your browser."
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is blindside?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "blindside is a free couples game where both partners answer the same questions independently (blindly), and answers are only revealed once both have submitted. It sparks real, honest conversations about your relationship."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you play blindside?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pick a question pack, share the invite link with your partner, both answer the same questions privately, and then reveal your answers together. No app download needed — it works in your browser."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is blindside free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, blindside is completely free to play. All question packs are available at no cost, with no ads or hidden fees."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What question packs are available?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "blindside offers 30+ packs including: 36 Questions to Fall in Love, Couples Edition, Hot Takes, Red Flags, Deep Talk, Best Friends, Attachment Style quiz, Love Language quiz, and many more for couples, friends, and self-discovery."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I play blindside alone?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! blindside has solo packs for self-discovery including Attachment Style, Love Language, Inner Mirror, Shadow Self, Emotional Age, and more. These don't require a partner."
+            }
+          }
+        ]
       }
-    },
-    {
-      "@type": "Question",
-      "name": "Is blindside free?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, blindside is completely free to play. All question packs are available at no cost, with no ads or hidden fees."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What question packs are available?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "blindside offers 30+ packs including: 36 Questions to Fall in Love, Couples Edition, Hot Takes, Red Flags, Deep Talk, Best Friends, Attachment Style quiz, Love Language quiz, and many more for couples, friends, and self-discovery."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I play blindside alone?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes! blindside has solo packs for self-discovery including Attachment Style, Love Language, Inner Mirror, Shadow Self, Emotional Age, and more. These don't require a partner."
-      }
-    }
-  ]
-}
-</script>
+    </script>
 
-<link rel="alternate" type="text/plain" href="https://blindside.to/llms.txt" title="LLM Information">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<div id="app">
-
-  <!-- SPLASH -->
-  <div id="splash" class="screen active">
-    <div class="logo-mark">🫣</div>
-    <h1 class="syne logo-text">blindside.</h1>
-    <p class="tagline" data-i18n="splash_tagline">same questions. blind answers. one reveal.</p>
-    <div class="splash-cta">
-      <button class="btn btn-primary" onclick="showAuth('onboarding')" data-i18n="splash_get_started">get started</button>
-      <button class="btn btn-ghost" onclick="showAuth('home')" data-i18n="splash_have_account">i have an account</button>
-    </div>
-    <div class="lang-selector" id="langSelector"></div>
-  </div>
-
-  <!-- AUTH -->
-  <div id="auth" class="screen">
-    <!-- Step 1: Username -->
-    <div id="authStep1" class="auth-step">
-      <div class="logo-mark" style="font-size:48px">🫣</div>
-      <h2 class="syne" style="font-size:22px;letter-spacing:-0.5px" data-i18n="auth_pick_username">pick a username</h2>
-      <p style="font-size:13px;color:var(--text-dim);margin-bottom:24px" data-i18n="auth_pick_subtitle">just a name so your partner knows it's you</p>
-      <input type="text" id="authUsername" class="auth-input" data-i18n-placeholder="guest_placeholder" placeholder="your name..." maxlength="20" autocomplete="off" autocapitalize="off">
-      <div id="authError" class="auth-error"></div>
-      <button class="btn btn-primary" style="width:100%;margin-top:12px" onclick="doAuthStep1()" id="authBtn" data-i18n="auth_continue">continue</button>
-    </div>
-
-    <!-- Step 2: Login (existing user) -->
-    <div id="authStep2Login" class="auth-step" style="display:none">
-      <div style="font-size:48px;margin-bottom:8px">👋</div>
-      <h2 class="syne" style="font-size:22px;letter-spacing:-0.5px" data-i18n="auth_welcome_back">welcome back</h2>
-      <p class="auth-greeting" id="loginGreeting" style="font-size:14px;color:var(--text-mid);margin-bottom:20px"></p>
-      <input type="password" id="loginPassword" class="auth-input" data-i18n-placeholder="auth_password_placeholder" placeholder="your password..." autocomplete="current-password">
-      <div id="loginError" class="auth-error"></div>
-      <button class="btn btn-primary" style="width:100%;margin-top:12px" onclick="doLogin()" id="loginBtn" data-i18n="auth_sign_in">sign in</button>
-      <button class="btn btn-ghost" style="width:100%" onclick="authGoBack()" data-i18n="auth_back">back</button>
-    </div>
-
-    <!-- Step 2: Signup (new user) -->
-    <div id="authStep2Signup" class="auth-step" style="display:none">
-      <div style="font-size:48px;margin-bottom:8px">✌️</div>
-      <h2 class="syne" style="font-size:22px;letter-spacing:-0.5px" data-i18n="auth_create_account_title">create your account</h2>
-      <p class="auth-greeting" id="signupGreeting" style="font-size:14px;color:var(--text-mid);margin-bottom:20px"></p>
-      <input type="password" id="signupPassword" class="auth-input" data-i18n-placeholder="auth_create_password_placeholder" placeholder="create a password..." autocomplete="new-password">
-      <input type="password" id="signupPasswordConfirm" class="auth-input" data-i18n-placeholder="auth_confirm_password_placeholder" placeholder="confirm password..." autocomplete="new-password" style="margin-top:8px">
-      <div id="signupError" class="auth-error"></div>
-      <button class="btn btn-primary" style="width:100%;margin-top:12px" onclick="doSignup()" id="signupBtn" data-i18n="auth_create_account">create account</button>
-      <button class="btn btn-ghost" style="width:100%" onclick="authGoBack()" data-i18n="auth_back">back</button>
-    </div>
-  </div>
-
-  <!-- GUEST AUTH (join via invite link) -->
-  <div id="guestAuth" class="screen">
-    <div class="invite-pill" data-i18n="guest_invited">you've been invited! 🎉</div>
-    <div style="font-size:48px;margin-bottom:8px">🤝</div>
-    <h2 class="syne" style="font-size:22px;letter-spacing:-0.5px" data-i18n="guest_title">join the game</h2>
-    <p style="font-size:13px;color:var(--text-dim);margin-bottom:24px" data-i18n="guest_subtitle">enter a display name to start playing</p>
-    <input type="text" id="guestName" class="auth-input" data-i18n-placeholder="guest_placeholder" placeholder="your name..." maxlength="20" autocomplete="off" autocapitalize="off">
-    <div id="guestAuthError" class="auth-error"></div>
-    <button class="btn btn-primary" style="width:100%;margin-top:12px" onclick="doGuestAuth()" id="guestAuthBtn" data-i18n="guest_play">play as guest</button>
-    <button class="btn btn-ghost" style="width:100%" onclick="guestToFullAuth()" data-i18n="guest_have_account">i have an account</button>
-    <div class="lang-selector" id="guestLangSelector"></div>
-  </div>
-
-  <!-- ONBOARDING -->
-  <div id="onboarding" class="screen">
-    <h2 class="syne" style="font-size:22px;letter-spacing:-0.5px;" data-i18n="onboarding_title">how it works</h2>
-    <div class="onboarding-slides">
-      <div class="onboarding-slide">
-        <div class="slide-emoji">🎯</div>
-        <div class="slide-title" data-i18n="onboarding_step1_title">pick a pack</div>
-        <div class="slide-desc" data-i18n="onboarding_step1_desc">choose a question pack that matches your vibe</div>
+    <link
+      rel="alternate"
+      type="text/plain"
+      href="https://blindside.to/llms.txt"
+      title="LLM Information"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- SPLASH -->
+      <div id="splash" class="screen active">
+        <div class="logo-mark">🫣</div>
+        <h1 class="syne logo-text">blindside.</h1>
+        <p class="tagline" data-i18n="splash_tagline">
+          same questions. blind answers. one reveal.
+        </p>
+        <div class="splash-cta">
+          <button
+            class="btn btn-primary"
+            onclick="showAuth('onboarding')"
+            data-i18n="splash_get_started"
+          >
+            get started
+          </button>
+          <button
+            class="btn btn-ghost"
+            onclick="showAuth('home')"
+            data-i18n="splash_have_account"
+          >
+            i have an account
+          </button>
+        </div>
+        <div class="lang-selector" id="langSelector"></div>
       </div>
-      <div class="onboarding-slide">
-        <div class="slide-emoji">🤫</div>
-        <div class="slide-title" data-i18n="onboarding_step2_title">answer privately</div>
-        <div class="slide-desc" data-i18n="onboarding_step2_desc">both of you answer the same questions — no peeking</div>
-      </div>
-      <div class="onboarding-slide">
-        <div class="slide-emoji">🔮</div>
-        <div class="slide-title" data-i18n="onboarding_step3_title">reveal together</div>
-        <div class="slide-desc" data-i18n="onboarding_step3_desc">answers unlock only when you've both submitted</div>
-      </div>
-    </div>
-    <button class="btn btn-primary" style="width:100%" onclick="goTo('home')" data-i18n="onboarding_cta">let's go</button>
-  </div>
 
-  <!-- HOME -->
-  <div id="home" class="screen">
-    <div class="home-header">
-      <div class="home-brand">
-        <h1>blindside.</h1>
-        <span id="homeUsername" style="font-size:13px;color:var(--text-dim);cursor:pointer" onclick="switchUser()" title="switch user"></span>
+      <!-- AUTH -->
+      <div id="auth" class="screen">
+        <!-- Step 1: Username -->
+        <div id="authStep1" class="auth-step">
+          <div class="logo-mark" style="font-size: 48px">🫣</div>
+          <h2
+            class="syne"
+            style="font-size: 22px; letter-spacing: -0.5px"
+            data-i18n="auth_pick_username"
+          >
+            pick a username
+          </h2>
+          <p
+            style="font-size: 13px; color: var(--text-dim); margin-bottom: 24px"
+            data-i18n="auth_pick_subtitle"
+          >
+            just a name so your partner knows it's you
+          </p>
+          <input
+            type="text"
+            id="authUsername"
+            class="auth-input"
+            data-i18n-placeholder="guest_placeholder"
+            placeholder="your name..."
+            maxlength="20"
+            autocomplete="off"
+            autocapitalize="off"
+          />
+          <div id="authError" class="auth-error"></div>
+          <button
+            class="btn btn-primary"
+            style="width: 100%; margin-top: 12px"
+            onclick="doAuthStep1()"
+            id="authBtn"
+            data-i18n="auth_continue"
+          >
+            continue
+          </button>
+        </div>
+
+        <!-- Step 2: Login (existing user) -->
+        <div id="authStep2Login" class="auth-step" style="display: none">
+          <div style="font-size: 48px; margin-bottom: 8px">👋</div>
+          <h2
+            class="syne"
+            style="font-size: 22px; letter-spacing: -0.5px"
+            data-i18n="auth_welcome_back"
+          >
+            welcome back
+          </h2>
+          <p
+            class="auth-greeting"
+            id="loginGreeting"
+            style="font-size: 14px; color: var(--text-mid); margin-bottom: 20px"
+          ></p>
+          <input
+            type="password"
+            id="loginPassword"
+            class="auth-input"
+            data-i18n-placeholder="auth_password_placeholder"
+            placeholder="your password..."
+            autocomplete="current-password"
+          />
+          <div id="loginError" class="auth-error"></div>
+          <button
+            class="btn btn-primary"
+            style="width: 100%; margin-top: 12px"
+            onclick="doLogin()"
+            id="loginBtn"
+            data-i18n="auth_sign_in"
+          >
+            sign in
+          </button>
+          <button
+            class="btn btn-ghost"
+            style="width: 100%"
+            onclick="authGoBack()"
+            data-i18n="auth_back"
+          >
+            back
+          </button>
+        </div>
+
+        <!-- Step 2: Signup (new user) -->
+        <div id="authStep2Signup" class="auth-step" style="display: none">
+          <div style="font-size: 48px; margin-bottom: 8px">✌️</div>
+          <h2
+            class="syne"
+            style="font-size: 22px; letter-spacing: -0.5px"
+            data-i18n="auth_create_account_title"
+          >
+            create your account
+          </h2>
+          <p
+            class="auth-greeting"
+            id="signupGreeting"
+            style="font-size: 14px; color: var(--text-mid); margin-bottom: 20px"
+          ></p>
+          <input
+            type="password"
+            id="signupPassword"
+            class="auth-input"
+            data-i18n-placeholder="auth_create_password_placeholder"
+            placeholder="create a password..."
+            autocomplete="new-password"
+          />
+          <input
+            type="password"
+            id="signupPasswordConfirm"
+            class="auth-input"
+            data-i18n-placeholder="auth_confirm_password_placeholder"
+            placeholder="confirm password..."
+            autocomplete="new-password"
+            style="margin-top: 8px"
+          />
+          <div id="signupError" class="auth-error"></div>
+          <button
+            class="btn btn-primary"
+            style="width: 100%; margin-top: 12px"
+            onclick="doSignup()"
+            id="signupBtn"
+            data-i18n="auth_create_account"
+          >
+            create account
+          </button>
+          <button
+            class="btn btn-ghost"
+            style="width: 100%"
+            onclick="authGoBack()"
+            data-i18n="auth_back"
+          >
+            back
+          </button>
+        </div>
       </div>
-      <div class="home-actions">
-        <button class="theme-toggle" onclick="cycleLang()" title="Language" id="langCycleBtn" style="font-size:13px;font-weight:700;font-family:'DM Sans',sans-serif">
-          <span id="langCycleFlag"></span>
+
+      <!-- GUEST AUTH (join via invite link) -->
+      <div id="guestAuth" class="screen">
+        <div class="invite-pill" data-i18n="guest_invited">
+          you've been invited! 🎉
+        </div>
+        <div style="font-size: 48px; margin-bottom: 8px">🤝</div>
+        <h2
+          class="syne"
+          style="font-size: 22px; letter-spacing: -0.5px"
+          data-i18n="guest_title"
+        >
+          join the game
+        </h2>
+        <p
+          style="font-size: 13px; color: var(--text-dim); margin-bottom: 24px"
+          data-i18n="guest_subtitle"
+        >
+          enter a display name to start playing
+        </p>
+        <input
+          type="text"
+          id="guestName"
+          class="auth-input"
+          data-i18n-placeholder="guest_placeholder"
+          placeholder="your name..."
+          maxlength="20"
+          autocomplete="off"
+          autocapitalize="off"
+        />
+        <div id="guestAuthError" class="auth-error"></div>
+        <button
+          class="btn btn-primary"
+          style="width: 100%; margin-top: 12px"
+          onclick="doGuestAuth()"
+          id="guestAuthBtn"
+          data-i18n="guest_play"
+        >
+          play as guest
         </button>
-        <button class="theme-toggle" onclick="toggleSettings()" title="Customize">
-          <span class="icon-moon">🌙</span>
-          <span class="icon-sun">☀️</span>
+        <button
+          class="btn btn-ghost"
+          style="width: 100%"
+          onclick="guestToFullAuth()"
+          data-i18n="guest_have_account"
+        >
+          i have an account
         </button>
-        <button class="theme-toggle" onclick="switchUser()" title="Logout" style="font-size:14px">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+        <div class="lang-selector" id="guestLangSelector"></div>
+      </div>
+
+      <!-- ONBOARDING -->
+      <div id="onboarding" class="screen">
+        <h2
+          class="syne"
+          style="font-size: 22px; letter-spacing: -0.5px"
+          data-i18n="onboarding_title"
+        >
+          how it works
+        </h2>
+        <div class="onboarding-slides">
+          <div class="onboarding-slide">
+            <div class="slide-emoji">🎯</div>
+            <div class="slide-title" data-i18n="onboarding_step1_title">
+              pick a pack
+            </div>
+            <div class="slide-desc" data-i18n="onboarding_step1_desc">
+              choose a question pack that matches your vibe
+            </div>
+          </div>
+          <div class="onboarding-slide">
+            <div class="slide-emoji">🤫</div>
+            <div class="slide-title" data-i18n="onboarding_step2_title">
+              answer privately
+            </div>
+            <div class="slide-desc" data-i18n="onboarding_step2_desc">
+              both of you answer the same questions — no peeking
+            </div>
+          </div>
+          <div class="onboarding-slide">
+            <div class="slide-emoji">🔮</div>
+            <div class="slide-title" data-i18n="onboarding_step3_title">
+              reveal together
+            </div>
+            <div class="slide-desc" data-i18n="onboarding_step3_desc">
+              answers unlock only when you've both submitted
+            </div>
+          </div>
+        </div>
+        <button
+          class="btn btn-primary"
+          style="width: 100%"
+          onclick="goTo('home')"
+          data-i18n="onboarding_cta"
+        >
+          let's go
         </button>
       </div>
-    </div>
 
-    <div class="home-tabs" id="homeTabs">
-      <button class="home-tab active" data-filter="all" onclick="setHomeFilter('all')" data-i18n="home_all">All</button>
-      <button class="home-tab" data-filter="active" onclick="setHomeFilter('active')" data-i18n="home_active">Active</button>
-      <button class="home-tab" data-filter="completed" onclick="setHomeFilter('completed')" data-i18n="home_completed">Completed</button>
-    </div>
+      <!-- HOME -->
+      <div id="home" class="screen">
+        <div class="home-header">
+          <div class="home-brand">
+            <h1>blindside.</h1>
+            <span
+              id="homeUsername"
+              style="font-size: 13px; color: var(--text-dim); cursor: pointer"
+              onclick="switchUser()"
+              title="switch user"
+            ></span>
+          </div>
+          <div class="home-actions">
+            <button
+              class="theme-toggle"
+              onclick="cycleLang()"
+              title="Language"
+              id="langCycleBtn"
+              style="
+                font-size: 13px;
+                font-weight: 700;
+                font-family: &quot;DM Sans&quot;, sans-serif;
+              "
+            >
+              <span id="langCycleFlag"></span>
+            </button>
+            <button
+              class="theme-toggle"
+              onclick="toggleSettings()"
+              title="Customize"
+            >
+              <span class="icon-moon">🌙</span>
+              <span class="icon-sun">☀️</span>
+            </button>
+          </div>
+        </div>
 
-    <div class="fab-wrap">
-      <button class="fab" onclick="goTo('packs')" data-i18n="home_new_session">+ new session</button>
-    </div>
+        <div class="home-tabs" id="homeTabs">
+          <button
+            class="home-tab active"
+            data-filter="all"
+            onclick="setHomeFilter('all')"
+            data-i18n="home_all"
+          >
+            All
+          </button>
+          <button
+            class="home-tab"
+            data-filter="active"
+            onclick="setHomeFilter('active')"
+            data-i18n="home_active"
+          >
+            Active
+          </button>
+          <button
+            class="home-tab"
+            data-filter="completed"
+            onclick="setHomeFilter('completed')"
+            data-i18n="home_completed"
+          >
+            Completed
+          </button>
+        </div>
 
-    <div id="homeSessions"></div>
+        <div class="fab-wrap">
+          <button
+            class="fab"
+            onclick="goTo('packs')"
+            data-i18n="home_new_session"
+          >
+            + new session
+          </button>
+        </div>
 
-    <nav class="bottom-nav" id="bottomNav">
-      <button class="nav-item active" onclick="goTo('home')">
-        <span class="nav-icon">🏠</span>
-        <span data-i18n="nav_home">Home</span>
-      </button>
-      <button class="nav-item" onclick="goTo('packs')">
-        <span class="nav-icon">🃏</span>
-        <span data-i18n="nav_packs">Decks</span>
-      </button>
-    </nav>
-  </div>
+        <div id="homeSessions"></div>
 
-  <!-- PACKS (Collections Browse) -->
-  <div id="packs" class="screen">
-    <div class="packs-header">
-      <div class="top-bar">
-        <button class="btn-icon" onclick="goTo('home')">←</button>
-        <h2 data-i18n="nav_packs">decks</h2>
+        <nav class="bottom-nav" id="bottomNav">
+          <button class="nav-item active" data-nav="home" onclick="goTo('home')">
+            <span class="nav-icon">🏠</span>
+            <span data-i18n="nav_home">Home</span>
+          </button>
+          <button class="nav-item" data-nav="packs" onclick="goTo('packs')">
+            <span class="nav-icon">🃏</span>
+            <span data-i18n="nav_packs">Decks</span>
+          </button>
+          <button class="nav-item" data-nav="profile" onclick="goToProfile()">
+            <span class="nav-icon">✦</span>
+            <span data-i18n="nav_profile">You</span>
+          </button>
+        </nav>
       </div>
 
-      <!-- Mode toggle: Partner / Self -->
-      <div class="mode-toggle" id="modeToggle">
-        <button class="mode-toggle-btn active" data-mode="partner" onclick="setPackMode('partner')">
-          <span class="mode-icon">👥</span> <span data-i18n="mode_partner">Partner</span>
+      <!-- PACKS (Collections Browse) -->
+      <div id="packs" class="screen">
+        <div class="packs-header">
+          <div class="top-bar">
+            <button class="btn-icon" onclick="goTo('home')">←</button>
+            <h2 data-i18n="nav_packs">decks</h2>
+          </div>
+
+          <!-- Mode toggle: Partner / Self -->
+          <div class="mode-toggle" id="modeToggle">
+            <button
+              class="mode-toggle-btn active"
+              data-mode="partner"
+              onclick="setPackMode('partner')"
+            >
+              <span class="mode-icon">👥</span>
+              <span data-i18n="mode_partner">Partner</span>
+            </button>
+            <button
+              class="mode-toggle-btn"
+              data-mode="self"
+              onclick="setPackMode('self')"
+            >
+              <span class="mode-icon">🪞</span>
+              <span data-i18n="mode_self">Self</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Featured / trending carousel -->
+        <div class="packs-featured" id="packsFeaturedSection">
+          <div class="packs-featured-label">
+            <span class="pulse-dot"></span>
+            <span data-i18n="packs_trending">trending now</span>
+          </div>
+          <div class="featured-scroll" id="packsFeatured"></div>
+        </div>
+
+        <!-- Collections section label -->
+        <div class="packs-section-label" data-i18n="packs_collections">
+          collections
+        </div>
+
+        <!-- Collection cards grid -->
+        <div class="collections-grid" id="collectionsGrid"></div>
+
+        <!-- All packs section label -->
+        <div class="packs-section-label" data-i18n="packs_all">all packs</div>
+
+        <!-- Pack list -->
+        <div class="packs-list" id="packsGrid"></div>
+
+        <nav class="bottom-nav">
+          <button class="nav-item" data-nav="home" onclick="goTo('home')">
+            <span class="nav-icon">🏠</span>
+            <span data-i18n="nav_home">Home</span>
+          </button>
+          <button class="nav-item active" data-nav="packs" onclick="goTo('packs')">
+            <span class="nav-icon">🃏</span>
+            <span data-i18n="nav_packs">Decks</span>
+          </button>
+          <button class="nav-item" data-nav="profile" onclick="goToProfile()">
+            <span class="nav-icon">✦</span>
+            <span data-i18n="nav_profile">You</span>
+          </button>
+        </nav>
+      </div>
+
+      <!-- COLLECTION DETAIL -->
+      <div id="collectionDetail" class="screen">
+        <div class="coll-detail-header" id="collDetailHeader"></div>
+        <div class="packs-list" id="collDetailGrid"></div>
+        <nav class="bottom-nav">
+          <button class="nav-item" data-nav="home" onclick="goTo('home')">
+            <span class="nav-icon">🏠</span>
+            <span data-i18n="nav_home">Home</span>
+          </button>
+          <button class="nav-item active" data-nav="packs" onclick="goTo('packs')">
+            <span class="nav-icon">🃏</span>
+            <span data-i18n="nav_packs">Decks</span>
+          </button>
+          <button class="nav-item" data-nav="profile" onclick="goToProfile()">
+            <span class="nav-icon">✦</span>
+            <span data-i18n="nav_profile">You</span>
+          </button>
+        </nav>
+      </div>
+
+      <!-- PROFILE -->
+      <div id="profile" class="screen">
+        <div id="profileContent" style="padding-bottom: 100px"></div>
+        <nav class="bottom-nav">
+          <button class="nav-item" data-nav="home" onclick="goTo('home')">
+            <span class="nav-icon">🏠</span>
+            <span data-i18n="nav_home">Home</span>
+          </button>
+          <button class="nav-item" data-nav="packs" onclick="goTo('packs')">
+            <span class="nav-icon">🃏</span>
+            <span data-i18n="nav_packs">Decks</span>
+          </button>
+          <button class="nav-item active" data-nav="profile" onclick="goToProfile()">
+            <span class="nav-icon">✦</span>
+            <span data-i18n="nav_profile">You</span>
+          </button>
+        </nav>
+      </div>
+
+      <!-- INVITE -->
+      <div id="invite" class="screen">
+        <div class="top-bar" style="width: 100%">
+          <button class="btn-icon" onclick="goTo('packs')">←</button>
+          <h2 id="invitePackName">Couples Edition</h2>
+        </div>
+
+        <div class="invite-avatars">
+          <div class="invite-avatar you">🫵</div>
+          <div class="invite-vs">×</div>
+          <div class="invite-avatar them">?</div>
+        </div>
+
+        <h2
+          class="syne"
+          style="font-size: 22px; letter-spacing: -0.5px"
+          data-i18n="invite_title"
+        >
+          share with your person
+        </h2>
+        <p
+          style="font-size: 13px; color: var(--text-dim)"
+          data-i18n="invite_desc"
+        >
+          they'll get the same questions. no one sees answers until you both
+          finish.
+        </p>
+
+        <div class="link-box glass">
+          <span class="link-text" id="inviteLink">...</span>
+          <button
+            class="copy-btn"
+            onclick="copyInviteLink(this)"
+            data-i18n="invite_copy"
+          >
+            copy
+          </button>
+        </div>
+
+        <div class="share-row">
+          <button
+            class="share-btn"
+            title="WhatsApp"
+            onclick="shareInvite('whatsapp')"
+          >
+            💬
+          </button>
+          <button
+            class="share-btn"
+            title="iMessage"
+            onclick="shareInvite('sms')"
+          >
+            📱
+          </button>
+          <button class="share-btn" title="More" onclick="shareInvite('share')">
+            📤
+          </button>
+        </div>
+
+        <button
+          class="btn btn-primary"
+          style="width: 100%; margin-top: auto"
+          onclick="startQuizAsCreator()"
+          data-i18n="invite_start"
+        >
+          start answering →
         </button>
-        <button class="mode-toggle-btn" data-mode="self" onclick="setPackMode('self')">
-          <span class="mode-icon">🪞</span> <span data-i18n="mode_self">Self</span>
-        </button>
       </div>
-    </div>
 
-    <!-- Featured / trending carousel -->
-    <div class="packs-featured" id="packsFeaturedSection">
-      <div class="packs-featured-label">
-        <span class="pulse-dot"></span>
-        <span data-i18n="packs_trending">trending now</span>
-      </div>
-      <div class="featured-scroll" id="packsFeatured"></div>
-    </div>
-
-    <!-- Collections section label -->
-    <div class="packs-section-label" data-i18n="packs_collections">collections</div>
-
-    <!-- Collection cards grid -->
-    <div class="collections-grid" id="collectionsGrid"></div>
-
-    <!-- All packs section label -->
-    <div class="packs-section-label" data-i18n="packs_all">all packs</div>
-
-    <!-- Pack list -->
-    <div class="packs-list" id="packsGrid"></div>
-
-    <nav class="bottom-nav">
-      <button class="nav-item" onclick="goTo('home')">
-        <span class="nav-icon">🏠</span>
-        <span data-i18n="nav_home">Home</span>
-      </button>
-      <button class="nav-item active" onclick="goTo('packs')">
-        <span class="nav-icon">🃏</span>
-        <span data-i18n="nav_packs">Decks</span>
-      </button>
-    </nav>
-  </div>
-
-  <!-- COLLECTION DETAIL -->
-  <div id="collectionDetail" class="screen">
-    <div class="coll-detail-header" id="collDetailHeader"></div>
-    <div class="packs-list" id="collDetailGrid"></div>
-    <nav class="bottom-nav">
-      <button class="nav-item" onclick="goTo('home')">
-        <span class="nav-icon">🏠</span>
-        <span data-i18n="nav_home">Home</span>
-      </button>
-      <button class="nav-item active" onclick="goTo('packs')">
-        <span class="nav-icon">🃏</span>
-        <span data-i18n="nav_packs">Decks</span>
-      </button>
-    </nav>
-  </div>
-
-  <!-- INVITE -->
-  <div id="invite" class="screen">
-    <div class="top-bar" style="width:100%">
-      <button class="btn-icon" onclick="goTo('packs')">←</button>
-      <h2 id="invitePackName">Couples Edition</h2>
-    </div>
-
-    <div class="invite-avatars">
-      <div class="invite-avatar you">🫵</div>
-      <div class="invite-vs">×</div>
-      <div class="invite-avatar them">?</div>
-    </div>
-
-    <h2 class="syne" style="font-size:22px;letter-spacing:-0.5px" data-i18n="invite_title">share with your person</h2>
-    <p style="font-size:13px;color:var(--text-dim)" data-i18n="invite_desc">they'll get the same questions. no one sees answers until you both finish.</p>
-
-    <div class="link-box glass">
-      <span class="link-text" id="inviteLink">...</span>
-      <button class="copy-btn" onclick="copyInviteLink(this)" data-i18n="invite_copy">copy</button>
-    </div>
-
-    <div class="share-row">
-      <button class="share-btn" title="WhatsApp" onclick="shareInvite('whatsapp')">💬</button>
-      <button class="share-btn" title="iMessage" onclick="shareInvite('sms')">📱</button>
-      <button class="share-btn" title="More" onclick="shareInvite('share')">📤</button>
-    </div>
-
-    <button class="btn btn-primary" style="width:100%;margin-top:auto" onclick="startQuizAsCreator()" data-i18n="invite_start">start answering →</button>
-  </div>
-
-  <!-- QUIZ -->
-  <div id="quiz" class="screen">
-    <div class="quiz-top">
-      <button class="btn-icon" onclick="confirmQuit()" style="width:36px;height:36px;font-size:14px">←</button>
-      <div class="progress-wrap">
-        <div class="progress-bar" id="quizProgress" style="width:0%"></div>
-      </div>
-      <div class="progress-text" id="quizCount">1 / 5</div>
-    </div>
-    <div class="quiz-body" id="quizBody"></div>
-    <div class="quiz-footer">
-      <button class="btn btn-secondary" id="quizBackBtn" onclick="prevQuestion()" style="display:none" data-i18n="quiz_back">back</button>
-      <button class="btn btn-primary" id="quizNextBtn" onclick="nextQuestion()" data-i18n="quiz_next">next</button>
-    </div>
-  </div>
-
-  <!-- WAITING -->
-  <div id="waiting" class="screen">
-    <div class="waiting-duo">
-      <div class="duo-glow-bg"></div>
-      <div class="duo-energy-beam"></div>
-      <div class="duo-circle you">
-        <div class="duo-ripple"></div>
-        <div class="duo-ripple r2"></div>
-        <div class="duo-orbit-track">
-          <div class="duo-orbit-dot"></div>
-          <div class="duo-orbit-dot d2"></div>
-          <div class="duo-orbit-dot d3"></div>
+      <!-- QUIZ -->
+      <div id="quiz" class="screen">
+        <div class="quiz-top">
+          <button
+            class="btn-icon"
+            onclick="confirmQuit()"
+            style="width: 36px; height: 36px; font-size: 14px"
+          >
+            ←
+          </button>
+          <div class="progress-wrap">
+            <div class="progress-bar" id="quizProgress" style="width: 0%"></div>
+          </div>
+          <div class="progress-text" id="quizCount">1 / 5</div>
         </div>
-        <div class="duo-avatar" id="waitingAvatarYou"></div>
-      </div>
-      <div class="duo-circle them">
-        <div class="duo-ripple"></div>
-        <div class="duo-ripple r2"></div>
-        <div class="duo-orbit-track">
-          <div class="duo-orbit-dot"></div>
-          <div class="duo-orbit-dot d2"></div>
-          <div class="duo-orbit-dot d3"></div>
-        </div>
-        <div class="duo-avatar" id="waitingAvatarThem">?</div>
-      </div>
-      <div class="duo-particles">
-        <div class="particle p1"></div>
-        <div class="particle p2"></div>
-        <div class="particle p3"></div>
-        <div class="particle p4"></div>
-        <div class="particle p5"></div>
-        <div class="particle p6"></div>
-      </div>
-    </div>
-    <h2 class="syne" style="font-size:24px;letter-spacing:-0.5px" data-i18n="waiting_title">you're locked in 🔒</h2>
-    <p id="waitingDesc" style="font-size:14px;color:var(--text-dim);line-height:1.5" data-i18n="waiting_default_desc">waiting for your partner to finish answering...</p>
-    <div class="waiting-partner-progress">
-      <div class="dot-pulse"></div>
-      <span id="waitingStatus" data-i18n="waiting_checking">checking...</span>
-    </div>
-    <p style="font-size:12px;color:var(--text-dim);margin-top:24px" data-i18n="waiting_share_code">share this code with your partner:</p>
-    <div class="link-box glass" style="margin-top:8px">
-      <span class="link-text" id="waitingCode" style="font-size:20px;letter-spacing:4px;font-weight:700"></span>
-      <button class="copy-btn" onclick="copyInviteLink(this)" data-i18n="waiting_copy_link">copy link</button>
-    </div>
-  </div>
-
-  <!-- REVEAL -->
-  <div id="reveal" class="screen">
-    <div class="reveal-countdown" id="revealCountdown"></div>
-    <div id="revealCardsContainer"></div>
-  </div>
-
-  <!-- RESULTS / STORY -->
-  <div id="results" class="screen">
-    <div class="story-scroll" id="storyScroll"></div>
-  </div>
-
-  <!-- SUBMIT MODAL -->
-  <div class="modal-overlay" id="submitModal">
-    <div class="modal-box">
-      <div style="font-size:36px">🔐</div>
-      <h3 class="syne" data-i18n="modal_title">lock in your answers?</h3>
-      <p data-i18n="modal_desc">once you submit, no take-backs. your person will be notified you're done.</p>
-      <button class="btn btn-primary" onclick="submitAnswers()" data-i18n="modal_confirm">lock it in</button>
-      <button class="btn btn-ghost" onclick="closeModal()" data-i18n="modal_cancel">wait, go back</button>
-    </div>
-  </div>
-
-  <!-- DELETE CONFIRMATION MODAL -->
-  <div class="modal-overlay" id="deleteModal">
-    <div class="modal-box">
-      <div style="font-size:36px">🗑️</div>
-      <h3 class="syne" data-i18n="delete_title">remove this session?</h3>
-      <p data-i18n="delete_desc">this will remove the session from your list. this can't be undone.</p>
-      <button class="btn btn-primary" style="background:#ef4444" onclick="confirmDeleteSession()" data-i18n="delete_confirm">remove</button>
-      <button class="btn btn-ghost" onclick="closeDeleteModal()" data-i18n="delete_cancel">cancel</button>
-    </div>
-  </div>
-
-  <!-- SAVE ACCOUNT MODAL (for guests after session) -->
-  <div class="modal-overlay" id="saveAccountModal">
-    <div class="modal-box">
-      <div style="font-size:36px">💾</div>
-      <h3 class="syne" data-i18n="save_title">keep your account?</h3>
-      <p data-i18n="save_desc">set a password so you can come back, see your history, and start new sessions anytime.</p>
-      <input type="password" id="saveAccPassword" class="auth-input" data-i18n-placeholder="auth_create_password_placeholder" placeholder="create a password..." autocomplete="new-password" style="text-align:left">
-      <input type="password" id="saveAccPasswordConfirm" class="auth-input" data-i18n-placeholder="auth_confirm_password_placeholder" placeholder="confirm password..." autocomplete="new-password" style="text-align:left;margin-top:8px">
-      <div id="saveAccError" class="auth-error"></div>
-      <button class="btn btn-primary" onclick="saveGuestAccount()" data-i18n="save_confirm">save account</button>
-      <button class="btn btn-ghost" onclick="closeSaveAccountModal()" data-i18n="save_skip">skip for now</button>
-    </div>
-  </div>
-
-  <!-- SETTINGS PANEL -->
-  <div class="settings-backdrop" id="settingsBackdrop" onclick="toggleSettings()"></div>
-  <div class="settings-panel" id="settingsPanel">
-    <div class="settings-handle"></div>
-    <div class="settings-label" data-i18n="settings_mode">Mode</div>
-    <div class="theme-mode-row">
-      <button class="theme-mode-btn" id="modeBtn-dark" onclick="setTheme('dark')" data-i18n="settings_dark">🌙 Dark</button>
-      <button class="theme-mode-btn active" id="modeBtn-light" onclick="setTheme('light')" data-i18n="settings_light">☀️ Light</button>
-    </div>
-    <div class="settings-label" data-i18n="settings_accent">Accent Color</div>
-    <div class="accent-row">
-      <button class="accent-swatch active" data-accent="sunset" onclick="setAccent('sunset')">
-        <div class="swatch-inner"><div class="half" style="background:#7C3AED"></div><div class="half" style="background:#EC4899"></div></div>
-        <span class="check">✓</span>
-      </button>
-      <button class="accent-swatch" data-accent="ocean" onclick="setAccent('ocean')">
-        <div class="swatch-inner"><div class="half" style="background:#0EA5E9"></div><div class="half" style="background:#6366F1"></div></div>
-        <span class="check">✓</span>
-      </button>
-      <button class="accent-swatch" data-accent="ember" onclick="setAccent('ember')">
-        <div class="swatch-inner"><div class="half" style="background:#F97316"></div><div class="half" style="background:#EF4444"></div></div>
-        <span class="check">✓</span>
-      </button>
-      <button class="accent-swatch" data-accent="mint" onclick="setAccent('mint')">
-        <div class="swatch-inner"><div class="half" style="background:#10B981"></div><div class="half" style="background:#06B6D4"></div></div>
-        <span class="check">✓</span>
-      </button>
-      <button class="accent-swatch" data-accent="candy" onclick="setAccent('candy')">
-        <div class="swatch-inner"><div class="half" style="background:#E879F9"></div><div class="half" style="background:#FB923C"></div></div>
-        <span class="check">✓</span>
-      </button>
-    </div>
-  </div>
-
-  <!-- CONFETTI -->
-  <div class="confetti-container" id="confetti"></div>
-
-</div>
-
-<!-- SEO CONTENT — visible on splash, hidden when user enters app -->
-<section id="seoContent" class="seo-landing">
-  <div class="seo-inner">
-
-    <div class="seo-hero">
-      <h2 class="syne">the couples game that actually means something</h2>
-      <p>blindside is a free relationship game where both partners answer the same questions independently — no peeking. Answers are only revealed when you've both submitted. It's honest, surprising, and sparks the conversations you didn't know you needed.</p>
-    </div>
-
-    <div class="seo-how">
-      <h2 class="syne">how blindside works</h2>
-      <div class="seo-steps">
-        <div class="seo-step">
-          <span class="seo-step-num">1</span>
-          <h3>pick a question pack</h3>
-          <p>Choose from 30+ packs — date night classics, spicy hot takes, deep relationship questions, or solo self-discovery quizzes like attachment style and love language.</p>
-        </div>
-        <div class="seo-step">
-          <span class="seo-step-num">2</span>
-          <h3>answer blindly</h3>
-          <p>Both you and your partner answer the same questions privately. No one can see the other's answers until both are done. Honest answers only.</p>
-        </div>
-        <div class="seo-step">
-          <span class="seo-step-num">3</span>
-          <h3>reveal together</h3>
-          <p>Once both of you submit, answers unlock side-by-side. See where you align, where you differ, and let the real conversation begin.</p>
+        <div class="quiz-body" id="quizBody"></div>
+        <div class="quiz-footer">
+          <button
+            class="btn btn-secondary"
+            id="quizBackBtn"
+            onclick="prevQuestion()"
+            style="display: none"
+            data-i18n="quiz_back"
+          >
+            back
+          </button>
+          <button
+            class="btn btn-primary"
+            id="quizNextBtn"
+            onclick="nextQuestion()"
+            data-i18n="quiz_next"
+          >
+            next
+          </button>
         </div>
       </div>
-    </div>
 
-    <div class="seo-packs">
-      <h2 class="syne">popular question packs</h2>
-      <div class="seo-pack-grid">
-        <div class="seo-pack-card">
-          <span class="seo-pack-emoji">❤️‍🔥</span>
-          <h3>36 Questions to Fall in Love</h3>
-          <p>Based on the famous psychology study by Arthur Aron. 36 increasingly personal questions designed to create closeness between two people. Now playable as a blind-answer game.</p>
+      <!-- WAITING -->
+      <div id="waiting" class="screen">
+        <div class="waiting-duo">
+          <div class="duo-glow-bg"></div>
+          <div class="duo-energy-beam"></div>
+          <div class="duo-circle you">
+            <div class="duo-ripple"></div>
+            <div class="duo-ripple r2"></div>
+            <div class="duo-orbit-track">
+              <div class="duo-orbit-dot"></div>
+              <div class="duo-orbit-dot d2"></div>
+              <div class="duo-orbit-dot d3"></div>
+            </div>
+            <div class="duo-avatar" id="waitingAvatarYou"></div>
+          </div>
+          <div class="duo-circle them">
+            <div class="duo-ripple"></div>
+            <div class="duo-ripple r2"></div>
+            <div class="duo-orbit-track">
+              <div class="duo-orbit-dot"></div>
+              <div class="duo-orbit-dot d2"></div>
+              <div class="duo-orbit-dot d3"></div>
+            </div>
+            <div class="duo-avatar" id="waitingAvatarThem">?</div>
+          </div>
+          <div class="duo-particles">
+            <div class="particle p1"></div>
+            <div class="particle p2"></div>
+            <div class="particle p3"></div>
+            <div class="particle p4"></div>
+            <div class="particle p5"></div>
+            <div class="particle p6"></div>
+          </div>
         </div>
-        <div class="seo-pack-card">
-          <span class="seo-pack-emoji">🌶️</span>
-          <h3>Hot Takes</h3>
-          <p>Controversial opinions, unpopular preferences, and spicy debates. Find out if you and your partner are actually on the same page — or living in different universes.</p>
+        <h2
+          class="syne"
+          style="font-size: 24px; letter-spacing: -0.5px"
+          data-i18n="waiting_title"
+        >
+          you're locked in 🔒
+        </h2>
+        <p
+          id="waitingDesc"
+          style="font-size: 14px; color: var(--text-dim); line-height: 1.5"
+          data-i18n="waiting_default_desc"
+        >
+          waiting for your partner to finish answering...
+        </p>
+        <div class="waiting-partner-progress">
+          <div class="dot-pulse"></div>
+          <span id="waitingStatus" data-i18n="waiting_checking"
+            >checking...</span
+          >
         </div>
-        <div class="seo-pack-card">
-          <span class="seo-pack-emoji">🚩</span>
-          <h3>Red Flags</h3>
-          <p>What would be a dealbreaker? What's forgivable? Compare your boundaries and see if your non-negotiables align. A relationship reality check in game form.</p>
-        </div>
-        <div class="seo-pack-card">
-          <span class="seo-pack-emoji">🔗</span>
-          <h3>Attachment Style Quiz</h3>
-          <p>Discover your attachment style — anxious, avoidant, secure, or fearful. A solo self-discovery pack that helps you understand how you love and what you need.</p>
-        </div>
-        <div class="seo-pack-card">
-          <span class="seo-pack-emoji">💌</span>
-          <h3>Love Language Quiz</h3>
-          <p>Words of affirmation, quality time, physical touch, acts of service, or gifts? Find out how you give and receive love with this solo personality quiz.</p>
-        </div>
-        <div class="seo-pack-card">
-          <span class="seo-pack-emoji">💕</span>
-          <h3>Couples Edition</h3>
-          <p>The essential couples question pack. From lighthearted fun to deeper topics — perfect for date night, long drives, or anytime you want to connect.</p>
+        <p
+          style="font-size: 12px; color: var(--text-dim); margin-top: 24px"
+          data-i18n="waiting_share_code"
+        >
+          share this code with your partner:
+        </p>
+        <div class="link-box glass" style="margin-top: 8px">
+          <span
+            class="link-text"
+            id="waitingCode"
+            style="font-size: 20px; letter-spacing: 4px; font-weight: 700"
+          ></span>
+          <button
+            class="copy-btn"
+            onclick="copyInviteLink(this)"
+            data-i18n="waiting_copy_link"
+          >
+            copy link
+          </button>
         </div>
       </div>
-    </div>
 
-    <div class="seo-why">
-      <h2 class="syne">why couples love blindside</h2>
-      <div class="seo-reasons">
-        <div class="seo-reason">
-          <h3>no app download</h3>
-          <p>Works instantly in your browser. Just share a link with your partner and start playing. No sign-up wall, no app store.</p>
-        </div>
-        <div class="seo-reason">
-          <h3>actually honest answers</h3>
-          <p>Because answers are hidden until both submit, there's no pressure to match. You get real, unfiltered responses.</p>
-        </div>
-        <div class="seo-reason">
-          <h3>sparks real conversations</h3>
-          <p>The reveal moment is where the magic happens. Matching answers feel validating. Different answers start the best discussions.</p>
-        </div>
-        <div class="seo-reason">
-          <h3>free, forever</h3>
-          <p>All 30+ question packs are free. No ads, no premium tier, no dark patterns. Just a game worth playing.</p>
+      <!-- REVEAL -->
+      <div id="reveal" class="screen">
+        <div class="reveal-countdown" id="revealCountdown"></div>
+        <div id="revealCardsContainer"></div>
+      </div>
+
+      <!-- RESULTS / STORY -->
+      <div id="results" class="screen">
+        <div class="story-scroll" id="storyScroll"></div>
+      </div>
+
+      <!-- SUBMIT MODAL -->
+      <div class="modal-overlay" id="submitModal">
+        <div class="modal-box">
+          <div style="font-size: 36px">🔐</div>
+          <h3 class="syne" data-i18n="modal_title">lock in your answers?</h3>
+          <p data-i18n="modal_desc">
+            once you submit, no take-backs. your person will be notified you're
+            done.
+          </p>
+          <button
+            class="btn btn-primary"
+            onclick="submitAnswers()"
+            data-i18n="modal_confirm"
+          >
+            lock it in
+          </button>
+          <button
+            class="btn btn-ghost"
+            onclick="closeModal()"
+            data-i18n="modal_cancel"
+          >
+            wait, go back
+          </button>
         </div>
       </div>
-    </div>
 
-    <div class="seo-cta-block">
-      <h2 class="syne">ready to play?</h2>
-      <p>Pick a pack, send the link to your person, and find out what you really think.</p>
-      <button class="btn btn-primary" onclick="document.getElementById('splash').scrollIntoView();showAuth('onboarding')">play blindside — it's free</button>
-    </div>
-
-    <div class="seo-blog-teaser">
-      <h2 class="syne">from the blog</h2>
-      <div class="seo-blog-grid">
-        <a href="/blog/36-questions-to-fall-in-love" class="seo-blog-link">
-          <h3>The 36 Questions to Fall in Love — Does the Experiment Actually Work?</h3>
-          <p>The science behind Arthur Aron's famous study, and how to try it with your partner tonight.</p>
-        </a>
-        <a href="/blog/best-couples-games-date-night" class="seo-blog-link">
-          <h3>7 Best Couples Games for Date Night (That Aren't Board Games)</h3>
-          <p>Skip the Scrabble. These games actually spark connection.</p>
-        </a>
-        <a href="/blog/deep-questions-to-ask-your-partner" class="seo-blog-link">
-          <h3>50 Deep Questions to Ask Your Partner</h3>
-          <p>Go beyond "how was your day" with questions that actually matter.</p>
-        </a>
+      <!-- DELETE CONFIRMATION MODAL -->
+      <div class="modal-overlay" id="deleteModal">
+        <div class="modal-box">
+          <div style="font-size: 36px">🗑️</div>
+          <h3 class="syne" data-i18n="delete_title">remove this session?</h3>
+          <p data-i18n="delete_desc">
+            this will remove the session from your list. this can't be undone.
+          </p>
+          <button
+            class="btn btn-primary"
+            style="background: #ef4444"
+            onclick="confirmDeleteSession()"
+            data-i18n="delete_confirm"
+          >
+            remove
+          </button>
+          <button
+            class="btn btn-ghost"
+            onclick="closeDeleteModal()"
+            data-i18n="delete_cancel"
+          >
+            cancel
+          </button>
+        </div>
       </div>
+
+      <!-- SAVE ACCOUNT MODAL (for guests after session) -->
+      <div class="modal-overlay" id="saveAccountModal">
+        <div class="modal-box">
+          <div style="font-size: 36px">💾</div>
+          <h3 class="syne" data-i18n="save_title">keep your account?</h3>
+          <p data-i18n="save_desc">
+            set a password so you can come back, see your history, and start new
+            sessions anytime.
+          </p>
+          <input
+            type="password"
+            id="saveAccPassword"
+            class="auth-input"
+            data-i18n-placeholder="auth_create_password_placeholder"
+            placeholder="create a password..."
+            autocomplete="new-password"
+            style="text-align: left"
+          />
+          <input
+            type="password"
+            id="saveAccPasswordConfirm"
+            class="auth-input"
+            data-i18n-placeholder="auth_confirm_password_placeholder"
+            placeholder="confirm password..."
+            autocomplete="new-password"
+            style="text-align: left; margin-top: 8px"
+          />
+          <div id="saveAccError" class="auth-error"></div>
+          <button
+            class="btn btn-primary"
+            onclick="saveGuestAccount()"
+            data-i18n="save_confirm"
+          >
+            save account
+          </button>
+          <button
+            class="btn btn-ghost"
+            onclick="closeSaveAccountModal()"
+            data-i18n="save_skip"
+          >
+            skip for now
+          </button>
+        </div>
+      </div>
+
+      <!-- PREMIUM MODAL -->
+      <div
+        class="modal-overlay premium-overlay"
+        id="premiumModal"
+        onclick="if (event.target === this) closePremiumModal();"
+      >
+        <div class="premium-modal">
+          <button class="premium-close" onclick="closePremiumModal()">
+            &times;
+          </button>
+
+          <!-- Pack context banner -->
+          <div class="premium-pack-banner" style="display: none"></div>
+
+          <!-- Hero -->
+          <div class="premium-hero">
+            <div class="premium-icon-glow"></div>
+            <div class="premium-icon">+</div>
+            <h2 class="premium-modal-title syne">unlock blindside+</h2>
+            <p class="premium-modal-subtitle">go deeper with your person</p>
+          </div>
+
+          <!-- Limited time badge -->
+          <div class="premium-limited-badge">
+            <span class="premium-limited-dot"></span>
+            <span class="premium-limited-tag">limited time — 50% off</span>
+          </div>
+
+          <!-- Features -->
+          <div class="premium-features">
+            <div class="premium-feature">
+              <span class="premium-feature-check">✓</span>
+              <span class="premium-feature-text">all 30+ question packs</span>
+            </div>
+            <div class="premium-feature">
+              <span class="premium-feature-check">✓</span>
+              <span class="premium-feature-text"
+                >deep relationship insights</span
+              >
+            </div>
+            <div class="premium-feature">
+              <span class="premium-feature-check">✓</span>
+              <span class="premium-feature-text">AI relationship advisor</span>
+            </div>
+            <div class="premium-feature">
+              <span class="premium-feature-check">✓</span>
+              <span class="premium-feature-text">unlimited sessions</span>
+            </div>
+          </div>
+
+          <!-- Pricing -->
+          <div class="premium-pricing">
+            <div class="premium-price-row">
+              <span class="premium-price-was">$9.99</span>
+              <span class="premium-price-current">$4.99</span>
+              <span class="premium-price-period">/month</span>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <button
+            class="btn btn-primary premium-cta-btn"
+            onclick="mockPurchasePremium()"
+          >
+            start free trial
+          </button>
+
+          <!-- Social proof -->
+          <div class="premium-social">
+            <div class="premium-avatars">
+              <span class="premium-avatar-dot"></span>
+              <span class="premium-avatar-dot"></span>
+              <span class="premium-avatar-dot"></span>
+              <span class="premium-avatar-dot"></span>
+              <span class="premium-avatar-dot"></span>
+            </div>
+            <div class="premium-social-proof">
+              12,400+ couples upgraded this month
+            </div>
+          </div>
+          <div class="premium-guarantee">
+            loved by 94% of couples who tried it
+          </div>
+
+          <!-- Restore -->
+          <button
+            class="btn btn-ghost premium-restore-btn"
+            onclick="mockPurchasePremium()"
+          >
+            restore purchase
+          </button>
+        </div>
+      </div>
+
+      <!-- SETTINGS PANEL -->
+      <div
+        class="settings-backdrop"
+        id="settingsBackdrop"
+        onclick="toggleSettings()"
+      ></div>
+      <div class="settings-panel" id="settingsPanel">
+        <div class="settings-handle"></div>
+        <div class="settings-label" data-i18n="settings_mode">Mode</div>
+        <div class="theme-mode-row">
+          <button
+            class="theme-mode-btn"
+            id="modeBtn-dark"
+            onclick="setTheme('dark')"
+            data-i18n="settings_dark"
+          >
+            🌙 Dark
+          </button>
+          <button
+            class="theme-mode-btn active"
+            id="modeBtn-light"
+            onclick="setTheme('light')"
+            data-i18n="settings_light"
+          >
+            ☀️ Light
+          </button>
+        </div>
+        <div class="settings-label" data-i18n="settings_accent">
+          Accent Color
+        </div>
+        <div class="accent-row">
+          <button
+            class="accent-swatch active"
+            data-accent="sunset"
+            onclick="setAccent('sunset')"
+          >
+            <div class="swatch-inner">
+              <div class="half" style="background: #7c3aed"></div>
+              <div class="half" style="background: #ec4899"></div>
+            </div>
+            <span class="check">✓</span>
+          </button>
+          <button
+            class="accent-swatch"
+            data-accent="ocean"
+            onclick="setAccent('ocean')"
+          >
+            <div class="swatch-inner">
+              <div class="half" style="background: #0ea5e9"></div>
+              <div class="half" style="background: #6366f1"></div>
+            </div>
+            <span class="check">✓</span>
+          </button>
+          <button
+            class="accent-swatch"
+            data-accent="ember"
+            onclick="setAccent('ember')"
+          >
+            <div class="swatch-inner">
+              <div class="half" style="background: #f97316"></div>
+              <div class="half" style="background: #ef4444"></div>
+            </div>
+            <span class="check">✓</span>
+          </button>
+          <button
+            class="accent-swatch"
+            data-accent="mint"
+            onclick="setAccent('mint')"
+          >
+            <div class="swatch-inner">
+              <div class="half" style="background: #10b981"></div>
+              <div class="half" style="background: #06b6d4"></div>
+            </div>
+            <span class="check">✓</span>
+          </button>
+          <button
+            class="accent-swatch"
+            data-accent="candy"
+            onclick="setAccent('candy')"
+          >
+            <div class="swatch-inner">
+              <div class="half" style="background: #e879f9"></div>
+              <div class="half" style="background: #fb923c"></div>
+            </div>
+            <span class="check">✓</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- CONFETTI -->
+      <div class="confetti-container" id="confetti"></div>
     </div>
 
-  </div>
-</section>
+    <!-- SEO CONTENT — visible on splash, hidden when user enters app -->
+    <section id="seoContent" class="seo-landing">
+      <div class="seo-inner">
+        <div class="seo-hero">
+          <h2 class="syne">the couples game that actually means something</h2>
+          <p>
+            blindside is a free relationship game where both partners answer the
+            same questions independently — no peeking. Answers are only revealed
+            when you've both submitted. It's honest, surprising, and sparks the
+            conversations you didn't know you needed.
+          </p>
+        </div>
 
-<script src="lang.js"></script>
-<script src="packs.js"></script>
-<script src="app.js"></script>
-<script src="t.js"></script>
-</body>
+        <div class="seo-how">
+          <h2 class="syne">how blindside works</h2>
+          <div class="seo-steps">
+            <div class="seo-step">
+              <span class="seo-step-num">1</span>
+              <h3>pick a question pack</h3>
+              <p>
+                Choose from 30+ packs — date night classics, spicy hot takes,
+                deep relationship questions, or solo self-discovery quizzes like
+                attachment style and love language.
+              </p>
+            </div>
+            <div class="seo-step">
+              <span class="seo-step-num">2</span>
+              <h3>answer blindly</h3>
+              <p>
+                Both you and your partner answer the same questions privately.
+                No one can see the other's answers until both are done. Honest
+                answers only.
+              </p>
+            </div>
+            <div class="seo-step">
+              <span class="seo-step-num">3</span>
+              <h3>reveal together</h3>
+              <p>
+                Once both of you submit, answers unlock side-by-side. See where
+                you align, where you differ, and let the real conversation
+                begin.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="seo-packs">
+          <h2 class="syne">popular question packs</h2>
+          <div class="seo-pack-grid">
+            <div class="seo-pack-card">
+              <span class="seo-pack-emoji">❤️‍🔥</span>
+              <h3>36 Questions to Fall in Love</h3>
+              <p>
+                Based on the famous psychology study by Arthur Aron. 36
+                increasingly personal questions designed to create closeness
+                between two people. Now playable as a blind-answer game.
+              </p>
+            </div>
+            <div class="seo-pack-card">
+              <span class="seo-pack-emoji">🌶️</span>
+              <h3>Hot Takes</h3>
+              <p>
+                Controversial opinions, unpopular preferences, and spicy
+                debates. Find out if you and your partner are actually on the
+                same page — or living in different universes.
+              </p>
+            </div>
+            <div class="seo-pack-card">
+              <span class="seo-pack-emoji">🚩</span>
+              <h3>Red Flags</h3>
+              <p>
+                What would be a dealbreaker? What's forgivable? Compare your
+                boundaries and see if your non-negotiables align. A relationship
+                reality check in game form.
+              </p>
+            </div>
+            <div class="seo-pack-card">
+              <span class="seo-pack-emoji">🔗</span>
+              <h3>Attachment Style Quiz</h3>
+              <p>
+                Discover your attachment style — anxious, avoidant, secure, or
+                fearful. A solo self-discovery pack that helps you understand
+                how you love and what you need.
+              </p>
+            </div>
+            <div class="seo-pack-card">
+              <span class="seo-pack-emoji">💌</span>
+              <h3>Love Language Quiz</h3>
+              <p>
+                Words of affirmation, quality time, physical touch, acts of
+                service, or gifts? Find out how you give and receive love with
+                this solo personality quiz.
+              </p>
+            </div>
+            <div class="seo-pack-card">
+              <span class="seo-pack-emoji">💕</span>
+              <h3>Couples Edition</h3>
+              <p>
+                The essential couples question pack. From lighthearted fun to
+                deeper topics — perfect for date night, long drives, or anytime
+                you want to connect.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="seo-why">
+          <h2 class="syne">why couples love blindside</h2>
+          <div class="seo-reasons">
+            <div class="seo-reason">
+              <h3>no app download</h3>
+              <p>
+                Works instantly in your browser. Just share a link with your
+                partner and start playing. No sign-up wall, no app store.
+              </p>
+            </div>
+            <div class="seo-reason">
+              <h3>actually honest answers</h3>
+              <p>
+                Because answers are hidden until both submit, there's no
+                pressure to match. You get real, unfiltered responses.
+              </p>
+            </div>
+            <div class="seo-reason">
+              <h3>sparks real conversations</h3>
+              <p>
+                The reveal moment is where the magic happens. Matching answers
+                feel validating. Different answers start the best discussions.
+              </p>
+            </div>
+            <div class="seo-reason">
+              <h3>free to start, worth upgrading</h3>
+              <p>
+                Start with free packs. Upgrade to blindside+ for all 30+ packs,
+                deep insights, and an AI relationship advisor.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="seo-cta-block">
+          <h2 class="syne">ready to play?</h2>
+          <p>
+            Pick a pack, send the link to your person, and find out what you
+            really think.
+          </p>
+          <button
+            class="btn btn-primary"
+            onclick="
+              document.getElementById('splash').scrollIntoView();
+              showAuth('onboarding');
+            "
+          >
+            play blindside — it's free
+          </button>
+        </div>
+
+        <div class="seo-blog-teaser">
+          <h2 class="syne">from the blog</h2>
+          <div class="seo-blog-grid">
+            <a href="/blog/36-questions-to-fall-in-love" class="seo-blog-link">
+              <h3>
+                The 36 Questions to Fall in Love — Does the Experiment Actually
+                Work?
+              </h3>
+              <p>
+                The science behind Arthur Aron's famous study, and how to try it
+                with your partner tonight.
+              </p>
+            </a>
+            <a href="/blog/best-couples-games-date-night" class="seo-blog-link">
+              <h3>
+                7 Best Couples Games for Date Night (That Aren't Board Games)
+              </h3>
+              <p>Skip the Scrabble. These games actually spark connection.</p>
+            </a>
+            <a
+              href="/blog/deep-questions-to-ask-your-partner"
+              class="seo-blog-link"
+            >
+              <h3>50 Deep Questions to Ask Your Partner</h3>
+              <p>
+                Go beyond "how was your day" with questions that actually
+                matter.
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="lang.js"></script>
+    <script src="packs.js"></script>
+    <script src="app.js"></script>
+    <script src="t.js"></script>
+  </body>
 </html>
