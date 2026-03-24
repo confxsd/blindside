@@ -317,8 +317,7 @@
 
       renderOverview();
       renderTraffic();
-      loadUsers();
-      loadSessions();
+      await Promise.allSettled([loadUsers(), loadSessions()]);
 
       document.getElementById('lastUpdated').textContent =
         'Updated ' + new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
