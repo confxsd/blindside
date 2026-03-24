@@ -1,0 +1,152 @@
+[
+  {
+    "q": "Birinde seni ilk çeken şey?",
+    "options": [
+      "Fiziksel kimya — anında kıvılcım",
+      "Hırsı ve azmi",
+      "Duygusal derinliği ve açıklığı",
+      "Etrafındaki herkese nasıl hissettirdiği"
+    ],
+    "traits": [
+      { "venus": 2 },
+      { "mars": 2 },
+      { "moon": 2 },
+      { "jupiter": 2 }
+    ]
+  },
+  {
+    "q": "Bir ilişkide en çok ihtiyacın olan:",
+    "options": [
+      "Romantizm ve güzellik — büyüyü canlı tut",
+      "Tutku ve meydan okuma — beni uyanık tut",
+      "Güvenlik ve duygusal dürüstlük",
+      "Özgürlük ve ortak büyüme"
+    ],
+    "traits": [
+      { "venus": 2 },
+      { "mars": 2 },
+      { "moon": 2 },
+      { "jupiter": 2 }
+    ]
+  },
+  {
+    "q": "Aşk kırmızı bayrağın:",
+    "options": [
+      "Çaba göstermeyen biri",
+      "Çatışmadan kaçan biri",
+      "Duygusal olarak var olamayan biri",
+      "Seni kontrol etmeye veya sınırlamaya çalışan biri"
+    ],
+    "traits": [
+      { "venus": 2 },
+      { "mars": 2 },
+      { "moon": 2 },
+      { "jupiter": 2 }
+    ]
+  },
+  {
+    "q": "Hayal edebileceğin en iyi buluşma:",
+    "options": [
+      "Mum ışığı akşam yemeği, çiçekler, tüm estetik",
+      "Rekabetçi bir şey — kaçış odası, spor, bir cesaret",
+      "Birlikte yemek yapıp sabah 4'e kadar derin sohbet",
+      "İkinizin de hiç gitmediği bir yere yolculuk"
+    ],
+    "traits": [
+      { "venus": 2 },
+      { "mars": 2 },
+      { "moon": 2 },
+      { "jupiter": 2 }
+    ]
+  },
+  {
+    "q": "Aşık olduğunda:",
+    "options": [
+      "Onunla ilgili her şeyi romantikleştirirsin",
+      "Birlikte dünyayı fethetmek istersin",
+      "Seni korkutan şekillerde açılırsın",
+      "Evren genişlemiş gibi hissedersin"
+    ],
+    "traits": [
+      { "venus": 2 },
+      { "mars": 2 },
+      { "moon": 2 },
+      { "jupiter": 2 }
+    ]
+  },
+  {
+    "q": "Ayrılıktan sonra:",
+    "options": [
+      "Olanın güzelliğine yas tutarım",
+      "Acıyı üretken bir şeye kanalize ederim",
+      "Bir süre kırık hissederim, sonra yavaşça iyileşirim",
+      "Bir yolculuğa çıkar ya da yeni bir şey başlatırım"
+    ],
+    "traits": [
+      { "venus": 2 },
+      { "mars": 2 },
+      { "moon": 2 },
+      { "jupiter": 2 }
+    ]
+  },
+  {
+    "q": "Sevgi dilin tek kelimeyle:",
+    "options": [
+      "Güzellik",
+      "Yoğunluk",
+      "Yakınlık",
+      "Macera"
+    ],
+    "traits": [
+      { "venus": 2 },
+      { "mars": 2 },
+      { "moon": 2 },
+      { "jupiter": 2 }
+    ]
+  },
+  {
+    "q": "Bir ilişkide seni tutan şey:",
+    "options": [
+      "Hala kelebekler hissettirmesi",
+      "Enerjime ve hırsıma ayak uydurması",
+      "Ev gibi hissettirmesi",
+      "Daha iyi bir versiyonum olmama yardım etmesi"
+    ],
+    "traits": [
+      { "venus": 2 },
+      { "mars": 2 },
+      { "moon": 2 },
+      { "jupiter": 2 }
+    ]
+  },
+  {
+    "q": "Toksik aşk kalıbın:",
+    "options": [
+      "Gerçekliğe değil birinin fikrine aşık olmak",
+      "Aşkı güç mücadelesine çevirmek",
+      "Çok fazla vermek ve kendini kaybetmek",
+      "İşler gerçek olunca kaçmak"
+    ],
+    "traits": [
+      { "venus": 2 },
+      { "mars": 2 },
+      { "moon": 2 },
+      { "jupiter": 2 }
+    ]
+  },
+  {
+    "q": "Aşk, en güzel haliyle:",
+    "options": [
+      "Asla unutmayacağın bir film sahnesi",
+      "Her gün birbirini seçen iki savaşçı",
+      "Tamamen bilinmek ve yine de istenmek",
+      "Seni sürprizlerle şaşırtmaya devam eden sonsuz bir hikaye"
+    ],
+    "traits": [
+      { "venus": 2 },
+      { "mars": 2 },
+      { "moon": 2 },
+      { "jupiter": 2 }
+    ]
+  }
+]

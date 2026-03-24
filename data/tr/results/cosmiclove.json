@@ -1,0 +1,57 @@
+{
+  "traits": ["venus", "mars", "moon", "jupiter"],
+  "results": {
+    "venus": {
+      "emoji": "💋",
+      "title": "Venüs Aşığı",
+      "tagline": "sanat olarak aşk",
+      "desc": "Güzel seviyorsun. Romantik, duyusal ve bağlantının estetiğine adanmış — ilişkileri sinematik bir şeye dönüştürüyorsun.",
+      "advice": "Romantik kalbin bir hediye. Ama gerçek aşk da dağınıktır. Film sahnesi bitince gitme — asıl hikaye ondan sonra başlar.",
+      "youProbably": [
+        "İlk buluşmada ne giydiğini hatırlarsın",
+        "Herkesi ağlatabilecek bir Aşk çalma listen vardır",
+        "Tabloya aitmiş gibi görünen insanlara aşık olursun",
+        "Şiir gibi okunan mesajlar yazarsın"
+      ]
+    },
+    "mars": {
+      "emoji": "⚔️",
+      "title": "Mars Aşığı",
+      "tagline": "ateş olarak aşk",
+      "desc": "Şiddetle seviyorsun. Tutkulu, direkt ve ılıkmana alerjik — yoğunluğuna uyan bir aşk istiyorsun ya da hiçbir şey.",
+      "advice": "Tutkun sarhoş edici. Ama aşk kazanılacak bir savaş değil. Bazen en güçlü hamle yumuşamaktır.",
+      "youProbably": [
+        "İlk 'seni seviyorum' diyen sensindir ve pişman değilsin",
+        "Bazen tartışmalar flörte dönüşür",
+        "Sadece kabul eden değil, meydan okuyan bir partner istersin",
+        "Görmezden gelinmektense kavga etmeyi tercih edersin"
+      ]
+    },
+    "moon": {
+      "emoji": "🌙",
+      "title": "Ay Aşığı",
+      "tagline": "sığınak olarak aşk",
+      "desc": "En derin yerden seviyorsun. Duygusal, besleyici ve acı verecek kadar samimi — çıkmıyorsun, ruhları birleştiriyorsun.",
+      "advice": "Derinliğin aşkı gerçek yapan şey. Ama boş bir bardaktan dökemezsin. Önce kendininkini doldur — doğru kişi bekler.",
+      "youProbably": [
+        "Partnerinin ruh hallerini onlardan daha iyi bilirsin",
+        "Gittiğin her yerde bir ev hissi yaratırsın",
+        "Düğünlerde ilk dans sırasında ağlarsın",
+        "Vermemen gereken bir ikinci şansı vermişsindir"
+      ]
+    },
+    "jupiter": {
+      "emoji": "🪐",
+      "title": "Jüpiter Aşığı",
+      "tagline": "genişleme olarak aşk",
+      "desc": "Sonuna kadar açık seviyorsun. Maceracı, iyimser ve sonsuz meraklı — seninle büyüyen bir aşk istiyorsun, seni tutan değil.",
+      "advice": "Özgürlük seven kalbin manyetik. Ama derinlik kalmayı gerektirir. Seni kalmak isteten kişi? İşte o kişi.",
+      "youProbably": [
+        "Daha resmi olmadan birlikte geziler planlarsın",
+        "Rutin hissettiren ilişkilerde huzursuzlanırsın",
+        "Ruh eşinin var olduğuna inanırsın — ve onu bulacaksın",
+        "Aşılacak mesafe olduğunda daha sert seversin"
+      ]
+    }
+  }
+}

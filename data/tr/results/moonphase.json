@@ -1,0 +1,57 @@
+{
+  "traits": ["newmoon", "waxing", "fullmoon", "waning"],
+  "results": {
+    "newmoon": {
+      "emoji": "🌑",
+      "title": "Yeni Ay Ruhu",
+      "tagline": "ebedi başlangıçcı",
+      "desc": "Yeni başlangıçlar için programlanmışsın. Huzursuz, vizyoner ve bilinmeyene manyetik olarak çekiliyorsun — eski derilerini hiçbir şey olmamış gibi atıyorsun.",
+      "advice": "Yeniden başlama yeteneğin nadir. Ama bazı şeyler yanında kalınmayı hak ediyor. Her rahatsızlık gitme zamanı anlamına gelmiyor.",
+      "youProbably": [
+        "Kendini en az 3 kez yeniden icat etmişsindir",
+        "Biten kitaplardan çok boş sayfalara heyecanlanırsın",
+        "Huzursuz olunca şehir değiştirir, kariyer değiştirir ya da saç kesersin",
+        "Her şeyde potansiyel görürsün — henüz hak etmemiş insanlar dahil"
+      ]
+    },
+    "waxing": {
+      "emoji": "🌓",
+      "title": "Hilal Ay Ruhu",
+      "tagline": "sessiz inşacı",
+      "desc": "Sürekli büyüme modundasın. Disiplinli, odaklı ve sessizce hırslı — başkaları görene kadar kimsenin fark etmediği tohumlar ekiyorsun.",
+      "advice": "Sabrın karşılığını verecek. Ama aradaki anların tadını çıkarmayı unutma. Tırmanış hikaye, sadece zirve değil.",
+      "youProbably": [
+        "5 yıllık bir planın ve günlük rutinin vardır",
+        "Küçük zaferleri sessizce kutlarsın",
+        "Başkaları vazgeçerken devam edersin",
+        "Ne kadar yol geldiğini hafife alırsın"
+      ]
+    },
+    "fullmoon": {
+      "emoji": "🌕",
+      "title": "Dolunay Ruhu",
+      "tagline": "her şeyi hisseden",
+      "desc": "Tam yoğunlukta yaşıyorsun. Duygusal, ifadeli ve görmezden gelinmesi imkansız — içeri girdiğinde oda değişiyor.",
+      "advice": "Dolgunluğun hediyendir. Ama her duyguya göre hareket etmek zorunda değilsin. Bazen güç duraklamakta.",
+      "youProbably": [
+        "Denemeden ana karakter enerjin vardır",
+        "Aynı yoğunlukta sever ve kavga edersin",
+        "Ya herkesin favorisisin ya da bazıları için fazlasın",
+        "İstesen bile duygularını gizleyemezsin"
+      ]
+    },
+    "waning": {
+      "emoji": "🌘",
+      "title": "Son Hilal Ruhu",
+      "tagline": "bırakmayı bilen",
+      "desc": "Yaşının ötesinde bilgelik taşıyorsun. Düşünceli, sezgisel ve sessizce güçlü — sonların sadece kılık değiştirmiş başlangıçlar olduğunu anlıyorsun.",
+      "advice": "Derinliğin manyetik. Ama gölgelerde o kadar rahat olma ki sıra sana geldiğinde ışığa çıkmayı unutma.",
+      "youProbably": [
+        "Terapistten gelmiş gibi tavsiyeler verirsin",
+        "Yalnız zamana oksijen gibi ihtiyacın vardır",
+        "Başkalarının hala kızgın olduğu şeyleri çoktan affetmişsindir",
+        "Vedalardaki güzelliği görürsün"
+      ]
+    }
+  }
+}

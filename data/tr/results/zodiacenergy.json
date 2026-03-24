@@ -1,0 +1,57 @@
+{
+  "traits": ["fire", "earth", "air", "water"],
+  "results": {
+    "fire": {
+      "emoji": "🔥",
+      "title": "Ateş Enerjisi",
+      "tagline": "Koç · Aslan · Yay",
+      "desc": "Parlak yanıyorsun. Tutkulu, dürtüsel, manyetik — hızlı yaşıyor ve sert seviyorsun. İnsanlar ya sana hayran ya da ayak uyduramıyor.",
+      "advice": "Ateşin etrafındaki herkese ilham veriyor. Sadece unutma: her şeyi fethetmek zorunda değilsin. Bazen en cesur şey yerinde durmaktır.",
+      "youProbably": [
+        "Ya hemen cevap yazarsın ya da 3 gün yazmassın",
+        "10 proje başlatır 2'sini bitirir (ama o 2'si efsane olur)",
+        "İnsanlığın bildiği en iyi motivasyon konuşmalarını yaparsın",
+        "Birinin isminden önce enerjisine aşık olursun"
+      ]
+    },
+    "earth": {
+      "emoji": "🌿",
+      "title": "Toprak Enerjisi",
+      "tagline": "Boğa · Başak · Oğlak",
+      "desc": "Sen başkalarının üzerinde durduğu zemin sin. Sabırlı, sadık ve sessizce güçlü — başkaları trendleri kovalarken sen imparatorluklar kuruyorsun.",
+      "advice": "Kararlılığın nadir ve güzel. Ama bazen dağınık olmana izin ver. Her şeyin planlı olması gerekmez anlamlı olmak için.",
+      "youProbably": [
+        "Bazı arkadaşlıklardan eski bir cilt bakım rutinin var",
+        "Herkesin acil durum kişisisin",
+        "Sevgiyi sözlerle değil eylemlerle gösterirsin",
+        "Kahve siparişini 4 yıldır değiştirmemişsindir"
+      ]
+    },
+    "air": {
+      "emoji": "💨",
+      "title": "Hava Enerjisi",
+      "tagline": "İkizler · Terazi · Kova",
+      "desc": "Fikirler dünyasında yaşıyorsun. Sosyal, meraklı ve sonsuz uyumlu — zihnin çoğu insanın takip edemeyeceği hızda hareket ediyor.",
+      "advice": "Zekan senin hediyendir. Ama bazen yere inmeyi unutma. En iyi bağlantılar analiz etmeyi bırakıp hissetmeye başladığında olur.",
+      "youProbably": [
+        "Şu an 47 sekmen açıktır",
+        "Her tartışmanın her tarafını savunabilirsin",
+        "Bir şey tahmin edilebilir olduğu an sıkılırsın",
+        "Birinin önce zekasına aşık olursun"
+      ]
+    },
+    "water": {
+      "emoji": "🌊",
+      "title": "Su Enerjisi",
+      "tagline": "Yengeç · Akrep · Balık",
+      "desc": "Her şeyi hissediyorsun. Sezgisel, derin ve duygusal olarak cesur — başkalarının kaçırdığını görüyor ve insanları değiştiren şekillerde seviyorsun.",
+      "advice": "Hassasiyetin bir süper güç, zayıflık değil. Enerjini koru, ama duvarlarını o kadar yüksek yapma ki aşk içeri yüzemesin.",
+      "youProbably": [
+        "Reklamlarda ağlarsın ve utanmazsın",
+        "Biri cümlesini bitirmeden yalan söylediğini bilirsin",
+        "Her duygusal durum için bir çalma listen vardır",
+        "O kadar derinden seversin ki bazen kendini bile korkutur"
+      ]
+    }
+  }
+}

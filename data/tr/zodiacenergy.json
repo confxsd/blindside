@@ -1,0 +1,152 @@
+[
+  {
+    "q": "Yabancılarla dolu bir odaya girdiğinde:",
+    "options": [
+      "Odayı hemen sahiplenirim",
+      "Sessiz bir köşe bulup gözlemlerim",
+      "Herkesle sohbet etmeye başlarım",
+      "Enerjiyi hisseder ve uyum sağlarım"
+    ],
+    "traits": [
+      { "fire": 2 },
+      { "earth": 2 },
+      { "air": 2 },
+      { "water": 2 }
+    ]
+  },
+  {
+    "q": "İdeal hafta sonun:",
+    "options": [
+      "Spontan macera, plan yok",
+      "Rahat rutin — yemek yap, topla, şarj ol",
+      "Arkadaşlarla brunch, sergi gezisi",
+      "Suyun kenarında günlük tutmak, derin müzik"
+    ],
+    "traits": [
+      { "fire": 2 },
+      { "earth": 2 },
+      { "air": 2 },
+      { "water": 2 }
+    ]
+  },
+  {
+    "q": "Bir tartışmada genelde:",
+    "options": [
+      "Patlarım, sonra unuturum",
+      "Sakin kalır, gerçekleri söylerim",
+      "Karşı tarafı konuşarak döndürürüm",
+      "Susarım ve her şeyi derinden hissederim"
+    ],
+    "traits": [
+      { "fire": 2 },
+      { "earth": 2 },
+      { "air": 2 },
+      { "water": 2 }
+    ]
+  },
+  {
+    "q": "İnsanlar sana çekilir çünkü:",
+    "options": [
+      "Özgüvenin ve enerjin",
+      "Güvenilirliğin ve sağlamlığın",
+      "Esprili zekan ve merakın",
+      "Derinliğin ve duygusal zekan"
+    ],
+    "traits": [
+      { "fire": 2 },
+      { "earth": 2 },
+      { "air": 2 },
+      { "water": 2 }
+    ]
+  },
+  {
+    "q": "Büyük bir karar verirken:",
+    "options": [
+      "İçgüdülerime güvenirim — fazla düşünmem",
+      "Artı eksi listesi yaparım",
+      "5 farklı kişiden fikir alırım",
+      "Mantıksız olsa bile kalbimi dinlerim"
+    ],
+    "traits": [
+      { "fire": 2 },
+      { "earth": 2 },
+      { "air": 2 },
+      { "water": 2 }
+    ]
+  },
+  {
+    "q": "Sevgi dilin en çok şuna yakın:",
+    "options": [
+      "Büyük jestler ve tutku",
+      "Hizmet ve tutarlılık",
+      "Kelimeler ve derin sohbetler",
+      "Fiziksel yakınlık ve sözsüz anlayış"
+    ],
+    "traits": [
+      { "fire": 2 },
+      { "earth": 2 },
+      { "air": 2 },
+      { "water": 2 }
+    ]
+  },
+  {
+    "q": "En büyük kusurun?",
+    "options": [
+      "Sabırsızlık — ŞİMDİ istiyorum",
+      "İnatçılık — kıpırdamam",
+      "Fazla düşünme — kafamda yaşıyorum",
+      "Fazla hissetme — her şeyi emiyorum"
+    ],
+    "traits": [
+      { "fire": 2 },
+      { "earth": 2 },
+      { "air": 2 },
+      { "water": 2 }
+    ]
+  },
+  {
+    "q": "Bir partide sen:",
+    "options": [
+      "Dans pistini başlatan",
+      "Çalma listesi ve atıştırmalıklarla ilgilenen",
+      "Gece yarısına kadar herkesin adını bilen",
+      "Mutfakta biriyle derin sohbet eden"
+    ],
+    "traits": [
+      { "fire": 2 },
+      { "earth": 2 },
+      { "air": 2 },
+      { "water": 2 }
+    ]
+  },
+  {
+    "q": "Stresli olduğunda ihtiyacın olan:",
+    "options": [
+      "Hareket etmek — spor, koşu, fiziksel bir şey",
+      "Plan yapmak — listeler, rutinler, kontrol",
+      "Akıllı biriyle konuşmak",
+      "Duygularımla baş başa kalmak"
+    ],
+    "traits": [
+      { "fire": 2 },
+      { "earth": 2 },
+      { "air": 2 },
+      { "water": 2 }
+    ]
+  },
+  {
+    "q": "Bir süper güç seç:",
+    "options": [
+      "Işınlanma — hemen her yere git",
+      "Zaman kontrolü — bir daha acele etme",
+      "Telepati — her zihni oku",
+      "Empati kalkanı — sadece istediğini hisset"
+    ],
+    "traits": [
+      { "fire": 2 },
+      { "earth": 2 },
+      { "air": 2 },
+      { "water": 2 }
+    ]
+  }
+]

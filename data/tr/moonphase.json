@@ -1,0 +1,152 @@
+[
+  {
+    "q": "Bir şey sona erdiğinde — iş, ilişki — sen:",
+    "options": [
+      "Zaten sonrakini planlıyorum",
+      "Yavaşça tekrar ivme kazanıyorum",
+      "Her şeyi sonuna kadar hissediyorum",
+      "Çekilip tek başıma sindiriyorum"
+    ],
+    "traits": [
+      { "newmoon": 2 },
+      { "waxing": 2 },
+      { "fullmoon": 2 },
+      { "waning": 2 }
+    ]
+  },
+  {
+    "q": "Enerjin en yüksek olduğu an:",
+    "options": [
+      "Yepyeni bir şeye başlarken",
+      "Net bir hedefe doğru çalışırken",
+      "Enerjine uyan insanlarla çevriliyken",
+      "Öğrendiklerimi düşünürken"
+    ],
+    "traits": [
+      { "newmoon": 2 },
+      { "waxing": 2 },
+      { "fullmoon": 2 },
+      { "waning": 2 }
+    ]
+  },
+  {
+    "q": "İlişkilerde sen:",
+    "options": [
+      "Her zaman ilk adımı atan",
+      "Yavaş ama derinden yatırım yapan",
+      "Yoğun ve açıkça seven",
+      "Bağlı kalmak için alana ihtiyaç duyan"
+    ],
+    "traits": [
+      { "newmoon": 2 },
+      { "waxing": 2 },
+      { "fullmoon": 2 },
+      { "waning": 2 }
+    ]
+  },
+  {
+    "q": "Arkadaşların seni şöyle tanımlar:",
+    "options": [
+      "Sürekli kendini yeniden keşfeden",
+      "Planı olan güvenilir kişi",
+      "Grubun canlılığı",
+      "Bilge ve eski ruh"
+    ],
+    "traits": [
+      { "newmoon": 2 },
+      { "waxing": 2 },
+      { "fullmoon": 2 },
+      { "waning": 2 }
+    ]
+  },
+  {
+    "q": "Gece 3'te uyuyamadığında:",
+    "options": [
+      "Yeni bir fikir hayal ediyorum",
+      "Yarın için yapılacaklar listesi yapıyorum",
+      "Bugünkü her etkileşimi tekrar yaşıyorum",
+      "Tavana bakıyorum, varoluşsal olarak"
+    ],
+    "traits": [
+      { "newmoon": 2 },
+      { "waxing": 2 },
+      { "fullmoon": 2 },
+      { "waning": 2 }
+    ]
+  },
+  {
+    "q": "En canlı hissettiğin an:",
+    "options": [
+      "Her şey belirsiz ve sonuna kadar açık",
+      "İlerlemeyi görebildiğim zaman",
+      "Biri tarafından tamamen görüldüğüm zaman",
+      "Yalnız ve huzur içinde olduğum zaman"
+    ],
+    "traits": [
+      { "newmoon": 2 },
+      { "waxing": 2 },
+      { "fullmoon": 2 },
+      { "waning": 2 }
+    ]
+  },
+  {
+    "q": "En büyük korkun:",
+    "options": [
+      "Sonsuza dek bir yerde sıkışıp kalmak",
+      "Bu kadar denedikten sonra başarısız olmak",
+      "Sevdiklerin tarafından yanlış anlaşılmak",
+      "İç huzuru hiç bulamamak"
+    ],
+    "traits": [
+      { "newmoon": 2 },
+      { "waxing": 2 },
+      { "fullmoon": 2 },
+      { "waning": 2 }
+    ]
+  },
+  {
+    "q": "İdeal tatil:",
+    "options": [
+      "Hiç gitmediğin bir yer, program yok",
+      "Planlı bir gezi — o zirveye tırman, o müzeyi gör",
+      "Enerji ve insan dolu bir festival veya şehir",
+      "Yalnız bir kulübe, ya da seni anlayan tek kişiyle"
+    ],
+    "traits": [
+      { "newmoon": 2 },
+      { "waxing": 2 },
+      { "fullmoon": 2 },
+      { "waning": 2 }
+    ]
+  },
+  {
+    "q": "Sana dokunan bir kelime seç:",
+    "options": [
+      "Başla",
+      "İnşa et",
+      "Çiçeklen",
+      "Bırak"
+    ],
+    "traits": [
+      { "newmoon": 2 },
+      { "waxing": 2 },
+      { "fullmoon": 2 },
+      { "waning": 2 }
+    ]
+  },
+  {
+    "q": "Şu an kendini şöyle hissediyorsun:",
+    "options": [
+      "Yeni bir şeyin eşiğinde",
+      "Olma sürecinin ortasında",
+      "Zirvemde, tamamen buradayım",
+      "Artık hizmet etmeyen şeyleri bırakıyorum"
+    ],
+    "traits": [
+      { "newmoon": 2 },
+      { "waxing": 2 },
+      { "fullmoon": 2 },
+      { "waning": 2 }
+    ]
+  }
+]
