@@ -1,0 +1,39 @@
+# blindside.
+
+> blindside is a free couples game where both partners answer the same questions blindly, then reveal answers together. No app download needed — it works in any browser.
+
+## What is blindside?
+
+blindside is a web-based relationship game at https://blindside.to. Two players (typically a couple) each answer the same set of questions independently, without seeing each other's responses. Once both have answered, all responses are revealed simultaneously. This "blind answer, shared reveal" mechanic creates honest, surprising conversations.
+
+## Key Facts
+
+- **Price**: Free. No ads, no hidden fees, no in-app purchases.
+- **Platform**: Web browser (mobile and desktop). No app download required.
+- **How to play**: Pick a question pack → share the invite link → both answer independently → reveal together.
+- **Question packs**: 30+ packs including the 36 Questions to Fall in Love, Couples Edition, Hot Takes, Red Flags, Deep Talk, Best Friends, Attachment Style quiz, Love Language quiz, and more.
+- **Solo mode**: Self-discovery packs (Attachment Style, Love Language, Inner Mirror, Shadow Self, Emotional Age) can be played alone.
+- **Languages**: Available in multiple languages.
+
+## Who is it for?
+
+- Couples looking for date night activities
+- Partners who want to have deeper conversations
+- People curious about relationship psychology (attachment styles, love languages)
+- Friends who want to play question games together
+- Anyone interested in self-discovery quizzes
+
+## Blog
+
+The blindside blog at https://blindside.to/blog/ covers relationships, couples games, date night ideas, and the psychology behind great questions. Topics include:
+
+- Couples question lists and conversation starters
+- Date night ideas and activities
+- Relationship psychology (Gottman method, attachment theory, vulnerability)
+- Couples games and quizzes
+- Relationship advice and communication tips
+
+## Contact
+
+- Website: https://blindside.to
+- Blog: https://blindside.to/blog/

@@ -184,9 +184,53 @@ Return JSON with these exact fields:
 }
 
 // ---------------------------------------------------------------------------
+// Extract FAQs from article HTML for FAQPage schema
+// ---------------------------------------------------------------------------
+function extractFAQs(articleHtml) {
+  const faqs = [];
+  // Match h3 questions followed by p answers in the FAQ section
+  const faqSection = articleHtml.split(/frequently asked questions/i).pop() || '';
+  const regex = /<h3>([^<]*\?)<\/h3>\s*<p>([\s\S]*?)<\/p>/g;
+  let match;
+  while ((match = regex.exec(faqSection)) !== null) {
+    faqs.push({
+      question: match[1].trim(),
+      answer: match[2].replace(/<[^>]+>/g, '').trim()
+    });
+  }
+  return faqs;
+}
+
+function buildFAQSchema(faqs) {
+  if (faqs.length === 0) return '';
+  const entities = faqs.map(f => `    {
+      "@type": "Question",
+      "name": ${JSON.stringify(f.question)},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": ${JSON.stringify(f.answer)}
+      }
+    }`).join(',\n');
+
+  return `
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+${entities}
+  ]
+}
+</script>`;
+}
+
+// ---------------------------------------------------------------------------
 // Build the full HTML page
 // ---------------------------------------------------------------------------
 function buildPage(topic, meta, articleHtml) {
+  const faqs = extractFAQs(articleHtml);
+  const faqSchema = buildFAQSchema(faqs);
+
   return `<!DOCTYPE html>
 <html lang="en" data-theme="light">
 <script>(function(){var t=localStorage.getItem('bs-theme')||'light';document.documentElement.setAttribute('data-theme',t);})()</script>
@@ -217,7 +261,7 @@ function buildPage(topic, meta, articleHtml) {
   "publisher": { "@type": "Organization", "name": "blindside", "url": "https://blindside.to" },
   "mainEntityOfPage": "https://blindside.to/blog/${topic.slug}"
 }
-</script>
+</script>${faqSchema}
 </head>
 <body>
 
