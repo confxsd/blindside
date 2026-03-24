@@ -50,14 +50,10 @@
     "format": "vs"
   },
   {
-    "q": "Belirsiz ilişkiler:",
-    "options": [
-      "En kötü icat",
-      "Bi yere kadar ok",
-      "Sadece takılmak",
-      "Red flag fabrikası"
-    ],
-    "pi": 1
+    "q": "☕ veya 🧋?",
+    "options": ["☕", "🧋"],
+    "pi": 0,
+    "format": "vs"
   },
   {
     "q": "Cevap süresi önemli mi?",

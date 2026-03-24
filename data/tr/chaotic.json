@@ -42,14 +42,10 @@
     "format": "bubble"
   },
   {
-    "q": "Sahte iş unvanı seç:",
-    "options": [
-      "Baş Overthinker",
-      "Profesyonel Geveze",
-      "Vibe Danışmanı",
-      "Uyku Mimarı"
-    ],
-    "pi": 1
+    "q": "Ele — son kalan gece 3 modun:",
+    "options": ["🫠 Eriyor", "🤡 Palyaço dönemi", "👻 Hayalet modu", "🔥 Çılgın", "💀 İçi ölü", "✨ Hayal dünyasında"],
+    "pi": 3,
+    "format": "eliminate"
   },
   {
     "q": "FBI ajanın seni nasıl görüyor:",
@@ -73,11 +69,8 @@
     "format": "bubble"
   },
   {
-    "q": "Ağız alışkanlığın:",
-    "options": [
-      "Olan olmuş",
-      "Kafamda sıfır düşünce"
-    ],
+    "q": "💀 veya 😭?",
+    "options": ["💀", "😭"],
     "pi": 0,
     "format": "vs"
   },

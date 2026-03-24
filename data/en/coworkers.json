@@ -33,14 +33,10 @@
     "format": "bubble"
   },
   {
-    "q": "Slack message style:",
-    "options": [
-      "One long paragraph",
-      "20 short messages",
-      "Voice note",
-      "Just emojis"
-    ],
-    "pi": 3
+    "q": "Eliminate meetings you'd skip:",
+    "options": ["📊 Status update", "🧊 Icebreaker", "🍕 Pizza Friday", "💡 Brainstorm", "📋 Retro", "🎉 Team building"],
+    "pi": 2,
+    "format": "eliminate"
   },
   {
     "q": "Lunch break move:",

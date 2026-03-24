@@ -52,23 +52,23 @@
     "format": "vs"
   },
   {
-    "q": "What's something small they do that makes your whole day?",
+    "q": "Tiny thing that makes your day:",
     "options": [
       "A random 'thinking of you' text",
       "Making me laugh out of nowhere",
-      "Remembering something I forgot I mentioned",
-      "The way they look at me when I'm not paying attention"
+      "Remembering a small detail",
+      "The way they look at me"
     ],
     "pi": 2,
     "format": "bubble"
   },
   {
-    "q": "If your relationship had a love language on max:",
+    "q": "Love language on max:",
     "options": [
-      "Physical touch — always reaching for each other",
-      "Words — we talk about everything",
-      "Acts — we just handle life together",
-      "Quality time — we could do nothing and it's enough"
+      "🤝 Touch",
+      "💬 Words",
+      "🛠️ Acts",
+      "⏳ Quality time"
     ],
     "pi": 0,
     "format": "swipe"

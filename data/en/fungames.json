@@ -71,24 +71,16 @@
     "format": "bubble"
   },
   {
-    "q": "Your dream game show:",
-    "options": [
-      "Survivor",
-      "The Floor Is Lava",
-      "Love Island",
-      "Are You Smarter Than a 5th Grader"
-    ],
-    "pi": 0
+    "q": "🏖️ or 🏔️?",
+    "options": ["🏖️", "🏔️"],
+    "pi": 0,
+    "format": "vs"
   },
   {
-    "q": "Two truths and a lie — which do people guess wrong?",
-    "options": [
-      "The wild one",
-      "The boring one",
-      "They always guess right",
-      "I'm a terrible liar"
-    ],
-    "pi": 1
+    "q": "Eliminate until your survival item remains:",
+    "options": ["🔪 Knife", "📱 Phone", "🍕 Food", "💤 Pillow", "🔥 Fire", "📖 Book"],
+    "pi": 2,
+    "format": "eliminate"
   },
   {
     "q": "You're hosting a dinner party. Vibe check:",

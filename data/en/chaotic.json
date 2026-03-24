@@ -42,14 +42,10 @@
     "format": "bubble"
   },
   {
-    "q": "Pick a fake job title:",
-    "options": [
-      "Chief Overthinker",
-      "Professional Yapper",
-      "Vibe Consultant",
-      "Nap Architect"
-    ],
-    "pi": 1
+    "q": "Eliminate — last one is your 3am mood:",
+    "options": ["🫠 Melting", "🤡 Clown era", "👻 Ghost mode", "🔥 Unhinged", "💀 Dead inside", "✨ Delusional"],
+    "pi": 3,
+    "format": "eliminate"
   },
   {
     "q": "Your FBI agent thinks you're:",
@@ -73,11 +69,8 @@
     "format": "bubble"
   },
   {
-    "q": "Your catchphrase:",
-    "options": [
-      "It is what it is",
-      "No thoughts head empty"
-    ],
+    "q": "💀 or 😭?",
+    "options": ["💀", "😭"],
     "pi": 0,
     "format": "vs"
   },

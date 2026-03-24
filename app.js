@@ -639,6 +639,7 @@ async function resumeSession(code) {
     // Start/continue quiz
     currentQuestion = 0;
     selectedAnswers = {};
+    eliminatedSets = {};
     questionModes = [];
     goTo('quiz');
   } catch (e) {
@@ -732,6 +733,7 @@ async function handleJoinCode(code) {
 
     currentQuestion = 0;
     selectedAnswers = {};
+    eliminatedSets = {};
     questionModes = [];
     goTo('quiz');
   } catch (e) {
@@ -944,6 +946,7 @@ async function selectPack(key) {
     currentSession = null;
     currentQuestion = 0;
     selectedAnswers = {};
+    eliminatedSets = {};
     questionModes = [];
     goTo('quiz');
     return;
@@ -971,11 +974,12 @@ function startQuizAsCreator() {
 }
 
 // Quiz — Mini-game modes
-const QUIZ_MODES = ['classic', 'thisOrThat', 'bubblePop', 'blitz', 'swipe', 'blindGuess'];
-const FORMAT_TO_MODE = { vs: 'thisOrThat', bubble: 'bubblePop', swipe: 'swipe', blindguess: 'blindGuess' };
-const MODE_LABELS = { classic: '✏️', thisOrThat: '⚔️ This or That', bubblePop: '🫧 Bubble Pop', blitz: '⚡ Blitz', swipe: '👆 Swipe Pick', blindGuess: '🔮 Blind Guess' };
+const QUIZ_MODES = ['classic', 'thisOrThat', 'bubblePop', 'blitz', 'swipe', 'blindGuess', 'eliminate'];
+const FORMAT_TO_MODE = { vs: 'thisOrThat', bubble: 'bubblePop', swipe: 'swipe', blindguess: 'blindGuess', eliminate: 'eliminate' };
+const MODE_LABELS = { classic: '✏️', thisOrThat: '⚔️ This or That', bubblePop: '🫧 Bubble Pop', blitz: '⚡ Blitz', swipe: '👆 Swipe Pick', blindGuess: '🔮 Blind Guess', eliminate: '🗑️ Last One Standing' };
 let questionModes = [];
 let blindGuessPhase = 'own'; // 'own' or 'guess'
+let eliminatedSets = {};
 let blitzInterval = null;
 
 function assignQuestionModes() {
@@ -1021,6 +1025,7 @@ function renderQuestion() {
     case 'blitz': renderBlitz(body, q); break;
     case 'swipe': renderSwipe(body, q); break;
     case 'blindGuess': renderBlindGuess(body, q); break;
+    case 'eliminate': renderEliminate(body, q); break;
     default: renderClassic(body, q);
   }
 }
@@ -1261,6 +1266,76 @@ function selectAnswer(qIndex, answer, el) {
   }
   document.getElementById('quizNextBtn').disabled = false;
   if (blitzInterval) { clearInterval(blitzInterval); blitzInterval = null; }
+}
+
+// --- ELIMINATE (last one standing) ---
+function renderEliminate(body, q) {
+  if (!eliminatedSets[currentQuestion]) {
+    if (selectedAnswers[currentQuestion] !== undefined) {
+      eliminatedSets[currentQuestion] = new Set(
+        q.options.map((_, i) => i).filter(i => i !== selectedAnswers[currentQuestion])
+      );
+    } else {
+      eliminatedSets[currentQuestion] = new Set();
+    }
+  }
+  const elim = eliminatedSets[currentQuestion];
+  const isSolved = q.options.length - elim.size === 1;
+
+  body.innerHTML = `
+    <div class="question-card eliminate-card" key="${currentQuestion}">
+      <div class="mode-badge">${MODE_LABELS.eliminate}</div>
+      <div class="question-text" style="font-size:19px">${q.q}</div>
+      <div class="eliminate-hint">${i18n.t('eliminate_hint') || 'tap to eliminate \u2014 last one wins'}</div>
+      <div class="eliminate-grid">
+        ${q.options.map((opt, oi) => {
+          const isElim = elim.has(oi);
+          const isSurvivor = isSolved && !isElim;
+          return `<div class="eliminate-item ${isElim ? 'eliminated' : ''} ${isSurvivor ? 'survivor' : ''}"
+                       onclick="toggleEliminate(${currentQuestion}, ${oi})" data-idx="${oi}">
+            <span class="eliminate-text">${opt}</span>
+            ${isElim ? '<span class="eliminate-x">\u2715</span>' : ''}
+          </div>`;
+        }).join('')}
+      </div>
+      <div class="eliminate-count" id="eliminateCount">${elim.size} / ${q.options.length - 1}</div>
+    </div>`;
+}
+
+function toggleEliminate(qi, idx) {
+  const q = questions[qi];
+  const elim = eliminatedSets[qi];
+
+  if (elim.has(idx)) {
+    elim.delete(idx);
+    delete selectedAnswers[qi];
+    document.getElementById('quizNextBtn').disabled = true;
+  } else {
+    if (q.options.length - elim.size <= 1) return;
+    elim.add(idx);
+    if (q.options.length - elim.size === 1) {
+      const survivorIdx = q.options.findIndex((_, i) => !elim.has(i));
+      selectedAnswers[qi] = survivorIdx;
+      document.getElementById('quizNextBtn').disabled = false;
+    }
+  }
+
+  document.querySelectorAll('.eliminate-item').forEach(el => {
+    const i = parseInt(el.dataset.idx);
+    const isElim = elim.has(i);
+    const isSurvivor = q.options.length - elim.size === 1 && !isElim;
+    el.classList.toggle('eliminated', isElim);
+    el.classList.toggle('survivor', isSurvivor);
+    const xSpan = el.querySelector('.eliminate-x');
+    if (isElim && !xSpan) {
+      el.insertAdjacentHTML('beforeend', '<span class="eliminate-x">\u2715</span>');
+    } else if (!isElim && xSpan) {
+      xSpan.remove();
+    }
+  });
+
+  document.getElementById('eliminateCount').textContent =
+    `${elim.size} / ${q.options.length - 1}`;
 }
 
 function nextQuestion() {

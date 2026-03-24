@@ -71,24 +71,16 @@
     "format": "bubble"
   },
   {
-    "q": "Rüya yarışma programın:",
-    "options": [
-      "Survivor",
-      "Yer Lav Oldu",
-      "Love Island",
-      "Kim 500 Milyar İster"
-    ],
-    "pi": 0
+    "q": "🏖️ veya 🏔️?",
+    "options": ["🏖️", "🏔️"],
+    "pi": 0,
+    "format": "vs"
   },
   {
-    "q": "İki doğru bir yalan — hangisini yanlış tahmin ederler?",
-    "options": [
-      "Çılgın olanı",
-      "Sıkıcı olanı",
-      "Hep doğru tahmin ederler",
-      "Berbat yalancıyım"
-    ],
-    "pi": 1
+    "q": "Hayatta kalma eşyan kalana kadar ele:",
+    "options": ["🔪 Bıçak", "📱 Telefon", "🍕 Yemek", "💤 Yastık", "🔥 Ateş", "📖 Kitap"],
+    "pi": 2,
+    "format": "eliminate"
   },
   {
     "q": "Akşam yemeği partisi veriyorsun. Ortam:",

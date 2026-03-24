@@ -50,14 +50,10 @@
     "format": "bubble"
   },
   {
-    "q": "They never initiate plans:",
-    "options": [
-      "Red flag",
-      "Maybe they're shy",
-      "I'm the planner anyway",
-      "We'd never hang out"
-    ],
-    "pi": 0
+    "q": "Eliminate the forgivable ones:",
+    "options": ["😴 Snores loud", "📱 Phone at dinner", "🐌 Slow texter", "🧦 Socks in bed", "🎵 Bad music taste", "🫠 Oversharer"],
+    "pi": 2,
+    "format": "eliminate"
   },
   {
     "q": "They have zero social media:",

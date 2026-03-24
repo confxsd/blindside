@@ -33,14 +33,10 @@
     "format": "bubble"
   },
   {
-    "q": "Arkadaşlık marşınızın türü:",
-    "options": [
-      "Pop hit'leri",
-      "Nostalji şarkıları",
-      "Indie",
-      "Hip-hop"
-    ],
-    "pi": 3
+    "q": "Takılma planın kalana kadar ele:",
+    "options": ["🎬 Film", "🛒 Alışveriş", "🍕 Yemek turu", "🎮 Oyun", "💬 Sadece sohbet", "🚗 Araba turu"],
+    "pi": 4,
+    "format": "eliminate"
   },
   {
     "q": "Birbirinizi nasıl neşelendirirsiniz?",

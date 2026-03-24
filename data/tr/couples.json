@@ -52,23 +52,23 @@
     "format": "vs"
   },
   {
-    "q": "Yaptığı küçük bir şey tüm gününü güzelleştirir:",
+    "q": "Gününü güzelleştiren küçük şey:",
     "options": [
       "'Seni düşündüm' mesajı",
-      "Hiç beklemediğim anda güldürmesi",
-      "Unuttuğum bir şeyi hatırlaması",
-      "Ben bakmıyorken bana bakış şekli"
+      "Hiç beklemediğimde güldürmesi",
+      "Küçük bir detayı hatırlaması",
+      "Bana bakış şekli"
     ],
     "pi": 2,
     "format": "bubble"
   },
   {
-    "q": "İlişkinizin aşk dili en yüksek seviyede olsa:",
+    "q": "Aşk dili en yüksekte:",
     "options": [
-      "Fiziksel yakınlık — hep birbirimize dokunuruz",
-      "Sözler — her şeyi konuşuruz",
-      "Eylemler — hayatı birlikte idare ederiz",
-      "Birlikte zaman — hiçbir şey yapmak bile yeter"
+      "🤝 Dokunma",
+      "💬 Sözler",
+      "🛠️ Eylemler",
+      "⏳ Birlikte zaman"
     ],
     "pi": 0,
     "format": "swipe"

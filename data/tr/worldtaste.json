@@ -2,20 +2,20 @@
   {
     "q": "Hayalindeki seyahat noktası:",
     "options": [
-      "Tokyo, Japonya",
-      "Marakeş, Fas",
-      "Santorini, Yunanistan",
-      "Medellín, Kolombiya"
+      "🗼 Tokyo",
+      "🏜️ Marakeş",
+      "🏛️ Santorini",
+      "🌴 Medellín"
     ],
     "pi": 0
   },
   {
     "q": "Dünyanın en iyi sokak yemeği:",
     "options": [
-      "Meksika takosu",
-      "Tayland pad thai",
-      "Türk kebabı",
-      "Çin mantısı"
+      "🌮 Taco",
+      "🍜 Pad Thai",
+      "🥙 Kebap",
+      "🥟 Mantı"
     ],
     "pi": 1
   },
@@ -40,22 +40,18 @@
     "pi": 0
   },
   {
-    "q": "Gitmek istediğin dünya festivali:",
-    "options": [
-      "Karnaval (Brezilya)",
-      "Holi (Hindistan)",
-      "Ölüler Günü (Meksika)",
-      "Fener Festivali (Tayland)"
-    ],
-    "pi": 1
+    "q": "Comfort food'un kalana kadar ele:",
+    "options": ["🍕 Pizza", "🍣 Sushi", "🌮 Taco", "🍜 Ramen", "🥘 Köri", "🍔 Burger"],
+    "pi": 0,
+    "format": "eliminate"
   },
   {
-    "q": "Dünyanın en iyi rahatlatıcı içeceği:",
+    "q": "En iyi rahatlatıcı içecek:",
     "options": [
-      "Chai (Hindistan)",
-      "Matcha (Japonya)",
-      "Türk kahvesi",
-      "Horchata (Meksika)"
+      "☕ Chai",
+      "🍵 Matcha",
+      "☕ Türk kahvesi",
+      "🧉 Horchata"
     ],
     "pi": 2
   },
@@ -92,10 +88,10 @@
   {
     "q": "En iyi tatlı geleneği:",
     "options": [
-      "Fransız pastaneleri",
-      "Türk baklavası",
-      "Japon mochisi",
-      "Hint gulab jamunu"
+      "🥐 Fransız pastanesi",
+      "🍯 Türk baklavası",
+      "🍡 Japon mochisi",
+      "🍮 Hint gulab jamunu"
     ],
     "pi": 1
   }

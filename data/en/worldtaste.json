@@ -2,20 +2,20 @@
   {
     "q": "Dream travel destination:",
     "options": [
-      "Tokyo, Japan",
-      "Marrakech, Morocco",
-      "Santorini, Greece",
-      "Medellín, Colombia"
+      "🗼 Tokyo",
+      "🏜️ Marrakech",
+      "🏛️ Santorini",
+      "🌴 Medellín"
     ],
     "pi": 0
   },
   {
     "q": "Best street food in the world:",
     "options": [
-      "Tacos from Mexico",
-      "Pad Thai from Thailand",
-      "Kebab from Turkey",
-      "Dumplings from China"
+      "🌮 Tacos",
+      "🍜 Pad Thai",
+      "🥙 Kebab",
+      "🥟 Dumplings"
     ],
     "pi": 1
   },
@@ -40,22 +40,18 @@
     "pi": 0
   },
   {
-    "q": "Pick a world festival to attend:",
-    "options": [
-      "Carnival (Brazil)",
-      "Holi (India)",
-      "Día de los Muertos (Mexico)",
-      "Lantern Festival (Thailand)"
-    ],
-    "pi": 1
+    "q": "Eliminate until your comfort food remains:",
+    "options": ["🍕 Pizza", "🍣 Sushi", "🌮 Tacos", "🍜 Ramen", "🥘 Curry", "🍔 Burger"],
+    "pi": 0,
+    "format": "eliminate"
   },
   {
-    "q": "Best comfort drink worldwide:",
+    "q": "Best comfort drink:",
     "options": [
-      "Chai (India)",
-      "Matcha (Japan)",
-      "Turkish coffee",
-      "Horchata (Mexico)"
+      "☕ Chai",
+      "🍵 Matcha",
+      "☕ Turkish coffee",
+      "🧉 Horchata"
     ],
     "pi": 2
   },
@@ -92,10 +88,10 @@
   {
     "q": "Best dessert tradition:",
     "options": [
-      "French pastries",
-      "Turkish baklava",
-      "Japanese mochi",
-      "Indian gulab jamun"
+      "🥐 French pastries",
+      "🍯 Turkish baklava",
+      "🍡 Japanese mochi",
+      "🍮 Indian gulab jamun"
     ],
     "pi": 1
   }

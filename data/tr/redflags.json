@@ -50,14 +50,10 @@
     "format": "bubble"
   },
   {
-    "q": "Hiç plan yapmıyor:",
-    "options": [
-      "Red flag",
-      "Belki utangaçtır",
-      "Plancı zaten benim",
-      "Hiç buluşamayız"
-    ],
-    "pi": 0
+    "q": "Affedilebilir olanları ele:",
+    "options": ["😴 Çok horluyor", "📱 Yemekte telefon", "🐌 Geç cevap", "🧦 Yatakta çorap", "🎵 Kötü müzik zevki", "🫠 Aşırı paylaşımcı"],
+    "pi": 2,
+    "format": "eliminate"
   },
   {
     "q": "Hiç sosyal medyası yok:",

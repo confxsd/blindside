@@ -30,14 +30,10 @@
     "pi": 1
   },
   {
-    "q": "Ev işlerini nasıl hallediyorsun?",
-    "options": [
-      "Sıkı program",
-      "Gören yapar",
-      "Haftalık sırayla",
-      "Her seferinde tartışırız"
-    ],
-    "pi": 1
+    "q": "Anlaşamayacaklarını ele:",
+    "options": ["🧹 Temizlik takıntısı", "🎵 Yüksek müzik", "🌡️ Klima savaşı", "🐶 Her yerde evcil hayvan", "👻 Sık misafir", "🍳 Mutfak karmaşası"],
+    "pi": 0,
+    "format": "eliminate"
   },
   {
     "q": "Market alışverişi felsefesi:",

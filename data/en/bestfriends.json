@@ -33,14 +33,10 @@
     "format": "bubble"
   },
   {
-    "q": "Your friendship anthem genre:",
-    "options": [
-      "Pop bangers",
-      "Throwback hits",
-      "Indie vibes",
-      "Hip-hop"
-    ],
-    "pi": 3
+    "q": "Eliminate until your hangout remains:",
+    "options": ["🎬 Movies", "🛒 Shopping", "🍕 Food run", "🎮 Gaming", "💬 Just talk", "🚗 Drive around"],
+    "pi": 4,
+    "format": "eliminate"
   },
   {
     "q": "How do you cheer each other up?",

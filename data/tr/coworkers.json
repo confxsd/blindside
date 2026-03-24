@@ -33,14 +33,10 @@
     "format": "bubble"
   },
   {
-    "q": "Mesaj tarzın:",
-    "options": [
-      "Tek uzun paragraf",
-      "20 kısa mesaj",
-      "Sesli mesaj",
-      "Sadece emoji"
-    ],
-    "pi": 3
+    "q": "Katılmadan kaçacağın toplantıları ele:",
+    "options": ["📊 Durum güncelleme", "🧊 Tanışma", "🍕 Pizza Cuma", "💡 Beyin fırtınası", "📋 Retro", "🎉 Takım etkinliği"],
+    "pi": 2,
+    "format": "eliminate"
   },
   {
     "q": "Öğle arası tercihin:",

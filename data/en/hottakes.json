@@ -50,14 +50,10 @@
     "format": "vs"
   },
   {
-    "q": "Situationships are:",
-    "options": [
-      "The worst invention",
-      "Kinda valid",
-      "Just vibing",
-      "A red flag factory"
-    ],
-    "pi": 1
+    "q": "☕ or 🧋?",
+    "options": ["☕", "🧋"],
+    "pi": 0,
+    "format": "vs"
   },
   {
     "q": "Reply time matters?",

@@ -30,14 +30,10 @@
     "pi": 1
   },
   {
-    "q": "How do you handle chores?",
-    "options": [
-      "Strict schedule",
-      "Whoever sees it does it",
-      "Trade off week by week",
-      "Argue about it every time"
-    ],
-    "pi": 1
+    "q": "Eliminate the dealbreakers:",
+    "options": ["🧹 Clean freak", "🎵 Loud music", "🌡️ AC wars", "🐶 Pets everywhere", "👻 Guests often", "🍳 Kitchen mess"],
+    "pi": 0,
+    "format": "eliminate"
   },
   {
     "q": "Groceries philosophy:",
