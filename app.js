@@ -1001,6 +1001,7 @@ function goTo(screenId) {
     if (screenId === 'packs') { updateNav('packs'); renderPacksGrid(); }
     if (screenId === 'collectionDetail') { updateNav('packs'); renderCollectionDetail(); }
     if (screenId === 'profile') { updateNav('profile'); renderProfile(); }
+    if (screenId === 'insights') { updateNav('profile'); }
   }, 200);
 }
 
@@ -1106,6 +1107,17 @@ function renderProfile() {
     </div>
 
     ${premiumSection}
+
+    <div class="profile-insights-card" onclick="goToInsights()">
+      <div class="profile-insights-left">
+        <div class="profile-insights-icon">✦</div>
+        <div>
+          <div class="profile-insights-title">${i18n.t('insights_page_title')}</div>
+          <div class="profile-insights-desc">${i18n.t('insights_card_desc')}</div>
+        </div>
+      </div>
+      ${!isPremium ? '<span class="lock-pill"></span>' : '<span class="profile-menu-arrow">›</span>'}
+    </div>
 
     <div class="profile-section-label">${i18n.t('profile_settings')}</div>
     <div class="profile-menu">
@@ -2183,76 +2195,92 @@ async function buildReceiptFromApi(code) {
   }
 }
 
-// ==================== Premium teasers on results ====================
-function renderInsightsTeaser(mode) {
-  // mode: 'partner' or 'solo'
-  const insightItems = mode === 'partner'
-    ? [
-        { icon: '🧠', label: i18n.t('insight_communication') },
-        { icon: '❤️‍🔥', label: i18n.t('insight_compatibility') },
-        { icon: '🌱', label: i18n.t('insight_growth') },
-        { icon: '⚡', label: i18n.t('insight_tension') },
-      ]
-    : [
-        { icon: '🪞', label: i18n.t('insight_self_awareness') },
-        { icon: '🔑', label: i18n.t('insight_hidden_patterns') },
-        { icon: '🧭', label: i18n.t('insight_next_steps') },
-        { icon: '💡', label: i18n.t('insight_strengths') },
-      ];
+// ==================== Insights & Advisor (standalone page) ====================
+function goToInsights() {
+  if (!isPremium) { showPremiumModal(''); return; }
+  renderInsightsPage();
+  goTo('insights');
+}
 
-  const insightsHtml = insightItems.map(it =>
-    `<div class="insight-teaser-item"><span class="insight-teaser-icon">${it.icon}</span><span>${it.label}</span></div>`
-  ).join('');
+function renderInsightsPage() {
+  const container = document.getElementById('insightsContent');
+  if (!container) return;
 
-  const advisorPrompts = mode === 'partner'
-    ? [i18n.t('advisor_prompt_1'), i18n.t('advisor_prompt_2'), i18n.t('advisor_prompt_3')]
-    : [i18n.t('advisor_prompt_solo_1'), i18n.t('advisor_prompt_solo_2'), i18n.t('advisor_prompt_solo_3')];
+  const sessions = _cachedSessions || [];
+  const completed = sessions.filter(s => s.status === 'complete');
+  const totalSessions = completed.length;
+  const uniquePartners = [...new Set(completed.map(s => s.partner_username || s.creator_username).filter(Boolean))];
+  const uniquePacks = [...new Set(completed.map(s => s.pack_key))];
 
-  const promptsHtml = advisorPrompts.map(p =>
-    `<div class="advisor-prompt-chip">${p}</div>`
-  ).join('');
+  // Build insights content
+  const insightCards = [
+    { icon: '🧠', title: i18n.t('insight_communication'), value: totalSessions > 2 ? i18n.t('insights_val_strong') : i18n.t('insights_val_building'), desc: i18n.t('insights_desc_communication') },
+    { icon: '❤️‍🔥', title: i18n.t('insight_compatibility'), value: totalSessions > 0 ? `${Math.min(60 + totalSessions * 5, 96)}%` : '—', desc: i18n.t('insights_desc_compatibility') },
+    { icon: '🌱', title: i18n.t('insight_growth'), value: uniquePacks.length + ' ' + i18n.t('insights_val_areas'), desc: i18n.t('insights_desc_growth') },
+    { icon: '⚡', title: i18n.t('insight_tension'), value: totalSessions > 1 ? i18n.t('insights_val_low') : i18n.t('insights_val_unknown'), desc: i18n.t('insights_desc_tension') },
+  ];
 
-  if (isPremium) {
-    // For now show "coming soon" for premium users
-    return `
-      <div class="premium-results-section">
-        <div class="premium-results-label">${i18n.t('insights_title')}</div>
-        <div class="insight-items-unlocked">${insightsHtml}</div>
-        <div class="insight-coming-soon">${i18n.t('insights_coming_soon')}</div>
+  const insightCardsHtml = insightCards.map(c => `
+    <div class="insight-card">
+      <div class="insight-card-header">
+        <span class="insight-card-icon">${c.icon}</span>
+        <span class="insight-card-title">${c.title}</span>
       </div>
-      <div class="premium-results-section">
-        <div class="premium-results-label">${i18n.t('advisor_title')}</div>
-        <div class="advisor-prompts">${promptsHtml}</div>
-        <div class="insight-coming-soon">${i18n.t('advisor_coming_soon')}</div>
-      </div>
-    `;
-  }
+      <div class="insight-card-value">${c.value}</div>
+      <div class="insight-card-desc">${c.desc}</div>
+    </div>
+  `).join('');
 
-  // Non-premium: locked teasers
-  return `
-    <div class="premium-results-section premium-locked-section" onclick="showPremiumModal('')">
-      <div class="premium-results-label">${i18n.t('insights_title')}</div>
-      <div class="insight-teaser-grid">${insightsHtml}</div>
-      <div class="premium-locked-overlay">
-        <div class="premium-locked-cta">
-          <div class="premium-locked-icon">+</div>
-          <div class="premium-locked-text">${i18n.t('insights_unlock')}</div>
-        </div>
+  // Stats overview
+  const statsHtml = `
+    <div class="insights-stats-row">
+      <div class="insights-stat">
+        <div class="insights-stat-val">${totalSessions}</div>
+        <div class="insights-stat-lbl">${i18n.t('insights_stat_sessions')}</div>
+      </div>
+      <div class="insights-stat">
+        <div class="insights-stat-val">${uniquePartners.length}</div>
+        <div class="insights-stat-lbl">${i18n.t('insights_stat_partners')}</div>
+      </div>
+      <div class="insights-stat">
+        <div class="insights-stat-val">${uniquePacks.length}</div>
+        <div class="insights-stat-lbl">${i18n.t('insights_stat_topics')}</div>
       </div>
     </div>
-    <div class="premium-results-section premium-locked-section" onclick="showPremiumModal('')">
-      <div class="premium-results-label">${i18n.t('advisor_title')}</div>
-      <div class="advisor-teaser">
-        <div class="advisor-teaser-avatar">✦</div>
-        <div class="advisor-teaser-bubble">${i18n.t('advisor_teaser_msg')}</div>
+  `;
+
+  // Advisor section
+  const advisorPrompts = [
+    i18n.t('advisor_prompt_1'), i18n.t('advisor_prompt_2'), i18n.t('advisor_prompt_3'),
+    i18n.t('advisor_prompt_solo_1'), i18n.t('advisor_prompt_solo_2')
+  ];
+  const promptsHtml = advisorPrompts.map(p =>
+    `<div class="advisor-prompt-chip" onclick="alert('${i18n.t('advisor_coming_soon')}')">${p}</div>`
+  ).join('');
+
+  container.innerHTML = `
+    <div class="top-bar" style="width:100%">
+      <button class="btn-icon" onclick="goToProfile()">←</button>
+      <h2>${i18n.t('insights_page_title')}</h2>
+    </div>
+
+    ${statsHtml}
+
+    <div class="insights-section-label">${i18n.t('insights_title')}</div>
+    <div class="insights-cards-grid">
+      ${insightCardsHtml}
+    </div>
+
+    ${totalSessions === 0 ? `<div class="insights-empty">${i18n.t('insights_play_more')}</div>` : ''}
+
+    <div class="insights-section-label">${i18n.t('advisor_title')}</div>
+    <div class="advisor-section">
+      <div class="advisor-intro">
+        <div class="advisor-intro-avatar">✦</div>
+        <div class="advisor-intro-bubble">${i18n.t('advisor_teaser_msg')}</div>
       </div>
-      <div class="advisor-prompts advisor-prompts-locked">${promptsHtml}</div>
-      <div class="premium-locked-overlay">
-        <div class="premium-locked-cta">
-          <div class="premium-locked-icon">+</div>
-          <div class="premium-locked-text">${i18n.t('advisor_unlock')}</div>
-        </div>
-      </div>
+      <div class="advisor-prompts">${promptsHtml}</div>
+      <div class="advisor-coming-note">${i18n.t('advisor_coming_soon')}</div>
     </div>
   `;
 }
@@ -2347,10 +2375,12 @@ function buildReceiptWithName(partnerName) {
       <div class="story-brand">blindside.</div>
       <div class="story-date">${dateStr}</div>
     </div>
-    ${renderInsightsTeaser('partner')}
     <div class="story-actions">
+      <button class="btn btn-primary results-insights-btn" style="width:100%" onclick="goToInsights()">
+        ✦ ${i18n.t('results_view_insights')}
+      </button>
       <button class="btn-share" onclick="shareReceipt()">${i18n.t('results_share')}</button>
-      <button class="btn btn-primary" style="width:100%" onclick="goTo('packs')">${i18n.t('results_play_another')}</button>
+      <button class="btn btn-primary" style="width:100%;background:var(--surface)!important;color:var(--text)!important;border:1px solid var(--border)!important;box-shadow:none!important" onclick="goTo('packs')">${i18n.t('results_play_another')}</button>
       <button class="btn btn-ghost" onclick="goTo('home');loadHomeSessions()">${i18n.t('results_back_home')}</button>
     </div>
   `;
@@ -2469,10 +2499,12 @@ async function buildSoloReceipt() {
       <div class="story-brand">blindside.</div>
       <div class="story-date">${dateStr}</div>
     </div>
-    ${renderInsightsTeaser('solo')}
     <div class="story-actions">
+      <button class="btn btn-primary results-insights-btn" style="width:100%" onclick="goToInsights()">
+        ✦ ${i18n.t('results_view_insights')}
+      </button>
       <button class="btn-share" onclick="shareReceipt()">${i18n.t('results_share')}</button>
-      <button class="btn btn-primary" style="width:100%" onclick="goTo('packs')">${i18n.t('solo_take_another')}</button>
+      <button class="btn btn-primary" style="width:100%;background:var(--surface)!important;color:var(--text)!important;border:1px solid var(--border)!important;box-shadow:none!important" onclick="goTo('packs')">${i18n.t('solo_take_another')}</button>
       <button class="btn btn-ghost" onclick="goTo('home')">${i18n.t('results_back_home')}</button>
     </div>
   `;

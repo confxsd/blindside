@@ -718,13 +718,187 @@
   gap: 6px;
 }
 .advisor-prompt-chip {
-  padding: 6px 12px;
+  padding: 8px 14px;
   border-radius: 100px;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 500;
   background: var(--surface);
   border: 1px solid var(--border);
   color: var(--text-mid);
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+.advisor-prompt-chip:active {
+  border-color: var(--accent-1-border);
+}
+
+/* ===== Profile insights card ===== */
+.profile-insights-card {
+  margin: 0 20px 20px;
+  padding: 16px 18px;
+  border-radius: var(--radius);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.profile-insights-card:active {
+  transform: scale(0.98);
+}
+.profile-insights-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.profile-insights-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: var(--accent-1-bg);
+  color: var(--accent-1);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.profile-insights-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+.profile-insights-desc {
+  font-size: 11px;
+  color: var(--text-dim);
+  margin-top: 1px;
+}
+
+/* ===== Insights page ===== */
+.insights-stats-row {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  padding: 20px 24px 24px;
+}
+.insights-stat { text-align: center; }
+.insights-stat-val {
+  font-family: 'Syne', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+.insights-stat-lbl {
+  font-size: 11px;
+  color: var(--text-dim);
+  font-weight: 500;
+  margin-top: 2px;
+}
+.insights-section-label {
+  font-family: 'Syne', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-dim);
+  padding: 8px 24px 10px;
+}
+.insights-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 0 20px 16px;
+}
+.insight-card {
+  padding: 16px;
+  border-radius: var(--radius);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.insight-card-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.insight-card-icon { font-size: 16px; }
+.insight-card-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-dim);
+}
+.insight-card-value {
+  font-family: 'Syne', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  color: var(--text);
+}
+.insight-card-desc {
+  font-size: 11px;
+  color: var(--text-dim);
+  line-height: 1.4;
+}
+.insights-empty {
+  text-align: center;
+  padding: 20px 24px;
+  font-size: 13px;
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+/* Advisor section on insights page */
+.advisor-section {
+  margin: 0 20px 20px;
+  padding: 20px;
+  border-radius: var(--radius);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.advisor-intro {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.advisor-intro-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--accent-1);
+  color: #fff;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.advisor-intro-bubble {
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  border-top-left-radius: 2px;
+  background: var(--surface);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text);
+}
+.advisor-coming-note {
+  font-size: 11px;
+  color: var(--text-dim);
+  text-align: center;
+  font-style: italic;
+}
+
+/* Results page insights button */
+.results-insights-btn {
+  background: linear-gradient(135deg, var(--accent-1), var(--accent-2)) !important;
 }
 
 /* ===== Section labels ===== */
