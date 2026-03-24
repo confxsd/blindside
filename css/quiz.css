@@ -574,3 +574,11 @@
   font-family: 'DM Sans', sans-serif;
   color: var(--text);
 }
+.ch-guess-actual {
+  font-size: 11px;
+  font-weight: 500;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text-dim);
+  margin-top: 3px;
+}
+.ch-guess-actual:empty { display: none; }

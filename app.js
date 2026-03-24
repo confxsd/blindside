@@ -1916,8 +1916,9 @@ function buildReceiptWithName(partnerName) {
   const dateStr = now.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 
   let chaptersHtml = '';
-  const apiGuessResults = data.filter(d => d.userGuess !== undefined || d.partnerGuess !== undefined);
-  const apiHasGuesses = apiGuessResults.length > 0;
+  const userGuessResults = data.filter(d => d.userGuess !== undefined);
+  const partnerGuessResults = data.filter(d => d.partnerGuess !== undefined);
+  const apiHasGuesses = userGuessResults.length > 0 || partnerGuessResults.length > 0;
   const apiGuessCorrectCount = data.filter(d => d.guessCorrect).length;
   const apiPartnerGuessCorrectCount = data.filter(d => d.partnerGuessCorrect).length;
 
@@ -1925,14 +1926,16 @@ function buildReceiptWithName(partnerName) {
     let guessHtml = '';
     if (d.userGuess !== undefined) {
       guessHtml += `<div class="ch-guess ${d.guessCorrect ? 'correct' : 'wrong'}">
-        <div class="ch-guess-label">${d.guessCorrect ? '🎯' : '😅'} ${i18n.t('blindguess_you_guessed') || 'you guessed'}</div>
+        <div class="ch-guess-label">${d.guessCorrect ? '🎯' : '😅'} ${i18n.t('blindguess_you_guessed_them') || 'you guessed for'} ${partnerName}</div>
         <div class="ch-guess-text">${d.userGuess}</div>
+        <div class="ch-guess-actual">${d.guessCorrect ? '' : `${i18n.t('blindguess_actual') || 'actual'}: ${d.partnerAns}`}</div>
       </div>`;
     }
     if (d.partnerGuess !== undefined) {
       guessHtml += `<div class="ch-guess ${d.partnerGuessCorrect ? 'correct' : 'wrong'}">
-        <div class="ch-guess-label">${d.partnerGuessCorrect ? '🎯' : '😅'} ${partnerName} ${i18n.t('blindguess_guessed') || 'guessed'}</div>
+        <div class="ch-guess-label">${d.partnerGuessCorrect ? '🎯' : '😅'} ${partnerName} ${i18n.t('blindguess_guessed_for_you') || 'guessed for you'}</div>
         <div class="ch-guess-text">${d.partnerGuess}</div>
+        <div class="ch-guess-actual">${d.partnerGuessCorrect ? '' : `${i18n.t('blindguess_actual') || 'actual'}: ${d.userAns}`}</div>
       </div>`;
     }
     const guessRow = guessHtml ? `<div class="ch-guess-row">${guessHtml}</div>` : '';
@@ -1975,7 +1978,8 @@ function buildReceiptWithName(partnerName) {
         <div><div class="story-stat-val">${matches}</div><div class="story-stat-lbl">${i18n.t('results_matches')}</div></div>
         <div><div class="story-stat-val">${total - matches}</div><div class="story-stat-lbl">${i18n.t('results_plot_twists')}</div></div>
         <div><div class="story-stat-val">${pct}%</div><div class="story-stat-lbl">${i18n.t('results_sync_rate')}</div></div>
-        ${apiHasGuesses ? `<div><div class="story-stat-val">${apiGuessCorrectCount}/${apiGuessResults.length}</div><div class="story-stat-lbl">${i18n.t('blindguess_read_score') || 'read them right'}</div></div>` : ''}
+        ${userGuessResults.length > 0 ? `<div><div class="story-stat-val">${apiGuessCorrectCount}/${userGuessResults.length}</div><div class="story-stat-lbl">${i18n.t('blindguess_you_read_them') || 'you read them'}</div></div>` : ''}
+        ${partnerGuessResults.length > 0 ? `<div><div class="story-stat-val">${apiPartnerGuessCorrectCount}/${partnerGuessResults.length}</div><div class="story-stat-lbl">${i18n.t('blindguess_they_read_you') || 'they read you'}</div></div>` : ''}
       </div>
       <div class="story-brand">blindside.</div>
       <div class="story-date">${dateStr}</div>
