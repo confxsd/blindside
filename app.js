@@ -236,7 +236,7 @@ async function doAuthStep1() {
   const username = input.value.trim();
 
   if (username.length < 2) {
-    err.textContent = 'at least 2 characters';
+    err.textContent = i18n.t('guest_error_min_chars');
     return;
   }
 
@@ -252,7 +252,7 @@ async function doAuthStep1() {
     document.getElementById('authStep1').style.display = 'none';
 
     if (check.exists) {
-      document.getElementById('loginGreeting').innerHTML = `signing in as <strong>${username}</strong>`;
+      document.getElementById('loginGreeting').innerHTML = i18n.t('auth_signing_in').replace('{name}', `<strong>${username}</strong>`);
       document.getElementById('authStep2Login').style.display = '';
       setTimeout(() => document.getElementById('loginPassword')?.focus(), 200);
 
@@ -262,15 +262,15 @@ async function doAuthStep1() {
         if (data.user) { finishAuth(data.user); return; }
       }
     } else {
-      document.getElementById('signupGreeting').innerHTML = `nice to meet you, <strong>${username}</strong>`;
+      document.getElementById('signupGreeting').innerHTML = i18n.t('auth_nice_to_meet').replace('{name}', `<strong>${username}</strong>`);
       document.getElementById('authStep2Signup').style.display = '';
       setTimeout(() => document.getElementById('signupPassword')?.focus(), 200);
     }
   } catch (e) {
-    err.textContent = 'connection error, try again';
+    err.textContent = i18n.t('guest_error_connection');
   } finally {
     btn.disabled = false;
-    btn.textContent = 'continue';
+    btn.textContent = i18n.t('auth_continue');
   }
 }
 
@@ -280,7 +280,7 @@ async function doLogin() {
   const err = document.getElementById('loginError');
   const btn = document.getElementById('loginBtn');
 
-  if (!password) { err.textContent = 'enter your password'; return; }
+  if (!password) { err.textContent = i18n.t('auth_enter_password'); return; }
 
   btn.disabled = true;
   btn.textContent = '...';
@@ -292,10 +292,10 @@ async function doLogin() {
 
     finishAuth(data.user);
   } catch (e) {
-    err.textContent = 'connection error, try again';
+    err.textContent = i18n.t('guest_error_connection');
   } finally {
     btn.disabled = false;
-    btn.textContent = 'sign in';
+    btn.textContent = i18n.t('auth_sign_in');
   }
 }
 
@@ -306,8 +306,8 @@ async function doSignup() {
   const err = document.getElementById('signupError');
   const btn = document.getElementById('signupBtn');
 
-  if (password.length < 4) { err.textContent = 'password must be at least 4 characters'; return; }
-  if (password !== confirm) { err.textContent = 'passwords don\'t match'; return; }
+  if (password.length < 4) { err.textContent = i18n.t('auth_password_min_chars'); return; }
+  if (password !== confirm) { err.textContent = i18n.t('auth_passwords_no_match'); return; }
 
   btn.disabled = true;
   btn.textContent = '...';
@@ -319,10 +319,10 @@ async function doSignup() {
 
     finishAuth(data.user);
   } catch (e) {
-    err.textContent = 'connection error, try again';
+    err.textContent = i18n.t('guest_error_connection');
   } finally {
     btn.disabled = false;
-    btn.textContent = 'create account';
+    btn.textContent = i18n.t('auth_create_account');
   }
 }
 
@@ -423,8 +423,8 @@ async function saveGuestAccount() {
   const confirm = document.getElementById('saveAccPasswordConfirm').value;
   const err = document.getElementById('saveAccError');
 
-  if (password.length < 4) { err.textContent = 'password must be at least 4 characters'; return; }
-  if (password !== confirm) { err.textContent = 'passwords don\'t match'; return; }
+  if (password.length < 4) { err.textContent = i18n.t('auth_password_min_chars'); return; }
+  if (password !== confirm) { err.textContent = i18n.t('auth_passwords_no_match'); return; }
 
   err.textContent = '';
 
@@ -442,7 +442,7 @@ async function saveGuestAccount() {
       localStorage.setItem('bs-user', JSON.stringify(currentUser));
     }
   } catch (e) {
-    err.textContent = 'connection error, try again';
+    err.textContent = i18n.t('guest_error_connection');
   }
 }
 
@@ -669,7 +669,7 @@ function copyInviteLink(btn) {
   const url = getInviteUrl();
   navigator.clipboard.writeText(url).catch(() => {});
   const orig = btn.textContent;
-  btn.textContent = 'copied!';
+  btn.textContent = i18n.t('feedback_copied');
   btn.style.background = 'var(--lime)';
   btn.style.color = '#000';
   setTimeout(() => {
@@ -1428,7 +1428,7 @@ async function submitAnswers() {
         return;
       }
     } catch (e) {
-      alert('Could not submit answers. Check your connection and try again.');
+      alert(i18n.t('waiting_submit_error'));
       return;
     }
   }
@@ -1452,15 +1452,15 @@ async function submitAnswers() {
       themCircle.classList.remove('active');
     }
     document.getElementById('waitingDesc').innerHTML = partner
-      ? `waiting for <strong style="color:var(--text)">${partner}</strong> to finish answering...`
-      : 'waiting for your partner to join and answer...';
+      ? i18n.t('waiting_for_partner_named').replace('{name}', `<strong style="color:var(--text)">${partner}</strong>`)
+      : i18n.t('waiting_for_partner_join');
     startPolling();
   }
 }
 
 function startPolling() {
   stopPolling();
-  document.getElementById('waitingStatus').textContent = 'checking...';
+  document.getElementById('waitingStatus').textContent = i18n.t('waiting_checking');
 
   pollTimer = setInterval(async () => {
     if (!currentSession) return;
@@ -1471,18 +1471,18 @@ function startPolling() {
 
       if (s.status === 'complete' || (s.user_submitted && s.partner_submitted)) {
         stopPolling();
-        document.getElementById('waitingStatus').textContent = 'both done!';
+        document.getElementById('waitingStatus').textContent = i18n.t('waiting_both_done');
         setTimeout(() => {
           goTo('reveal');
           runCountdown();
         }, 500);
       } else if (s.partner_submitted) {
-        document.getElementById('waitingStatus').textContent = 'partner is done! waiting for you...';
+        document.getElementById('waitingStatus').textContent = i18n.t('waiting_partner_done');
       } else if (s.partner_id) {
         const pName = s.creator_id === currentUser?.id ? s.partner_username : s.creator_username;
-        document.getElementById('waitingStatus').textContent = (pName || 'partner') + ' is answering...';
+        document.getElementById('waitingStatus').textContent = i18n.t('waiting_answering').replace('{name}', pName || i18n.t('waiting_partner'));
         document.getElementById('waitingDesc').innerHTML =
-          `waiting for <strong style="color:var(--text)">${pName || 'partner'}</strong> to finish answering...`;
+          i18n.t('waiting_for_partner_named').replace('{name}', `<strong style="color:var(--text)">${pName || i18n.t('waiting_partner')}</strong>`);
         // Activate partner circle
         const themCircle = document.querySelector('.duo-circle.them');
         if (themCircle && !themCircle.classList.contains('active')) {
@@ -1490,7 +1490,7 @@ function startPolling() {
           themCircle.classList.add('active');
         }
       } else {
-        document.getElementById('waitingStatus').textContent = 'waiting for partner to join...';
+        document.getElementById('waitingStatus').textContent = i18n.t('waiting_for_partner_join');
       }
     } catch (e) { /* silent */ }
   }, 3000);
@@ -1822,12 +1822,12 @@ async function loadVibeReport(data, partnerName, pct, packKey) {
 
 async function buildReceiptFromApi(code) {
   const scroll = document.getElementById('storyScroll');
-  scroll.innerHTML = '<div style="text-align:center;padding:60px 20px;color:var(--text-dim)"><div class="dot-pulse" style="margin:0 auto"></div><p style="margin-top:16px">loading results...</p></div>';
+  scroll.innerHTML = `<div style="text-align:center;padding:60px 20px;color:var(--text-dim)"><div class="dot-pulse" style="margin:0 auto"></div><p style="margin-top:16px">${i18n.t('results_loading')}</p></div>`;
 
   try {
     const result = await blindApi.getResults(code);
     if (result.error) {
-      scroll.innerHTML = '<div style="text-align:center;padding:60px 20px;color:var(--text-dim)"><p>could not load results</p><button class="btn btn-ghost" onclick="goTo(\'home\')">back home</button></div>';
+      scroll.innerHTML = `<div style="text-align:center;padding:60px 20px;color:var(--text-dim)"><p>${i18n.t('results_load_error')}</p><button class="btn btn-ghost" onclick="goTo('home')">${i18n.t('results_back_home')}</button></div>`;
       return;
     }
 
@@ -1894,8 +1894,19 @@ async function buildReceiptFromApi(code) {
     buildReceiptWithName(partnerName || 'partner');
   } catch (e) {
     console.error('Failed to load results:', e);
-    scroll.innerHTML = '<div style="text-align:center;padding:60px 20px;color:var(--text-dim)"><p>could not load results</p><button class="btn btn-ghost" onclick="goTo(\'home\')">back home</button></div>';
+    scroll.innerHTML = `<div style="text-align:center;padding:60px 20px;color:var(--text-dim)"><p>${i18n.t('results_load_error')}</p><button class="btn btn-ghost" onclick="goTo('home')">${i18n.t('results_back_home')}</button></div>`;
   }
+}
+
+function getVibeLabels() {
+  return [
+    { min: 0,  emoji: '🫠', title: i18n.t('vibe_0_title'), desc: i18n.t('vibe_0_desc'), intro: i18n.t('vibe_0_intro') },
+    { min: 20, emoji: '🌀', title: i18n.t('vibe_20_title'), desc: i18n.t('vibe_20_desc'), intro: i18n.t('vibe_20_intro') },
+    { min: 40, emoji: '🤝', title: i18n.t('vibe_40_title'), desc: i18n.t('vibe_40_desc'), intro: i18n.t('vibe_40_intro') },
+    { min: 60, emoji: '💜', title: i18n.t('vibe_60_title'), desc: i18n.t('vibe_60_desc'), intro: i18n.t('vibe_60_intro') },
+    { min: 80, emoji: '🔮', title: i18n.t('vibe_80_title'), desc: i18n.t('vibe_80_desc'), intro: i18n.t('vibe_80_intro') },
+    { min: 100, emoji: '👽', title: i18n.t('vibe_100_title'), desc: i18n.t('vibe_100_desc'), intro: i18n.t('vibe_100_intro') },
+  ];
 }
 
 function buildReceiptWithName(partnerName) {
@@ -1903,14 +1914,7 @@ function buildReceiptWithName(partnerName) {
   const matches = data.filter(d => d.matched).length;
   const total = data.length;
   const pct = Math.round((matches / total) * 100);
-  const vibeLabels = [
-    { min: 0,  emoji: '🫠', title: 'Wildly Different', desc: 'opposites attract...right?', intro: 'Well, this was... <strong>eventful</strong>. You two see the world through very different lenses — and honestly, that might be the most interesting part.' },
-    { min: 20, emoji: '🌀', title: 'Unpredictable Duo', desc: 'never a boring moment', intro: 'You two are <strong>unpredictable</strong> in the best way. Not always on the same page, but always an interesting read.' },
-    { min: 40, emoji: '🤝', title: 'Getting There', desc: 'common ground exists', intro: 'There\'s real <strong>overlap</strong> here — and where there isn\'t, there\'s curiosity. That counts for a lot.' },
-    { min: 60, emoji: '💜', title: 'Real Ones', desc: 'you get each other', intro: 'You two <strong>get each other</strong>. Not perfectly, not always — but more than most. And the differences? That\'s where the good conversations live.' },
-    { min: 80, emoji: '🔮', title: 'Mind Readers', desc: 'basically the same person', intro: 'OK this is getting <strong>suspicious</strong>. You two are answering like you share a brain. Who copied who?' },
-    { min: 100, emoji: '👽', title: 'Literally Telepathic', desc: 'this is actually scary', intro: '<strong>Every. Single. One.</strong> You matched on all of them. This is either beautiful or terrifying. Probably both.' },
-  ];
+  const vibeLabels = getVibeLabels();
   const vibe = [...vibeLabels].reverse().find(v => pct >= v.min);
   const now = new Date();
   const dateStr = now.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
@@ -2142,14 +2146,7 @@ function buildReceipt() {
   const total = data.length;
   const pct = Math.round((matches / total) * 100);
 
-  const vibeLabels = [
-    { min: 0,  emoji: '🫠', title: 'Wildly Different', desc: 'opposites attract...right?', intro: 'Well, this was... <strong>eventful</strong>. You two see the world through very different lenses — and honestly, that might be the most interesting part.' },
-    { min: 20, emoji: '🌀', title: 'Unpredictable Duo', desc: 'never a boring moment', intro: 'You two are <strong>unpredictable</strong> in the best way. Not always on the same page, but always an interesting read.' },
-    { min: 40, emoji: '🤝', title: 'Getting There', desc: 'common ground exists', intro: 'There\'s real <strong>overlap</strong> here — and where there isn\'t, there\'s curiosity. That counts for a lot.' },
-    { min: 60, emoji: '💜', title: 'Real Ones', desc: 'you get each other', intro: 'You two <strong>get each other</strong>. Not perfectly, not always — but more than most. And the differences? That\'s where the good conversations live.' },
-    { min: 80, emoji: '🔮', title: 'Mind Readers', desc: 'basically the same person', intro: 'OK this is getting <strong>suspicious</strong>. You two are answering like you share a brain. Who copied who?' },
-    { min: 100, emoji: '👽', title: 'Literally Telepathic', desc: 'this is actually scary', intro: '<strong>Every. Single. One.</strong> You matched on all of them. This is either beautiful or terrifying. Probably both.' },
-  ];
+  const vibeLabels = getVibeLabels();
   const vibe = [...vibeLabels].reverse().find(v => pct >= v.min);
 
   const now = new Date();
