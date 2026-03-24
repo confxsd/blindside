@@ -175,14 +175,14 @@
 
   <!-- GUEST AUTH (join via invite link) -->
   <div id="guestAuth" class="screen">
-    <div class="invite-pill">you've been invited! 🎉</div>
+    <div class="invite-pill" data-i18n="guest_invited">you've been invited! 🎉</div>
     <div style="font-size:48px;margin-bottom:8px">🤝</div>
-    <h2 class="syne" style="font-size:22px;letter-spacing:-0.5px">join the game</h2>
-    <p style="font-size:13px;color:var(--text-dim);margin-bottom:24px">enter a display name to start playing</p>
-    <input type="text" id="guestName" class="auth-input" placeholder="your name..." maxlength="20" autocomplete="off" autocapitalize="off">
+    <h2 class="syne" style="font-size:22px;letter-spacing:-0.5px" data-i18n="guest_title">join the game</h2>
+    <p style="font-size:13px;color:var(--text-dim);margin-bottom:24px" data-i18n="guest_subtitle">enter a display name to start playing</p>
+    <input type="text" id="guestName" class="auth-input" data-i18n-placeholder="guest_placeholder" placeholder="your name..." maxlength="20" autocomplete="off" autocapitalize="off">
     <div id="guestAuthError" class="auth-error"></div>
-    <button class="btn btn-primary" style="width:100%;margin-top:12px" onclick="doGuestAuth()" id="guestAuthBtn">play as guest</button>
-    <button class="btn btn-ghost" style="width:100%" onclick="guestToFullAuth()">i have an account</button>
+    <button class="btn btn-primary" style="width:100%;margin-top:12px" onclick="doGuestAuth()" id="guestAuthBtn" data-i18n="guest_play">play as guest</button>
+    <button class="btn btn-ghost" style="width:100%" onclick="guestToFullAuth()" data-i18n="guest_have_account">i have an account</button>
     <div class="lang-selector" id="guestLangSelector"></div>
   </div>
 

@@ -12,6 +12,15 @@ const i18n = {
       splash_tagline: 'same questions. blind answers. one reveal.',
       splash_get_started: 'get started',
       splash_have_account: 'i have an account',
+      // Guest Auth
+      guest_invited: 'you\'ve been invited! 🎉',
+      guest_title: 'join the game',
+      guest_subtitle: 'enter a display name to start playing',
+      guest_placeholder: 'your name...',
+      guest_play: 'play as guest',
+      guest_have_account: 'i have an account',
+      guest_error_min_chars: 'at least 2 characters',
+      guest_error_connection: 'connection error, try again',
       // Onboarding
       onboarding_title: 'how it works',
       onboarding_step1_title: 'pick a pack',
@@ -256,6 +265,14 @@ const i18n = {
       splash_tagline: 'aynı sorular. gizli cevaplar. bir açılış.',
       splash_get_started: 'başla',
       splash_have_account: 'hesabım var',
+      guest_invited: 'davetlisiniz! 🎉',
+      guest_title: 'oyuna katıl',
+      guest_subtitle: 'oynamaya başlamak için bir isim girin',
+      guest_placeholder: 'adınız...',
+      guest_play: 'misafir olarak oyna',
+      guest_have_account: 'hesabım var',
+      guest_error_min_chars: 'en az 2 karakter',
+      guest_error_connection: 'bağlantı hatası, tekrar deneyin',
       onboarding_title: 'nasıl çalışır',
       onboarding_step1_title: 'bir paket seç',
       onboarding_step1_desc: 'tarzına uyan bir soru paketi seç',
@@ -474,6 +491,14 @@ const i18n = {
       splash_tagline: 'คำถามเดียวกัน คำตอบลับ เปิดเผยพร้อมกัน',
       splash_get_started: 'เริ่มเลย',
       splash_have_account: 'ฉันมีบัญชีแล้ว',
+      guest_invited: 'คุณได้รับเชิญ! 🎉',
+      guest_title: 'เข้าร่วมเกม',
+      guest_subtitle: 'ใส่ชื่อเพื่อเริ่มเล่น',
+      guest_placeholder: 'ชื่อของคุณ...',
+      guest_play: 'เล่นในฐานะแขก',
+      guest_have_account: 'ฉันมีบัญชีแล้ว',
+      guest_error_min_chars: 'อย่างน้อย 2 ตัวอักษร',
+      guest_error_connection: 'เชื่อมต่อผิดพลาด ลองอีกครั้ง',
       onboarding_title: 'วิธีใช้งาน',
       onboarding_step1_title: 'เลือกชุดคำถาม',
       onboarding_step1_desc: 'เลือกชุดคำถามที่เข้ากับคุณ',
@@ -719,16 +744,19 @@ const i18n = {
       const val = this.t(key);
       if (el.innerHTML !== val) el.innerHTML = val;
     });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const key = el.getAttribute('data-i18n-placeholder');
+      el.placeholder = this.t(key);
+    });
   },
 
   renderSelector() {
-    const container = document.getElementById('langSelector');
-    if (!container) return;
-    container.innerHTML = Object.entries(this.languages).map(([code, { flag, label }]) =>
+    const html = Object.entries(this.languages).map(([code, { flag, label }]) =>
       `<button class="lang-btn ${code === this.current ? 'active' : ''}" onclick="i18n.setLanguage('${code}')">
         <span class="lang-flag">${flag}</span>${label}
       </button>`
     ).join('');
+    document.querySelectorAll('.lang-selector').forEach(el => el.innerHTML = html);
   },
 
   init() {

@@ -362,7 +362,7 @@ async function doGuestAuth() {
   const displayName = input.value.trim();
 
   if (displayName.length < 2) {
-    err.textContent = 'at least 2 characters';
+    err.textContent = i18n.t('guest_error_min_chars');
     return;
   }
 
@@ -387,10 +387,10 @@ async function doGuestAuth() {
     }
     goTo('home');
   } catch (e) {
-    err.textContent = 'connection error, try again';
+    err.textContent = i18n.t('guest_error_connection');
   } finally {
     btn.disabled = false;
-    btn.textContent = 'play as guest';
+    btn.textContent = i18n.t('guest_play');
   }
 }
 
