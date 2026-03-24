@@ -408,6 +408,7 @@ const i18n = {
       premium_banner_text: "this pack is part of blindside+",
       premium_limited: "limited time — 50% off",
       premium_guarantee: "loved by 94% of couples who tried it",
+      premium_trial_note: "cancel anytime — no charge during trial",
       // Insights & Advisor
       insights_title: 'deep insights',
       insights_unlock: 'unlock deep insights with blindside+',
@@ -808,6 +809,7 @@ const i18n = {
       premium_banner_text: "bu paket blindside+ kapsamında",
       premium_limited: "sınırlı süre — %50 indirim",
       premium_guarantee: "deneyen çiftlerin %94'ü tarafından sevildi",
+      premium_trial_note: "istediğin zaman iptal et — deneme süresince ücret yok",
       insights_title: 'derin analizler',
       insights_unlock: 'blindside+ ile derin analizlerin kilidini aç',
       insights_coming_soon: 'tam analizler yakında — ilk sen öğreneceksin',
@@ -1196,6 +1198,7 @@ const i18n = {
       premium_banner_text: "แพ็คนี้อยู่ใน blindside+",
       premium_limited: "เวลาจำกัด — ลด 50%",
       premium_guarantee: "94% ของคู่รักที่ลองแล้วชอบ",
+      premium_trial_note: "ยกเลิกได้ตลอดเวลา — ไม่เสียค่าใช้จ่ายระหว่างทดลอง",
       insights_title: 'วิเคราะห์เชิงลึก',
       insights_unlock: 'ปลดล็อกการวิเคราะห์เชิงลึกกับ blindside+',
       insights_coming_soon: 'การวิเคราะห์เต็มรูปแบบเปิดตัวเร็วๆ นี้',

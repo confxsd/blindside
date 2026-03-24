@@ -2,7 +2,7 @@
 
 // ==================== Premium system ====================
 const PREMIUM_CONFIG = {
-  enabled: true,          // false = everyone is premium (bypass paywall entirely)
+  enabled: false,         // false = everyone is premium (bypass paywall entirely)
   freePacks: ['couples', 'bestfriends', 'attachment', 'lovelang'],
 };
 let isPremium = !PREMIUM_CONFIG.enabled || localStorage.getItem('bs-premium') === 'true';
