@@ -220,6 +220,7 @@ const i18n = {
       quiz_question: 'question',
       bubble_hint: 'tap all that apply',
       swipe_hint: 'pick all that fit',
+      eliminate_hint: 'tap to eliminate \u2014 last one wins',
       // Waiting
       waiting_title: 'you\'re locked in 🔒',
       waiting_desc: 'waiting for <strong style="color:var(--text)">Alex</strong> to finish answering...',
@@ -514,6 +515,7 @@ const i18n = {
       quiz_question: 'soru',
       bubble_hint: 'uygun olanların hepsine dokun',
       swipe_hint: 'uyanların hepsini seç',
+      eliminate_hint: 'elemek için dokun \u2014 son kalan kazanır',
       waiting_title: 'kilitlendin 🔒',
       waiting_desc: '<strong style="color:var(--text)">Alex</strong>\'in cevaplaması bekleniyor...',
       waiting_progress: 'Alex 5 sorudan 3. soruda',
@@ -794,6 +796,7 @@ const i18n = {
       quiz_question: 'คำถาม',
       bubble_hint: 'แตะทุกข้อที่ตรง',
       swipe_hint: 'เลือกทุกข้อที่ใช่',
+      eliminate_hint: 'แตะเพื่อตัดออก \u2014 ตัวสุดท้ายชนะ',
       waiting_title: 'คุณพร้อมแล้ว 🔒',
       waiting_desc: 'รอ <strong style="color:var(--text)">Alex</strong>...',
       waiting_progress: 'Alex ตอบถึงข้อ 3 จาก 5',
