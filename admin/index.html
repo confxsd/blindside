@@ -28,411 +28,126 @@
       --red-dim: rgba(239, 68, 68, 0.12);
       --radius: 12px;
     }
-
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
     body {
-      background: var(--bg);
-      color: var(--text);
+      background: var(--bg); color: var(--text);
       font-family: 'DM Sans', -apple-system, system-ui, sans-serif;
-      font-size: 14px;
-      line-height: 1.5;
-      min-height: 100vh;
+      font-size: 14px; line-height: 1.5; min-height: 100vh;
       -webkit-font-smoothing: antialiased;
     }
+    .container { max-width: 1080px; margin: 0 auto; padding: 32px 24px 80px; }
 
-    .container {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 32px 24px 80px;
-    }
-
-    /* Header */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 32px;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .logo {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.4rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-
+    header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; flex-wrap: wrap; gap: 12px; }
+    .logo { font-family: 'Syne', sans-serif; font-size: 1.4rem; font-weight: 700; letter-spacing: -0.02em; }
     .logo a { color: var(--text); text-decoration: none; }
     .logo span { color: var(--accent); }
     .logo .dim { color: var(--text-dim); font-weight: 400; font-size: 0.85em; }
-
-    .header-right {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-    }
-
+    .header-right { display: flex; gap: 8px; align-items: center; }
     .refresh-btn {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      color: var(--text-dim);
-      padding: 6px 14px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 13px;
-      transition: all 0.15s;
-      display: flex;
-      align-items: center;
-      gap: 6px;
+      background: var(--surface); border: 1px solid var(--border); color: var(--text-dim);
+      padding: 6px 14px; border-radius: 8px; cursor: pointer; font-size: 13px;
+      transition: all 0.15s; display: flex; align-items: center; gap: 6px;
     }
-
     .refresh-btn:hover { border-color: var(--accent); color: var(--text); }
+    .last-updated { font-size: 12px; color: var(--text-dim); }
 
-    .last-updated {
-      font-size: 12px;
-      color: var(--text-dim);
-    }
-
-    /* Tabs */
-    .tabs {
-      display: flex;
-      gap: 4px;
-      margin-bottom: 28px;
-      background: var(--surface);
-      border-radius: 10px;
-      padding: 4px;
-      width: fit-content;
-    }
-
+    .tabs { display: flex; gap: 4px; margin-bottom: 28px; background: var(--surface); border-radius: 10px; padding: 4px; width: fit-content; }
     .tab {
-      background: none;
-      border: none;
-      color: var(--text-dim);
-      padding: 8px 18px;
-      border-radius: 7px;
-      cursor: pointer;
-      font-size: 13px;
-      font-weight: 500;
-      transition: all 0.15s;
+      background: none; border: none; color: var(--text-dim); padding: 8px 18px;
+      border-radius: 7px; cursor: pointer; font-size: 13px; font-weight: 500; transition: all 0.15s;
     }
-
     .tab:hover { color: var(--text); }
     .tab.active { background: var(--accent-dim); color: var(--accent); }
 
-    /* Section */
     .section { display: none; }
     .section.active { display: block; }
 
-    .section-title {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 16px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    /* Period controls */
-    .period-controls {
-      display: flex;
-      gap: 4px;
-      margin-bottom: 20px;
-    }
-
+    .period-controls { display: flex; gap: 4px; margin-bottom: 20px; }
     .period-btn {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      color: var(--text-dim);
-      padding: 5px 12px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 12px;
-      transition: all 0.15s;
+      background: var(--surface); border: 1px solid var(--border); color: var(--text-dim);
+      padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 12px; transition: all 0.15s;
     }
-
     .period-btn:hover { border-color: var(--accent); color: var(--text); }
     .period-btn.active { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); }
 
-    /* Stat cards */
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 12px;
-      margin-bottom: 24px;
-    }
-
-    .stat {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 18px;
-      transition: border-color 0.15s;
-    }
-
+    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-bottom: 24px; }
+    .stat { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; transition: border-color 0.15s; }
     .stat:hover { border-color: #333; }
-
-    .stat-label {
-      font-size: 11px;
-      color: var(--text-dim);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      margin-bottom: 6px;
-      font-weight: 500;
-    }
-
-    .stat-value {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.75rem;
-      font-weight: 700;
-      line-height: 1.2;
-    }
-
+    .stat-label { font-size: 11px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px; font-weight: 500; }
+    .stat-value { font-family: 'Syne', sans-serif; font-size: 1.75rem; font-weight: 700; line-height: 1.2; }
     .stat-value.purple { color: var(--accent); }
     .stat-value.green { color: var(--green); }
     .stat-value.blue { color: var(--blue); }
     .stat-value.amber { color: var(--amber); }
     .stat-value.pink { color: var(--accent2); }
-
-    .stat-sub {
-      font-size: 12px;
-      color: var(--text-dim);
-      margin-top: 4px;
-    }
-
+    .stat-sub { font-size: 12px; color: var(--text-dim); margin-top: 4px; }
     .stat-value.live::before {
-      content: '';
-      display: inline-block;
-      width: 8px;
-      height: 8px;
-      background: var(--green);
-      border-radius: 50%;
-      margin-right: 8px;
-      animation: pulse 2s infinite;
+      content: ''; display: inline-block; width: 8px; height: 8px;
+      background: var(--green); border-radius: 50%; margin-right: 8px; animation: pulse 2s infinite;
     }
-
     @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
 
-    /* Cards grid */
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 16px;
-      margin-bottom: 24px;
-    }
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; margin-bottom: 24px; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+    .card-title { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-dim); margin-bottom: 14px; }
 
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 20px;
-    }
-
-    .card-title {
-      font-size: 12px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--text-dim);
-      margin-bottom: 14px;
-    }
-
-    /* Chart */
-    .chart-section {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 20px;
-      margin-bottom: 20px;
-    }
-
-    .chart-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 14px;
-    }
-
-    .chart-title {
-      font-size: 12px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--text-dim);
-    }
-
-    .chart-toggle {
-      display: flex;
-      gap: 4px;
-    }
-
+    .chart-section { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; margin-bottom: 20px; }
+    .chart-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+    .chart-title { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-dim); }
+    .chart-toggle { display: flex; gap: 4px; }
     .chart-toggle button {
-      background: none;
-      border: 1px solid var(--border);
-      color: var(--text-dim);
-      padding: 3px 10px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 11px;
-      transition: all 0.15s;
+      background: none; border: 1px solid var(--border); color: var(--text-dim);
+      padding: 3px 10px; border-radius: 5px; cursor: pointer; font-size: 11px; transition: all 0.15s;
     }
-
-    .chart-toggle button.active {
-      background: var(--accent-dim);
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
+    .chart-toggle button.active { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); }
     canvas { width: 100% !important; height: 200px !important; }
 
-    /* Tables */
-    .row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 9px 0;
-      border-bottom: 1px solid var(--border);
-    }
-
+    .row { display: flex; justify-content: space-between; align-items: center; padding: 9px 0; border-bottom: 1px solid var(--border); }
     .row:last-child { border-bottom: none; }
-
     .row-left { display: flex; align-items: center; gap: 10px; flex: 1; min-width: 0; }
+    .row-rank { font-size: 11px; color: var(--text-dim); width: 18px; text-align: right; flex-shrink: 0; }
+    .row-label { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .row-value { font-variant-numeric: tabular-nums; color: var(--text-dim); white-space: nowrap; font-size: 13px; }
+    .row-bar { height: 3px; background: linear-gradient(90deg, var(--accent), var(--accent2)); border-radius: 2px; margin-top: 4px; opacity: 0.4; }
+    .row-badge { font-size: 10px; padding: 2px 7px; border-radius: 4px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; flex-shrink: 0; }
 
-    .row-rank {
-      font-size: 11px;
-      color: var(--text-dim);
-      width: 18px;
-      text-align: right;
-      flex-shrink: 0;
-    }
-
-    .row-emoji { font-size: 16px; flex-shrink: 0; }
-
-    .row-label {
-      flex: 1;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    .row-value {
-      font-variant-numeric: tabular-nums;
-      color: var(--text-dim);
-      white-space: nowrap;
-      font-size: 13px;
-    }
-
-    .row-bar {
-      height: 3px;
-      background: linear-gradient(90deg, var(--accent), var(--accent2));
-      border-radius: 2px;
-      margin-top: 4px;
-      opacity: 0.4;
-    }
-
-    .row-badge {
-      font-size: 10px;
-      padding: 2px 7px;
-      border-radius: 4px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-      flex-shrink: 0;
-    }
-
-    .badge-trending { background: var(--accent-dim); color: var(--accent); }
-    .badge-hot { background: var(--red-dim); color: var(--red); }
-    .badge-new { background: var(--green-dim); color: var(--green); }
-    .badge-popular { background: var(--blue-dim); color: var(--blue); }
-    .badge-solo { background: var(--amber-dim); color: var(--amber); }
-
-    /* User/Session table */
-    .data-table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-
-    .data-table th {
-      text-align: left;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--text-dim);
-      padding: 8px 12px;
-      border-bottom: 1px solid var(--border);
-      font-weight: 600;
-    }
-
-    .data-table td {
-      padding: 10px 12px;
-      border-bottom: 1px solid var(--border);
-      font-size: 13px;
-    }
-
+    .data-table { width: 100%; border-collapse: collapse; }
+    .data-table th { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-dim); padding: 8px 12px; border-bottom: 1px solid var(--border); font-weight: 600; }
+    .data-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); font-size: 13px; }
     .data-table tr:last-child td { border-bottom: none; }
     .data-table tr:hover td { background: var(--surface2); }
 
-    .tag {
-      display: inline-block;
-      font-size: 11px;
-      padding: 2px 8px;
-      border-radius: 4px;
-      font-weight: 500;
-    }
-
+    .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
     .tag-active { background: var(--green-dim); color: var(--green); }
     .tag-waiting { background: var(--amber-dim); color: var(--amber); }
-    .tag-completed { background: var(--blue-dim); color: var(--blue); }
+    .tag-complete { background: var(--blue-dim); color: var(--blue); }
     .tag-guest { background: var(--surface2); color: var(--text-dim); }
     .tag-user { background: var(--accent-dim); color: var(--accent); }
 
-    /* Bar chart (horizontal) */
     .h-bar { margin-bottom: 10px; }
-    .h-bar-label {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 4px;
-      font-size: 13px;
-    }
+    .h-bar-label { display: flex; justify-content: space-between; margin-bottom: 4px; font-size: 13px; }
     .h-bar-label span:last-child { color: var(--text-dim); }
-    .h-bar-track {
-      height: 6px;
-      background: var(--surface2);
-      border-radius: 3px;
-      overflow: hidden;
-    }
-    .h-bar-fill {
-      height: 100%;
-      border-radius: 3px;
-      transition: width 0.3s;
-    }
+    .h-bar-track { height: 6px; background: var(--surface2); border-radius: 3px; overflow: hidden; }
+    .h-bar-fill { height: 100%; border-radius: 3px; transition: width 0.3s; }
 
     .empty { color: var(--text-dim); font-style: italic; padding: 20px 0; text-align: center; }
-
-    .loading-spinner {
-      text-align: center;
-      color: var(--text-dim);
-      padding: 60px 0;
-    }
-
+    .loading-spinner { text-align: center; color: var(--text-dim); padding: 60px 0; }
     .loading-spinner::after {
-      content: '';
-      display: inline-block;
-      width: 16px;
-      height: 16px;
-      border: 2px solid var(--border);
-      border-top-color: var(--accent);
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
-      margin-left: 8px;
-      vertical-align: middle;
+      content: ''; display: inline-block; width: 16px; height: 16px;
+      border: 2px solid var(--border); border-top-color: var(--accent);
+      border-radius: 50%; animation: spin 0.8s linear infinite; margin-left: 8px; vertical-align: middle;
     }
-
     @keyframes spin { to { transform: rotate(360deg); } }
 
-    /* Responsive */
+    .paginate { display: flex; gap: 8px; align-items: center; justify-content: center; margin-top: 14px; }
+    .paginate button {
+      background: var(--surface); border: 1px solid var(--border); color: var(--text-dim);
+      padding: 4px 12px; border-radius: 6px; cursor: pointer; font-size: 12px; transition: all 0.15s;
+    }
+    .paginate button:hover:not(:disabled) { border-color: var(--accent); color: var(--text); }
+    .paginate button:disabled { opacity: 0.3; cursor: default; }
+    .paginate span { font-size: 12px; color: var(--text-dim); }
+
     @media (max-width: 640px) {
       .container { padding: 20px 16px 60px; }
       .stats { grid-template-columns: repeat(2, 1fr); }
@@ -460,42 +175,54 @@
     <div class="tabs">
       <button class="tab active" data-tab="overview">Overview</button>
       <button class="tab" data-tab="traffic">Traffic</button>
-      <button class="tab" data-tab="content">Content</button>
-      <button class="tab" data-tab="users">Users & Sessions</button>
+      <button class="tab" data-tab="users">Users</button>
+      <button class="tab" data-tab="sessions">Sessions</button>
     </div>
 
-    <!-- OVERVIEW TAB -->
+    <!-- OVERVIEW -->
     <div class="section active" id="sec-overview">
       <div id="overview-stats" class="stats"></div>
       <div class="grid-2">
-        <div id="overview-chart" class="chart-section">
+        <div class="chart-section" style="margin-bottom:0">
           <div class="chart-header">
             <div class="chart-title">Traffic (30d)</div>
-            <div class="chart-toggle" id="overview-chart-toggle">
+            <div class="chart-toggle" id="ov-chart-toggle">
               <button class="active" data-mode="visitors">Visitors</button>
               <button data-mode="views">Views</button>
             </div>
           </div>
-          <canvas id="overviewChart"></canvas>
+          <canvas id="ovTrafficChart"></canvas>
         </div>
-        <div class="card" id="overview-top-packs">
-          <div class="card-title">Top Packs by Plays</div>
-          <div class="loading-spinner">Loading</div>
+        <div class="chart-section" style="margin-bottom:0">
+          <div class="chart-header">
+            <div class="chart-title">Signups (30d)</div>
+            <div class="chart-toggle" id="ov-growth-toggle">
+              <button class="active" data-mode="users">Users</button>
+              <button data-mode="sessions">Sessions</button>
+            </div>
+          </div>
+          <canvas id="ovGrowthChart"></canvas>
         </div>
       </div>
-      <div class="grid-2">
-        <div class="card" id="overview-countries">
-          <div class="card-title">Top Countries</div>
+      <div class="grid-2" style="margin-top:16px">
+        <div class="card" id="ov-top-packs">
+          <div class="card-title">Top Packs by Sessions</div>
           <div class="loading-spinner">Loading</div>
         </div>
-        <div class="card" id="overview-referrers">
-          <div class="card-title">Top Referrers</div>
-          <div class="loading-spinner">Loading</div>
+        <div>
+          <div class="card" style="margin-bottom:16px" id="ov-countries">
+            <div class="card-title">Top Countries</div>
+            <div class="loading-spinner">Loading</div>
+          </div>
+          <div class="card" id="ov-referrers">
+            <div class="card-title">Top Referrers</div>
+            <div class="loading-spinner">Loading</div>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- TRAFFIC TAB -->
+    <!-- TRAFFIC -->
     <div class="section" id="sec-traffic">
       <div class="period-controls" id="traffic-period">
         <button class="period-btn" data-days="7">7d</button>
@@ -515,70 +242,49 @@
         <canvas id="trafficChart"></canvas>
       </div>
       <div class="grid-2">
-        <div class="card" id="traffic-pages">
-          <div class="card-title">Top Pages</div>
-          <div class="loading-spinner">Loading</div>
-        </div>
-        <div class="card" id="traffic-referrers">
-          <div class="card-title">Referrers</div>
-          <div class="loading-spinner">Loading</div>
-        </div>
-        <div class="card" id="traffic-countries">
-          <div class="card-title">Countries</div>
-          <div class="loading-spinner">Loading</div>
-        </div>
-        <div class="card" id="traffic-devices">
-          <div class="card-title">Devices</div>
-          <div class="loading-spinner">Loading</div>
-        </div>
+        <div class="card" id="traffic-pages"><div class="card-title">Top Pages</div><div class="loading-spinner">Loading</div></div>
+        <div class="card" id="traffic-referrers"><div class="card-title">Referrers</div><div class="loading-spinner">Loading</div></div>
+        <div class="card" id="traffic-countries"><div class="card-title">Countries</div><div class="loading-spinner">Loading</div></div>
+        <div class="card" id="traffic-devices"><div class="card-title">Devices</div><div class="loading-spinner">Loading</div></div>
       </div>
     </div>
 
-    <!-- CONTENT TAB -->
-    <div class="section" id="sec-content">
-      <div id="content-stats" class="stats"></div>
-      <div class="grid-2">
-        <div class="card" id="content-packs">
-          <div class="card-title">All Packs — Ranked by Plays</div>
-          <div class="loading-spinner">Loading</div>
-        </div>
-        <div>
-          <div class="card" id="content-categories" style="margin-bottom:16px">
-            <div class="card-title">Category Breakdown</div>
-            <div class="loading-spinner">Loading</div>
-          </div>
-          <div class="card" id="content-languages">
-            <div class="card-title">Questions by Language</div>
-            <div class="loading-spinner">Loading</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- USERS & SESSIONS TAB -->
+    <!-- USERS -->
     <div class="section" id="sec-users">
       <div id="users-stats" class="stats"></div>
-      <div class="grid-2">
-        <div class="card" id="users-recent">
-          <div class="card-title">Recent Users</div>
-          <div class="loading-spinner">Loading</div>
-        </div>
-        <div class="card" id="users-sessions">
-          <div class="card-title">Recent Sessions</div>
-          <div class="loading-spinner">Loading</div>
-        </div>
+      <div class="card" id="users-table">
+        <div class="card-title">All Users</div>
+        <div class="loading-spinner">Loading</div>
+      </div>
+    </div>
+
+    <!-- SESSIONS -->
+    <div class="section" id="sec-sessions">
+      <div id="sessions-stats" class="stats"></div>
+      <div style="display:flex;gap:4px;margin-bottom:16px" id="session-status-filter">
+        <button class="period-btn active" data-status="">All</button>
+        <button class="period-btn" data-status="waiting">Waiting</button>
+        <button class="period-btn" data-status="active">Active</button>
+        <button class="period-btn" data-status="complete">Complete</button>
+      </div>
+      <div class="card" id="sessions-table">
+        <div class="card-title">All Sessions</div>
+        <div class="loading-spinner">Loading</div>
       </div>
     </div>
   </div>
 
   <script>
     const API = 'https://api.rome.markets';
-    let analyticsData = null;
-    let contentData = null;
-    let usersData = null;
-    let overviewChartMode = 'visitors';
+    let analyticsCache = null;
+    let adminStatsCache = null;
+    let ovChartMode = 'visitors';
+    let ovGrowthMode = 'users';
     let trafficChartMode = 'visitors';
     let trafficDays = 30;
+    let usersPage = 0;
+    let sessionsPage = 0;
+    let sessionsStatus = '';
 
     // ─── Tabs ──────────────────────────────────
     document.querySelectorAll('.tab').forEach(tab => {
@@ -590,56 +296,29 @@
       });
     });
 
-    // ─── Data fetchers ─────────────────────────
-    async function fetchAnalytics(days) {
-      const res = await fetch(`${API}/api/analytics?days=${days}&hostname=blindside.to`);
-      if (!res.ok) throw new Error('Analytics fetch failed');
+    // ─── Fetchers ──────────────────────────────
+    async function api(path) {
+      const res = await fetch(`${API}${path}`);
+      if (!res.ok) throw new Error(`${res.status}`);
       return res.json();
     }
 
-    async function fetchContentStats() {
-      const res = await fetch('/api/admin/stats');
-      if (!res.ok) throw new Error('Content stats fetch failed');
-      return res.json();
-    }
-
-    async function fetchUsers() {
-      try {
-        const res = await fetch(`${API}/api/blind/admin/users`, { credentials: 'include' });
-        if (!res.ok) return null;
-        return res.json();
-      } catch { return null; }
-    }
-
-    async function fetchSessions() {
-      try {
-        const res = await fetch(`${API}/api/blind/admin/sessions`, { credentials: 'include' });
-        if (!res.ok) return null;
-        return res.json();
-      } catch { return null; }
-    }
-
-    // ─── Load all ──────────────────────────────
+    // ─── Load All ──────────────────────────────
     async function loadAll() {
       document.getElementById('lastUpdated').textContent = 'Updating...';
 
-      const [analytics, content, users, sessions] = await Promise.allSettled([
-        fetchAnalytics(30),
-        fetchContentStats(),
-        fetchUsers(),
-        fetchSessions(),
+      const [analytics, stats] = await Promise.allSettled([
+        api('/api/analytics?days=30&hostname=blindside.to'),
+        api('/api/blind/admin/stats'),
       ]);
 
-      analyticsData = analytics.status === 'fulfilled' ? analytics.value : null;
-      contentData = content.status === 'fulfilled' ? content.value : null;
-      const usersResult = users.status === 'fulfilled' ? users.value : null;
-      const sessionsResult = sessions.status === 'fulfilled' ? sessions.value : null;
-      usersData = { users: usersResult, sessions: sessionsResult };
+      analyticsCache = analytics.status === 'fulfilled' ? analytics.value : null;
+      adminStatsCache = stats.status === 'fulfilled' ? stats.value : null;
 
       renderOverview();
       renderTraffic();
-      renderContent();
-      renderUsers();
+      loadUsers();
+      loadSessions();
 
       document.getElementById('lastUpdated').textContent =
         'Updated ' + new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
@@ -647,323 +326,242 @@
 
     // ─── Overview ──────────────────────────────
     function renderOverview() {
-      const s = document.getElementById('overview-stats');
-      const a = analyticsData;
-      const c = contentData;
+      const a = analyticsCache;
+      const s = adminStatsCache;
+      const t = s?.totals;
 
-      const totalUsers = usersData?.users?.total || '—';
-      const totalSessions = usersData?.sessions?.total || '—';
-
-      s.innerHTML = `
+      document.getElementById('overview-stats').innerHTML = `
+        <div class="stat">
+          <div class="stat-label">Total Users</div>
+          <div class="stat-value purple">${t ? fmt(t.total_users) : '—'}</div>
+          ${t ? `<div class="stat-sub">+${t.users_24h} today / +${t.users_7d} this week</div>` : ''}
+        </div>
+        <div class="stat">
+          <div class="stat-label">Total Sessions</div>
+          <div class="stat-value pink">${t ? fmt(t.total_sessions) : '—'}</div>
+          ${t ? `<div class="stat-sub">+${t.sessions_24h} today / +${t.sessions_7d} this week</div>` : ''}
+        </div>
+        <div class="stat">
+          <div class="stat-label">Completion Rate</div>
+          <div class="stat-value green">${t ? t.completion_rate + '%' : '—'}</div>
+          ${t ? `<div class="stat-sub">${fmt(t.completed)} of ${fmt(t.total_sessions)}</div>` : ''}
+        </div>
         <div class="stat">
           <div class="stat-label">Visitors (30d)</div>
-          <div class="stat-value purple">${a ? fmt(a.totals.visitors) : '—'}</div>
+          <div class="stat-value blue">${a ? fmt(a.totals.visitors) : '—'}</div>
         </div>
         <div class="stat">
           <div class="stat-label">Page Views (30d)</div>
-          <div class="stat-value blue">${a ? fmt(a.totals.views) : '—'}</div>
+          <div class="stat-value amber">${a ? fmt(a.totals.views) : '—'}</div>
         </div>
         <div class="stat">
           <div class="stat-label">Live Now</div>
           <div class="stat-value live green">${a ? a.totals.live : '—'}</div>
         </div>
-        <div class="stat">
-          <div class="stat-label">Total Users</div>
-          <div class="stat-value pink">${totalUsers}</div>
-        </div>
-        <div class="stat">
-          <div class="stat-label">Total Sessions</div>
-          <div class="stat-value amber">${totalSessions}</div>
-        </div>
-        <div class="stat">
-          <div class="stat-label">Question Packs</div>
-          <div class="stat-value purple">${c ? c.totals.packs : '—'}</div>
-        </div>
       `;
 
-      // Chart
-      if (a?.daily) {
-        drawBarChart('overviewChart', a.daily, overviewChartMode);
-      }
+      if (a?.daily) drawBarChart('ovTrafficChart', a.daily, ovChartMode);
+      if (s?.dailyUsers) drawGrowthChart();
 
       // Top packs
-      const tp = document.getElementById('overview-top-packs');
-      if (c?.topPacks) {
-        tp.innerHTML = '<div class="card-title">Top Packs by Plays</div>' +
-          packRows(c.topPacks.slice(0, 8));
+      const tp = document.getElementById('ov-top-packs');
+      if (s?.topPacks?.length) {
+        const max = Math.max(...s.topPacks.map(p => p.sessions), 1);
+        tp.innerHTML = '<div class="card-title">Top Packs by Sessions</div>' +
+          s.topPacks.map((p, i) => `
+            <div class="row">
+              <div class="row-left">
+                <span class="row-rank">${i + 1}</span>
+                <div style="flex:1;min-width:0">
+                  <div class="row-label">${esc(p.pack_key)}</div>
+                  <div class="row-bar" style="width:${(p.sessions/max*100)}%"></div>
+                </div>
+              </div>
+              <div class="row-value">${p.sessions} <span style="color:var(--text-dim);font-size:11px">(${p.completed} done)</span></div>
+            </div>
+          `).join('');
+      } else {
+        tp.innerHTML = '<div class="card-title">Top Packs</div><div class="empty">No data</div>';
       }
 
-      // Countries
-      const co = document.getElementById('overview-countries');
-      if (a?.countries) {
-        co.innerHTML = '<div class="card-title">Top Countries</div>' + simpleRows(a.countries.slice(0, 8), 'country', 'visitors');
-      }
-
-      // Referrers
-      const rf = document.getElementById('overview-referrers');
-      if (a?.referrers) {
-        rf.innerHTML = '<div class="card-title">Top Referrers</div>' + simpleRows(a.referrers.slice(0, 8), 'referrer', 'visitors');
-      }
+      // Countries & referrers
+      renderSimpleCard('ov-countries', 'Top Countries', a?.countries, 'country', 'visitors', 6);
+      renderSimpleCard('ov-referrers', 'Top Referrers', a?.referrers, 'referrer', 'visitors', 6);
     }
 
-    // Overview chart toggle
-    document.getElementById('overview-chart-toggle').addEventListener('click', e => {
+    function drawGrowthChart() {
+      const data = ovGrowthMode === 'users' ? adminStatsCache?.dailyUsers : adminStatsCache?.dailySessions;
+      if (!data?.length) return;
+      drawBarChart('ovGrowthChart', data.map(d => ({ date: d.date, visitors: d.count, views: d.count })), 'visitors', 'var(--green)', 'var(--accent)');
+    }
+
+    // Overview chart toggles
+    document.getElementById('ov-chart-toggle').addEventListener('click', e => {
       if (!e.target.dataset.mode) return;
-      overviewChartMode = e.target.dataset.mode;
-      document.querySelectorAll('#overview-chart-toggle button').forEach(b => b.classList.remove('active'));
+      ovChartMode = e.target.dataset.mode;
+      document.querySelectorAll('#ov-chart-toggle button').forEach(b => b.classList.remove('active'));
       e.target.classList.add('active');
-      if (analyticsData?.daily) drawBarChart('overviewChart', analyticsData.daily, overviewChartMode);
+      if (analyticsCache?.daily) drawBarChart('ovTrafficChart', analyticsCache.daily, ovChartMode);
+    });
+    document.getElementById('ov-growth-toggle').addEventListener('click', e => {
+      if (!e.target.dataset.mode) return;
+      ovGrowthMode = e.target.dataset.mode;
+      document.querySelectorAll('#ov-growth-toggle button').forEach(b => b.classList.remove('active'));
+      e.target.classList.add('active');
+      drawGrowthChart();
     });
 
     // ─── Traffic ───────────────────────────────
     async function loadTraffic(days) {
       trafficDays = days;
-      try {
-        const data = await fetchAnalytics(days);
-        analyticsData = data;
-        renderTraffic();
-      } catch {}
+      try { analyticsCache = await api(`/api/analytics?days=${days}&hostname=blindside.to`); } catch {}
+      renderTraffic();
     }
 
     function renderTraffic() {
-      const a = analyticsData;
+      const a = analyticsCache;
       if (!a) return;
-
       const vpv = a.totals.visitors > 0 ? (a.totals.views / a.totals.visitors).toFixed(1) : '0';
 
       document.getElementById('traffic-stats').innerHTML = `
-        <div class="stat">
-          <div class="stat-label">Unique Visitors</div>
-          <div class="stat-value purple">${fmt(a.totals.visitors)}</div>
-        </div>
-        <div class="stat">
-          <div class="stat-label">Total Views</div>
-          <div class="stat-value blue">${fmt(a.totals.views)}</div>
-        </div>
-        <div class="stat">
-          <div class="stat-label">Views / Visitor</div>
-          <div class="stat-value amber">${vpv}</div>
-        </div>
-        <div class="stat">
-          <div class="stat-label">Live Now</div>
-          <div class="stat-value live green">${a.totals.live}</div>
-        </div>
+        <div class="stat"><div class="stat-label">Unique Visitors</div><div class="stat-value purple">${fmt(a.totals.visitors)}</div></div>
+        <div class="stat"><div class="stat-label">Total Views</div><div class="stat-value blue">${fmt(a.totals.views)}</div></div>
+        <div class="stat"><div class="stat-label">Views / Visitor</div><div class="stat-value amber">${vpv}</div></div>
+        <div class="stat"><div class="stat-label">Live Now</div><div class="stat-value live green">${a.totals.live}</div></div>
       `;
 
       if (a.daily) drawBarChart('trafficChart', a.daily, trafficChartMode);
-
-      document.getElementById('traffic-pages').innerHTML =
-        '<div class="card-title">Top Pages</div>' + simpleRows(a.pages, 'path', 'visitors');
-      document.getElementById('traffic-referrers').innerHTML =
-        '<div class="card-title">Referrers</div>' + simpleRows(a.referrers, 'referrer', 'visitors');
-      document.getElementById('traffic-countries').innerHTML =
-        '<div class="card-title">Countries</div>' + simpleRows(a.countries, 'country', 'visitors');
-      document.getElementById('traffic-devices').innerHTML =
-        '<div class="card-title">Devices</div>' + simpleRows(a.devices, 'device', 'visitors');
+      renderSimpleCard('traffic-pages', 'Top Pages', a.pages, 'path', 'visitors');
+      renderSimpleCard('traffic-referrers', 'Referrers', a.referrers, 'referrer', 'visitors');
+      renderSimpleCard('traffic-countries', 'Countries', a.countries, 'country', 'visitors');
+      renderSimpleCard('traffic-devices', 'Devices', a.devices, 'device', 'visitors');
     }
 
-    // Traffic period buttons
     document.getElementById('traffic-period').addEventListener('click', e => {
       if (!e.target.dataset.days) return;
       document.querySelectorAll('#traffic-period .period-btn').forEach(b => b.classList.remove('active'));
       e.target.classList.add('active');
       loadTraffic(parseInt(e.target.dataset.days));
     });
-
-    // Traffic chart toggle
     document.getElementById('traffic-chart-toggle').addEventListener('click', e => {
       if (!e.target.dataset.mode) return;
       trafficChartMode = e.target.dataset.mode;
       document.querySelectorAll('#traffic-chart-toggle button').forEach(b => b.classList.remove('active'));
       e.target.classList.add('active');
-      if (analyticsData?.daily) drawBarChart('trafficChart', analyticsData.daily, trafficChartMode);
+      if (analyticsCache?.daily) drawBarChart('trafficChart', analyticsCache.daily, trafficChartMode);
     });
 
-    // ─── Content ───────────────────────────────
-    function renderContent() {
-      const c = contentData;
-      if (!c) return;
-
-      document.getElementById('content-stats').innerHTML = `
-        <div class="stat">
-          <div class="stat-label">Total Packs</div>
-          <div class="stat-value purple">${c.totals.packs}</div>
-        </div>
-        <div class="stat">
-          <div class="stat-label">Solo Packs</div>
-          <div class="stat-value amber">${c.totals.soloPacks}</div>
-        </div>
-        <div class="stat">
-          <div class="stat-label">Featured</div>
-          <div class="stat-value pink">${c.totals.featuredPacks}</div>
-        </div>
-        <div class="stat">
-          <div class="stat-label">Categories</div>
-          <div class="stat-value blue">${c.totals.categories}</div>
-        </div>
-        <div class="stat">
-          <div class="stat-label">Collections</div>
-          <div class="stat-value green">${c.totals.collections}</div>
-        </div>
-        <div class="stat">
-          <div class="stat-label">Total Questions</div>
-          <div class="stat-value purple">${fmt(c.totals.questions)}</div>
-        </div>
+    // ─── Users ─────────────────────────────────
+    async function loadUsers() {
+      const t = adminStatsCache?.totals;
+      document.getElementById('users-stats').innerHTML = `
+        <div class="stat"><div class="stat-label">Total Users</div><div class="stat-value purple">${t ? fmt(t.total_users) : '—'}</div></div>
+        <div class="stat"><div class="stat-label">Registered</div><div class="stat-value blue">${t ? fmt(t.registered) : '—'}</div></div>
+        <div class="stat"><div class="stat-label">Guests</div><div class="stat-value amber">${t ? fmt(t.guests) : '—'}</div></div>
+        <div class="stat"><div class="stat-label">New (24h)</div><div class="stat-value green">${t ? t.users_24h : '—'}</div></div>
       `;
 
-      // Packs
-      document.getElementById('content-packs').innerHTML =
-        '<div class="card-title">All Packs — Ranked by Plays</div>' + packRows(c.topPacks);
-
-      // Categories
-      const catEl = document.getElementById('content-categories');
-      if (c.categoryBreakdown) {
-        const maxCat = Math.max(...c.categoryBreakdown.map(x => x.count));
-        const colors = ['var(--accent)', 'var(--accent2)', 'var(--blue)', 'var(--green)', 'var(--amber)'];
-        catEl.innerHTML = '<div class="card-title">Category Breakdown</div>' +
-          c.categoryBreakdown.map((cat, i) => `
-            <div class="h-bar">
-              <div class="h-bar-label"><span>${esc(cat.cat)}</span><span>${cat.count} packs</span></div>
-              <div class="h-bar-track">
-                <div class="h-bar-fill" style="width:${(cat.count/maxCat*100)}%;background:${colors[i % colors.length]}"></div>
-              </div>
-            </div>
-          `).join('');
-      }
-
-      // Languages
-      const langEl = document.getElementById('content-languages');
-      if (c.languages) {
-        const maxLang = Math.max(...c.languages.map(x => x.count));
-        const langNames = { en: 'English', tr: 'Turkish', th: 'Thai' };
-        const langColors = { en: 'var(--accent)', tr: 'var(--accent2)', th: 'var(--green)' };
-        langEl.innerHTML = '<div class="card-title">Questions by Language</div>' +
-          c.languages.map(l => `
-            <div class="h-bar">
-              <div class="h-bar-label"><span>${langNames[l.lang] || l.lang}</span><span>${fmt(l.count)}</span></div>
-              <div class="h-bar-track">
-                <div class="h-bar-fill" style="width:${(l.count/maxLang*100)}%;background:${langColors[l.lang] || 'var(--blue)'}"></div>
-              </div>
-            </div>
-          `).join('');
+      try {
+        const data = await api(`/api/blind/admin/users?limit=30&offset=${usersPage * 30}`);
+        renderUsersTable(data);
+      } catch {
+        document.getElementById('users-table').innerHTML = '<div class="card-title">All Users</div><div class="empty">Could not load users</div>';
       }
     }
 
-    // ─── Users & Sessions ──────────────────────
-    function renderUsers() {
-      const u = usersData;
+    function renderUsersTable(data) {
+      const el = document.getElementById('users-table');
+      const totalPages = Math.ceil(data.total / 30);
+      el.innerHTML = `
+        <div class="card-title">All Users <span style="font-weight:400;text-transform:none">(${fmt(data.total)})</span></div>
+        <table class="data-table">
+          <thead><tr><th>Username</th><th>Type</th><th>Sessions</th><th>Joined</th></tr></thead>
+          <tbody>
+            ${data.users.map(u => `
+              <tr>
+                <td>${esc(u.username)}</td>
+                <td><span class="tag ${u.is_guest ? 'tag-guest' : 'tag-user'}">${u.is_guest ? 'Guest' : 'User'}</span></td>
+                <td style="color:var(--text-dim)">${u.session_count}</td>
+                <td style="color:var(--text-dim)">${timeAgo(u.created_at)}</td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+        <div class="paginate">
+          <button ${usersPage === 0 ? 'disabled' : ''} onclick="usersPage--;loadUsers()">Prev</button>
+          <span>${usersPage + 1} / ${totalPages || 1}</span>
+          <button ${usersPage >= totalPages - 1 ? 'disabled' : ''} onclick="usersPage++;loadUsers()">Next</button>
+        </div>
+      `;
+    }
 
-      // Stats
-      const us = document.getElementById('users-stats');
-      const hasData = u?.users || u?.sessions;
+    // ─── Sessions ──────────────────────────────
+    async function loadSessions() {
+      const t = adminStatsCache?.totals;
+      document.getElementById('sessions-stats').innerHTML = `
+        <div class="stat"><div class="stat-label">Total Sessions</div><div class="stat-value purple">${t ? fmt(t.total_sessions) : '—'}</div></div>
+        <div class="stat"><div class="stat-label">Completed</div><div class="stat-value green">${t ? fmt(t.completed) : '—'}</div></div>
+        <div class="stat"><div class="stat-label">Active</div><div class="stat-value blue">${t ? fmt(t.active) : '—'}</div></div>
+        <div class="stat"><div class="stat-label">Waiting</div><div class="stat-value amber">${t ? fmt(t.waiting) : '—'}</div></div>
+        <div class="stat"><div class="stat-label">Completion Rate</div><div class="stat-value pink">${t ? t.completion_rate + '%' : '—'}</div></div>
+        <div class="stat"><div class="stat-label">New (24h)</div><div class="stat-value green">${t ? t.sessions_24h : '—'}</div></div>
+      `;
 
-      if (hasData) {
-        us.innerHTML = `
-          <div class="stat">
-            <div class="stat-label">Total Users</div>
-            <div class="stat-value purple">${u.users?.total ? fmt(u.users.total) : '—'}</div>
-          </div>
-          <div class="stat">
-            <div class="stat-label">Registered</div>
-            <div class="stat-value blue">${u.users?.registered ? fmt(u.users.registered) : '—'}</div>
-          </div>
-          <div class="stat">
-            <div class="stat-label">Guests</div>
-            <div class="stat-value amber">${u.users?.guests ? fmt(u.users.guests) : '—'}</div>
-          </div>
-          <div class="stat">
-            <div class="stat-label">Total Game Sessions</div>
-            <div class="stat-value pink">${u.sessions?.total ? fmt(u.sessions.total) : '—'}</div>
-          </div>
-          <div class="stat">
-            <div class="stat-label">Completed</div>
-            <div class="stat-value green">${u.sessions?.completed ? fmt(u.sessions.completed) : '—'}</div>
-          </div>
-          <div class="stat">
-            <div class="stat-label">Active Now</div>
-            <div class="stat-value live green">${u.sessions?.active || '—'}</div>
-          </div>
-        `;
-      } else {
-        us.innerHTML = '';
-      }
-
-      // Recent users
-      const recentUsersEl = document.getElementById('users-recent');
-      if (u?.users?.recent?.length) {
-        recentUsersEl.innerHTML = `
-          <div class="card-title">Recent Users</div>
-          <table class="data-table">
-            <thead><tr>
-              <th>Username</th>
-              <th>Type</th>
-              <th>Joined</th>
-            </tr></thead>
-            <tbody>
-              ${u.users.recent.map(user => `
-                <tr>
-                  <td>${esc(user.username || user.display_name || '—')}</td>
-                  <td><span class="tag ${user.is_guest ? 'tag-guest' : 'tag-user'}">${user.is_guest ? 'Guest' : 'User'}</span></td>
-                  <td style="color:var(--text-dim)">${timeAgo(user.created_at)}</td>
-                </tr>
-              `).join('')}
-            </tbody>
-          </table>
-        `;
-      } else {
-        recentUsersEl.innerHTML = `
-          <div class="card-title">Recent Users</div>
-          <div class="empty">
-            User data requires admin API endpoints.<br>
-            <span style="font-size:12px;color:var(--text-dim);font-style:normal">
-              Add <code>/api/blind/admin/users</code> to your API server to see user data here.
-            </span>
-          </div>
-        `;
-      }
-
-      // Recent sessions
-      const sessionsEl = document.getElementById('users-sessions');
-      if (u?.sessions?.recent?.length) {
-        sessionsEl.innerHTML = `
-          <div class="card-title">Recent Sessions</div>
-          <table class="data-table">
-            <thead><tr>
-              <th>Code</th>
-              <th>Pack</th>
-              <th>Status</th>
-              <th>Created</th>
-            </tr></thead>
-            <tbody>
-              ${u.sessions.recent.map(s => `
-                <tr>
-                  <td style="font-family:monospace;color:var(--accent)">${esc(s.code)}</td>
-                  <td>${esc(s.pack_key || '—')}</td>
-                  <td><span class="tag ${s.status === 'completed' ? 'tag-completed' : s.status === 'waiting' ? 'tag-waiting' : 'tag-active'}">${s.status || '—'}</span></td>
-                  <td style="color:var(--text-dim)">${timeAgo(s.created_at)}</td>
-                </tr>
-              `).join('')}
-            </tbody>
-          </table>
-        `;
-      } else {
-        sessionsEl.innerHTML = `
-          <div class="card-title">Recent Sessions</div>
-          <div class="empty">
-            Session data requires admin API endpoints.<br>
-            <span style="font-size:12px;color:var(--text-dim);font-style:normal">
-              Add <code>/api/blind/admin/sessions</code> to your API server to see session data here.
-            </span>
-          </div>
-        `;
+      try {
+        const statusParam = sessionsStatus ? `&status=${sessionsStatus}` : '';
+        const data = await api(`/api/blind/admin/sessions?limit=30&offset=${sessionsPage * 30}${statusParam}`);
+        renderSessionsTable(data);
+      } catch {
+        document.getElementById('sessions-table').innerHTML = '<div class="card-title">All Sessions</div><div class="empty">Could not load sessions</div>';
       }
     }
 
-    // ─── Chart drawing ─────────────────────────
-    function drawBarChart(canvasId, daily, mode) {
+    function renderSessionsTable(data) {
+      const el = document.getElementById('sessions-table');
+      const totalPages = Math.ceil(data.total / 30);
+      el.innerHTML = `
+        <div class="card-title">Sessions <span style="font-weight:400;text-transform:none">(${fmt(data.total)})</span></div>
+        <table class="data-table">
+          <thead><tr><th>Code</th><th>Pack</th><th>Players</th><th>Status</th><th>Lang</th><th>Created</th></tr></thead>
+          <tbody>
+            ${data.sessions.map(s => `
+              <tr>
+                <td style="font-family:monospace;color:var(--accent)">${esc(s.code)}</td>
+                <td>${esc(s.pack_key)}</td>
+                <td>
+                  ${esc(s.creator_username || '?')}
+                  ${s.partner_username ? ' & ' + esc(s.partner_username) : ' <span style="color:var(--text-dim)">(solo)</span>'}
+                </td>
+                <td><span class="tag tag-${s.status}">${s.status}</span></td>
+                <td style="color:var(--text-dim)">${s.lang}</td>
+                <td style="color:var(--text-dim)">${timeAgo(s.created_at)}</td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+        <div class="paginate">
+          <button ${sessionsPage === 0 ? 'disabled' : ''} onclick="sessionsPage--;loadSessions()">Prev</button>
+          <span>${sessionsPage + 1} / ${totalPages || 1}</span>
+          <button ${sessionsPage >= totalPages - 1 ? 'disabled' : ''} onclick="sessionsPage++;loadSessions()">Next</button>
+        </div>
+      `;
+    }
+
+    document.getElementById('session-status-filter').addEventListener('click', e => {
+      if (e.target.dataset.status === undefined) return;
+      sessionsStatus = e.target.dataset.status;
+      sessionsPage = 0;
+      document.querySelectorAll('#session-status-filter .period-btn').forEach(b => b.classList.remove('active'));
+      e.target.classList.add('active');
+      loadSessions();
+    });
+
+    // ─── Chart ─────────────────────────────────
+    function drawBarChart(canvasId, daily, mode, color1, color2) {
       const canvas = document.getElementById(canvasId);
       if (!canvas || !daily?.length) return;
       const ctx = canvas.getContext('2d');
+      const c1 = color1 || '#a855f7', c2 = color2 || '#ec4899';
 
       const dpr = window.devicePixelRatio || 1;
       const rect = canvas.getBoundingClientRect();
@@ -976,24 +574,17 @@
       const cw = w - pad.left - pad.right;
       const ch = h - pad.top - pad.bottom;
 
-      const key = mode === 'visitors' ? 'visitors' : 'views';
+      const key = mode === 'views' ? 'views' : 'visitors';
       const values = daily.map(d => d[key]);
       const max = Math.max(...values, 1);
 
       ctx.clearRect(0, 0, w, h);
 
-      // Grid
-      ctx.strokeStyle = '#1a1a1f';
-      ctx.lineWidth = 0.5;
+      ctx.strokeStyle = '#1a1a1f'; ctx.lineWidth = 0.5;
       for (let i = 0; i <= 4; i++) {
         const y = pad.top + (ch / 4) * i;
-        ctx.beginPath();
-        ctx.moveTo(pad.left, y);
-        ctx.lineTo(w - pad.right, y);
-        ctx.stroke();
-        ctx.fillStyle = '#444';
-        ctx.font = '11px DM Sans, sans-serif';
-        ctx.textAlign = 'right';
+        ctx.beginPath(); ctx.moveTo(pad.left, y); ctx.lineTo(w - pad.right, y); ctx.stroke();
+        ctx.fillStyle = '#444'; ctx.font = '11px DM Sans, sans-serif'; ctx.textAlign = 'right';
         ctx.fillText(fmt(Math.round(max - (max / 4) * i)), pad.left - 6, y + 4);
       }
 
@@ -1004,26 +595,17 @@
         const x = pad.left + (cw / daily.length) * i + 1;
         const barH = Math.max(d[key] > 0 ? 1 : 0, (d[key] / max) * ch);
         const y = pad.top + ch - barH;
-
         if (d[key] > 0) {
           const grad = ctx.createLinearGradient(x, y, x, y + barH);
-          grad.addColorStop(0, '#a855f7');
-          grad.addColorStop(1, '#ec4899');
+          grad.addColorStop(0, c1); grad.addColorStop(1, c2);
           ctx.fillStyle = grad;
-        } else {
-          ctx.fillStyle = '#1a1a1f';
-        }
+        } else { ctx.fillStyle = '#1a1a1f'; }
         ctx.globalAlpha = 0.75;
-        ctx.beginPath();
-        ctx.roundRect(x, y, barW, barH, [2, 2, 0, 0]);
-        ctx.fill();
+        ctx.beginPath(); ctx.roundRect(x, y, barW, barH, [2, 2, 0, 0]); ctx.fill();
         ctx.globalAlpha = 1;
       });
 
-      // X labels
-      ctx.fillStyle = '#555';
-      ctx.font = '11px DM Sans, sans-serif';
-      ctx.textAlign = 'center';
+      ctx.fillStyle = '#555'; ctx.font = '11px DM Sans, sans-serif'; ctx.textAlign = 'center';
       const step = Math.max(1, Math.floor(daily.length / 6));
       for (let i = 0; i < daily.length; i += step) {
         const x = pad.left + (cw / daily.length) * i + barW / 2;
@@ -1031,55 +613,21 @@
       }
     }
 
-    // ─── Row renderers ─────────────────────────
-    function packRows(packs) {
-      if (!packs?.length) return '<div class="empty">No packs</div>';
-      const max = Math.max(...packs.map(p => parseInt(p.plays) || 0), 1);
-      return packs.map((p, i) => {
-        const plays = parseInt(p.plays) || 0;
-        const pct = (plays / max * 100);
-        let badge = '';
-        if (p.badge) badge = `<span class="row-badge badge-${p.badge}">${p.badge}</span>`;
-        if (p.solo) badge += '<span class="row-badge badge-solo">solo</span>';
-        return `
-          <div class="row">
-            <div class="row-left">
-              <span class="row-rank">${i + 1}</span>
-              <span class="row-emoji">${p.emoji}</span>
-              <div style="flex:1;min-width:0">
-                <div class="row-label">${esc(p.name_key.replace(/_/g, ' '))} ${badge}</div>
-                <div class="row-bar" style="width:${pct}%"></div>
-              </div>
-            </div>
-            <div class="row-value">${fmt(plays)} plays</div>
-          </div>
-        `;
-      }).join('');
-    }
-
-    function simpleRows(items, labelKey, valueKey) {
-      if (!items?.length) return '<div class="empty">No data</div>';
-      const max = Math.max(...items.map(i => i[valueKey]), 1);
-      return items.slice(0, 10).map(item => {
-        const pct = (item[valueKey] / max * 100);
+    // ─── Helpers ───────────────────────────────
+    function renderSimpleCard(elId, title, items, labelKey, valueKey, limit) {
+      const el = document.getElementById(elId);
+      if (!items?.length) { el.innerHTML = `<div class="card-title">${title}</div><div class="empty">No data</div>`; return; }
+      const sliced = items.slice(0, limit || 10);
+      const max = Math.max(...sliced.map(i => i[valueKey]), 1);
+      el.innerHTML = `<div class="card-title">${title}</div>` + sliced.map(item => {
         const label = item[labelKey] || '(direct)';
-        return `
-          <div class="row">
-            <div style="flex:1;min-width:0">
-              <div class="row-label" title="${esc(label)}">${esc(label)}</div>
-              <div class="row-bar" style="width:${pct}%"></div>
-            </div>
-            <div class="row-value">${fmt(item[valueKey])}</div>
-          </div>
-        `;
+        return `<div class="row"><div style="flex:1;min-width:0"><div class="row-label" title="${esc(label)}">${esc(label)}</div><div class="row-bar" style="width:${(item[valueKey]/max*100)}%"></div></div><div class="row-value">${fmt(item[valueKey])}</div></div>`;
       }).join('');
     }
 
-    // ─── Helpers ────────────────────────────────
     function fmt(n) {
-      if (n === null || n === undefined || n === '—') return '—';
-      n = Number(n);
-      if (isNaN(n)) return '—';
+      if (n == null || n === '—') return '—';
+      n = Number(n); if (isNaN(n)) return '—';
       if (n >= 1000000) return (n / 1000000).toFixed(1) + 'M';
       if (n >= 1000) return (n / 1000).toFixed(1) + 'K';
       return String(n);
@@ -1094,9 +642,8 @@
 
     function timeAgo(dateStr) {
       if (!dateStr) return '—';
-      const d = new Date(dateStr);
-      const now = new Date();
-      const diff = (now - d) / 1000;
+      const d = new Date(dateStr + 'Z');
+      const diff = (Date.now() - d) / 1000;
       if (diff < 60) return 'just now';
       if (diff < 3600) return Math.floor(diff / 60) + 'm ago';
       if (diff < 86400) return Math.floor(diff / 3600) + 'h ago';
