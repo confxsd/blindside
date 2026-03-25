@@ -189,6 +189,18 @@
       "descKey": "pack_desc_whattheyhide"
     },
     {
+      "key": "loyalty",
+      "emoji": "🛡️",
+      "nameKey": "pack_loyalty",
+      "countKey": "pack_count_loyalty",
+      "cat": "love",
+      "badge": "new",
+      "plays": "7.3k",
+      "featured": true,
+      "featuredBadge": "new-badge",
+      "descKey": "pack_desc_loyalty"
+    },
+    {
       "key": "flirtguess",
       "emoji": "😏",
       "nameKey": "pack_flirtguess",
@@ -485,7 +497,8 @@
         "partnertype",
         "partnerera",
         "couplestory",
-        "whattheyhide"
+        "whattheyhide",
+        "loyalty"
       ],
       "mode": "partner",
       "badge": "hot"

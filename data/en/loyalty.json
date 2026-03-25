@@ -1,0 +1,110 @@
+[
+  {
+    "q": "Your partner's ex texts 'I miss you.' What do they do?",
+    "options": [
+      "Show me immediately",
+      "Ignore and delete",
+      "Reply politely, then tell me",
+      "I don't even want to think about it"
+    ],
+    "pi": 0,
+    "format": "blindguess"
+  },
+  {
+    "q": "Someone hot is clearly flirting with your partner at a party. They…",
+    "options": [
+      "Introduce me as their partner right away",
+      "Flirt back a little — they're just friendly",
+      "Walk away and find me",
+      "Enjoy the attention but come home with me"
+    ],
+    "pi": 2,
+    "format": "blindguess"
+  },
+  {
+    "q": "Would you go through your partner's phone if it was unlocked?",
+    "options": [
+      "Never — I trust them fully",
+      "Maybe a quick peek…",
+      "Only if something felt off",
+      "Their phone IS my phone"
+    ],
+    "pi": 1,
+    "format": "bubble"
+  },
+  {
+    "q": "Your partner has a close friend of the gender they're attracted to. How do you feel?",
+    "options": [
+      "Totally fine — trust is everything",
+      "Fine but I want to meet them",
+      "A little jealous, not gonna lie",
+      "I'd rather they didn't"
+    ],
+    "pi": 0,
+    "format": "swipe"
+  },
+  {
+    "q": "Loyalty is…",
+    "options": [
+      "Choosing them every single day",
+      "Never keeping secrets"
+    ],
+    "pi": 1,
+    "format": "vs"
+  },
+  {
+    "q": "Your partner forgot your anniversary. What's your move?",
+    "options": [
+      "Drop hints all day until they get it",
+      "Plan something myself — no big deal",
+      "Bring it up and talk about it",
+      "Silent treatment activated"
+    ],
+    "pi": 2,
+    "format": "bubble"
+  },
+  {
+    "q": "The biggest loyalty green flag?",
+    "options": [
+      "They talk about you when you're not around",
+      "They never entertain DMs from strangers",
+      "They always take your side publicly",
+      "They share their passwords without you asking"
+    ],
+    "pi": 3,
+    "format": "blindguess"
+  },
+  {
+    "q": "If your partner had a celebrity hall pass, would you actually be okay with it?",
+    "options": [
+      "It's just a joke — of course",
+      "Honestly? No way",
+      "Depends on the celebrity 😂",
+      "We don't do hall passes, period"
+    ],
+    "pi": 0,
+    "format": "swipe"
+  },
+  {
+    "q": "Your partner likes someone's thirst trap. You…",
+    "options": [
+      "Couldn't care less",
+      "Notice but say nothing",
+      "Casually bring it up",
+      "Like one back for revenge"
+    ],
+    "pi": 1,
+    "format": "blindguess"
+  },
+  {
+    "q": "The ultimate proof of loyalty?",
+    "options": [
+      "Staying when things get hard",
+      "Being honest even when it hurts",
+      "Defending you to their family",
+      "Choosing you over their comfort zone"
+    ],
+    "pi": 3,
+    "format": "bubble"
+  }
+]

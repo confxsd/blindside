@@ -204,6 +204,11 @@ const i18n = {
       pack_desc_couplestory:
         "soulmates, adventure duo, chaos couple, or slow burn?",
       pack_desc_whattheyhide: "the things they feel but never say out loud.",
+      // Loyalty pack
+      pack_loyalty: "Loyalty Test",
+      pack_count_loyalty: "10 questions · trust or bust",
+      pack_desc_loyalty:
+        "how loyal are you really? scenarios, green flags, and the truth.",
       // Blind Guess packs
       pack_flirtguess: "Flirt & Guess",
       pack_desirematch: "Desire Match",
@@ -628,6 +633,10 @@ const i18n = {
       pack_desc_couplestory:
         "ruh eşleri, macera ikilisi, kaos çifti, yoksa yavaş yanan aşk?",
       pack_desc_whattheyhide: "hissedip hiç söylemedikleri şeyler.",
+      pack_loyalty: "Sadakat Testi",
+      pack_count_loyalty: "10 soru · güven mi kopuş mu",
+      pack_desc_loyalty:
+        "gerçekten ne kadar sadıksın? senaryolar, yeşil bayraklar ve gerçek.",
       pack_flirtguess: "Flört & Tahmin",
       pack_desirematch: "Arzu Eşleşmesi",
       pack_count_flirtguess: "10 soru · cevapla + tahmin et",
@@ -1022,6 +1031,10 @@ const i18n = {
       pack_desc_couplestory:
         "เนื้อคู่, คู่ผจญภัย, คู่วุ่นวาย, หรือรักค่อยเป็นค่อยไป?",
       pack_desc_whattheyhide: "สิ่งที่เขารู้สึกแต่ไม่เคยพูดออกมา",
+      pack_loyalty: "ทดสอบความซื่อสัตย์",
+      pack_count_loyalty: "10 คำถาม · ไว้ใจหรือไม่ไว้ใจ",
+      pack_desc_loyalty:
+        "ซื่อสัตย์แค่ไหนกัน? สถานการณ์จริง สัญญาณดี และความจริง",
       pack_flirtguess: "จีบ & ทาย",
       pack_desirematch: "จับคู่ความปรารถนา",
       pack_count_flirtguess: "10 คำถาม · ตอบ + ทาย",

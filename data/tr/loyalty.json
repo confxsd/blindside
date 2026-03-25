@@ -1,0 +1,110 @@
+[
+  {
+    "q": "Partnerinin eski sevgilisi 'Seni özledim' diye yazıyor. Ne yapar?",
+    "options": [
+      "Hemen bana gösterir",
+      "Görmezden gelip siler",
+      "Nazikçe cevaplar, sonra bana söyler",
+      "Düşünmek bile istemiyorum"
+    ],
+    "pi": 0,
+    "format": "blindguess"
+  },
+  {
+    "q": "Bir partide biri partnerinle açıkça flört ediyor. O…",
+    "options": [
+      "Beni hemen partneri olarak tanıtır",
+      "Biraz karşılık verir — sadece samimi",
+      "Uzaklaşıp beni bulur",
+      "İlgiden hoşlanır ama benimle eve gelir"
+    ],
+    "pi": 2,
+    "format": "blindguess"
+  },
+  {
+    "q": "Partnerinin telefonu açık olsa bakar mısın?",
+    "options": [
+      "Asla — tamamen güveniyorum",
+      "Belki hızlıca bir göz atarım…",
+      "Sadece bir şey garip hissettirirse",
+      "Onun telefonu benim telefonum"
+    ],
+    "pi": 1,
+    "format": "bubble"
+  },
+  {
+    "q": "Partnerinin çekici bulduğu cinsiyetten yakın bir arkadaşı var. Ne hissedersin?",
+    "options": [
+      "Tamamen rahat — güven her şey",
+      "Rahatım ama tanışmak isterim",
+      "Biraz kıskanırım, yalan yok",
+      "Keşke olmasaydı"
+    ],
+    "pi": 0,
+    "format": "swipe"
+  },
+  {
+    "q": "Sadakat…",
+    "options": [
+      "Her gün onu seçmek",
+      "Asla sır saklamamak"
+    ],
+    "pi": 1,
+    "format": "vs"
+  },
+  {
+    "q": "Partnerin yıl dönümünüzü unuttu. Ne yaparsın?",
+    "options": [
+      "Bütün gün ipucu veririm",
+      "Kendim bir şey planlarım — sorun yok",
+      "Konuyu açar konuşurum",
+      "Sessiz muamele başlasın"
+    ],
+    "pi": 2,
+    "format": "bubble"
+  },
+  {
+    "q": "En büyük sadakat yeşil bayrağı?",
+    "options": [
+      "Sen yokken senden bahsetmesi",
+      "Yabancılardan gelen DM'lere asla cevap vermemesi",
+      "Herkesin önünde hep senin tarafını tutması",
+      "Şifrelerini sormadan paylaşması"
+    ],
+    "pi": 3,
+    "format": "blindguess"
+  },
+  {
+    "q": "Partnerinin ünlü pasaport hakkı olsa, gerçekten sorun olur mu?",
+    "options": [
+      "Sadece şaka — tabii ki sorun olmaz",
+      "Açıkçası? Asla olmaz",
+      "Ünlüye bağlı 😂",
+      "Bizde öyle şey yok"
+    ],
+    "pi": 0,
+    "format": "swipe"
+  },
+  {
+    "q": "Partnerin birisinin cesur fotoğrafını beğeniyor. Sen…",
+    "options": [
+      "Umursamam bile",
+      "Fark ederim ama bir şey demem",
+      "Laf arasında sorarım",
+      "İntikam beğenisi atarım"
+    ],
+    "pi": 1,
+    "format": "blindguess"
+  },
+  {
+    "q": "Sadakatin en büyük kanıtı?",
+    "options": [
+      "İşler zorlaştığında kalmak",
+      "Acıtsa bile dürüst olmak",
+      "Ailesine karşı seni savunmak",
+      "Konfor alanından senin için çıkmak"
+    ],
+    "pi": 3,
+    "format": "bubble"
+  }
+]
