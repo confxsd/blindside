@@ -1,22 +1,22 @@
 [
   {
-    "q": "Your partner's ex texts 'I miss you.' What do they do?",
+    "q": "Your ex texts 'I miss you.' What do you do?",
     "options": [
-      "Show me immediately",
+      "Show my partner immediately",
       "Ignore and delete",
-      "Reply politely, then tell me",
-      "I don't even want to think about it"
+      "Reply politely, then tell my partner",
+      "Block without thinking twice"
     ],
     "pi": 0,
     "format": "blindguess"
   },
   {
-    "q": "Someone hot is clearly flirting with your partner at a party. They…",
+    "q": "Someone's clearly flirting with you at a party. You…",
     "options": [
-      "Introduce me as their partner right away",
-      "Flirt back a little — they're just friendly",
-      "Walk away and find me",
-      "Enjoy the attention but come home with me"
+      "Mention my partner right away",
+      "Flirt back a little — I'm just friendly",
+      "Walk away and find my partner",
+      "Enjoy the attention but go home with my person"
     ],
     "pi": 2,
     "format": "blindguess"
@@ -33,12 +33,12 @@
     "format": "bubble"
   },
   {
-    "q": "Your partner has a close friend of the gender they're attracted to. How do you feel?",
+    "q": "Your partner's best friend is someone you'd find attractive. You…",
     "options": [
       "Totally fine — trust is everything",
       "Fine but I want to meet them",
       "A little jealous, not gonna lie",
-      "I'd rather they didn't"
+      "I'd rather they weren't that close"
     ],
     "pi": 0,
     "format": "swipe"

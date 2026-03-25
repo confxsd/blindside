@@ -1,22 +1,22 @@
 [
   {
-    "q": "Partnerinin eski sevgilisi 'Seni özledim' diye yazıyor. Ne yapar?",
+    "q": "Eski sevgilin 'Seni özledim' diye yazıyor. Ne yaparsın?",
     "options": [
-      "Hemen bana gösterir",
-      "Görmezden gelip siler",
-      "Nazikçe cevaplar, sonra bana söyler",
-      "Düşünmek bile istemiyorum"
+      "Partnerime hemen gösteririm",
+      "Görmezden gelip silerim",
+      "Nazikçe cevaplar, sonra partnerime söylerim",
+      "Düşünmeden engellerim"
     ],
     "pi": 0,
     "format": "blindguess"
   },
   {
-    "q": "Bir partide biri partnerinle açıkça flört ediyor. O…",
+    "q": "Bir partide biri seninle açıkça flört ediyor. Sen…",
     "options": [
-      "Beni hemen partneri olarak tanıtır",
-      "Biraz karşılık verir — sadece samimi",
-      "Uzaklaşıp beni bulur",
-      "İlgiden hoşlanır ama benimle eve gelir"
+      "Partnerimden hemen bahsederim",
+      "Biraz karşılık veririm — sadece samimiyim",
+      "Uzaklaşıp partnerimi bulurum",
+      "İlgiden hoşlanırım ama partnerimle eve giderim"
     ],
     "pi": 2,
     "format": "blindguess"
@@ -33,12 +33,12 @@
     "format": "bubble"
   },
   {
-    "q": "Partnerinin çekici bulduğu cinsiyetten yakın bir arkadaşı var. Ne hissedersin?",
+    "q": "Partnerinin en yakın arkadaşı çekici biri. Sen…",
     "options": [
       "Tamamen rahat — güven her şey",
       "Rahatım ama tanışmak isterim",
       "Biraz kıskanırım, yalan yok",
-      "Keşke olmasaydı"
+      "Keşke bu kadar yakın olmasalardı"
     ],
     "pi": 0,
     "format": "swipe"
@@ -75,7 +75,7 @@
     "format": "blindguess"
   },
   {
-    "q": "Partnerinin ünlü pasaport hakkı olsa, gerçekten sorun olur mu?",
+    "q": "Partnerinin ünlü serbest geçiş hakkı olsa, gerçekten sorun olur mu?",
     "options": [
       "Sadece şaka — tabii ki sorun olmaz",
       "Açıkçası? Asla olmaz",
@@ -86,7 +86,7 @@
     "format": "swipe"
   },
   {
-    "q": "Partnerin birisinin cesur fotoğrafını beğeniyor. Sen…",
+    "q": "Partnerin birisinin kışkırtıcı fotoğrafını beğeniyor. Sen…",
     "options": [
       "Umursamam bile",
       "Fark ederim ama bir şey demem",
