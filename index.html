@@ -295,29 +295,39 @@
 
     /* ===== PROFILE ===== */
     .profile-section {
-      border-top: 1px solid var(--border); text-align: center;
+      border-top: 1px solid var(--border);
     }
-    .profile-box {
-      max-width: 440px; margin: 0 auto; padding: 28px;
-      border: 1px dashed var(--border);
-      border-radius: var(--radius); position: relative;
+    .profile-header {
+      text-align: center; margin-bottom: 32px;
     }
-    .profile-badge {
-      font-family: 'Syne', sans-serif; font-size: 10px; font-weight: 700;
-      letter-spacing: 1.5px; text-transform: uppercase;
-      color: var(--text-dim); background: var(--bg);
-      padding: 3px 10px; border-radius: 4px;
-      position: absolute; top: -10px; left: 50%;
-      transform: translateX(-50%);
+    .profile-title {
+      font-family: 'Syne', sans-serif; font-weight: 600;
+      font-size: clamp(22px, 5vw, 28px);
+      letter-spacing: -0.8px; margin-bottom: 8px;
     }
-    .profile-text {
-      font-size: 14px; line-height: 1.7; color: var(--text-mid);
+    .profile-subtitle {
+      font-size: 14px; color: var(--text-mid); max-width: 380px;
+      margin: 0 auto; line-height: 1.6;
     }
-    .profile-text strong { font-weight: 600; color: var(--text); }
-    .profile-soon {
-      font-family: 'Syne', sans-serif; font-size: 12px;
-      font-weight: 700; color: var(--accent-1);
-      margin-top: 16px; letter-spacing: 0.5px;
+    .profile-features {
+      display: flex; flex-direction: column; gap: 14px;
+    }
+    .profile-feature {
+      background: var(--card-bg); border: 1px solid var(--card-border);
+      border-radius: var(--radius); padding: 18px 20px;
+      box-shadow: var(--card-shadow);
+      display: flex; gap: 14px; align-items: flex-start;
+    }
+    .profile-icon {
+      font-size: 22px; flex-shrink: 0; margin-top: 1px;
+    }
+    .profile-feature-title {
+      font-family: 'Syne', sans-serif; font-size: 14px;
+      font-weight: 600; letter-spacing: -0.2px;
+      margin-bottom: 3px;
+    }
+    .profile-feature-desc {
+      font-size: 13px; color: var(--text-mid); line-height: 1.5;
     }
 
     /* ===== WAITLIST ===== */
@@ -570,16 +580,36 @@
     </div>
   </section>
 
-  <!-- PROFILE TEASER -->
+  <!-- PROFILE -->
   <section class="profile-section">
     <div class="container">
-      <div class="profile-box reveal">
-        <div class="profile-badge">coming soon</div>
-        <p class="profile-text">
-          Every session builds your <strong>Blindside Profile</strong>.
-          The more you play, the more accurately it reads your patterns.
-        </p>
-        <div class="profile-soon">more on this soon.</div>
+      <div class="profile-header reveal">
+        <div class="section-label">your blindside profile</div>
+        <h2 class="profile-title">Every session teaches us something about you.</h2>
+        <p class="profile-subtitle">Your profile builds over time. The more you play, the sharper your data gets.</p>
+      </div>
+      <div class="profile-features">
+        <div class="profile-feature reveal reveal-d1">
+          <div class="profile-icon">📊</div>
+          <div>
+            <div class="profile-feature-title">Patterns emerge</div>
+            <div class="profile-feature-desc">How you answer across sessions reveals your actual tendencies — not what you think they are.</div>
+          </div>
+        </div>
+        <div class="profile-feature reveal reveal-d2">
+          <div class="profile-icon">🔁</div>
+          <div>
+            <div class="profile-feature-title">Compare with anyone</div>
+            <div class="profile-feature-desc">Play with different people. See who you actually align with — and where you consistently don't.</div>
+          </div>
+        </div>
+        <div class="profile-feature reveal reveal-d3">
+          <div class="profile-icon">🧬</div>
+          <div>
+            <div class="profile-feature-title">It grows with you</div>
+            <div class="profile-feature-desc">Your profile isn't a one-time result. It's a living map of how you connect, updated every time you play.</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
