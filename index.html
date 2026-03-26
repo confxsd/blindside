@@ -295,39 +295,100 @@
 
     /* ===== PROFILE ===== */
     .profile-section {
-      border-top: 1px solid var(--border);
+      padding: 80px 0;
     }
-    .profile-header {
-      text-align: center; margin-bottom: 32px;
+    .profile-card {
+      background: linear-gradient(135deg, #1c1c1a 0%, #2a1f3d 50%, #1c1c1a 100%);
+      border-radius: 20px; padding: clamp(32px, 6vw, 48px);
+      position: relative; overflow: hidden;
+      color: #e8e6e1;
+    }
+    .profile-card::before {
+      content: '';
+      position: absolute; top: -50%; right: -30%; width: 300px; height: 300px;
+      background: radial-gradient(circle, rgba(124,58,237,0.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .profile-card::after {
+      content: '';
+      position: absolute; bottom: -40%; left: -20%; width: 250px; height: 250px;
+      background: radial-gradient(circle, rgba(157,92,245,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .profile-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-family: 'Syne', sans-serif; font-size: 10px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      color: var(--accent-2); background: rgba(157,92,245,0.12);
+      border: 1px solid rgba(157,92,245,0.2);
+      padding: 5px 12px; border-radius: 20px;
+      margin-bottom: 20px; position: relative; z-index: 1;
+    }
+    .profile-badge-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--accent-2);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.5; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.3); }
     }
     .profile-title {
-      font-family: 'Syne', sans-serif; font-weight: 600;
-      font-size: clamp(22px, 5vw, 28px);
-      letter-spacing: -0.8px; margin-bottom: 8px;
+      font-family: 'Syne', sans-serif; font-weight: 700;
+      font-size: clamp(24px, 5.5vw, 32px);
+      letter-spacing: -1px; line-height: 1.15;
+      margin-bottom: 12px; position: relative; z-index: 1;
+      color: #fff;
     }
     .profile-subtitle {
-      font-size: 14px; color: var(--text-mid); max-width: 380px;
-      margin: 0 auto; line-height: 1.6;
+      font-size: 15px; color: rgba(255,255,255,0.55);
+      max-width: 400px; line-height: 1.65;
+      margin-bottom: 32px; position: relative; z-index: 1;
     }
-    .profile-features {
-      display: flex; flex-direction: column; gap: 14px;
+    .profile-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 12px; position: relative; z-index: 1;
+    }
+    @media (max-width: 480px) {
+      .profile-grid { grid-template-columns: 1fr; }
     }
     .profile-feature {
-      background: var(--card-bg); border: 1px solid var(--card-border);
-      border-radius: var(--radius); padding: 18px 20px;
-      box-shadow: var(--card-shadow);
-      display: flex; gap: 14px; align-items: flex-start;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius); padding: 18px;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .profile-feature:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.12);
+    }
+    .profile-feature:last-child {
+      grid-column: 1 / -1;
     }
     .profile-icon {
-      font-size: 22px; flex-shrink: 0; margin-top: 1px;
+      font-size: 20px; margin-bottom: 10px;
     }
     .profile-feature-title {
       font-family: 'Syne', sans-serif; font-size: 14px;
       font-weight: 600; letter-spacing: -0.2px;
-      margin-bottom: 3px;
+      margin-bottom: 4px; color: #fff;
     }
     .profile-feature-desc {
-      font-size: 13px; color: var(--text-mid); line-height: 1.5;
+      font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.5;
+    }
+    .profile-cta {
+      display: inline-flex; align-items: center; gap: 6px;
+      margin-top: 28px; position: relative; z-index: 1;
+      font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700;
+      color: #fff; background: var(--accent-1);
+      padding: 13px 24px; border-radius: var(--radius);
+      border: none; cursor: pointer; text-decoration: none;
+      transition: all 0.2s;
+      box-shadow: 0 2px 12px rgba(124,58,237,0.3);
+    }
+    .profile-cta:hover {
+      box-shadow: 0 4px 20px rgba(124,58,237,0.4);
+      transform: translateY(-1px);
     }
 
     /* ===== WAITLIST ===== */
@@ -464,6 +525,35 @@
     </div>
   </section>
 
+  <!-- PROFILE -->
+  <section class="profile-section">
+    <div class="container">
+      <div class="profile-card reveal">
+        <div class="profile-badge"><div class="profile-badge-dot"></div> Your Blindside Profile</div>
+        <h2 class="profile-title">Just play.<br>Your profile builds itself.</h2>
+        <p class="profile-subtitle">Every game you play — with a date, a friend, anyone — adds to your profile. No forms. No effort. Just answers.</p>
+        <div class="profile-grid">
+          <div class="profile-feature reveal-d1">
+            <div class="profile-icon">🃏</div>
+            <div class="profile-feature-title">Complete decks</div>
+            <div class="profile-feature-desc">Play different packs to unlock new layers of your profile across topics.</div>
+          </div>
+          <div class="profile-feature reveal-d2">
+            <div class="profile-icon">👥</div>
+            <div class="profile-feature-title">Play with anyone</div>
+            <div class="profile-feature-desc">Partners, friends, crushes, celebrities. Each session sharpens your data.</div>
+          </div>
+          <div class="profile-feature reveal-d3">
+            <div class="profile-icon">🧬</div>
+            <div class="profile-feature-title">See your real patterns</div>
+            <div class="profile-feature-desc">Over time, Blindside maps how you actually think, connect, and compare — across everyone you've played with.</div>
+          </div>
+        </div>
+        <a href="/s/" class="profile-cta">Start building yours</a>
+      </div>
+    </div>
+  </section>
+
   <!-- HOW IT WORKS -->
   <section class="steps-section">
     <div class="container">
@@ -580,39 +670,6 @@
     </div>
   </section>
 
-  <!-- PROFILE -->
-  <section class="profile-section">
-    <div class="container">
-      <div class="profile-header reveal">
-        <div class="section-label">your blindside profile</div>
-        <h2 class="profile-title">Every session teaches us something about you.</h2>
-        <p class="profile-subtitle">Your profile builds over time. The more you play, the sharper your data gets.</p>
-      </div>
-      <div class="profile-features">
-        <div class="profile-feature reveal reveal-d1">
-          <div class="profile-icon">📊</div>
-          <div>
-            <div class="profile-feature-title">Patterns emerge</div>
-            <div class="profile-feature-desc">How you answer across sessions reveals your actual tendencies — not what you think they are.</div>
-          </div>
-        </div>
-        <div class="profile-feature reveal reveal-d2">
-          <div class="profile-icon">🔁</div>
-          <div>
-            <div class="profile-feature-title">Compare with anyone</div>
-            <div class="profile-feature-desc">Play with different people. See who you actually align with — and where you consistently don't.</div>
-          </div>
-        </div>
-        <div class="profile-feature reveal reveal-d3">
-          <div class="profile-icon">🧬</div>
-          <div>
-            <div class="profile-feature-title">It grows with you</div>
-            <div class="profile-feature-desc">Your profile isn't a one-time result. It's a living map of how you connect, updated every time you play.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- WAITLIST -->
   <section class="waitlist-section" id="waitlist">
