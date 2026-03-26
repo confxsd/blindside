@@ -162,6 +162,26 @@
       margin-top: 14px; letter-spacing: 0.2px;
     }
 
+    .hero-proof {
+      display: flex; align-items: center; gap: 10px;
+      margin-top: 24px; color: var(--text-dim); font-size: 13px;
+    }
+    .hero-avatars {
+      display: flex;
+    }
+    .hero-avatar {
+      width: 28px; height: 28px; border-radius: 50%;
+      border: 2px solid var(--bg);
+      margin-left: -8px; display: flex;
+      align-items: center; justify-content: center;
+      font-size: 13px; background: var(--card-bg);
+      box-shadow: var(--card-shadow);
+    }
+    .hero-avatar:first-child { margin-left: 0; }
+    .hero-proof-text span {
+      color: var(--text); font-weight: 500;
+    }
+
     /* ===== STEPS ===== */
     .steps-section { border-top: 1px solid var(--border); }
 
@@ -421,6 +441,16 @@
       <p class="hero-sub">Same questions. Neither sees the other's answers. Results revealed together. Takes 3 minutes.</p>
       <a href="#waitlist"><button class="btn-primary">create a session</button></a>
       <p class="hero-note">free. no account needed.</p>
+      <div class="hero-proof">
+        <div class="hero-avatars">
+          <div class="hero-avatar">🙈</div>
+          <div class="hero-avatar">😏</div>
+          <div class="hero-avatar">🫣</div>
+          <div class="hero-avatar">🤭</div>
+          <div class="hero-avatar">😳</div>
+        </div>
+        <div class="hero-proof-text"><span>2,400+</span> sessions played</div>
+      </div>
     </div>
   </section>
 
