@@ -1,0 +1,173 @@
+[
+  {
+    "q": "Cuma akşamı mutfak tercihin:",
+    "options": [
+      "🍕 İtalyan",
+      "🍣 Japon",
+      "🌮 Meksika",
+      "🍛 Hint",
+      "🥡 Çin",
+      "🥘 Tayland"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Kahvaltı enerjin:",
+    "options": [
+      "🥐 Kruvasan & kahve",
+      "🥞 Pankek & şurup",
+      "🍳 İngiliz kahvaltısı",
+      "🧀 Türk serpme kahvaltı",
+      "🍜 Pho veya çorba",
+      "🥑 Avokadolu tost"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Acı tolerans seviyesi:",
+    "options": [
+      "🧊 Hafif yeter",
+      "🌶️ Orta — biraz acı olsun",
+      "🔥 Acılı — getir gelsin",
+      "☠️ En acı biber? Evet lütfen",
+      "🍋 Acıdan çok ekşi severim"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Evleneceğin peynir:",
+    "options": [
+      "🧀 Mozzarella",
+      "🫕 Brie",
+      "🧀 Olgun cheddar",
+      "🐐 Keçi peyniri",
+      "🇬🇷 Beyaz peynir",
+      "🇮🇹 Parmesan"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Favori karbonhidratın kalana kadar ele:",
+    "options": ["🍞 Taze ekmek", "🍝 Makarna", "🍚 Pilav", "🥔 Patates", "🫓 Naan", "🥯 Simit"],
+    "pi": 0,
+    "format": "eliminate"
+  },
+  {
+    "q": "Evde yemek tarzın:",
+    "options": [
+      "👨‍🍳 Tarifi birebir uygular",
+      "🎨 Buzdolabında ne varsa",
+      "📱 Sipariş sanatçısı",
+      "🥗 Meal prep makinesi",
+      "🔥 Sadece mangalcı"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Uğruna savaşacağın protein:",
+    "options": [
+      "🥩 Biftek",
+      "🍗 Tavuk",
+      "🐟 Somon",
+      "🦐 Karides",
+      "🥚 Her şeye yumurta",
+      "🌱 Tamamen bitkisel"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Uğruna okyanus geçeceğin sokak lezzeti:",
+    "options": [
+      "🌮 Tacos al pastor — Meksika",
+      "🥟 Xiaolongbao — Şanghay",
+      "🍢 Yakitori — Tokyo",
+      "🧆 Falafel — Beyrut",
+      "🥙 Döner — İstanbul",
+      "🍛 Pad krapao — Bangkok"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Tatlı kişiliğin:",
+    "options": [
+      "🍫 Her şeyde çikolata",
+      "🍰 Cheesecake sadığı",
+      "🍦 Her mevsim dondurma",
+      "🥮 Baklava & tatlılar",
+      "🍮 Crème brûlée zarafeti",
+      "🍩 Donut kaosçusu"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Her şeye koyduğun sos:",
+    "options": [
+      "🌶️ Sriracha",
+      "🫒 Zeytinyağı",
+      "🥫 Ketçap (utanma yok)",
+      "🧄 Sarımsaklı tereyağı",
+      "🫙 Soya sosu",
+      "🥑 Guacamole"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Kahve mi çay mı — ve nasıl:",
+    "options": [
+      "☕ Espresso, sade",
+      "🥛 Yulaf sütlü latte",
+      "🍵 Matcha sonsuza dek",
+      "☕ Türk kahvesi, sert",
+      "🧋 Bubble tea",
+      "🚫 İkisi de değil — sadece su"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Partnerde yemek deal-breaker'ı:",
+    "options": [
+      "🍕 Yeni yemek denemez",
+      "📱 Her yemeği fotoğraflar",
+      "🧂 Tatmadan tuz atar",
+      "🍽️ Ağzı açık çiğner",
+      "🚫 Favori mutfağımdan nefret eder"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Sushi siparişin her şeyi anlatır:",
+    "options": [
+      "🍣 Somon nigiri — klasik",
+      "🌀 Spicy tuna roll — lezzet avcısı",
+      "🥑 California roll — güvenli bölge",
+      "🐙 Omakase — şef karar versin",
+      "🍤 Tempura roll — çıtır sever",
+      "😐 Sushi yemiyorum"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Yemek için uçacağın ülke:",
+    "options": [
+      "🇮🇹 İtalya — makarna & gelato",
+      "🇯🇵 Japonya — ramen & sushi",
+      "🇲🇽 Meksika — taco & mezcal",
+      "🇹🇭 Tayland — köriler & sokak lezzetleri",
+      "🇫🇷 Fransa — şarap & pastane",
+      "🇹🇷 Türkiye — kebap & meze"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Vazgeçemediğin mutfak aleti:",
+    "options": [
+      "🔪 Şef bıçağı",
+      "🍳 Döküm tava",
+      "💨 Airfryer",
+      "🫕 Düdüklü tencere",
+      "🔥 Wok",
+      "🧊 Blender"
+    ],
+    "pi": 4
+  }
+]

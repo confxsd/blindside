@@ -125,6 +125,16 @@
       "descKey": "pack_desc_situations"
     },
     {
+      "key": "cuisine",
+      "emoji": "🍽️",
+      "nameKey": "pack_cuisine",
+      "countKey": "pack_count_cuisine",
+      "cat": "lifestyle",
+      "badge": "new",
+      "plays": "4.1k",
+      "descKey": "pack_desc_cuisine"
+    },
+    {
       "key": "livingtogether",
       "emoji": "🏠",
       "nameKey": "pack_livingtogether",
@@ -479,6 +489,7 @@
       "descKey": "coll_desc_culture_taste",
       "packs": [
         "worldtaste",
+        "cuisine",
         "soulspirit",
         "livingtogether"
       ],

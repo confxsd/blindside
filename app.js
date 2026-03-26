@@ -186,6 +186,14 @@ const blindApi = {
 
   deleteSession(code) {
     return this._fetch(`/api/blind/sessions/${code}`, { method: 'DELETE' });
+  },
+
+  getVibeReport(payload) {
+    return fetch('/api/vibe-report', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    }).then(r => r.json());
   }
 };
 
@@ -1997,123 +2005,168 @@ function spawnConfetti() {
   setTimeout(() => { container.innerHTML = ''; }, 4000);
 }
 
-// Vibe Receipt builder
+// ==================== VIBE CARD (AI-generated shareable) ====================
+const VIBE_LOADING_MSGS = [
+  'reading the room...',
+  'analyzing the delusion...',
+  'calculating the ick factor...',
+  'consulting the stars...',
+  'decoding your chaos...',
+  'scanning for red flags...',
+  'measuring the brainrot...',
+  'finding your couple archetype...',
+  'judging you (affectionately)...',
+  'this says a lot about you both ngl...',
+];
+let _vibeLoadingInterval = null;
+let _lastVibeReport = null;
 
-// ==================== AI VIBE REPORT ====================
-function getVibeReportLoadingHtml() {
+function getVibeLoadingHtml() {
   return `
-    <div class="vibe-report">
-      <div class="vibe-report-inner vibe-report-loading">
-        <div class="vibe-skel vibe-skel-badge"></div>
-        <div class="vibe-skel vibe-skel-title"></div>
-        <div class="vibe-skel vibe-skel-line"></div>
-        <div class="vibe-skel vibe-skel-line"></div>
-        <div class="vibe-skel vibe-skel-line short"></div>
-        <div style="height:12px"></div>
-        <div class="vibe-skel vibe-skel-award"></div>
-        <div class="vibe-skel vibe-skel-award"></div>
-        <div class="vibe-skel vibe-skel-award"></div>
-        <div style="height:12px"></div>
-        <div class="vibe-skel vibe-skel-metaphor"></div>
-        <div class="vibe-loading-hint">ai is reading your vibes...</div>
-      </div>
+    <div class="vibe-loading-screen">
+      <div class="vibe-loading-glow"></div>
+      <div class="vibe-loading-emoji">✦</div>
+      <div class="vibe-loading-text" id="vibeLoadingText">${VIBE_LOADING_MSGS[0]}</div>
     </div>
   `;
 }
 
-function renderVibeReport(report) {
-  const awardsHtml = (report.superlatives || []).map(s => `
-    <div class="vibe-award">
-      <div class="vibe-award-icon">${s.icon}</div>
-      <div class="vibe-award-content">
-        <div class="vibe-award-label">${s.label}</div>
-        <div class="vibe-award-text">${s.text}</div>
-      </div>
-    </div>
-  `).join('');
+function startVibeLoadingRotation() {
+  let idx = 0;
+  _vibeLoadingInterval = setInterval(() => {
+    idx = (idx + 1) % VIBE_LOADING_MSGS.length;
+    const el = document.getElementById('vibeLoadingText');
+    if (!el) { stopVibeLoadingRotation(); return; }
+    el.classList.add('vibe-text-exit');
+    setTimeout(() => {
+      el.textContent = VIBE_LOADING_MSGS[idx];
+      el.classList.remove('vibe-text-exit');
+      el.classList.add('vibe-text-enter');
+      setTimeout(() => el.classList.remove('vibe-text-enter'), 300);
+    }, 250);
+  }, 2500);
+}
+
+function stopVibeLoadingRotation() {
+  if (_vibeLoadingInterval) { clearInterval(_vibeLoadingInterval); _vibeLoadingInterval = null; }
+}
+
+function renderVibeCard(report, pct, vibeTitle, myName, partnerName) {
+  const myInitial = (myName || '?').charAt(0).toUpperCase();
+  const partnerInitial = (partnerName || '?').charAt(0).toUpperCase();
+
+  const awardsHtml = (report.superlatives || []).map(s =>
+    `<div class="vc-award"><span class="vc-award-icon">${s.icon}</span><span class="vc-award-text">${s.text}</span></div>`
+  ).join('');
 
   return `
-    <div class="vibe-report" id="vibeReportCard">
-      <div class="vibe-report-inner">
-        <div class="vibe-report-badge">AI Vibe Report</div>
-        <div class="vibe-report-headline">${report.headline}</div>
-        <div class="vibe-report-narrative">${report.narrative}</div>
-        <div class="vibe-superlatives">${awardsHtml}</div>
-        <div class="vibe-metaphor">
-          <div class="vibe-metaphor-label">${report.metaphor_label || 'Your Duo Archetype'}</div>
-          <div class="vibe-metaphor-text">${report.metaphor}</div>
-          <div class="vibe-metaphor-desc">${report.metaphor_desc}</div>
+    <div class="vibe-card" id="vibeReportCard">
+      <div class="vc-inner">
+        <div class="vc-profiles">
+          <div class="vc-profile">
+            <div class="vc-avatar">${myInitial}</div>
+            <div class="vc-profile-name">${myName}</div>
+          </div>
+          <div class="vc-vs">×</div>
+          <div class="vc-profile">
+            <div class="vc-avatar vc-avatar-partner">${partnerInitial}</div>
+            <div class="vc-profile-name">${partnerName}</div>
+          </div>
+        </div>
+
+        <div class="vc-top">
+          <div class="vc-pct">${pct}%</div>
+          <div class="vc-vibe">${vibeTitle}</div>
+        </div>
+
+        <div class="vc-divider"></div>
+
+        <div class="vc-headline">${report.headline}</div>
+        ${report.hook ? `<div class="vc-hook">${report.hook}</div>` : ''}
+
+        <div class="vc-awards">${awardsHtml}</div>
+
+        <div class="vc-archetype">
+          <div class="vc-arch-label">${report.metaphor_label || 'your duo archetype'}</div>
+          <div class="vc-arch-name">${report.metaphor}</div>
+        </div>
+
+        <div class="vc-footer">
+          <span class="vc-brand">blindside.</span>
+          ${report.vibe_tag ? `<span class="vc-tag">${report.vibe_tag}</span>` : ''}
         </div>
       </div>
     </div>
   `;
 }
 
-async function generateVibeReport(data, partnerName, pct, packKey) {
-  const lang = localStorage.getItem('bs-lang') || 'en';
-  const langNames = { en: 'English', tr: 'Turkish', th: 'Thai' };
-
-  const qaList = data.map((d, i) =>
-    `Q${i+1}: "${d.q}" — You: "${d.userAns}", ${partnerName}: "${d.partnerAns}" [${d.matched ? 'MATCH' : 'DIFFERENT'}]`
-  ).join('\n');
-
-  const prompt = `You are a witty, warm, Gen-Z-friendly personality analyst for a blind compatibility quiz app called "blindside."
-
-Two people answered the same questions without seeing each other's answers. Here are the results:
-
-Players: "You" & "${partnerName}"
-Pack: ${packKey || 'general'}
-Match rate: ${pct}%
-Questions & Answers:
-${qaList}
-
-Generate a fun, creative, shareable "Vibe Report" in JSON format. Respond in ${langNames[lang] || 'English'}.
-
-Requirements:
-- "headline": A punchy, creative 4-8 word title for their dynamic (not generic — reference specific answers if possible)
-- "narrative": 2-3 sentences. Be specific about their actual answers. Use <strong> tags for emphasis on key phrases. Be warm but funny. Reference actual surprising matches or funny differences.
-- "superlatives": Array of exactly 3 fun awards. Each has:
-  - "icon": a single emoji
-  - "label": short award category (e.g. "Most Aligned On", "Biggest Plot Twist", "The One That Hurt")
-  - "text": 1 short sentence referencing actual Q&A
-- "metaphor": A creative duo archetype/metaphor (e.g. "The Jazz Duo", "Chaotic Roommates", "The Brain Cell Sharers")
-- "metaphor_label": Short label like "Your Duo Archetype" (translated)
-- "metaphor_desc": 1 sentence explaining the metaphor, tied to their actual answers
-
-Be creative, funny, specific. Do NOT be generic. Reference their actual answers. Keep it light and shareable.
-Return ONLY valid JSON, no markdown fences.`;
+async function loadVibeCard(data, partnerName, pct, packKey, vibeTitle, myName) {
+  const slot = document.getElementById('vibeCardSlot');
+  if (!slot) return;
+  startVibeLoadingRotation();
 
   try {
-    const res = await fetch(`${API_URL}/claude?nocache=1`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'X-User-Id': 'blindside-vibes' },
-      body: JSON.stringify({
-        model: 'claude-haiku-4-5-20251001',
-        max_tokens: 800,
-        messages: [{ role: 'user', content: prompt }]
-      })
-    });
-    const result = await res.json();
-    const text = result?.content?.[0]?.text;
-    if (!text) return null;
-    // Parse JSON — handle potential markdown fences
-    const cleaned = text.replace(/```json\s*/g, '').replace(/```\s*/g, '').trim();
-    return JSON.parse(cleaned);
+    const lang = localStorage.getItem('bs-lang') || 'en';
+    const payload = {
+      partnerName,
+      pct,
+      packKey: packKey || selectedPackKey,
+      lang,
+      questions: data.map(d => ({ q: d.q, userAns: d.userAns, partnerAns: d.partnerAns, matched: d.matched }))
+    };
+    const report = await blindApi.getVibeReport(payload);
+    stopVibeLoadingRotation();
+
+    if (report && report.headline) {
+      _lastVibeReport = report;
+      slot.innerHTML = renderVibeCard(report, pct, vibeTitle, myName, partnerName);
+    } else {
+      slot.innerHTML = renderFallbackCard(pct, vibeTitle, myName, partnerName);
+    }
   } catch (e) {
-    console.error('AI vibe report failed:', e);
-    return null;
+    console.error('Vibe card failed:', e);
+    stopVibeLoadingRotation();
+    slot.innerHTML = renderFallbackCard(pct, vibeTitle, myName, partnerName);
   }
 }
 
-async function loadVibeReport(data, partnerName, pct, packKey) {
-  const container = document.getElementById('vibeReportSlot');
-  if (!container) return;
-  const report = await generateVibeReport(data, partnerName, pct, packKey);
-  if (report && report.headline) {
-    container.innerHTML = renderVibeReport(report);
+function renderFallbackCard(pct, vibeTitle, myName, partnerName) {
+  const myInitial = (myName || '?').charAt(0).toUpperCase();
+  const partnerInitial = (partnerName || '?').charAt(0).toUpperCase();
+  return `
+    <div class="vibe-card" id="vibeReportCard">
+      <div class="vc-inner">
+        <div class="vc-profiles">
+          <div class="vc-profile">
+            <div class="vc-avatar">${myInitial}</div>
+            <div class="vc-profile-name">${myName}</div>
+          </div>
+          <div class="vc-vs">×</div>
+          <div class="vc-profile">
+            <div class="vc-avatar vc-avatar-partner">${partnerInitial}</div>
+            <div class="vc-profile-name">${partnerName}</div>
+          </div>
+        </div>
+        <div class="vc-top">
+          <div class="vc-pct">${pct}%</div>
+          <div class="vc-vibe">${vibeTitle}</div>
+        </div>
+        <div class="vc-footer"><span class="vc-brand">blindside.</span></div>
+      </div>
+    </div>
+  `;
+}
+
+function toggleQuestionDetails() {
+  const el = document.getElementById('questionDetails');
+  const toggle = document.querySelector('.details-toggle');
+  if (!el || !toggle) return;
+  if (!el.style.maxHeight || el.style.maxHeight === '0px') {
+    el.style.maxHeight = el.scrollHeight + 'px';
+    toggle.classList.add('open');
   } else {
-    // Remove the loading skeleton on failure
-    container.innerHTML = '';
+    el.style.maxHeight = '0px';
+    toggle.classList.remove('open');
   }
 }
 
@@ -2303,16 +2356,14 @@ function buildReceiptWithName(partnerName) {
   const pct = Math.round((matches / total) * 100);
   const vibeLabels = getVibeLabels();
   const vibe = [...vibeLabels].reverse().find(v => pct >= v.min);
-  const now = new Date();
-  const dateStr = now.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 
-  let chaptersHtml = '';
   const userGuessResults = data.filter(d => d.userGuess !== undefined);
   const partnerGuessResults = data.filter(d => d.partnerGuess !== undefined);
-  const apiHasGuesses = userGuessResults.length > 0 || partnerGuessResults.length > 0;
   const apiGuessCorrectCount = data.filter(d => d.guessCorrect).length;
   const apiPartnerGuessCorrectCount = data.filter(d => d.partnerGuessCorrect).length;
 
+  // Build chapters (hidden by default)
+  let chaptersHtml = '';
   data.forEach((d, i) => {
     let guessHtml = '';
     if (d.userGuess !== undefined) {
@@ -2350,42 +2401,43 @@ function buildReceiptWithName(partnerName) {
     `;
   });
 
+  const myName = currentUser?.username || i18n.t('results_you');
   const scroll = document.getElementById('storyScroll');
   scroll.innerHTML = `
-    <div class="story-hero">
-      <div class="story-hero-top">
-        <div class="story-hero-emoji">${vibe.emoji}</div>
-        <div class="story-hero-score">${pct}%</div>
-      </div>
-      <div class="story-hero-vibe">${vibe.title}</div>
-      <div class="story-hero-sub">${vibe.desc}</div>
-      <div class="story-hero-names">${i18n.t('results_you')} & ${partnerName}</div>
+    <div id="vibeCardSlot">${getVibeLoadingHtml()}</div>
+
+    <div class="story-stats-mini">
+      <div><span class="story-stat-val-mini">${matches}</span><span class="story-stat-lbl-mini">${i18n.t('results_matches')}</span></div>
+      <div class="story-stats-dot">·</div>
+      <div><span class="story-stat-val-mini">${total - matches}</span><span class="story-stat-lbl-mini">${i18n.t('results_plot_twists')}</span></div>
+      <div class="story-stats-dot">·</div>
+      <div><span class="story-stat-val-mini">${pct}%</span><span class="story-stat-lbl-mini">${i18n.t('results_sync_rate')}</span></div>
+      ${userGuessResults.length > 0 ? `<div class="story-stats-dot">·</div><div><span class="story-stat-val-mini">${apiGuessCorrectCount}/${userGuessResults.length}</span><span class="story-stat-lbl-mini">${i18n.t('blindguess_you_read_them') || 'you read them'}</span></div>` : ''}
+      ${partnerGuessResults.length > 0 ? `<div class="story-stats-dot">·</div><div><span class="story-stat-val-mini">${apiPartnerGuessCorrectCount}/${partnerGuessResults.length}</span><span class="story-stat-lbl-mini">${i18n.t('blindguess_they_read_you') || 'they read you'}</span></div>` : ''}
     </div>
-    <div class="story-intro"><p>${vibe.intro}</p></div>
-    <!-- <div id="vibeReportSlot">${getVibeReportLoadingHtml()}</div> -->
-    ${chaptersHtml}
-    <div class="story-outro">
-      <div class="story-stats">
-        <div><div class="story-stat-val">${matches}</div><div class="story-stat-lbl">${i18n.t('results_matches')}</div></div>
-        <div><div class="story-stat-val">${total - matches}</div><div class="story-stat-lbl">${i18n.t('results_plot_twists')}</div></div>
-        <div><div class="story-stat-val">${pct}%</div><div class="story-stat-lbl">${i18n.t('results_sync_rate')}</div></div>
-        ${userGuessResults.length > 0 ? `<div><div class="story-stat-val">${apiGuessCorrectCount}/${userGuessResults.length}</div><div class="story-stat-lbl">${i18n.t('blindguess_you_read_them') || 'you read them'}</div></div>` : ''}
-        ${partnerGuessResults.length > 0 ? `<div><div class="story-stat-val">${apiPartnerGuessCorrectCount}/${partnerGuessResults.length}</div><div class="story-stat-lbl">${i18n.t('blindguess_they_read_you') || 'they read you'}</div></div>` : ''}
-      </div>
-      <div class="story-brand">blindside.</div>
-      <div class="story-date">${dateStr}</div>
+
+    <div class="details-toggle" onclick="toggleQuestionDetails()">
+      <span class="details-toggle-text">${i18n.t('results_see_answers') || `see all ${total} answers`}</span>
+      <span class="details-toggle-icon">▾</span>
     </div>
+    <div class="details-collapsible" id="questionDetails">
+      ${chaptersHtml}
+    </div>
+
     <div class="story-actions">
+      <button class="btn-share" onclick="shareReceipt()">${i18n.t('results_share')}</button>
       <button class="btn btn-primary results-insights-btn" style="width:100%" onclick="goToInsights()">
         ✦ ${i18n.t('results_view_insights')}
       </button>
-      <button class="btn-share" onclick="shareReceipt()">${i18n.t('results_share')}</button>
       <button class="btn btn-primary" style="width:100%;background:var(--surface)!important;color:var(--text)!important;border:1px solid var(--border)!important;box-shadow:none!important" onclick="goTo('packs')">${i18n.t('results_play_another')}</button>
       <button class="btn btn-ghost" onclick="goTo('home');loadHomeSessions()">${i18n.t('results_back_home')}</button>
     </div>
   `;
   scroll.scrollTop = 0;
   spawnConfetti();
+
+  // Fire AI vibe card generation — hero is inside the card now
+  loadVibeCard(data, partnerName, pct, selectedPackKey, vibe.title, myName);
 
   // Prompt guests to save their account
   if (isGuest) setTimeout(showSaveAccountModal, 2000);
@@ -2577,47 +2629,26 @@ function buildReceipt() {
     `;
   });
 
+  const myName = currentUser?.username || i18n.t('results_you');
   const scroll = document.getElementById('storyScroll');
   scroll.innerHTML = `
-    <div class="story-hero">
-      <div class="story-hero-top">
-        <div class="story-hero-emoji">${vibe.emoji}</div>
-        <div class="story-hero-score">${pct}%</div>
-      </div>
-      <div class="story-hero-vibe">${vibe.title}</div>
-      <div class="story-hero-sub">${vibe.desc}</div>
-      <div class="story-hero-names">${i18n.t('results_you')} & Alex</div>
+    <div id="vibeCardSlot">${getVibeLoadingHtml()}</div>
+
+    <div class="story-stats-mini">
+      <div><span class="story-stat-val-mini">${matches}</span><span class="story-stat-lbl-mini">${i18n.t('results_matches')}</span></div>
+      <div class="story-stats-dot">·</div>
+      <div><span class="story-stat-val-mini">${total - matches}</span><span class="story-stat-lbl-mini">${i18n.t('results_plot_twists')}</span></div>
+      <div class="story-stats-dot">·</div>
+      <div><span class="story-stat-val-mini">${pct}%</span><span class="story-stat-lbl-mini">${i18n.t('results_sync_rate')}</span></div>
+      ${hasGuesses ? `<div class="story-stats-dot">·</div><div><span class="story-stat-val-mini">${guessCorrectCount}/${guessResults.length}</span><span class="story-stat-lbl-mini">${i18n.t('blindguess_read_score') || 'read them right'}</span></div>` : ''}
     </div>
 
-    <div class="story-intro">
-      <p>${vibe.intro}</p>
+    <div class="details-toggle" onclick="toggleQuestionDetails()">
+      <span class="details-toggle-text">${i18n.t('results_see_answers') || `see all ${total} answers`}</span>
+      <span class="details-toggle-icon">▾</span>
     </div>
-
-    <!-- <div id="vibeReportSlot">${getVibeReportLoadingHtml()}</div> -->
-
-    ${chaptersHtml}
-
-    <div class="story-outro">
-      <div class="story-stats">
-        <div>
-          <div class="story-stat-val">${matches}</div>
-          <div class="story-stat-lbl">${i18n.t('results_matches')}</div>
-        </div>
-        <div>
-          <div class="story-stat-val">${total - matches}</div>
-          <div class="story-stat-lbl">${i18n.t('results_plot_twists')}</div>
-        </div>
-        <div>
-          <div class="story-stat-val">${pct}%</div>
-          <div class="story-stat-lbl">${i18n.t('results_sync_rate')}</div>
-        </div>
-        ${hasGuesses ? `<div>
-          <div class="story-stat-val">${guessCorrectCount}/${guessResults.length}</div>
-          <div class="story-stat-lbl">${i18n.t('blindguess_read_score') || 'read them right'}</div>
-        </div>` : ''}
-      </div>
-      <div class="story-brand">blindside.</div>
-      <div class="story-date">${dateStr}</div>
+    <div class="details-collapsible" id="questionDetails">
+      ${chaptersHtml}
     </div>
 
     <div class="story-actions">
@@ -2629,15 +2660,16 @@ function buildReceipt() {
 
   scroll.scrollTop = 0;
   spawnConfetti();
-  // AI vibe report disabled for now
-  // loadVibeReport(data, 'Alex', pct, selectedPackKey);
+  loadVibeCard(data, 'Alex', pct, selectedPackKey, vibe.title, myName);
 }
 
 function shareReceipt() {
+  const shareText = _lastVibeReport?.share_text || 'We just did a blind reveal — check our results!';
   if (navigator.share) {
     navigator.share({
       title: 'blindside. vibe check',
-      text: 'We just did a blind reveal — check our results!',
+      text: shareText,
+      url: 'https://blindside.to'
     }).catch(() => {});
   } else {
     const btn = event.target;

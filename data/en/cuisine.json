@@ -1,0 +1,173 @@
+[
+  {
+    "q": "Your go-to cuisine for a Friday night:",
+    "options": [
+      "🍕 Italian",
+      "🍣 Japanese",
+      "🌮 Mexican",
+      "🍛 Indian",
+      "🥡 Chinese",
+      "🥘 Thai"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Breakfast energy:",
+    "options": [
+      "🥐 Croissant & coffee",
+      "🥞 Pancakes & syrup",
+      "🍳 Full English fry-up",
+      "🧀 Turkish spread",
+      "🍜 Pho or congee",
+      "🥑 Avocado toast"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Spice tolerance level:",
+    "options": [
+      "🧊 Mild is wild enough",
+      "🌶️ Medium — I like a kick",
+      "🔥 Hot — bring it on",
+      "☠️ Ghost pepper? Yes please",
+      "🍋 I prefer tangy over spicy"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "The cheese you'd marry:",
+    "options": [
+      "🧀 Mozzarella",
+      "🫕 Brie",
+      "🧀 Aged cheddar",
+      "🐐 Goat cheese",
+      "🇬🇷 Feta",
+      "🇮🇹 Parmesan"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Eliminate until your comfort carb remains:",
+    "options": ["🍞 Fresh bread", "🍝 Pasta", "🍚 Rice", "🥔 Potatoes", "🫓 Naan", "🥯 Bagel"],
+    "pi": 0,
+    "format": "eliminate"
+  },
+  {
+    "q": "Cooking style at home:",
+    "options": [
+      "👨‍🍳 Follows recipes exactly",
+      "🎨 Improvises with whatever's around",
+      "📱 Delivery artist",
+      "🥗 Meal prep machine",
+      "🔥 Grill master only"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "The protein hill you'd die on:",
+    "options": [
+      "🥩 Steak",
+      "🍗 Chicken",
+      "🐟 Salmon",
+      "🦐 Shrimp",
+      "🥚 Eggs for everything",
+      "🌱 Plant-based all the way"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Street food you'd fly across the world for:",
+    "options": [
+      "🌮 Tacos al pastor — Mexico",
+      "🥟 Xiaolongbao — Shanghai",
+      "🍢 Yakitori — Tokyo",
+      "🧆 Falafel — Beirut",
+      "🥙 Döner — Istanbul",
+      "🍛 Pad krapao — Bangkok"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Your dessert personality:",
+    "options": [
+      "🍫 Chocolate everything",
+      "🍰 Cheesecake loyalist",
+      "🍦 Ice cream any season",
+      "🥮 Baklava & pastries",
+      "🍮 Crème brûlée refined",
+      "🍩 Donut chaos"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "The sauce you put on everything:",
+    "options": [
+      "🌶️ Sriracha",
+      "🫒 Olive oil",
+      "🥫 Ketchup (no shame)",
+      "🧄 Garlic butter",
+      "🫙 Soy sauce",
+      "🥑 Guacamole"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Coffee or tea — and how:",
+    "options": [
+      "☕ Espresso, black",
+      "🥛 Oat latte all the way",
+      "🍵 Matcha forever",
+      "☕ Turkish coffee, strong",
+      "🧋 Boba tea",
+      "🚫 Neither — just water"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Food deal-breaker in a partner:",
+    "options": [
+      "🍕 Won't try new food",
+      "📱 Photographs every single meal",
+      "🧂 Salts before tasting",
+      "🍽️ Chews with mouth open",
+      "🚫 Hates my favorite cuisine"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Your sushi order says everything:",
+    "options": [
+      "🍣 Salmon nigiri — classic",
+      "🌀 Spicy tuna roll — flavor chaser",
+      "🥑 California roll — safe zone",
+      "🐙 Omakase — chef decides",
+      "🍤 Tempura roll — crispy lover",
+      "😐 I don't eat sushi"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Pick a food travel destination:",
+    "options": [
+      "🇮🇹 Italy — pasta & gelato",
+      "🇯🇵 Japan — ramen & sushi",
+      "🇲🇽 Mexico — tacos & mezcal",
+      "🇹🇭 Thailand — curries & street food",
+      "🇫🇷 France — wine & pastries",
+      "🇹🇷 Turkey — kebabs & meze"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "The kitchen gadget you can't live without:",
+    "options": [
+      "🔪 Chef's knife",
+      "🍳 Cast iron pan",
+      "💨 Air fryer",
+      "🫕 Instant pot",
+      "🔥 Wok",
+      "🧊 Blender"
+    ],
+    "pi": 4
+  }
+]
