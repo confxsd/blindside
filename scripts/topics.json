@@ -13,15 +13,16 @@
       "tag": "Relationships",
       "angle": "100+ questions that go deeper than 'how was your day'",
       "date": "2026-03-25"
-    }
-  ],
-  "queue": [
+    },
     {
       "slug": "couple-games-to-play-at-home",
       "keyword": "couple games to play at home",
       "tag": "Date Night",
-      "angle": "Fun couple games you can play tonight with zero setup or supplies"
-    },
+      "angle": "Fun couple games you can play tonight with zero setup or supplies",
+      "date": "2026-03-26"
+    }
+  ],
+  "queue": [
     {
       "slug": "love-language-quiz-couples",
       "keyword": "love language quiz for couples",
