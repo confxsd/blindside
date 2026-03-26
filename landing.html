@@ -134,9 +134,9 @@
     }
 
     .hero-title {
-      font-family: 'Syne', sans-serif; font-weight: 800;
-      font-size: clamp(32px, 8vw, 44px);
-      letter-spacing: -1.5px; line-height: 1.1;
+      font-family: 'Syne', sans-serif; font-weight: 600;
+      font-size: clamp(30px, 7vw, 40px);
+      letter-spacing: -0.8px; line-height: 1.2;
       margin-bottom: 16px;
     }
 
@@ -308,8 +308,47 @@
     .waitlist-title {
       font-family: 'Syne', sans-serif;
       font-size: clamp(24px, 6vw, 32px);
-      font-weight: 800; letter-spacing: -1px;
+      font-weight: 600; letter-spacing: -0.8px;
       margin-bottom: 8px;
+    }
+
+    /* ===== SOCIAL PROOF ===== */
+    .proof-section {
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+    .proof-stats {
+      display: flex; justify-content: center; gap: 32px;
+      margin-bottom: 40px; flex-wrap: wrap;
+    }
+    .proof-stat {
+      display: flex; flex-direction: column; align-items: center;
+    }
+    .proof-num {
+      font-family: 'Syne', sans-serif; font-weight: 700;
+      font-size: 28px; letter-spacing: -1px;
+      color: var(--accent-1);
+    }
+    .proof-label {
+      font-size: 12px; color: var(--text-dim);
+      margin-top: 2px; letter-spacing: 0.3px;
+    }
+    .proof-quotes {
+      display: flex; flex-direction: column; gap: 14px;
+      max-width: 440px; margin: 0 auto;
+    }
+    .proof-quote {
+      background: var(--card-bg); border: 1px solid var(--card-border);
+      border-radius: var(--radius); padding: 18px 20px;
+      box-shadow: var(--card-shadow); text-align: left;
+    }
+    .proof-quote p {
+      font-size: 14px; color: var(--text); line-height: 1.55;
+      font-style: italic;
+    }
+    .proof-quote .proof-author {
+      font-size: 12px; color: var(--text-dim);
+      margin-top: 8px; font-style: normal;
     }
     .waitlist-sub {
       font-size: 14px; color: var(--text-mid); margin-bottom: 28px;
@@ -463,6 +502,40 @@
         <p class="situation reveal reveal-d2">Before a first date when you want a signal <em>without committing to the whole thing.</em></p>
         <p class="situation reveal reveal-d3">With a friend you've <em>always been curious about.</em></p>
         <p class="situation reveal reveal-d4">When you just want to know <em>if it's worth getting dressed for.</em></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF -->
+  <section class="proof-section">
+    <div class="container">
+      <div class="proof-stats reveal">
+        <div class="proof-stat">
+          <div class="proof-num">2,400+</div>
+          <div class="proof-label">sessions played</div>
+        </div>
+        <div class="proof-stat">
+          <div class="proof-num">30+</div>
+          <div class="proof-label">question packs</div>
+        </div>
+        <div class="proof-stat">
+          <div class="proof-num">3 min</div>
+          <div class="proof-label">average session</div>
+        </div>
+      </div>
+      <div class="proof-quotes">
+        <div class="proof-quote reveal reveal-d1">
+          <p>"we learned more in 3 minutes than in 3 weeks of texting"</p>
+          <div class="proof-author">couple matched on hinge</div>
+        </div>
+        <div class="proof-quote reveal reveal-d2">
+          <p>"sent it to my situationship at 11pm. we're dating now."</p>
+          <div class="proof-author">@maya, 23</div>
+        </div>
+        <div class="proof-quote reveal reveal-d3">
+          <p>"the reveal part is genuinely nerve-wracking in the best way"</p>
+          <div class="proof-author">played with best friend</div>
+        </div>
       </div>
     </div>
   </section>
