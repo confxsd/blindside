@@ -1,0 +1,175 @@
+[
+  {
+    "q": "After 3 drinks, you're texting:",
+    "options": [
+      "📱 The ex I swore I was over",
+      "💕 My partner — getting real sappy",
+      "👯 The friend I haven't talked to in months",
+      "🫣 My crush's close friends list",
+      "🤷 Nobody — I lose my phone on purpose",
+      "📝 My notes app with a life revelation"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "The friend you'd quietly let fade:",
+    "options": [
+      "😶 The one who only calls when they need something",
+      "🎭 The one who makes everything about them",
+      "📱 The one who never texts first",
+      "🗣️ The one who gossips about everyone — probably you too",
+      "⏰ The one who cancels every single time",
+      "😇 I would never — loyalty over everything"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "The thing you pretend doesn't bother you:",
+    "options": [
+      "👀 When they like someone else's thirst trap",
+      "⏰ When they take hours to reply",
+      "👥 When they talk about their ex casually",
+      "📵 When they go out and don't update you",
+      "😂 When they make jokes at my expense",
+      "🤷 Genuinely nothing — I'm not that deep"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "If truth serum existed, the first thing you'd admit:",
+    "options": [
+      "💔 I'm not over someone from my past",
+      "😤 I hold grudges way longer than I let on",
+      "🫣 I compare my relationship to others constantly",
+      "🎭 I pretend to be more confident than I am",
+      "🧊 I emotionally shut down when things get real",
+      "😈 I enjoy being a little toxic sometimes"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "The opinion that would get you cancelled in your friend group:",
+    "options": [
+      "💍 Most of your friends are in the wrong relationship",
+      "🍻 Some friendships are only alive because of convenience",
+      "📱 I've stalked someone's profile deeper than I'll ever admit",
+      "🤥 I've lied about being busy to avoid someone here",
+      "💰 I silently judge people's spending habits",
+      "🏠 I'd ghost everyone and start over in a new city"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Drunk you is most likely to:",
+    "options": [
+      "😭 Cry about how much I love everyone",
+      "💃 Become the main character on the dance floor",
+      "📞 Call someone I definitely shouldn't",
+      "🍕 Disappear and be found eating alone somewhere",
+      "🗣️ Overshare my entire life story to a stranger",
+      "😴 Fall asleep in a weird spot"
+    ],
+    "pi": 4
+  },
+  {
+    "q": "The secret you're sitting on right now:",
+    "options": [
+      "🔮 A major life decision I haven't told anyone yet",
+      "💭 A feeling about someone that would change everything",
+      "😤 Something someone did that I never confronted them about",
+      "🫣 Something embarrassing I'll take to the grave",
+      "💸 A financial situation nobody knows about",
+      "😇 I'm an open book — no secrets"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "The ex situation — be honest:",
+    "options": [
+      "🚪 Fully closed that door, no looking back",
+      "👀 I check their socials but would never admit it",
+      "💬 We still talk and it's 'just friendly'",
+      "🔥 One drunk night and I'd be in trouble",
+      "😤 I want them to see me thriving",
+      "🤷 Never had a serious ex"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "The thing you wish you could say to your partner's face:",
+    "options": [
+      "❤️ I love you more than I know how to show",
+      "😤 That one thing you do actually drives me insane",
+      "😰 Sometimes I worry I'm not enough for you",
+      "🧊 I need more space than I ask for",
+      "🔥 I wish we were more adventurous",
+      "🤝 I want us to be more honest with each other"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Your relationship insecurity you never voice:",
+    "options": [
+      "💭 That they'll get bored of me eventually",
+      "👤 That they still think about someone else",
+      "📉 That I'm putting in more effort than they are",
+      "🪞 That I'm not attractive enough for them",
+      "🧠 That I'm too much — too emotional, too intense",
+      "🛡️ I don't let myself get insecure — walls up"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Eliminate until your biggest guilty pleasure remains:",
+    "options": ["🔍 Stalking exes", "📱 Screen time over 8 hrs", "🛒 Revenge shopping", "🍕 3am binge eating", "📺 Rewatching the same show again", "😴 Cancelling plans to do nothing"],
+    "pi": 0,
+    "format": "eliminate"
+  },
+  {
+    "q": "If you could unsend one message in your life:",
+    "options": [
+      "💔 The drunk text to an ex",
+      "😤 The angry paragraph I sent in a fight",
+      "🫣 The confession that wasn't received well",
+      "📱 The screenshot sent to the wrong person",
+      "😂 Something cringe I sent to a crush",
+      "✅ I stand by everything I've ever sent"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "The person at this table you'd trust with your phone unlocked for 5 minutes:",
+    "options": [
+      "✅ My partner — nothing to hide",
+      "😅 My partner — but I'd be sweating",
+      "🚫 Absolutely nobody on this planet",
+      "🤷 Sure, it's just memes and group chats",
+      "😈 Only if I get to go through theirs too"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "The hardest truth about yourself:",
+    "options": [
+      "🏃 I run from things when they get too real",
+      "🎭 I perform a version of myself that isn't fully me",
+      "🔥 I self-sabotage when things are going well",
+      "🧊 I struggle to be vulnerable even with people I love",
+      "📱 I use my phone to avoid my own thoughts",
+      "💪 I genuinely like who I am — no complaints"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Last confession — the thing you'd only say right now:",
+    "options": [
+      "❤️ I don't say 'I love you' enough",
+      "😔 I've been struggling more than I show",
+      "🙏 I'm grateful for you more than you know",
+      "🫣 There's something I've been meaning to tell you",
+      "😤 I forgave you but I didn't forget",
+      "🥂 I'm exactly where I want to be right now"
+    ],
+    "pi": 0
+  }
+]

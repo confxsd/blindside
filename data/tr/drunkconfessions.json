@@ -1,0 +1,175 @@
+[
+  {
+    "q": "3 kadehten sonra mesaj attığın kişi:",
+    "options": [
+      "📱 Bittiğine yemin ettiğim eski sevgilim",
+      "💕 Partnerim — aşırı duygusal modda",
+      "👯 Aylardır konuşmadığım arkadaş",
+      "🫣 Hoşlandığım kişinin yakın arkadaş listesi",
+      "🤷 Kimse — telefonumu bilerek kaybederim",
+      "📝 Not defterime hayat dersi yazarım"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Sessizce uzaklaşacağın arkadaş:",
+    "options": [
+      "😶 Sadece bir şey lazım olunca arayan",
+      "🎭 Her şeyi kendine çeviren",
+      "📱 Asla ilk mesaj atmayan",
+      "🗣️ Herkesi çekiştiren — muhtemelen seni de",
+      "⏰ Her seferinde planı iptal eden",
+      "😇 Asla yapmam — sadakat her şeyden önce"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Rahatsız etmiyormuş gibi yaptığın şey:",
+    "options": [
+      "👀 Başkasının fotoğrafını beğendiğinde",
+      "⏰ Saatlerce cevap yazmadığında",
+      "👥 Eski sevgilisinden rahatça bahsettiğinde",
+      "📵 Dışarı çıkıp haber vermediğinde",
+      "😂 Benim üzerimden espri yaptığında",
+      "🤷 Gerçekten hiçbir şey — o kadar takılmam"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Doğruluk serumu olsa ilk itiraf edeceğin şey:",
+    "options": [
+      "💔 Geçmişten birini hâlâ atlatamadım",
+      "😤 Gösterdiğimden çok daha uzun kin tutarım",
+      "🫣 İlişkimi sürekli başkalarıyla kıyaslarım",
+      "🎭 Olduğumdan daha özgüvenli görünürüm",
+      "🧊 İşler ciddileşince duygusal olarak kapanırım",
+      "😈 Bazen biraz toksik olmaktan keyif alırım"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Arkadaş grubunda söylesen iptal edilecek görüş:",
+    "options": [
+      "💍 Çoğu arkadaşım yanlış ilişkide",
+      "🍻 Bazı arkadaşlıklar sadece alışkanlıktan devam ediyor",
+      "📱 Birinin profilini itiraf edemeyeceğim kadar stalkladım",
+      "🤥 Buradaki birinden kaçmak için meşgulüm dedim",
+      "💰 İçimden insanların harcama alışkanlıklarını yargılıyorum",
+      "🏠 Herkesi ghostlayıp yeni şehirde sıfırdan başlardım"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Sarhoş sen büyük ihtimalle:",
+    "options": [
+      "😭 Herkesi ne kadar sevdiğimi söyleyip ağlar",
+      "💃 Dans pistinde ana karakter olur",
+      "📞 Aramamam gereken birini arar",
+      "🍕 Kaybolup bir köşede tek başına yemek yerken bulunur",
+      "🗣️ Yabancı birine tüm hayat hikayemi anlatır",
+      "😴 Garip bir yerde uyuyakalır"
+    ],
+    "pi": 4
+  },
+  {
+    "q": "Şu an üzerinde oturduğun sır:",
+    "options": [
+      "🔮 Kimseye söylemediğim büyük bir hayat kararı",
+      "💭 Her şeyi değiştirecek bir his",
+      "😤 Birinin yaptığı ama yüzleşmediğim bir şey",
+      "🫣 Mezara kadar götüreceğim utanç verici bir şey",
+      "💸 Kimsenin bilmediği bir maddi durum",
+      "😇 Açık kitabım — sırrım yok"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Eski sevgili durumu — dürüst ol:",
+    "options": [
+      "🚪 O kapıyı tamamen kapattım",
+      "👀 Sosyal medyasına bakarım ama itiraf etmem",
+      "💬 Hâlâ konuşuyoruz, 'sadece arkadaşız'",
+      "🔥 Bir sarhoş gece ve başım belada",
+      "😤 Beni mutlu görüp yesin istiyorum",
+      "🤷 Ciddi bir eski sevgilim olmadı"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Partnerine yüzüne söylemek istediğin şey:",
+    "options": [
+      "❤️ Seni gösterebildiğimden çok daha fazla seviyorum",
+      "😤 Yaptığın o şey beni gerçekten deli ediyor",
+      "😰 Bazen senin için yeterli olmadığımı düşünüyorum",
+      "🧊 İstediğimden daha fazla alana ihtiyacım var",
+      "🔥 Keşke daha maceracı olsak",
+      "🤝 Birbirimize daha dürüst olmamız lazım"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Hiç dile getirmediğin ilişki güvensizliğin:",
+    "options": [
+      "💭 Bir gün benden sıkılacak",
+      "👤 Hâlâ başka birini düşünüyor",
+      "📉 Ben daha fazla emek veriyorum",
+      "🪞 Onun için yeterince çekici değilim",
+      "🧠 Çok fazlayım — çok duygusal, çok yoğun",
+      "🛡️ Güvensiz hissetmeme izin vermem — duvarlar yüksek"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Favori suçluluk zevkin kalana kadar ele:",
+    "options": ["🔍 Eski sevgili stalklama", "📱 8 saatten fazla ekran", "🛒 İntikam alışverişi", "🍕 Gece 3'te yemek", "📺 Aynı diziyi tekrar izleme", "😴 Plan iptal edip hiçbir şey yapmama"],
+    "pi": 0,
+    "format": "eliminate"
+  },
+  {
+    "q": "Hayatında bir mesajı geri alabilsen:",
+    "options": [
+      "💔 Eski sevgiliye sarhoş mesaj",
+      "😤 Kavgada gönderdiğim sinirli paragraf",
+      "🫣 İyi karşılanmayan itiraf",
+      "📱 Yanlış kişiye giden ekran görüntüsü",
+      "😂 Hoşlandığım kişiye attığım cringe mesaj",
+      "✅ Gönderdiğim her şeyin arkasındayım"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Telefonunu 5 dakika kilitlemeden bırakacağın kişi:",
+    "options": [
+      "✅ Partnerim — saklayacak bir şeyim yok",
+      "😅 Partnerim — ama terlerdim",
+      "🚫 Bu gezegende kesinlikle kimse",
+      "🤷 Tabii, sadece meme ve grup sohbetleri var",
+      "😈 Sadece onunkini de karıştırabiliyorsam"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Kendinle ilgili en zor gerçek:",
+    "options": [
+      "🏃 İşler ciddileşince kaçarım",
+      "🎭 Gerçek ben olmayan bir versiyonumu oynarım",
+      "🔥 İşler iyi giderken kendimi sabote ederim",
+      "🧊 Sevdiğim insanlara bile açılmakta zorlanırım",
+      "📱 Kendi düşüncelerimden kaçmak için telefonu kullanırım",
+      "💪 Kendimi gerçekten seviyorum — şikayetim yok"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Son itiraf — sadece şu an söyleyeceğin şey:",
+    "options": [
+      "❤️ Yeterince 'seni seviyorum' demiyorum",
+      "😔 Gösterdiğimden daha çok zorlanıyorum",
+      "🙏 Bildiğinden çok daha minnettarım sana",
+      "🫣 Sana söylemem gereken bir şey var",
+      "😤 Affettim ama unutmadım",
+      "🥂 Tam da olmak istediğim yerdeyim şu an"
+    ],
+    "pi": 0
+  }
+]

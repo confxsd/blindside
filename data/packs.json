@@ -60,6 +60,18 @@
       "descKey": "pack_desc_hottakes"
     },
     {
+      "key": "drunkconfessions",
+      "emoji": "🥴",
+      "nameKey": "pack_drunkconfessions",
+      "countKey": "pack_count_drunkconfessions",
+      "cat": "spicy",
+      "badge": "new",
+      "plays": "3.7k",
+      "featured": true,
+      "featuredBadge": "new-badge",
+      "descKey": "pack_desc_drunkconfessions"
+    },
+    {
       "key": "redflags",
       "emoji": "🚩",
       "nameKey": "pack_redflags",
@@ -468,6 +480,7 @@
       "descKey": "coll_desc_spicy_edition",
       "packs": [
         "hottakes",
+        "drunkconfessions",
         "redflags",
         "chaotic",
         "situations"
