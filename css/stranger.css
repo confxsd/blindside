@@ -64,15 +64,33 @@
 
 /* ===== FAB (home screen) ===== */
 .fab-stranger {
-  background: var(--surface) !important;
-  color: var(--text) !important;
-  border: 1px solid var(--border) !important;
-  box-shadow: none !important;
+  background: transparent !important;
+  color: var(--accent-1) !important;
+  border: 2px solid var(--accent-1) !important;
+  box-shadow: 0 0 16px var(--accent-1-glow), inset 0 0 12px rgba(0,0,0,0.1) !important;
   font-size: 14px !important;
   padding: 12px 20px !important;
+  position: relative;
+  overflow: hidden;
 }
-.fab-stranger:hover {
-  background: var(--surface-hover) !important;
+.fab-stranger::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 40%;
+  height: 200%;
+  background: linear-gradient(90deg, transparent, var(--accent-1-glow), transparent);
+  transform: skewX(-20deg);
+  animation: strangerShimmer 3s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes strangerShimmer {
+  0%, 100% { left: -60%; opacity: 0; }
+  50% { left: 120%; opacity: 1; }
+}
+.fab-stranger:active {
+  box-shadow: 0 0 24px var(--accent-1-glow) !important;
 }
 
 /* ===== QUEUE (radar animation) ===== */

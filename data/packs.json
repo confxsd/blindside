@@ -40,14 +40,6 @@
       "plays": "9.4k"
     },
     {
-      "key": "coworkers",
-      "emoji": "💼",
-      "nameKey": "pack_coworkers",
-      "countKey": "pack_count_coworkers",
-      "cat": "work",
-      "plays": "5.2k"
-    },
-    {
       "key": "hottakes",
       "emoji": "🌶️",
       "nameKey": "pack_hottakes",
@@ -443,11 +435,6 @@
       "icon": ""
     },
     {
-      "key": "work",
-      "labelKey": "cat_work",
-      "icon": ""
-    },
-    {
       "key": "culture",
       "labelKey": "cat_culture",
       "icon": ""
@@ -527,8 +514,7 @@
       "descKey": "coll_desc_friend_zone",
       "packs": [
         "bestfriends",
-        "fungames",
-        "coworkers"
+        "fungames"
       ],
       "mode": "partner",
       "badge": "new"

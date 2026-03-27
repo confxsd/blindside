@@ -302,7 +302,6 @@
   font-size: 22px;
   flex-shrink: 0;
   background: var(--surface);
-  border: 1px solid var(--card-border);
 }
 .session-card .s-info { flex: 1; min-width: 0; }
 .session-card .s-title {
@@ -373,8 +372,6 @@
   z-index: 1;
   background: var(--card-bg);
   transition: transform 0.25s ease;
-  border: 1px solid var(--card-border);
-  box-shadow: var(--card-shadow);
 }
 .session-card-wrap.swiped .session-card {
   transform: translateX(-80px);

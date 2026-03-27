@@ -2,7 +2,6 @@ const PACK_NAMES = {
   couples: '💕 Couples',
   bestfriends: '👯 Best Friends',
   deeptalk: '🌊 Deep Talk',
-  coworkers: '💼 Coworkers',
   '36questions': '❤️‍🔥 36 Questions',
   hottakes: '🌶️ Hot Takes',
   redflags: '🚩 Red Flags',

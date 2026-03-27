@@ -646,7 +646,7 @@ function renderHomeSessions() {
     return;
   }
 
-  const packEmojis = { couples: '💕', bestfriends: '👯', deeptalk: '🌊', coworkers: '💼', '36questions': '❤️‍🔥', hottakes: '🌶️', redflags: '🚩', chaotic: '🎲', fungames: '🎉', worldtaste: '🌍', ethics: '⚖️', situations: '😱', livingtogether: '🏠', soulspirit: '🕊️', attachment: '🔗', innermirror: '🪞', stresstype: '🧊', lovelang: '💌', shadow: '🌑', emotionalage: '🎭', boundaries: '🚧', selfsabotage: '🪤', partnertype: '🐕', partnerera: '👑', couplestory: '📖', whattheyhide: '🎭', flirtguess: '😏', desirematch: '🔥' };
+  const packEmojis = { couples: '💕', bestfriends: '👯', deeptalk: '🌊', '36questions': '❤️‍🔥', hottakes: '🌶️', redflags: '🚩', chaotic: '🎲', fungames: '🎉', worldtaste: '🌍', ethics: '⚖️', situations: '😱', livingtogether: '🏠', soulspirit: '🕊️', attachment: '🔗', innermirror: '🪞', stresstype: '🧊', lovelang: '💌', shadow: '🌑', emotionalage: '🎭', boundaries: '🚧', selfsabotage: '🪤', partnertype: '🐕', partnerera: '👑', couplestory: '📖', whattheyhide: '🎭', flirtguess: '😏', desirematch: '🔥' };
   let html = '';
   const active = sessions.filter(s => s.status !== 'complete');
   const done = sessions.filter(s => s.status === 'complete');

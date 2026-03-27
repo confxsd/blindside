@@ -391,6 +391,103 @@
       transform: translateY(-1px);
     }
 
+    /* ===== RANDOM MATCH ===== */
+    .random-section { padding: 0 0 80px; }
+    .random-card {
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 40%, #312e81 100%);
+      border-radius: 20px; padding: clamp(32px, 6vw, 48px);
+      position: relative; overflow: hidden;
+      color: #e8e6e1; text-align: center;
+    }
+    .random-card::before {
+      content: '';
+      position: absolute; top: -60%; left: 50%; transform: translateX(-50%);
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(99,102,241,0.3) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .random-card::after {
+      content: '';
+      position: absolute; bottom: -50%; right: -10%;
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, rgba(236,72,153,0.2) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .random-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-family: 'Syne', sans-serif; font-size: 10px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      color: #818cf8; background: rgba(129,140,248,0.12);
+      border: 1px solid rgba(129,140,248,0.2);
+      padding: 5px 12px; border-radius: 20px;
+      margin-bottom: 20px; position: relative; z-index: 1;
+    }
+    .random-badge-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: #34d399;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    .random-title {
+      font-family: 'Syne', sans-serif; font-weight: 700;
+      font-size: clamp(24px, 5.5vw, 32px);
+      letter-spacing: -1px; line-height: 1.15;
+      margin-bottom: 12px; position: relative; z-index: 1;
+      color: #fff;
+    }
+    .random-subtitle {
+      font-size: 15px; color: rgba(255,255,255,0.55);
+      max-width: 380px; line-height: 1.65;
+      margin: 0 auto 32px; position: relative; z-index: 1;
+    }
+    .random-steps {
+      display: flex; justify-content: center; gap: 32px;
+      margin-bottom: 32px; position: relative; z-index: 1;
+      flex-wrap: wrap;
+    }
+    .random-step {
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+    }
+    .random-step-icon {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.1);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+    }
+    .random-step-text {
+      font-family: 'Syne', sans-serif; font-size: 13px;
+      font-weight: 600; color: rgba(255,255,255,0.7);
+      letter-spacing: -0.2px;
+    }
+    .random-step-connector {
+      display: flex; align-items: center;
+      color: rgba(255,255,255,0.2); font-size: 18px;
+      margin-bottom: 20px;
+    }
+    @media (max-width: 480px) {
+      .random-step-connector { display: none; }
+      .random-steps { gap: 20px; }
+    }
+    .random-cta {
+      display: inline-flex; align-items: center; gap: 8px;
+      position: relative; z-index: 1;
+      font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 700;
+      color: #fff;
+      background: linear-gradient(135deg, #6366f1, #ec4899);
+      padding: 15px 28px; border-radius: var(--radius);
+      border: none; cursor: pointer; text-decoration: none;
+      transition: all 0.2s;
+      box-shadow: 0 2px 16px rgba(99,102,241,0.3);
+    }
+    .random-cta:hover {
+      box-shadow: 0 4px 24px rgba(99,102,241,0.4);
+      transform: translateY(-1px);
+    }
+    .random-note {
+      font-size: 13px; color: rgba(255,255,255,0.35);
+      margin-top: 16px; position: relative; z-index: 1;
+    }
+
     /* ===== WAITLIST ===== */
     .waitlist-section {
       border-top: 1px solid var(--border);
@@ -561,6 +658,35 @@
     </div>
   </section>
 
+  <!-- RANDOM MATCH -->
+  <section class="random-section">
+    <div class="container">
+      <div class="random-card reveal">
+        <div class="random-badge"><div class="random-badge-dot"></div> Live matching</div>
+        <h2 class="random-title">Don't know anyone?<br>Play with a stranger.</h2>
+        <p class="random-subtitle">Get matched with someone random. Same questions, blind answers. See if you vibe — no names, no pressure.</p>
+        <div class="random-steps">
+          <div class="random-step reveal-d1">
+            <div class="random-step-icon">🎲</div>
+            <div class="random-step-text">Join queue</div>
+          </div>
+          <div class="random-step-connector">→</div>
+          <div class="random-step reveal-d2">
+            <div class="random-step-icon">🫣</div>
+            <div class="random-step-text">Answer blind</div>
+          </div>
+          <div class="random-step-connector">→</div>
+          <div class="random-step reveal-d3">
+            <div class="random-step-icon">✨</div>
+            <div class="random-step-text">See if you match</div>
+          </div>
+        </div>
+        <a href="/s/" class="random-cta">Find a stranger</a>
+        <p class="random-note">anonymous · takes 3 minutes · free</p>
+      </div>
+    </div>
+  </section>
+
   <!-- HOW IT WORKS -->
   <section class="steps-section">
     <div class="container">
@@ -586,10 +712,10 @@
   <section class="moment-section">
     <div class="container">
       <div class="moment-text reveal">
-        Right after you meet someone interesting.
-        Before the weeks of low-stakes texting.
-        Before you've both decided what this is.
-        <strong>That moment has a tool now.</strong>
+        You matched on an app. You met at a party.
+        You've been talking for a week but still
+        have no idea what they actually think.
+        <strong>Now you do.</strong>
       </div>
     </div>
   </section>
