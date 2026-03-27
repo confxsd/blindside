@@ -97,6 +97,15 @@ function setAccent(name, silent) {
   });
 }
 
+function toggleProfileSection(id) {
+  const el = document.getElementById(id);
+  const icon = document.getElementById(id + '-icon');
+  if (!el) return;
+  const isOpen = el.classList.contains('open');
+  el.classList.toggle('open', !isOpen);
+  if (icon) icon.classList.toggle('open', !isOpen);
+}
+
 function toggleSettings() {
   const panel = document.getElementById('settingsPanel');
   const backdrop = document.getElementById('settingsBackdrop');
@@ -1092,6 +1101,11 @@ function renderProfile() {
     </div>
   `;
 
+  // Profile progress
+  const totalPacks = 30;
+  const progressPct = Math.min(Math.round((packsPlayed / totalPacks) * 100), 100);
+  const questionsAnswered = completedCount * 10;
+
   container.innerHTML = `
     <div class="profile-header">
       <div class="profile-avatar">${initial}</div>
@@ -1101,8 +1115,8 @@ function renderProfile() {
 
     <div class="profile-stats">
       <div class="profile-stat">
-        <div class="profile-stat-val">${sessionCount}</div>
-        <div class="profile-stat-lbl">${i18n.t('profile_sessions')}</div>
+        <div class="profile-stat-val">${questionsAnswered}</div>
+        <div class="profile-stat-lbl">${i18n.t('profile_questions_answered') || 'answered'}</div>
       </div>
       <div class="profile-stat">
         <div class="profile-stat-val">${completedCount}</div>
@@ -1114,7 +1128,25 @@ function renderProfile() {
       </div>
     </div>
 
-    ${premiumSection}
+    <!-- Profile Building Card -->
+    <div class="profile-build-card">
+      <div class="profile-build-header">
+        <div class="profile-build-badge">🧬 your blindside profile</div>
+      </div>
+      <div class="profile-build-progress">
+        <div class="profile-build-bar">
+          <div class="profile-build-fill" style="width: ${progressPct}%"></div>
+        </div>
+        <div class="profile-build-pct">${progressPct}% mapped</div>
+      </div>
+      <div class="profile-build-desc">Every question builds your profile. Play more packs to unlock deeper patterns.</div>
+      <div class="profile-build-tags">
+        <span class="profile-build-tag ${packsPlayed >= 1 ? 'done' : ''}">🃏 ${packsPlayed}/${totalPacks} decks</span>
+        <span class="profile-build-tag ${completedCount >= 1 ? 'done' : ''}">👥 ${completedCount} sessions</span>
+        <span class="profile-build-tag ${questionsAnswered >= 50 ? 'done' : ''}">💬 ${questionsAnswered} answers</span>
+      </div>
+      <button class="profile-build-cta" onclick="goToHome()">Play a pack to grow your profile</button>
+    </div>
 
     <div class="profile-insights-card" onclick="goToInsights()">
       <div class="profile-insights-left">
@@ -1127,27 +1159,40 @@ function renderProfile() {
       ${!isPremium ? '<span class="lock-pill"></span>' : '<span class="profile-menu-arrow">›</span>'}
     </div>
 
-    <div class="profile-section-label">${i18n.t('profile_settings')}</div>
-    <div class="profile-menu">
-      <button class="profile-menu-item" onclick="toggleSettings()">
-        <span class="profile-menu-icon">🎨</span>
-        <span>${i18n.t('profile_theme')}</span>
-        <span class="profile-menu-arrow">›</span>
-      </button>
+    ${premiumSection}
+
+    <!-- Toggleable Sections -->
+    <div class="profile-section-label profile-toggle" onclick="toggleProfileSection('settingsSection')">
+      <span>${i18n.t('profile_settings')}</span>
+      <span class="profile-toggle-icon" id="settingsSection-icon">›</span>
+    </div>
+    <div class="profile-collapsible" id="settingsSection">
+      <div class="profile-menu">
+        <button class="profile-menu-item" onclick="toggleSettings()">
+          <span class="profile-menu-icon">🎨</span>
+          <span>${i18n.t('profile_theme')}</span>
+          <span class="profile-menu-arrow">›</span>
+        </button>
+      </div>
     </div>
 
-    <div class="profile-section-label">${i18n.t('profile_account')}</div>
-    <div class="profile-menu">
-      ${isGuest ? `<button class="profile-menu-item" onclick="showSaveAccountModal()">
-        <span class="profile-menu-icon">💾</span>
-        <span>${i18n.t('profile_save_account')}</span>
-        <span class="profile-menu-arrow">›</span>
-      </button>` : ''}
-      <button class="profile-menu-item profile-menu-danger" onclick="switchUser()">
-        <span class="profile-menu-icon">👋</span>
-        <span>${i18n.t('profile_logout')}</span>
-        <span class="profile-menu-arrow">›</span>
-      </button>
+    <div class="profile-section-label profile-toggle" onclick="toggleProfileSection('accountSection')">
+      <span>${i18n.t('profile_account')}</span>
+      <span class="profile-toggle-icon" id="accountSection-icon">›</span>
+    </div>
+    <div class="profile-collapsible" id="accountSection">
+      <div class="profile-menu">
+        ${isGuest ? `<button class="profile-menu-item" onclick="showSaveAccountModal()">
+          <span class="profile-menu-icon">💾</span>
+          <span>${i18n.t('profile_save_account')}</span>
+          <span class="profile-menu-arrow">›</span>
+        </button>` : ''}
+        <button class="profile-menu-item profile-menu-danger" onclick="switchUser()">
+          <span class="profile-menu-icon">👋</span>
+          <span>${i18n.t('profile_logout')}</span>
+          <span class="profile-menu-arrow">›</span>
+        </button>
+      </div>
     </div>
   `;
 }
