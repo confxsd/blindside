@@ -58,3 +58,46 @@ CREATE TABLE IF NOT EXISTS questions (
 );
 
 CREATE INDEX IF NOT EXISTS idx_questions_pack_lang ON questions(pack_key, lang);
+
+-- ==================== Stranger matching ====================
+
+-- Matching queue: ephemeral, high write
+CREATE TABLE IF NOT EXISTS match_queue (
+  id           INTEGER PRIMARY KEY AUTOINCREMENT,
+  user_id      TEXT NOT NULL,
+  username     TEXT NOT NULL,
+  lang         TEXT DEFAULT 'en',
+  status       TEXT DEFAULT 'waiting',  -- waiting | matched | expired | cancelled
+  claim_token  TEXT,
+  matched_with TEXT,
+  session_code TEXT,
+  created_at   TEXT DEFAULT (datetime('now')),
+  expires_at   TEXT DEFAULT (datetime('now', '+2 minutes'))
+);
+
+CREATE UNIQUE INDEX IF NOT EXISTS idx_queue_user_active
+  ON match_queue(user_id) WHERE status = 'waiting';
+CREATE INDEX IF NOT EXISTS idx_queue_status
+  ON match_queue(status, created_at);
+
+-- Stranger match state (wraps a regular session)
+CREATE TABLE IF NOT EXISTS stranger_matches (
+  id              INTEGER PRIMARY KEY AUTOINCREMENT,
+  session_code    TEXT NOT NULL UNIQUE,
+  user_a_id       TEXT NOT NULL,
+  user_b_id       TEXT NOT NULL,
+  user_a_username TEXT NOT NULL,
+  user_b_username TEXT NOT NULL,
+  pack_key        TEXT NOT NULL,
+  state           TEXT DEFAULT 'playing',  -- playing | voting | resolved
+  user_a_vote     TEXT,    -- yes | no | NULL
+  user_b_vote     TEXT,
+  result          TEXT,    -- match | pass | expired | abandoned
+  created_at      TEXT DEFAULT (datetime('now')),
+  vote_deadline   TEXT
+);
+
+CREATE INDEX IF NOT EXISTS idx_stranger_users_a
+  ON stranger_matches(user_a_id);
+CREATE INDEX IF NOT EXISTS idx_stranger_users_b
+  ON stranger_matches(user_b_id);

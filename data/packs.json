@@ -147,6 +147,18 @@
       "descKey": "pack_desc_cinemadebates"
     },
     {
+      "key": "strangervibes",
+      "emoji": "🫠",
+      "nameKey": "pack_strangervibes",
+      "countKey": "pack_count_strangervibes",
+      "cat": "spicy",
+      "badge": "new",
+      "plays": "2.1k",
+      "featured": true,
+      "featuredBadge": "new-badge",
+      "descKey": "pack_desc_strangervibes"
+    },
+    {
       "key": "ethics",
       "emoji": "⚖️",
       "nameKey": "pack_ethics",

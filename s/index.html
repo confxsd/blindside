@@ -148,7 +148,7 @@
       href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/style.css?v=2" />
   </head>
   <body>
     <div id="app">
@@ -484,6 +484,13 @@
           >
             + new session
           </button>
+          <button
+            class="fab fab-stranger"
+            onclick="goToStrangerLobby()"
+            data-i18n="stranger_meet"
+          >
+            🫣 meet a stranger
+          </button>
         </div>
 
         <div id="homeSessions"></div>
@@ -777,12 +784,13 @@
           >
         </div>
         <p
+          id="waitingShareLabel"
           style="font-size: 12px; color: var(--text-dim); margin-top: 24px"
           data-i18n="waiting_share_code"
         >
           share this code with your partner:
         </p>
-        <div class="link-box glass" style="margin-top: 8px">
+        <div id="waitingShareBox" class="link-box glass" style="margin-top: 8px">
           <span
             class="link-text"
             id="waitingCode"
@@ -807,6 +815,70 @@
       <!-- RESULTS / STORY -->
       <div id="results" class="screen">
         <div class="story-scroll" id="storyScroll"></div>
+      </div>
+
+      <!-- STRANGER: LOBBY -->
+      <div id="strangerLobby" class="screen">
+        <div class="stranger-lobby-content">
+          <button class="btn-icon stranger-back-btn" onclick="goTo('home')">←</button>
+          <div class="stranger-hero-icon">🫣</div>
+          <h2 class="syne stranger-title" data-i18n="stranger_meet">meet a stranger</h2>
+          <p class="stranger-subtitle-text" data-i18n="stranger_tagline">same questions. blind answers. see if you vibe.</p>
+          <button class="btn btn-primary stranger-find-btn" onclick="enterStrangerQueue()" data-i18n="stranger_find">find a match</button>
+          <p class="stranger-note" data-i18n="stranger_subtitle">you'll play a random pack with someone new</p>
+        </div>
+      </div>
+
+      <!-- STRANGER: QUEUE (searching) -->
+      <div id="strangerQueue" class="screen">
+        <div class="stranger-queue-content">
+          <div class="stranger-radar">
+            <div class="radar-ring r1"></div>
+            <div class="radar-ring r2"></div>
+            <div class="radar-ring r3"></div>
+            <div class="radar-dot"></div>
+          </div>
+          <h2 class="syne" data-i18n="stranger_looking">looking for someone...</h2>
+          <div class="stranger-elapsed" id="strangerElapsed">0:00</div>
+          <button class="btn btn-ghost" onclick="leaveStrangerQueue()" data-i18n="stranger_cancel">cancel</button>
+        </div>
+      </div>
+
+      <!-- STRANGER: MATCHED (brief transition) -->
+      <div id="strangerMatched" class="screen">
+        <div class="stranger-matched-content">
+          <div class="stranger-match-pop">
+            <div class="stranger-match-avatar" id="strangerMatchAvatar"></div>
+          </div>
+          <h2 class="syne stranger-found-text" data-i18n="stranger_found">found someone!</h2>
+          <p class="stranger-pack-info" id="strangerPackInfo"></p>
+        </div>
+      </div>
+
+      <!-- STRANGER: VOTE (post-reveal) -->
+      <div id="strangerVote" class="screen">
+        <div class="stranger-vote-content">
+          <div class="stranger-vote-avatar" id="strangerVoteAvatar"></div>
+          <h2 class="syne" id="strangerVoteTitle">vibe with them?</h2>
+          <div class="stranger-vote-buttons">
+            <button class="btn btn-primary stranger-vote-yes" onclick="submitStrangerVote('yes')" data-i18n="stranger_vote_yes">yes, chat</button>
+            <button class="btn btn-ghost stranger-vote-no" onclick="submitStrangerVote('no')" data-i18n="stranger_vote_no">nah, next</button>
+          </div>
+          <p class="stranger-vote-waiting" id="strangerVoteWaiting" style="display:none" data-i18n="stranger_waiting_vote">waiting for their answer...</p>
+        </div>
+      </div>
+
+      <!-- STRANGER: RESULT -->
+      <div id="strangerResult" class="screen">
+        <div class="stranger-result-content">
+          <div id="strangerResultIcon" class="stranger-result-icon"></div>
+          <h2 class="syne" id="strangerResultTitle"></h2>
+          <p id="strangerResultDesc" class="stranger-result-desc"></p>
+          <div class="stranger-result-actions">
+            <button class="btn btn-primary" onclick="enterStrangerQueue()" data-i18n="stranger_play_again">find someone new</button>
+            <button class="btn btn-ghost" onclick="goTo('home')" data-i18n="stranger_back">back home</button>
+          </div>
+        </div>
       </div>
 
       <!-- SUBMIT MODAL -->
@@ -1284,9 +1356,9 @@
       </div>
     </section>
 
-    <script src="/lang.js"></script>
-    <script src="/packs.js"></script>
-    <script src="/app.js"></script>
+    <script src="/lang.js?v=2"></script>
+    <script src="/packs.js?v=2"></script>
+    <script src="/app.js?v=2"></script>
     <script src="/t.js"></script>
   </body>
 </html>

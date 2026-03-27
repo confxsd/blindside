@@ -250,8 +250,6 @@
   transform: translateY(12px);
   animation: packFadeIn 0.4s ease forwards;
   background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  box-shadow: var(--card-shadow);
 }
 .pack-card:active { transform: scale(0.98); }
 .pack-card .pack-emoji {
@@ -263,7 +261,6 @@
   justify-content: center;
   border-radius: var(--radius-sm);
   background: var(--surface);
-  border: 1px solid var(--border);
   flex-shrink: 0;
 }
 .pack-card .pack-info {

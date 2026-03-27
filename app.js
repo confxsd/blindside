@@ -203,6 +203,42 @@ const blindApi = {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
     }).then(r => r.json());
+  },
+
+  // Stranger matching
+  strangerEnterQueue(lang) {
+    return fetch('/api/strangers/queue', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'X-User-Id': this._userId(), 'X-Username': JSON.parse(localStorage.getItem('bs-user') || '{}').username || 'guest' },
+      body: JSON.stringify({ lang })
+    }).then(r => r.json());
+  },
+
+  strangerQueueStatus() {
+    return fetch('/api/strangers/queue', {
+      headers: { 'X-User-Id': this._userId(), 'X-Username': JSON.parse(localStorage.getItem('bs-user') || '{}').username || 'guest' }
+    }).then(r => r.json());
+  },
+
+  strangerLeaveQueue() {
+    return fetch('/api/strangers/queue', {
+      method: 'DELETE',
+      headers: { 'X-User-Id': this._userId() }
+    }).then(r => r.json());
+  },
+
+  strangerVote(sessionCode, vote) {
+    return fetch('/api/strangers/vote', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'X-User-Id': this._userId() },
+      body: JSON.stringify({ session_code: sessionCode, vote })
+    }).then(r => r.json());
+  },
+
+  strangerVoteStatus(sessionCode) {
+    return fetch(`/api/strangers/vote?session_code=${sessionCode}`, {
+      headers: { 'X-User-Id': this._userId() }
+    }).then(r => r.json());
   }
 };
 
@@ -219,6 +255,13 @@ let joinCode = null; // set when joining via URL
 let isGuest = JSON.parse(localStorage.getItem('bs-guest') || 'false');
 let pendingAuthUsername = null; // holds username between auth step 1 and step 2
 
+// Stranger matching state
+let isStrangerMode = false;
+let strangerSessionCode = null;
+let strangerPartnerName = null;
+let strangerQueueTimer = null;
+let strangerVoteTimer = null;
+let strangerElapsedTimer = null;
 
 // Alias map for legacy pack keys from API → current keys
 const PACK_KEY_ALIASES = { whathehides: 'whattheyhide', hisarchetype: 'partnertype' };
@@ -1009,12 +1052,15 @@ function goTo(screenId) {
 
   setTimeout(() => {
     prev.classList.remove('slide-out');
+    // Clear any stale active screens (prevents overlap from rapid transitions)
+    document.querySelectorAll('.screen.active').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.screen.slide-out').forEach(s => s.classList.remove('slide-out'));
     next.classList.add('active');
     currentScreen = screenId;
 
     if (screenId === 'quiz') renderQuestion();
     if (screenId === 'results') { /* receipt built by caller */ }
-    if (screenId === 'home') { updateNav('home'); stopPolling(); loadHomeSessions(); }
+    if (screenId === 'home') { updateNav('home'); stopPolling(); stopStrangerQueuePoll(); stopStrangerVotePoll(); stopStrangerElapsed(); isStrangerMode = false; loadHomeSessions(); }
     if (screenId === 'packs') { updateNav('packs'); renderPacksGrid(); }
     if (screenId === 'collectionDetail') { updateNav('packs'); renderCollectionDetail(); }
     if (screenId === 'profile') { updateNav('profile'); renderProfile(); }
@@ -1804,6 +1850,11 @@ async function submitAnswers() {
     document.getElementById('waitingDesc').innerHTML = partner
       ? i18n.t('waiting_for_partner_named').replace('{name}', `<strong style="color:var(--text)">${partner}</strong>`)
       : i18n.t('waiting_for_partner_join');
+    // Hide share code section in stranger mode
+    const shareLabel = document.getElementById('waitingShareLabel');
+    const shareBox = document.getElementById('waitingShareBox');
+    if (shareLabel) shareLabel.style.display = isStrangerMode ? 'none' : '';
+    if (shareBox) shareBox.style.display = isStrangerMode ? 'none' : '';
     startPolling();
   }
 }
@@ -2470,12 +2521,17 @@ function buildReceiptWithName(partnerName) {
     </div>
 
     <div class="story-actions">
-      <button class="btn-share" onclick="shareReceipt()">${i18n.t('results_share')}</button>
-      <button class="btn btn-primary results-insights-btn" style="width:100%" onclick="goToInsights()">
-        ✦ ${i18n.t('results_view_insights')}
-      </button>
-      <button class="btn btn-primary" style="width:100%;background:var(--surface)!important;color:var(--text)!important;border:1px solid var(--border)!important;box-shadow:none!important" onclick="goTo('packs')">${i18n.t('results_play_another')}</button>
-      <button class="btn btn-ghost" onclick="goTo('home');loadHomeSessions()">${i18n.t('results_back_home')}</button>
+      ${isStrangerMode ? `
+        <button class="btn btn-primary" style="width:100%;font-size:16px;padding:18px 24px" onclick="showStrangerVote()">${i18n.t('stranger_vote_title').replace('{name}', partnerName)}</button>
+        <button class="btn btn-ghost" onclick="submitStrangerVote('no');enterStrangerQueue()">${i18n.t('stranger_vote_no')}</button>
+      ` : `
+        <button class="btn-share" onclick="shareReceipt()">${i18n.t('results_share')}</button>
+        <button class="btn btn-primary results-insights-btn" style="width:100%" onclick="goToInsights()">
+          ✦ ${i18n.t('results_view_insights')}
+        </button>
+        <button class="btn btn-primary" style="width:100%;background:var(--surface)!important;color:var(--text)!important;border:1px solid var(--border)!important;box-shadow:none!important" onclick="goTo('packs')">${i18n.t('results_play_another')}</button>
+        <button class="btn btn-ghost" onclick="goTo('home');loadHomeSessions()">${i18n.t('results_back_home')}</button>
+      `}
     </div>
   `;
   scroll.scrollTop = 0;
@@ -2725,6 +2781,213 @@ function shareReceipt() {
 
 // Keep animateResults as alias for backward compat
 function animateResults() { buildReceipt(); }
+
+// ==================== STRANGER MATCHING ====================
+const STRANGER_PACKS = ['hottakes', 'chaotic', 'ethics', 'situations', 'worldtaste', 'cinemadebates'];
+
+function goToStrangerLobby() {
+  if (!currentUser) {
+    afterAuthTarget = 'strangerLobby';
+    goTo('guestAuth');
+    setTimeout(() => document.getElementById('guestName')?.focus(), 300);
+    return;
+  }
+  goTo('strangerLobby');
+}
+
+async function enterStrangerQueue() {
+  if (!currentUser) {
+    goToStrangerLobby();
+    return;
+  }
+  isStrangerMode = true;
+  goTo('strangerQueue');
+  startStrangerElapsed();
+
+  try {
+    const data = await blindApi.strangerEnterQueue(i18n.current);
+    if (data.error) {
+      alert(data.error === 'rate_limited' ? 'Slow down! Try again in a few minutes.' : data.error);
+      goTo('strangerLobby');
+      return;
+    }
+    if (data.matched) {
+      onStrangerMatched(data.session_code, data.partner, data.pack_key);
+      return;
+    }
+    // Queued — start polling
+    startStrangerQueuePoll();
+  } catch (e) {
+    alert('Connection error, try again');
+    goTo('strangerLobby');
+  }
+}
+
+function startStrangerElapsed() {
+  stopStrangerElapsed();
+  const start = Date.now();
+  const el = document.getElementById('strangerElapsed');
+  if (el) el.textContent = '0:00';
+  strangerElapsedTimer = setInterval(() => {
+    const s = Math.floor((Date.now() - start) / 1000);
+    const m = Math.floor(s / 60);
+    const sec = String(s % 60).padStart(2, '0');
+    if (el) el.textContent = `${m}:${sec}`;
+    // Auto-expire after 2 minutes client-side
+    if (s >= 120) {
+      stopStrangerQueuePoll();
+      stopStrangerElapsed();
+      goTo('strangerLobby');
+      const lobby = document.querySelector('#strangerLobby .stranger-subtitle-text');
+      if (lobby) lobby.textContent = i18n.t('stranger_expired');
+    }
+  }, 1000);
+}
+
+function stopStrangerElapsed() {
+  if (strangerElapsedTimer) { clearInterval(strangerElapsedTimer); strangerElapsedTimer = null; }
+}
+
+function startStrangerQueuePoll() {
+  stopStrangerQueuePoll();
+  strangerQueueTimer = setInterval(async () => {
+    try {
+      const data = await blindApi.strangerQueueStatus();
+      if (data.status === 'matched') {
+        stopStrangerQueuePoll();
+        stopStrangerElapsed();
+        onStrangerMatched(data.session_code, data.partner, data.pack_key);
+      } else if (data.status === 'expired' || data.status === 'cancelled') {
+        stopStrangerQueuePoll();
+        stopStrangerElapsed();
+        goTo('strangerLobby');
+      }
+    } catch (e) { /* silent */ }
+  }, 2000);
+}
+
+function stopStrangerQueuePoll() {
+  if (strangerQueueTimer) { clearInterval(strangerQueueTimer); strangerQueueTimer = null; }
+}
+
+async function leaveStrangerQueue() {
+  stopStrangerQueuePoll();
+  stopStrangerElapsed();
+  try { await blindApi.strangerLeaveQueue(); } catch {}
+  isStrangerMode = false;
+  goTo('home');
+}
+
+async function onStrangerMatched(sessionCode, partnerName, packKey) {
+  stopStrangerQueuePoll();
+  stopStrangerElapsed();
+  strangerSessionCode = sessionCode;
+  strangerPartnerName = partnerName;
+
+  // Force-hide queue screen in case transition is mid-flight
+  const queueScreen = document.getElementById('strangerQueue');
+  if (queueScreen) { queueScreen.classList.remove('active', 'slide-out'); }
+
+  // Show matched screen
+  const avatar = document.getElementById('strangerMatchAvatar');
+  if (avatar) avatar.textContent = (partnerName || '?').charAt(0).toUpperCase();
+  const packInfo = document.getElementById('strangerPackInfo');
+  const packDef = packDefs.find(p => p.key === packKey);
+  if (packInfo && packDef) packInfo.textContent = `${packDef.emoji} ${i18n.t(packDef.nameKey)}`;
+  goTo('strangerMatched');
+
+  // Load session + questions, then auto-transition to quiz
+  try {
+    const sessionData = await blindApi.getSession(sessionCode);
+    currentSession = sessionData.session;
+    selectedPackKey = packKey;
+    questions = await getQuestions(packKey);
+    currentQuestion = 0;
+    selectedAnswers = {};
+    eliminatedSets = {};
+    questionModes = [];
+  } catch (e) {
+    alert('Failed to load game');
+    goTo('home');
+    return;
+  }
+
+  setTimeout(() => {
+    goTo('quiz');
+  }, 2500);
+}
+
+function showStrangerVote() {
+  const avatar = document.getElementById('strangerVoteAvatar');
+  if (avatar) avatar.textContent = (strangerPartnerName || '?').charAt(0).toUpperCase();
+  const title = document.getElementById('strangerVoteTitle');
+  if (title) title.textContent = i18n.t('stranger_vote_title').replace('{name}', strangerPartnerName || 'them');
+  document.getElementById('strangerVoteWaiting').style.display = 'none';
+  document.querySelector('.stranger-vote-buttons').style.display = 'flex';
+  goTo('strangerVote');
+}
+
+async function submitStrangerVote(vote) {
+  // Hide buttons, show waiting
+  document.querySelector('.stranger-vote-buttons').style.display = 'none';
+  document.getElementById('strangerVoteWaiting').style.display = '';
+
+  try {
+    const data = await blindApi.strangerVote(strangerSessionCode, vote);
+    if (data.resolved) {
+      showStrangerResult(data.mutual);
+      return;
+    }
+    // Wait for partner — start polling
+    startStrangerVotePoll();
+  } catch (e) {
+    alert('Connection error');
+    document.querySelector('.stranger-vote-buttons').style.display = 'flex';
+    document.getElementById('strangerVoteWaiting').style.display = 'none';
+  }
+}
+
+function startStrangerVotePoll() {
+  stopStrangerVotePoll();
+  strangerVoteTimer = setInterval(async () => {
+    try {
+      const data = await blindApi.strangerVoteStatus(strangerSessionCode);
+      if (data.status === 'resolved') {
+        stopStrangerVotePoll();
+        showStrangerResult(data.mutual);
+      }
+    } catch (e) { /* silent */ }
+  }, 1500);
+}
+
+function stopStrangerVotePoll() {
+  if (strangerVoteTimer) { clearInterval(strangerVoteTimer); strangerVoteTimer = null; }
+}
+
+function showStrangerResult(mutual) {
+  const icon = document.getElementById('strangerResultIcon');
+  const title = document.getElementById('strangerResultTitle');
+  const desc = document.getElementById('strangerResultDesc');
+
+  if (mutual) {
+    icon.textContent = '🎉';
+    icon.className = 'stranger-result-icon match';
+    title.textContent = i18n.t('stranger_match');
+    desc.textContent = i18n.t('stranger_match_desc');
+  } else {
+    icon.textContent = '🤷';
+    icon.className = 'stranger-result-icon';
+    title.textContent = i18n.t('stranger_no_match');
+    desc.textContent = i18n.t('stranger_no_match_desc');
+  }
+
+  goTo('strangerResult');
+  if (mutual) spawnConfetti();
+
+  // Reset stranger state
+  strangerSessionCode = null;
+  strangerPartnerName = null;
+}
 
 // ==================== INIT: URL JOIN + AUTO-LOGIN ====================
 (function init() {

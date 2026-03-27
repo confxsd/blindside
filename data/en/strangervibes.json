@@ -1,0 +1,153 @@
+[
+  {
+    "q": "Be honest — you're on this app because:",
+    "options": [
+      "Bored at 2am",
+      "Just got dumped",
+      "Proving I'm not antisocial",
+      "FBI sent me"
+    ],
+    "pi": 0,
+    "format": "bubble"
+  },
+  {
+    "q": "How many tabs do you have open right now?",
+    "options": [
+      "Under 10 like a psychopath",
+      "10-30 (normal)",
+      "30-100 (stressed)",
+      "My laptop is begging for mercy"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Your texting style with strangers:",
+    "options": [
+      "Overuse of haha and lol",
+      "One word. Period."
+    ],
+    "pi": 0,
+    "format": "vs"
+  },
+  {
+    "q": "You accidentally like someone's photo from 2019. You:",
+    "options": [
+      "Unlike and pray",
+      "Double down, like 5 more",
+      "Delete the app",
+      "Send them a friend request to assert dominance"
+    ],
+    "pi": 1,
+    "format": "swipe"
+  },
+  {
+    "q": "Biggest red flag in a bio:",
+    "options": [
+      "\"I'm fluent in sarcasm\"",
+      "\"Looking for my partner in crime\"",
+      "\"Just ask\"",
+      "Fish photo"
+    ],
+    "pi": 3,
+    "format": "bubble"
+  },
+  {
+    "q": "Your phone battery is at 1%. You save:",
+    "options": [
+      "The group chat argument",
+      "The Uber ride home"
+    ],
+    "pi": 0,
+    "format": "vs"
+  },
+  {
+    "q": "Pick your honesty level:",
+    "options": [
+      "I google people before meeting them",
+      "I rehearse conversations in the shower",
+      "I've pretended to be on a call to avoid someone",
+      "All of the above and I'm not sorry"
+    ],
+    "pi": 3,
+    "format": "bubble"
+  },
+  {
+    "q": "The wifi goes out. How long until you lose it?",
+    "options": [
+      "30 seconds",
+      "5 minutes",
+      "I'd simply touch grass",
+      "I already lost it reading this"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Your most unhinged 3am activity:",
+    "options": [
+      "Online shopping I won't remember",
+      "Rearranging furniture",
+      "Deep Wikipedia rabbit hole",
+      "Texting people I shouldn't"
+    ],
+    "pi": 2,
+    "format": "swipe"
+  },
+  {
+    "q": "Eliminate — last one standing is your true personality:",
+    "options": ["🤡 Class clown", "🫠 Overthinker", "👻 Ghost", "💅 Main character", "🗑️ Dumpster fire", "✨ Delusional optimist"],
+    "pi": 4,
+    "format": "eliminate"
+  },
+  {
+    "q": "If we matched, you'd probably:",
+    "options": [
+      "Send a meme first",
+      "Wait for them to text first",
+      "Panic and unmatch",
+      "Already be planning the wedding"
+    ],
+    "pi": 0,
+    "format": "bubble"
+  },
+  {
+    "q": "Your group chat role:",
+    "options": [
+      "The one who sends 47 messages in a row",
+      "The lurker who reacts with 😂"
+    ],
+    "pi": 0,
+    "format": "vs"
+  },
+  {
+    "q": "You see your ex at a party. Power move:",
+    "options": [
+      "Pretend they're invisible",
+      "Be aggressively friendly",
+      "Leave immediately",
+      "Start loudly talking about how great life is"
+    ],
+    "pi": 3,
+    "format": "swipe"
+  },
+  {
+    "q": "How fast do you reply to texts?",
+    "options": [
+      "Instant — I have no life",
+      "Strategic 2-hour wait",
+      "When Mercury is in retrograde",
+      "I'll get back to you in 3-5 business days"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Your screen time report comes in. You:",
+    "options": [
+      "Delete it without looking",
+      "Screenshot it as a cry for help",
+      "It's a personal best every week",
+      "I don't have that weakness (lying)"
+    ],
+    "pi": 2,
+    "format": "bubble"
+  }
+]

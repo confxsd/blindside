@@ -1,0 +1,153 @@
+[
+  {
+    "q": "Durst ol — bu uygulamada olma sebebin:",
+    "options": [
+      "Gece 2'de sıkıldım",
+      "Yeni ayrıldım",
+      "Asosyal olmadığımı kanıtlıyorum",
+      "FBI gönderdi"
+    ],
+    "pi": 0,
+    "format": "bubble"
+  },
+  {
+    "q": "Şu an kaç sekmen açık?",
+    "options": [
+      "10'dan az, psikopat gibi",
+      "10-30 (normal)",
+      "30-100 (stresli)",
+      "Laptopum yalvarıyor"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Yabancılarla yazışma tarzın:",
+    "options": [
+      "Haha ve lol'un aşırı kullanımı",
+      "Tek kelime. Nokta."
+    ],
+    "pi": 0,
+    "format": "vs"
+  },
+  {
+    "q": "Birinin 2019'daki fotoğrafını yanlışlıkla beğendin. Ne yaparsın?",
+    "options": [
+      "Beğeniyi geri al ve dua et",
+      "5 tane daha beğen",
+      "Uygulamayı sil",
+      "Arkadaşlık isteği at, dominans kur"
+    ],
+    "pi": 1,
+    "format": "swipe"
+  },
+  {
+    "q": "Biyografideki en büyük red flag:",
+    "options": [
+      "\"Sarkazm konusunda akıcıyım\"",
+      "\"Suç ortağımı arıyorum\"",
+      "\"Sorman yeterli\"",
+      "Balık fotoğrafı"
+    ],
+    "pi": 3,
+    "format": "bubble"
+  },
+  {
+    "q": "Telefonun %1'de. Neyi kurtarırsın?",
+    "options": [
+      "Grup sohbetindeki tartışmayı",
+      "Eve dönüş Uber'ini"
+    ],
+    "pi": 0,
+    "format": "vs"
+  },
+  {
+    "q": "Dürüstlük seviyeni seç:",
+    "options": [
+      "Tanışmadan önce insanları Google'lıyorum",
+      "Duşta konuşma provaları yapıyorum",
+      "Birinden kaçınmak için telefonda konuşuyormuş gibi yaptım",
+      "Hepsi ve üzgün değilim"
+    ],
+    "pi": 3,
+    "format": "bubble"
+  },
+  {
+    "q": "WiFi gitti. Ne kadar dayanırsın?",
+    "options": [
+      "30 saniye",
+      "5 dakika",
+      "Dışarı çıkar çim koklarım",
+      "Bunu okurken çoktan çıldırdım"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "En çılgın gece 3 aktiviten:",
+    "options": [
+      "Hatırlamayacağım online alışveriş",
+      "Mobilya yeniden dizme",
+      "Derin Wikipedia çukuru",
+      "Yazmaması gereken kişilere yazmak"
+    ],
+    "pi": 2,
+    "format": "swipe"
+  },
+  {
+    "q": "Ele — son kalan gerçek kişiliğin:",
+    "options": ["🤡 Sınıf palyaçosu", "🫠 Aşırı düşünen", "👻 Hayalet", "💅 Ana karakter", "🗑️ Çöp ateşi", "✨ Hayalperest iyimser"],
+    "pi": 4,
+    "format": "eliminate"
+  },
+  {
+    "q": "Eşleşsek muhtemelen:",
+    "options": [
+      "Önce meme atarım",
+      "Onun yazmasını beklerim",
+      "Panik yapıp eşleşmeyi bozarım",
+      "Düğünü planlıyorumdur bile"
+    ],
+    "pi": 0,
+    "format": "bubble"
+  },
+  {
+    "q": "Grup sohbetindeki rolün:",
+    "options": [
+      "Arka arkaya 47 mesaj atan",
+      "😂 ile tepki veren sessiz okuyucu"
+    ],
+    "pi": 0,
+    "format": "vs"
+  },
+  {
+    "q": "Eski sevgilini partide gördün. Güç hamlesi:",
+    "options": [
+      "Görünmez muamelesi yap",
+      "Agresif şekilde samimi ol",
+      "Hemen git",
+      "Hayatın ne kadar güzel olduğunu yüksek sesle anlat"
+    ],
+    "pi": 3,
+    "format": "swipe"
+  },
+  {
+    "q": "Mesajlara ne kadar hızlı cevap verirsin?",
+    "options": [
+      "Anında — hayatım yok",
+      "Stratejik 2 saat bekleme",
+      "Merkür retrosu geçince",
+      "3-5 iş günü içinde dönerim"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Ekran süresi raporu geldi. Ne yaparsın?",
+    "options": [
+      "Bakmadan silerim",
+      "İmdat çığlığı olarak screenshot alırım",
+      "Her hafta kişisel rekor",
+      "O zayıflığım yok (yalan söylüyorum)"
+    ],
+    "pi": 2,
+    "format": "bubble"
+  }
+]
