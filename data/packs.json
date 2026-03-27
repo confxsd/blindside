@@ -105,6 +105,36 @@
       "descKey": "pack_desc_worldtaste"
     },
     {
+      "key": "cinematastes",
+      "emoji": "🎬",
+      "nameKey": "pack_cinematastes",
+      "countKey": "pack_count_cinematastes",
+      "cat": "culture",
+      "badge": "new",
+      "plays": "5.2k",
+      "descKey": "pack_desc_cinematastes"
+    },
+    {
+      "key": "cinemascenes",
+      "emoji": "🎞️",
+      "nameKey": "pack_cinemascenes",
+      "countKey": "pack_count_cinemascenes",
+      "cat": "culture",
+      "badge": "new",
+      "plays": "4.8k",
+      "descKey": "pack_desc_cinemascenes"
+    },
+    {
+      "key": "cinemadebates",
+      "emoji": "🍿",
+      "nameKey": "pack_cinemadebates",
+      "countKey": "pack_count_cinemadebates",
+      "cat": "culture",
+      "badge": "new",
+      "plays": "4.5k",
+      "descKey": "pack_desc_cinemadebates"
+    },
+    {
       "key": "ethics",
       "emoji": "⚖️",
       "nameKey": "pack_ethics",
@@ -494,6 +524,23 @@
         "livingtogether"
       ],
       "mode": "partner"
+    },
+    {
+      "key": "cinema_night",
+      "emoji": "🎬",
+      "gradient": [
+        "#6366F1",
+        "#EC4899"
+      ],
+      "nameKey": "coll_cinema_night",
+      "descKey": "coll_desc_cinema_night",
+      "packs": [
+        "cinematastes",
+        "cinemascenes",
+        "cinemadebates"
+      ],
+      "mode": "partner",
+      "badge": "new"
     },
     {
       "key": "know_your_partner",

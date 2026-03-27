@@ -1,0 +1,135 @@
+[
+  {
+    "q": "Devam filmleri — evet mi hayır mı:",
+    "options": [
+      "✅ Severim — sevdiğimden daha fazlası",
+      "⚖️ Sadece hikaye gerektiriyorsa",
+      "❌ Orijinaller neredeyse her zaman daha iyi",
+      "🔄 Yeniden çevrimler > devam filmleri",
+      "📺 Dizi olarak genişletilsin daha iyi"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Altyazı mı dublaj mı:",
+    "options": [
+      "📝 Her zaman altyazı — orijinal ses önemli",
+      "🗣️ Dublaj olsun, okumak istemiyorum",
+      "🌍 Dile göre değişir",
+      "🚫 Sadece Türkçe film izlerim",
+      "🎧 Orijinal ses, altyazısız, tam dalış"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "CGI mi pratik efekt mi:",
+    "options": [
+      "🤖 CGI — ne kadar epik o kadar iyi",
+      "🎭 Pratik — gerçekçi hissettiriyor",
+      "🤝 En iyi filmler ikisini birleştirir",
+      "🎨 Farkı anlamıyorum açıkçası",
+      "📼 Eski usul stop-motion'ın ayrı havası var"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Tercih ettiğin son:",
+    "options": [
+      "😊 Mutlu son — iyi hissetmek için izliyorum",
+      "💔 Trajik son — daha çok iz bırakır",
+      "🤯 Belirsiz — ben yorumlayayım",
+      "🔄 Son 5 dakikada sürpriz",
+      "😈 Kötü adam kazansın"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Kitap uyarlaması kararı:",
+    "options": [
+      "📚 Kitap her zaman daha iyidir",
+      "🎬 Bazı filmler kitabı geçer",
+      "🤷 Kitabını hiç okumam",
+      "📖 Önce oku, sonra karşılaştır",
+      "🎥 Önce izle, seversen oku"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Spoiler — nasıl başa çıkarsın:",
+    "options": [
+      "🙈 İzleyene kadar tam karartma",
+      "😏 Ne olacağını bilmek hoşuma gider",
+      "⚖️ Küçük spoiler tamam, büyük dönüşler hayır",
+      "📱 Wikipedia'dan tüm konuyu okurum",
+      "🗣️ Spoiler veren benim (pardon)"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Film süresi tercihi:",
+    "options": [
+      "⚡ 90 dk altı — sıkı ve vurucu",
+      "👌 2 saat — ideal nokta",
+      "🎬 2.5-3 saat — destan istiyorum",
+      "📺 Mini dizi olsun daha iyi",
+      "♾️ İyiyse süre farketmez"
+    ],
+    "pi": 4
+  },
+  {
+    "q": "Yeniden çevrimler — olur mu:",
+    "options": [
+      "✅ Evet — yeni nesil için taze bakış",
+      "❌ Hayır — klasiklere dokunma",
+      "⚖️ Yeni bir şey katıyorsa olur",
+      "🌍 Yabancı film çevrimleri sorun değil",
+      "🤖 Yapay zeka çağında çevrimler korkutucu"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Süper kahraman yorgunluğu — gerçek mi:",
+    "options": [
+      "😴 Çok gerçek — bıktım artık",
+      "🦸 Asla — hepsini izlerim",
+      "⚖️ Sadece iyileri hak ediyor",
+      "🔄 DC'yi Marvel'a tercih ederim (ya da tersi)",
+      "🎭 Bağımsız kahramanlar, seri filmler değil"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Filmlerde ağlama — gerçek tartışma:",
+    "options": [
+      "😭 Her seferinde — utanç yok",
+      "😢 Sadece gerçekten vurunca",
+      "😐 Nadiren — kendimi tutarım",
+      "🧊 Filmde hiç ağlamadım",
+      "😤 Reklamlarda ağlarım, filmlerde değil"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Sinema görgü kuralı ihlali:",
+    "options": [
+      "📱 Film sırasında mesaj yazmak",
+      "🗣️ Olayları yüksek sesle anlatmak",
+      "🍝 Kokulu yiyecek getirmek",
+      "🦶 Ayakkabı çıkarıp ayak uzatmak",
+      "📸 Ekranı kaydetmek",
+      "⏰ 30 dk geç gelmek"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Oscar — önemli mi:",
+    "options": [
+      "🏆 Evet — harika sanatı öne çıkarır",
+      "❌ Hayır — siyasi ve taraflı",
+      "🤷 Dramayı izlerim, ödülleri değil",
+      "📋 Adayları izleme listesi olarak kullanırım",
+      "🍿 Altın Ahududu daha eğlenceli"
+    ],
+    "pi": 3
+  }
+]

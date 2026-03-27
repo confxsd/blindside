@@ -1,0 +1,146 @@
+[
+  {
+    "q": "คู่ในหนังที่เคมีดีที่สุด:",
+    "options": [
+      "🚢 Jack & Rose — Titanic",
+      "🧪 Joker & Harley Quinn",
+      "💌 Noah & Allie — The Notebook",
+      "⚡ Han & Leia — Star Wars",
+      "🕶️ Mr. & Mrs. Smith",
+      "🌹 Westley & Buttercup — Princess Bride"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "ฉากหนังที่เป็นตำนานที่สุด:",
+    "options": [
+      "🚪 \"Here's Johnny!\" — The Shining",
+      "💃 ฉากยก Dirty Dancing",
+      "🌧️ Singin' in the Rain",
+      "🦁 \"ข้าคือพ่อของเจ้า\" — Star Wars",
+      "🚢 \"ข้าคือราชาแห่งโลก!\" — Titanic",
+      "💊 ยาแดง / ยาน้ำเงิน — Matrix"
+    ],
+    "pi": 5
+  },
+  {
+    "q": "ตัวร้ายที่แอบเชียร์:",
+    "options": [
+      "🃏 Joker",
+      "👿 Thanos",
+      "🐍 Loki",
+      "🦷 Hannibal Lecter",
+      "🧊 Hans Landa — Inglourious Basterds",
+      "🖤 Darth Vader"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "คำพูดจากหนังที่ใช้ในชีวิตจริง:",
+    "options": [
+      "🏃 \"วิ่ง ฟอร์เรสต์ วิ่ง!\"",
+      "💪 \"ข้าจะกลับมา\"",
+      "🍫 \"ชีวิตเหมือนกล่องช็อกโกแลต\"",
+      "🧙 \"เจ้าผ่านไปไม่ได้!\"",
+      "👋 \"ขอพลังจงอยู่กับเจ้า\"",
+      "🥂 \"มองเธออยู่นะ ที่รัก\""
+    ],
+    "pi": 3
+  },
+  {
+    "q": "พล็อตทวิสต์ที่ทำสมองแตก:",
+    "options": [
+      "👻 Sixth Sense — เขาตายแล้ว",
+      "🎭 Fight Club — คนเดียวกัน",
+      "🌀 Inception — ลูกข่างหมุน",
+      "🔑 Usual Suspects — Keyser Söze",
+      "🧬 Shutter Island — คนไข้",
+      "⏰ Interstellar — ชั้นหนังสือ"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "เพลงประกอบหนังที่อยู่ในหัวตลอด:",
+    "options": [
+      "🦁 The Lion King",
+      "🏴‍☠️ Pirates of the Caribbean",
+      "💍 Lord of the Rings",
+      "🌌 Interstellar",
+      "🎵 La La Land",
+      "🦇 The Dark Knight"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "ตายในหนังที่เจ็บที่สุด:",
+    "options": [
+      "🧙 Dumbledore",
+      "🚢 Jack Dawson — Titanic",
+      "🦁 Mufasa",
+      "🕷️ Tony Stark — Endgame",
+      "🌳 Groot — Guardians of the Galaxy",
+      "🏹 Boromir — LOTR"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "โลกในหนังที่อยากไปอยู่:",
+    "options": [
+      "🧙 Hogwarts — Harry Potter",
+      "🌍 Middle-earth — LOTR",
+      "⚔️ กาแล็กซีอันไกลโพ้น — Star Wars",
+      "🦸 จักรวาล Marvel",
+      "🌀 The Matrix (รู้ความจริง)",
+      "🧊 Pandora — Avatar"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "คู่หูในหนังที่เคมีดีที่สุด:",
+    "options": [
+      "🤝 Woody & Buzz",
+      "🍻 Legolas & Gimli",
+      "🚗 Thelma & Louise",
+      "🧤 Sherlock & Watson",
+      "🦸 Batman & Robin",
+      "👽 Shrek & Donkey"
+    ],
+    "pi": 5
+  },
+  {
+    "q": "บทพูดในหนังที่ขนลุก:",
+    "options": [
+      "⚔️ Aragorn — \"เพื่อ Frodo\"",
+      "🥊 Rocky — \"ไม่ใช่ว่าต่อยแรงแค่ไหน\"",
+      "🧑‍⚖️ Atticus Finch — To Kill a Mockingbird",
+      "🃏 Joker — \"ทำไมซีเรียสจัง?\"",
+      "👨‍🚀 Cooper — ฉากเชื่อมต่อ Interstellar",
+      "🗽 Chaplin — The Great Dictator"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "สิ่งที่รำคาญในโรงหนัง:",
+    "options": [
+      "📱 คนเล่นมือถือ",
+      "🗣️ คนคุยระหว่างดู",
+      "🦶 คนเตะเก้าอี้",
+      "🍿 คนเคี้ยวเสียงดัง",
+      "⏰ คนมาสายบังจอ",
+      "😤 คนสปอยล์ก่อนได้ดู"
+    ],
+    "pi": 5
+  },
+  {
+    "q": "หนังที่ทุกคนชอบแต่ไม่เข้าใจ:",
+    "options": [
+      "🦸 หนัง Marvel ทุกเรื่อง",
+      "🚢 Titanic",
+      "🌀 Inception",
+      "⭐ Star Wars",
+      "🧊 Frozen",
+      "🎬 The Godfather"
+    ],
+    "pi": 3
+  }
+]

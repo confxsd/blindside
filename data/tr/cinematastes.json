@@ -1,0 +1,144 @@
+[
+  {
+    "q": "Rahat hissettiğin tür:",
+    "options": [
+      "🎭 Drama",
+      "😂 Komedi",
+      "🔪 Korku / Gerilim",
+      "🚀 Bilim Kurgu",
+      "💕 Romantik",
+      "🎬 Aksiyon"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Cuma gecesi film havası:",
+    "options": [
+      "🍿 Kafa kapatmalık gişe filmi",
+      "🎭 Duygusal yumruk",
+      "🧠 Beyin yakan senaryo",
+      "😂 Gülmekten ağlatan komedi",
+      "😱 Battaniyeye saklanmalık korku",
+      "📖 Ağır ilerleyen bağımsız film"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Yeni filmi çıksa gözü kapalı izleyeceğin yönetmen:",
+    "options": [
+      "🎬 Christopher Nolan",
+      "🩸 Quentin Tarantino",
+      "🌀 Denis Villeneuve",
+      "🎭 Greta Gerwig",
+      "👻 Jordan Peele",
+      "🌸 Wes Anderson"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "En iyi filmlerin çekildiği on yıl:",
+    "options": [
+      "📼 80'ler — altın çağ",
+      "🎸 90'lar — hikaye doruk noktası",
+      "💿 2000'ler — seri film çağı",
+      "📱 2010'lar — süper kahraman dönemi",
+      "🤖 2020'ler — streaming altın çağı"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Sinemada atıştırmalık tercihin:",
+    "options": [
+      "🍿 Klasik patlamış mısır",
+      "🍫 Çikolata & şeker karışımı",
+      "🌮 Film öncesi dolu dolu yemek",
+      "🥤 Sadece içecek",
+      "🍕 Dışarıdan yiyecek sokmak",
+      "🧊 Nachos peynirli"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Yetişkin olarak farklı vuran animasyon:",
+    "options": [
+      "🤖 Wall-E",
+      "🎈 Yukarı Bak",
+      "🧸 Oyuncak Hikayesi 3",
+      "🐉 Ruhların Kaçışı",
+      "🦁 Aslan Kral",
+      "🕷️ Örümcek-Verse"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Tekrar tekrar izleyeceğin film:",
+    "options": [
+      "🧙 Yüzüklerin Efendisi",
+      "⚔️ Star Wars",
+      "🦇 Kara Şövalye",
+      "🧊 Titanic",
+      "💊 Matrix",
+      "🏠 Evde Tek Başına"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Ağlattıran film:",
+    "options": [
+      "🏥 Aynı Yıldızın Altında",
+      "📓 Not Defteri",
+      "🎵 La La Land",
+      "🪖 Schindler'in Listesi",
+      "🐕 Hachi",
+      "😶 Ben filmlerde ağlamam"
+    ],
+    "pi": 4
+  },
+  {
+    "q": "Gizliden gizliye sevdiğin suçluluk filmi:",
+    "options": [
+      "💅 Mean Girls",
+      "🏎️ Hızlı ve Öfkeli (herhangi biri)",
+      "🧛 Alacakaranlık",
+      "💃 Mamma Mia",
+      "🦈 Sharknado",
+      "🎤 High School Musical"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Film seçme yöntemin:",
+    "options": [
+      "⭐ Puanlar & yorumlar",
+      "🎞️ Fragmanı güzeldi",
+      "👥 Arkadaş önerisi",
+      "🏆 Ödül adaylıkları",
+      "🎰 Bir şey denk gelene kadar kaydır",
+      "📋 Hazır izleme listem var"
+    ],
+    "pi": 4
+  },
+  {
+    "q": "Sinema mı koltuk mu:",
+    "options": [
+      "🎬 Her zaman sinema — büyük ekran şart",
+      "🛋️ Koltuk — istediğim zaman durdururum",
+      "🍿 Büyük filmler sinemada, geri kalan evde",
+      "📱 Telefondan izlerim",
+      "🎭 Özel gösterimler & festivaller"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Hafızanı silip sıfırdan izlemek isteyeceğin seri:",
+    "options": [
+      "🧙 Harry Potter",
+      "⚔️ Star Wars",
+      "💍 Yüzüklerin Efendisi",
+      "🦸 Marvel Sinematik Evreni",
+      "💊 Matrix",
+      "🏴‍☠️ Karayip Korsanları"
+    ],
+    "pi": 0
+  }
+]

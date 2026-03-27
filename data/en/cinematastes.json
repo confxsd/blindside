@@ -1,0 +1,144 @@
+[
+  {
+    "q": "Your comfort genre:",
+    "options": [
+      "🎭 Drama",
+      "😂 Comedy",
+      "🔪 Horror / Thriller",
+      "🚀 Sci-Fi",
+      "💕 Romance",
+      "🎬 Action"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Friday night movie mood:",
+    "options": [
+      "🍿 Big dumb blockbuster",
+      "🎭 Emotional gut-punch",
+      "🧠 Mind-bending plot twists",
+      "😂 Laugh-till-you-cry comedy",
+      "😱 Hide-under-blanket horror",
+      "📖 Slow-burn indie"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "The director whose new film you watch no matter what:",
+    "options": [
+      "🎬 Christopher Nolan",
+      "🩸 Quentin Tarantino",
+      "🌀 Denis Villeneuve",
+      "🎭 Greta Gerwig",
+      "👻 Jordan Peele",
+      "🌸 Wes Anderson"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Pick the decade with the best movies:",
+    "options": [
+      "📼 80s — golden blockbusters",
+      "🎸 90s — peak storytelling",
+      "💿 2000s — franchise era",
+      "📱 2010s — superhero reign",
+      "🤖 2020s — streaming golden age"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Your movie snack order:",
+    "options": [
+      "🍿 Classic popcorn, nothing else",
+      "🍫 Chocolate & candy mix",
+      "🌮 Full meal before the movie",
+      "🥤 Just a drink, no food",
+      "🍕 Sneak in outside food",
+      "🧊 Nachos with cheese"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Animated film that hits different as an adult:",
+    "options": [
+      "🤖 Wall-E",
+      "🎈 Up",
+      "🧸 Toy Story 3",
+      "🐉 Spirited Away",
+      "🦁 The Lion King",
+      "🕷️ Spider-Verse"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "You're more likely to rewatch:",
+    "options": [
+      "🧙 Lord of the Rings",
+      "⚔️ Star Wars",
+      "🦇 The Dark Knight",
+      "🧊 Titanic",
+      "💊 The Matrix",
+      "🏠 Home Alone"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "The movie that made you ugly cry:",
+    "options": [
+      "🏥 The Fault in Our Stars",
+      "📓 The Notebook",
+      "🎵 La La Land",
+      "🪖 Schindler's List",
+      "🐕 Hachi",
+      "😶 I don't cry at movies"
+    ],
+    "pi": 4
+  },
+  {
+    "q": "Guilty pleasure film you secretly love:",
+    "options": [
+      "💅 Mean Girls",
+      "🏎️ Fast & Furious (any of them)",
+      "🧛 Twilight",
+      "💃 Mamma Mia",
+      "🦈 Sharknado",
+      "🎤 High School Musical"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "How you choose what to watch:",
+    "options": [
+      "⭐ Ratings & reviews",
+      "🎞️ Trailer looked good",
+      "👥 Friend recommended it",
+      "🏆 Award nominations",
+      "🎰 Random scroll until something clicks",
+      "📋 Curated watchlist"
+    ],
+    "pi": 4
+  },
+  {
+    "q": "Cinema or couch:",
+    "options": [
+      "🎬 Cinema always — big screen or nothing",
+      "🛋️ Couch — pause whenever I want",
+      "🍿 Cinema for blockbusters, couch for the rest",
+      "📱 I watch movies on my phone",
+      "🎭 Special screenings & film festivals"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "The franchise you'd erase from your memory to watch fresh:",
+    "options": [
+      "🧙 Harry Potter",
+      "⚔️ Star Wars",
+      "💍 Lord of the Rings",
+      "🦸 Marvel Cinematic Universe",
+      "💊 The Matrix",
+      "🏴‍☠️ Pirates of the Caribbean"
+    ],
+    "pi": 0
+  }
+]

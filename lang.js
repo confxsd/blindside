@@ -71,6 +71,9 @@ const i18n = {
       pack_count_chaotic: "10 questions · unhinged vibes",
       pack_fungames: "Fun & Games",
       pack_worldtaste: "World & Taste",
+      pack_cinematastes: "Cinema Tastes",
+      pack_cinemascenes: "Iconic Scenes",
+      pack_cinemadebates: "Cinema Debates",
       pack_ethics: "Ethics & Dilemmas",
       pack_situations: "Situations",
       pack_cuisine: "Cuisine Match",
@@ -78,6 +81,9 @@ const i18n = {
       pack_soulspirit: "Soul & Spirit",
       pack_count_fungames: "10 questions · lighthearted fun",
       pack_count_worldtaste: "10 questions · culture & flavors",
+      pack_count_cinematastes: "12 questions · genres, snacks & guilty pleasures",
+      pack_count_cinemascenes: "12 questions · iconic moments & characters",
+      pack_count_cinemadebates: "12 questions · hot takes on cinema",
       pack_count_ethics: "10 questions · moral crossroads",
       pack_count_situations: "10 questions · react to life",
       pack_count_cuisine: "15 questions · food & flavor compatibility",
@@ -85,6 +91,9 @@ const i18n = {
       pack_count_soulspirit: "10 questions · meaning & belief",
       pack_desc_fungames: "lighthearted chaos. no wrong answers.",
       pack_desc_worldtaste: "travel, food, culture — how worldly are you?",
+      pack_desc_cinematastes: "genres, directors, guilty pleasures — do you actually watch the same stuff?",
+      pack_desc_cinemascenes: "villains, plot twists, movie deaths — relive the moments that shaped you",
+      pack_desc_cinemadebates: "subtitles vs dubbed, sequels, spoilers — settle the cinema arguments once and for all",
       pack_desc_cuisine: "spice levels, comfort carbs, food deal-breakers — are you actually compatible?",
       pack_desc_situations: "real-life moments. how would you actually react?",
       // Nav
@@ -125,6 +134,9 @@ const i18n = {
       coll_culture_taste: "Culture & Taste",
       coll_desc_culture_taste:
         "travel, beliefs & lifestyle — how aligned are you?",
+      coll_cinema_night: "Cinema Night",
+      coll_desc_cinema_night:
+        "genres, iconic scenes & hot takes — are you movie soulmates?",
       coll_know_your_partner: "Know Your Partner",
       coll_desc_know_your_partner:
         "archetype quizzes to take about your partner & share",
@@ -517,6 +529,9 @@ const i18n = {
       pack_count_chaotic: "10 soru · çılgın vibes",
       pack_fungames: "Eğlence & Oyunlar",
       pack_worldtaste: "Dünya & Lezzetler",
+      pack_cinematastes: "Sinema Zevkleri",
+      pack_cinemascenes: "İkonik Sahneler",
+      pack_cinemadebates: "Sinema Tartışmaları",
       pack_ethics: "Etik & İkilemler",
       pack_situations: "Durumlar",
       pack_cuisine: "Mutfak Uyumu",
@@ -524,6 +539,9 @@ const i18n = {
       pack_soulspirit: "Ruh & Mana",
       pack_count_fungames: "10 soru · hafif eğlence",
       pack_count_worldtaste: "10 soru · kültür & tatlar",
+      pack_count_cinematastes: "12 soru · türler, atıştırmalıklar & suçluluk filmleri",
+      pack_count_cinemascenes: "12 soru · ikonik anlar & karakterler",
+      pack_count_cinemadebates: "12 soru · sinema tartışmaları",
       pack_count_ethics: "10 soru · ahlaki kavşaklar",
       pack_count_situations: "10 soru · hayata tepki ver",
       pack_count_cuisine: "15 soru · yemek & lezzet uyumu",
@@ -532,6 +550,12 @@ const i18n = {
       pack_desc_fungames: "hafif kaos. yanlış cevap yok.",
       pack_desc_worldtaste:
         "seyahat, yemek, kültür — ne kadar dünya vatandaşısın?",
+      pack_desc_cinematastes:
+        "türler, yönetmenler, suçluluk filmleri — gerçekten aynı şeyleri mi izliyorsunuz?",
+      pack_desc_cinemascenes:
+        "kötü karakterler, senaryo dönüşleri, film ölümleri — sizi şekillendiren anları yeniden yaşayın",
+      pack_desc_cinemadebates:
+        "altyazı mı dublaj mı, devam filmleri, spoiler — sinema tartışmalarını bir kez sonlandırın",
       pack_desc_cuisine:
         "acı seviyesi, favori karbonhidrat, yemek kırmızı çizgileri — gerçekten uyumlu musunuz?",
       pack_desc_situations:
@@ -569,6 +593,9 @@ const i18n = {
       coll_culture_taste: "Kültür & Zevk",
       coll_desc_culture_taste:
         "seyahat, inançlar & yaşam tarzı — ne kadar uyumlusunuz?",
+      coll_cinema_night: "Sinema Gecesi",
+      coll_desc_cinema_night:
+        "türler, ikonik sahneler & keskin yorumlar — film ruh eşi misiniz?",
       coll_know_your_partner: "Partnerini Tanı",
       coll_desc_know_your_partner:
         "partneriniz hakkında çözüp paylaşacağınız arketip testleri",
@@ -924,6 +951,9 @@ const i18n = {
       pack_count_chaotic: "10 คำถาม · ไวบ์บ้าบอ",
       pack_fungames: "สนุก & เกม",
       pack_worldtaste: "โลก & รสชาติ",
+      pack_cinematastes: "รสนิยมหนัง",
+      pack_cinemascenes: "ฉากสุดคลาสสิก",
+      pack_cinemadebates: "ดีเบตหนัง",
       pack_ethics: "จริยธรรม & ทางเลือก",
       pack_situations: "สถานการณ์",
       pack_cuisine: "จับคู่รสชาติ",
@@ -931,6 +961,9 @@ const i18n = {
       pack_soulspirit: "จิตวิญญาณ",
       pack_count_fungames: "10 คำถาม · สนุกเบาๆ",
       pack_count_worldtaste: "10 คำถาม · วัฒนธรรม & รสชาติ",
+      pack_count_cinematastes: "12 คำถาม · แนวหนัง ขนม & guilty pleasure",
+      pack_count_cinemascenes: "12 คำถาม · ช่วงเวลาสุดคลาสสิก & ตัวละคร",
+      pack_count_cinemadebates: "12 คำถาม · ความเห็นแรงเรื่องหนัง",
       pack_count_ethics: "10 คำถาม · ทางแยกศีลธรรม",
       pack_count_situations: "10 คำถาม · ตอบสนองต่อชีวิต",
       pack_count_cuisine: "15 คำถาม · อาหาร & รสชาติ",
@@ -938,6 +971,9 @@ const i18n = {
       pack_count_soulspirit: "10 คำถาม · ความหมาย & ความเชื่อ",
       pack_desc_fungames: "ความวุ่นวายเบาๆ ไม่มีคำตอบผิด",
       pack_desc_worldtaste: "ท่องเที่ยว อาหาร วัฒนธรรม — คุณรู้จักโลกแค่ไหน?",
+      pack_desc_cinematastes: "แนวหนัง ผู้กำกับ guilty pleasure — ดูเรื่องเดียวกันจริงไหม?",
+      pack_desc_cinemascenes: "ตัวร้าย พล็อตทวิสต์ ตายในหนัง — ฉากที่หล่อหลอมคุณ",
+      pack_desc_cinemadebates: "ซับ vs พากย์ ภาคต่อ สปอยล์ — ยุติดีเบตหนังให้จบ",
       pack_desc_cuisine: "ระดับเผ็ด คาร์บโปรด เรื่องอาหารที่รับไม่ได้ — เข้ากันจริงไหม?",
       pack_desc_situations: "ช่วงเวลาในชีวิตจริง คุณจะตอบสนองยังไง?",
       nav_home: "หน้าแรก",
@@ -972,6 +1008,9 @@ const i18n = {
       coll_desc_friend_zone: "สนุก & คุยจริงจังกับเพื่อนซี้",
       coll_culture_taste: "วัฒนธรรม & รสนิยม",
       coll_desc_culture_taste: "เที่ยว ความเชื่อ & ไลฟ์สไตล์ — เข้ากันแค่ไหน?",
+      coll_cinema_night: "คืนดูหนัง",
+      coll_desc_cinema_night:
+        "แนวหนัง ฉากสุดคลาสสิก & ความเห็นแรง — เป็นคู่หนังกันจริงไหม?",
       coll_know_your_partner: "รู้จักคนรัก",
       coll_desc_know_your_partner:
         "แบบทดสอบอาร์คีไทป์เกี่ยวกับคนรักของคุณ & แชร์ผล",

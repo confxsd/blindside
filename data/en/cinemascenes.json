@@ -1,0 +1,146 @@
+[
+  {
+    "q": "The on-screen couple with the best chemistry:",
+    "options": [
+      "🚢 Jack & Rose — Titanic",
+      "🧪 Joker & Harley Quinn",
+      "💌 Noah & Allie — The Notebook",
+      "⚡ Han & Leia — Star Wars",
+      "🕶️ Mr. & Mrs. Smith",
+      "🌹 Westley & Buttercup — Princess Bride"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Most iconic movie scene of all time:",
+    "options": [
+      "🚪 \"Here's Johnny!\" — The Shining",
+      "💃 Dirty Dancing lift",
+      "🌧️ Singin' in the Rain",
+      "🦁 \"I am your father\" — Star Wars",
+      "🚢 \"I'm the king of the world!\" — Titanic",
+      "💊 Red pill / blue pill — The Matrix"
+    ],
+    "pi": 5
+  },
+  {
+    "q": "The movie villain you secretly root for:",
+    "options": [
+      "🃏 Joker",
+      "👿 Thanos",
+      "🐍 Loki",
+      "🦷 Hannibal Lecter",
+      "🧊 Hans Landa — Inglourious Basterds",
+      "🖤 Darth Vader"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Movie quote you use in daily life:",
+    "options": [
+      "🏃 \"Run, Forrest, run!\"",
+      "💪 \"I'll be back\"",
+      "🍫 \"Life is like a box of chocolates\"",
+      "🧙 \"You shall not pass!\"",
+      "👋 \"May the Force be with you\"",
+      "🥂 \"Here's looking at you, kid\""
+    ],
+    "pi": 3
+  },
+  {
+    "q": "The plot twist that broke your brain:",
+    "options": [
+      "👻 Sixth Sense — he was dead",
+      "🎭 Fight Club — same person",
+      "🌀 Inception — the spinning top",
+      "🔑 Usual Suspects — Keyser Söze",
+      "🧬 Shutter Island — the patient",
+      "⏰ Interstellar — the bookshelf"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Movie soundtrack that lives rent-free in your head:",
+    "options": [
+      "🦁 The Lion King",
+      "🏴‍☠️ Pirates of the Caribbean",
+      "💍 Lord of the Rings",
+      "🌌 Interstellar",
+      "🎵 La La Land",
+      "🦇 The Dark Knight"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "The movie death that hurt the most:",
+    "options": [
+      "🧙 Dumbledore",
+      "🚢 Jack Dawson — Titanic",
+      "🦁 Mufasa",
+      "🕷️ Tony Stark — Endgame",
+      "🌳 Groot — Guardians of the Galaxy",
+      "🏹 Boromir — LOTR"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "The fictional world you'd live in:",
+    "options": [
+      "🧙 Hogwarts — Harry Potter",
+      "🌍 Middle-earth — LOTR",
+      "⚔️ A galaxy far, far away — Star Wars",
+      "🦸 Marvel universe",
+      "🌀 The Matrix (knowing the truth)",
+      "🧊 Pandora — Avatar"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Best movie duo energy:",
+    "options": [
+      "🤝 Woody & Buzz",
+      "🍻 Legolas & Gimli",
+      "🚗 Thelma & Louise",
+      "🧤 Sherlock & Watson",
+      "🦸 Batman & Robin",
+      "👽 Shrek & Donkey"
+    ],
+    "pi": 5
+  },
+  {
+    "q": "The movie monologue that gives you chills:",
+    "options": [
+      "⚔️ Aragorn — \"For Frodo\"",
+      "🥊 Rocky — \"It ain't about how hard you hit\"",
+      "🧑‍⚖️ Atticus Finch — To Kill a Mockingbird",
+      "🃏 Joker — \"Why so serious?\"",
+      "👨‍🚀 Cooper — Interstellar docking scene",
+      "🗽 Chaplin — The Great Dictator"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Your cinema pet peeve:",
+    "options": [
+      "📱 People on their phones",
+      "🗣️ Talkers during the movie",
+      "🦶 Seat kickers",
+      "🍿 Loud chewers",
+      "⏰ Late arrivals blocking your view",
+      "😤 Spoilers before you've watched it"
+    ],
+    "pi": 5
+  },
+  {
+    "q": "A movie everyone loves but you don't get:",
+    "options": [
+      "🦸 Any Marvel movie",
+      "🚢 Titanic",
+      "🌀 Inception",
+      "⭐ Star Wars",
+      "🧊 Frozen",
+      "🎬 The Godfather"
+    ],
+    "pi": 3
+  }
+]

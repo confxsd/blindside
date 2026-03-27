@@ -1,0 +1,146 @@
+[
+  {
+    "q": "Ekrandaki en iyi kimyaya sahip çift:",
+    "options": [
+      "🚢 Jack & Rose — Titanic",
+      "🧪 Joker & Harley Quinn",
+      "💌 Noah & Allie — Not Defteri",
+      "⚡ Han & Leia — Star Wars",
+      "🕶️ Bay & Bayan Smith",
+      "🌹 Westley & Buttercup — Prenses Gelin"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Tüm zamanların en ikonik film sahnesi:",
+    "options": [
+      "🚪 \"Here's Johnny!\" — Cinnet",
+      "💃 Dirty Dancing kaldırma sahnesi",
+      "🌧️ Yağmurda Şarkı",
+      "🦁 \"Ben senin babanım\" — Star Wars",
+      "🚢 \"Ben dünyanın kralıyım!\" — Titanic",
+      "💊 Kırmızı hap / mavi hap — Matrix"
+    ],
+    "pi": 5
+  },
+  {
+    "q": "Gizliden desteklediğin kötü karakter:",
+    "options": [
+      "🃏 Joker",
+      "👿 Thanos",
+      "🐍 Loki",
+      "🦷 Hannibal Lecter",
+      "🧊 Hans Landa — Soysuzlar Çetesi",
+      "🖤 Darth Vader"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Günlük hayatta kullandığın film repliği:",
+    "options": [
+      "🏃 \"Koş, Forrest, koş!\"",
+      "💪 \"Ben döneceğim\"",
+      "🍫 \"Hayat bir kutu çikolata gibidir\"",
+      "🧙 \"Geçemezsin!\"",
+      "👋 \"Güç seninle olsun\"",
+      "🥂 \"Sana bakıyorum, güzelim\""
+    ],
+    "pi": 3
+  },
+  {
+    "q": "Beynini yakan senaryo dönüşü:",
+    "options": [
+      "👻 Altıncı His — o ölüydü",
+      "🎭 Dövüş Kulübü — aynı kişi",
+      "🌀 Başlangıç — dönen topaç",
+      "🔑 Olağan Şüpheliler — Keyser Söze",
+      "🧬 Zindan Adası — hasta",
+      "⏰ Yıldızlararası — kitaplık"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Kafanda sürekli çalan film müziği:",
+    "options": [
+      "🦁 Aslan Kral",
+      "🏴‍☠️ Karayip Korsanları",
+      "💍 Yüzüklerin Efendisi",
+      "🌌 Yıldızlararası",
+      "🎵 La La Land",
+      "🦇 Kara Şövalye"
+    ],
+    "pi": 3
+  },
+  {
+    "q": "En çok yıkan film ölümü:",
+    "options": [
+      "🧙 Dumbledore",
+      "🚢 Jack Dawson — Titanic",
+      "🦁 Mufasa",
+      "🕷️ Tony Stark — Endgame",
+      "🌳 Groot — Galaksinin Koruyucuları",
+      "🏹 Boromir — LOTR"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Yaşamak isteyeceğin kurgusal dünya:",
+    "options": [
+      "🧙 Hogwarts — Harry Potter",
+      "🌍 Orta Dünya — LOTR",
+      "⚔️ Çok uzak bir galaksi — Star Wars",
+      "🦸 Marvel evreni",
+      "🌀 Matrix (gerçeği bilerek)",
+      "🧊 Pandora — Avatar"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "En iyi film ikilisi enerjisi:",
+    "options": [
+      "🤝 Woody & Buzz",
+      "🍻 Legolas & Gimli",
+      "🚗 Thelma & Louise",
+      "🧤 Sherlock & Watson",
+      "🦸 Batman & Robin",
+      "👽 Shrek & Eşek"
+    ],
+    "pi": 5
+  },
+  {
+    "q": "Tüylerini diken diken eden film konuşması:",
+    "options": [
+      "⚔️ Aragorn — \"Frodo için\"",
+      "🥊 Rocky — \"Ne kadar sert vurduğun değil\"",
+      "🧑‍⚖️ Atticus Finch — Bülbülü Öldürmek",
+      "🃏 Joker — \"Neden bu kadar ciddisin?\"",
+      "👨‍🚀 Cooper — Yıldızlararası kenetlenme",
+      "🗽 Chaplin — Büyük Diktatör"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Sinema huysuzluğun:",
+    "options": [
+      "📱 Telefonla uğraşanlar",
+      "🗣️ Film sırasında konuşanlar",
+      "🦶 Koltuk tekmeleyenler",
+      "🍿 Gürültülü çiğneyenler",
+      "⏰ Geç gelip görüşü kapatanlar",
+      "😤 İzlemeden spoiler verenler"
+    ],
+    "pi": 5
+  },
+  {
+    "q": "Herkes sever ama sen anlamıyorsun:",
+    "options": [
+      "🦸 Marvel filmleri",
+      "🚢 Titanic",
+      "🌀 Başlangıç",
+      "⭐ Star Wars",
+      "🧊 Karlar Ülkesi",
+      "🎬 Baba"
+    ],
+    "pi": 3
+  }
+]

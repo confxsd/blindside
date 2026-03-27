@@ -1,0 +1,135 @@
+[
+  {
+    "q": "Sequels — yay or nay:",
+    "options": [
+      "✅ Love them — more of what I liked",
+      "⚖️ Only if the story demands it",
+      "❌ Originals are almost always better",
+      "🔄 Reboots > sequels",
+      "📺 Prefer a TV series expansion"
+    ],
+    "pi": 1
+  },
+  {
+    "q": "Subtitles or dubbed:",
+    "options": [
+      "📝 Always subtitles — original audio matters",
+      "🗣️ Dubbed is fine, I want to watch not read",
+      "🌍 Depends on the language",
+      "🚫 Neither — I only watch English films",
+      "🎧 Original audio, no subs, full immersion"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "CGI vs practical effects:",
+    "options": [
+      "🤖 CGI — the more epic the better",
+      "🎭 Practical — feels real",
+      "🤝 Best movies blend both",
+      "🎨 I honestly can't tell the difference",
+      "📼 Old-school stop-motion has charm"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "The ending you prefer:",
+    "options": [
+      "😊 Happy ending — I watch movies to feel good",
+      "💔 Tragic ending — it stays with you longer",
+      "🤯 Ambiguous — let me interpret it",
+      "🔄 Plot twist in the last 5 minutes",
+      "😈 The villain wins"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Book adaptation verdict:",
+    "options": [
+      "📚 The book is always better",
+      "🎬 Some movies improve on the book",
+      "🤷 I never read the book first",
+      "📖 Read first, then watch to compare",
+      "🎥 Watch first, read later if I loved it"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Spoilers — how do you handle them:",
+    "options": [
+      "🙈 Absolute blackout until I watch it",
+      "😏 I actually like knowing what happens",
+      "⚖️ Minor spoilers fine, big twists no",
+      "📱 I read the full plot on Wikipedia first",
+      "🗣️ I'm the one who spoils things (sorry)"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Movie runtime preference:",
+    "options": [
+      "⚡ Under 90 min — tight and punchy",
+      "👌 2 hours — the sweet spot",
+      "🎬 2.5-3 hours — I want an epic",
+      "📺 Split it into a miniseries instead",
+      "♾️ Runtime doesn't matter if it's good"
+    ],
+    "pi": 4
+  },
+  {
+    "q": "Remakes — are they ever okay:",
+    "options": [
+      "✅ Yes — fresh take for a new generation",
+      "❌ No — leave the classics alone",
+      "⚖️ Only if they add something new",
+      "🌍 Foreign film remakes are fine",
+      "🤖 AI-era remakes scare me"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Superhero fatigue — real or not:",
+    "options": [
+      "😴 So real — I'm done with them",
+      "🦸 Never — I'll watch every one",
+      "⚖️ Only the good ones deserve my time now",
+      "🔄 I prefer DC over Marvel (or vice versa)",
+      "🎭 Give me indie heroes, not franchises"
+    ],
+    "pi": 2
+  },
+  {
+    "q": "Crying at movies — the real debate:",
+    "options": [
+      "😭 Every time — no shame",
+      "😢 Only when it really hits hard",
+      "😐 Rarely — I keep it together",
+      "🧊 Never cried at a movie",
+      "😤 I cry at commercials, not movies"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Movie theater etiquette deal-breaker:",
+    "options": [
+      "📱 Texting during the film",
+      "🗣️ Narrating the plot out loud",
+      "🍝 Bringing smelly food",
+      "🦶 Shoes off, feet up",
+      "📸 Recording the screen",
+      "⏰ Arriving 30 min late"
+    ],
+    "pi": 0
+  },
+  {
+    "q": "Oscars — do they matter:",
+    "options": [
+      "🏆 Yes — they highlight great art",
+      "❌ No — they're political and biased",
+      "🤷 I watch for the drama, not the awards",
+      "📋 I use the nominees as a watchlist",
+      "🍿 The Razzies are more entertaining"
+    ],
+    "pi": 3
+  }
+]
