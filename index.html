@@ -599,23 +599,61 @@
       transition: opacity 0.2s;
     }
     .footer-insta:hover { opacity: 0.7; }
+
+    /* Lang selector */
+    .land-lang-selector {
+      position: relative; display: inline-flex; justify-content: center;
+    }
+    .land-lang-pill {
+      display: flex; align-items: center; gap: 6px;
+      font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 600;
+      padding: 7px 14px; border-radius: 20px;
+      border: 1px solid var(--border); background: var(--card-bg);
+      color: var(--text); cursor: pointer;
+      transition: all 0.2s;
+    }
+    .land-lang-pill:hover { border-color: var(--accent-1-border); background: var(--accent-1-bg); }
+    .land-lang-pill .lang-flag { font-size: 16px; line-height: 1; }
+    .land-lang-dropdown {
+      position: absolute; top: calc(100% + 6px); left: 50%;
+      transform: translateX(-50%) translateY(-4px);
+      background: var(--card-bg); border: 1px solid var(--card-border);
+      border-radius: var(--radius-sm); box-shadow: var(--card-shadow-lg);
+      padding: 4px; min-width: 100px; z-index: 200;
+      opacity: 0; pointer-events: none; transition: all 0.15s;
+    }
+    .land-lang-selector.open .land-lang-dropdown {
+      opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0);
+    }
+    .land-lang-item {
+      display: flex; align-items: center; gap: 6px;
+      font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 600;
+      padding: 8px 12px; border-radius: 6px;
+      border: none; background: none; color: var(--text);
+      cursor: pointer; width: 100%; transition: background 0.15s;
+    }
+    .land-lang-item:hover { background: var(--accent-1-bg); }
+    .land-lang-item .lang-flag { font-size: 16px; line-height: 1; }
   </style>
 </head>
 <body>
 
   <nav>
     <a href="#" class="nav-logo">blindside.</a>
-    <a href="/s/" class="nav-cta">play now</a>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div class="land-lang-selector" id="landLangSelector"></div>
+      <a href="/s/" class="nav-cta" data-i18n="land_nav_play">play now</a>
+    </div>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
     <div class="container" style="display:flex;flex-direction:column;align-items:center;position:relative;z-index:1;">
       <div class="hero-emoji">🫣</div>
-      <h1 class="hero-title">Find your match<br>by playing games</h1>
-      <p class="hero-sub">Same questions. Neither sees the other's answers. Results revealed together. Takes 3 minutes.</p>
-      <a href="/s/"><button class="btn-primary">create a session</button></a>
-      <p class="hero-note">free. no account needed.</p>
+      <h1 class="hero-title" data-i18n="land_hero_title">Find your match<br>by playing games</h1>
+      <p class="hero-sub" data-i18n="land_hero_sub">Same questions. Neither sees the other's answers. Results revealed together. Takes 3 minutes.</p>
+      <a href="/s/"><button class="btn-primary" data-i18n="land_hero_cta">create a session</button></a>
+      <p class="hero-note" data-i18n="land_hero_note">free. no account needed.</p>
       <div class="hero-proof">
         <div class="hero-avatars">
           <div class="hero-avatar">🙈</div>
@@ -624,7 +662,7 @@
           <div class="hero-avatar">🤭</div>
           <div class="hero-avatar">😳</div>
         </div>
-        <div class="hero-proof-text"><span>2,400+</span> sessions played</div>
+        <div class="hero-proof-text" data-i18n="land_hero_proof"><span>2,400+</span> sessions played</div>
       </div>
     </div>
   </section>
@@ -633,27 +671,27 @@
   <section class="profile-section">
     <div class="container">
       <div class="profile-card reveal">
-        <div class="profile-badge"><div class="profile-badge-dot"></div> Your Blindside Profile</div>
-        <h2 class="profile-title">Just play.<br>Your profile builds itself.</h2>
-        <p class="profile-subtitle">Every game you play — with a date, a friend, anyone — adds to your profile. No forms. No effort. Just answers.</p>
+        <div class="profile-badge"><div class="profile-badge-dot"></div> <span data-i18n="land_profile_badge">Your Blindside Profile</span></div>
+        <h2 class="profile-title" data-i18n="land_profile_title">Just play.<br>Your profile builds itself.</h2>
+        <p class="profile-subtitle" data-i18n="land_profile_sub">Every game you play — with a date, a friend, anyone — adds to your profile. No forms. No effort. Just answers.</p>
         <div class="profile-grid">
           <div class="profile-feature reveal-d1">
             <div class="profile-icon">🃏</div>
-            <div class="profile-feature-title">Complete decks</div>
-            <div class="profile-feature-desc">Play different packs to unlock new layers of your profile across topics.</div>
+            <div class="profile-feature-title" data-i18n="land_profile_f1_title">Complete decks</div>
+            <div class="profile-feature-desc" data-i18n="land_profile_f1_desc">Play different packs to unlock new layers of your profile across topics.</div>
           </div>
           <div class="profile-feature reveal-d2">
             <div class="profile-icon">👥</div>
-            <div class="profile-feature-title">Play with anyone</div>
-            <div class="profile-feature-desc">Partners, friends, crushes, celebrities. Each session sharpens your data.</div>
+            <div class="profile-feature-title" data-i18n="land_profile_f2_title">Play with anyone</div>
+            <div class="profile-feature-desc" data-i18n="land_profile_f2_desc">Partners, friends, crushes, celebrities. Each session sharpens your data.</div>
           </div>
           <div class="profile-feature reveal-d3">
             <div class="profile-icon">🧬</div>
-            <div class="profile-feature-title">See your real patterns</div>
-            <div class="profile-feature-desc">Over time, Blindside maps how you actually think, connect, and compare — across everyone you've played with.</div>
+            <div class="profile-feature-title" data-i18n="land_profile_f3_title">See your real patterns</div>
+            <div class="profile-feature-desc" data-i18n="land_profile_f3_desc">Over time, Blindside maps how you actually think, connect, and compare — across everyone you've played with.</div>
           </div>
         </div>
-        <a href="/s/" class="profile-cta">Start building yours</a>
+        <a href="/s/" class="profile-cta" data-i18n="land_profile_cta">Start building yours</a>
       </div>
     </div>
   </section>
@@ -662,27 +700,27 @@
   <section class="random-section">
     <div class="container">
       <div class="random-card reveal">
-        <div class="random-badge"><div class="random-badge-dot"></div> Live matching</div>
-        <h2 class="random-title">Don't know anyone?<br>Play with a stranger.</h2>
-        <p class="random-subtitle">Get matched with someone random. Same questions, blind answers. See if you vibe — no names, no pressure.</p>
+        <div class="random-badge"><div class="random-badge-dot"></div> <span data-i18n="land_random_badge">Live matching</span></div>
+        <h2 class="random-title" data-i18n="land_random_title">Don't know anyone?<br>Play with a stranger.</h2>
+        <p class="random-subtitle" data-i18n="land_random_sub">Get matched with someone random. Same questions, blind answers. See if you vibe — no names, no pressure.</p>
         <div class="random-steps">
           <div class="random-step reveal-d1">
             <div class="random-step-icon">🎲</div>
-            <div class="random-step-text">Join queue</div>
+            <div class="random-step-text" data-i18n="land_random_step1">Join queue</div>
           </div>
           <div class="random-step-connector">→</div>
           <div class="random-step reveal-d2">
             <div class="random-step-icon">🫣</div>
-            <div class="random-step-text">Answer blind</div>
+            <div class="random-step-text" data-i18n="land_random_step2">Answer blind</div>
           </div>
           <div class="random-step-connector">→</div>
           <div class="random-step reveal-d3">
             <div class="random-step-icon">✨</div>
-            <div class="random-step-text">See if you match</div>
+            <div class="random-step-text" data-i18n="land_random_step3">See if you match</div>
           </div>
         </div>
-        <a href="/s/" class="random-cta">Find a stranger</a>
-        <p class="random-note">anonymous · takes 3 minutes · free</p>
+        <a href="/s/" class="random-cta" data-i18n="land_random_cta">Find a stranger</a>
+        <p class="random-note" data-i18n="land_random_note">anonymous · takes 3 minutes · free</p>
       </div>
     </div>
   </section>
@@ -690,19 +728,19 @@
   <!-- HOW IT WORKS -->
   <section class="steps-section">
     <div class="container">
-      <div class="section-label reveal">how it works</div>
+      <div class="section-label reveal" data-i18n="land_how_label">how it works</div>
       <div class="steps">
         <div class="step reveal reveal-d1">
           <div class="step-num">1</div>
-          <div class="step-text">Answer 10 questions. <span>Honestly.</span></div>
+          <div class="step-text" data-i18n="land_how_step1">Answer 10 questions. <span>Honestly.</span></div>
         </div>
         <div class="step reveal reveal-d2">
           <div class="step-num">2</div>
-          <div class="step-text">Send the link. <span>They answer too.</span></div>
+          <div class="step-text" data-i18n="land_how_step2">Send the link. <span>They answer too.</span></div>
         </div>
         <div class="step reveal reveal-d3">
           <div class="step-num">3</div>
-          <div class="step-text">Both see everything. <span>At the same time.</span></div>
+          <div class="step-text" data-i18n="land_how_step3">Both see everything. <span>At the same time.</span></div>
         </div>
       </div>
     </div>
@@ -711,7 +749,7 @@
   <!-- THE MOMENT -->
   <section class="moment-section">
     <div class="container">
-      <div class="moment-text reveal">
+      <div class="moment-text reveal" data-i18n="land_moment">
         You matched on an app. You met at a party.
         You've been talking for a week but still
         have no idea what they actually think.
@@ -723,33 +761,33 @@
   <!-- QUESTIONS -->
   <section class="questions-section">
     <div class="container">
-      <div class="section-label reveal">example questions</div>
+      <div class="section-label reveal" data-i18n="land_examples_label">example questions</div>
       <div class="q-grid">
         <div class="q-card reveal reveal-d1">
-          <div class="q-card-q">Right now you want:</div>
+          <div class="q-card-q" data-i18n="land_q1">Right now you want:</div>
           <div class="q-options">
-            <span class="q-opt">something serious</span>
-            <span class="q-opt active">something fun with potential</span>
-            <span class="q-opt">honestly no idea</span>
-            <span class="q-opt">none of your business</span>
+            <span class="q-opt" data-i18n="land_q1_o1">something serious</span>
+            <span class="q-opt active" data-i18n="land_q1_o2">something fun with potential</span>
+            <span class="q-opt" data-i18n="land_q1_o3">honestly no idea</span>
+            <span class="q-opt" data-i18n="land_q1_o4">none of your business</span>
           </div>
         </div>
         <div class="q-card reveal reveal-d2">
-          <div class="q-card-q">The party ends at midnight. You leave at:</div>
+          <div class="q-card-q" data-i18n="land_q2">The party ends at midnight. You leave at:</div>
           <div class="q-options">
-            <span class="q-opt">11:45</span>
-            <span class="q-opt">midnight exactly</span>
-            <span class="q-opt active">2am</span>
-            <span class="q-opt">helping clean up at 3am</span>
+            <span class="q-opt" data-i18n="land_q2_o1">11:45</span>
+            <span class="q-opt" data-i18n="land_q2_o2">midnight exactly</span>
+            <span class="q-opt active" data-i18n="land_q2_o3">2am</span>
+            <span class="q-opt" data-i18n="land_q2_o4">helping clean up at 3am</span>
           </div>
         </div>
         <div class="q-card reveal reveal-d3">
-          <div class="q-card-q">When someone doesn't text back for 12 hours:</div>
+          <div class="q-card-q" data-i18n="land_q3">When someone doesn't text back for 12 hours:</div>
           <div class="q-options">
-            <span class="q-opt">already moved on mentally</span>
-            <span class="q-opt">fine, not checking</span>
-            <span class="q-opt active">three unsent messages</span>
-            <span class="q-opt">already told your friends</span>
+            <span class="q-opt" data-i18n="land_q3_o1">already moved on mentally</span>
+            <span class="q-opt" data-i18n="land_q3_o2">fine, not checking</span>
+            <span class="q-opt active" data-i18n="land_q3_o3">three unsent messages</span>
+            <span class="q-opt" data-i18n="land_q3_o4">already told your friends</span>
           </div>
         </div>
       </div>
@@ -759,12 +797,12 @@
   <!-- WHO IT'S FOR -->
   <section class="for-section">
     <div class="container">
-      <div class="section-label reveal">when to play</div>
+      <div class="section-label reveal" data-i18n="land_when_label">when to play</div>
       <div class="situations">
-        <p class="situation reveal reveal-d1">After a party when you have their Instagram but <em>don't know if there's anything there.</em></p>
-        <p class="situation reveal reveal-d2">Before a first date when you want a signal <em>without committing to the whole thing.</em></p>
-        <p class="situation reveal reveal-d3">With a friend you've <em>always been curious about.</em></p>
-        <p class="situation reveal reveal-d4">When you just want to know <em>if it's worth getting dressed for.</em></p>
+        <p class="situation reveal reveal-d1" data-i18n="land_when1">After a party when you have their Instagram but <em>don't know if there's anything there.</em></p>
+        <p class="situation reveal reveal-d2" data-i18n="land_when2">Before a first date when you want a signal <em>without committing to the whole thing.</em></p>
+        <p class="situation reveal reveal-d3" data-i18n="land_when3">With a friend you've <em>always been curious about.</em></p>
+        <p class="situation reveal reveal-d4" data-i18n="land_when4">When you just want to know <em>if it's worth getting dressed for.</em></p>
       </div>
     </div>
   </section>
@@ -775,29 +813,29 @@
       <div class="proof-stats reveal">
         <div class="proof-stat">
           <div class="proof-num">2,400+</div>
-          <div class="proof-label">sessions played</div>
+          <div class="proof-label" data-i18n="land_stat_sessions">sessions played</div>
         </div>
         <div class="proof-stat">
           <div class="proof-num">30+</div>
-          <div class="proof-label">question packs</div>
+          <div class="proof-label" data-i18n="land_stat_packs">question packs</div>
         </div>
         <div class="proof-stat">
           <div class="proof-num">3 min</div>
-          <div class="proof-label">average session</div>
+          <div class="proof-label" data-i18n="land_stat_time">average session</div>
         </div>
       </div>
       <div class="proof-quotes">
         <div class="proof-quote reveal reveal-d1">
-          <p>"we learned more in 3 minutes than in 3 weeks of texting"</p>
-          <div class="proof-author">couple matched on hinge</div>
+          <p data-i18n="land_quote1">"we learned more in 3 minutes than in 3 weeks of texting"</p>
+          <div class="proof-author" data-i18n="land_quote1_author">couple matched on hinge</div>
         </div>
         <div class="proof-quote reveal reveal-d2">
-          <p>"sent it to my situationship at 11pm. we're dating now."</p>
-          <div class="proof-author">@maya, 23</div>
+          <p data-i18n="land_quote2">"sent it to my situationship at 11pm. we're dating now."</p>
+          <div class="proof-author" data-i18n="land_quote2_author">@maya, 23</div>
         </div>
         <div class="proof-quote reveal reveal-d3">
-          <p>"the reveal part is genuinely nerve-wracking in the best way"</p>
-          <div class="proof-author">played with best friend</div>
+          <p data-i18n="land_quote3">"the reveal part is genuinely nerve-wracking in the best way"</p>
+          <div class="proof-author" data-i18n="land_quote3_author">played with best friend</div>
         </div>
       </div>
     </div>
@@ -807,23 +845,65 @@
   <!-- WAITLIST -->
   <section class="waitlist-section" id="waitlist">
     <div class="container">
-      <h2 class="waitlist-title reveal">get early access.</h2>
-      <p class="waitlist-sub reveal reveal-d1">be first when sessions go live.</p>
+      <h2 class="waitlist-title reveal" data-i18n="land_waitlist_title">get early access.</h2>
+      <p class="waitlist-sub reveal reveal-d1" data-i18n="land_waitlist_sub">be first when sessions go live.</p>
       <form class="waitlist-form reveal reveal-d2" id="waitlistForm">
         <input type="email" class="waitlist-input" placeholder="your@email.com" required>
-        <button type="submit" class="waitlist-btn">i'm in</button>
+        <button type="submit" class="waitlist-btn" data-i18n="land_waitlist_btn">i'm in</button>
       </form>
-      <div class="waitlist-success" id="waitlistSuccess">you're in ✓</div>
+      <div class="waitlist-success" id="waitlistSuccess" data-i18n="land_waitlist_success">you're in ✓</div>
     </div>
   </section>
 
   <footer class="footer">
     <div class="footer-logo">blindside.</div>
-    <div>built for the moment right after you meet someone interesting.</div>
+    <div data-i18n="land_footer_sub">built for the moment right after you meet someone interesting.</div>
     <a href="https://instagram.com/blindsidenow" target="_blank" rel="noopener" class="footer-insta">@blindsidenow</a>
   </footer>
 
+  <script src="lang.js"></script>
   <script>
+    // Landing page lang selector
+    function renderLandLangSelector() {
+      const el = document.getElementById('landLangSelector');
+      if (!el) return;
+      const cur = i18n.languages[i18n.current];
+      const options = Object.entries(i18n.languages)
+        .filter(([code]) => code !== i18n.current)
+        .map(([code, { flag, label }]) =>
+          `<button class="land-lang-item" data-lang="${code}">
+            <span class="lang-flag">${flag}</span>${label}
+          </button>`
+        ).join('');
+      el.innerHTML = `
+        <button class="land-lang-pill" onclick="event.stopPropagation(); this.parentElement.classList.toggle('open')">
+          <span class="lang-flag">${cur.flag}</span>${cur.label}
+        </button>
+        <div class="land-lang-dropdown">${options}</div>
+      `;
+      el.querySelectorAll('.land-lang-item').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const lang = btn.dataset.lang;
+          i18n.current = lang;
+          localStorage.setItem('bs-lang', lang);
+          document.documentElement.setAttribute('lang', lang);
+          i18n.applyAll();
+          renderLandLangSelector();
+        });
+      });
+    }
+
+    // Init i18n for landing page
+    document.documentElement.setAttribute('lang', i18n.current);
+    i18n.applyAll();
+    renderLandLangSelector();
+
+    // Close dropdown on outside click
+    document.addEventListener('click', () => {
+      document.querySelectorAll('.land-lang-selector.open').forEach(el => el.classList.remove('open'));
+    });
+
     const obs = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.15, rootMargin: '0px 0px -30px 0px' });
