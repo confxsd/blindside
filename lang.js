@@ -506,7 +506,7 @@ const i18n = {
       stranger_back: "back home",
       // Landing page
       land_nav_play: "play now",
-      land_hero_title: "Find your match<br>by playing games",
+      land_hero_title: "Get to know each other<br>by playing games",
       land_hero_sub:
         "Same questions. Neither sees the other's answers. Results revealed together. Takes 3 minutes.",
       land_hero_cta: "create a session",
@@ -1040,7 +1040,7 @@ const i18n = {
       stranger_back: "ana sayfaya dön",
       // Landing page
       land_nav_play: "hemen oyna",
-      land_hero_title: "Oyun oynayarak<br>insanlarla tanış",
+      land_hero_title: "Oyun oynayarak<br>birbirinizi tanıyın",
       land_hero_sub:
         "Aynı sorular. Kimse diğerinin cevaplarını görmez. Sonuçlar birlikte açılır. 3 dakika sürer.",
       land_hero_cta: "oturum oluştur",
@@ -1555,7 +1555,7 @@ const i18n = {
       stranger_back: "กลับหน้าแรก",
       // Landing page
       land_nav_play: "เล่นเลย",
-      land_hero_title: "หาคู่ของคุณ<br>ด้วยการเล่นเกม",
+      land_hero_title: "รู้จักกันมากขึ้น<br>ด้วยการเล่นเกม",
       land_hero_sub:
         "คำถามเดียวกัน ไม่มีใครเห็นคำตอบของอีกฝ่าย ผลลัพธ์เปิดเผยพร้อมกัน ใช้เวลา 3 นาที",
       land_hero_cta: "สร้างเซสชัน",
