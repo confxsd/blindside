@@ -41,15 +41,16 @@
       "tag": "Date Night",
       "angle": "Creative at-home date nights that feel like more than Netflix and chill",
       "date": "2026-03-30"
-    }
-  ],
-  "queue": [
+    },
     {
       "slug": "relationship-check-in-questions",
       "keyword": "relationship check-in questions",
       "tag": "Advice",
-      "angle": "Monthly relationship check-ins that prevent small issues from becoming big ones"
-    },
+      "angle": "Monthly relationship check-ins that prevent small issues from becoming big ones",
+      "date": "2026-03-31"
+    }
+  ],
+  "queue": [
     {
       "slug": "would-you-rather-couples-edition",
       "keyword": "would you rather questions for couples",
