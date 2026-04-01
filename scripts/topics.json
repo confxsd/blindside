@@ -48,15 +48,16 @@
       "tag": "Advice",
       "angle": "Monthly relationship check-ins that prevent small issues from becoming big ones",
       "date": "2026-03-31"
-    }
-  ],
-  "queue": [
+    },
     {
       "slug": "would-you-rather-couples-edition",
       "keyword": "would you rather questions for couples",
       "tag": "Games",
-      "angle": "200+ would you rather questions that reveal surprising things about your partner"
-    },
+      "angle": "200+ would you rather questions that reveal surprising things about your partner",
+      "date": "2026-04-01"
+    }
+  ],
+  "queue": [
     {
       "slug": "things-to-do-as-a-couple",
       "keyword": "things to do as a couple",
