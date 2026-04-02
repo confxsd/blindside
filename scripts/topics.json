@@ -55,15 +55,16 @@
       "tag": "Games",
       "angle": "200+ would you rather questions that reveal surprising things about your partner",
       "date": "2026-04-01"
-    }
-  ],
-  "queue": [
+    },
     {
       "slug": "things-to-do-as-a-couple",
       "keyword": "things to do as a couple",
       "tag": "Date Night",
-      "angle": "Beyond dinner and movies — activities that actually strengthen your bond"
-    },
+      "angle": "Beyond dinner and movies — activities that actually strengthen your bond",
+      "date": "2026-04-02"
+    }
+  ],
+  "queue": [
     {
       "slug": "newlywed-game-questions",
       "keyword": "newlywed game questions",
