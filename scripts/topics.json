@@ -69,15 +69,16 @@
       "tag": "Games",
       "angle": "The best newlywed game questions for any couple — married or not",
       "date": "2026-04-03"
-    }
-  ],
-  "queue": [
+    },
     {
       "slug": "couples-quiz-how-well-do-you-know-me",
       "keyword": "couples quiz how well do you know me",
       "tag": "Quizzes",
-      "angle": "Put your relationship knowledge to the test with questions that actually matter"
-    },
+      "angle": "Put your relationship knowledge to the test with questions that actually matter",
+      "date": "2026-04-04"
+    }
+  ],
+  "queue": [
     {
       "slug": "long-distance-relationship-games",
       "keyword": "long distance relationship games",
