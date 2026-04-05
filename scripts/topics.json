@@ -76,15 +76,16 @@
       "tag": "Quizzes",
       "angle": "Put your relationship knowledge to the test with questions that actually matter",
       "date": "2026-04-04"
-    }
-  ],
-  "queue": [
+    },
     {
       "slug": "long-distance-relationship-games",
       "keyword": "long distance relationship games",
       "tag": "Games",
-      "angle": "Games and activities that keep long-distance couples connected across the miles"
-    },
+      "angle": "Games and activities that keep long-distance couples connected across the miles",
+      "date": "2026-04-05"
+    }
+  ],
+  "queue": [
     {
       "slug": "first-date-questions",
       "keyword": "first date questions",
