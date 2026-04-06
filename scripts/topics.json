@@ -83,15 +83,16 @@
       "tag": "Games",
       "angle": "Games and activities that keep long-distance couples connected across the miles",
       "date": "2026-04-05"
-    }
-  ],
-  "queue": [
+    },
     {
       "slug": "first-date-questions",
       "keyword": "first date questions",
       "tag": "Dating",
-      "angle": "Questions that reveal compatibility fast — skip the awkward small talk"
-    },
+      "angle": "Questions that reveal compatibility fast — skip the awkward small talk",
+      "date": "2026-04-06"
+    }
+  ],
+  "queue": [
     {
       "slug": "intimacy-building-exercises-couples",
       "keyword": "intimacy building exercises for couples",
