@@ -594,6 +594,49 @@
       font-weight: 400;
     }
 
+    /* ===== LANG TOGGLE ===== */
+    .lang-toggle {
+      position: fixed;
+      top: 24px;
+      right: 28px;
+      z-index: 50;
+      display: flex;
+      gap: 2px;
+      font-family: var(--font-body);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-mid);
+      background: rgba(250, 250, 248, 0.7);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      padding: 8px 12px;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+    }
+    .lang-toggle button {
+      background: none;
+      border: none;
+      font: inherit;
+      letter-spacing: inherit;
+      text-transform: inherit;
+      color: var(--text-mid);
+      cursor: pointer;
+      padding: 2px 8px;
+      border-radius: 100px;
+      transition: color 0.4s var(--ease);
+    }
+    .lang-toggle button.active {
+      color: var(--accent);
+    }
+    .lang-toggle button:hover { color: var(--text); }
+    .lang-toggle button.active:hover { color: var(--accent); }
+    .lang-sep { color: var(--border); align-self: center; }
+
+    @media (max-width: 720px) {
+      .lang-toggle { top: 16px; right: 16px; padding: 6px 10px; }
+    }
+
     /* ===== FOOTER ===== */
     footer {
       padding: 96px 0 72px;
@@ -630,64 +673,71 @@
 </head>
 <body>
 
+  <!-- ===== LANG TOGGLE ===== -->
+  <div class="lang-toggle" role="group" aria-label="Language">
+    <button type="button" data-lang="en" class="active">EN</button>
+    <span class="lang-sep">/</span>
+    <button type="button" data-lang="tr">TR</button>
+  </div>
+
   <!-- ===== HERO ===== -->
   <section class="hero">
     <div class="hero-inner">
-      <div class="label reveal">Mira — Early Access</div>
+      <div class="label reveal" data-i18n="hero.label">Mira — Early Access</div>
       <h1 class="reveal d1">
-        <span class="line">Meet through someone</span>
-        <span class="line serif-italic">who knows you.</span>
+        <span class="line" data-i18n="hero.h1a">Meet through someone</span>
+        <span class="line serif-italic" data-i18n="hero.h1b">who knows you.</span>
       </h1>
-      <p class="hero-sub reveal d2">
+      <p class="hero-sub reveal d2" data-i18n="hero.sub">
         A trust-based introduction network — where a friend vouches,
         AI matches, and you decide.
       </p>
       <div class="hero-ctas reveal d3">
-        <a href="#waitlist" class="btn btn-primary" data-choice="partner">I'm looking for a partner</a>
-        <a href="#waitlist" class="btn btn-secondary" data-choice="introduce">I want to introduce a friend</a>
+        <a href="#waitlist" class="btn btn-primary" data-choice="partner" data-i18n="cta.partner">I'm looking for a partner</a>
+        <a href="#waitlist" class="btn btn-secondary" data-choice="introduce" data-i18n="cta.introduce">I want to introduce a friend</a>
       </div>
-      <div class="hero-foot reveal d4">Launching in Istanbul. Waitlist open now.</div>
+      <div class="hero-foot reveal d4" data-i18n="hero.foot">Launching in Istanbul. Waitlist open now.</div>
     </div>
   </section>
 
   <!-- ===== PROBLEM ===== -->
   <section class="problem">
     <div class="problem-text reveal">
-      <p>Meeting people became a catalogue.</p>
-      <p>You browse strangers.<br>
+      <p data-i18n="problem.p1">Meeting people became a catalogue.</p>
+      <p data-i18n-html="problem.p2">You browse strangers.<br>
          Strangers browse you.<br>
          Everyone is performing.<br>
          Nobody is themselves.</p>
-      <p>There is a better way. There always has been.</p>
+      <p data-i18n="problem.p3">There is a better way. There always has been.</p>
     </div>
   </section>
 
   <!-- ===== HOW IT WORKS ===== -->
   <section class="how">
     <div class="wrap">
-      <div class="label reveal">How Mira works</div>
+      <div class="label reveal" data-i18n="how.label">How Mira works</div>
 
       <div class="step reveal">
         <div class="step-num">01</div>
         <div class="step-body">
-          <h3>A friend who knows you<br>writes a genuine introduction.</h3>
-          <p>They vouch for who you are, not just what you look like.</p>
+          <h3 data-i18n-html="how.s1.title">A friend who knows you<br>writes a genuine introduction.</h3>
+          <p data-i18n="how.s1.sub">They vouch for who you are, not just what you look like.</p>
         </div>
       </div>
 
       <div class="step reveal">
         <div class="step-num">02</div>
         <div class="step-body">
-          <h3>We find someone compatible. You both answer the same questions, separately.</h3>
-          <p>Personality first. Revealed to both of you at the same time.</p>
+          <h3 data-i18n="how.s2.title">We find someone compatible. You both answer the same questions, separately.</h3>
+          <p data-i18n="how.s2.sub">Personality first. Revealed to both of you at the same time.</p>
         </div>
       </div>
 
       <div class="step reveal">
         <div class="step-num">03</div>
         <div class="step-body">
-          <h3>If you both want to continue, photos and profiles unlock.</h3>
-          <p>One introduction, every week. No browsing. No noise. Just one carefully chosen person.</p>
+          <h3 data-i18n="how.s3.title">If you both want to continue, photos and profiles unlock.</h3>
+          <p data-i18n="how.s3.sub">One introduction, every week. No browsing. No noise. Just one carefully chosen person.</p>
         </div>
       </div>
     </div>
@@ -696,27 +746,27 @@
   <!-- ===== DIFFERENCE ===== -->
   <section class="diff">
     <div class="wrap-wide">
-      <div class="label reveal">Why Mira is different</div>
+      <div class="label reveal" data-i18n="diff.label">Why Mira is different</div>
       <div class="diff-grid">
         <div class="diff-col diff-other reveal">
-          <h4>Other apps</h4>
+          <h4 data-i18n="diff.other">Other apps</h4>
           <ul>
-            <li>Strangers can see you</li>
-            <li>Anyone can contact you</li>
-            <li>Judged on photos first</li>
-            <li>Infinite options, no depth</li>
-            <li>Designed to keep you scrolling</li>
+            <li data-i18n="diff.o1">Strangers can see you</li>
+            <li data-i18n="diff.o2">Anyone can contact you</li>
+            <li data-i18n="diff.o3">Judged on photos first</li>
+            <li data-i18n="diff.o4">Infinite options, no depth</li>
+            <li data-i18n="diff.o5">Designed to keep you scrolling</li>
           </ul>
         </div>
         <div class="diff-divider reveal d1"></div>
         <div class="diff-col diff-mira reveal d2">
           <h4>Mira</h4>
           <ul>
-            <li>Only people a friend chose</li>
-            <li>Contact only after mutual interest</li>
-            <li>Character first, photo second</li>
-            <li>One introduction per week</li>
-            <li>Designed to get you offline</li>
+            <li data-i18n="diff.m1">Only people a friend chose</li>
+            <li data-i18n="diff.m2">Contact only after mutual interest</li>
+            <li data-i18n="diff.m3">Character first, photo second</li>
+            <li data-i18n="diff.m4">One introduction per week</li>
+            <li data-i18n="diff.m5">Designed to get you offline</li>
           </ul>
         </div>
       </div>
@@ -726,28 +776,28 @@
   <!-- ===== TWO PATHS ===== -->
   <section class="paths">
     <div class="wrap">
-      <h2 class="reveal">Two ways to join.</h2>
+      <h2 class="reveal" data-i18n="paths.h2">Two ways to join.</h2>
 
       <div class="path reveal">
         <span class="path-arrow">→</span>
-        <h3>I'm looking for a partner</h3>
-        <p>
+        <h3 data-i18n="paths.a.title">I'm looking for a partner</h3>
+        <p data-i18n="paths.a.body">
           Join the waitlist. Answer a few questions about yourself.
           Receive one carefully matched introduction each week.
           You control everything that follows.
         </p>
-        <a href="#waitlist" class="path-link" data-choice="partner">Join the waitlist</a>
+        <a href="#waitlist" class="path-link" data-choice="partner" data-i18n="paths.a.link">Join the waitlist</a>
       </div>
 
       <div class="path reveal">
         <span class="path-arrow">↗</span>
-        <h3>I want to introduce a friend</h3>
-        <p>
+        <h3 data-i18n="paths.b.title">I want to introduce a friend</h3>
+        <p data-i18n="paths.b.body">
           Know someone who deserves to meet the right person?
           Write a short introduction. Your friend decides if they
           want to join. You get notified when they match.
         </p>
-        <a href="#waitlist" class="path-link" data-choice="introduce">Introduce someone</a>
+        <a href="#waitlist" class="path-link" data-choice="introduce" data-i18n="paths.b.link">Introduce someone</a>
       </div>
     </div>
   </section>
@@ -756,12 +806,12 @@
   <section class="trust">
     <div class="wrap">
       <div class="trust-quote reveal">
-        <p>You are never browsed by strangers.</p>
-        <p>You never appear in a feed.</p>
-        <p>You only exist for the one person</p>
-        <p>someone specifically chose for you.</p>
+        <p data-i18n="trust.q1">You are never browsed by strangers.</p>
+        <p data-i18n="trust.q2">You never appear in a feed.</p>
+        <p data-i18n="trust.q3">You only exist for the one person</p>
+        <p data-i18n="trust.q4">someone specifically chose for you.</p>
       </div>
-      <div class="trust-sub reveal d2">
+      <div class="trust-sub reveal d2" data-i18n-html="trust.sub">
         This is how people used to meet.<br>
         We made it work for now.
       </div>
@@ -771,38 +821,38 @@
   <!-- ===== WAITLIST ===== -->
   <section class="waitlist" id="waitlist">
     <div class="wrap">
-      <h2 class="reveal">Get early access.</h2>
-      <p class="waitlist-sub reveal d1">
+      <h2 class="reveal" data-i18n="wait.h2">Get early access.</h2>
+      <p class="waitlist-sub reveal d1" data-i18n-html="wait.sub">
         Mira launches in Istanbul.<br>
         Be among the first to join.
       </p>
 
       <form class="form reveal d2" id="waitlistForm" novalidate>
-        <input type="email" class="input" placeholder="your email" required>
+        <input type="email" class="input" placeholder="your email" data-i18n-placeholder="wait.email" required>
 
         <div class="radios" role="radiogroup">
           <label class="radio active" data-value="partner">
             <input type="radio" name="intent" value="partner" checked>
             <span class="radio-dot"></span>
-            <span>Looking for a partner</span>
+            <span data-i18n="wait.r1">Looking for a partner</span>
           </label>
           <label class="radio" data-value="introduce">
             <input type="radio" name="intent" value="introduce">
             <span class="radio-dot"></span>
-            <span>Want to introduce a friend</span>
+            <span data-i18n="wait.r2">Want to introduce a friend</span>
           </label>
         </div>
 
-        <button type="submit" class="submit">Join the waitlist</button>
+        <button type="submit" class="submit" data-i18n="wait.submit">Join the waitlist</button>
 
-        <p class="form-foot">
+        <p class="form-foot" data-i18n="wait.foot">
           We'll reach out personally before your account is activated.
         </p>
       </form>
 
       <div class="form-success" id="formSuccess">
-        You're on the list.
-        <small>We'll be in touch.</small>
+        <span data-i18n="wait.success">You're on the list.</span>
+        <small data-i18n="wait.successSub">We'll be in touch.</small>
       </div>
     </div>
   </section>
@@ -810,14 +860,172 @@
   <!-- ===== FOOTER ===== -->
   <footer>
     <div class="foot-logo">Mira</div>
-    <div class="foot-loc">Istanbul · 2025</div>
-    <p class="foot-line">
+    <div class="foot-loc" data-i18n="foot.loc">Istanbul · 2025</div>
+    <p class="foot-line" data-i18n="foot.line">
       Built on the belief that the best introductions
       come from people who actually know you.
     </p>
   </footer>
 
   <script>
+    // ===== i18n =====
+    const I18N = {
+      en: {
+        'hero.label': 'Mira — Early Access',
+        'hero.h1a': 'Meet through someone',
+        'hero.h1b': 'who knows you.',
+        'hero.sub': 'A trust-based introduction network — where a friend vouches, AI matches, and you decide.',
+        'hero.foot': 'Launching in Istanbul. Waitlist open now.',
+        'cta.partner': "I'm looking for a partner",
+        'cta.introduce': 'I want to introduce a friend',
+
+        'problem.p1': 'Meeting people became a catalogue.',
+        'problem.p2': 'You browse strangers.<br>Strangers browse you.<br>Everyone is performing.<br>Nobody is themselves.',
+        'problem.p3': 'There is a better way. There always has been.',
+
+        'how.label': 'How Mira works',
+        'how.s1.title': 'A friend who knows you<br>writes a genuine introduction.',
+        'how.s1.sub': 'They vouch for who you are, not just what you look like.',
+        'how.s2.title': 'We find someone compatible. You both answer the same questions, separately.',
+        'how.s2.sub': 'Personality first. Revealed to both of you at the same time.',
+        'how.s3.title': 'If you both want to continue, photos and profiles unlock.',
+        'how.s3.sub': 'One introduction, every week. No browsing. No noise. Just one carefully chosen person.',
+
+        'diff.label': 'Why Mira is different',
+        'diff.other': 'Other apps',
+        'diff.o1': 'Strangers can see you',
+        'diff.o2': 'Anyone can contact you',
+        'diff.o3': 'Judged on photos first',
+        'diff.o4': 'Infinite options, no depth',
+        'diff.o5': 'Designed to keep you scrolling',
+        'diff.m1': 'Only people a friend chose',
+        'diff.m2': 'Contact only after mutual interest',
+        'diff.m3': 'Character first, photo second',
+        'diff.m4': 'One introduction per week',
+        'diff.m5': 'Designed to get you offline',
+
+        'paths.h2': 'Two ways to join.',
+        'paths.a.title': "I'm looking for a partner",
+        'paths.a.body': 'Join the waitlist. Answer a few questions about yourself. Receive one carefully matched introduction each week. You control everything that follows.',
+        'paths.a.link': 'Join the waitlist',
+        'paths.b.title': 'I want to introduce a friend',
+        'paths.b.body': 'Know someone who deserves to meet the right person? Write a short introduction. Your friend decides if they want to join. You get notified when they match.',
+        'paths.b.link': 'Introduce someone',
+
+        'trust.q1': 'You are never browsed by strangers.',
+        'trust.q2': 'You never appear in a feed.',
+        'trust.q3': 'You only exist for the one person',
+        'trust.q4': 'someone specifically chose for you.',
+        'trust.sub': 'This is how people used to meet.<br>We made it work for now.',
+
+        'wait.h2': 'Get early access.',
+        'wait.sub': 'Mira launches in Istanbul.<br>Be among the first to join.',
+        'wait.email': 'your email',
+        'wait.r1': 'Looking for a partner',
+        'wait.r2': 'Want to introduce a friend',
+        'wait.submit': 'Join the waitlist',
+        'wait.foot': "We'll reach out personally before your account is activated.",
+        'wait.success': "You're on the list.",
+        'wait.successSub': "We'll be in touch.",
+
+        'foot.loc': 'Istanbul · 2025',
+        'foot.line': 'Built on the belief that the best introductions come from people who actually know you.',
+      },
+      tr: {
+        'hero.label': 'Mira — Erken Erişim',
+        'hero.h1a': 'Sizi tanıyan biri',
+        'hero.h1b': 'aracılığıyla tanışın.',
+        'hero.sub': 'Güvene dayalı bir tanıştırma ağı — bir arkadaşınız sizi önerir, yapay zekâ eşleştirir, kararı siz verirsiniz.',
+        'hero.foot': 'İstanbul’da başlıyor. Bekleme listesi açık.',
+        'cta.partner': 'Bir partner arıyorum',
+        'cta.introduce': 'Bir arkadaşımı tanıştırmak istiyorum',
+
+        'problem.p1': 'İnsanlarla tanışmak bir kataloğa dönüştü.',
+        'problem.p2': 'Yabancılara göz atıyorsunuz.<br>Yabancılar size göz atıyor.<br>Herkes bir rol oynuyor.<br>Kimse kendisi değil.',
+        'problem.p3': 'Daha iyi bir yolu var. Hep vardı.',
+
+        'how.label': 'Mira nasıl çalışır',
+        'how.s1.title': 'Sizi tanıyan bir arkadaşınız<br>içten bir tanıtım yazar.',
+        'how.s1.sub': 'Sadece nasıl göründüğünüze değil, kim olduğunuza kefil olur.',
+        'how.s2.title': 'Size uygun birini buluruz. İkiniz de aynı soruları, birbirinizden ayrı yanıtlarsınız.',
+        'how.s2.sub': 'Önce kişilik. İkinize aynı anda gösterilir.',
+        'how.s3.title': 'İkiniz de devam etmek isterseniz fotoğraflar ve profiller açılır.',
+        'how.s3.sub': 'Her hafta tek bir tanıştırma. Göz atmak yok. Gürültü yok. Sadece dikkatle seçilmiş bir kişi.',
+
+        'diff.label': 'Mira neden farklı',
+        'diff.other': 'Diğer uygulamalar',
+        'diff.o1': 'Yabancılar sizi görebilir',
+        'diff.o2': 'Herkes size ulaşabilir',
+        'diff.o3': 'Önce fotoğrafa göre yargılanırsınız',
+        'diff.o4': 'Sonsuz seçenek, sıfır derinlik',
+        'diff.o5': 'Sizi kaydırmaya devam ettirmek için tasarlandı',
+        'diff.m1': 'Sadece bir arkadaşın seçtiği kişiler',
+        'diff.m2': 'İletişim yalnızca karşılıklı ilgiden sonra',
+        'diff.m3': 'Önce karakter, sonra fotoğraf',
+        'diff.m4': 'Haftada tek bir tanıştırma',
+        'diff.m5': 'Sizi çevrimdışına çıkarmak için tasarlandı',
+
+        'paths.h2': 'Katılmanın iki yolu.',
+        'paths.a.title': 'Bir partner arıyorum',
+        'paths.a.body': 'Bekleme listesine katılın. Kendinize dair birkaç soruyu yanıtlayın. Her hafta dikkatle eşleştirilmiş bir tanıştırma alın. Sonrasındaki her şey sizin kontrolünüzde.',
+        'paths.a.link': 'Bekleme listesine katıl',
+        'paths.b.title': 'Bir arkadaşımı tanıştırmak istiyorum',
+        'paths.b.body': 'Doğru kişiyle tanışmayı hak eden birini tanıyor musunuz? Kısa bir tanıtım yazın. Arkadaşınız katılıp katılmayacağına kendisi karar verir. Eşleştiğinde haberiniz olur.',
+        'paths.b.link': 'Birini tanıştır',
+
+        'trust.q1': 'Yabancılar size asla göz atmaz.',
+        'trust.q2': 'Hiçbir akışta görünmezsiniz.',
+        'trust.q3': 'Yalnızca birinin sizin için',
+        'trust.q4': 'özellikle seçtiği kişinin gözünde varsınız.',
+        'trust.sub': 'İnsanlar eskiden böyle tanışırdı.<br>Biz bunu bugüne uyarladık.',
+
+        'wait.h2': 'Erken erişim alın.',
+        'wait.sub': 'Mira İstanbul’da başlıyor.<br>İlk katılanlardan olun.',
+        'wait.email': 'e-posta adresiniz',
+        'wait.r1': 'Partner arıyorum',
+        'wait.r2': 'Bir arkadaşımı tanıştırmak istiyorum',
+        'wait.submit': 'Bekleme listesine katıl',
+        'wait.foot': 'Hesabınız etkinleştirilmeden önce sizinle bizzat iletişime geçeceğiz.',
+        'wait.success': 'Listedesiniz.',
+        'wait.successSub': 'Sizinle iletişime geçeceğiz.',
+
+        'foot.loc': 'İstanbul · 2025',
+        'foot.line': 'En iyi tanıştırmaların sizi gerçekten tanıyan insanlardan geldiği inancıyla kuruldu.',
+      },
+    };
+
+    function applyLang(lang) {
+      const dict = I18N[lang] || I18N.en;
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const k = el.getAttribute('data-i18n');
+        if (dict[k] != null) el.textContent = dict[k];
+      });
+      document.querySelectorAll('[data-i18n-html]').forEach(el => {
+        const k = el.getAttribute('data-i18n-html');
+        if (dict[k] != null) el.innerHTML = dict[k];
+      });
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const k = el.getAttribute('data-i18n-placeholder');
+        if (dict[k] != null) el.setAttribute('placeholder', dict[k]);
+      });
+      document.querySelectorAll('.lang-toggle button').forEach(b => {
+        b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+      });
+      try { localStorage.setItem('mira_lang', lang); } catch (e) {}
+    }
+
+    (function initLang() {
+      let saved = null;
+      try { saved = localStorage.getItem('mira_lang'); } catch (e) {}
+      const browser = (navigator.language || 'en').toLowerCase().startsWith('tr') ? 'tr' : 'en';
+      applyLang(saved || browser);
+    })();
+
+    document.querySelectorAll('.lang-toggle button').forEach(b => {
+      b.addEventListener('click', () => applyLang(b.getAttribute('data-lang')));
+    });
+
     // Reveal on scroll
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => {
