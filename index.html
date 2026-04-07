@@ -1,930 +1,876 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light" data-accent="sunset">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <title>blindside — both answer. both find out.</title>
-  <meta name="description" content="Answer the same questions. Neither sees the other's answers. Results revealed together. No download. Takes 3 minutes. Free.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mira — Meet through someone who knows you</title>
+  <meta name="description" content="Mira is a trust-based introduction network. A friend vouches, AI matches, you decide. One carefully chosen introduction per week.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://blindside.to/">
-  <meta property="og:title" content="blindside — both answer. both find out.">
-  <meta property="og:description" content="Two people. Same questions. Neither sees the other's answers. Until now.">
-  <meta property="og:image" content="https://blindside.to/og-image.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="blindside — both answer. both find out.">
-  <meta name="twitter:description" content="Two people. Same questions. Neither sees the other's answers. Until now.">
-  <meta name="twitter:image" content="https://blindside.to/og-image.png">
+  <meta property="og:title" content="Mira — Meet through someone who knows you">
+  <meta property="og:description" content="A trust-based introduction network. One carefully chosen introduction per week.">
   <link rel="canonical" href="https://blindside.to/">
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
     :root {
-      --bg: #F2F0EB;
-      --bg2: #FAFAF7;
-      --surface: rgba(0,0,0,0.03);
-      --surface-hover: rgba(0,0,0,0.06);
-      --border: rgba(0,0,0,0.08);
-      --text: #1c1c1a;
-      --text-dim: rgba(0,0,0,0.38);
-      --text-mid: rgba(0,0,0,0.58);
-      --card-bg: #FFFFFF;
-      --card-border: rgba(0,0,0,0.06);
-      --card-shadow: 0 1px 2px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.06);
-      --card-shadow-lg: 0 2px 4px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.08);
-      --accent-1: #7C3AED;
-      --accent-2: #9D5CF5;
-      --accent-1-glow: rgba(124,58,237,0.15);
-      --accent-1-bg: rgba(124,58,237,0.08);
-      --accent-1-border: rgba(124,58,237,0.18);
-      --radius: 12px;
-      --radius-sm: 8px;
+      --bg: #FAFAF8;
+      --bg-alt: #F0EDE8;
+      --text: #1A1814;
+      --text-mid: #7A7570;
+      --border: #E8E4DF;
+      --accent: #C4714A;
+      --accent-hover: #A85C37;
+
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+      --size-hero: clamp(48px, 8vw, 80px);
+      --size-display: clamp(34px, 5vw, 54px);
+      --size-section: clamp(28px, 3.5vw, 40px);
+      --size-body: 17px;
+      --size-small: 13px;
+      --size-label: 11px;
+
+      --max-text: 680px;
+      --max-wide: 960px;
+
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
     }
 
-    html { scroll-behavior: smooth; }
+    *, *::before, *::after {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
     body {
-      font-family: 'DM Sans', -apple-system, sans-serif;
-      background: var(--bg);
+      font-family: var(--font-body);
+      font-size: var(--size-body);
+      line-height: 1.75;
       color: var(--text);
+      background: var(--bg);
+      font-weight: 400;
       -webkit-font-smoothing: antialiased;
-      font-size: 15px;
-      line-height: 1.6;
+      -moz-osx-font-smoothing: grayscale;
       overflow-x: hidden;
+      position: relative;
     }
 
-    ::selection { background: var(--accent-1); color: white; }
+    /* Subtle grain */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.35;
+      mix-blend-mode: multiply;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.09 0 0 0 0 0.08 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
 
-    /* ===== REVEAL ===== */
+    main, section, header, footer { position: relative; z-index: 2; }
+
+    ::selection { background: var(--accent); color: var(--bg); }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.4s var(--ease);
+    }
+
+    /* Layout */
+    .wrap {
+      max-width: var(--max-text);
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    .wrap-wide {
+      max-width: var(--max-wide);
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    section {
+      padding: 140px 0;
+    }
+
+    @media (max-width: 720px) {
+      section { padding: 96px 0; }
+    }
+
+    /* Typography */
+    .label {
+      font-family: var(--font-body);
+      font-size: var(--size-label);
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--text-mid);
+      margin-bottom: 32px;
+      display: inline-block;
+    }
+
+    .display {
+      font-family: var(--font-display);
+      font-weight: 500;
+      line-height: 1.08;
+      letter-spacing: -0.015em;
+      color: var(--text);
+    }
+
+    .serif-italic {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    /* Reveal animations */
     .reveal {
       opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
+      transform: translateY(24px);
+      transition: opacity 1.2s var(--ease), transform 1.2s var(--ease);
     }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-    .reveal-d1 { transition-delay: 0.08s; }
-    .reveal-d2 { transition-delay: 0.16s; }
-    .reveal-d3 { transition-delay: 0.24s; }
-    .reveal-d4 { transition-delay: 0.32s; }
-
-    /* ===== LAYOUT ===== */
-    .container { max-width: 600px; margin: 0 auto; padding: 0 24px; }
-    section { padding: 72px 0; }
-
-    /* ===== NAV ===== */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      padding: 14px 24px;
-      display: flex; justify-content: space-between; align-items: center;
-      background: rgba(242,240,235,0.92);
-      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-logo {
-      font-family: 'Syne', sans-serif; font-weight: 800;
-      font-size: 20px; letter-spacing: -1px; color: var(--text);
-      text-decoration: none;
-    }
-    .nav-cta {
-      font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700;
-      padding: 9px 18px; border-radius: var(--radius);
-      background: var(--accent-1); color: white;
-      text-decoration: none; transition: all 0.2s;
-      box-shadow: 0 2px 8px var(--accent-1-glow);
-    }
-    .nav-cta:hover { box-shadow: 0 4px 16px var(--accent-1-glow); }
+    .reveal.in { opacity: 1; transform: none; }
+    .d1 { transition-delay: 0.12s; }
+    .d2 { transition-delay: 0.24s; }
+    .d3 { transition-delay: 0.36s; }
+    .d4 { transition-delay: 0.48s; }
+    .d5 { transition-delay: 0.60s; }
 
     /* ===== HERO ===== */
     .hero {
-      min-height: 100dvh;
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      text-align: center; padding-top: 60px;
-      position: relative;
-    }
-    .hero::before {
-      content: '';
-      position: absolute; width: 280px; height: 280px;
-      background: radial-gradient(circle, var(--accent-1-glow) 0%, transparent 70%);
-      top: 28%; left: 50%; transform: translateX(-50%);
-      pointer-events: none;
+      padding: 160px 0 140px;
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
     }
 
-    .hero-emoji {
-      width: 80px; height: 80px; border-radius: var(--radius);
-      background: var(--card-bg); display: flex;
-      align-items: center; justify-content: center;
-      font-size: 36px; margin-bottom: 28px;
-      box-shadow: var(--card-shadow-lg);
-      border: 1px solid var(--card-border);
-      position: relative;
-      animation: float 3s ease-in-out infinite;
-    }
-    .hero-emoji::before, .hero-emoji::after {
-      content: ''; position: absolute; inset: 0;
-      border-radius: var(--radius);
-      border: 1px solid var(--card-border);
-      background: var(--card-bg); z-index: -1;
-    }
-    .hero-emoji::before { transform: rotate(-4deg) translate(-2px, 3px); opacity: 0.6; }
-    .hero-emoji::after { transform: rotate(3deg) translate(2px, 5px); opacity: 0.35; }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-6px); }
+    .hero-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 28px;
+      text-align: center;
     }
 
-    .hero-title {
-      font-family: 'Syne', sans-serif; font-weight: 600;
-      font-size: clamp(30px, 7vw, 40px);
-      letter-spacing: -0.8px; line-height: 1.2;
-      margin-bottom: 16px;
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: var(--size-hero);
+      font-weight: 500;
+      line-height: 1.04;
+      letter-spacing: -0.02em;
+      margin: 28px 0 36px;
+    }
+
+    .hero h1 .line {
+      display: block;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      font-weight: 400;
     }
 
     .hero-sub {
-      font-size: 15px; color: var(--text-mid);
-      max-width: 380px; line-height: 1.65;
-      margin-bottom: 32px;
+      font-size: 19px;
+      line-height: 1.7;
+      color: var(--text-mid);
+      max-width: 540px;
+      margin: 0 auto 52px;
+      font-weight: 400;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 400;
+      padding: 16px 28px;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: all 0.4s var(--ease);
+      letter-spacing: 0.01em;
+      border: 1px solid transparent;
+      min-width: 220px;
     }
 
     .btn-primary {
-      font-family: 'Syne', sans-serif; font-weight: 700;
-      font-size: 15px; padding: 16px 32px;
-      border-radius: var(--radius); border: none;
-      background: var(--accent-1); color: white;
-      cursor: pointer; transition: all 0.2s;
-      box-shadow: 0 2px 8px var(--accent-1-glow);
+      background: var(--accent);
+      color: #FFFDF9;
+      border-color: var(--accent);
     }
-    .btn-primary:hover { box-shadow: 0 4px 16px var(--accent-1-glow); }
-    .btn-primary:active { transform: scale(0.97); }
-
-    .hero-note {
-      font-size: 13px; color: var(--text-dim);
-      margin-top: 14px; letter-spacing: 0.2px;
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      border-color: var(--accent-hover);
+      transform: translateY(-1px);
     }
 
-    .hero-proof {
-      display: flex; align-items: center; gap: 10px;
-      margin-top: 24px; color: var(--text-dim); font-size: 13px;
+    .btn-secondary {
+      background: transparent;
+      color: var(--accent);
+      border-color: var(--accent);
     }
-    .hero-avatars {
-      display: flex;
-    }
-    .hero-avatar {
-      width: 28px; height: 28px; border-radius: 50%;
-      border: 2px solid var(--bg);
-      margin-left: -8px; display: flex;
-      align-items: center; justify-content: center;
-      font-size: 13px; background: var(--card-bg);
-      box-shadow: var(--card-shadow);
-    }
-    .hero-avatar:first-child { margin-left: 0; }
-    .hero-proof-text span {
-      color: var(--text); font-weight: 500;
+    .btn-secondary:hover {
+      background: var(--accent);
+      color: #FFFDF9;
+      transform: translateY(-1px);
     }
 
-    /* ===== STEPS ===== */
-    .steps-section { border-top: 1px solid var(--border); }
-
-    .section-label {
-      font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 700;
-      letter-spacing: 2px; text-transform: uppercase;
-      color: var(--accent-1); margin-bottom: 32px;
+    .hero-foot {
+      font-size: var(--size-small);
+      color: var(--text-mid);
+      letter-spacing: 0.02em;
     }
 
-    .steps {
-      display: flex; flex-direction: column; gap: 16px;
+    /* ===== PROBLEM ===== */
+    .problem {
+      padding: 100px 0 140px;
     }
+    .problem-text {
+      font-family: var(--font-display);
+      font-size: var(--size-display);
+      font-weight: 400;
+      line-height: 1.25;
+      color: var(--text);
+      max-width: 720px;
+      margin-left: max(28px, calc((100vw - 860px) / 2));
+      padding-right: 28px;
+      letter-spacing: -0.01em;
+    }
+    .problem-text p {
+      margin-bottom: 1.1em;
+    }
+    .problem-text p:last-child {
+      margin-bottom: 0;
+      font-style: italic;
+      color: var(--text-mid);
+    }
+
+    @media (max-width: 900px) {
+      .problem-text { margin-left: 28px; }
+    }
+
+    /* ===== HOW IT WORKS ===== */
+    .how .label { margin-bottom: 72px; }
 
     .step {
-      display: flex; gap: 16px; align-items: flex-start;
-      background: var(--card-bg); border: 1px solid var(--card-border);
-      border-radius: var(--radius); padding: 20px;
-      box-shadow: var(--card-shadow);
+      padding: 56px 0;
+      border-top: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 40px;
+      align-items: start;
     }
+    .step:last-child { border-bottom: 1px solid var(--border); }
 
     .step-num {
-      flex-shrink: 0; width: 36px; height: 36px;
-      border-radius: 50%; background: var(--accent-1-bg);
-      border: 1px solid var(--accent-1-border);
-      color: var(--accent-1); display: flex;
-      align-items: center; justify-content: center;
-      font-weight: 700; font-size: 15px;
-      font-family: 'Syne', sans-serif;
+      font-family: var(--font-display);
+      font-size: 64px;
+      font-weight: 300;
+      line-height: 1;
+      color: var(--text-mid);
+      letter-spacing: -0.02em;
     }
 
-    .step-text {
-      font-family: 'Syne', sans-serif; font-size: 16px;
-      font-weight: 600; letter-spacing: -0.3px;
-      line-height: 1.4; padding-top: 6px;
-    }
-    .step-text span { color: var(--text-mid); font-weight: 400; }
-
-    /* ===== MOMENT ===== */
-    .moment-section { text-align: center; border-top: 1px solid var(--border); }
-
-    .moment-text {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 17px; font-weight: 400;
-      line-height: 1.8; color: var(--text-mid);
-      max-width: 420px; margin: 0 auto;
-      font-style: italic;
-    }
-    .moment-text strong {
-      font-weight: 700; color: var(--text);
-      font-style: normal; display: block;
-      font-family: 'Syne', sans-serif;
-      font-size: 20px; letter-spacing: -0.5px;
-      margin-top: 24px;
-    }
-
-    /* ===== QUESTIONS ===== */
-    .questions-section { border-top: 1px solid var(--border); }
-
-    .q-grid {
-      display: flex; flex-direction: column; gap: 14px;
-    }
-
-    .q-card {
-      background: var(--card-bg); border: 1px solid var(--card-border);
-      border-radius: var(--radius); padding: 20px;
-      box-shadow: var(--card-shadow);
-      transition: box-shadow 0.2s, border-color 0.2s;
-    }
-    .q-card:hover {
-      box-shadow: var(--card-shadow-lg);
-      border-color: var(--accent-1-border);
-    }
-
-    .q-card-q {
-      font-family: 'Syne', sans-serif; font-size: 14px;
-      font-weight: 600; letter-spacing: -0.2px;
-      margin-bottom: 12px; color: var(--text);
-    }
-
-    .q-options { display: flex; flex-wrap: wrap; gap: 8px; }
-
-    .q-opt {
-      font-size: 12px; padding: 6px 12px;
-      border-radius: 20px; border: 1px solid var(--border);
-      color: var(--text-mid); background: var(--bg);
+    .step-body h3 {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 500;
       line-height: 1.3;
+      letter-spacing: -0.01em;
+      margin-bottom: 14px;
     }
-    .q-opt.active {
-      border-color: var(--accent-1-border);
-      background: var(--accent-1-bg);
-      color: var(--accent-1); font-weight: 500;
+    .step-body p {
+      font-size: 15px;
+      color: var(--text-mid);
+      line-height: 1.7;
+      max-width: 460px;
     }
 
-    /* ===== FOR WHO ===== */
-    .for-section {
+    @media (max-width: 640px) {
+      .step { grid-template-columns: 1fr; gap: 12px; padding: 44px 0; }
+      .step-num { font-size: 48px; }
+      .step-body h3 { font-size: 24px; }
+    }
+
+    /* ===== DIFFERENCE ===== */
+    .diff .label { margin-bottom: 64px; }
+
+    .diff-grid {
+      display: grid;
+      grid-template-columns: 1fr 1px 1fr;
+      gap: 56px;
+      align-items: start;
+    }
+
+    .diff-divider {
+      background: var(--border);
+      width: 1px;
+      min-height: 280px;
+      justify-self: center;
+    }
+
+    .diff-col h4 {
+      font-size: var(--size-label);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-weight: 400;
+      margin-bottom: 32px;
+      color: var(--text-mid);
+    }
+
+    .diff-col ul {
+      list-style: none;
+    }
+    .diff-col li {
+      font-size: 17px;
+      line-height: 1.55;
+      padding: 14px 0;
+    }
+
+    .diff-other li {
+      color: #B8B3AC;
+      font-weight: 300;
+    }
+
+    .diff-mira li {
+      color: var(--text);
+      font-weight: 400;
+    }
+
+    @media (max-width: 720px) {
+      .diff-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .diff-divider { display: none; }
+      .diff-mira { padding-top: 16px; border-top: 1px solid var(--border); }
+    }
+
+    /* ===== TWO PATHS ===== */
+    .paths h2 {
+      font-family: var(--font-display);
+      font-size: var(--size-section);
+      font-weight: 500;
+      letter-spacing: -0.015em;
+      margin-bottom: 96px;
+      line-height: 1.15;
+    }
+
+    .path {
+      padding: 64px 0;
+    }
+    .path + .path {
       border-top: 1px solid var(--border);
+    }
+
+    .path-arrow {
+      font-family: var(--font-display);
+      font-size: 48px;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 28px;
+      font-weight: 300;
+      display: block;
+    }
+
+    .path h3 {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 1.25;
+      letter-spacing: -0.015em;
+      margin-bottom: 20px;
+    }
+
+    .path p {
+      font-size: 16px;
+      color: var(--text-mid);
+      line-height: 1.8;
+      max-width: 540px;
+      margin-bottom: 28px;
+    }
+
+    .path-link {
+      font-size: 15px;
+      color: var(--accent);
+      position: relative;
+      padding-bottom: 3px;
+      border-bottom: 1px solid var(--accent);
+      transition: all 0.4s var(--ease);
+      display: inline-block;
+    }
+    .path-link:hover {
+      color: var(--accent-hover);
+      border-color: var(--accent-hover);
+      transform: translateX(4px);
+    }
+
+    /* ===== TRUST QUOTE ===== */
+    .trust {
+      background: var(--bg-alt);
+      padding: 180px 0;
       text-align: center;
     }
 
-    .situations {
-      display: flex; flex-direction: column; gap: 20px;
-      max-width: 440px; margin: 0 auto;
-    }
-    .situation {
-      font-size: 15px; color: var(--text-mid);
-      line-height: 1.6;
-    }
-    .situation em {
-      font-style: italic; color: var(--text); font-weight: 500;
+    .trust-quote {
+      font-family: var(--font-display);
+      font-size: var(--size-display);
+      font-weight: 400;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      max-width: 780px;
+      margin: 0 auto;
     }
 
-    /* ===== PROFILE ===== */
-    .profile-section {
-      padding: 80px 0;
-    }
-    .profile-card {
-      background: linear-gradient(135deg, #1c1c1a 0%, #2a1f3d 50%, #1c1c1a 100%);
-      border-radius: 20px; padding: clamp(32px, 6vw, 48px);
-      position: relative; overflow: hidden;
-      color: #e8e6e1;
-    }
-    .profile-card::before {
-      content: '';
-      position: absolute; top: -50%; right: -30%; width: 300px; height: 300px;
-      background: radial-gradient(circle, rgba(124,58,237,0.25) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .profile-card::after {
-      content: '';
-      position: absolute; bottom: -40%; left: -20%; width: 250px; height: 250px;
-      background: radial-gradient(circle, rgba(157,92,245,0.15) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .profile-badge {
-      display: inline-flex; align-items: center; gap: 6px;
-      font-family: 'Syne', sans-serif; font-size: 10px; font-weight: 700;
-      letter-spacing: 2px; text-transform: uppercase;
-      color: var(--accent-2); background: rgba(157,92,245,0.12);
-      border: 1px solid rgba(157,92,245,0.2);
-      padding: 5px 12px; border-radius: 20px;
-      margin-bottom: 20px; position: relative; z-index: 1;
-    }
-    .profile-badge-dot {
-      width: 6px; height: 6px; border-radius: 50%;
-      background: var(--accent-2);
-      animation: pulse 2s ease-in-out infinite;
-    }
-    @keyframes pulse {
-      0%, 100% { opacity: 0.5; transform: scale(1); }
-      50% { opacity: 1; transform: scale(1.3); }
-    }
-    .profile-title {
-      font-family: 'Syne', sans-serif; font-weight: 700;
-      font-size: clamp(24px, 5.5vw, 32px);
-      letter-spacing: -1px; line-height: 1.15;
-      margin-bottom: 12px; position: relative; z-index: 1;
-      color: #fff;
-    }
-    .profile-subtitle {
-      font-size: 15px; color: rgba(255,255,255,0.55);
-      max-width: 400px; line-height: 1.65;
-      margin-bottom: 32px; position: relative; z-index: 1;
-    }
-    .profile-grid {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 12px; position: relative; z-index: 1;
-    }
-    @media (max-width: 480px) {
-      .profile-grid { grid-template-columns: 1fr; }
-    }
-    .profile-feature {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: var(--radius); padding: 18px;
-      transition: background 0.2s, border-color 0.2s;
-    }
-    .profile-feature:hover {
-      background: rgba(255,255,255,0.08);
-      border-color: rgba(255,255,255,0.12);
-    }
-    .profile-feature:last-child {
-      grid-column: 1 / -1;
-    }
-    .profile-icon {
-      font-size: 20px; margin-bottom: 10px;
-    }
-    .profile-feature-title {
-      font-family: 'Syne', sans-serif; font-size: 14px;
-      font-weight: 600; letter-spacing: -0.2px;
-      margin-bottom: 4px; color: #fff;
-    }
-    .profile-feature-desc {
-      font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.5;
-    }
-    .profile-cta {
-      display: inline-flex; align-items: center; gap: 6px;
-      margin-top: 28px; position: relative; z-index: 1;
-      font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700;
-      color: #fff; background: var(--accent-1);
-      padding: 13px 24px; border-radius: var(--radius);
-      border: none; cursor: pointer; text-decoration: none;
-      transition: all 0.2s;
-      box-shadow: 0 2px 12px rgba(124,58,237,0.3);
-    }
-    .profile-cta:hover {
-      box-shadow: 0 4px 20px rgba(124,58,237,0.4);
-      transform: translateY(-1px);
+    .trust-quote p {
+      margin-bottom: 0.4em;
     }
 
-    /* ===== RANDOM MATCH ===== */
-    .random-section { padding: 0 0 80px; }
-    .random-card {
-      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 40%, #312e81 100%);
-      border-radius: 20px; padding: clamp(32px, 6vw, 48px);
-      position: relative; overflow: hidden;
-      color: #e8e6e1; text-align: center;
+    .trust-sub {
+      margin-top: 56px;
+      font-size: 14px;
+      color: var(--text-mid);
+      font-style: italic;
+      line-height: 1.7;
     }
-    .random-card::before {
-      content: '';
-      position: absolute; top: -60%; left: 50%; transform: translateX(-50%);
-      width: 400px; height: 400px;
-      background: radial-gradient(circle, rgba(99,102,241,0.3) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .random-card::after {
-      content: '';
-      position: absolute; bottom: -50%; right: -10%;
-      width: 300px; height: 300px;
-      background: radial-gradient(circle, rgba(236,72,153,0.2) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .random-badge {
-      display: inline-flex; align-items: center; gap: 6px;
-      font-family: 'Syne', sans-serif; font-size: 10px; font-weight: 700;
-      letter-spacing: 2px; text-transform: uppercase;
-      color: #818cf8; background: rgba(129,140,248,0.12);
-      border: 1px solid rgba(129,140,248,0.2);
-      padding: 5px 12px; border-radius: 20px;
-      margin-bottom: 20px; position: relative; z-index: 1;
-    }
-    .random-badge-dot {
-      width: 6px; height: 6px; border-radius: 50%;
-      background: #34d399;
-      animation: pulse 2s ease-in-out infinite;
-    }
-    .random-title {
-      font-family: 'Syne', sans-serif; font-weight: 700;
-      font-size: clamp(24px, 5.5vw, 32px);
-      letter-spacing: -1px; line-height: 1.15;
-      margin-bottom: 12px; position: relative; z-index: 1;
-      color: #fff;
-    }
-    .random-subtitle {
-      font-size: 15px; color: rgba(255,255,255,0.55);
-      max-width: 380px; line-height: 1.65;
-      margin: 0 auto 32px; position: relative; z-index: 1;
-    }
-    .random-steps {
-      display: flex; justify-content: center; gap: 32px;
-      margin-bottom: 32px; position: relative; z-index: 1;
-      flex-wrap: wrap;
-    }
-    .random-step {
-      display: flex; flex-direction: column; align-items: center; gap: 8px;
-    }
-    .random-step-icon {
-      width: 48px; height: 48px; border-radius: 50%;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.1);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 22px;
-    }
-    .random-step-text {
-      font-family: 'Syne', sans-serif; font-size: 13px;
-      font-weight: 600; color: rgba(255,255,255,0.7);
-      letter-spacing: -0.2px;
-    }
-    .random-step-connector {
-      display: flex; align-items: center;
-      color: rgba(255,255,255,0.2); font-size: 18px;
-      margin-bottom: 20px;
-    }
-    @media (max-width: 480px) {
-      .random-step-connector { display: none; }
-      .random-steps { gap: 20px; }
-    }
-    .random-cta {
-      display: inline-flex; align-items: center; gap: 8px;
-      position: relative; z-index: 1;
-      font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 700;
-      color: #fff;
-      background: linear-gradient(135deg, #6366f1, #ec4899);
-      padding: 15px 28px; border-radius: var(--radius);
-      border: none; cursor: pointer; text-decoration: none;
-      transition: all 0.2s;
-      box-shadow: 0 2px 16px rgba(99,102,241,0.3);
-    }
-    .random-cta:hover {
-      box-shadow: 0 4px 24px rgba(99,102,241,0.4);
-      transform: translateY(-1px);
-    }
-    .random-note {
-      font-size: 13px; color: rgba(255,255,255,0.35);
-      margin-top: 16px; position: relative; z-index: 1;
+
+    @media (max-width: 720px) {
+      .trust { padding: 120px 0; }
     }
 
     /* ===== WAITLIST ===== */
-    .waitlist-section {
-      border-top: 1px solid var(--border);
-      text-align: center; padding-bottom: 40px;
-    }
-    .waitlist-title {
-      font-family: 'Syne', sans-serif;
-      font-size: clamp(24px, 6vw, 32px);
-      font-weight: 600; letter-spacing: -0.8px;
-      margin-bottom: 8px;
+    .waitlist {
+      text-align: center;
+      padding: 160px 0;
     }
 
-    /* ===== SOCIAL PROOF ===== */
-    .proof-section {
-      border-top: 1px solid var(--border);
+    .waitlist h2 {
+      font-family: var(--font-display);
+      font-size: var(--size-section);
+      font-weight: 500;
+      letter-spacing: -0.015em;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .waitlist-sub {
+      color: var(--text-mid);
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 56px;
+      max-width: 440px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .form {
+      max-width: 440px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .input {
+      width: 100%;
+      padding: 16px 0;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid var(--border);
+      font-family: var(--font-body);
+      font-size: 16px;
+      color: var(--text);
       text-align: center;
+      transition: border-color 0.4s var(--ease);
     }
-    .proof-stats {
-      display: flex; justify-content: center; gap: 32px;
-      margin-bottom: 40px; flex-wrap: wrap;
+    .input:focus {
+      outline: none;
+      border-bottom-color: var(--accent);
     }
-    .proof-stat {
-      display: flex; flex-direction: column; align-items: center;
+    .input::placeholder { color: #B8B3AC; }
+
+    .radios {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 8px 0 16px;
     }
-    .proof-num {
-      font-family: 'Syne', sans-serif; font-weight: 700;
-      font-size: 28px; letter-spacing: -1px;
-      color: var(--accent-1);
+
+    .radio {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 11px 20px;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      cursor: pointer;
+      font-size: 14px;
+      color: var(--text-mid);
+      transition: all 0.4s var(--ease);
+      user-select: none;
     }
-    .proof-label {
-      font-size: 12px; color: var(--text-dim);
-      margin-top: 2px; letter-spacing: 0.3px;
+    .radio input { display: none; }
+    .radio-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 1px solid var(--text-mid);
+      transition: all 0.3s var(--ease);
+      flex-shrink: 0;
     }
-    .proof-quotes {
-      display: flex; flex-direction: column; gap: 14px;
-      max-width: 440px; margin: 0 auto;
+    .radio:hover {
+      border-color: var(--text-mid);
+      color: var(--text);
     }
-    .proof-quote {
-      background: var(--card-bg); border: 1px solid var(--card-border);
-      border-radius: var(--radius); padding: 18px 20px;
-      box-shadow: var(--card-shadow); text-align: left;
+    .radio.active {
+      border-color: var(--accent);
+      color: var(--accent);
     }
-    .proof-quote p {
-      font-size: 14px; color: var(--text); line-height: 1.55;
+    .radio.active .radio-dot {
+      border-color: var(--accent);
+      background: var(--accent);
+      box-shadow: inset 0 0 0 2px var(--bg);
+    }
+
+    .submit {
+      margin-top: 12px;
+      padding: 17px 28px;
+      background: var(--accent);
+      color: #FFFDF9;
+      border: 1px solid var(--accent);
+      border-radius: 2px;
+      font-family: var(--font-body);
+      font-size: 15px;
+      cursor: pointer;
+      transition: all 0.4s var(--ease);
+      letter-spacing: 0.01em;
+    }
+    .submit:hover {
+      background: var(--accent-hover);
+      border-color: var(--accent-hover);
+    }
+
+    .form-foot {
+      margin-top: 32px;
+      font-size: 13px;
+      color: var(--text-mid);
+      line-height: 1.6;
       font-style: italic;
     }
-    .proof-quote .proof-author {
-      font-size: 12px; color: var(--text-dim);
-      margin-top: 8px; font-style: normal;
-    }
-    .waitlist-sub {
-      font-size: 14px; color: var(--text-mid); margin-bottom: 28px;
-    }
-    .waitlist-form {
-      display: flex; gap: 10px;
-      max-width: 380px; margin: 0 auto 20px;
-    }
-    @media (max-width: 480px) {
-      .waitlist-form { flex-direction: column; }
-    }
-    .waitlist-input {
-      flex: 1; font-family: 'DM Sans', sans-serif;
-      font-size: 14px; padding: 14px 16px;
-      border-radius: var(--radius); border: 1px solid var(--card-border);
-      background: var(--card-bg); color: var(--text); outline: none;
-      transition: border-color 0.2s;
-      box-shadow: var(--card-shadow);
-    }
-    .waitlist-input::placeholder { color: var(--text-dim); }
-    .waitlist-input:focus { border-color: var(--accent-1-border); }
 
-    .waitlist-btn {
-      font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700;
-      padding: 14px 24px; border-radius: var(--radius);
-      border: none; background: var(--accent-1); color: white;
-      cursor: pointer; transition: all 0.2s; white-space: nowrap;
-      box-shadow: 0 2px 8px var(--accent-1-glow);
+    .form-success {
+      display: none;
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 1.4;
+      color: var(--text);
+      padding: 40px 20px;
     }
-    .waitlist-btn:hover { box-shadow: 0 4px 16px var(--accent-1-glow); }
-
-    .waitlist-success {
-      display: none; font-family: 'Syne', sans-serif;
-      font-size: 16px; font-weight: 700; color: var(--accent-1);
-      padding: 14px; max-width: 380px; margin: 0 auto 20px;
-    }
-    .waitlist-success.show {
+    .form-success.show { display: block; }
+    .form-success small {
       display: block;
-      animation: fadeIn 0.4s ease;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(8px); }
-      to { opacity: 1; transform: translateY(0); }
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-style: italic;
+      color: var(--text-mid);
+      margin-top: 16px;
+      font-weight: 400;
     }
 
     /* ===== FOOTER ===== */
-    .footer {
-      text-align: center; padding: 24px;
-      color: var(--text-dim); font-size: 13px;
+    footer {
+      padding: 96px 0 72px;
+      border-top: 1px solid var(--border);
+      text-align: center;
     }
-    .footer-logo {
-      font-family: 'Syne', sans-serif; font-weight: 800;
-      font-size: 16px; letter-spacing: -0.5px;
-      color: var(--text-mid); margin-bottom: 4px;
-    }
-    .footer-insta {
-      display: inline-block; margin-top: 10px;
-      font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 600;
-      color: var(--accent-1); text-decoration: none;
-      transition: opacity 0.2s;
-    }
-    .footer-insta:hover { opacity: 0.7; }
 
-    /* Lang selector */
-    .land-lang-selector {
-      position: relative; display: inline-flex; justify-content: center;
+    .foot-logo {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      margin-bottom: 6px;
     }
-    .land-lang-pill {
-      display: flex; align-items: center; gap: 6px;
-      font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 600;
-      padding: 7px 14px; border-radius: 20px;
-      border: 1px solid var(--border); background: var(--card-bg);
-      color: var(--text); cursor: pointer;
-      transition: all 0.2s;
+
+    .foot-loc {
+      font-size: 12px;
+      color: var(--text-mid);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 40px;
     }
-    .land-lang-pill:hover { border-color: var(--accent-1-border); background: var(--accent-1-bg); }
-    .land-lang-pill .lang-flag { font-size: 16px; line-height: 1; }
-    .land-lang-dropdown {
-      position: absolute; top: calc(100% + 6px); left: 50%;
-      transform: translateX(-50%) translateY(-4px);
-      background: var(--card-bg); border: 1px solid var(--card-border);
-      border-radius: var(--radius-sm); box-shadow: var(--card-shadow-lg);
-      padding: 4px; min-width: 100px; z-index: 200;
-      opacity: 0; pointer-events: none; transition: all 0.15s;
+
+    .foot-line {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 17px;
+      line-height: 1.6;
+      color: var(--text-mid);
+      max-width: 440px;
+      margin: 0 auto;
     }
-    .land-lang-selector.open .land-lang-dropdown {
-      opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0);
-    }
-    .land-lang-item {
-      display: flex; align-items: center; gap: 6px;
-      font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 600;
-      padding: 8px 12px; border-radius: 6px;
-      border: none; background: none; color: var(--text);
-      cursor: pointer; width: 100%; transition: background 0.15s;
-    }
-    .land-lang-item:hover { background: var(--accent-1-bg); }
-    .land-lang-item .lang-flag { font-size: 16px; line-height: 1; }
   </style>
 </head>
 <body>
 
-  <nav>
-    <a href="#" class="nav-logo">blindside.</a>
-    <div style="display:flex;align-items:center;gap:10px;">
-      <div class="land-lang-selector" id="landLangSelector"></div>
-      <a href="/s/" class="nav-cta" data-i18n="land_nav_play">play now</a>
-    </div>
-  </nav>
-
-  <!-- HERO -->
+  <!-- ===== HERO ===== -->
   <section class="hero">
-    <div class="container" style="display:flex;flex-direction:column;align-items:center;position:relative;z-index:1;">
-      <div class="hero-emoji">🫣</div>
-      <h1 class="hero-title" data-i18n="land_hero_title">Find your match<br>by playing games</h1>
-      <p class="hero-sub" data-i18n="land_hero_sub">Same questions. Neither sees the other's answers. Results revealed together. Takes 3 minutes.</p>
-      <a href="/s/"><button class="btn-primary" data-i18n="land_hero_cta">create a session</button></a>
-      <p class="hero-note" data-i18n="land_hero_note">free. no account needed.</p>
-      <div class="hero-proof">
-        <div class="hero-avatars">
-          <div class="hero-avatar">🙈</div>
-          <div class="hero-avatar">😏</div>
-          <div class="hero-avatar">🫣</div>
-          <div class="hero-avatar">🤭</div>
-          <div class="hero-avatar">😳</div>
-        </div>
-        <div class="hero-proof-text" data-i18n="land_hero_proof"><span>2,400+</span> sessions played</div>
+    <div class="hero-inner">
+      <div class="label reveal">Mira — Early Access</div>
+      <h1 class="reveal d1">
+        <span class="line">Meet through someone</span>
+        <span class="line serif-italic">who knows you.</span>
+      </h1>
+      <p class="hero-sub reveal d2">
+        A trust-based introduction network — where a friend vouches,
+        AI matches, and you decide.
+      </p>
+      <div class="hero-ctas reveal d3">
+        <a href="#waitlist" class="btn btn-primary" data-choice="partner">I'm looking for a partner</a>
+        <a href="#waitlist" class="btn btn-secondary" data-choice="introduce">I want to introduce a friend</a>
       </div>
+      <div class="hero-foot reveal d4">Launching in Istanbul. Waitlist open now.</div>
     </div>
   </section>
 
-  <!-- PROFILE -->
-  <section class="profile-section">
-    <div class="container">
-      <div class="profile-card reveal">
-        <div class="profile-badge"><div class="profile-badge-dot"></div> <span data-i18n="land_profile_badge">Your Blindside Profile</span></div>
-        <h2 class="profile-title" data-i18n="land_profile_title">Just play.<br>Your profile builds itself.</h2>
-        <p class="profile-subtitle" data-i18n="land_profile_sub">Every game you play — with a date, a friend, anyone — adds to your profile. No forms. No effort. Just answers.</p>
-        <div class="profile-grid">
-          <div class="profile-feature reveal-d1">
-            <div class="profile-icon">🃏</div>
-            <div class="profile-feature-title" data-i18n="land_profile_f1_title">Complete decks</div>
-            <div class="profile-feature-desc" data-i18n="land_profile_f1_desc">Play different packs to unlock new layers of your profile across topics.</div>
-          </div>
-          <div class="profile-feature reveal-d2">
-            <div class="profile-icon">👥</div>
-            <div class="profile-feature-title" data-i18n="land_profile_f2_title">Play with anyone</div>
-            <div class="profile-feature-desc" data-i18n="land_profile_f2_desc">Partners, friends, crushes, celebrities. Each session sharpens your data.</div>
-          </div>
-          <div class="profile-feature reveal-d3">
-            <div class="profile-icon">🧬</div>
-            <div class="profile-feature-title" data-i18n="land_profile_f3_title">See your real patterns</div>
-            <div class="profile-feature-desc" data-i18n="land_profile_f3_desc">Over time, Blindside maps how you actually think, connect, and compare — across everyone you've played with.</div>
-          </div>
-        </div>
-        <a href="/s/" class="profile-cta" data-i18n="land_profile_cta">Start building yours</a>
-      </div>
+  <!-- ===== PROBLEM ===== -->
+  <section class="problem">
+    <div class="problem-text reveal">
+      <p>Meeting people became a catalogue.</p>
+      <p>You browse strangers.<br>
+         Strangers browse you.<br>
+         Everyone is performing.<br>
+         Nobody is themselves.</p>
+      <p>There is a better way. There always has been.</p>
     </div>
   </section>
 
-  <!-- RANDOM MATCH (hidden for now) -->
-  <!--
-  <section class="random-section">
-    <div class="container">
-      <div class="random-card reveal">
-        <div class="random-badge"><div class="random-badge-dot"></div> <span data-i18n="land_random_badge">Live matching</span></div>
-        <h2 class="random-title" data-i18n="land_random_title">Don't know anyone?<br>Play with a stranger.</h2>
-        <p class="random-subtitle" data-i18n="land_random_sub">Get matched with someone random. Same questions, blind answers. See if you vibe — no names, no pressure.</p>
-        <div class="random-steps">
-          <div class="random-step reveal-d1">
-            <div class="random-step-icon">🎲</div>
-            <div class="random-step-text" data-i18n="land_random_step1">Join queue</div>
-          </div>
-          <div class="random-step-connector">→</div>
-          <div class="random-step reveal-d2">
-            <div class="random-step-icon">🫣</div>
-            <div class="random-step-text" data-i18n="land_random_step2">Answer blind</div>
-          </div>
-          <div class="random-step-connector">→</div>
-          <div class="random-step reveal-d3">
-            <div class="random-step-icon">✨</div>
-            <div class="random-step-text" data-i18n="land_random_step3">See if you match</div>
-          </div>
-        </div>
-        <a href="/s/" class="random-cta" data-i18n="land_random_cta">Find a stranger</a>
-        <p class="random-note" data-i18n="land_random_note">anonymous · takes 3 minutes · free</p>
-      </div>
-    </div>
-  </section>
-  -->
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="how">
+    <div class="wrap">
+      <div class="label reveal">How Mira works</div>
 
-  <!-- HOW IT WORKS -->
-  <section class="steps-section">
-    <div class="container">
-      <div class="section-label reveal" data-i18n="land_how_label">how it works</div>
-      <div class="steps">
-        <div class="step reveal reveal-d1">
-          <div class="step-num">1</div>
-          <div class="step-text" data-i18n="land_how_step1">Answer 10 questions. <span>Honestly.</span></div>
+      <div class="step reveal">
+        <div class="step-num">01</div>
+        <div class="step-body">
+          <h3>A friend who knows you<br>writes a genuine introduction.</h3>
+          <p>They vouch for who you are, not just what you look like.</p>
         </div>
-        <div class="step reveal reveal-d2">
-          <div class="step-num">2</div>
-          <div class="step-text" data-i18n="land_how_step2">Send the link. <span>They answer too.</span></div>
+      </div>
+
+      <div class="step reveal">
+        <div class="step-num">02</div>
+        <div class="step-body">
+          <h3>We find someone compatible. You both answer the same questions, separately.</h3>
+          <p>Personality first. Revealed to both of you at the same time.</p>
         </div>
-        <div class="step reveal reveal-d3">
-          <div class="step-num">3</div>
-          <div class="step-text" data-i18n="land_how_step3">Both see everything. <span>At the same time.</span></div>
+      </div>
+
+      <div class="step reveal">
+        <div class="step-num">03</div>
+        <div class="step-body">
+          <h3>If you both want to continue, photos and profiles unlock.</h3>
+          <p>One introduction, every week. No browsing. No noise. Just one carefully chosen person.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- THE MOMENT -->
-  <section class="moment-section">
-    <div class="container">
-      <div class="moment-text reveal" data-i18n="land_moment">
-        You matched on an app. You met at a party.
-        You've been talking for a week but still
-        have no idea what they actually think.
-        <strong>Now you do.</strong>
-      </div>
-    </div>
-  </section>
-
-  <!-- QUESTIONS -->
-  <section class="questions-section">
-    <div class="container">
-      <div class="section-label reveal" data-i18n="land_examples_label">example questions</div>
-      <div class="q-grid">
-        <div class="q-card reveal reveal-d1">
-          <div class="q-card-q" data-i18n="land_q1">Right now you want:</div>
-          <div class="q-options">
-            <span class="q-opt" data-i18n="land_q1_o1">something serious</span>
-            <span class="q-opt active" data-i18n="land_q1_o2">something fun with potential</span>
-            <span class="q-opt" data-i18n="land_q1_o3">honestly no idea</span>
-            <span class="q-opt" data-i18n="land_q1_o4">none of your business</span>
-          </div>
+  <!-- ===== DIFFERENCE ===== -->
+  <section class="diff">
+    <div class="wrap-wide">
+      <div class="label reveal">Why Mira is different</div>
+      <div class="diff-grid">
+        <div class="diff-col diff-other reveal">
+          <h4>Other apps</h4>
+          <ul>
+            <li>Strangers can see you</li>
+            <li>Anyone can contact you</li>
+            <li>Judged on photos first</li>
+            <li>Infinite options, no depth</li>
+            <li>Designed to keep you scrolling</li>
+          </ul>
         </div>
-        <div class="q-card reveal reveal-d2">
-          <div class="q-card-q" data-i18n="land_q2">The party ends at midnight. You leave at:</div>
-          <div class="q-options">
-            <span class="q-opt" data-i18n="land_q2_o1">11:45</span>
-            <span class="q-opt" data-i18n="land_q2_o2">midnight exactly</span>
-            <span class="q-opt active" data-i18n="land_q2_o3">2am</span>
-            <span class="q-opt" data-i18n="land_q2_o4">helping clean up at 3am</span>
-          </div>
-        </div>
-        <div class="q-card reveal reveal-d3">
-          <div class="q-card-q" data-i18n="land_q3">When someone doesn't text back for 12 hours:</div>
-          <div class="q-options">
-            <span class="q-opt" data-i18n="land_q3_o1">already moved on mentally</span>
-            <span class="q-opt" data-i18n="land_q3_o2">fine, not checking</span>
-            <span class="q-opt active" data-i18n="land_q3_o3">three unsent messages</span>
-            <span class="q-opt" data-i18n="land_q3_o4">already told your friends</span>
-          </div>
+        <div class="diff-divider reveal d1"></div>
+        <div class="diff-col diff-mira reveal d2">
+          <h4>Mira</h4>
+          <ul>
+            <li>Only people a friend chose</li>
+            <li>Contact only after mutual interest</li>
+            <li>Character first, photo second</li>
+            <li>One introduction per week</li>
+            <li>Designed to get you offline</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- WHO IT'S FOR -->
-  <section class="for-section">
-    <div class="container">
-      <div class="section-label reveal" data-i18n="land_when_label">when to play</div>
-      <div class="situations">
-        <p class="situation reveal reveal-d1" data-i18n="land_when1">After a party when you have their Instagram but <em>don't know if there's anything there.</em></p>
-        <p class="situation reveal reveal-d2" data-i18n="land_when2">Before a first date when you want a signal <em>without committing to the whole thing.</em></p>
-        <p class="situation reveal reveal-d3" data-i18n="land_when3">With a friend you've <em>always been curious about.</em></p>
-        <p class="situation reveal reveal-d4" data-i18n="land_when4">When you just want to know <em>if it's worth getting dressed for.</em></p>
+  <!-- ===== TWO PATHS ===== -->
+  <section class="paths">
+    <div class="wrap">
+      <h2 class="reveal">Two ways to join.</h2>
+
+      <div class="path reveal">
+        <span class="path-arrow">→</span>
+        <h3>I'm looking for a partner</h3>
+        <p>
+          Join the waitlist. Answer a few questions about yourself.
+          Receive one carefully matched introduction each week.
+          You control everything that follows.
+        </p>
+        <a href="#waitlist" class="path-link" data-choice="partner">Join the waitlist</a>
+      </div>
+
+      <div class="path reveal">
+        <span class="path-arrow">↗</span>
+        <h3>I want to introduce a friend</h3>
+        <p>
+          Know someone who deserves to meet the right person?
+          Write a short introduction. Your friend decides if they
+          want to join. You get notified when they match.
+        </p>
+        <a href="#waitlist" class="path-link" data-choice="introduce">Introduce someone</a>
       </div>
     </div>
   </section>
 
-  <!-- SOCIAL PROOF -->
-  <section class="proof-section">
-    <div class="container">
-      <div class="proof-stats reveal">
-        <div class="proof-stat">
-          <div class="proof-num">2,400+</div>
-          <div class="proof-label" data-i18n="land_stat_sessions">sessions played</div>
-        </div>
-        <div class="proof-stat">
-          <div class="proof-num">30+</div>
-          <div class="proof-label" data-i18n="land_stat_packs">question packs</div>
-        </div>
-        <div class="proof-stat">
-          <div class="proof-num">3 min</div>
-          <div class="proof-label" data-i18n="land_stat_time">average session</div>
-        </div>
+  <!-- ===== TRUST QUOTE ===== -->
+  <section class="trust">
+    <div class="wrap">
+      <div class="trust-quote reveal">
+        <p>You are never browsed by strangers.</p>
+        <p>You never appear in a feed.</p>
+        <p>You only exist for the one person</p>
+        <p>someone specifically chose for you.</p>
       </div>
-      <div class="proof-quotes">
-        <div class="proof-quote reveal reveal-d1">
-          <p data-i18n="land_quote1">"we learned more in 3 minutes than in 3 weeks of texting"</p>
-          <div class="proof-author" data-i18n="land_quote1_author">couple matched on hinge</div>
-        </div>
-        <div class="proof-quote reveal reveal-d2">
-          <p data-i18n="land_quote2">"sent it to my situationship at 11pm. we're dating now."</p>
-          <div class="proof-author" data-i18n="land_quote2_author">@maya, 23</div>
-        </div>
-        <div class="proof-quote reveal reveal-d3">
-          <p data-i18n="land_quote3">"the reveal part is genuinely nerve-wracking in the best way"</p>
-          <div class="proof-author" data-i18n="land_quote3_author">played with best friend</div>
-        </div>
+      <div class="trust-sub reveal d2">
+        This is how people used to meet.<br>
+        We made it work for now.
       </div>
     </div>
   </section>
 
+  <!-- ===== WAITLIST ===== -->
+  <section class="waitlist" id="waitlist">
+    <div class="wrap">
+      <h2 class="reveal">Get early access.</h2>
+      <p class="waitlist-sub reveal d1">
+        Mira launches in Istanbul.<br>
+        Be among the first to join.
+      </p>
 
-  <!-- WAITLIST -->
-  <section class="waitlist-section" id="waitlist">
-    <div class="container">
-      <h2 class="waitlist-title reveal" data-i18n="land_waitlist_title">get early access.</h2>
-      <p class="waitlist-sub reveal reveal-d1" data-i18n="land_waitlist_sub">be first when sessions go live.</p>
-      <form class="waitlist-form reveal reveal-d2" id="waitlistForm">
-        <input type="email" class="waitlist-input" placeholder="your@email.com" required>
-        <button type="submit" class="waitlist-btn" data-i18n="land_waitlist_btn">i'm in</button>
+      <form class="form reveal d2" id="waitlistForm" novalidate>
+        <input type="email" class="input" placeholder="your email" required>
+
+        <div class="radios" role="radiogroup">
+          <label class="radio active" data-value="partner">
+            <input type="radio" name="intent" value="partner" checked>
+            <span class="radio-dot"></span>
+            <span>Looking for a partner</span>
+          </label>
+          <label class="radio" data-value="introduce">
+            <input type="radio" name="intent" value="introduce">
+            <span class="radio-dot"></span>
+            <span>Want to introduce a friend</span>
+          </label>
+        </div>
+
+        <button type="submit" class="submit">Join the waitlist</button>
+
+        <p class="form-foot">
+          We'll reach out personally before your account is activated.
+        </p>
       </form>
-      <div class="waitlist-success" id="waitlistSuccess" data-i18n="land_waitlist_success">you're in ✓</div>
+
+      <div class="form-success" id="formSuccess">
+        You're on the list.
+        <small>We'll be in touch.</small>
+      </div>
     </div>
   </section>
 
-  <footer class="footer">
-    <div class="footer-logo">blindside.</div>
-    <div data-i18n="land_footer_sub">built for the moment right after you meet someone interesting.</div>
-    <a href="https://instagram.com/blindsidenow" target="_blank" rel="noopener" class="footer-insta">@blindsidenow</a>
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="foot-logo">Mira</div>
+    <div class="foot-loc">Istanbul · 2025</div>
+    <p class="foot-line">
+      Built on the belief that the best introductions
+      come from people who actually know you.
+    </p>
   </footer>
 
-  <script src="lang.js"></script>
   <script>
-    // Landing page lang selector
-    function renderLandLangSelector() {
-      const el = document.getElementById('landLangSelector');
-      if (!el) return;
-      const cur = i18n.languages[i18n.current];
-      const options = Object.entries(i18n.languages)
-        .filter(([code]) => code !== i18n.current)
-        .map(([code, { flag, label }]) =>
-          `<button class="land-lang-item" data-lang="${code}">
-            <span class="lang-flag">${flag}</span>${label}
-          </button>`
-        ).join('');
-      el.innerHTML = `
-        <button class="land-lang-pill" onclick="event.stopPropagation(); this.parentElement.classList.toggle('open')">
-          <span class="lang-flag">${cur.flag}</span>${cur.label}
-        </button>
-        <div class="land-lang-dropdown">${options}</div>
-      `;
-      el.querySelectorAll('.land-lang-item').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          e.stopPropagation();
-          const lang = btn.dataset.lang;
-          i18n.current = lang;
-          localStorage.setItem('bs-lang', lang);
-          document.documentElement.setAttribute('lang', lang);
-          i18n.applyAll();
-          renderLandLangSelector();
-        });
+    // Reveal on scroll
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
       });
-    }
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-    // Init i18n for landing page
-    document.documentElement.setAttribute('lang', i18n.current);
-    i18n.applyAll();
-    renderLandLangSelector();
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-    // Close dropdown on outside click
-    document.addEventListener('click', () => {
-      document.querySelectorAll('.land-lang-selector.open').forEach(el => el.classList.remove('open'));
+    // Fire hero reveals immediately on load
+    window.addEventListener('load', () => {
+      document.querySelectorAll('.hero .reveal').forEach(el => el.classList.add('in'));
     });
 
-    const obs = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.15, rootMargin: '0px 0px -30px 0px' });
-    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    // Radio pill selection
+    const radios = document.querySelectorAll('.radio');
+    radios.forEach(r => {
+      r.addEventListener('click', () => {
+        radios.forEach(x => x.classList.remove('active'));
+        r.classList.add('active');
+        r.querySelector('input').checked = true;
+      });
+    });
 
-    document.getElementById('waitlistForm').addEventListener('submit', function(e) {
+    // CTA buttons pre-select radio + scroll
+    document.querySelectorAll('[data-choice]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const choice = btn.getAttribute('data-choice');
+        const target = document.querySelector(`.radio[data-value="${choice}"]`);
+        if (target) {
+          radios.forEach(x => x.classList.remove('active'));
+          target.classList.add('active');
+          target.querySelector('input').checked = true;
+        }
+      });
+    });
+
+    // Form submit
+    const form = document.getElementById('waitlistForm');
+    const success = document.getElementById('formSuccess');
+    form.addEventListener('submit', (e) => {
       e.preventDefault();
-      this.style.display = 'none';
-      document.getElementById('waitlistSuccess').classList.add('show');
-    });
-
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', function(e) {
-        e.preventDefault();
-        const t = document.querySelector(this.getAttribute('href'));
-        if (t) t.scrollIntoView({ behavior: 'smooth' });
-      });
+      const email = form.querySelector('.input').value.trim();
+      if (!email || !email.includes('@')) {
+        form.querySelector('.input').focus();
+        return;
+      }
+      form.style.display = 'none';
+      success.classList.add('show');
     });
   </script>
-
 </body>
 </html>
