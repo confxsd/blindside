@@ -265,46 +265,160 @@
     }
 
     /* ===== HOW IT WORKS ===== */
-    .how .label { margin-bottom: 72px; }
-
-    .step {
-      padding: 56px 0;
-      border-top: 1px solid var(--border);
-      display: grid;
-      grid-template-columns: 100px 1fr;
-      gap: 40px;
-      align-items: start;
-    }
-    .step:last-child { border-bottom: 1px solid var(--border); }
-
-    .step-num {
+    .how .label { margin-bottom: 16px; }
+    .how-intro {
       font-family: var(--font-display);
-      font-size: 64px;
+      font-size: clamp(26px, 3vw, 34px);
+      font-weight: 500;
+      line-height: 1.25;
+      letter-spacing: -0.015em;
+      max-width: 560px;
+      margin-bottom: 64px;
+    }
+
+    .how-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .how-card {
+      background: #F4F1EC;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 48px 36px 44px;
+      position: relative;
+      transition: transform 0.6s var(--ease), border-color 0.6s var(--ease), background 0.6s var(--ease);
+    }
+    .how-card:hover {
+      transform: translateY(-3px);
+      border-color: #D8D2C8;
+      background: #F0EDE6;
+    }
+
+    .how-card-num {
+      font-family: var(--font-display);
+      font-size: 56px;
       font-weight: 300;
       line-height: 1;
-      color: var(--text-mid);
+      color: var(--accent);
+      display: block;
       letter-spacing: -0.02em;
     }
+    .how-card-num::after {
+      content: "";
+      display: block;
+      width: 28px;
+      height: 1px;
+      background: var(--accent);
+      margin: 18px 0 26px;
+    }
 
-    .step-body h3 {
+    .how-card h3 {
       font-family: var(--font-display);
-      font-size: 28px;
+      font-size: 24px;
       font-weight: 500;
       line-height: 1.3;
       letter-spacing: -0.01em;
       margin-bottom: 14px;
+      color: var(--text);
     }
-    .step-body p {
+    .how-card p {
       font-size: 15px;
       color: var(--text-mid);
-      line-height: 1.7;
-      max-width: 460px;
+      line-height: 1.75;
+    }
+
+    .how-card-icon {
+      position: absolute;
+      top: 36px;
+      right: 36px;
+      width: 32px;
+      height: 32px;
+      opacity: 0.35;
+      color: var(--text);
+    }
+    .how-card-icon svg { width: 100%; height: 100%; }
+
+    @media (max-width: 900px) {
+      .how-cards { grid-template-columns: 1fr; gap: 16px; }
+      .how-card { padding: 40px 32px 36px; }
+      .how-card-num { font-size: 48px; }
+      .how-card h3 { font-size: 22px; }
+    }
+
+    /* ===== FAQ ===== */
+    .faq .label { margin-bottom: 16px; }
+    .faq h2 {
+      font-family: var(--font-display);
+      font-size: var(--size-section);
+      font-weight: 500;
+      letter-spacing: -0.015em;
+      line-height: 1.15;
+      margin-bottom: 64px;
+    }
+
+    .faq-list {
+      border-top: 1px solid var(--border);
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 32px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 1.35;
+      letter-spacing: -0.005em;
+      color: var(--text);
+      transition: color 0.4s var(--ease);
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary:hover { color: var(--accent); }
+    .faq-item[open] summary { color: var(--accent); }
+
+    .faq-icon {
+      flex-shrink: 0;
+      width: 16px;
+      height: 16px;
+      position: relative;
+    }
+    .faq-icon::before, .faq-icon::after {
+      content: "";
+      position: absolute;
+      background: currentColor;
+      transition: transform 0.4s var(--ease);
+    }
+    .faq-icon::before {
+      top: 50%; left: 0;
+      width: 100%; height: 1px;
+      transform: translateY(-0.5px);
+    }
+    .faq-icon::after {
+      left: 50%; top: 0;
+      width: 1px; height: 100%;
+      transform: translateX(-0.5px);
+    }
+    .faq-item[open] .faq-icon::after { transform: translateX(-0.5px) scaleY(0); }
+
+    .faq-answer {
+      padding: 4px 0 36px 0;
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--text-mid);
+      max-width: 580px;
     }
 
     @media (max-width: 640px) {
-      .step { grid-template-columns: 1fr; gap: 12px; padding: 44px 0; }
-      .step-num { font-size: 48px; }
-      .step-body h3 { font-size: 24px; }
+      .faq-item summary { font-size: 18px; padding: 26px 0; gap: 20px; }
+      .faq-answer { font-size: 15px; padding-bottom: 28px; }
     }
 
     /* ===== DIFFERENCE ===== */
@@ -714,30 +828,48 @@
 
   <!-- ===== HOW IT WORKS ===== -->
   <section class="how">
-    <div class="wrap">
+    <div class="wrap-wide">
       <div class="label reveal" data-i18n="how.label">How Mira works</div>
+      <h2 class="how-intro reveal d1" data-i18n="how.intro">Three steps. One introduction a week. That’s it.</h2>
 
-      <div class="step reveal">
-        <div class="step-num">01</div>
-        <div class="step-body">
-          <h3 data-i18n-html="how.s1.title">A friend who knows you<br>writes a genuine introduction.</h3>
-          <p data-i18n="how.s1.sub">They vouch for who you are, not just what you look like.</p>
+      <div class="how-cards">
+        <div class="how-card reveal">
+          <span class="how-card-num">01</span>
+          <div class="how-card-icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 14a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/>
+              <path d="M21 14a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/>
+              <path d="M4 26c1-4 4-6 7-6s6 2 7 6"/>
+              <path d="M18 26c1-4 4-6 7-6s6 2 7 6"/>
+            </svg>
+          </div>
+          <h3 data-i18n="how.s1.title">A friend vouches for you.</h3>
+          <p data-i18n="how.s1.sub">Someone who actually knows you writes a genuine introduction — for who you are, not how you look.</p>
         </div>
-      </div>
 
-      <div class="step reveal">
-        <div class="step-num">02</div>
-        <div class="step-body">
-          <h3 data-i18n="how.s2.title">We find someone compatible. You both answer the same questions, separately.</h3>
-          <p data-i18n="how.s2.sub">Personality first. Revealed to both of you at the same time.</p>
+        <div class="how-card reveal d1">
+          <span class="how-card-num">02</span>
+          <div class="how-card-icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="16" cy="16" r="11"/>
+              <path d="M16 5v22M5 16h22"/>
+              <circle cx="16" cy="16" r="3" fill="currentColor" stroke="none"/>
+            </svg>
+          </div>
+          <h3 data-i18n="how.s2.title">We match you, carefully.</h3>
+          <p data-i18n="how.s2.sub">Our system finds someone genuinely compatible — shared values, lifestyle, and what actually matters. Not filters.</p>
         </div>
-      </div>
 
-      <div class="step reveal">
-        <div class="step-num">03</div>
-        <div class="step-body">
-          <h3 data-i18n="how.s3.title">If you both want to continue, photos and profiles unlock.</h3>
-          <p data-i18n="how.s3.sub">One introduction, every week. No browsing. No noise. Just one carefully chosen person.</p>
+        <div class="how-card reveal d2">
+          <span class="how-card-num">03</span>
+          <div class="how-card-icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 16s4-8 12-8 12 8 12 8-4 8-12 8S4 16 4 16Z"/>
+              <circle cx="16" cy="16" r="3.5"/>
+            </svg>
+          </div>
+          <h3 data-i18n="how.s3.title">You decide, together.</h3>
+          <p data-i18n="how.s3.sub">Character first, photo second. If you both say yes, profiles unlock. One introduction a week — that’s all.</p>
         </div>
       </div>
     </div>
@@ -818,6 +950,80 @@
     </div>
   </section>
 
+  <!-- ===== FAQ ===== -->
+  <section class="faq">
+    <div class="wrap">
+      <div class="label reveal" data-i18n="faq.label">Questions</div>
+      <h2 class="reveal d1" data-i18n="faq.h2">Things people usually ask.</h2>
+
+      <div class="faq-list reveal d2">
+        <details class="faq-item">
+          <summary>
+            <span data-i18n="faq.q1">What is Mira, exactly?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-answer" data-i18n="faq.a1">A trust-based introduction network. A friend vouches for you, we match you with someone genuinely compatible, and you only meet people who were hand-picked for you.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span data-i18n="faq.q2">How is this different from other apps?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-answer" data-i18n="faq.a2">You are never browsed by strangers. No feeds, no swiping, no endless scroll. You only appear in front of the one person a friend specifically chose for you.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span data-i18n="faq.q3">Do I need a friend to join?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-answer" data-i18n="faq.a3">Yes — Mira only works with a real recommendation. If you don’t have someone to vouch for you yet, you can still join the waitlist and we’ll reach out personally.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span data-i18n="faq.q4">How often will I get matched?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-answer" data-i18n="faq.a4">One carefully chosen introduction per week. No more. We’d rather you meet one right person than a hundred wrong ones.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span data-i18n="faq.q5">Will I see photos right away?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-answer" data-i18n="faq.a5">No. Character first, photo second. Photos and profiles only unlock after both sides say yes.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span data-i18n="faq.q6">Where does Mira launch?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-answer" data-i18n="faq.a6">Istanbul first. Other cities will follow, slowly and carefully — one community at a time.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span data-i18n="faq.q7">Is it free?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-answer" data-i18n="faq.a7">Early access is free. Pricing will come later — and it’ll reflect the care we put into every single introduction.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span data-i18n="faq.q8">How is my privacy protected?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-answer" data-i18n="faq.a8">You never appear in a public feed. Your profile only exists in front of the one person matched to you. That’s it.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== WAITLIST ===== -->
   <section class="waitlist" id="waitlist">
     <div class="wrap">
@@ -884,12 +1090,32 @@
         'problem.p3': 'There is a better way. There always has been.',
 
         'how.label': 'How Mira works',
-        'how.s1.title': 'A friend who knows you<br>writes a genuine introduction.',
-        'how.s1.sub': 'They vouch for who you are, not just what you look like.',
-        'how.s2.title': 'We find someone compatible. You both answer the same questions, separately.',
-        'how.s2.sub': 'Personality first. Revealed to both of you at the same time.',
-        'how.s3.title': 'If you both want to continue, photos and profiles unlock.',
-        'how.s3.sub': 'One introduction, every week. No browsing. No noise. Just one carefully chosen person.',
+        'how.intro': 'Three steps. One introduction a week. That’s it.',
+        'how.s1.title': 'A friend vouches for you.',
+        'how.s1.sub': 'Someone who actually knows you writes a genuine introduction — for who you are, not how you look.',
+        'how.s2.title': 'We match you, carefully.',
+        'how.s2.sub': 'Our system finds someone genuinely compatible — shared values, lifestyle, and what actually matters. Not filters.',
+        'how.s3.title': 'You decide, together.',
+        'how.s3.sub': 'Character first, photo second. If you both say yes, profiles unlock. One introduction a week — that’s all.',
+
+        'faq.label': 'Questions',
+        'faq.h2': 'Things people usually ask.',
+        'faq.q1': 'What is Mira, exactly?',
+        'faq.a1': 'A trust-based introduction network. A friend vouches for you, we match you with someone genuinely compatible, and you only meet people who were hand-picked for you.',
+        'faq.q2': 'How is this different from other apps?',
+        'faq.a2': 'You are never browsed by strangers. No feeds, no swiping, no endless scroll. You only appear in front of the one person a friend specifically chose for you.',
+        'faq.q3': 'Do I need a friend to join?',
+        'faq.a3': 'Yes — Mira only works with a real recommendation. If you don’t have someone to vouch for you yet, you can still join the waitlist and we’ll reach out personally.',
+        'faq.q4': 'How often will I get matched?',
+        'faq.a4': 'One carefully chosen introduction per week. No more. We’d rather you meet one right person than a hundred wrong ones.',
+        'faq.q5': 'Will I see photos right away?',
+        'faq.a5': 'No. Character first, photo second. Photos and profiles only unlock after both sides say yes.',
+        'faq.q6': 'Where does Mira launch?',
+        'faq.a6': 'Istanbul first. Other cities will follow, slowly and carefully — one community at a time.',
+        'faq.q7': 'Is it free?',
+        'faq.a7': 'Early access is free. Pricing will come later — and it’ll reflect the care we put into every single introduction.',
+        'faq.q8': 'How is my privacy protected?',
+        'faq.a8': 'You never appear in a public feed. Your profile only exists in front of the one person matched to you. That’s it.',
 
         'diff.label': 'Why Mira is different',
         'diff.other': 'Other apps',
@@ -945,12 +1171,32 @@
         'problem.p3': 'Daha iyi bir yolu var. Aslında hep vardı.',
 
         'how.label': 'Nasıl çalışıyor',
-        'how.s1.title': 'Sizi tanıyan bir arkadaşınız<br>sizi içtenlikle anlatır.',
-        'how.s1.sub': 'Nasıl göründüğünüze değil, nasıl biri olduğunuza kefil olur.',
-        'how.s2.title': 'Size yakışan birini buluruz. İkiniz de aynı sorulara, birbirinizden habersiz cevap verirsiniz.',
-        'how.s2.sub': 'Önce karakter. Cevaplar ikinize aynı anda açılır.',
-        'how.s3.title': 'İkiniz de devam derseniz, fotoğraflar ve profiller açılır.',
-        'how.s3.sub': 'Haftada bir tanıştırma. Göz gezdirmek yok, gürültü yok. Sadece özenle seçilmiş bir kişi.',
+        'how.intro': 'Üç adım. Haftada bir tanıştırma. Hepsi bu.',
+        'how.s1.title': 'Bir arkadaşınız sizi önerir.',
+        'how.s1.sub': 'Sizi gerçekten tanıyan biri, içtenlikle bir tanıtım yazar — nasıl göründüğünüze değil, nasıl biri olduğunuza dair.',
+        'how.s2.title': 'Size yakışanı buluruz.',
+        'how.s2.sub': 'Sistemimiz size gerçekten uyan birini bulur — değerler, yaşam tarzı ve gerçekten önemli olana göre. Filtrelere değil.',
+        'how.s3.title': 'Kararı birlikte verirsiniz.',
+        'how.s3.sub': 'Önce karakter, sonra fotoğraf. İkiniz de "evet" derseniz profiller açılır. Haftada bir tanıştırma — hepsi bu.',
+
+        'faq.label': 'Sorular',
+        'faq.h2': 'Sıkça merak edilenler.',
+        'faq.q1': 'Mira tam olarak ne?',
+        'faq.a1': 'Güvene dayalı bir tanıştırma ağı. Bir arkadaşınız sizi önerir, biz size gerçekten yakışan birini buluruz; yalnızca sizin için özenle seçilmiş kişilerle tanışırsınız.',
+        'faq.q2': 'Diğer uygulamalardan farkı ne?',
+        'faq.a2': 'Yabancılar sizi süzemez. Akış yok, kaydırma yok, sonu gelmeyen bir liste yok. Sadece, bir arkadaşınızın özellikle sizin için seçtiği kişinin karşısına çıkarsınız.',
+        'faq.q3': 'Katılmak için bir arkadaş şart mı?',
+        'faq.a3': 'Evet — Mira yalnızca gerçek bir tavsiyeyle çalışır. Henüz sizi önerebilecek biri yoksa da listeye yazılabilirsiniz, sizinle bizzat iletişime geçeriz.',
+        'faq.q4': 'Ne sıklıkta eşleşeceğim?',
+        'faq.a4': 'Haftada bir, özenle seçilmiş tek bir tanıştırma. Fazlası yok. Yüz yanlış kişi yerine bir doğru kişiyle tanışmanızı tercih ederiz.',
+        'faq.q5': 'Fotoğrafları hemen görecek miyim?',
+        'faq.a5': 'Hayır. Önce karakter, sonra fotoğraf. Fotoğraflar ve profiller ancak iki taraf da "evet" dedikten sonra açılır.',
+        'faq.q6': 'Mira nereden başlıyor?',
+        'faq.a6': 'Önce İstanbul. Sonra, her seferinde tek bir topluluk olacak şekilde, yavaş ve özenle diğer şehirlere açılacağız.',
+        'faq.q7': 'Ücretli mi?',
+        'faq.a7': 'Erken erişim ücretsiz. Fiyatlandırma sonra gelecek — ve her bir tanıştırmaya verdiğimiz emeği yansıtacak.',
+        'faq.q8': 'Gizliliğim nasıl korunuyor?',
+        'faq.a8': 'Hiçbir zaman herkese açık bir akışta yer almazsınız. Profiliniz yalnızca sizinle eşleşen kişinin gözünde vardır. Hepsi bu.',
 
         'diff.label': 'Farkımız',
         'diff.other': 'Diğerleri',
