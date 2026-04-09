@@ -1,41 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mira — Meet through someone who knows you</title>
-  <meta name="description" content="Mira is a trust-based introduction network. A friend vouches, AI matches, you decide. One carefully chosen introduction per week.">
+  <title>Mira — Seni tanıyan birinin eliyle tanış</title>
+  <meta name="description" content="Mira, güvenle tanıştıran bir sistem. Görücünün özenini teknolojiyle buluşturur. Her hafta 3 özenle seçilmiş aday. İstanbul'dan başlıyor.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Mira — Meet through someone who knows you">
-  <meta property="og:description" content="A trust-based introduction network. One carefully chosen introduction per week.">
+  <meta property="og:title" content="Mira — Seni tanıyan birinin eliyle tanış">
+  <meta property="og:description" content="Dijital görücü. Her hafta 3 özenle seçilmiş aday. Ciddi süreç, ciddi insanlar.">
   <link rel="canonical" href="https://blindside.to/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #FAFAF8;
-      --bg-alt: #F0EDE8;
-      --text: #1A1814;
-      --text-mid: #7A7570;
-      --border: #E8E4DF;
-      --accent: #C4714A;
-      --accent-hover: #A85C37;
+      --bg: #FFFFFF;
+      --bg-alt: #F5F5F5;
+      --text: #0A0A0A;
+      --text-mid: #767676;
+      --text-dim: #A0A0A0;
+      --border: #E0E0E0;
+      --accent: #0A0A0A;
+      --accent-hover: #333333;
 
-      --font-display: 'Cormorant Garamond', Georgia, serif;
-      --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
-      --size-hero: clamp(48px, 8vw, 80px);
-      --size-display: clamp(34px, 5vw, 54px);
-      --size-section: clamp(28px, 3.5vw, 40px);
-      --size-body: 17px;
-      --size-small: 13px;
-      --size-label: 11px;
+      --size-hero: clamp(42px, 7.5vw, 72px);
+      --size-display: clamp(30px, 4.5vw, 48px);
+      --size-section: clamp(26px, 3.5vw, 38px);
+      --size-body: 15px;
+      --size-small: 12px;
+      --size-label: 10px;
 
       --max-text: 680px;
       --max-wide: 960px;
 
-      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+      --ease: cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     *, *::before, *::after {
@@ -48,402 +48,250 @@
     }
 
     body {
-      font-family: var(--font-body);
+      font-family: var(--font);
       font-size: var(--size-body);
-      line-height: 1.75;
+      line-height: 1.65;
       color: var(--text);
       background: var(--bg);
       font-weight: 400;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       overflow-x: hidden;
-      position: relative;
     }
 
-    /* Subtle grain */
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 1;
-      opacity: 0.35;
-      mix-blend-mode: multiply;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.09 0 0 0 0 0.08 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    }
-
-    main, section, header, footer { position: relative; z-index: 2; }
-
-    ::selection { background: var(--accent); color: var(--bg); }
+    ::selection { background: var(--text); color: var(--bg); }
 
     a {
       color: inherit;
       text-decoration: none;
-      transition: color 0.4s var(--ease);
+      transition: opacity 0.3s var(--ease);
     }
 
     /* Layout */
     .wrap {
       max-width: var(--max-text);
       margin: 0 auto;
-      padding: 0 28px;
+      padding: 0 24px;
     }
 
     .wrap-wide {
       max-width: var(--max-wide);
       margin: 0 auto;
-      padding: 0 28px;
+      padding: 0 24px;
     }
 
     section {
-      padding: 140px 0;
+      padding: 120px 0;
     }
 
     @media (max-width: 720px) {
-      section { padding: 96px 0; }
+      section { padding: 80px 0; }
     }
 
     /* Typography */
     .label {
-      font-family: var(--font-body);
       font-size: var(--size-label);
-      font-weight: 400;
+      font-weight: 500;
       text-transform: uppercase;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.14em;
       color: var(--text-mid);
-      margin-bottom: 32px;
+      margin-bottom: 40px;
       display: inline-block;
     }
 
-    .display {
-      font-family: var(--font-display);
-      font-weight: 500;
-      line-height: 1.08;
-      letter-spacing: -0.015em;
-      color: var(--text);
-    }
-
     .serif-italic {
-      font-family: var(--font-display);
-      font-style: italic;
-      font-weight: 400;
+      font-style: normal;
+      font-weight: 300;
     }
 
     /* Reveal animations */
     .reveal {
       opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 1.2s var(--ease), transform 1.2s var(--ease);
+      transform: translateY(16px);
+      transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
     }
     .reveal.in { opacity: 1; transform: none; }
-    .d1 { transition-delay: 0.12s; }
-    .d2 { transition-delay: 0.24s; }
-    .d3 { transition-delay: 0.36s; }
-    .d4 { transition-delay: 0.48s; }
-    .d5 { transition-delay: 0.60s; }
+    .d1 { transition-delay: 0.1s; }
+    .d2 { transition-delay: 0.2s; }
+    .d3 { transition-delay: 0.3s; }
+    .d4 { transition-delay: 0.4s; }
+    .d5 { transition-delay: 0.5s; }
 
     /* ===== HERO ===== */
     .hero {
-      padding: 160px 0 140px;
-      min-height: 92vh;
+      padding: 180px 0 120px;
+      min-height: 100vh;
       display: flex;
       align-items: center;
     }
 
     .hero-inner {
-      max-width: 860px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 0 28px;
+      padding: 0 24px;
       text-align: center;
     }
 
     .hero h1 {
-      font-family: var(--font-display);
       font-size: var(--size-hero);
-      font-weight: 500;
-      line-height: 1.04;
-      letter-spacing: -0.02em;
-      margin: 28px 0 36px;
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -0.035em;
+      margin: 32px 0 40px;
     }
 
     .hero h1 .line {
       display: block;
     }
 
-    .hero h1 em {
-      font-style: italic;
-      font-weight: 400;
-    }
-
     .hero-sub {
-      font-size: 19px;
+      font-size: 16px;
       line-height: 1.7;
       color: var(--text-mid);
-      max-width: 540px;
-      margin: 0 auto 52px;
+      max-width: 480px;
+      margin: 0 auto 56px;
       font-weight: 400;
     }
 
     .hero-ctas {
       display: flex;
-      gap: 14px;
+      gap: 12px;
       justify-content: center;
       flex-wrap: wrap;
-      margin-bottom: 40px;
+      margin-bottom: 48px;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-family: var(--font-body);
-      font-size: 15px;
-      font-weight: 400;
-      padding: 16px 28px;
-      border-radius: 2px;
+      font-family: var(--font);
+      font-size: 13px;
+      font-weight: 500;
+      padding: 14px 32px;
       cursor: pointer;
-      transition: all 0.4s var(--ease);
-      letter-spacing: 0.01em;
-      border: 1px solid transparent;
-      min-width: 220px;
+      transition: all 0.3s var(--ease);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      border: 1px solid var(--text);
+      min-width: 240px;
     }
 
     .btn-primary {
-      background: var(--accent);
-      color: #FFFDF9;
-      border-color: var(--accent);
+      background: var(--text);
+      color: var(--bg);
     }
     .btn-primary:hover {
       background: var(--accent-hover);
       border-color: var(--accent-hover);
-      transform: translateY(-1px);
     }
 
     .btn-secondary {
       background: transparent;
-      color: var(--accent);
-      border-color: var(--accent);
+      color: var(--text);
     }
     .btn-secondary:hover {
-      background: var(--accent);
-      color: #FFFDF9;
-      transform: translateY(-1px);
+      background: var(--text);
+      color: var(--bg);
     }
 
     .hero-foot {
       font-size: var(--size-small);
-      color: var(--text-mid);
-      letter-spacing: 0.02em;
+      color: var(--text-dim);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
     }
 
     /* ===== PROBLEM ===== */
     .problem {
-      padding: 100px 0 140px;
+      padding: 80px 0 120px;
     }
     .problem-text {
-      font-family: var(--font-display);
       font-size: var(--size-display);
-      font-weight: 400;
-      line-height: 1.25;
+      font-weight: 300;
+      line-height: 1.3;
       color: var(--text);
-      max-width: 720px;
-      margin-left: max(28px, calc((100vw - 860px) / 2));
-      padding-right: 28px;
-      letter-spacing: -0.01em;
+      max-width: 740px;
+      margin-left: max(24px, calc((100vw - 900px) / 2));
+      padding-right: 24px;
+      letter-spacing: -0.025em;
     }
     .problem-text p {
-      margin-bottom: 1.1em;
+      margin-bottom: 1em;
     }
     .problem-text p:last-child {
       margin-bottom: 0;
-      font-style: italic;
       color: var(--text-mid);
     }
 
     @media (max-width: 900px) {
-      .problem-text { margin-left: 28px; }
+      .problem-text { margin-left: 24px; }
     }
 
     /* ===== HOW IT WORKS ===== */
-    .how .label { margin-bottom: 16px; }
-    .how-intro {
-      font-family: var(--font-display);
-      font-size: clamp(26px, 3vw, 34px);
-      font-weight: 500;
-      line-height: 1.25;
-      letter-spacing: -0.015em;
-      max-width: 560px;
-      margin-bottom: 64px;
-    }
+    .how .label { margin-bottom: 64px; }
 
-    .how-cards {
+    .step {
+      padding: 48px 0;
+      border-top: 1px solid var(--border);
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      grid-template-columns: 80px 1fr;
+      gap: 32px;
+      align-items: start;
     }
+    .step:last-child { border-bottom: 1px solid var(--border); }
 
-    .how-card {
-      background: #F4F1EC;
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 48px 36px 44px;
-      position: relative;
-      transition: transform 0.6s var(--ease), border-color 0.6s var(--ease), background 0.6s var(--ease);
-    }
-    .how-card:hover {
-      transform: translateY(-3px);
-      border-color: #D8D2C8;
-      background: #F0EDE6;
-    }
-
-    .how-card-num {
-      font-family: var(--font-display);
-      font-size: 56px;
+    .step-num {
+      font-size: 48px;
       font-weight: 300;
       line-height: 1;
-      color: var(--accent);
-      display: block;
-      letter-spacing: -0.02em;
-    }
-    .how-card-num::after {
-      content: "";
-      display: block;
-      width: 28px;
-      height: 1px;
-      background: var(--accent);
-      margin: 18px 0 26px;
+      color: var(--text-dim);
+      letter-spacing: -0.04em;
     }
 
-    .how-card h3 {
-      font-family: var(--font-display);
-      font-size: 24px;
-      font-weight: 500;
-      line-height: 1.3;
-      letter-spacing: -0.01em;
-      margin-bottom: 14px;
-      color: var(--text);
-    }
-    .how-card p {
-      font-size: 15px;
-      color: var(--text-mid);
-      line-height: 1.75;
-    }
-
-    .how-card-icon {
-      position: absolute;
-      top: 36px;
-      right: 36px;
-      width: 32px;
-      height: 32px;
-      opacity: 0.35;
-      color: var(--text);
-    }
-    .how-card-icon svg { width: 100%; height: 100%; }
-
-    @media (max-width: 900px) {
-      .how-cards { grid-template-columns: 1fr; gap: 16px; }
-      .how-card { padding: 40px 32px 36px; }
-      .how-card-num { font-size: 48px; }
-      .how-card h3 { font-size: 22px; }
-    }
-
-    /* ===== FAQ ===== */
-    .faq .label { margin-bottom: 16px; }
-    .faq h2 {
-      font-family: var(--font-display);
-      font-size: var(--size-section);
-      font-weight: 500;
-      letter-spacing: -0.015em;
-      line-height: 1.15;
-      margin-bottom: 64px;
-    }
-
-    .faq-list {
-      border-top: 1px solid var(--border);
-    }
-    .faq-item {
-      border-bottom: 1px solid var(--border);
-    }
-    .faq-item summary {
-      list-style: none;
-      cursor: pointer;
-      padding: 32px 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 32px;
-      font-family: var(--font-display);
+    .step-body h3 {
       font-size: 22px;
       font-weight: 500;
       line-height: 1.35;
-      letter-spacing: -0.005em;
-      color: var(--text);
-      transition: color 0.4s var(--ease);
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
     }
-    .faq-item summary::-webkit-details-marker { display: none; }
-    .faq-item summary:hover { color: var(--accent); }
-    .faq-item[open] summary { color: var(--accent); }
-
-    .faq-icon {
-      flex-shrink: 0;
-      width: 16px;
-      height: 16px;
-      position: relative;
-    }
-    .faq-icon::before, .faq-icon::after {
-      content: "";
-      position: absolute;
-      background: currentColor;
-      transition: transform 0.4s var(--ease);
-    }
-    .faq-icon::before {
-      top: 50%; left: 0;
-      width: 100%; height: 1px;
-      transform: translateY(-0.5px);
-    }
-    .faq-icon::after {
-      left: 50%; top: 0;
-      width: 1px; height: 100%;
-      transform: translateX(-0.5px);
-    }
-    .faq-item[open] .faq-icon::after { transform: translateX(-0.5px) scaleY(0); }
-
-    .faq-answer {
-      padding: 4px 0 36px 0;
-      font-size: 16px;
-      line-height: 1.8;
+    .step-body p {
+      font-size: 14px;
       color: var(--text-mid);
-      max-width: 580px;
+      line-height: 1.65;
+      max-width: 440px;
     }
 
     @media (max-width: 640px) {
-      .faq-item summary { font-size: 18px; padding: 26px 0; gap: 20px; }
-      .faq-answer { font-size: 15px; padding-bottom: 28px; }
+      .step { grid-template-columns: 1fr; gap: 8px; padding: 36px 0; }
+      .step-num { font-size: 36px; }
+      .step-body h3 { font-size: 19px; }
     }
 
     /* ===== DIFFERENCE ===== */
-    .diff .label { margin-bottom: 64px; }
+    .diff .label { margin-bottom: 56px; }
 
     .diff-grid {
       display: grid;
       grid-template-columns: 1fr 1px 1fr;
-      gap: 56px;
+      gap: 48px;
       align-items: start;
     }
 
     .diff-divider {
       background: var(--border);
       width: 1px;
-      min-height: 280px;
+      min-height: 320px;
       justify-self: center;
     }
 
     .diff-col h4 {
       font-size: var(--size-label);
       text-transform: uppercase;
-      letter-spacing: 0.16em;
-      font-weight: 400;
-      margin-bottom: 32px;
+      letter-spacing: 0.14em;
+      font-weight: 500;
+      margin-bottom: 28px;
       color: var(--text-mid);
     }
 
@@ -451,25 +299,28 @@
       list-style: none;
     }
     .diff-col li {
-      font-size: 17px;
-      line-height: 1.55;
-      padding: 14px 0;
+      font-size: 15px;
+      line-height: 1.5;
+      padding: 12px 0;
+      border-bottom: 1px solid transparent;
     }
 
     .diff-other li {
-      color: #B8B3AC;
+      color: var(--text-dim);
       font-weight: 300;
+      text-decoration: line-through;
+      text-decoration-color: #D0D0D0;
     }
 
     .diff-mira li {
       color: var(--text);
-      font-weight: 400;
+      font-weight: 500;
     }
 
     @media (max-width: 720px) {
       .diff-grid {
         grid-template-columns: 1fr;
-        gap: 48px;
+        gap: 40px;
       }
       .diff-divider { display: none; }
       .diff-mira { padding-top: 16px; border-top: 1px solid var(--border); }
@@ -477,203 +328,197 @@
 
     /* ===== TWO PATHS ===== */
     .paths h2 {
-      font-family: var(--font-display);
       font-size: var(--size-section);
-      font-weight: 500;
-      letter-spacing: -0.015em;
-      margin-bottom: 96px;
+      font-weight: 400;
+      letter-spacing: -0.03em;
+      margin-bottom: 80px;
       line-height: 1.15;
     }
 
     .path {
-      padding: 64px 0;
+      padding: 56px 0;
     }
     .path + .path {
       border-top: 1px solid var(--border);
     }
 
     .path-arrow {
-      font-family: var(--font-display);
-      font-size: 48px;
-      color: var(--accent);
+      font-size: 32px;
+      color: var(--text);
       line-height: 1;
-      margin-bottom: 28px;
+      margin-bottom: 24px;
       font-weight: 300;
       display: block;
     }
 
     .path h3 {
-      font-family: var(--font-display);
-      font-size: 32px;
+      font-size: 24px;
       font-weight: 500;
       line-height: 1.25;
-      letter-spacing: -0.015em;
-      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
     }
 
     .path p {
-      font-size: 16px;
+      font-size: 15px;
       color: var(--text-mid);
-      line-height: 1.8;
-      max-width: 540px;
-      margin-bottom: 28px;
+      line-height: 1.75;
+      max-width: 520px;
+      margin-bottom: 24px;
     }
 
     .path-link {
-      font-size: 15px;
-      color: var(--accent);
-      position: relative;
-      padding-bottom: 3px;
-      border-bottom: 1px solid var(--accent);
-      transition: all 0.4s var(--ease);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding-bottom: 4px;
+      border-bottom: 1px solid var(--text);
+      transition: all 0.3s var(--ease);
       display: inline-block;
     }
     .path-link:hover {
-      color: var(--accent-hover);
-      border-color: var(--accent-hover);
-      transform: translateX(4px);
+      opacity: 0.6;
     }
 
     /* ===== TRUST QUOTE ===== */
     .trust {
       background: var(--bg-alt);
-      padding: 180px 0;
+      padding: 160px 0;
       text-align: center;
     }
 
     .trust-quote {
-      font-family: var(--font-display);
       font-size: var(--size-display);
-      font-weight: 400;
-      line-height: 1.3;
-      letter-spacing: -0.01em;
-      max-width: 780px;
+      font-weight: 300;
+      line-height: 1.35;
+      letter-spacing: -0.025em;
+      max-width: 720px;
       margin: 0 auto;
     }
 
     .trust-quote p {
-      margin-bottom: 0.4em;
+      margin-bottom: 0.3em;
     }
 
     .trust-sub {
-      margin-top: 56px;
-      font-size: 14px;
+      margin-top: 48px;
+      font-size: 13px;
       color: var(--text-mid);
-      font-style: italic;
       line-height: 1.7;
+      letter-spacing: 0.02em;
     }
 
     @media (max-width: 720px) {
-      .trust { padding: 120px 0; }
+      .trust { padding: 100px 0; }
     }
 
     /* ===== WAITLIST ===== */
     .waitlist {
       text-align: center;
-      padding: 160px 0;
+      padding: 140px 0;
     }
 
     .waitlist h2 {
-      font-family: var(--font-display);
       font-size: var(--size-section);
-      font-weight: 500;
-      letter-spacing: -0.015em;
-      margin-bottom: 20px;
+      font-weight: 400;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
       line-height: 1.2;
     }
 
     .waitlist-sub {
       color: var(--text-mid);
-      font-size: 16px;
+      font-size: 15px;
       line-height: 1.7;
-      margin-bottom: 56px;
-      max-width: 440px;
+      margin-bottom: 48px;
+      max-width: 400px;
       margin-left: auto;
       margin-right: auto;
     }
 
     .form {
-      max-width: 440px;
+      max-width: 400px;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
-      gap: 24px;
+      gap: 20px;
     }
 
     .input {
       width: 100%;
-      padding: 16px 0;
+      padding: 14px 0;
       background: transparent;
       border: none;
       border-bottom: 1px solid var(--border);
-      font-family: var(--font-body);
-      font-size: 16px;
+      font-family: var(--font);
+      font-size: 15px;
       color: var(--text);
       text-align: center;
-      transition: border-color 0.4s var(--ease);
+      transition: border-color 0.3s var(--ease);
     }
     .input:focus {
       outline: none;
-      border-bottom-color: var(--accent);
+      border-bottom-color: var(--text);
     }
-    .input::placeholder { color: #B8B3AC; }
+    .input::placeholder { color: var(--text-dim); }
 
     .radios {
       display: flex;
-      gap: 10px;
+      gap: 8px;
       justify-content: center;
       flex-wrap: wrap;
-      margin: 8px 0 16px;
+      margin: 4px 0 12px;
     }
 
     .radio {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      padding: 11px 20px;
+      gap: 8px;
+      padding: 10px 18px;
       border: 1px solid var(--border);
-      border-radius: 100px;
       cursor: pointer;
-      font-size: 14px;
+      font-size: 13px;
       color: var(--text-mid);
-      transition: all 0.4s var(--ease);
+      transition: all 0.3s var(--ease);
       user-select: none;
     }
     .radio input { display: none; }
     .radio-dot {
-      width: 10px;
-      height: 10px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
       border: 1px solid var(--text-mid);
       transition: all 0.3s var(--ease);
       flex-shrink: 0;
     }
     .radio:hover {
-      border-color: var(--text-mid);
+      border-color: var(--text);
       color: var(--text);
     }
     .radio.active {
-      border-color: var(--accent);
-      color: var(--accent);
+      border-color: var(--text);
+      color: var(--text);
     }
     .radio.active .radio-dot {
-      border-color: var(--accent);
-      background: var(--accent);
-      box-shadow: inset 0 0 0 2px var(--bg);
+      border-color: var(--text);
+      background: var(--text);
     }
 
     .submit {
-      margin-top: 12px;
-      padding: 17px 28px;
-      background: var(--accent);
-      color: #FFFDF9;
-      border: 1px solid var(--accent);
-      border-radius: 2px;
-      font-family: var(--font-body);
-      font-size: 15px;
+      margin-top: 8px;
+      padding: 15px 28px;
+      background: var(--text);
+      color: var(--bg);
+      border: 1px solid var(--text);
+      font-family: var(--font);
+      font-size: 13px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
       cursor: pointer;
-      transition: all 0.4s var(--ease);
-      letter-spacing: 0.01em;
+      transition: all 0.3s var(--ease);
     }
     .submit:hover {
       background: var(--accent-hover);
@@ -681,195 +526,123 @@
     }
 
     .form-foot {
-      margin-top: 32px;
-      font-size: 13px;
-      color: var(--text-mid);
+      margin-top: 28px;
+      font-size: 12px;
+      color: var(--text-dim);
       line-height: 1.6;
-      font-style: italic;
     }
 
     .form-success {
       display: none;
-      font-family: var(--font-display);
-      font-size: 28px;
-      font-weight: 500;
+      font-size: 24px;
+      font-weight: 400;
       line-height: 1.4;
       color: var(--text);
       padding: 40px 20px;
+      letter-spacing: -0.02em;
     }
     .form-success.show { display: block; }
     .form-success small {
       display: block;
-      font-family: var(--font-body);
-      font-size: 14px;
-      font-style: italic;
+      font-size: 13px;
       color: var(--text-mid);
-      margin-top: 16px;
+      margin-top: 12px;
       font-weight: 400;
-    }
-
-    /* ===== LANG TOGGLE ===== */
-    .lang-toggle {
-      position: fixed;
-      top: 24px;
-      right: 28px;
-      z-index: 50;
-      display: flex;
-      gap: 2px;
-      font-family: var(--font-body);
-      font-size: 11px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--text-mid);
-      background: rgba(250, 250, 248, 0.7);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      padding: 8px 12px;
-      border: 1px solid var(--border);
-      border-radius: 100px;
-    }
-    .lang-toggle button {
-      background: none;
-      border: none;
-      font: inherit;
-      letter-spacing: inherit;
-      text-transform: inherit;
-      color: var(--text-mid);
-      cursor: pointer;
-      padding: 2px 8px;
-      border-radius: 100px;
-      transition: color 0.4s var(--ease);
-    }
-    .lang-toggle button.active {
-      color: var(--accent);
-    }
-    .lang-toggle button:hover { color: var(--text); }
-    .lang-toggle button.active:hover { color: var(--accent); }
-    .lang-sep { color: var(--border); align-self: center; }
-
-    @media (max-width: 720px) {
-      .lang-toggle { top: 16px; right: 16px; padding: 6px 10px; }
     }
 
     /* ===== FOOTER ===== */
     footer {
-      padding: 96px 0 72px;
+      padding: 80px 0 60px;
       border-top: 1px solid var(--border);
       text-align: center;
     }
 
     .foot-logo {
-      font-family: var(--font-display);
-      font-size: 28px;
-      font-weight: 500;
-      letter-spacing: -0.01em;
-      margin-bottom: 6px;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
     }
 
     .foot-loc {
-      font-size: 12px;
-      color: var(--text-mid);
-      letter-spacing: 0.14em;
+      font-size: var(--size-small);
+      color: var(--text-dim);
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      margin-bottom: 40px;
+      margin-bottom: 36px;
     }
 
     .foot-line {
-      font-family: var(--font-display);
-      font-style: italic;
-      font-size: 17px;
+      font-size: 14px;
       line-height: 1.6;
       color: var(--text-mid);
-      max-width: 440px;
+      max-width: 400px;
       margin: 0 auto;
+      font-weight: 300;
     }
   </style>
 </head>
 <body>
 
-  <!-- ===== LANG TOGGLE ===== -->
-  <div class="lang-toggle" role="group" aria-label="Language">
-    <button type="button" data-lang="en" class="active">EN</button>
-    <span class="lang-sep">/</span>
-    <button type="button" data-lang="tr">TR</button>
-  </div>
-
   <!-- ===== HERO ===== -->
   <section class="hero">
     <div class="hero-inner">
-      <div class="label reveal" data-i18n="hero.label">Mira — Early Access</div>
+      <div class="label reveal">Mira — Erken Erişim</div>
       <h1 class="reveal d1">
-        <span class="line" data-i18n="hero.h1a">Meet through someone</span>
-        <span class="line serif-italic" data-i18n="hero.h1b">who knows you.</span>
+        <span class="line">Yabancılarla değil,</span>
+        <span class="line serif-italic">seni tanıyan birinin eliyle tanış.</span>
       </h1>
-      <p class="hero-sub reveal d2" data-i18n="hero.sub">
-        A trust-based introduction network — where a friend vouches,
-        AI matches, and you decide.
+      <p class="hero-sub reveal d2">
+        Görücünün özenini teknolojiyle buluşturan bir tanıştırma sistemi.
+        Her hafta üç aday, özenle seçilmiş. Karar senin.
       </p>
       <div class="hero-ctas reveal d3">
-        <a href="#waitlist" class="btn btn-primary" data-choice="partner" data-i18n="cta.partner">I'm looking for a partner</a>
-        <a href="#waitlist" class="btn btn-secondary" data-choice="introduce" data-i18n="cta.introduce">I want to introduce a friend</a>
+        <a href="#waitlist" class="btn btn-primary" data-choice="partner">Birini arıyorum</a>
+        <a href="#waitlist" class="btn btn-secondary" data-choice="introduce">Birini tanıştırmak istiyorum</a>
       </div>
-      <div class="hero-foot reveal d4" data-i18n="hero.foot">Launching in Istanbul. Waitlist open now.</div>
+      <div class="hero-foot reveal d4">İstanbul'dan başlıyor. Bekleme listesi açık.</div>
     </div>
   </section>
 
   <!-- ===== PROBLEM ===== -->
   <section class="problem">
     <div class="problem-text reveal">
-      <p data-i18n="problem.p1">Meeting people became a catalogue.</p>
-      <p data-i18n-html="problem.p2">You browse strangers.<br>
-         Strangers browse you.<br>
-         Everyone is performing.<br>
-         Nobody is themselves.</p>
-      <p data-i18n="problem.p3">There is a better way. There always has been.</p>
+      <p>İnsan tanımak bir kataloğa döndü.</p>
+      <p>Yabancıları geziyorsun.<br>
+         Yabancılar seni geziyor.<br>
+         Herkes bir rol yapıyor.<br>
+         Kimse kendisi değil.</p>
+      <p>Daha iyi bir yol var. Hep vardı.</p>
     </div>
   </section>
 
   <!-- ===== HOW IT WORKS ===== -->
   <section class="how">
-    <div class="wrap-wide">
-      <div class="label reveal" data-i18n="how.label">How Mira works</div>
-      <h2 class="how-intro reveal d1" data-i18n="how.intro">Three steps. One introduction a week. That’s it.</h2>
+    <div class="wrap">
+      <div class="label reveal">Mira nasıl çalışır</div>
 
-      <div class="how-cards">
-        <div class="how-card reveal">
-          <span class="how-card-num">01</span>
-          <div class="how-card-icon" aria-hidden="true">
-            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M11 14a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/>
-              <path d="M21 14a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/>
-              <path d="M4 26c1-4 4-6 7-6s6 2 7 6"/>
-              <path d="M18 26c1-4 4-6 7-6s6 2 7 6"/>
-            </svg>
-          </div>
-          <h3 data-i18n="how.s1.title">A friend vouches for you.</h3>
-          <p data-i18n="how.s1.sub">Someone who actually knows you writes a genuine introduction — for who you are, not how you look.</p>
+      <div class="step reveal">
+        <div class="step-num">01</div>
+        <div class="step-body">
+          <h3>Niyetinle katılırsın.<br>Seni tanıyan biri referans yazar.</h3>
+          <p>Neye hazır olduğunu belirlersin. Bir arkadaşın, kim olduğunu — sadece nasıl göründüğünü değil — anlatır.</p>
         </div>
+      </div>
 
-        <div class="how-card reveal d1">
-          <span class="how-card-num">02</span>
-          <div class="how-card-icon" aria-hidden="true">
-            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="16" cy="16" r="11"/>
-              <path d="M16 5v22M5 16h22"/>
-              <circle cx="16" cy="16" r="3" fill="currentColor" stroke="none"/>
-            </svg>
-          </div>
-          <h3 data-i18n="how.s2.title">We match you, carefully.</h3>
-          <p data-i18n="how.s2.sub">Our system finds someone genuinely compatible — shared values, lifestyle, and what actually matters. Not filters.</p>
+      <div class="step reveal">
+        <div class="step-num">02</div>
+        <div class="step-body">
+          <h3>Her hafta sana özel seçilmiş<br>üç aday gelir. Sen sırala.</h3>
+          <p>Önce karakter, sonra fotoğraf. Sistem her haftanın sonuçlarından öğrenir — seçimlerin bir sonraki haftanı şekillendirir.</p>
         </div>
+      </div>
 
-        <div class="how-card reveal d2">
-          <span class="how-card-num">03</span>
-          <div class="how-card-icon" aria-hidden="true">
-            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 16s4-8 12-8 12 8 12 8-4 8-12 8S4 16 4 16Z"/>
-              <circle cx="16" cy="16" r="3.5"/>
-            </svg>
-          </div>
-          <h3 data-i18n="how.s3.title">You decide, together.</h3>
-          <p data-i18n="how.s3.sub">Character first, photo second. If you both say yes, profiles unlock. One introduction a week — that’s all.</p>
+      <div class="step reveal">
+        <div class="step-num">03</div>
+        <div class="step-body">
+          <h3>Eşleşme gerçekleşirse<br>sohbet başlar. İsterseniz Blindside oynarsınız.</h3>
+          <p>Aynı soruları birbirinizi görmeden yanıtlarsınız. Sonuçlar aynı anda açılır. Birbirinizi nasıl düşündüğünüzü görürsünüz.</p>
         </div>
       </div>
     </div>
@@ -878,27 +651,31 @@
   <!-- ===== DIFFERENCE ===== -->
   <section class="diff">
     <div class="wrap-wide">
-      <div class="label reveal" data-i18n="diff.label">Why Mira is different</div>
+      <div class="label reveal">Mira neden farklı</div>
       <div class="diff-grid">
         <div class="diff-col diff-other reveal">
-          <h4 data-i18n="diff.other">Other apps</h4>
+          <h4>Diğerleri</h4>
           <ul>
-            <li data-i18n="diff.o1">Strangers can see you</li>
-            <li data-i18n="diff.o2">Anyone can contact you</li>
-            <li data-i18n="diff.o3">Judged on photos first</li>
-            <li data-i18n="diff.o4">Infinite options, no depth</li>
-            <li data-i18n="diff.o5">Designed to keep you scrolling</li>
+            <li>Yabancılar sizi görebilir</li>
+            <li>Herkes size yazabilir</li>
+            <li>Önce fotoğrafa bakılır</li>
+            <li>Sonsuz seçenek, sıfır derinlik</li>
+            <li>Kaydırmaya devam etmeniz için tasarlanmış</li>
+            <li>Haftalık tanıştırma: sonsuz</li>
+            <li>Sistem sizi öğrenmez</li>
           </ul>
         </div>
         <div class="diff-divider reveal d1"></div>
         <div class="diff-col diff-mira reveal d2">
           <h4>Mira</h4>
           <ul>
-            <li data-i18n="diff.m1">Only people a friend chose</li>
-            <li data-i18n="diff.m2">Contact only after mutual interest</li>
-            <li data-i18n="diff.m3">Character first, photo second</li>
-            <li data-i18n="diff.m4">One introduction per week</li>
-            <li data-i18n="diff.m5">Designed to get you offline</li>
+            <li>Sadece sizin için seçilmiş kişiler</li>
+            <li>İletişim ancak karşılıklı ilgiyle</li>
+            <li>Önce karakter, sonra fotoğraf</li>
+            <li>Her hafta 3, özenle seçilmiş</li>
+            <li>Ekrandan hayata geçmeniz için tasarlanmış</li>
+            <li>Haftalık tanıştırma: 3, özenle seçilmiş</li>
+            <li>Her hafta daha iyi tanır</li>
           </ul>
         </div>
       </div>
@@ -908,28 +685,29 @@
   <!-- ===== TWO PATHS ===== -->
   <section class="paths">
     <div class="wrap">
-      <h2 class="reveal" data-i18n="paths.h2">Two ways to join.</h2>
+      <h2 class="reveal">İki yol var.</h2>
 
       <div class="path reveal">
         <span class="path-arrow">→</span>
-        <h3 data-i18n="paths.a.title">I'm looking for a partner</h3>
-        <p data-i18n="paths.a.body">
-          Join the waitlist. Answer a few questions about yourself.
-          Receive one carefully matched introduction each week.
-          You control everything that follows.
+        <h3>Birini arıyorum</h3>
+        <p>
+          Bekleme listesine katıl. Kendin hakkında birkaç soruyu yanıtla.
+          Her hafta sana özel seçilmiş üç aday gelsin. Sırala, değerlendir.
+          Sistem her haftanı izler ve öğrenir.
+          İlk hafta bir başlangıç. Altıncı hafta bir hassasiyet.
         </p>
-        <a href="#waitlist" class="path-link" data-choice="partner" data-i18n="paths.a.link">Join the waitlist</a>
+        <a href="#waitlist" class="path-link" data-choice="partner">Bekleme listesine katıl</a>
       </div>
 
       <div class="path reveal">
         <span class="path-arrow">↗</span>
-        <h3 data-i18n="paths.b.title">I want to introduce a friend</h3>
-        <p data-i18n="paths.b.body">
-          Know someone who deserves to meet the right person?
-          Write a short introduction. Your friend decides if they
-          want to join. You get notified when they match.
+        <h3>Birini tanıştırmak istiyorum</h3>
+        <p>
+          Doğru insanı hak eden birini tanıyor musun?
+          Kısa bir tanıtım yaz. Arkadaşın katılmak isteyip istemediğine
+          kendisi karar versin. Eşleştiğinde sana haber verelim.
         </p>
-        <a href="#waitlist" class="path-link" data-choice="introduce" data-i18n="paths.b.link">Introduce someone</a>
+        <a href="#waitlist" class="path-link" data-choice="introduce">Birini tanıştır</a>
       </div>
     </div>
   </section>
@@ -938,88 +716,14 @@
   <section class="trust">
     <div class="wrap">
       <div class="trust-quote reveal">
-        <p data-i18n="trust.q1">You are never browsed by strangers.</p>
-        <p data-i18n="trust.q2">You never appear in a feed.</p>
-        <p data-i18n="trust.q3">You only exist for the one person</p>
-        <p data-i18n="trust.q4">someone specifically chose for you.</p>
+        <p>Görücü evlilik garantisi vermezdi.</p>
+        <p>Ciddi, özenli bir süreç garantisi verirdi.</p>
+        <p>Mira da aynısını yapıyor —</p>
+        <p>nostaljiyle değil, mantıkla.</p>
       </div>
-      <div class="trust-sub reveal d2" data-i18n-html="trust.sub">
-        This is how people used to meet.<br>
-        We made it work for now.
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FAQ ===== -->
-  <section class="faq">
-    <div class="wrap">
-      <div class="label reveal" data-i18n="faq.label">Questions</div>
-      <h2 class="reveal d1" data-i18n="faq.h2">Things people usually ask.</h2>
-
-      <div class="faq-list reveal d2">
-        <details class="faq-item">
-          <summary>
-            <span data-i18n="faq.q1">What is Mira, exactly?</span>
-            <span class="faq-icon" aria-hidden="true"></span>
-          </summary>
-          <div class="faq-answer" data-i18n="faq.a1">A trust-based introduction network. A friend vouches for you, we match you with someone genuinely compatible, and you only meet people who were hand-picked for you.</div>
-        </details>
-
-        <details class="faq-item">
-          <summary>
-            <span data-i18n="faq.q2">How is this different from other apps?</span>
-            <span class="faq-icon" aria-hidden="true"></span>
-          </summary>
-          <div class="faq-answer" data-i18n="faq.a2">You are never browsed by strangers. No feeds, no swiping, no endless scroll. You only appear in front of the one person a friend specifically chose for you.</div>
-        </details>
-
-        <details class="faq-item">
-          <summary>
-            <span data-i18n="faq.q3">Do I need a friend to join?</span>
-            <span class="faq-icon" aria-hidden="true"></span>
-          </summary>
-          <div class="faq-answer" data-i18n="faq.a3">Yes — Mira only works with a real recommendation. If you don’t have someone to vouch for you yet, you can still join the waitlist and we’ll reach out personally.</div>
-        </details>
-
-        <details class="faq-item">
-          <summary>
-            <span data-i18n="faq.q4">How often will I get matched?</span>
-            <span class="faq-icon" aria-hidden="true"></span>
-          </summary>
-          <div class="faq-answer" data-i18n="faq.a4">One carefully chosen introduction per week. No more. We’d rather you meet one right person than a hundred wrong ones.</div>
-        </details>
-
-        <details class="faq-item">
-          <summary>
-            <span data-i18n="faq.q5">Will I see photos right away?</span>
-            <span class="faq-icon" aria-hidden="true"></span>
-          </summary>
-          <div class="faq-answer" data-i18n="faq.a5">No. Character first, photo second. Photos and profiles only unlock after both sides say yes.</div>
-        </details>
-
-        <details class="faq-item">
-          <summary>
-            <span data-i18n="faq.q6">Where does Mira launch?</span>
-            <span class="faq-icon" aria-hidden="true"></span>
-          </summary>
-          <div class="faq-answer" data-i18n="faq.a6">Istanbul first. Other cities will follow, slowly and carefully — one community at a time.</div>
-        </details>
-
-        <details class="faq-item">
-          <summary>
-            <span data-i18n="faq.q7">Is it free?</span>
-            <span class="faq-icon" aria-hidden="true"></span>
-          </summary>
-          <div class="faq-answer" data-i18n="faq.a7">Early access is free. Pricing will come later — and it’ll reflect the care we put into every single introduction.</div>
-        </details>
-
-        <details class="faq-item">
-          <summary>
-            <span data-i18n="faq.q8">How is my privacy protected?</span>
-            <span class="faq-icon" aria-hidden="true"></span>
-          </summary>
-          <div class="faq-answer" data-i18n="faq.a8">You never appear in a public feed. Your profile only exists in front of the one person matched to you. That’s it.</div>
-        </details>
+      <div class="trust-sub reveal d2">
+        Ciddi insanlar için ciddi bir süreç.<br>
+        Doğru yere geldiniz.
       </div>
     </div>
   </section>
@@ -1027,38 +731,38 @@
   <!-- ===== WAITLIST ===== -->
   <section class="waitlist" id="waitlist">
     <div class="wrap">
-      <h2 class="reveal" data-i18n="wait.h2">Get early access.</h2>
-      <p class="waitlist-sub reveal d1" data-i18n-html="wait.sub">
-        Mira launches in Istanbul.<br>
-        Be among the first to join.
+      <h2 class="reveal">Erken erişim.</h2>
+      <p class="waitlist-sub reveal d1">
+        Mira İstanbul'dan başlıyor.<br>
+        İlk katılanlar arasında ol.
       </p>
 
       <form class="form reveal d2" id="waitlistForm" novalidate>
-        <input type="email" class="input" placeholder="your email" data-i18n-placeholder="wait.email" required>
+        <input type="email" class="input" placeholder="e-posta adresin" required>
 
         <div class="radios" role="radiogroup">
           <label class="radio active" data-value="partner">
             <input type="radio" name="intent" value="partner" checked>
             <span class="radio-dot"></span>
-            <span data-i18n="wait.r1">Looking for a partner</span>
+            <span>Birini arıyorum</span>
           </label>
           <label class="radio" data-value="introduce">
             <input type="radio" name="intent" value="introduce">
             <span class="radio-dot"></span>
-            <span data-i18n="wait.r2">Want to introduce a friend</span>
+            <span>Birini tanıştırmak istiyorum</span>
           </label>
         </div>
 
-        <button type="submit" class="submit" data-i18n="wait.submit">Join the waitlist</button>
+        <button type="submit" class="submit">Bekleme listesine katıl</button>
 
-        <p class="form-foot" data-i18n="wait.foot">
-          We'll reach out personally before your account is activated.
+        <p class="form-foot">
+          Hesabın aktif edilmeden önce seninle bizzat iletişime geçeceğiz.
         </p>
       </form>
 
       <div class="form-success" id="formSuccess">
-        <span data-i18n="wait.success">You're on the list.</span>
-        <small data-i18n="wait.successSub">We'll be in touch.</small>
+        Listedesin.
+        <small>Yakında yazacağız.</small>
       </div>
     </div>
   </section>
@@ -1066,212 +770,14 @@
   <!-- ===== FOOTER ===== -->
   <footer>
     <div class="foot-logo">Mira</div>
-    <div class="foot-loc" data-i18n="foot.loc">Istanbul · 2025</div>
-    <p class="foot-line" data-i18n="foot.line">
-      Built on the belief that the best introductions
-      come from people who actually know you.
+    <div class="foot-loc">İstanbul · 2025</div>
+    <p class="foot-line">
+      En iyi tanıştırmalar, sizi gerçekten tanıyan
+      insanların elinden gelir.
     </p>
   </footer>
 
   <script>
-    // ===== i18n =====
-    const I18N = {
-      en: {
-        'hero.label': 'Mira — Early Access',
-        'hero.h1a': 'Meet through someone',
-        'hero.h1b': 'who knows you.',
-        'hero.sub': 'A trust-based introduction network — where a friend vouches, AI matches, and you decide.',
-        'hero.foot': 'Launching in Istanbul. Waitlist open now.',
-        'cta.partner': "I'm looking for a partner",
-        'cta.introduce': 'I want to introduce a friend',
-
-        'problem.p1': 'Meeting people became a catalogue.',
-        'problem.p2': 'You browse strangers.<br>Strangers browse you.<br>Everyone is performing.<br>Nobody is themselves.',
-        'problem.p3': 'There is a better way. There always has been.',
-
-        'how.label': 'How Mira works',
-        'how.intro': 'Three steps. One introduction a week. That’s it.',
-        'how.s1.title': 'A friend vouches for you.',
-        'how.s1.sub': 'Someone who actually knows you writes a genuine introduction — for who you are, not how you look.',
-        'how.s2.title': 'We match you, carefully.',
-        'how.s2.sub': 'Our system finds someone genuinely compatible — shared values, lifestyle, and what actually matters. Not filters.',
-        'how.s3.title': 'You decide, together.',
-        'how.s3.sub': 'Character first, photo second. If you both say yes, profiles unlock. One introduction a week — that’s all.',
-
-        'faq.label': 'Questions',
-        'faq.h2': 'Things people usually ask.',
-        'faq.q1': 'What is Mira, exactly?',
-        'faq.a1': 'A trust-based introduction network. A friend vouches for you, we match you with someone genuinely compatible, and you only meet people who were hand-picked for you.',
-        'faq.q2': 'How is this different from other apps?',
-        'faq.a2': 'You are never browsed by strangers. No feeds, no swiping, no endless scroll. You only appear in front of the one person a friend specifically chose for you.',
-        'faq.q3': 'Do I need a friend to join?',
-        'faq.a3': 'Yes — Mira only works with a real recommendation. If you don’t have someone to vouch for you yet, you can still join the waitlist and we’ll reach out personally.',
-        'faq.q4': 'How often will I get matched?',
-        'faq.a4': 'One carefully chosen introduction per week. No more. We’d rather you meet one right person than a hundred wrong ones.',
-        'faq.q5': 'Will I see photos right away?',
-        'faq.a5': 'No. Character first, photo second. Photos and profiles only unlock after both sides say yes.',
-        'faq.q6': 'Where does Mira launch?',
-        'faq.a6': 'Istanbul first. Other cities will follow, slowly and carefully — one community at a time.',
-        'faq.q7': 'Is it free?',
-        'faq.a7': 'Early access is free. Pricing will come later — and it’ll reflect the care we put into every single introduction.',
-        'faq.q8': 'How is my privacy protected?',
-        'faq.a8': 'You never appear in a public feed. Your profile only exists in front of the one person matched to you. That’s it.',
-
-        'diff.label': 'Why Mira is different',
-        'diff.other': 'Other apps',
-        'diff.o1': 'Strangers can see you',
-        'diff.o2': 'Anyone can contact you',
-        'diff.o3': 'Judged on photos first',
-        'diff.o4': 'Infinite options, no depth',
-        'diff.o5': 'Designed to keep you scrolling',
-        'diff.m1': 'Only people a friend chose',
-        'diff.m2': 'Contact only after mutual interest',
-        'diff.m3': 'Character first, photo second',
-        'diff.m4': 'One introduction per week',
-        'diff.m5': 'Designed to get you offline',
-
-        'paths.h2': 'Two ways to join.',
-        'paths.a.title': "I'm looking for a partner",
-        'paths.a.body': 'Join the waitlist. Answer a few questions about yourself. Receive one carefully matched introduction each week. You control everything that follows.',
-        'paths.a.link': 'Join the waitlist',
-        'paths.b.title': 'I want to introduce a friend',
-        'paths.b.body': 'Know someone who deserves to meet the right person? Write a short introduction. Your friend decides if they want to join. You get notified when they match.',
-        'paths.b.link': 'Introduce someone',
-
-        'trust.q1': 'You are never browsed by strangers.',
-        'trust.q2': 'You never appear in a feed.',
-        'trust.q3': 'You only exist for the one person',
-        'trust.q4': 'someone specifically chose for you.',
-        'trust.sub': 'This is how people used to meet.<br>We made it work for now.',
-
-        'wait.h2': 'Get early access.',
-        'wait.sub': 'Mira launches in Istanbul.<br>Be among the first to join.',
-        'wait.email': 'your email',
-        'wait.r1': 'Looking for a partner',
-        'wait.r2': 'Want to introduce a friend',
-        'wait.submit': 'Join the waitlist',
-        'wait.foot': "We'll reach out personally before your account is activated.",
-        'wait.success': "You're on the list.",
-        'wait.successSub': "We'll be in touch.",
-
-        'foot.loc': 'Istanbul · 2025',
-        'foot.line': 'Built on the belief that the best introductions come from people who actually know you.',
-      },
-      tr: {
-        'hero.label': 'Mira · Erken Erişim',
-        'hero.h1a': 'Yabancılarla değil,',
-        'hero.h1b': 'bir tavsiyeyle tanışın.',
-        'hero.sub': 'Güvene dayalı bir tanıştırma ağı. Bir arkadaşınız önerir, yapay zekâ eşleştirir, gerisi size kalır.',
-        'hero.foot': 'İlk durak İstanbul. Bekleme listesi açıldı.',
-        'cta.partner': 'Birini arıyorum',
-        'cta.introduce': 'Bir arkadaşımı önereceğim',
-
-        'problem.p1': 'Tanışmak bir kataloğa döndü.',
-        'problem.p2': 'Yabancıları kaydırıyorsunuz.<br>Yabancılar sizi kaydırıyor.<br>Herkes bir rolde.<br>Kimse kendinde değil.',
-        'problem.p3': 'Daha iyi bir yolu var. Aslında hep vardı.',
-
-        'how.label': 'Nasıl çalışıyor',
-        'how.intro': 'Üç adım. Haftada bir tanıştırma. Hepsi bu.',
-        'how.s1.title': 'Bir arkadaşınız sizi önerir.',
-        'how.s1.sub': 'Sizi gerçekten tanıyan biri, içtenlikle bir tanıtım yazar — nasıl göründüğünüze değil, nasıl biri olduğunuza dair.',
-        'how.s2.title': 'Size yakışanı buluruz.',
-        'how.s2.sub': 'Sistemimiz size gerçekten uyan birini bulur — değerler, yaşam tarzı ve gerçekten önemli olana göre. Filtrelere değil.',
-        'how.s3.title': 'Kararı birlikte verirsiniz.',
-        'how.s3.sub': 'Önce karakter, sonra fotoğraf. İkiniz de "evet" derseniz profiller açılır. Haftada bir tanıştırma — hepsi bu.',
-
-        'faq.label': 'Sorular',
-        'faq.h2': 'Sıkça merak edilenler.',
-        'faq.q1': 'Mira tam olarak ne?',
-        'faq.a1': 'Güvene dayalı bir tanıştırma ağı. Bir arkadaşınız sizi önerir, biz size gerçekten yakışan birini buluruz; yalnızca sizin için özenle seçilmiş kişilerle tanışırsınız.',
-        'faq.q2': 'Diğer uygulamalardan farkı ne?',
-        'faq.a2': 'Yabancılar sizi süzemez. Akış yok, kaydırma yok, sonu gelmeyen bir liste yok. Sadece, bir arkadaşınızın özellikle sizin için seçtiği kişinin karşısına çıkarsınız.',
-        'faq.q3': 'Katılmak için bir arkadaş şart mı?',
-        'faq.a3': 'Evet — Mira yalnızca gerçek bir tavsiyeyle çalışır. Henüz sizi önerebilecek biri yoksa da listeye yazılabilirsiniz, sizinle bizzat iletişime geçeriz.',
-        'faq.q4': 'Ne sıklıkta eşleşeceğim?',
-        'faq.a4': 'Haftada bir, özenle seçilmiş tek bir tanıştırma. Fazlası yok. Yüz yanlış kişi yerine bir doğru kişiyle tanışmanızı tercih ederiz.',
-        'faq.q5': 'Fotoğrafları hemen görecek miyim?',
-        'faq.a5': 'Hayır. Önce karakter, sonra fotoğraf. Fotoğraflar ve profiller ancak iki taraf da "evet" dedikten sonra açılır.',
-        'faq.q6': 'Mira nereden başlıyor?',
-        'faq.a6': 'Önce İstanbul. Sonra, her seferinde tek bir topluluk olacak şekilde, yavaş ve özenle diğer şehirlere açılacağız.',
-        'faq.q7': 'Ücretli mi?',
-        'faq.a7': 'Erken erişim ücretsiz. Fiyatlandırma sonra gelecek — ve her bir tanıştırmaya verdiğimiz emeği yansıtacak.',
-        'faq.q8': 'Gizliliğim nasıl korunuyor?',
-        'faq.a8': 'Hiçbir zaman herkese açık bir akışta yer almazsınız. Profiliniz yalnızca sizinle eşleşen kişinin gözünde vardır. Hepsi bu.',
-
-        'diff.label': 'Farkımız',
-        'diff.other': 'Diğerleri',
-        'diff.o1': 'Sizi yabancılar görür',
-        'diff.o2': 'Size herkes yazabilir',
-        'diff.o3': 'Önce fotoğrafa bakılır',
-        'diff.o4': 'Sonsuz seçim, sıfır derinlik',
-        'diff.o5': 'Sizi kaydırmak için kurgulandı',
-        'diff.m1': 'Sadece bir arkadaşınızın seçtiği kişi',
-        'diff.m2': 'İletişim, karşılıklı ilgiden sonra',
-        'diff.m3': 'Önce karakter, sonra fotoğraf',
-        'diff.m4': 'Haftada bir tanıştırma',
-        'diff.m5': 'Sizi gerçek hayata çıkarmak için kurgulandı',
-
-        'paths.h2': 'İki yol var.',
-        'paths.a.title': 'Birini arıyorum',
-        'paths.a.body': 'Listeye yazılın. Kendinize dair birkaç soruyu cevaplayın. Her hafta özenle seçilmiş bir tanıştırma kapınızı çalsın. Gerisi tamamen size kalır.',
-        'paths.a.link': 'Listeye yazıl',
-        'paths.b.title': 'Bir arkadaşımı önereceğim',
-        'paths.b.body': 'Doğru kişiyle tanışmayı hak eden biri mi var aklınızda? Kısa bir öneri yazın. Arkadaşınız katılmak isteyip istemediğine kendi karar verir. Eşleşince size de haber gelir.',
-        'paths.b.link': 'Birini öner',
-
-        'trust.q1': 'Yabancılar sizi süzemez.',
-        'trust.q2': 'Hiçbir akışta boy göstermezsiniz.',
-        'trust.q3': 'Sadece, birinin sizin için',
-        'trust.q4': 'özenle seçtiği kişiye görünürsünüz.',
-        'trust.sub': 'İnsanlar eskiden böyle tanışırdı.<br>Biz onu bugüne taşıdık.',
-
-        'wait.h2': 'Erken erişim.',
-        'wait.sub': 'Mira İstanbul’dan başlıyor.<br>İlk katılanlar arasında olun.',
-        'wait.email': 'e-posta adresiniz',
-        'wait.r1': 'Birini arıyorum',
-        'wait.r2': 'Bir arkadaşımı önereceğim',
-        'wait.submit': 'Listeye yazıl',
-        'wait.foot': 'Hesabınız açılmadan önce sizinle bizzat tanışacağız.',
-        'wait.success': 'Listeye yazıldınız.',
-        'wait.successSub': 'Yakında haberleşeceğiz.',
-
-        'foot.loc': 'İstanbul · 2025',
-        'foot.line': 'En güzel tanışmaların, sizi gerçekten tanıyanlardan başladığına inanarak kurulduk.',
-      },
-    };
-
-    function applyLang(lang) {
-      const dict = I18N[lang] || I18N.en;
-      document.documentElement.lang = lang;
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const k = el.getAttribute('data-i18n');
-        if (dict[k] != null) el.textContent = dict[k];
-      });
-      document.querySelectorAll('[data-i18n-html]').forEach(el => {
-        const k = el.getAttribute('data-i18n-html');
-        if (dict[k] != null) el.innerHTML = dict[k];
-      });
-      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-        const k = el.getAttribute('data-i18n-placeholder');
-        if (dict[k] != null) el.setAttribute('placeholder', dict[k]);
-      });
-      document.querySelectorAll('.lang-toggle button').forEach(b => {
-        b.classList.toggle('active', b.getAttribute('data-lang') === lang);
-      });
-      try { localStorage.setItem('mira_lang', lang); } catch (e) {}
-    }
-
-    (function initLang() {
-      let saved = null;
-      try { saved = localStorage.getItem('mira_lang'); } catch (e) {}
-      const browser = (navigator.language || 'en').toLowerCase().startsWith('tr') ? 'tr' : 'en';
-      applyLang(saved || browser);
-    })();
-
-    document.querySelectorAll('.lang-toggle button').forEach(b => {
-      b.addEventListener('click', () => applyLang(b.getAttribute('data-lang')));
-    });
-
     // Reveal on scroll
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => {
