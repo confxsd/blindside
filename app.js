@@ -185,6 +185,21 @@ const blindApi = {
     });
   },
 
+  submitSingleAnswer(code, index, answer) {
+    return this._fetch(`/api/blind/sessions/${code}/answer`, {
+      method: 'POST',
+      body: JSON.stringify({ index, answer })
+    });
+  },
+
+  getQuestionAnswer(code, index) {
+    return this._fetch(`/api/blind/sessions/${code}/answer/${index}`);
+  },
+
+  completeSession(code) {
+    return this._fetch(`/api/blind/sessions/${code}/complete`, { method: 'POST' });
+  },
+
   getResults(code) {
     return this._fetch(`/api/blind/sessions/${code}/results`);
   },
@@ -749,25 +764,14 @@ async function resumeSession(code) {
       return;
     }
 
-    if (s.user_submitted) {
-      // Already submitted, go to waiting
-      goTo('waiting');
-      document.getElementById('waitingCode').textContent = s.code;
-      const pName = s.creator_id === currentUser?.id ? s.partner_username : s.creator_username;
-      if (pName) {
-        document.getElementById('waitingDesc').innerHTML =
-          `waiting for <strong style="color:var(--text)">${pName}</strong> to finish answering...`;
-      }
-      startPolling();
-      return;
-    }
-
-    // Start/continue quiz
-    currentQuestion = 0;
+    // Resume at the next unanswered question
+    const answered = s.user_answer_count || 0;
+    currentQuestion = Math.min(answered, questions.length - 1);
     selectedAnswers = {};
     eliminatedSets = {};
     questionModes = [];
     goTo('quiz');
+    renderQuestion();
   } catch (e) {
     alert('Could not load session');
   }
@@ -1324,10 +1328,14 @@ function renderQuestion() {
   document.getElementById('quizCount').textContent = `${currentQuestion + 1} / ${total}`;
 
   const isLast = currentQuestion === total - 1;
+  const isPartnerMode = currentSession && !isSoloPack(selectedPackKey);
   const nextBtn = document.getElementById('quizNextBtn');
-  nextBtn.textContent = isLast ? i18n.t('quiz_submit') : i18n.t('quiz_next');
+  nextBtn.textContent = isLast && !isPartnerMode ? i18n.t('quiz_submit') : i18n.t('quiz_next');
   nextBtn.disabled = !hasAnswer(currentQuestion);
-  document.getElementById('quizBackBtn').style.display = currentQuestion > 0 ? '' : 'none';
+  nextBtn.style.display = '';
+  nextBtn.onclick = () => nextQuestion(); // restore default handler
+  // No back button in partner mode (answers already submitted per-question)
+  document.getElementById('quizBackBtn').style.display = (!isPartnerMode && currentQuestion > 0) ? '' : 'none';
 
   if (blitzInterval) { clearInterval(blitzInterval); blitzInterval = null; }
   const body = document.getElementById('quizBody');
@@ -1668,21 +1676,177 @@ function nextQuestion() {
   }
   if (!hasAnswer(currentQuestion)) return;
 
-  if (currentQuestion === questions.length - 1) {
-    // Solo packs skip the confirmation modal — submit directly
-    if (isSoloPack(selectedPackKey)) {
+  // Solo packs — keep old flow (no partner)
+  if (isSoloPack(selectedPackKey)) {
+    if (currentQuestion === questions.length - 1) {
       submitAnswers();
       return;
     }
-    document.getElementById('submitModal').classList.add('show');
+    currentQuestion++;
+    renderQuestion();
     return;
   }
 
-  currentQuestion++;
-  renderQuestion();
+  // Partner mode — submit this answer and wait for partner
+  if (currentSession) {
+    submitSingleAndWait();
+    return;
+  }
+
+  // Fallback (no session, shouldn't happen)
+  if (currentQuestion < questions.length - 1) {
+    currentQuestion++;
+    renderQuestion();
+  }
+}
+
+async function submitSingleAndWait() {
+  const qi = currentQuestion;
+  const answer = selectedAnswers[qi];
+  const nextBtn = document.getElementById('quizNextBtn');
+  const backBtn = document.getElementById('quizBackBtn');
+  nextBtn.disabled = true;
+  backBtn.style.display = 'none';
+
+  // Show waiting state in quiz body
+  const body = document.getElementById('quizBody');
+  const q = questions[qi];
+  const total = questions.length;
+
+  try {
+    const data = await blindApi.submitSingleAnswer(currentSession.code, qi, answer);
+    if (data.error) {
+      nextBtn.disabled = false;
+      alert('Failed to submit: ' + data.error);
+      return;
+    }
+
+    if (data.partner_answered) {
+      // Partner already answered — reveal immediately
+      showInlineReveal(qi, answer, data.partner_answer);
+      return;
+    }
+
+    // Partner hasn't answered yet — show waiting UI inside quiz
+    const partnerName = currentSession.creator_id === currentUser?.id
+      ? currentSession.partner_username : currentSession.creator_username;
+
+    body.innerHTML = `
+      <div class="inline-waiting" key="wait-${qi}">
+        <div class="question-label">${i18n.t('quiz_question')} ${qi + 1} / ${total}</div>
+        <div class="question-text" style="font-size:16px;color:var(--text-dim);margin-bottom:24px">${q.q}</div>
+        <div class="inline-waiting-anim">
+          <div class="dot-pulse"></div>
+        </div>
+        <p class="inline-waiting-text">${i18n.t('waiting_for_partner_answer').replace('{name}', partnerName || i18n.t('waiting_partner'))}</p>
+      </div>
+    `;
+    nextBtn.style.display = 'none';
+
+    // Poll for partner's answer
+    startQuestionPolling(qi, answer);
+  } catch (e) {
+    nextBtn.disabled = false;
+    alert(i18n.t('waiting_submit_error'));
+  }
+}
+
+function startQuestionPolling(qi, myAnswer) {
+  stopPolling();
+  pollTimer = setInterval(async () => {
+    if (!currentSession) return;
+    try {
+      const data = await blindApi.getQuestionAnswer(currentSession.code, qi);
+      if (data.partner_answered) {
+        stopPolling();
+        showInlineReveal(qi, myAnswer, data.partner_answer);
+      }
+    } catch (e) { /* silent */ }
+  }, 2000);
+}
+
+function showInlineReveal(qi, myAnswer, partnerAnswer) {
+  stopPolling();
+  const body = document.getElementById('quizBody');
+  const q = questions[qi];
+  const total = questions.length;
+  const isLast = qi === total - 1;
+
+  // Compare answers
+  let myText, partnerText, matched;
+  if (Array.isArray(myAnswer)) {
+    myText = myAnswer.map(idx => q.options[idx]).join(', ');
+    const pArr = Array.isArray(partnerAnswer) ? partnerAnswer : [partnerAnswer];
+    partnerText = pArr.map(idx => q.options[idx]).join(', ');
+    matched = myAnswer.some(idx => pArr.includes(idx));
+  } else if (myAnswer && typeof myAnswer === 'object' && !Array.isArray(myAnswer)) {
+    // blindGuess format
+    myText = q.options[myAnswer.own] || String(myAnswer.own);
+    const pOwn = partnerAnswer?.own !== undefined ? partnerAnswer.own : partnerAnswer;
+    partnerText = q.options[pOwn] || String(pOwn);
+    matched = myAnswer.own === pOwn;
+  } else {
+    myText = q.options[myAnswer] || String(myAnswer);
+    partnerText = q.options[partnerAnswer] || String(partnerAnswer);
+    matched = myAnswer === partnerAnswer;
+  }
+
+  const reaction = matched
+    ? matchReactions[qi % matchReactions.length]
+    : diffReactions[qi % diffReactions.length];
+
+  const partnerName = currentSession.creator_id === currentUser?.id
+    ? currentSession.partner_username : currentSession.creator_username;
+  const myName = currentUser?.username || i18n.t('reveal_you');
+
+  body.innerHTML = `
+    <div class="inline-reveal ${matched ? 'matched' : 'differ'}" key="reveal-${qi}">
+      <div class="question-label">${i18n.t('quiz_question')} ${qi + 1} / ${total}</div>
+      <div class="question-text" style="margin-bottom:20px">${q.q}</div>
+      <div class="reveal-vs-block">
+        <div class="reveal-vs-card you-card">
+          <div class="rv-label">${myName}</div>
+          <div class="rv-answer">${myText}</div>
+        </div>
+        <div class="reveal-vs-card them-card">
+          <div class="rv-label">${partnerName || 'Partner'}</div>
+          <div class="rv-answer">${partnerText}</div>
+        </div>
+      </div>
+      <div class="reveal-reaction">
+        <span class="reaction-emoji">${reaction.emoji}</span>
+        <div class="reaction-text ${matched ? 'matched-text' : 'diff-text'}">${reaction.text}</div>
+      </div>
+    </div>
+  `;
+
+  // Update progress
+  document.getElementById('quizProgress').style.width = ((qi + 1) / total) * 100 + '%';
+
+  // Show next button to advance
+  const nextBtn = document.getElementById('quizNextBtn');
+  nextBtn.style.display = '';
+  nextBtn.disabled = false;
+  nextBtn.textContent = isLast ? i18n.t('reveal_see_results') : i18n.t('quiz_next');
+  nextBtn.onclick = async () => {
+    if (isLast) {
+      // Mark session complete and go to results
+      nextBtn.disabled = true;
+      await blindApi.completeSession(currentSession.code);
+      goTo('results');
+      buildReceiptFromApi(currentSession.code);
+    } else {
+      currentQuestion = qi + 1;
+      nextBtn.onclick = () => nextQuestion(); // restore
+      nextBtn.textContent = i18n.t('quiz_next');
+      renderQuestion();
+    }
+  };
 }
 
 function prevQuestion() {
+  // No going back in partner mode (answers already submitted)
+  if (currentSession && !isSoloPack(selectedPackKey)) return;
   if (currentQuestion > 0) {
     currentQuestion--;
     renderQuestion();

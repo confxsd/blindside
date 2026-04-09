@@ -316,6 +316,7 @@ const i18n = {
       reveal_you: "You",
       reveal_tap_reveal: "tap to reveal",
       reveal_tap_continue: "tap to continue →",
+      reveal_see_results: "see results",
       reveal_get_ready: "get ready",
       // Feedback
       feedback_copied: "copied!",
@@ -357,6 +358,7 @@ const i18n = {
       waiting_partner_done: "partner is done! waiting for you...",
       waiting_answering: "{name} is answering...",
       waiting_partner: "partner",
+      waiting_for_partner_answer: "waiting for {name} to answer this one...",
       waiting_submit_error:
         "Could not submit answers. Check your connection and try again.",
       // Save account
@@ -861,6 +863,7 @@ const i18n = {
       reveal_you: "Sen",
       reveal_tap_reveal: "açmak için dokun",
       reveal_tap_continue: "devam için dokun →",
+      reveal_see_results: "sonuçları gör",
       reveal_get_ready: "hazır ol",
       feedback_copied: "kopyalandı!",
       feedback_nudge_sent: "✅ dürtü gönderildi!",
@@ -898,6 +901,7 @@ const i18n = {
       waiting_partner_done: "partner bitti! seni bekliyor...",
       waiting_answering: "{name} cevaplıyor...",
       waiting_partner: "partner",
+      waiting_for_partner_answer: "{name} bu soruyu cevaplasın bekleniyor...",
       waiting_submit_error:
         "Cevaplar gönderilemedi. Bağlantınızı kontrol edip tekrar deneyin.",
       save_title: "hesabını sakla?",
@@ -1383,6 +1387,7 @@ const i18n = {
       reveal_you: "คุณ",
       reveal_tap_reveal: "แตะเพื่อเปิดเผย",
       reveal_tap_continue: "แตะเพื่อไปต่อ →",
+      reveal_see_results: "ดูผลลัพธ์",
       reveal_get_ready: "เตรียมตัว",
       feedback_copied: "คัดลอกแล้ว!",
       feedback_nudge_sent: "✅ เตือนแล้ว!",
@@ -1418,6 +1423,7 @@ const i18n = {
       waiting_partner_done: "คู่ของคุณเสร็จแล้ว! รอคุณอยู่...",
       waiting_answering: "{name} กำลังตอบ...",
       waiting_partner: "คู่หู",
+      waiting_for_partner_answer: "รอให้ {name} ตอบข้อนี้...",
       waiting_submit_error:
         "ไม่สามารถส่งคำตอบได้ ตรวจสอบการเชื่อมต่อและลองอีกครั้ง",
       save_title: "เก็บบัญชีไว้?",
