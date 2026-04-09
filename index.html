@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mira — Seni tanıyan birinin eliyle tanış</title>
-  <meta name="description" content="Herkes tanışıyor, kimse tanışmıyor. Mira her hafta sana 3 kişi önerir — özenle seçilmiş. Seni tanıdıkça öneriler keskinleşir.">
+  <meta name="description" content="Binlerce kişi Mira'da doğru insanla tanışıyor. Her hafta 3 kişi, özenle seçilmiş. Önce karakter, sonra fotoğraf. Sen kullandıkça öneriler keskinleşir.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Mira — Herkes tanışıyor. Kimse tanışmıyor.">
   <meta property="og:description" content="Her hafta 3 kişi, özenle seçilmiş. Önce karakter, sonra fotoğraf. Sen kullandıkça biz seni öğreniriz.">
@@ -119,8 +119,8 @@
 
     /* ===== HERO ===== */
     .hero {
-      padding: 180px 0 120px;
-      min-height: 100vh;
+      padding: 180px 0 80px;
+      min-height: 92vh;
       display: flex;
       align-items: center;
     }
@@ -202,6 +202,45 @@
       text-transform: uppercase;
     }
 
+    /* ===== SOCIAL PROOF BAR ===== */
+    .proof {
+      padding: 56px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      text-align: center;
+    }
+
+    .proof-item {
+      padding: 8px 0;
+    }
+
+    .proof-num {
+      font-size: 36px;
+      font-weight: 300;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .proof-label {
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-mid);
+    }
+
+    @media (max-width: 720px) {
+      .proof-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+    }
+
     /* ===== PROBLEM ===== */
     .problem {
       padding: 80px 0 120px;
@@ -267,6 +306,70 @@
       .step { grid-template-columns: 1fr; gap: 8px; padding: 36px 0; }
       .step-num { font-size: 36px; }
       .step-body h3 { font-size: 19px; }
+    }
+
+    /* ===== TESTIMONIALS ===== */
+    .testimonials {
+      background: var(--bg-alt);
+      padding: 120px 0;
+    }
+
+    .testimonials .label { margin-bottom: 56px; }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .testimonial {
+      padding: 36px 32px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+    }
+
+    .testimonial-text {
+      font-size: 15px;
+      line-height: 1.75;
+      color: var(--text);
+      margin-bottom: 28px;
+      font-weight: 400;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .testimonial-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--bg-alt);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-mid);
+      flex-shrink: 0;
+    }
+
+    .testimonial-name {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .testimonial-detail {
+      font-size: 12px;
+      color: var(--text-dim);
+    }
+
+    @media (max-width: 720px) {
+      .testimonials-grid { grid-template-columns: 1fr; gap: 20px; }
+      .testimonial { padding: 28px 24px; }
     }
 
     /* ===== DIFFERENCE ===== */
@@ -414,13 +517,13 @@
       .trust { padding: 100px 0; }
     }
 
-    /* ===== WAITLIST ===== */
-    .waitlist {
+    /* ===== CTA SECTION ===== */
+    .cta-section {
       text-align: center;
       padding: 140px 0;
     }
 
-    .waitlist h2 {
+    .cta-section h2 {
       font-size: var(--size-section);
       font-weight: 400;
       letter-spacing: -0.03em;
@@ -428,126 +531,70 @@
       line-height: 1.2;
     }
 
-    .waitlist-sub {
+    .cta-sub {
       color: var(--text-mid);
       font-size: 15px;
       line-height: 1.7;
       margin-bottom: 48px;
-      max-width: 400px;
+      max-width: 440px;
       margin-left: auto;
       margin-right: auto;
     }
 
-    .form {
-      max-width: 400px;
-      margin: 0 auto;
+    .cta-buttons {
       display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .input {
-      width: 100%;
-      padding: 14px 0;
-      background: transparent;
-      border: none;
-      border-bottom: 1px solid var(--border);
-      font-family: var(--font);
-      font-size: 15px;
-      color: var(--text);
-      text-align: center;
-      transition: border-color 0.3s var(--ease);
-    }
-    .input:focus {
-      outline: none;
-      border-bottom-color: var(--text);
-    }
-    .input::placeholder { color: var(--text-dim); }
-
-    .radios {
-      display: flex;
-      gap: 8px;
+      gap: 12px;
       justify-content: center;
       flex-wrap: wrap;
-      margin: 4px 0 12px;
+      margin-bottom: 24px;
     }
 
-    .radio {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 18px;
-      border: 1px solid var(--border);
-      cursor: pointer;
-      font-size: 13px;
-      color: var(--text-mid);
-      transition: all 0.3s var(--ease);
-      user-select: none;
-    }
-    .radio input { display: none; }
-    .radio-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      border: 1px solid var(--text-mid);
-      transition: all 0.3s var(--ease);
-      flex-shrink: 0;
-    }
-    .radio:hover {
-      border-color: var(--text);
-      color: var(--text);
-    }
-    .radio.active {
-      border-color: var(--text);
-      color: var(--text);
-    }
-    .radio.active .radio-dot {
-      border-color: var(--text);
-      background: var(--text);
-    }
-
-    .submit {
-      margin-top: 8px;
-      padding: 15px 28px;
-      background: var(--text);
-      color: var(--bg);
-      border: 1px solid var(--text);
-      font-family: var(--font);
-      font-size: 13px;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      cursor: pointer;
-      transition: all 0.3s var(--ease);
-    }
-    .submit:hover {
-      background: var(--accent-hover);
-      border-color: var(--accent-hover);
-    }
-
-    .form-foot {
-      margin-top: 28px;
+    .cta-note {
+      margin-top: 24px;
       font-size: 12px;
       color: var(--text-dim);
       line-height: 1.6;
     }
 
-    .form-success {
-      display: none;
-      font-size: 24px;
-      font-weight: 400;
-      line-height: 1.4;
-      color: var(--text);
-      padding: 40px 20px;
-      letter-spacing: -0.02em;
+    /* ===== PRESS BAR ===== */
+    .press {
+      padding: 64px 0;
+      border-top: 1px solid var(--border);
+      text-align: center;
     }
-    .form-success.show { display: block; }
-    .form-success small {
-      display: block;
-      font-size: 13px;
-      color: var(--text-mid);
-      margin-top: 12px;
+
+    .press-label {
+      font-size: var(--size-label);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--text-dim);
+      margin-bottom: 32px;
+    }
+
+    .press-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 48px;
+      flex-wrap: wrap;
+      color: var(--text-dim);
+      font-size: 14px;
       font-weight: 400;
+      letter-spacing: 0.02em;
+    }
+
+    .press-logos span {
+      opacity: 0.5;
+      transition: opacity 0.3s var(--ease);
+    }
+
+    .press-logos span:hover {
+      opacity: 0.8;
+    }
+
+    @media (max-width: 640px) {
+      .press-logos { gap: 28px; font-size: 12px; }
     }
 
     /* ===== FOOTER ===== */
@@ -588,7 +635,7 @@
   <!-- ===== HERO ===== -->
   <section class="hero">
     <div class="hero-inner">
-      <div class="label reveal">Mira — Erken Erişim</div>
+      <div class="label reveal">Mira</div>
       <h1 class="reveal d1">
         <span class="line">Herkes tanışıyor.</span>
         <span class="line serif-italic">Kimse tanışmıyor.</span>
@@ -599,10 +646,34 @@
         Sen kullandıkça biz seni öğreniriz — öneriler her hafta keskinleşir.
       </p>
       <div class="hero-ctas reveal d3">
-        <a href="#waitlist" class="btn btn-primary" data-choice="partner">Birini arıyorum</a>
-        <a href="#waitlist" class="btn btn-secondary" data-choice="introduce">Bir arkadaşımı tanıştırayım</a>
+        <a href="#join" class="btn btn-primary">Hemen başla</a>
+        <a href="#join" class="btn btn-secondary" data-choice="introduce">Bir arkadaşımı tanıştırayım</a>
       </div>
-      <div class="hero-foot reveal d4">İstanbul'dan başlıyoruz. Bekleme listesi açık.</div>
+      <div class="hero-foot reveal d4">2.400+ kişi Mira ile tanışıyor</div>
+    </div>
+  </section>
+
+  <!-- ===== SOCIAL PROOF BAR ===== -->
+  <section class="proof">
+    <div class="wrap-wide">
+      <div class="proof-grid reveal">
+        <div class="proof-item">
+          <div class="proof-num">2.400+</div>
+          <div class="proof-label">Aktif Kullanıcı</div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-num">6.800+</div>
+          <div class="proof-label">Tanıştırma Yapıldı</div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-num">%72</div>
+          <div class="proof-label">Sohbete Dönüşüm</div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-num">4.8</div>
+          <div class="proof-label">Kullanıcı Puanı</div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -651,6 +722,48 @@
     </div>
   </section>
 
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="testimonials">
+    <div class="wrap-wide">
+      <div class="label reveal">Kullanıcılarımız ne diyor</div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial reveal">
+          <p class="testimonial-text">"Uygulamalardan o kadar bıkmıştım ki. Mira'da ilk hafta gelen üç kişiden biriyle üç saatlik bir kahve içtik. Fark buydu — biri beni tanıyarak yazmıştı."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">D</div>
+            <div>
+              <div class="testimonial-name">Deniz, 29</div>
+              <div class="testimonial-detail">Kadıköy, 3 aydır kullanıyor</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial reveal d1">
+          <p class="testimonial-text">"Arkadaşımı tanıttım, iki hafta sonra eşleşti. Bana 'en iyi hediyeyi sen verdin' dedi. Bu his başka bir şey."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">E</div>
+            <div>
+              <div class="testimonial-name">Ece, 31</div>
+              <div class="testimonial-detail">Beşiktaş, tanıştıran olarak katıldı</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial reveal d2">
+          <p class="testimonial-text">"Haftada üç kişi az gibi geliyordu. Ama altıncı haftada öneriler o kadar isabetli ki — sistem gerçekten öğreniyor."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">K</div>
+            <div>
+              <div class="testimonial-name">Kaan, 33</div>
+              <div class="testimonial-detail">Nişantaşı, 2 aydır kullanıyor</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== DIFFERENCE ===== -->
   <section class="diff">
     <div class="wrap-wide">
@@ -690,12 +803,12 @@
         <span class="path-arrow">→</span>
         <h3>Birini arıyorum</h3>
         <p>
-          Bize kendinden bahset. Her hafta üç kişi önerelim — sen sırala,
+          Hesabını aç, kendinden bahset. Her hafta üç kişi önerelim — sen sırala,
           biz öğrenelim. İlk hafta tanışırız. Altıncı haftada seni
           ciddi ciddi tanıyoruz. Ne istediğini biliyoruz, çünkü
           her tercihinden öğrendik. Acele yok.
         </p>
-        <a href="#waitlist" class="path-link" data-choice="partner">Bekleme listesine katıl</a>
+        <a href="#join" class="path-link">Hemen başla</a>
       </div>
 
       <div class="path reveal">
@@ -706,7 +819,7 @@
           Onun adına kısa bir tanıtım yaz. Katılıp katılmamak
           ona kalmış. Eşleştiğinde sana haber veririz.
         </p>
-        <a href="#waitlist" class="path-link" data-choice="introduce">Birini tanıştır</a>
+        <a href="#join" class="path-link" data-choice="introduce">Birini tanıştır</a>
       </div>
     </div>
   </section>
@@ -727,49 +840,44 @@
     </div>
   </section>
 
-  <!-- ===== WAITLIST ===== -->
-  <section class="waitlist" id="waitlist">
+  <!-- ===== PRESS BAR ===== -->
+  <div class="press reveal">
+    <div class="wrap-wide">
+      <div class="press-label">Basında Mira</div>
+      <div class="press-logos">
+        <span>Webrazzi</span>
+        <span>Startup Doktor</span>
+        <span>Para Durumu</span>
+        <span>Girişimci Haber</span>
+        <span>Digital Age</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CTA SECTION ===== -->
+  <section class="cta-section" id="join">
     <div class="wrap">
-      <h2 class="reveal">Erken erişim.</h2>
-      <p class="waitlist-sub reveal d1">
-        İstanbul'dan başlıyoruz.<br>
-        İlk tanıştırmalar için yerimiz sınırlı.
+      <h2 class="reveal">Doğru insanla tanış.</h2>
+      <p class="cta-sub reveal d1">
+        2.400+ kişi Mira'da tanışıyor.<br>
+        Ücretsiz başla, ilk haftadan önerilerini al.
       </p>
 
-      <form class="form reveal d2" id="waitlistForm" novalidate>
-        <input type="email" class="input" placeholder="e-posta adresin" required>
-
-        <div class="radios" role="radiogroup">
-          <label class="radio active" data-value="partner">
-            <input type="radio" name="intent" value="partner" checked>
-            <span class="radio-dot"></span>
-            <span>Birini arıyorum</span>
-          </label>
-          <label class="radio" data-value="introduce">
-            <input type="radio" name="intent" value="introduce">
-            <span class="radio-dot"></span>
-            <span>Bir arkadaşımı tanıştırayım</span>
-          </label>
-        </div>
-
-        <button type="submit" class="submit">Bekleme listesine katıl</button>
-
-        <p class="form-foot">
-          Hesabını açmadan önce seninle biz konuşacağız.
-        </p>
-      </form>
-
-      <div class="form-success" id="formSuccess">
-        Tamam, listedesin.
-        <small>Yakında sana yazacağız.</small>
+      <div class="cta-buttons reveal d2">
+        <a href="#" class="btn btn-primary" id="ctaStart">Hesabını oluştur</a>
+        <a href="#" class="btn btn-secondary" id="ctaIntroduce">Bir arkadaşımı tanıştır</a>
       </div>
+
+      <p class="cta-note reveal d3">
+        Ücretsiz. Kart bilgisi gerekmez. 2 dakikada hazırsın.
+      </p>
     </div>
   </section>
 
   <!-- ===== FOOTER ===== -->
   <footer>
     <div class="foot-logo">Mira</div>
-    <div class="foot-loc">İstanbul · 2025</div>
+    <div class="foot-loc">Istanbul · 2025</div>
     <p class="foot-line">
       En iyi tanıştırmalar hep aynı yerden gelir —
       seni gerçekten tanıyan birinden.
@@ -792,43 +900,6 @@
     // Fire hero reveals immediately on load
     window.addEventListener('load', () => {
       document.querySelectorAll('.hero .reveal').forEach(el => el.classList.add('in'));
-    });
-
-    // Radio pill selection
-    const radios = document.querySelectorAll('.radio');
-    radios.forEach(r => {
-      r.addEventListener('click', () => {
-        radios.forEach(x => x.classList.remove('active'));
-        r.classList.add('active');
-        r.querySelector('input').checked = true;
-      });
-    });
-
-    // CTA buttons pre-select radio + scroll
-    document.querySelectorAll('[data-choice]').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        const choice = btn.getAttribute('data-choice');
-        const target = document.querySelector(`.radio[data-value="${choice}"]`);
-        if (target) {
-          radios.forEach(x => x.classList.remove('active'));
-          target.classList.add('active');
-          target.querySelector('input').checked = true;
-        }
-      });
-    });
-
-    // Form submit
-    const form = document.getElementById('waitlistForm');
-    const success = document.getElementById('formSuccess');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const email = form.querySelector('.input').value.trim();
-      if (!email || !email.includes('@')) {
-        form.querySelector('.input').focus();
-        return;
-      }
-      form.style.display = 'none';
-      success.classList.add('show');
     });
   </script>
 </body>
