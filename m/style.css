@@ -1,18 +1,8 @@
 /* ========================================
    MIRA — SPA Stylesheet
-   Strategy: Import old Blindside CSS, override design tokens
+   Base CSS loaded via <link> tags in HTML
+   This file contains Mira overrides only
    ======================================== */
-
-/* Import all original CSS modules */
-@import url('/css/base.css');
-@import url('/css/animations.css');
-@import url('/css/components.css');
-@import url('/css/home.css');
-@import url('/css/packs.css');
-@import url('/css/quiz.css');
-@import url('/css/reveal.css');
-@import url('/css/premium.css');
-@import url('/css/stranger.css');
 
 /* ===== MIRA DESIGN TOKEN OVERRIDES ===== */
 :root {
