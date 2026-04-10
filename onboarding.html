@@ -1,0 +1,1005 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mira — Seni tanıyalım</title>
+    <meta
+      name="description"
+      content="Seni tanımadan sana birini bulamayız. Birkaç dakikanı ayır, gerisini bize bırak."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #ffffff;
+        --bg-alt: #f5f5f5;
+        --text: #0a0a0a;
+        --text-mid: #767676;
+        --text-dim: #a0a0a0;
+        --border: #e0e0e0;
+        --accent: #0a0a0a;
+        --accent-hover: #333333;
+        --blue: #2563eb;
+        --blue-light: #dbeafe;
+        --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        --ease: cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      body {
+        font-family: var(--font);
+        font-size: 15px;
+        line-height: 1.65;
+        color: var(--text);
+        background: var(--bg);
+        font-weight: 400;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        min-height: 100vh;
+      }
+
+      ::selection {
+        background: var(--text);
+        color: var(--bg);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      /* ===== PAGE SHELL ===== */
+      .page {
+        max-width: 540px;
+        margin: 0 auto;
+        padding: 0 24px 60px;
+      }
+
+      @media (max-width: 720px) {
+        .page {
+          padding: 0 20px 40px;
+        }
+      }
+
+      /* ===== TOP BAR ===== */
+      .top-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+        margin-bottom: 16px;
+      }
+
+      .back {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--text-mid);
+        transition: color 0.3s var(--ease);
+      }
+      .back:hover {
+        color: var(--text);
+      }
+      .back svg {
+        width: 14px;
+        height: 14px;
+      }
+
+      .step-counter {
+        font-size: 12px;
+        font-weight: 500;
+        color: var(--text-dim);
+        letter-spacing: 0.06em;
+      }
+
+      /* ===== PROGRESS BAR ===== */
+      .progress-track {
+        width: 100%;
+        height: 2px;
+        background: var(--border);
+        margin-bottom: 56px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .progress-fill {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        background: var(--blue);
+        transition: width 0.6s var(--ease);
+      }
+
+      /* ===== STEP HEADER ===== */
+      .step-header {
+        margin-bottom: 48px;
+      }
+
+      .step-header h1 {
+        font-size: clamp(28px, 5vw, 38px);
+        font-weight: 400;
+        letter-spacing: -0.03em;
+        line-height: 1.15;
+        margin-bottom: 12px;
+      }
+
+      .step-header p {
+        font-size: 15px;
+        color: var(--text-mid);
+        line-height: 1.7;
+        max-width: 440px;
+      }
+
+      /* ===== FORM STEPS ===== */
+      .form-step {
+        display: none;
+        opacity: 0;
+        transform: translateX(20px);
+      }
+
+      .form-step.active {
+        display: block;
+        animation: stepIn 0.5s var(--ease) forwards;
+      }
+
+      .form-step.exit {
+        animation: stepOut 0.3s var(--ease) forwards;
+      }
+
+      @keyframes stepIn {
+        from {
+          opacity: 0;
+          transform: translateX(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes stepOut {
+        from {
+          opacity: 1;
+          transform: translateX(0);
+        }
+        to {
+          opacity: 0;
+          transform: translateX(-20px);
+        }
+      }
+
+      /* ===== FIELDS ===== */
+      .field {
+        margin-bottom: 32px;
+      }
+
+      .field label {
+        display: block;
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--text-mid);
+        margin-bottom: 10px;
+      }
+
+      .field input,
+      .field textarea,
+      .field select {
+        width: 100%;
+        padding: 14px 0;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid var(--border);
+        font-family: var(--font);
+        font-size: 16px;
+        color: var(--text);
+        transition: border-color 0.3s var(--ease);
+        outline: none;
+      }
+
+      .field input:focus,
+      .field textarea:focus,
+      .field select:focus {
+        border-bottom-color: var(--text);
+      }
+
+      .field input::placeholder,
+      .field textarea::placeholder {
+        color: var(--text-dim);
+      }
+
+      .field textarea {
+        resize: vertical;
+        min-height: 88px;
+        line-height: 1.6;
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        padding: 14px 16px;
+      }
+
+      .field textarea:focus {
+        border-color: var(--text);
+      }
+
+      .field-hint {
+        font-size: 12px;
+        color: var(--text-dim);
+        margin-top: 8px;
+        line-height: 1.5;
+      }
+
+      .field select {
+        cursor: pointer;
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23a0a0a0' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 0 center;
+      }
+
+      /* ===== INLINE ROW ===== */
+      .field-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
+
+      @media (max-width: 480px) {
+        .field-row {
+          grid-template-columns: 1fr;
+          gap: 0;
+        }
+      }
+
+      /* ===== AGE RANGE ===== */
+      .age-range {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .age-range input {
+        width: 80px;
+        text-align: center;
+        padding: 14px 8px;
+      }
+
+      .age-range-sep {
+        color: var(--text-dim);
+        font-size: 14px;
+        flex-shrink: 0;
+      }
+
+      /* ===== GENDER PILLS ===== */
+      .gender-pills {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .gender-pill {
+        padding: 10px 24px;
+        border: 1px solid var(--border);
+        border-radius: 100px;
+        font-family: var(--font);
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--text-mid);
+        cursor: pointer;
+        transition: all 0.25s var(--ease);
+        background: transparent;
+        user-select: none;
+      }
+
+      .gender-pill:hover {
+        border-color: var(--text-mid);
+        color: var(--text);
+      }
+
+      .gender-pill.selected {
+        border-color: var(--text);
+        color: var(--text);
+        background: var(--bg-alt);
+        font-weight: 500;
+      }
+
+      /* ===== PILL SELECTOR (Values/Lifestyle) ===== */
+      .pill-group {
+        margin-bottom: 40px;
+      }
+
+      .pill-group-label {
+        font-size: 15px;
+        font-weight: 500;
+        color: var(--text);
+        margin-bottom: 6px;
+        letter-spacing: -0.01em;
+      }
+
+      .pill-group-hint {
+        font-size: 12px;
+        color: var(--text-dim);
+        margin-bottom: 14px;
+      }
+
+      .pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .pill {
+        padding: 9px 18px;
+        border: 1px solid var(--border);
+        border-radius: 100px;
+        font-family: var(--font);
+        font-size: 13px;
+        font-weight: 400;
+        color: var(--text-mid);
+        cursor: pointer;
+        transition: all 0.25s var(--ease);
+        user-select: none;
+        background: transparent;
+      }
+
+      .pill:hover {
+        border-color: var(--text-mid);
+        color: var(--text);
+      }
+
+      .pill.selected {
+        border-color: var(--blue);
+        color: var(--blue);
+        background: var(--blue-light);
+        font-weight: 500;
+      }
+
+      /* ===== OPTIONAL SECTION ===== */
+      .optional-section {
+        margin-top: 40px;
+        padding-top: 32px;
+        border-top: 1px solid var(--border);
+      }
+
+      .optional-label {
+        font-size: 11px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--text-dim);
+        margin-bottom: 8px;
+      }
+
+      .optional-desc {
+        font-size: 14px;
+        color: var(--text-mid);
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      /* ===== BUTTONS ===== */
+      .form-actions {
+        display: flex;
+        gap: 12px;
+        margin-top: 48px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font);
+        font-size: 13px;
+        font-weight: 500;
+        padding: 14px 32px;
+        border-radius: 100px;
+        cursor: pointer;
+        transition: all 0.3s var(--ease);
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        border: 1px solid var(--text);
+        flex: 1;
+      }
+
+      .btn-primary {
+        background: var(--text);
+        color: var(--bg);
+      }
+      .btn-primary:hover {
+        background: var(--accent-hover);
+        border-color: var(--accent-hover);
+      }
+      .btn-primary:active {
+        transform: scale(0.98);
+      }
+
+      .btn-back {
+        background: transparent;
+        color: var(--text);
+        flex: 0;
+        min-width: 100px;
+      }
+      .btn-back:hover {
+        background: var(--bg-alt);
+      }
+
+      .btn:disabled {
+        opacity: 0.35;
+        cursor: not-allowed;
+      }
+
+      /* ===== SUCCESS STATE ===== */
+      .success {
+        display: none;
+        padding: 100px 0 80px;
+        text-align: center;
+      }
+
+      .success.show {
+        display: block;
+        animation: successIn 0.8s var(--ease) forwards;
+      }
+
+      @keyframes successIn {
+        from {
+          opacity: 0;
+          transform: translateY(24px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .success-icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        border: 2px solid var(--blue);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 32px;
+        animation: checkPop 0.6s var(--ease) 0.3s both;
+      }
+
+      @keyframes checkPop {
+        from {
+          transform: scale(0.5);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      .success-icon svg {
+        width: 24px;
+        height: 24px;
+        color: var(--blue);
+      }
+
+      .success h2 {
+        font-size: clamp(26px, 5vw, 36px);
+        font-weight: 400;
+        letter-spacing: -0.03em;
+        line-height: 1.2;
+        margin-bottom: 16px;
+      }
+
+      .success p {
+        font-size: 15px;
+        color: var(--text-mid);
+        line-height: 1.7;
+        max-width: 380px;
+        margin: 0 auto 12px;
+      }
+
+      .success-detail {
+        font-size: 13px;
+        color: var(--text-dim);
+        margin-bottom: 40px;
+      }
+
+      .success a.btn {
+        display: inline-flex;
+        min-width: 220px;
+        flex: 0;
+        text-decoration: none;
+      }
+
+      /* ===== FIELD VALIDATION ===== */
+      .field input:invalid:not(:placeholder-shown) {
+        border-bottom-color: #dc2626;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="top-bar">
+        <a href="/" class="back">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M19 12H5" />
+            <path d="M12 19l-7-7 7-7" />
+          </svg>
+          Mira
+        </a>
+        <span class="step-counter" id="stepCounter">1 / 4</span>
+      </div>
+
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill" style="width: 25%"></div>
+      </div>
+
+      <div id="formWrap">
+        <!-- STEP 1: Basics -->
+        <div class="form-step active" data-step="1">
+          <div class="step-header">
+            <h1>Önce seni tanıyalım.</h1>
+            <p>Temel birkaç bilgiyle başlayalım. Sonrası daha eğlenceli.</p>
+          </div>
+
+          <div class="field">
+            <label>Adın</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Adın"
+              autocomplete="given-name"
+              required
+            />
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label>Yaşın</label>
+              <input
+                type="number"
+                id="age"
+                placeholder="28"
+                min="18"
+                max="60"
+                autocomplete="off"
+                required
+              />
+            </div>
+            <div class="field">
+              <label>Cinsiyet</label>
+              <div class="gender-pills" id="genderPills">
+                <div class="gender-pill" data-value="male">Erkek</div>
+                <div class="gender-pill" data-value="female">Kadın</div>
+                <div class="gender-pill" data-value="other">Diğer</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Nerelisin (Istanbul)?</label>
+            <select id="neighborhood" required>
+              <option value="" disabled selected>Semt seç</option>
+              <option value="kadikoy">Kadıköy</option>
+              <option value="besiktas">Beşiktaş</option>
+              <option value="cihangir">Cihangir</option>
+              <option value="nisantasi">Nişantaşı</option>
+              <option value="moda">Moda</option>
+              <option value="uskudar">Üsküdar</option>
+              <option value="beyoglu">Beyoğlu</option>
+              <option value="other">Diğer</option>
+            </select>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="btn btn-primary" id="toStep2">
+              Devam et
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 2: Values & Lifestyle -->
+        <div class="form-step" data-step="2">
+          <div class="step-header">
+            <h1>Biraz daha yakından.</h1>
+            <p>
+              Seni tanımak için birkaç soru. Doğru ya da yanlış yok — sadece sen.
+            </p>
+          </div>
+
+          <div class="pill-group">
+            <div class="pill-group-label">
+              Seni en iyi tanımlayan üç şey?
+            </div>
+            <div class="pill-group-hint">En fazla 3 seç</div>
+            <div class="pills" data-group="traits" data-max="3">
+              <div class="pill">Meraklı</div>
+              <div class="pill">Sakin</div>
+              <div class="pill">Enerjik</div>
+              <div class="pill">Düşünceli</div>
+              <div class="pill">Maceracı</div>
+              <div class="pill">Yaratıcı</div>
+              <div class="pill">Kararlı</div>
+              <div class="pill">Empatik</div>
+            </div>
+          </div>
+
+          <div class="pill-group">
+            <div class="pill-group-label">Hafta sonu nasıl geçer?</div>
+            <div class="pill-group-hint">En fazla 3 seç</div>
+            <div class="pills" data-group="weekend" data-max="3">
+              <div class="pill">Doğada</div>
+              <div class="pill">Kafede kitapla</div>
+              <div class="pill">Arkadaşlarla dışarıda</div>
+              <div class="pill">Evde film</div>
+              <div class="pill">Spor</div>
+              <div class="pill">Yeni bir yer keşfetmek</div>
+            </div>
+          </div>
+
+          <div class="pill-group">
+            <div class="pill-group-label">
+              Bir ilişkide en önemli şey?
+            </div>
+            <div class="pill-group-hint">En fazla 2 seç</div>
+            <div class="pills" data-group="values" data-max="2">
+              <div class="pill">Güven</div>
+              <div class="pill">İletişim</div>
+              <div class="pill">Mizah</div>
+              <div class="pill">Bağımsızlık</div>
+              <div class="pill">Samimiyet</div>
+              <div class="pill">Ortak değerler</div>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="btn btn-back" id="backTo1">
+              Geri
+            </button>
+            <button type="button" class="btn btn-primary" id="toStep3">
+              Devam et
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 3: What you're looking for -->
+        <div class="form-step" data-step="3">
+          <div class="step-header">
+            <h1>Kimi arıyorsun?</h1>
+            <p>
+              Tam bir tarif beklemiyor — ama ne istediğini anlamak istiyoruz.
+            </p>
+          </div>
+
+          <div class="field">
+            <label>Yaş aralığı</label>
+            <div class="age-range">
+              <input
+                type="number"
+                id="ageMin"
+                placeholder="24"
+                min="18"
+                max="60"
+              />
+              <span class="age-range-sep">—</span>
+              <input
+                type="number"
+                id="ageMax"
+                placeholder="34"
+                min="18"
+                max="60"
+              />
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Nasıl biri seni mutlu eder?</label>
+            <textarea
+              id="idealPerson"
+              placeholder="Birkaç cümleyle anlat. Neye değer verir, nasıl konuşur, yanında olmak nasıl hissettirir?"
+            ></textarea>
+            <p class="field-hint">
+              Fiziksel değil — kişilik olarak düşün. 2–3 cümle yeterli.
+            </p>
+          </div>
+
+          <div class="field">
+            <label>Kesinlikle olmaması gereken şey?</label>
+            <textarea
+              id="dealbreaker"
+              placeholder="Kısa ve net. Neyi tolere edemezsin?"
+            ></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="btn btn-back" id="backTo2">
+              Geri
+            </button>
+            <button type="button" class="btn btn-primary" id="toStep4">
+              Devam et
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 4: Contact & Vouch -->
+        <div class="form-step" data-step="4">
+          <div class="step-header">
+            <h1>Son bir adım.</h1>
+            <p>Sana ulaşabilmemiz ve sürecin başlaması için.</p>
+          </div>
+
+          <div class="field">
+            <label>E-posta adresin</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="ornek@email.com"
+              autocomplete="email"
+              required
+            />
+            <p class="field-hint">
+              Her Pazartesi önerilerin buraya gelecek. Spam yok, söz.
+            </p>
+          </div>
+
+          <div class="field">
+            <label>Telefon (isteğe bağlı)</label>
+            <input
+              type="tel"
+              id="phone"
+              placeholder="05XX XXX XX XX"
+              autocomplete="tel"
+            />
+          </div>
+
+          <div class="optional-section">
+            <div class="optional-label">Bonus: Kefil</div>
+            <p class="optional-desc">
+              Bir arkadaşın seni tanıtırsa profilin öne çıkar. Seni anlatabilen
+              birinin adını ve e-postasını bırak — ona bir davet gönderelim.
+            </p>
+
+            <div class="field-row">
+              <div class="field">
+                <label>Arkadaşının adı</label>
+                <input
+                  type="text"
+                  id="vouchName"
+                  placeholder="Adı"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="field">
+                <label>E-postası</label>
+                <input
+                  type="email"
+                  id="vouchEmail"
+                  placeholder="ornek@email.com"
+                  autocomplete="off"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="btn btn-back" id="backTo3">
+              Geri
+            </button>
+            <button type="button" class="btn btn-primary" id="submitForm">
+              Tamamla
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Success State -->
+      <div class="success" id="successState">
+        <div class="success-icon">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <polyline points="20 6 9 17 4 12" />
+          </svg>
+        </div>
+        <h2>Seni tanıdık.</h2>
+        <p>
+          İlk önerilerini hazırlıyoruz. Her Pazartesi sana üç kişi gelecek —
+          her biri sana göre seçilmiş.
+        </p>
+        <p class="success-detail">
+          İlk önerilerin birkaç gün içinde e-postana gelecek.
+        </p>
+        <a href="/matches.html" class="btn btn-primary"
+          >Önerilerimi gör</a
+        >
+      </div>
+    </div>
+
+    <script>
+      const steps = document.querySelectorAll(".form-step");
+      const progressFill = document.getElementById("progressFill");
+      const stepCounter = document.getElementById("stepCounter");
+      let currentStep = 1;
+      let selectedGender = null;
+
+      function showStep(n) {
+        const current = document.querySelector(".form-step.active");
+        if (current) {
+          current.classList.add("exit");
+          current.addEventListener(
+            "animationend",
+            () => {
+              current.classList.remove("active", "exit");
+              current.style.display = "none";
+              activateStep(n);
+            },
+            { once: true },
+          );
+        } else {
+          activateStep(n);
+        }
+      }
+
+      function activateStep(n) {
+        currentStep = n;
+        const next = document.querySelector(`.form-step[data-step="${n}"]`);
+        next.style.display = "";
+        // force reflow
+        void next.offsetHeight;
+        next.classList.add("active");
+
+        progressFill.style.width = (n / 4) * 100 + "%";
+        stepCounter.textContent = n + " / 4";
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      // Gender pills
+      document.querySelectorAll(".gender-pill").forEach((pill) => {
+        pill.addEventListener("click", () => {
+          document
+            .querySelectorAll(".gender-pill")
+            .forEach((p) => p.classList.remove("selected"));
+          pill.classList.add("selected");
+          selectedGender = pill.dataset.value;
+        });
+      });
+
+      // Multi-select pills
+      document.querySelectorAll(".pills").forEach((group) => {
+        const max = parseInt(group.dataset.max) || 3;
+        group.querySelectorAll(".pill").forEach((pill) => {
+          pill.addEventListener("click", () => {
+            if (pill.classList.contains("selected")) {
+              pill.classList.remove("selected");
+            } else {
+              const selected = group.querySelectorAll(".pill.selected").length;
+              if (selected < max) {
+                pill.classList.add("selected");
+              }
+            }
+          });
+        });
+      });
+
+      // Step 1 → 2
+      document.getElementById("toStep2").addEventListener("click", () => {
+        const name = document.getElementById("name").value.trim();
+        const age = document.getElementById("age").value;
+        const hood = document.getElementById("neighborhood").value;
+        if (!name || !age || !selectedGender || !hood) return;
+        showStep(2);
+      });
+
+      // Step 2 → 3
+      document.getElementById("toStep3").addEventListener("click", () => {
+        const traits = document.querySelectorAll(
+          '[data-group="traits"] .pill.selected',
+        ).length;
+        const weekend = document.querySelectorAll(
+          '[data-group="weekend"] .pill.selected',
+        ).length;
+        const values = document.querySelectorAll(
+          '[data-group="values"] .pill.selected',
+        ).length;
+        if (traits === 0 || weekend === 0 || values === 0) return;
+        showStep(3);
+      });
+
+      // Step 3 → 4
+      document.getElementById("toStep4").addEventListener("click", () => {
+        const ideal = document.getElementById("idealPerson").value.trim();
+        if (!ideal) return;
+        showStep(4);
+      });
+
+      // Back buttons
+      document
+        .getElementById("backTo1")
+        .addEventListener("click", () => showStep(1));
+      document
+        .getElementById("backTo2")
+        .addEventListener("click", () => showStep(2));
+      document
+        .getElementById("backTo3")
+        .addEventListener("click", () => showStep(3));
+
+      // Submit
+      document.getElementById("submitForm").addEventListener("click", () => {
+        const email = document.getElementById("email").value.trim();
+        if (!email || !email.includes("@")) return;
+
+        // Collect all data
+        const getSelected = (group) =>
+          Array.from(
+            document.querySelectorAll(
+              `[data-group="${group}"] .pill.selected`,
+            ),
+          ).map((p) => p.textContent);
+
+        const profile = {
+          name: document.getElementById("name").value.trim(),
+          age: parseInt(document.getElementById("age").value),
+          gender: selectedGender,
+          neighborhood: document.getElementById("neighborhood").value,
+          traits: getSelected("traits"),
+          weekend: getSelected("weekend"),
+          values: getSelected("values"),
+          ageRange: {
+            min: parseInt(document.getElementById("ageMin").value) || null,
+            max: parseInt(document.getElementById("ageMax").value) || null,
+          },
+          idealPerson: document.getElementById("idealPerson").value.trim(),
+          dealbreaker: document.getElementById("dealbreaker").value.trim(),
+          email: email,
+          phone: document.getElementById("phone").value.trim(),
+          vouch: {
+            name: document.getElementById("vouchName").value.trim(),
+            email: document.getElementById("vouchEmail").value.trim(),
+          },
+          createdAt: new Date().toISOString(),
+        };
+
+        localStorage.setItem("mira-profile", JSON.stringify(profile));
+
+        // Show success
+        document.getElementById("formWrap").style.display = "none";
+        document.querySelector(".top-bar").style.display = "none";
+        document.querySelector(".progress-track").style.display = "none";
+        document.getElementById("successState").classList.add("show");
+      });
+    </script>
+  </body>
+</html>
