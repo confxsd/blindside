@@ -239,6 +239,100 @@
         text-transform: uppercase;
       }
 
+      /* ===== PROFILE CAROUSEL ===== */
+      .carousel-wrap {
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        overflow: hidden;
+        padding: 64px 0 0;
+        mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+      }
+
+      .carousel-track {
+        display: flex;
+        gap: 16px;
+        width: max-content;
+        animation: scroll-left 35s linear infinite;
+      }
+
+      .carousel-track:hover {
+        animation-play-state: paused;
+      }
+
+      @keyframes scroll-left {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+
+      .profile-card {
+        flex-shrink: 0;
+        width: 260px;
+        padding: 24px;
+        background: var(--bg-alt);
+        border: 1px solid var(--border);
+        border-radius: 2px;
+        transition: border-color 0.3s var(--ease);
+      }
+
+      .profile-card:hover {
+        border-color: var(--text-dim);
+      }
+
+      .profile-card-top {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+
+      .profile-card-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        font-weight: 500;
+        color: var(--text-mid);
+        flex-shrink: 0;
+      }
+
+      .profile-card-name {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--text);
+        line-height: 1.3;
+      }
+
+      .profile-card-meta {
+        font-size: 11px;
+        color: var(--text-dim);
+        letter-spacing: 0.02em;
+      }
+
+      .profile-card-vouch {
+        font-size: 13px;
+        line-height: 1.65;
+        color: var(--text-mid);
+        font-style: italic;
+      }
+
+      .profile-card-tag {
+        display: inline-block;
+        margin-top: 14px;
+        font-size: 10px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--text-dim);
+        border: 1px solid var(--border);
+        padding: 4px 10px;
+        border-radius: 2px;
+      }
+
       /* ===== SOCIAL PROOF BAR ===== */
       .proof {
         padding: 56px 0;
@@ -680,6 +774,204 @@
           >
         </div>
         <div class="hero-foot reveal d4">2.400+ kişiyle birlikte, bire bir</div>
+
+        <div class="carousel-wrap reveal d5">
+          <div class="carousel-track">
+            <!-- Set 1 -->
+            <div class="profile-card">
+              <div class="profile-card-top">
+                <div class="profile-card-avatar">S</div>
+                <div>
+                  <div class="profile-card-name">Selin, 28</div>
+                  <div class="profile-card-meta">Kadıköy</div>
+                </div>
+              </div>
+              <div class="profile-card-vouch">"Empati kurabilen, sessizliğin de konuşma olduğunu bilen biri. Doğru insanla tanışmayı hak ediyor."</div>
+              <span class="profile-card-tag">Arkadaşı tarafından tanıtıldı</span>
+            </div>
+
+            <div class="profile-card">
+              <div class="profile-card-top">
+                <div class="profile-card-avatar">B</div>
+                <div>
+                  <div class="profile-card-name">Berk, 31</div>
+                  <div class="profile-card-meta">Beşiktaş</div>
+                </div>
+              </div>
+              <div class="profile-card-vouch">"Yüzeysel konuşmalardan sıkılan, derinliği seven biri. Herkesi güldürür ama güvendiği insanlara açılır."</div>
+              <span class="profile-card-tag">3. haftasında eşleşti</span>
+            </div>
+
+            <div class="profile-card">
+              <div class="profile-card-top">
+                <div class="profile-card-avatar">A</div>
+                <div>
+                  <div class="profile-card-name">Aslı, 26</div>
+                  <div class="profile-card-meta">Cihangir</div>
+                </div>
+              </div>
+              <div class="profile-card-vouch">"Kitap kurdu, sabah insanı, samimiyeti çok seven biri. İlk izlenimlere değil, zaman geçirdikçe ortaya çıkan insanlara inanır."</div>
+              <span class="profile-card-tag">5 haftalık kullanıcı</span>
+            </div>
+
+            <div class="profile-card">
+              <div class="profile-card-top">
+                <div class="profile-card-avatar">E</div>
+                <div>
+                  <div class="profile-card-name">Emre, 33</div>
+                  <div class="profile-card-meta">Moda</div>
+                </div>
+              </div>
+              <div class="profile-card-vouch">"Karşısındakini dinlemeyi bilen, kendi hayatına saygı duyan biri. İlişkide eşitliği önemser."</div>
+              <span class="profile-card-tag">Arkadaşı tarafından tanıtıldı</span>
+            </div>
+
+            <div class="profile-card">
+              <div class="profile-card-top">
+                <div class="profile-card-avatar">Z</div>
+                <div>
+                  <div class="profile-card-name">Zeynep, 29</div>
+                  <div class="profile-card-meta">Nişantaşı</div>
+                </div>
+              </div>
+              <div class="profile-card-vouch">"Hayatında ne istediğini bilen, sakin ama kararlı biri. Yanında olmak insanı huzurlu hissettiriyor."</div>
+              <span class="profile-card-tag">2. haftasında eşleşti</span>
+            </div>
+
+            <div class="profile-card">
+              <div class="profile-card-top">
+                <div class="profile-card-avatar">C</div>
+                <div>
+                  <div class="profile-card-name">Can, 30</div>
+                  <div class="profile-card-meta">Karaköy</div>
+                </div>
+              </div>
+              <div class="profile-card-vouch">"En iyi arkadaşım. Güler yüzlü, dürüst, işini ciddiye alan biri. Birini hak ediyorsa o hak ediyor."</div>
+              <span class="profile-card-tag">Arkadaşı tarafından tanıtıldı</span>
+            </div>
+
+            <div class="profile-card">
+              <div class="profile-card-top">
+                <div class="profile-card-avatar">D</div>
+                <div>
+                  <div class="profile-card-name">Defne, 27</div>
+                  <div class="profile-card-meta">Bebek</div>
+                </div>
+              </div>
+              <div class="profile-card-vouch">"Enerjisi bulaşıcı, ama yüzeysel değil. Güldüğü kadar düşünen, düşündüğü kadar seven biri."</div>
+              <span class="profile-card-tag">4 haftalık kullanıcı</span>
+            </div>
+
+            <div class="profile-card">
+              <div class="profile-card-top">
+                <div class="profile-card-avatar">O</div>
+                <div>
+                  <div class="profile-card-name">Onur, 34</div>
+                  <div class="profile-card-meta">Ataşehir</div>
+                </div>
+              </div>
+              <div class="profile-card-vouch">"Sessiz güçlü tipi. Sözleri az ama her biri yerinde. Tanıdığım en güvenilir insan."</div>
+              <span class="profile-card-tag">5. haftasında eşleşti</span>
+            </div>
+
+            <!-- Set 2 (duplicate for seamless loop) -->
+            <div class="profile-card">
+              <div class="profile-card-top">
+                <div class="profile-card-avatar">S</div>
+                <div>
+                  <div class="profile-card-name">Selin, 28</div>
+                  <div class="profile-card-meta">Kadıköy</div>
+                </div>
+              </div>
+              <div class="profile-card-vouch">"Empati kurabilen, sessizliğin de konuşma olduğunu bilen biri. Doğru insanla tanışmayı hak ediyor."</div>
+              <span class="profile-card-tag">Arkadaşı tarafından tanıtıldı</span>
+            </div>
+
+            <div class="profile-card">
+              <div class="profile-card-top">
+                <div class="profile-card-avatar">B</div>
+                <div>
+                  <div class="profile-card-name">Berk, 31</div>
+                  <div class="profile-card-meta">Beşiktaş</div>
+                </div>
+              </div>
+              <div class="profile-card-vouch">"Yüzeysel konuşmalardan sıkılan, derinliği seven biri. Herkesi güldürür ama güvendiği insanlara açılır."</div>
+              <span class="profile-card-tag">3. haftasında eşleşti</span>
+            </div>
+
+            <div class="profile-card">
+              <div class="profile-card-top">
+                <div class="profile-card-avatar">A</div>
+                <div>
+                  <div class="profile-card-name">Aslı, 26</div>
+                  <div class="profile-card-meta">Cihangir</div>
+                </div>
+              </div>
+              <div class="profile-card-vouch">"Kitap kurdu, sabah insanı, samimiyeti çok seven biri. İlk izlenimlere değil, zaman geçirdikçe ortaya çıkan insanlara inanır."</div>
+              <span class="profile-card-tag">5 haftalık kullanıcı</span>
+            </div>
+
+            <div class="profile-card">
+              <div class="profile-card-top">
+                <div class="profile-card-avatar">E</div>
+                <div>
+                  <div class="profile-card-name">Emre, 33</div>
+                  <div class="profile-card-meta">Moda</div>
+                </div>
+              </div>
+              <div class="profile-card-vouch">"Karşısındakini dinlemeyi bilen, kendi hayatına saygı duyan biri. İlişkide eşitliği önemser."</div>
+              <span class="profile-card-tag">Arkadaşı tarafından tanıtıldı</span>
+            </div>
+
+            <div class="profile-card">
+              <div class="profile-card-top">
+                <div class="profile-card-avatar">Z</div>
+                <div>
+                  <div class="profile-card-name">Zeynep, 29</div>
+                  <div class="profile-card-meta">Nişantaşı</div>
+                </div>
+              </div>
+              <div class="profile-card-vouch">"Hayatında ne istediğini bilen, sakin ama kararlı biri. Yanında olmak insanı huzurlu hissettiriyor."</div>
+              <span class="profile-card-tag">2. haftasında eşleşti</span>
+            </div>
+
+            <div class="profile-card">
+              <div class="profile-card-top">
+                <div class="profile-card-avatar">C</div>
+                <div>
+                  <div class="profile-card-name">Can, 30</div>
+                  <div class="profile-card-meta">Karaköy</div>
+                </div>
+              </div>
+              <div class="profile-card-vouch">"En iyi arkadaşım. Güler yüzlü, dürüst, işini ciddiye alan biri. Birini hak ediyorsa o hak ediyor."</div>
+              <span class="profile-card-tag">Arkadaşı tarafından tanıtıldı</span>
+            </div>
+
+            <div class="profile-card">
+              <div class="profile-card-top">
+                <div class="profile-card-avatar">D</div>
+                <div>
+                  <div class="profile-card-name">Defne, 27</div>
+                  <div class="profile-card-meta">Bebek</div>
+                </div>
+              </div>
+              <div class="profile-card-vouch">"Enerjisi bulaşıcı, ama yüzeysel değil. Güldüğü kadar düşünen, düşündüğü kadar seven biri."</div>
+              <span class="profile-card-tag">4 haftalık kullanıcı</span>
+            </div>
+
+            <div class="profile-card">
+              <div class="profile-card-top">
+                <div class="profile-card-avatar">O</div>
+                <div>
+                  <div class="profile-card-name">Onur, 34</div>
+                  <div class="profile-card-meta">Ataşehir</div>
+                </div>
+              </div>
+              <div class="profile-card-vouch">"Sessiz güçlü tipi. Sözleri az ama her biri yerinde. Tanıdığım en güvenilir insan."</div>
+              <span class="profile-card-tag">5. haftasında eşleşti</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
