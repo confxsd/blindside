@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mira — Üyelik</title>
+    <meta name="description" content="Mira üyelik planları. Temel $10, Mira+ $20. İlk haftan ücretsiz." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --bg: #ffffff;
+        --bg-alt: #f7f9fc;
+        --text: #0a0a0a;
+        --text-mid: #666;
+        --text-dim: #999;
+        --border: #e8e8e8;
+        --blue: #2563EB;
+        --blue-light: #dbeafe;
+        --blue-bg: #eef4ff;
+        --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        --ease: cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        font-family: var(--font);
+        font-size: 15px;
+        line-height: 1.6;
+        color: var(--text);
+        background: var(--bg);
+        -webkit-font-smoothing: antialiased;
+      }
+      a { color: inherit; text-decoration: none; }
+      ::selection { background: var(--text); color: var(--bg); }
+
+      .page {
+        max-width: 640px;
+        margin: 0 auto;
+        padding: 0 20px 80px;
+      }
+
+      /* Top bar */
+      .top-bar {
+        display: flex;
+        align-items: center;
+        padding: 24px 0;
+      }
+      .back {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--text-mid);
+        transition: color 0.2s;
+      }
+      .back:hover { color: var(--text); }
+
+      /* Hero */
+      .hero {
+        text-align: center;
+        padding: 20px 0 40px;
+      }
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--blue);
+        background: var(--blue-bg);
+        padding: 6px 14px;
+        border-radius: 100px;
+        margin-bottom: 20px;
+      }
+      .hero-badge-dot {
+        width: 6px; height: 6px;
+        border-radius: 50%;
+        background: var(--blue);
+      }
+      .hero h1 {
+        font-size: clamp(32px, 5vw, 42px);
+        font-weight: 600;
+        letter-spacing: -0.035em;
+        line-height: 1.15;
+        margin-bottom: 14px;
+      }
+      .hero p {
+        font-size: 16px;
+        color: var(--text-mid);
+        max-width: 460px;
+        margin: 0 auto;
+        line-height: 1.65;
+      }
+
+      /* Free trial banner */
+      .free-banner {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 18px 20px;
+        background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+        border: 1px solid #bbf7d0;
+        border-radius: 14px;
+        margin-bottom: 32px;
+      }
+      .free-banner-icon {
+        width: 40px; height: 40px;
+        border-radius: 12px;
+        background: #16a34a;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .free-banner-title {
+        font-size: 14px;
+        font-weight: 600;
+        color: #14532d;
+        margin-bottom: 3px;
+      }
+      .free-banner-text {
+        font-size: 13px;
+        color: #15803d;
+        line-height: 1.5;
+      }
+
+      /* Plans grid */
+      .plans {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-bottom: 40px;
+      }
+      @media (min-width: 600px) {
+        .plans { grid-template-columns: 1fr 1fr; }
+      }
+
+      .plan {
+        padding: 28px 24px;
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        background: #fff;
+        position: relative;
+        transition: all 0.25s var(--ease);
+      }
+      .plan:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+
+      .plan-featured {
+        border: 2px solid var(--blue);
+        background: linear-gradient(180deg, var(--blue-bg) 0%, #fff 40%);
+        box-shadow: 0 8px 24px rgba(37,99,235,0.1);
+      }
+      .plan-featured::before {
+        content: 'En popüler';
+        position: absolute;
+        top: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #fff;
+        background: var(--blue);
+        padding: 5px 14px;
+        border-radius: 100px;
+      }
+
+      .plan-icon {
+        width: 48px; height: 48px;
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 18px;
+      }
+      .plan-icon-basic {
+        background: #f3f4f6;
+        color: var(--text);
+      }
+      .plan-icon-premium {
+        background: linear-gradient(135deg, #3b82f6 0%, #2563EB 100%);
+        color: #fff;
+        box-shadow: 0 4px 12px rgba(37,99,235,0.3);
+      }
+
+      .plan-name {
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--text-dim);
+        margin-bottom: 6px;
+      }
+      .plan-title {
+        font-size: 22px;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        margin-bottom: 16px;
+      }
+
+      .plan-price {
+        display: flex;
+        align-items: baseline;
+        gap: 4px;
+        margin-bottom: 6px;
+      }
+      .plan-price-currency {
+        font-size: 22px;
+        font-weight: 500;
+        color: var(--text);
+      }
+      .plan-price-amount {
+        font-size: 44px;
+        font-weight: 700;
+        color: var(--text);
+        letter-spacing: -0.03em;
+        line-height: 1;
+      }
+      .plan-price-period {
+        font-size: 14px;
+        color: var(--text-mid);
+        margin-left: 4px;
+      }
+      .plan-tagline {
+        font-size: 13px;
+        color: var(--text-mid);
+        margin-bottom: 24px;
+        line-height: 1.5;
+      }
+
+      .plan-features {
+        list-style: none;
+        margin-bottom: 28px;
+      }
+      .plan-features li {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 9px 0;
+        font-size: 13px;
+        color: var(--text);
+        line-height: 1.5;
+        border-bottom: 1px solid #f3f4f6;
+      }
+      .plan-features li:last-child { border-bottom: none; }
+      .plan-features li svg {
+        flex-shrink: 0;
+        color: #16a34a;
+        margin-top: 2px;
+      }
+      .plan-featured .plan-features li svg {
+        color: var(--blue);
+      }
+      .plan-features li strong {
+        font-weight: 600;
+        color: var(--text);
+      }
+
+      .plan-cta {
+        display: block;
+        width: 100%;
+        padding: 14px 20px;
+        border-radius: 100px;
+        font-family: var(--font);
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        cursor: pointer;
+        border: 1px solid var(--text);
+        background: transparent;
+        color: var(--text);
+        transition: all 0.2s var(--ease);
+        text-align: center;
+      }
+      .plan-cta:hover {
+        background: var(--text);
+        color: #fff;
+      }
+      .plan-featured .plan-cta {
+        background: var(--blue);
+        color: #fff;
+        border-color: var(--blue);
+      }
+      .plan-featured .plan-cta:hover {
+        background: #1e40af;
+        border-color: #1e40af;
+      }
+
+      /* Comparison */
+      .comparison {
+        margin-bottom: 40px;
+        padding: 24px;
+        background: var(--bg-alt);
+        border-radius: 16px;
+        border: 1px solid var(--border);
+      }
+      .comparison-title {
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--text-dim);
+        margin-bottom: 16px;
+      }
+      .comparison-row {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr;
+        gap: 12px;
+        padding: 14px 0;
+        border-bottom: 1px solid var(--border);
+        font-size: 13px;
+        align-items: center;
+      }
+      .comparison-row:last-child { border-bottom: none; }
+      .comparison-row.head {
+        font-weight: 600;
+        color: var(--text-dim);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        padding-top: 0;
+      }
+      .comparison-label { color: var(--text); }
+      .comparison-val {
+        text-align: center;
+        color: var(--text-mid);
+      }
+      .comparison-val.yes {
+        color: var(--blue);
+        font-weight: 600;
+      }
+      .comparison-val svg { display: inline-block; vertical-align: middle; }
+
+      /* FAQ */
+      .faq {
+        margin-bottom: 40px;
+      }
+      .faq-title {
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--text-dim);
+        margin-bottom: 16px;
+      }
+      .faq-item {
+        padding: 18px 0;
+        border-bottom: 1px solid var(--border);
+      }
+      .faq-item:last-child { border-bottom: none; }
+      .faq-q {
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 6px;
+        color: var(--text);
+      }
+      .faq-a {
+        font-size: 13px;
+        color: var(--text-mid);
+        line-height: 1.6;
+      }
+
+      /* Footer */
+      .footer {
+        text-align: center;
+        padding: 24px 0;
+        border-top: 1px solid var(--border);
+        font-size: 12px;
+        color: var(--text-dim);
+      }
+      .footer a {
+        color: var(--text-mid);
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="top-bar">
+        <a href="/m/" class="back">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+          Mira
+        </a>
+      </div>
+
+      <div class="hero">
+        <div class="hero-badge">
+          <div class="hero-badge-dot"></div>
+          Üyelik planları
+        </div>
+        <h1>Sana uygun birini bulalım.</h1>
+        <p>
+          İlk haftan ücretsiz. Sonra sana uygun bir plan seç. İstediğin zaman iptal edebilirsin.
+        </p>
+      </div>
+
+      <div class="free-banner">
+        <div class="free-banner-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div>
+          <div class="free-banner-title">İlk haftan tamamen ücretsiz</div>
+          <div class="free-banner-text">Kredi kartı gerekmez. İstediğin zaman iptal edebilirsin.</div>
+        </div>
+      </div>
+
+      <div class="plans">
+        <!-- Basic Plan -->
+        <div class="plan">
+          <div class="plan-icon plan-icon-basic">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div class="plan-name">Temel</div>
+          <div class="plan-title">Mira</div>
+          <div class="plan-price">
+            <span class="plan-price-currency">$</span>
+            <span class="plan-price-amount">10</span>
+            <span class="plan-price-period">/ay</span>
+          </div>
+          <p class="plan-tagline">Temel tanışma sistemi. Her hafta 3 öneri.</p>
+          <ul class="plan-features">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span><strong>3 öneri</strong> / hafta</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Karşılıklı beğeni sonrası sohbet</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Arkadaş notu ile profiller</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Blindside oyunları</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Her 2 günde bir yenilenen öneriler</span>
+            </li>
+          </ul>
+          <button class="plan-cta" onclick="alert('Yakında aktif olacak')">Temel planı seç</button>
+        </div>
+
+        <!-- Premium Plan -->
+        <div class="plan plan-featured">
+          <div class="plan-icon plan-icon-premium">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="plan-name">Premium</div>
+          <div class="plan-title">Mira+</div>
+          <div class="plan-price">
+            <span class="plan-price-currency">$</span>
+            <span class="plan-price-amount">20</span>
+            <span class="plan-price-period">/ay</span>
+          </div>
+          <p class="plan-tagline">Daha derin analiz, daha fazla kontrol.</p>
+          <ul class="plan-features">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Temel plandaki <strong>her şey</strong></span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span><strong>Mira Asistan</strong> — kişisel tanışma koçun</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span><strong>Haftada 1 kez yenileme</strong> — 3 yeni öneri daha</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Karakter analizi ve uyum raporu</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Tüm oyun desteleri (30+)</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Öncelikli eşleşme</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Profilini 1 hafta dondurma</span>
+            </li>
+          </ul>
+          <button class="plan-cta" onclick="alert('Yakında aktif olacak')">Mira+ ile başla</button>
+        </div>
+      </div>
+
+      <!-- Comparison -->
+      <div class="comparison">
+        <div class="comparison-title">Plan karşılaştırma</div>
+        <div class="comparison-row head">
+          <div>Özellik</div>
+          <div style="text-align:center">Temel</div>
+          <div style="text-align:center">Mira+</div>
+        </div>
+        <div class="comparison-row">
+          <div class="comparison-label">Haftalık öneri sayısı</div>
+          <div class="comparison-val">3</div>
+          <div class="comparison-val yes">3 + 3</div>
+        </div>
+        <div class="comparison-row">
+          <div class="comparison-label">Mira Asistan</div>
+          <div class="comparison-val">—</div>
+          <div class="comparison-val yes">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </div>
+        <div class="comparison-row">
+          <div class="comparison-label">Haftalık yenileme</div>
+          <div class="comparison-val">—</div>
+          <div class="comparison-val yes">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </div>
+        <div class="comparison-row">
+          <div class="comparison-label">Karakter analizi</div>
+          <div class="comparison-val">—</div>
+          <div class="comparison-val yes">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </div>
+        <div class="comparison-row">
+          <div class="comparison-label">Öncelikli eşleşme</div>
+          <div class="comparison-val">—</div>
+          <div class="comparison-val yes">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </div>
+        <div class="comparison-row">
+          <div class="comparison-label">Blindside oyunları</div>
+          <div class="comparison-val yes">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="comparison-val yes">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </div>
+        <div class="comparison-row">
+          <div class="comparison-label">İlk hafta ücretsiz</div>
+          <div class="comparison-val yes">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="comparison-val yes">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div class="faq">
+        <div class="faq-title">Sıkça sorulanlar</div>
+        <div class="faq-item">
+          <div class="faq-q">İlk hafta gerçekten ücretsiz mi?</div>
+          <div class="faq-a">Evet. Hiçbir ödeme bilgisi girmeden 7 gün boyunca tüm temel özellikleri kullanabilirsin. Sürmek istersen bir plan seçersin.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Öneriler nasıl çalışıyor?</div>
+          <div class="faq-a">Her hafta 3 kişi. Oturumun her 2 günde bir taze bir öneriyle güncellenir. Her öneri 7 gün geçerlidir. Sen değerlendir, biz öğreniriz.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Mira Asistan ne yapar?</div>
+          <div class="faq-a">Mira+ ile gelen kişisel tanışma koçun. Profilini güçlendirir, öneriler üzerine geri bildirim verir, ilişki geliştirme önerileri sunar.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Haftada bir yenileme nasıl çalışır?</div>
+          <div class="faq-a">Mira+ kullanıcıları mevcut önerilerini bir kez yenileyebilir — 3 taze öneri daha gelir. Üç tanesinden de geçtiysen, bu özellik bir sonraki raundu beklemeden yeni fırsatlar sunar.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">İptal edebilir miyim?</div>
+          <div class="faq-a">Her zaman. Tek tıkla, hiçbir soru sormadan. Dönemin sonuna kadar erişimin devam eder.</div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <a href="/m/">Mira'ya dön</a>
+      </div>
+    </div>
+  </body>
+</html>
