@@ -574,36 +574,54 @@
 
       let generatedInviteUrl = '';
 
-      document.getElementById("submitForm").addEventListener("click", () => {
+      document.getElementById("submitForm").addEventListener("click", async () => {
         const vouch = document.getElementById("vouch").value.trim();
         const contact = document.getElementById("friendContact").value.trim();
         if (!vouch || !contact) return;
 
         const yourName = document.getElementById("yourName").value.trim();
+        const yourEmail = document.getElementById("yourEmail").value.trim();
         const friendName = document.getElementById("friendName").value.trim();
+        const relation = document.getElementById("relation").value;
 
-        // Generate invite code
-        const code = Math.random().toString(36).substring(2, 10);
-        generatedInviteUrl = window.location.origin + '/onboarding.html?ref=' + code + '&by=' + encodeURIComponent(yourName);
+        const btn = document.getElementById("submitForm");
+        btn.disabled = true;
+        btn.textContent = 'Gonderiliyor...';
 
-        // Store invite record
-        const invites = JSON.parse(localStorage.getItem('mira-invites') || '[]');
-        invites.push({
-          code,
-          referrerName: yourName,
-          referrerEmail: document.getElementById("yourEmail").value.trim(),
-          friendName,
-          friendContact: contact,
-          vouch,
-          relation: document.getElementById("relation").value,
-          createdAt: new Date().toISOString(),
-          status: 'pending'
-        });
-        localStorage.setItem('mira-invites', JSON.stringify(invites));
+        try {
+          // Create invite via API
+          const userId = localStorage.getItem('bs-user-id');
+          const res = await fetch('/api/invites', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              ...(userId ? { 'X-User-Id': userId } : {}),
+            },
+            body: JSON.stringify({
+              referrerName: yourName,
+              referrerEmail: yourEmail,
+              friendName,
+              friendContact: contact,
+              vouchText: vouch,
+              relation,
+            })
+          });
+          const data = await res.json();
 
-        // Show link
+          if (data.error) {
+            btn.disabled = false;
+            btn.textContent = 'Gonder';
+            return;
+          }
+
+          generatedInviteUrl = data.inviteUrl;
+        } catch {
+          // Fallback: generate client-side
+          const code = Math.random().toString(36).substring(2, 10);
+          generatedInviteUrl = window.location.origin + '/onboarding.html?ref=' + code + '&by=' + encodeURIComponent(yourName);
+        }
+
         document.getElementById("inviteLinkText").textContent = generatedInviteUrl;
-
         document.getElementById("formWrap").style.display = "none";
         document.querySelector(".intro").style.display = "none";
         document.getElementById("successState").classList.add("show");

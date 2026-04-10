@@ -906,27 +906,34 @@
       // Invite link generation
       let dashInviteUrl = '';
 
-      function generateInviteLink() {
+      async function generateInviteLink() {
         const name = profile.name || profile.username || 'Arkadas';
-        const code = Math.random().toString(36).substring(2, 10);
-        dashInviteUrl = window.location.origin + '/onboarding.html?ref=' + code + '&by=' + encodeURIComponent(name);
+        const userId = localStorage.getItem('bs-user-id');
+        const btn = document.getElementById('genInviteBtn');
+        btn.disabled = true;
+        btn.textContent = 'Olusturuluyor...';
 
-        // Store invite
-        const invites = JSON.parse(localStorage.getItem('mira-invites') || '[]');
-        invites.push({
-          code,
-          referrerName: name,
-          createdAt: new Date().toISOString(),
-          status: 'pending'
-        });
-        localStorage.setItem('mira-invites', JSON.stringify(invites));
+        try {
+          const res = await fetch('/api/invites', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              ...(userId ? { 'X-User-Id': userId } : {}),
+            },
+            body: JSON.stringify({ referrerName: name })
+          });
+          const data = await res.json();
+          dashInviteUrl = data.inviteUrl;
+        } catch {
+          const code = Math.random().toString(36).substring(2, 10);
+          dashInviteUrl = window.location.origin + '/onboarding.html?ref=' + code + '&by=' + encodeURIComponent(name);
+        }
 
-        // Show link
         document.getElementById('inviteGenSection').style.display = 'none';
         document.getElementById('inviteLinkResult').style.display = 'block';
         document.getElementById('dashInviteLink').textContent = dashInviteUrl;
 
-        renderSentInvites();
+        loadSentInvites();
       }
 
       function copyDashInvite() {
@@ -945,30 +952,41 @@
         }
       }
 
-      // Render sent invites
-      function renderSentInvites() {
-        const invites = JSON.parse(localStorage.getItem('mira-invites') || '[]');
+      // Load sent invites from API
+      async function loadSentInvites() {
+        const userId = localStorage.getItem('bs-user-id');
         const el = document.getElementById('sentInvitesList');
-        if (invites.length === 0) { el.innerHTML = ''; return; }
+        if (!userId) { el.innerHTML = ''; return; }
 
-        el.innerHTML = '<div style="font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.12em;color:var(--text-dim);margin-bottom:8px">Gonderilen davetler</div>' +
-          invites.slice(-5).reverse().map(inv => `
-            <div style="display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border)">
-              <div style="width:28px;height:28px;border-radius:50%;background:var(--bg-alt);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--text-dim);flex-shrink:0">
-                ${inv.friendName ? inv.friendName.charAt(0).toUpperCase() : '?'}
+        try {
+          const res = await fetch('/api/invites', {
+            headers: { 'X-User-Id': userId }
+          });
+          const data = await res.json();
+          const invites = data.invites || [];
+          if (invites.length === 0) { el.innerHTML = ''; return; }
+
+          el.innerHTML = '<div style="font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.12em;color:var(--text-dim);margin-bottom:8px">Gonderilen davetler</div>' +
+            invites.slice(0, 5).map(inv => `
+              <div style="display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border)">
+                <div style="width:28px;height:28px;border-radius:50%;background:var(--bg-alt);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--text-dim);flex-shrink:0">
+                  ${inv.friend_name ? inv.friend_name.charAt(0).toUpperCase() : '?'}
+                </div>
+                <div style="flex:1;min-width:0">
+                  <div style="font-size:13px;font-weight:500">${inv.friend_name || 'Davet linki'}</div>
+                  <div style="font-size:11px;color:var(--text-dim)">${inv.joined_by_name ? 'Katilan: ' + inv.joined_by_name : new Date(inv.created_at).toLocaleDateString('tr-TR')}</div>
+                </div>
+                <div style="font-size:10px;font-weight:600;padding:3px 8px;border-radius:100px;background:${inv.status === 'joined' ? 'var(--green-light)' : 'var(--orange-light)'};color:${inv.status === 'joined' ? 'var(--green)' : 'var(--orange)'};text-transform:uppercase;letter-spacing:0.06em">
+                  ${inv.status === 'joined' ? 'Katildi' : 'Bekliyor'}
+                </div>
               </div>
-              <div style="flex:1;min-width:0">
-                <div style="font-size:13px;font-weight:500">${inv.friendName || 'Davet linki'}</div>
-                <div style="font-size:11px;color:var(--text-dim)">${new Date(inv.createdAt).toLocaleDateString('tr-TR')}</div>
-              </div>
-              <div style="font-size:10px;font-weight:600;padding:3px 8px;border-radius:100px;background:${inv.status === 'joined' ? 'var(--green-light)' : 'var(--orange-light)'};color:${inv.status === 'joined' ? 'var(--green)' : 'var(--orange)'};text-transform:uppercase;letter-spacing:0.06em">
-                ${inv.status === 'joined' ? 'Katildi' : 'Bekliyor'}
-              </div>
-            </div>
-          `).join('');
+            `).join('');
+        } catch {
+          el.innerHTML = '';
+        }
       }
 
-      renderSentInvites();
+      loadSentInvites();
 
       // Reveal on load
       window.addEventListener("load", () => {

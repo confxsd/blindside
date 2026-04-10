@@ -900,7 +900,8 @@
     </div>
 
     <script>
-      const API = 'https://api.rome.markets/api/blind';
+      const AUTH_API = 'https://api.rome.markets/api/blind';
+      const LOCAL_API = '/api';
       const steps = document.querySelectorAll(".form-step");
       const progressFill = document.getElementById("progressFill");
       const stepCounter = document.getElementById("stepCounter");
@@ -909,25 +910,39 @@
       let pendingReferral = null;
 
       // ===== REFERRAL HANDLING =====
-      (function initReferral() {
+      (async function initReferral() {
         const params = new URLSearchParams(window.location.search);
         const refCode = params.get('ref');
         const refBy = params.get('by');
         if (refCode) {
-          pendingReferral = {
-            code: refCode,
-            referrerName: refBy ? decodeURIComponent(refBy) : 'Bir arkadas',
-            capturedAt: new Date().toISOString()
-          };
+          // Fetch invite details from DB
+          try {
+            const res = await fetch(LOCAL_API + '/invites/' + encodeURIComponent(refCode));
+            const data = await res.json();
+            if (data.invite) {
+              pendingReferral = {
+                code: refCode,
+                referrerName: data.invite.referrer_name || (refBy ? decodeURIComponent(refBy) : 'Bir arkadas'),
+                vouchText: data.invite.vouch_text,
+              };
+            } else {
+              pendingReferral = {
+                code: refCode,
+                referrerName: refBy ? decodeURIComponent(refBy) : 'Bir arkadas',
+              };
+            }
+          } catch {
+            pendingReferral = {
+              code: refCode,
+              referrerName: refBy ? decodeURIComponent(refBy) : 'Bir arkadas',
+            };
+          }
           localStorage.setItem('mira-pending-referral', JSON.stringify(pendingReferral));
-          // Show banner
           const banner = document.getElementById('referralBanner');
           banner.style.display = 'flex';
           document.getElementById('referrerName').textContent = pendingReferral.referrerName;
-          // Clean URL
           window.history.replaceState({}, '', window.location.pathname);
         } else {
-          // Check if there's a pending referral from a previous visit
           const stored = localStorage.getItem('mira-pending-referral');
           if (stored) {
             pendingReferral = JSON.parse(stored);
@@ -1068,7 +1083,7 @@
             Array.from(document.querySelectorAll(`[data-group="${group}"] .pill.selected`))
               .map((p) => p.textContent);
 
-          const profile = {
+          const profileData = {
             name: document.getElementById("name").value.trim(),
             age: parseInt(document.getElementById("age").value),
             gender: selectedGender,
@@ -1076,34 +1091,44 @@
             traits: getSelected("traits"),
             weekend: getSelected("weekend"),
             values: getSelected("values"),
-            ageRange: {
-              min: parseInt(document.getElementById("ageMin").value) || null,
-              max: parseInt(document.getElementById("ageMax").value) || null,
-            },
+            ageMin: parseInt(document.getElementById("ageMin").value) || null,
+            ageMax: parseInt(document.getElementById("ageMax").value) || null,
             idealPerson: document.getElementById("idealPerson").value.trim(),
             dealbreaker: document.getElementById("dealbreaker").value.trim(),
             email: email,
             username: username,
-            userId: data.user.id,
-            vouch: {
-              name: document.getElementById("vouchName").value.trim(),
-              email: document.getElementById("vouchEmail").value.trim(),
-            },
-            createdAt: new Date().toISOString(),
+            phone: document.getElementById("phone").value.trim(),
+            referredBy: pendingReferral ? pendingReferral.code : null,
+            referrerName: pendingReferral ? pendingReferral.referrerName : null,
           };
 
-          // Add referral data if present
-          if (pendingReferral) {
-            profile.referral = {
-              code: pendingReferral.code,
-              referrerName: pendingReferral.referrerName,
-              capturedAt: pendingReferral.capturedAt,
-              completedAt: new Date().toISOString()
-            };
+          // Save profile to DB
+          try {
+            await fetch(LOCAL_API + '/profiles', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json', 'X-User-Id': data.user.id },
+              body: JSON.stringify(profileData)
+            });
+          } catch {}
+
+          // Mark invite as joined in DB
+          if (pendingReferral && pendingReferral.code) {
+            try {
+              await fetch(LOCAL_API + '/invites/' + encodeURIComponent(pendingReferral.code), {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json', 'X-User-Id': data.user.id },
+                body: JSON.stringify({ joinedByName: profileData.name })
+              });
+            } catch {}
             localStorage.removeItem('mira-pending-referral');
           }
 
-          localStorage.setItem("mira-profile", JSON.stringify(profile));
+          // Also keep in localStorage for offline/dashboard use
+          const localProfile = { ...profileData, userId: data.user.id, createdAt: new Date().toISOString() };
+          if (pendingReferral) {
+            localProfile.referral = { code: pendingReferral.code, referrerName: pendingReferral.referrerName };
+          }
+          localStorage.setItem("mira-profile", JSON.stringify(localProfile));
 
           // Show success
           document.getElementById("formWrap").style.display = "none";
