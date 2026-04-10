@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mira — Seni tanıyalım</title>
+    <title>Mira — Seni Tanıyalım</title>
     <meta
       name="description"
       content="Seni tanımadan sana birini bulamayız. Birkaç dakikanı ayır, gerisini bize bırak."
@@ -607,13 +607,13 @@
         <!-- STEP 1: Register (simple) -->
         <div class="form-step active" data-step="1">
           <div class="step-header">
-            <h1>Seni taniyalim.</h1>
-            <p>Hesap olustur, gerisini birlikte hallederiz.</p>
+            <h1>Seni tanıyalım.</h1>
+            <p>Hesap oluştur, gerisini birlikte hallederiz.</p>
           </div>
 
           <div class="field">
-            <label>Adin</label>
-            <input type="text" id="name" placeholder="Adin" autocomplete="given-name" required />
+            <label>Adın</label>
+            <input type="text" id="name" placeholder="Adın" autocomplete="given-name" required />
           </div>
 
           <div class="field">
@@ -622,14 +622,14 @@
           </div>
 
           <div class="field">
-            <label>Sifre</label>
+            <label>Şifre</label>
             <input type="password" id="password" placeholder="En az 4 karakter" autocomplete="new-password" required />
           </div>
 
           <div id="authError" style="color:#dc2626;font-size:12px;min-height:18px;margin-top:4px"></div>
 
           <div class="form-actions">
-            <button type="button" class="btn btn-primary" id="toStep2">Hesap olustur</button>
+            <button type="button" class="btn btn-primary" id="toStep2">Hesap oluştur</button>
           </div>
 
           <p style="font-size:12px;color:var(--text-dim);text-align:center;margin-top:16px">
@@ -641,36 +641,36 @@
         <div class="form-step" data-step="2">
           <div class="step-header">
             <h1>Temel bilgiler.</h1>
-            <p>Sana uygun birini bulmamiz icin birkaç bilgi.</p>
+            <p>Sana uygun birini bulmamız için birkaç bilgi.</p>
           </div>
 
           <div class="field-row">
             <div class="field">
-              <label>Yasin</label>
+              <label>Yaşın</label>
               <input type="number" id="age" placeholder="28" min="18" max="60" autocomplete="off" required />
             </div>
             <div class="field">
               <label>Cinsiyet</label>
               <div class="gender-pills" id="genderPills">
                 <div class="gender-pill" data-value="male">Erkek</div>
-                <div class="gender-pill" data-value="female">Kadin</div>
-                <div class="gender-pill" data-value="other">Diger</div>
+                <div class="gender-pill" data-value="female">Kadın</div>
+                <div class="gender-pill" data-value="other">Diğer</div>
               </div>
             </div>
           </div>
 
           <div class="field">
-            <label>Semt (Istanbul)</label>
+            <label>Semt (İstanbul)</label>
             <select id="neighborhood" required>
-              <option value="" disabled selected>Semt sec</option>
-              <option value="kadikoy">Kadikoy</option>
-              <option value="besiktas">Besiktas</option>
+              <option value="" disabled selected>Semt seç</option>
+              <option value="kadikoy">Kadıköy</option>
+              <option value="besiktas">Beşiktaş</option>
               <option value="cihangir">Cihangir</option>
-              <option value="nisantasi">Nisantasi</option>
+              <option value="nisantasi">Nişantaşı</option>
               <option value="moda">Moda</option>
-              <option value="uskudar">Uskudar</option>
-              <option value="beyoglu">Beyoglu</option>
-              <option value="other">Diger</option>
+              <option value="uskudar">Üsküdar</option>
+              <option value="beyoglu">Beyoğlu</option>
+              <option value="other">Diğer</option>
             </select>
           </div>
 
@@ -682,48 +682,48 @@
         <!-- STEP 3: Values & Lifestyle -->
         <div class="form-step" data-step="3">
           <div class="step-header">
-            <h1>Biraz daha yakindan.</h1>
-            <p>Dogru ya da yanlis yok — sadece sen.</p>
+            <h1>Biraz daha yakından.</h1>
+            <p>Doğru ya da yanlış yok — sadece sen.</p>
           </div>
 
           <div class="pill-group">
-            <div class="pill-group-label">Seni en iyi tanimlayan uc sey?</div>
-            <div class="pill-group-hint">En fazla 3 sec</div>
+            <div class="pill-group-label">Seni en iyi tanımlayan üç şey?</div>
+            <div class="pill-group-hint">En fazla 3 seç</div>
             <div class="pills" data-group="traits" data-max="3">
-              <div class="pill">Merakli</div>
+              <div class="pill">Meraklı</div>
               <div class="pill">Sakin</div>
               <div class="pill">Enerjik</div>
-              <div class="pill">Dusunceli</div>
-              <div class="pill">Maceraci</div>
-              <div class="pill">Yaratici</div>
-              <div class="pill">Kararli</div>
+              <div class="pill">Düşünceli</div>
+              <div class="pill">Maceracı</div>
+              <div class="pill">Yaratıcı</div>
+              <div class="pill">Kararlı</div>
               <div class="pill">Empatik</div>
             </div>
           </div>
 
           <div class="pill-group">
-            <div class="pill-group-label">Hafta sonu nasil gecer?</div>
-            <div class="pill-group-hint">En fazla 3 sec</div>
+            <div class="pill-group-label">Hafta sonu nasıl geçer?</div>
+            <div class="pill-group-hint">En fazla 3 seç</div>
             <div class="pills" data-group="weekend" data-max="3">
-              <div class="pill">Dogada</div>
+              <div class="pill">Doğada</div>
               <div class="pill">Kafede kitapla</div>
-              <div class="pill">Arkadaslarla disarida</div>
+              <div class="pill">Arkadaşlarla dışarıda</div>
               <div class="pill">Evde film</div>
               <div class="pill">Spor</div>
-              <div class="pill">Yeni bir yer kesfetmek</div>
+              <div class="pill">Yeni bir yer keşfetmek</div>
             </div>
           </div>
 
           <div class="pill-group">
-            <div class="pill-group-label">Bir iliskide en onemli sey?</div>
-            <div class="pill-group-hint">En fazla 2 sec</div>
+            <div class="pill-group-label">Bir ilişkide en önemli şey?</div>
+            <div class="pill-group-hint">En fazla 2 seç</div>
             <div class="pills" data-group="values" data-max="2">
-              <div class="pill">Guven</div>
-              <div class="pill">Iletisim</div>
+              <div class="pill">Güven</div>
+              <div class="pill">İletişim</div>
               <div class="pill">Mizah</div>
-              <div class="pill">Bagimsizlik</div>
+              <div class="pill">Bağımsızlık</div>
               <div class="pill">Samimiyet</div>
-              <div class="pill">Ortak degerler</div>
+              <div class="pill">Ortak değerler</div>
             </div>
           </div>
 
@@ -736,12 +736,12 @@
         <!-- STEP 4: What you're looking for -->
         <div class="form-step" data-step="4">
           <div class="step-header">
-            <h1>Kimi ariyorsun?</h1>
-            <p>Tam bir tarif beklemiyor — ama ne istedigini anlamak istiyoruz.</p>
+            <h1>Kimi arıyorsun?</h1>
+            <p>Tam bir tarif beklemiyor — ama ne istediğini anlamak istiyoruz.</p>
           </div>
 
           <div class="field">
-            <label>Yas araligi</label>
+            <label>Yaş aralığı</label>
             <div class="age-range">
               <input type="number" id="ageMin" placeholder="24" min="18" max="60" />
               <span class="age-range-sep">—</span>
@@ -750,14 +750,14 @@
           </div>
 
           <div class="field">
-            <label>Nasil biri seni mutlu eder?</label>
-            <textarea id="idealPerson" placeholder="Birkac cumleyle anlat. Neye deger verir, nasil konusur, yaninda olmak nasil hissettirir?"></textarea>
-            <p class="field-hint">Fiziksel degil — kisilik olarak dusun.</p>
+            <label>Nasıl biri seni mutlu eder?</label>
+            <textarea id="idealPerson" placeholder="Birkaç cümleyle anlat. Neye değer verir, nasıl konuşur, yanında olmak nasıl hissettirir?"></textarea>
+            <p class="field-hint">Fiziksel değil — kişilik olarak düşün.</p>
           </div>
 
           <div class="field">
-            <label>Kesinlikle olmamasi gereken sey?</label>
-            <textarea id="dealbreaker" placeholder="Kisa ve net. Neyi tolere edemezsin?"></textarea>
+            <label>Kesinlikle olmaması gereken şey?</label>
+            <textarea id="dealbreaker" placeholder="Kısa ve net. Neyi tolere edemezsin?"></textarea>
           </div>
 
           <div class="form-actions">
@@ -783,8 +783,8 @@
         </div>
         <h2>Seni tanıdık.</h2>
         <p>
-          İlk önerilerini hazırlıyoruz. Her Pazartesi sana üç kişi gelecek — her
-          biri sana göre seçilmiş.
+          İlk önerilerini hazırlıyoruz. Her Pazartesi sana üç kişi gelecek —
+          her biri sana göre seçilmiş.
         </p>
         <p class="success-detail">
           İlk önerilerin birkaç gün içinde e-postana gelecek.
@@ -907,17 +907,18 @@
         const errorEl = document.getElementById("authError");
         errorEl.textContent = '';
 
-        if (!name || name.length < 2) { errorEl.textContent = 'Adin en az 2 karakter olmali.'; return; }
-        if (!email || !email.includes("@")) { errorEl.textContent = 'Gecerli bir e-posta gir.'; return; }
-        if (!password || password.length < 4) { errorEl.textContent = 'Sifre en az 4 karakter olmali.'; return; }
+        if (!name || name.length < 2) { errorEl.textContent = 'Adın en az 2 karakter olmalı.'; return; }
+        if (!email || !email.includes("@")) { errorEl.textContent = 'Geçerli bir e-posta gir.'; return; }
+        if (!password || password.length < 4) { errorEl.textContent = 'Şifre en az 4 karakter olmalı.'; return; }
 
         const btn = document.getElementById("toStep2");
         btn.disabled = true;
-        btn.innerHTML = '<span class="auth-spinner"></span> Olusturuluyor...';
+        btn.innerHTML = '<span class="auth-spinner"></span> Oluşturuluyor...';
 
         try {
-          // Use name as username for the Blindside API
-          const username = name.toLowerCase().replace(/[^a-z0-9]/g, '') + Math.floor(Math.random() * 100);
+          // Use name as username — transliterate Turkish chars for API compatibility
+          const trMap = {'ç':'c','ğ':'g','ı':'i','İ':'i','ö':'o','ş':'s','ü':'u','Ç':'c','Ğ':'g','Ö':'o','Ş':'s','Ü':'u'};
+          const username = name.toLowerCase().replace(/[çğıİöşüÇĞÖŞÜ]/g, c => trMap[c] || c).replace(/[^a-z0-9]/g, '') + Math.floor(Math.random() * 100);
           const res = await fetch(AUTH_API + '/auth', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -928,7 +929,7 @@
           if (data.error) {
             errorEl.textContent = data.error;
             btn.disabled = false;
-            btn.textContent = 'Hesap olustur';
+            btn.textContent = 'Hesap oluştur';
             return;
           }
 
@@ -956,9 +957,9 @@
 
           showStep(2);
         } catch (e) {
-          errorEl.textContent = 'Bir hata olustu. Tekrar dene.';
+          errorEl.textContent = 'Bir hata oluştu. Tekrar dene.';
           btn.disabled = false;
-          btn.textContent = 'Hesap olustur';
+          btn.textContent = 'Hesap oluştur';
         }
       });
 

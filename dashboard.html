@@ -725,51 +725,16 @@
         </p>
       </div>
 
-      <!-- Stats -->
-      <div class="stats-row reveal d3">
-        <div class="stat-card">
-          <div class="stat-num">1</div>
-          <div class="stat-label">Hafta</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num">3</div>
-          <div class="stat-label">Öneri</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num">0</div>
-          <div class="stat-label">Eşleşme</div>
-        </div>
-      </div>
-
-      <!-- Profile Summary -->
-      <div class="profile-card reveal d3">
-        <div class="profile-card-top">
-          <div>
-            <div class="profile-card-label">Profilin</div>
-            <div class="profile-card-title" id="profileName">-</div>
-          </div>
-          <div class="profile-completion">
-            <div class="profile-pct" id="profilePct">0%</div>
-            <div class="profile-pct-label">Tamamlandı</div>
-          </div>
-        </div>
-
-        <div class="completion-bar">
-          <div class="completion-fill" id="completionFill" style="width: 0%"></div>
-        </div>
-
-        <div class="profile-traits" id="profileTraits"></div>
-
-        <div class="profile-details" id="profileDetails">
-          <div class="profile-detail">
-            <div class="profile-detail-label">Semt</div>
-            <div class="profile-detail-value" id="detailHood">-</div>
-          </div>
-          <div class="profile-detail">
-            <div class="profile-detail-label">Yaş</div>
-            <div class="profile-detail-value" id="detailAge">-</div>
-          </div>
-        </div>
+      <!-- Profile completion CTA (if profile incomplete) -->
+      <div class="vouch-card reveal d3" id="profileCta" style="display:none">
+        <div class="vouch-card-label">Profilin</div>
+        <p style="font-size:13px;color:var(--text-mid);line-height:1.6;margin-bottom:12px">
+          Profilini tamamla, sana daha iyi öneriler sunalım.
+        </p>
+        <a href="/onboarding.html" style="display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:0.06em;color:var(--text);border-bottom:1px solid var(--text);padding-bottom:2px;text-decoration:none">
+          Profili tamamla
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+        </a>
       </div>
 
       <!-- Referral badge (if user was referred) -->
@@ -849,51 +814,10 @@
         document.getElementById("profileBtn").textContent = "?";
       }
 
-      // Profile card
-      const hoodNames = {
-        kadikoy: "Kadıköy",
-        besiktas: "Beşiktaş",
-        cihangir: "Cihangir",
-        nisantasi: "Nişantaşı",
-        moda: "Moda",
-        uskudar: "Üsküdar",
-        beyoglu: "Beyoğlu",
-        other: "Diğer",
-      };
 
-      if (profile.name) {
-        document.getElementById("profileName").textContent = profile.name;
-        document.getElementById("detailAge").textContent = profile.age || "-";
-        document.getElementById("detailHood").textContent =
-          hoodNames[profile.neighborhood] || "-";
-
-        // Traits
-        const traitsEl = document.getElementById("profileTraits");
-        const allTraits = [
-          ...(profile.traits || []),
-          ...(profile.weekend || []),
-          ...(profile.values || []),
-        ];
-        traitsEl.innerHTML = allTraits
-          .map((t) => `<span class="profile-trait">${t}</span>`)
-          .join("");
-
-        // Completion
-        let filled = 0;
-        let total = 8;
-        if (profile.name) filled++;
-        if (profile.age) filled++;
-        if (profile.gender) filled++;
-        if (profile.neighborhood) filled++;
-        if (profile.traits && profile.traits.length) filled++;
-        if (profile.idealPerson) filled++;
-        if (profile.email) filled++;
-        if (profile.vouch && profile.vouch.name) filled++;
-        const pct = Math.round((filled / total) * 100);
-        document.getElementById("profilePct").textContent = pct + "%";
-        setTimeout(() => {
-          document.getElementById("completionFill").style.width = pct + "%";
-        }, 400);
+      // Show profile CTA if profile is incomplete
+      if (profile.name && (!profile.age || !profile.gender || !profile.neighborhood)) {
+        document.getElementById("profileCta").style.display = "";
       }
 
       // Referral display
