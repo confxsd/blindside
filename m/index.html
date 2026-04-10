@@ -334,6 +334,16 @@
           <p class="mira-greeting-sub">Bugün kimi keşfetmek istersin?</p>
         </div>
 
+        <!-- Matches Widget -->
+        <div class="mira-section-header">
+          <div>
+            <span class="mira-section-title">Bu haftanın önerileri</span>
+            <span class="mira-section-sub">Her iki günde bir yenilenir</span>
+          </div>
+          <a href="/matches.html" class="mira-section-link">Tümü</a>
+        </div>
+        <div class="mira-matches" id="miraMatches"></div>
+
         <!-- Feature Cards -->
         <div class="mira-features">
           <div class="mira-feature-card" onclick="goTo('packs')">
@@ -1624,6 +1634,120 @@
             });
           }
         });
+      })();
+
+      // Mira: matches widget — rotating weekly suggestions
+      (function() {
+        const POOL = [
+          { id: 1, initial: 'E', name: 'Elif', age: 28, hood: 'Kadıköy', compat: 82 },
+          { id: 2, initial: 'D', name: 'Deniz', age: 31, hood: 'Cihangir', compat: 74 },
+          { id: 3, initial: 'A', name: 'Ada', age: 27, hood: 'Beşiktaş', compat: 68 },
+          { id: 4, initial: 'M', name: 'Mert', age: 30, hood: 'Nişantaşı', compat: 79 },
+          { id: 5, initial: 'Z', name: 'Zeynep', age: 26, hood: 'Moda', compat: 85 },
+          { id: 6, initial: 'C', name: 'Can', age: 32, hood: 'Beyoğlu', compat: 71 },
+        ];
+        const MAX_MATCHES = 3;
+        const WEEK_MS = 7 * 24 * 60 * 60 * 1000;
+        const ROTATION_MS = 2 * 24 * 60 * 60 * 1000;
+
+        function loadMatches() {
+          let data = null;
+          try { data = JSON.parse(localStorage.getItem('mira-matches') || 'null'); } catch {}
+          const now = Date.now();
+
+          if (!data || !Array.isArray(data.matches)) {
+            data = { matches: [], lastRotation: now, nextId: 1 };
+          }
+
+          // Remove expired (older than 1 week)
+          data.matches = data.matches.filter(m => now - m.addedAt < WEEK_MS);
+
+          // Rotate: every 2 days, replace oldest with a fresh one
+          while (now - data.lastRotation >= ROTATION_MS && data.matches.length > 0) {
+            data.matches.sort((a, b) => a.addedAt - b.addedAt);
+            data.matches.shift();
+            data.lastRotation += ROTATION_MS;
+          }
+
+          // Fill up to MAX_MATCHES with new candidates
+          while (data.matches.length < MAX_MATCHES) {
+            const usedIds = new Set(data.matches.map(m => m.poolId));
+            const available = POOL.filter(p => !usedIds.has(p.id));
+            if (available.length === 0) break;
+            const pick = available[Math.floor(Math.random() * available.length)];
+            data.matches.push({
+              ...pick,
+              poolId: pick.id,
+              addedAt: now - Math.floor(Math.random() * 86400000),
+            });
+          }
+
+          localStorage.setItem('mira-matches', JSON.stringify(data));
+          return data.matches;
+        }
+
+        function daysRemaining(addedAt) {
+          const elapsed = Date.now() - addedAt;
+          const remaining = WEEK_MS - elapsed;
+          const days = Math.ceil(remaining / (24 * 60 * 60 * 1000));
+          return Math.max(0, days);
+        }
+
+        function renderMatches() {
+          const container = document.getElementById('miraMatches');
+          if (!container) return;
+          const matches = loadMatches();
+
+          if (matches.length === 0) {
+            container.innerHTML = `
+              <div class="mira-matches-empty">
+                <div class="mira-matches-empty-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div>
+                  <div class="mira-matches-empty-title">Yakında önerilerin gelecek</div>
+                  <div class="mira-matches-empty-text">Seni daha iyi tanıdıkça seçimlerimiz keskinleşir.</div>
+                </div>
+              </div>
+            `;
+            return;
+          }
+
+          container.innerHTML = matches.map(m => {
+            const days = daysRemaining(m.addedAt);
+            const urgencyClass = days <= 2 ? 'urgent' : days <= 4 ? 'soon' : '';
+            return `
+              <a href="/matches.html" class="mira-match-card">
+                <div class="mira-match-avatar">${m.initial}</div>
+                <div class="mira-match-body">
+                  <div class="mira-match-name">${m.name}, ${m.age}</div>
+                  <div class="mira-match-meta">${m.hood} · %${m.compat} uyum</div>
+                </div>
+                <div class="mira-match-timer ${urgencyClass}">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  ${days}g
+                </div>
+              </a>
+            `;
+          }).join('');
+        }
+
+        // Render on home screen activation
+        const origGoTo = window.goTo;
+        if (origGoTo) {
+          window.goTo = function(screen) {
+            const result = origGoTo.apply(this, arguments);
+            if (screen === 'home') setTimeout(renderMatches, 50);
+            return result;
+          };
+        }
+
+        // Initial render after DOM load
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', renderMatches);
+        } else {
+          renderMatches();
+        }
       })();
 
       // Mira: personalized greeting on home screen
