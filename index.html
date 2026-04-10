@@ -242,21 +242,27 @@
 
       @media (max-width: 720px) {
         .hero {
-          padding: 120px 0 60px;
+          padding: 100px 0 48px;
           min-height: auto;
+          display: block;
         }
         .hero h1 {
-          margin: 24px 0 28px;
+          margin: 20px 0 24px;
         }
         .hero-sub {
-          margin-bottom: 36px;
+          margin-bottom: 32px;
+          font-size: 15px;
         }
         .hero-ctas {
-          margin-bottom: 32px;
+          flex-direction: column;
+          align-items: center;
+          margin-bottom: 28px;
         }
         .hero .btn {
-          min-width: 200px;
-          padding: 12px 24px;
+          min-width: 0;
+          width: 100%;
+          max-width: 300px;
+          padding: 13px 24px;
           font-size: 12px;
         }
       }
