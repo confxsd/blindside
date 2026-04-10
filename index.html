@@ -240,7 +240,34 @@
         text-transform: uppercase;
       }
 
+      .hero-img {
+        width: 100%;
+        max-width: 560px;
+        margin: 48px auto 0;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .hero-img img {
+        width: 100%;
+        height: auto;
+        display: block;
+        filter: grayscale(15%);
+      }
+
+      .hero-img-caption {
+        text-align: center;
+        margin-top: 14px;
+        font-size: 12px;
+        color: var(--text-dim);
+        font-style: italic;
+      }
+
       @media (max-width: 720px) {
+        .hero-img {
+          max-width: 100%;
+          margin-top: 36px;
+        }
         .hero {
           padding: 100px 0 48px;
           min-height: auto;
@@ -797,6 +824,10 @@
             <div class="avatar-circle">L</div>
             <div class="avatar-circle">R</div>
           </div>
+        </div>
+        <div class="hero-img reveal d5">
+          <img src="two-women.png" alt="İki arkadaş kafede, biri diğerine telefondan birini tanıtıyor" loading="lazy">
+          <p class="hero-img-caption">Her iyi tanışma, bir arkadaşın tavsiyesiyle başlar.</p>
         </div>
       </div>
     </section>
