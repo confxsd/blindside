@@ -4,10 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mira — Bir arkadaşını tanıt</title>
-    <meta name="description" content="Doğru insanı hak eden birini tanıyorsun. Onu anlat, biz ona yakışanı bulalım." />
+    <meta
+      name="description"
+      content="Doğru insanı hak eden birini tanıyorsun. Onu anlat, biz ona yakışanı bulalım."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <style>
       :root {
         --bg: #ffffff;
@@ -18,13 +24,23 @@
         --border: #e0e0e0;
         --accent: #0a0a0a;
         --accent-hover: #333333;
-        --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        --font:
+          "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         --ease: cubic-bezier(0.16, 1, 0.3, 1);
       }
 
-      *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-      html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+      html {
+        scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
+      }
 
       body {
         font-family: var(--font);
@@ -37,9 +53,15 @@
         min-height: 100vh;
       }
 
-      ::selection { background: var(--text); color: var(--bg); }
+      ::selection {
+        background: var(--text);
+        color: var(--bg);
+      }
 
-      a { color: inherit; text-decoration: none; }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
 
       .page {
         max-width: 520px;
@@ -48,7 +70,9 @@
       }
 
       @media (max-width: 720px) {
-        .page { padding: 48px 20px 40px; }
+        .page {
+          padding: 48px 20px 40px;
+        }
       }
 
       /* Header */
@@ -64,11 +88,18 @@
         margin-bottom: 48px;
         transition: color 0.3s var(--ease);
       }
-      .back:hover { color: var(--text); }
-      .back svg { width: 14px; height: 14px; }
+      .back:hover {
+        color: var(--text);
+      }
+      .back svg {
+        width: 14px;
+        height: 14px;
+      }
 
       /* Intro */
-      .intro { margin-bottom: 56px; }
+      .intro {
+        margin-bottom: 56px;
+      }
 
       .intro h1 {
         font-size: clamp(28px, 5vw, 38px);
@@ -238,7 +269,9 @@
         margin-bottom: 24px;
       }
 
-      .trust-item:last-child { margin-bottom: 0; }
+      .trust-item:last-child {
+        margin-bottom: 0;
+      }
 
       .trust-icon {
         flex-shrink: 0;
@@ -266,7 +299,9 @@
         padding: 80px 0;
       }
 
-      .success.show { display: block; }
+      .success.show {
+        display: block;
+      }
 
       .success h2 {
         font-size: clamp(24px, 4vw, 32px);
@@ -293,19 +328,34 @@
         padding-bottom: 4px;
         transition: opacity 0.3s var(--ease);
       }
-      .success a:hover { opacity: 0.6; }
+      .success a:hover {
+        opacity: 0.6;
+      }
     </style>
   </head>
   <body>
     <div class="page">
       <a href="/" class="back">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M19 12H5" />
+          <path d="M12 19l-7-7 7-7" />
+        </svg>
         Mira
       </a>
 
       <div class="intro">
         <h1>Bir arkadaşını tanıt.</h1>
-        <p>Doğru insanı hak eden birini tanıyorsun. Onu sen anlat — kim olduğunu, nasıl sevdiğini. Biz senin gözünden başlarız.</p>
+        <p>
+          Doğru insanı hak eden birini tanıyorsun. Onu sen anlat — kim olduğunu,
+          nasıl sevdiğini. Biz senin gözünden başlarız.
+        </p>
       </div>
 
       <div id="formWrap">
@@ -323,13 +373,23 @@
 
           <div class="field">
             <label>Senin e-postan</label>
-            <input type="email" id="yourEmail" placeholder="ornek@email.com" required />
+            <input
+              type="email"
+              id="yourEmail"
+              placeholder="ornek@email.com"
+              required
+            />
             <p class="field-hint">Eşleşme olduğunda sana haber vermek için.</p>
           </div>
 
           <div class="field">
             <label>Arkadaşının adı</label>
-            <input type="text" id="friendName" placeholder="Arkadaşının adı" required />
+            <input
+              type="text"
+              id="friendName"
+              placeholder="Arkadaşının adı"
+              required
+            />
           </div>
 
           <div class="field">
@@ -345,7 +405,9 @@
           </div>
 
           <div class="form-actions">
-            <button type="button" class="btn btn-primary" id="toStep2">Devam et</button>
+            <button type="button" class="btn btn-primary" id="toStep2">
+              Devam et
+            </button>
           </div>
         </div>
 
@@ -353,40 +415,104 @@
         <div class="form-step" data-step="2">
           <div class="field">
             <label>Onu nasıl biri olarak tanımlarsın?</label>
-            <textarea id="vouch" placeholder="Onu tanımayanların göremeyeceği şeyleri anlat. Nasıl sever, neye değer verir, yanında olmak nasıl hissettirir?"></textarea>
-            <p class="field-hint">En az birkaç cümle yaz. Samimi ol — bu onun profili olacak.</p>
+            <textarea
+              id="vouch"
+              placeholder="Onu tanımayanların göremeyeceği şeyleri anlat. Nasıl sever, neye değer verir, yanında olmak nasıl hissettirir?"
+            ></textarea>
+            <p class="field-hint">
+              En az birkaç cümle yaz. Samimi ol — bu onun profili olacak.
+            </p>
           </div>
 
           <div class="field">
             <label>Neden doğru insanı hak ediyor?</label>
-            <textarea id="why" placeholder="Kısaca, neden onu tanıştırmak istiyorsun?"></textarea>
+            <textarea
+              id="why"
+              placeholder="Kısaca, neden onu tanıştırmak istiyorsun?"
+            ></textarea>
           </div>
 
           <div class="field">
-            <label>Arkadaşının telefon numarası veya e-postası</label>
-            <input type="text" id="friendContact" placeholder="Ona ulaşmamız için" required />
-            <p class="field-hint">Sadece davet göndermek için kullanılacak. Onayı olmadan hiçbir bilgisi paylaşılmaz.</p>
+            <label>Arkadaşının e-postası</label>
+            <input
+              type="text"
+              id="friendContact"
+              placeholder="Ona ulaşmamız için"
+              required
+            />
+            <p class="field-hint">
+              Sadece davet göndermek için kullanılacak. Onayı olmadan hiçbir
+              bilgisi paylaşılmaz.
+            </p>
           </div>
 
           <div class="form-actions">
-            <button type="button" class="btn btn-back" id="backStep1">Geri</button>
-            <button type="button" class="btn btn-primary" id="submitForm">Gönder</button>
+            <button type="button" class="btn btn-back" id="backStep1">
+              Geri
+            </button>
+            <button type="button" class="btn btn-primary" id="submitForm">
+              Gönder
+            </button>
           </div>
         </div>
 
         <!-- Trust info -->
         <div class="trust-info">
           <div class="trust-item">
-            <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            <p><strong>Bilgilerin gizli.</strong> Yazdıkların sadece eşleşme sürecinde, arkadaşının onayıyla kullanılır. Kimseye gösterilmez.</p>
+            <svg
+              class="trust-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            </svg>
+            <p>
+              <strong>Bilgilerin gizli.</strong> Yazdıkların sadece eşleşme
+              sürecinde, arkadaşının onayıyla kullanılır. Kimseye gösterilmez.
+            </p>
           </div>
           <div class="trust-item">
-            <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            <p><strong>Arkadaşın karar verir.</strong> Ona bir davet gönderiyoruz. Katılıp katılmamak tamamen ona kalmış.</p>
+            <svg
+              class="trust-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+            <p>
+              <strong>Arkadaşın karar verir.</strong> Ona bir davet
+              gönderiyoruz. Katılıp katılmamak tamamen ona kalmış.
+            </p>
           </div>
           <div class="trust-item">
-            <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            <p><strong>Eşleştiğinde haber veririz.</strong> Arkadaşın biriyle eşleştiğinde sana da bilgi veririz. Süreç boyunca yanındayız.</p>
+            <svg
+              class="trust-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+              <polyline points="22 4 12 14.01 9 11.01" />
+            </svg>
+            <p>
+              <strong>Eşleştiğinde haber veririz.</strong> Arkadaşın biriyle
+              eşleştiğinde sana da bilgi veririz. Süreç boyunca yanındayız.
+            </p>
           </div>
         </div>
       </div>
@@ -394,46 +520,51 @@
       <!-- Success state -->
       <div class="success" id="successState">
         <h2>Teşekkürler.</h2>
-        <p>Arkadaşına bir davet göndereceğiz. Kabul ederse süreci başlatırız. Eşleştiğinde sana haber veririz.</p>
+        <p>
+          Arkadaşına bir davet göndereceğiz. Kabul ederse süreci başlatırız.
+          Eşleştiğinde sana haber veririz.
+        </p>
         <a href="/">Mira'ya dön</a>
       </div>
     </div>
 
     <script>
-      const steps = document.querySelectorAll('.form-step');
-      const dots = document.querySelectorAll('.step-dot');
+      const steps = document.querySelectorAll(".form-step");
+      const dots = document.querySelectorAll(".step-dot");
 
       function showStep(n) {
-        steps.forEach(s => s.classList.toggle('active', s.dataset.step == n));
-        dots.forEach(d => d.classList.toggle('active', d.dataset.step <= n));
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        steps.forEach((s) => s.classList.toggle("active", s.dataset.step == n));
+        dots.forEach((d) => d.classList.toggle("active", d.dataset.step <= n));
+        window.scrollTo({ top: 0, behavior: "smooth" });
       }
 
-      document.getElementById('toStep2').addEventListener('click', () => {
-        const name = document.getElementById('yourName').value.trim();
-        const email = document.getElementById('yourEmail').value.trim();
-        const friend = document.getElementById('friendName').value.trim();
-        const relation = document.getElementById('relation').value;
+      document.getElementById("toStep2").addEventListener("click", () => {
+        const name = document.getElementById("yourName").value.trim();
+        const email = document.getElementById("yourEmail").value.trim();
+        const friend = document.getElementById("friendName").value.trim();
+        const relation = document.getElementById("relation").value;
 
-        if (!name || !email || !email.includes('@') || !friend || !relation) {
+        if (!name || !email || !email.includes("@") || !friend || !relation) {
           return;
         }
         showStep(2);
       });
 
-      document.getElementById('backStep1').addEventListener('click', () => showStep(1));
+      document
+        .getElementById("backStep1")
+        .addEventListener("click", () => showStep(1));
 
-      document.getElementById('submitForm').addEventListener('click', () => {
-        const vouch = document.getElementById('vouch').value.trim();
-        const contact = document.getElementById('friendContact').value.trim();
+      document.getElementById("submitForm").addEventListener("click", () => {
+        const vouch = document.getElementById("vouch").value.trim();
+        const contact = document.getElementById("friendContact").value.trim();
 
         if (!vouch || !contact) {
           return;
         }
 
-        document.getElementById('formWrap').style.display = 'none';
-        document.querySelector('.intro').style.display = 'none';
-        document.getElementById('successState').classList.add('show');
+        document.getElementById("formWrap").style.display = "none";
+        document.querySelector(".intro").style.display = "none";
+        document.getElementById("successState").classList.add("show");
       });
     </script>
   </body>
