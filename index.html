@@ -665,6 +665,16 @@
         background: var(--bg-alt);
         padding: 160px 0;
         text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .trust-bg {
+        position: absolute;
+        inset: 0;
+        background: url('abstract.png') center center / cover no-repeat;
+        opacity: 0.45;
+        pointer-events: none;
       }
 
       .trust-quote {
@@ -1037,6 +1047,7 @@
 
     <!-- ===== TRUST QUOTE ===== -->
     <section class="trust">
+      <div class="trust-bg"></div>
       <div class="wrap">
         <div class="trust-quote reveal">
           <p>Sana yüzlerce insan gösterip</p>
