@@ -683,10 +683,10 @@ const i18n = {
       pack_desc_situations:
         "gerçek hayat anları. gerçekten nasıl tepki verirdin?",
       nav_home: "Ana Sayfa",
-      nav_packs: "Paketler",
+      nav_packs: "Desteler",
       packs_subtitle: "birini seç, gönder, neler olacak gör",
       packs_trending: "şu an trend",
-      packs_all: "tüm paketler",
+      packs_all: "tüm desteler",
       packs_played: "oynandı",
       pack_desc_36questions:
         "yabancıları aşık eden viral çalışma. cesaret eder misin?",
@@ -927,7 +927,7 @@ const i18n = {
       profile_manage_info: "abonelik yönetimi yakında kullanılabilir olacak",
       profile_cancel: "planı iptal et",
       profile_cancel_confirm: "Mira+ iptal etmek istediğinize emin misiniz?",
-      profile_feat_packs: "tüm paketler",
+      profile_feat_packs: "tüm desteler",
       profile_feat_insights: "derin analizler",
       profile_feat_advisor: "AI danışman",
       settings_dark: "🌙 Koyu",
@@ -1055,7 +1055,7 @@ const i18n = {
         "Oynadığın her oyun — bir buluşma, bir arkadaş, herkes — profiline eklenir. Form yok. Çaba yok. Sadece cevaplar.",
       land_profile_f1_title: "Desteleri tamamla",
       land_profile_f1_desc:
-        "Farklı paketler oynayarak profilinde yeni katmanlar aç.",
+        "Farklı desteler oynayarak profilinde yeni katmanlar aç.",
       land_profile_f2_title: "Herkesle oyna",
       land_profile_f2_desc:
         "Partnerler, arkadaşlar, hoşlandıkların. Her oturum verini keskinleştirir.",
