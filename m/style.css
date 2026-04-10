@@ -399,6 +399,151 @@ html, body, #app {
   display: none;
 }
 
+/* ===== DECK INTRO SCREEN ===== */
+.deck-intro-wrap {
+  padding: 0 0 100px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.deck-intro-hero {
+  text-align: center;
+  padding: 20px 28px 32px;
+}
+.deck-intro-emoji {
+  font-size: 56px;
+  margin-bottom: 16px;
+  line-height: 1;
+}
+.deck-intro-label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #2563EB;
+  background: #eef4ff;
+  padding: 5px 12px;
+  border-radius: 100px;
+  margin-bottom: 14px;
+}
+.deck-intro-title {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  margin-bottom: 10px;
+  color: #0a0a0a;
+  line-height: 1.2;
+}
+[data-theme="dark"] .deck-intro-title { color: #f0f0f0; }
+.deck-intro-desc {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+  max-width: 320px;
+  margin: 0 auto;
+}
+[data-theme="dark"] .deck-intro-desc { color: rgba(255,255,255,0.6); }
+
+.deck-intro-steps {
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+.deck-intro-step {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 16px 18px;
+  background: #fafafa;
+  border: 1px solid #ececec;
+  border-radius: 12px;
+}
+[data-theme="dark"] .deck-intro-step {
+  background: rgba(255,255,255,0.03);
+  border-color: rgba(255,255,255,0.08);
+}
+.deck-intro-step-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #2563EB;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+.deck-intro-step-body {
+  flex: 1;
+  min-width: 0;
+  padding-top: 2px;
+}
+.deck-intro-step-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 3px;
+  color: #0a0a0a;
+}
+[data-theme="dark"] .deck-intro-step-title { color: #f0f0f0; }
+.deck-intro-step-text {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+}
+[data-theme="dark"] .deck-intro-step-text { color: rgba(255,255,255,0.55); }
+
+.deck-intro-tip {
+  margin: 0 24px 24px;
+  padding: 16px 18px;
+  background: #f0f5ff;
+  border: 1px solid #d4e0f7;
+  border-radius: 12px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 13px;
+  color: #555;
+  line-height: 1.6;
+}
+[data-theme="dark"] .deck-intro-tip {
+  background: rgba(37,99,235,0.06);
+  border-color: rgba(37,99,235,0.15);
+  color: rgba(255,255,255,0.6);
+}
+.deck-intro-tip strong {
+  color: #0a0a0a;
+  font-weight: 600;
+}
+[data-theme="dark"] .deck-intro-tip strong { color: #f0f0f0; }
+.deck-intro-tip-icon {
+  flex-shrink: 0;
+  color: #2563EB;
+  margin-top: 1px;
+}
+
+.deck-intro-footer {
+  padding: 16px 24px 24px;
+  margin-top: auto;
+}
+.deck-intro-cta {
+  width: 100%;
+  padding: 16px 24px;
+  font-size: 14px;
+}
+.deck-intro-note {
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+  margin-top: 10px;
+}
+[data-theme="dark"] .deck-intro-note { color: rgba(255,255,255,0.4); }
+
 /* ===== PACKS INFO BOX ===== */
 .mira-packs-info {
   display: flex;

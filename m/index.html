@@ -723,6 +723,67 @@
         <div id="insightsContent" style="padding-bottom: 40px"></div>
       </div>
 
+      <!-- DECK INTRO -->
+      <div id="deckIntro" class="screen">
+        <div class="deck-intro-wrap">
+          <div class="top-bar" style="width:100%;padding:16px 20px">
+            <button class="btn-icon" onclick="goTo('packs')">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+            </button>
+          </div>
+
+          <div class="deck-intro-hero">
+            <div class="deck-intro-emoji" id="deckIntroEmoji">💕</div>
+            <div class="deck-intro-label" id="deckIntroCount">10 soru</div>
+            <h1 class="deck-intro-title" id="deckIntroTitle">Couples Edition</h1>
+            <p class="deck-intro-desc" id="deckIntroDesc">Birbirinizi ne kadar tanıyorsunuz?</p>
+          </div>
+
+          <div class="deck-intro-steps">
+            <div class="deck-intro-step">
+              <div class="deck-intro-step-num">1</div>
+              <div class="deck-intro-step-body">
+                <div class="deck-intro-step-title">Oturum oluştur</div>
+                <div class="deck-intro-step-text">Linki al, partnerinle paylaş.</div>
+              </div>
+            </div>
+            <div class="deck-intro-step">
+              <div class="deck-intro-step-num">2</div>
+              <div class="deck-intro-step-body">
+                <div class="deck-intro-step-title">Gizlice yanıtlayın</div>
+                <div class="deck-intro-step-text">İkiniz de aynı soruları, birbirinizi görmeden.</div>
+              </div>
+            </div>
+            <div class="deck-intro-step">
+              <div class="deck-intro-step-num">3</div>
+              <div class="deck-intro-step-body">
+                <div class="deck-intro-step-title">Birlikte açığa çıkarın</div>
+                <div class="deck-intro-step-text">Herkes bitirince sonuçlar aynı anda açılır.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="deck-intro-tip">
+            <div class="deck-intro-tip-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+            </div>
+            <div>
+              <strong>İpucu:</strong> Dürüst ol. Doğru ya da yanlış cevap yok —
+              amaç birbirinizi daha iyi tanımak. Sürpriz cevaplar genelde en
+              güzel sohbetleri başlatır.
+            </div>
+          </div>
+
+          <div class="deck-intro-footer">
+            <button class="btn btn-primary deck-intro-cta" id="deckIntroStart">
+              Oturum oluştur
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:6px"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+            </button>
+            <p class="deck-intro-note">Oturumu oluşturduğunda link hemen hazır olur.</p>
+          </div>
+        </div>
+      </div>
+
       <!-- INVITE -->
       <div id="invite" class="screen">
         <div class="top-bar" style="width: 100%">
@@ -1354,6 +1415,55 @@
     <script src="/packs.js?v=4"></script>
     <script src="/app.js?v=4"></script>
     <script>
+      // Mira: intercept selectPack to show deck intro first
+      (function() {
+        let pendingPackKey = null;
+        const origSelectPack = window.selectPack;
+
+        window.selectPack = function(key) {
+          // Check premium gate
+          if (typeof isPremium !== 'undefined' && !isPremium && typeof isPackFree === 'function' && !isPackFree(key)) {
+            if (typeof showPremiumModal === 'function') showPremiumModal(key);
+            return;
+          }
+
+          const def = (typeof packDefs !== 'undefined') ? packDefs.find(p => p.key === key) : null;
+          if (!def) return;
+
+          // Solo packs → skip intro, go directly
+          if (def.solo) {
+            return origSelectPack.apply(this, arguments);
+          }
+
+          // Show deck intro
+          pendingPackKey = key;
+          document.getElementById('deckIntroEmoji').textContent = def.emoji || '💕';
+          document.getElementById('deckIntroTitle').textContent = i18n.t(def.nameKey) || key;
+          document.getElementById('deckIntroDesc').textContent = i18n.t(def.descKey) || '';
+          document.getElementById('deckIntroCount').textContent = i18n.t(def.countKey) || '';
+          goTo('deckIntro');
+        };
+
+        // Wire up the start button
+        document.addEventListener('DOMContentLoaded', () => {
+          const startBtn = document.getElementById('deckIntroStart');
+          if (startBtn) {
+            startBtn.addEventListener('click', async () => {
+              if (!pendingPackKey) return;
+              startBtn.disabled = true;
+              const orig = startBtn.innerHTML;
+              startBtn.innerHTML = 'Oluşturuluyor...';
+              try {
+                await origSelectPack(pendingPackKey);
+              } finally {
+                startBtn.disabled = false;
+                startBtn.innerHTML = orig;
+              }
+            });
+          }
+        });
+      })();
+
       // Mira: personalized greeting on home screen
       const _origGoTo = window.goTo;
       const _greetingSet = { done: false };
