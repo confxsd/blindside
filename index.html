@@ -1,850 +1,960 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mira — Seni tanıyan birinin eliyle tanış</title>
-  <meta name="description" content="Mira seni tanır, sana uygun birini bulur. Her hafta 3 kişi, özenle seçilmiş. Önce karakter, sonra fotoğraf. Sen kullandıkça öneriler keskinleşir.">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Mira — Herkes tanışıyor. Kimse tanışmıyor.">
-  <meta property="og:description" content="Her hafta 3 kişi, özenle seçilmiş. Önce karakter, sonra fotoğraf. Sen kullandıkça biz seni öğreniriz.">
-  <link rel="canonical" href="https://blindside.to/">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #FFFFFF;
-      --bg-alt: #F5F5F5;
-      --text: #0A0A0A;
-      --text-mid: #767676;
-      --text-dim: #A0A0A0;
-      --border: #E0E0E0;
-      --accent: #0A0A0A;
-      --accent-hover: #333333;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mira — Seni tanıyan birinin eliyle tanış</title>
+    <meta
+      name="description"
+      content="Mira seni tanır, sana uygun birini bulur. Her hafta 3 kişi, özenle seçilmiş. Önce karakter, sonra fotoğraf. Sen kullandıkça öneriler keskinleşir."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Mira — Herkes tanışıyor. Kimse tanışmıyor."
+    />
+    <meta
+      property="og:description"
+      content="Her hafta 3 kişi, özenle seçilmiş. Önce karakter, sonra fotoğraf. Sen kullandıkça biz seni öğreniriz."
+    />
+    <link rel="canonical" href="https://blindside.to/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #ffffff;
+        --bg-alt: #f5f5f5;
+        --text: #0a0a0a;
+        --text-mid: #767676;
+        --text-dim: #a0a0a0;
+        --border: #e0e0e0;
+        --accent: #0a0a0a;
+        --accent-hover: #333333;
 
-      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        --font:
+          "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
-      --size-hero: clamp(42px, 7.5vw, 72px);
-      --size-display: clamp(30px, 4.5vw, 48px);
-      --size-section: clamp(26px, 3.5vw, 38px);
-      --size-body: 15px;
-      --size-small: 12px;
-      --size-label: 10px;
+        --size-hero: clamp(42px, 7.5vw, 72px);
+        --size-display: clamp(30px, 4.5vw, 48px);
+        --size-section: clamp(26px, 3.5vw, 38px);
+        --size-body: 15px;
+        --size-small: 12px;
+        --size-label: 10px;
 
-      --max-text: 680px;
-      --max-wide: 960px;
+        --max-text: 680px;
+        --max-wide: 960px;
 
-      --ease: cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    *, *::before, *::after {
-      margin: 0; padding: 0; box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      -webkit-text-size-adjust: 100%;
-    }
-
-    body {
-      font-family: var(--font);
-      font-size: var(--size-body);
-      line-height: 1.65;
-      color: var(--text);
-      background: var(--bg);
-      font-weight: 400;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      overflow-x: hidden;
-    }
-
-    ::selection { background: var(--text); color: var(--bg); }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-      transition: opacity 0.3s var(--ease);
-    }
-
-    /* Layout */
-    .wrap {
-      max-width: var(--max-text);
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    .wrap-wide {
-      max-width: var(--max-wide);
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    section {
-      padding: 120px 0;
-    }
-
-    @media (max-width: 720px) {
-      section { padding: 80px 0; }
-    }
-
-    /* Typography */
-    .label {
-      font-size: var(--size-label);
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--text-mid);
-      margin-bottom: 40px;
-      display: inline-block;
-    }
-
-    .serif-italic {
-      font-style: normal;
-      font-weight: 300;
-    }
-
-    /* Reveal animations */
-    .reveal {
-      opacity: 0;
-      transform: translateY(16px);
-      transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
-    }
-    .reveal.in { opacity: 1; transform: none; }
-    .d1 { transition-delay: 0.1s; }
-    .d2 { transition-delay: 0.2s; }
-    .d3 { transition-delay: 0.3s; }
-    .d4 { transition-delay: 0.4s; }
-    .d5 { transition-delay: 0.5s; }
-
-    /* ===== HERO ===== */
-    .hero {
-      padding: 180px 0 80px;
-      min-height: 92vh;
-      display: flex;
-      align-items: center;
-    }
-
-    .hero-inner {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 24px;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: var(--size-hero);
-      font-weight: 400;
-      line-height: 1.1;
-      letter-spacing: -0.035em;
-      margin: 32px 0 40px;
-    }
-
-    .hero h1 .line {
-      display: block;
-    }
-
-    .hero-sub {
-      font-size: 16px;
-      line-height: 1.7;
-      color: var(--text-mid);
-      max-width: 480px;
-      margin: 0 auto 56px;
-      font-weight: 400;
-    }
-
-    .hero-ctas {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-bottom: 48px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font);
-      font-size: 13px;
-      font-weight: 500;
-      padding: 14px 32px;
-      cursor: pointer;
-      transition: all 0.3s var(--ease);
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      border: 1px solid var(--text);
-      min-width: 240px;
-    }
-
-    .btn-primary {
-      background: var(--text);
-      color: var(--bg);
-    }
-    .btn-primary:hover {
-      background: var(--accent-hover);
-      border-color: var(--accent-hover);
-    }
-
-    .btn-secondary {
-      background: transparent;
-      color: var(--text);
-    }
-    .btn-secondary:hover {
-      background: var(--text);
-      color: var(--bg);
-    }
-
-    .hero-foot {
-      font-size: var(--size-small);
-      color: var(--text-dim);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-
-    /* ===== SOCIAL PROOF BAR ===== */
-    .proof {
-      padding: 56px 0;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .proof-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      text-align: center;
-    }
-
-    .proof-item {
-      padding: 8px 0;
-    }
-
-    .proof-num {
-      font-size: 36px;
-      font-weight: 300;
-      letter-spacing: -0.04em;
-      line-height: 1;
-      margin-bottom: 8px;
-      color: var(--text);
-    }
-
-    .proof-label {
-      font-size: 11px;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--text-mid);
-    }
-
-    @media (max-width: 720px) {
-      .proof-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
-    }
-
-    /* ===== PROBLEM ===== */
-    .problem {
-      padding: 80px 0 120px;
-    }
-    .problem-text {
-      font-size: var(--size-display);
-      font-weight: 300;
-      line-height: 1.3;
-      color: var(--text);
-      max-width: 740px;
-      margin-left: max(24px, calc((100vw - 900px) / 2));
-      padding-right: 24px;
-      letter-spacing: -0.025em;
-    }
-    .problem-text p {
-      margin-bottom: 1em;
-    }
-    .problem-text p:last-child {
-      margin-bottom: 0;
-      color: var(--text-mid);
-    }
-
-    @media (max-width: 900px) {
-      .problem-text { margin-left: 24px; }
-    }
-
-    /* ===== HOW IT WORKS ===== */
-    .how .label { margin-bottom: 64px; }
-
-    .step {
-      padding: 48px 0;
-      border-top: 1px solid var(--border);
-      display: grid;
-      grid-template-columns: 80px 1fr;
-      gap: 32px;
-      align-items: start;
-    }
-    .step:last-child { border-bottom: 1px solid var(--border); }
-
-    .step-num {
-      font-size: 48px;
-      font-weight: 300;
-      line-height: 1;
-      color: var(--text-dim);
-      letter-spacing: -0.04em;
-    }
-
-    .step-body h3 {
-      font-size: 22px;
-      font-weight: 500;
-      line-height: 1.35;
-      letter-spacing: -0.02em;
-      margin-bottom: 12px;
-    }
-    .step-body p {
-      font-size: 14px;
-      color: var(--text-mid);
-      line-height: 1.65;
-      max-width: 440px;
-    }
-
-    @media (max-width: 640px) {
-      .step { grid-template-columns: 1fr; gap: 8px; padding: 36px 0; }
-      .step-num { font-size: 36px; }
-      .step-body h3 { font-size: 19px; }
-    }
-
-    /* ===== TESTIMONIALS ===== */
-    .testimonials {
-      background: var(--bg-alt);
-      padding: 120px 0;
-    }
-
-    .testimonials .label { margin-bottom: 56px; }
-
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-    }
-
-    .testimonial {
-      padding: 36px 32px;
-      background: var(--bg);
-      border: 1px solid var(--border);
-    }
-
-    .testimonial-text {
-      font-size: 15px;
-      line-height: 1.75;
-      color: var(--text);
-      margin-bottom: 28px;
-      font-weight: 400;
-    }
-
-    .testimonial-author {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .testimonial-avatar {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background: var(--bg-alt);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--text-mid);
-      flex-shrink: 0;
-    }
-
-    .testimonial-name {
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--text);
-    }
-
-    .testimonial-detail {
-      font-size: 12px;
-      color: var(--text-dim);
-    }
-
-    @media (max-width: 720px) {
-      .testimonials-grid { grid-template-columns: 1fr; gap: 20px; }
-      .testimonial { padding: 28px 24px; }
-    }
-
-    /* ===== DIFFERENCE ===== */
-    .diff .label { margin-bottom: 56px; }
-
-    .diff-grid {
-      display: grid;
-      grid-template-columns: 1fr 1px 1fr;
-      gap: 48px;
-      align-items: start;
-    }
-
-    .diff-divider {
-      background: var(--border);
-      width: 1px;
-      min-height: 320px;
-      justify-self: center;
-    }
-
-    .diff-col h4 {
-      font-size: var(--size-label);
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      font-weight: 500;
-      margin-bottom: 28px;
-      color: var(--text-mid);
-    }
-
-    .diff-col ul {
-      list-style: none;
-    }
-    .diff-col li {
-      font-size: 15px;
-      line-height: 1.5;
-      padding: 12px 0;
-      border-bottom: 1px solid transparent;
-    }
-
-    .diff-other li {
-      color: var(--text-dim);
-      font-weight: 300;
-      text-decoration: line-through;
-      text-decoration-color: #D0D0D0;
-    }
-
-    .diff-mira li {
-      color: var(--text);
-      font-weight: 500;
-    }
-
-    @media (max-width: 720px) {
-      .diff-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
+        --ease: cubic-bezier(0.16, 1, 0.3, 1);
       }
-      .diff-divider { display: none; }
-      .diff-mira { padding-top: 16px; border-top: 1px solid var(--border); }
-    }
 
-    /* ===== TWO PATHS ===== */
-    .paths h2 {
-      font-size: var(--size-section);
-      font-weight: 400;
-      letter-spacing: -0.03em;
-      margin-bottom: 80px;
-      line-height: 1.15;
-    }
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    .path {
-      padding: 56px 0;
-    }
-    .path + .path {
-      border-top: 1px solid var(--border);
-    }
+      html {
+        scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
+      }
 
-    .path-arrow {
-      font-size: 32px;
-      color: var(--text);
-      line-height: 1;
-      margin-bottom: 24px;
-      font-weight: 300;
-      display: block;
-    }
+      body {
+        font-family: var(--font);
+        font-size: var(--size-body);
+        line-height: 1.65;
+        color: var(--text);
+        background: var(--bg);
+        font-weight: 400;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        overflow-x: hidden;
+      }
 
-    .path h3 {
-      font-size: 24px;
-      font-weight: 500;
-      line-height: 1.25;
-      letter-spacing: -0.02em;
-      margin-bottom: 16px;
-    }
+      ::selection {
+        background: var(--text);
+        color: var(--bg);
+      }
 
-    .path p {
-      font-size: 15px;
-      color: var(--text-mid);
-      line-height: 1.75;
-      max-width: 520px;
-      margin-bottom: 24px;
-    }
+      a {
+        color: inherit;
+        text-decoration: none;
+        transition: opacity 0.3s var(--ease);
+      }
 
-    .path-link {
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--text);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      padding-bottom: 4px;
-      border-bottom: 1px solid var(--text);
-      transition: all 0.3s var(--ease);
-      display: inline-block;
-    }
-    .path-link:hover {
-      opacity: 0.6;
-    }
+      /* Layout */
+      .wrap {
+        max-width: var(--max-text);
+        margin: 0 auto;
+        padding: 0 24px;
+      }
 
-    /* ===== TRUST QUOTE ===== */
-    .trust {
-      background: var(--bg-alt);
-      padding: 160px 0;
-      text-align: center;
-    }
+      .wrap-wide {
+        max-width: var(--max-wide);
+        margin: 0 auto;
+        padding: 0 24px;
+      }
 
-    .trust-quote {
-      font-size: var(--size-display);
-      font-weight: 300;
-      line-height: 1.35;
-      letter-spacing: -0.025em;
-      max-width: 720px;
-      margin: 0 auto;
-    }
+      section {
+        padding: 120px 0;
+      }
 
-    .trust-quote p {
-      margin-bottom: 0.3em;
-    }
-
-    .trust-sub {
-      margin-top: 48px;
-      font-size: 13px;
-      color: var(--text-mid);
-      line-height: 1.7;
-      letter-spacing: 0.02em;
-    }
-
-    @media (max-width: 720px) {
-      .trust { padding: 100px 0; }
-    }
-
-    /* ===== CTA SECTION ===== */
-    .cta-section {
-      text-align: center;
-      padding: 140px 0;
-    }
-
-    .cta-section h2 {
-      font-size: var(--size-section);
-      font-weight: 400;
-      letter-spacing: -0.03em;
-      margin-bottom: 16px;
-      line-height: 1.2;
-    }
-
-    .cta-sub {
-      color: var(--text-mid);
-      font-size: 15px;
-      line-height: 1.7;
-      margin-bottom: 48px;
-      max-width: 440px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .cta-buttons {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-bottom: 24px;
-    }
-
-    .cta-note {
-      margin-top: 24px;
-      font-size: 12px;
-      color: var(--text-dim);
-      line-height: 1.6;
-    }
-
-    /* ===== FOOTER ===== */
-    footer {
-      padding: 80px 0 60px;
-      border-top: 1px solid var(--border);
-      text-align: center;
-    }
-
-    .foot-logo {
-      font-size: 16px;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-    }
-
-    .foot-loc {
-      font-size: var(--size-small);
-      color: var(--text-dim);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-bottom: 36px;
-    }
-
-    .foot-line {
-      font-size: 14px;
-      line-height: 1.6;
-      color: var(--text-mid);
-      max-width: 400px;
-      margin: 0 auto;
-      font-weight: 300;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- ===== HERO ===== -->
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="label reveal">Mira</div>
-      <h1 class="reveal d1">
-        <span class="line">Arkadaşını tanıt,</span>
-        <span class="line serif-italic">birini bulalım.</span>
-      </h1>
-      <p class="hero-sub reveal d2">
-        Bir arkadaşın seni anlatsın, biz de sana yakışanı bulalım.
-        Her hafta üç öneri, her biri özenle seçilmiş. Sen kullandıkça biz seni öğreniriz.
-      </p>
-      <div class="hero-ctas reveal d3">
-        <a href="#join" class="btn btn-primary">Seni tanıyalım</a>
-        <a href="#join" class="btn btn-secondary" data-choice="introduce">Bir arkadaşım için geldim</a>
-      </div>
-      <div class="hero-foot reveal d4">2.400+ kişiyle birlikte, bire bir</div>
-    </div>
-  </section>
-
-  <!-- ===== SOCIAL PROOF BAR ===== -->
-  <section class="proof">
-    <div class="wrap-wide">
-      <div class="proof-grid reveal">
-        <div class="proof-item">
-          <div class="proof-num">2.400+</div>
-          <div class="proof-label">Kişiyi Tanıyoruz</div>
-        </div>
-        <div class="proof-item">
-          <div class="proof-num">6. hafta</div>
-          <div class="proof-label">Ortalama Uyum Noktası</div>
-        </div>
-        <div class="proof-item">
-          <div class="proof-num">%72</div>
-          <div class="proof-label">Sohbete Dönüşüyor</div>
-        </div>
-        <div class="proof-item">
-          <div class="proof-num">3 kişi</div>
-          <div class="proof-label">Her Hafta, Sana Özel</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== PROBLEM ===== -->
-  <section class="problem">
-    <div class="problem-text reveal">
-      <p>Diğer uygulamalar sana yüzlerce insan gösterir.<br>
-         Seç, kaydır, unut.<br>
-         Sistem seni tanımaz. Tanımaya da çalışmaz.<br>
-         Her hafta aynı döngü — yalnız başına.</p>
-      <p>Biz sana yüzlerce insan göstermeyiz.<br>
-         Seni tanırız. Ne istediğini anlarız.<br>
-         Sonra sana üç kişi getiririz — özenle, bilerek.</p>
-      <p>Her hafta biraz daha iyi. Çünkü her tercihinden öğreniriz.</p>
-    </div>
-  </section>
-
-  <!-- ===== HOW IT WORKS ===== -->
-  <section class="how">
-    <div class="wrap">
-      <div class="label reveal">Süreç</div>
-
-      <div class="step reveal">
-        <div class="step-num">01</div>
-        <div class="step-body">
-          <h3>Önce biz seni tanırız.</h3>
-          <p>Bir arkadaşın seni anlatır — seni tanımayanların göremeyeceği şeyleri yazar. Biz de sana sorular sorarız. Neye değer verdiğini, nasıl sevdiğini, neden şimdiye kadar olmadığını anlamaya çalışırız. Acelemiz yok.</p>
-        </div>
-      </div>
-
-      <div class="step reveal">
-        <div class="step-num">02</div>
-        <div class="step-body">
-          <h3>Her hafta sana üç kişi öneriyoruz.</h3>
-          <p>Yüzlerce profil değil — üç kişi. Her biri senin için düşünülmüş. Kimi beğendiğini, kimi geçtiğini görürüz. Bir sonraki hafta öneriler biraz daha isabetli olur. Altıncı haftada seni ciddi ciddi tanıyoruz — ve sen de bize güveniyorsun.</p>
-        </div>
-      </div>
-
-      <div class="step reveal">
-        <div class="step-num">03</div>
-        <div class="step-body">
-          <h3>Eşleşince yanınızda oluruz.</h3>
-          <p>Sohbet başlar. İsterseniz Blindside oynarsınız — aynı soruları birbirinizi görmeden yanıtlarsınız, sonuçlar aynı anda açılır. İlk adımda birbirinizi nasıl gördüğünüzü anlarsınız. Biz de bu eşleşmeden öğreniriz — bir sonraki önerimiz daha iyi olur.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== TESTIMONIALS ===== -->
-  <section class="testimonials">
-    <div class="wrap-wide">
-      <div class="label reveal">Onlar da öyle hissediyordu</div>
-
-      <div class="testimonials-grid">
-        <div class="testimonial reveal">
-          <p class="testimonial-text">"Başka uygulamalardan sonra burada ilk kez birinin beni anlamaya çalıştığını hissettim. Üçüncü haftada gelen öneriyle tanıştım — üç saatlik bir kahve içtik. Fark, sistemin beni tanımasıydı."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">D</div>
-            <div>
-              <div class="testimonial-name">Deniz, 29</div>
-              <div class="testimonial-detail">Kadıköy</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial reveal d1">
-          <p class="testimonial-text">"Arkadaşımı tanıttım. İki hafta sonra eşleşti. 'Beni bu kadar iyi tanıyan birini nasıl buldular?' diye sordu. Cevap basit — onu ben anlattım, sistem de dinledi."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">E</div>
-            <div>
-              <div class="testimonial-name">Ece, 31</div>
-              <div class="testimonial-detail">Beşiktaş</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial reveal d2">
-          <p class="testimonial-text">"İlk hafta 'haftada üç kişi mi, ciddi misiniz?' dedim. Altıncı haftada önerilerin ne kadar isabetli olduğunu görünce anladım — az ama doğru. Biri gerçekten beni dinliyormuş."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">K</div>
-            <div>
-              <div class="testimonial-name">Kaan, 33</div>
-              <div class="testimonial-detail">Nişantaşı</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== DIFFERENCE ===== -->
-  <section class="diff">
-    <div class="wrap-wide">
-      <div class="label reveal">Fark ne</div>
-      <div class="diff-grid">
-        <div class="diff-col diff-other reveal">
-          <h4>Diğerleri</h4>
-          <ul>
-            <li>Seni tanımadan yüzlerce kişi gösterir</li>
-            <li>Fotoğrafa bakarsın, karar verirsin</li>
-            <li>Eşleşirsin, kimse yazmaz</li>
-            <li>Her hafta aynı döngü, sıfır gelişme</li>
-            <li>Yalnız başınasın</li>
-          </ul>
-        </div>
-        <div class="diff-divider reveal d1"></div>
-        <div class="diff-col diff-mira reveal d2">
-          <h4>Mira</h4>
-          <ul>
-            <li>Önce seni tanırız, sonra öneriyoruz</li>
-            <li>Önce karakter, sonra fotoğraf</li>
-            <li>Her hafta 3 kişi — sana göre seçilmiş</li>
-            <li>Her tercihinden öğreniriz, öneriler keskinleşir</li>
-            <li>Süreç boyunca yanındayız</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== TWO PATHS ===== -->
-  <section class="paths">
-    <div class="wrap">
-      <h2 class="reveal">Nereden başlamak istersin?</h2>
-
-      <div class="path reveal">
-        <span class="path-arrow">→</span>
-        <h3>Doğru insanı arıyorum</h3>
-        <p>
-          Bize kendinden bahset. Kim olduğunu, neye değer verdiğini anlamamıza izin ver.
-          Her hafta sana üç kişi önerelim. Sen değerlendir, biz öğrenelim.
-          Her geçen hafta seni daha iyi tanırız — öneriler daha isabetli olur.
-          Bu bir süreç ve biz başından sonuna yanındayız.
-        </p>
-        <a href="#join" class="path-link">Seni tanıyalım</a>
-      </div>
-
-      <div class="path reveal">
-        <span class="path-arrow">↗</span>
-        <h3>Bir arkadaşımı tanıştırmak istiyorum</h3>
-        <p>
-          Doğru insanı hak eden birini tanıyorsun. Onu sen anlat — kim olduğunu,
-          nasıl sevdiğini, neyi hak ettiğini. Biz senin gözünden başlarız.
-          Katılıp katılmamak ona kalmış. Eşleştiğinde sana da haber veririz.
-        </p>
-        <a href="#join" class="path-link" data-choice="introduce">Onu anlat</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== TRUST QUOTE ===== -->
-  <section class="trust">
-    <div class="wrap">
-      <div class="trust-quote reveal">
-        <p>Sana yüzlerce insan gösterip</p>
-        <p>"seç birini" demiyoruz.</p>
-        <p>Seni tanıyoruz. Sana birini buluyoruz.</p>
-        <p>Ve her hafta biraz daha iyi anlıyoruz.</p>
-      </div>
-      <div class="trust-sub reveal d2">
-        Bu bir algoritma değil — bir ilişki.<br>
-        Seninle Mira arasında kurulan bir güven.
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== CTA SECTION ===== -->
-  <section class="cta-section" id="join">
-    <div class="wrap">
-      <h2 class="reveal">Hazırsan, biz de hazırız.</h2>
-      <p class="cta-sub reveal d1">
-        Seni tanımamız birkaç dakika sürer.<br>
-        Doğru insanı bulmamız birkaç hafta. Ama buluruz.
-      </p>
-
-      <div class="cta-buttons reveal d2">
-        <a href="#" class="btn btn-primary" id="ctaStart">Seni tanıyalım</a>
-        <a href="#" class="btn btn-secondary" id="ctaIntroduce">Bir arkadaşım için geldim</a>
-      </div>
-
-      <p class="cta-note reveal d3">
-        Ücretsiz. Kart bilgisi gerekmez. 2 dakikada başlarsın.
-      </p>
-    </div>
-  </section>
-
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    <div class="foot-logo">Mira</div>
-    <div class="foot-loc">Istanbul · 2025</div>
-    <p class="foot-line">
-      Seni tanımadan sana birini bulamayız.
-      O yüzden önce seni tanıyoruz.
-    </p>
-  </footer>
-
-  <script>
-    // Reveal on scroll
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('in');
-          io.unobserve(e.target);
+      @media (max-width: 720px) {
+        section {
+          padding: 80px 0;
         }
+      }
+
+      /* Typography */
+      .label {
+        font-size: var(--size-label);
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        color: var(--text-mid);
+        margin-bottom: 40px;
+        display: inline-block;
+      }
+
+      .serif-italic {
+        font-style: normal;
+        font-weight: 300;
+      }
+
+      /* Reveal animations */
+      .reveal {
+        opacity: 0;
+        transform: translateY(16px);
+        transition:
+          opacity 0.8s var(--ease),
+          transform 0.8s var(--ease);
+      }
+      .reveal.in {
+        opacity: 1;
+        transform: none;
+      }
+      .d1 {
+        transition-delay: 0.1s;
+      }
+      .d2 {
+        transition-delay: 0.2s;
+      }
+      .d3 {
+        transition-delay: 0.3s;
+      }
+      .d4 {
+        transition-delay: 0.4s;
+      }
+      .d5 {
+        transition-delay: 0.5s;
+      }
+
+      /* ===== HERO ===== */
+      .hero {
+        padding: 180px 0 80px;
+        min-height: 92vh;
+        display: flex;
+        align-items: center;
+      }
+
+      .hero-inner {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 24px;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: var(--size-hero);
+        font-weight: 400;
+        line-height: 1.1;
+        letter-spacing: -0.035em;
+        margin: 32px 0 40px;
+      }
+
+      .hero h1 .line {
+        display: block;
+      }
+
+      .hero-sub {
+        font-size: 16px;
+        line-height: 1.7;
+        color: var(--text-mid);
+        max-width: 480px;
+        margin: 0 auto 56px;
+        font-weight: 400;
+      }
+
+      .hero-ctas {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 48px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font);
+        font-size: 13px;
+        font-weight: 500;
+        padding: 14px 32px;
+        cursor: pointer;
+        transition: all 0.3s var(--ease);
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        border: 1px solid var(--text);
+        min-width: 240px;
+      }
+
+      .btn-primary {
+        background: var(--text);
+        color: var(--bg);
+      }
+      .btn-primary:hover {
+        background: var(--accent-hover);
+        border-color: var(--accent-hover);
+      }
+
+      .btn-secondary {
+        background: transparent;
+        color: var(--text);
+      }
+      .btn-secondary:hover {
+        background: var(--text);
+        color: var(--bg);
+      }
+
+      .hero-foot {
+        font-size: var(--size-small);
+        color: var(--text-dim);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      /* ===== SOCIAL PROOF BAR ===== */
+      .proof {
+        padding: 56px 0;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .proof-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        text-align: center;
+      }
+
+      .proof-item {
+        padding: 8px 0;
+      }
+
+      .proof-num {
+        font-size: 36px;
+        font-weight: 300;
+        letter-spacing: -0.04em;
+        line-height: 1;
+        margin-bottom: 8px;
+        color: var(--text);
+      }
+
+      .proof-label {
+        font-size: 11px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--text-mid);
+      }
+
+      @media (max-width: 720px) {
+        .proof-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 32px;
+        }
+      }
+
+      /* ===== PROBLEM ===== */
+      .problem {
+        padding: 80px 0 120px;
+      }
+      .problem-text {
+        font-size: var(--size-display);
+        font-weight: 300;
+        line-height: 1.3;
+        color: var(--text);
+        max-width: 740px;
+        margin-left: max(24px, calc((100vw - 900px) / 2));
+        padding-right: 24px;
+        letter-spacing: -0.025em;
+      }
+      .problem-text p {
+        margin-bottom: 1em;
+      }
+      .problem-text p:last-child {
+        margin-bottom: 0;
+        color: var(--text-mid);
+      }
+
+      @media (max-width: 900px) {
+        .problem-text {
+          margin-left: 24px;
+        }
+      }
+
+      /* ===== HOW IT WORKS ===== */
+      .how .label {
+        margin-bottom: 64px;
+      }
+
+      .step {
+        padding: 48px 0;
+        border-top: 1px solid var(--border);
+        display: grid;
+        grid-template-columns: 80px 1fr;
+        gap: 32px;
+        align-items: start;
+      }
+      .step:last-child {
+        border-bottom: 1px solid var(--border);
+      }
+
+      .step-num {
+        font-size: 48px;
+        font-weight: 300;
+        line-height: 1;
+        color: var(--text-dim);
+        letter-spacing: -0.04em;
+      }
+
+      .step-body h3 {
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 1.35;
+        letter-spacing: -0.02em;
+        margin-bottom: 12px;
+      }
+      .step-body p {
+        font-size: 14px;
+        color: var(--text-mid);
+        line-height: 1.65;
+        max-width: 440px;
+      }
+
+      @media (max-width: 640px) {
+        .step {
+          grid-template-columns: 1fr;
+          gap: 8px;
+          padding: 36px 0;
+        }
+        .step-num {
+          font-size: 36px;
+        }
+        .step-body h3 {
+          font-size: 19px;
+        }
+      }
+
+      /* ===== TESTIMONIALS ===== */
+      .testimonials {
+        background: var(--bg-alt);
+        padding: 120px 0;
+      }
+
+      .testimonials .label {
+        margin-bottom: 56px;
+      }
+
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+      }
+
+      .testimonial {
+        padding: 36px 32px;
+        background: var(--bg);
+        border: 1px solid var(--border);
+      }
+
+      .testimonial-text {
+        font-size: 15px;
+        line-height: 1.75;
+        color: var(--text);
+        margin-bottom: 28px;
+        font-weight: 400;
+      }
+
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .testimonial-avatar {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: var(--bg-alt);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--text-mid);
+        flex-shrink: 0;
+      }
+
+      .testimonial-name {
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--text);
+      }
+
+      .testimonial-detail {
+        font-size: 12px;
+        color: var(--text-dim);
+      }
+
+      @media (max-width: 720px) {
+        .testimonials-grid {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+        .testimonial {
+          padding: 28px 24px;
+        }
+      }
+
+      /* ===== DIFFERENCE ===== */
+      .diff .label {
+        margin-bottom: 56px;
+      }
+
+      .diff-grid {
+        display: grid;
+        grid-template-columns: 1fr 1px 1fr;
+        gap: 48px;
+        align-items: start;
+      }
+
+      .diff-divider {
+        background: var(--border);
+        width: 1px;
+        min-height: 320px;
+        justify-self: center;
+      }
+
+      .diff-col h4 {
+        font-size: var(--size-label);
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        font-weight: 500;
+        margin-bottom: 28px;
+        color: var(--text-mid);
+      }
+
+      .diff-col ul {
+        list-style: none;
+      }
+      .diff-col li {
+        font-size: 15px;
+        line-height: 1.5;
+        padding: 12px 0;
+        border-bottom: 1px solid transparent;
+      }
+
+      .diff-other li {
+        color: var(--text-dim);
+        font-weight: 300;
+        text-decoration: line-through;
+        text-decoration-color: #d0d0d0;
+      }
+
+      .diff-mira li {
+        color: var(--text);
+        font-weight: 500;
+      }
+
+      @media (max-width: 720px) {
+        .diff-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        .diff-divider {
+          display: none;
+        }
+        .diff-mira {
+          padding-top: 16px;
+          border-top: 1px solid var(--border);
+        }
+      }
+
+      /* ===== TWO PATHS ===== */
+      .paths h2 {
+        font-size: var(--size-section);
+        font-weight: 400;
+        letter-spacing: -0.03em;
+        margin-bottom: 80px;
+        line-height: 1.15;
+      }
+
+      .path {
+        padding: 56px 0;
+      }
+      .path + .path {
+        border-top: 1px solid var(--border);
+      }
+
+      .path-arrow {
+        font-size: 32px;
+        color: var(--text);
+        line-height: 1;
+        margin-bottom: 24px;
+        font-weight: 300;
+        display: block;
+      }
+
+      .path h3 {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.25;
+        letter-spacing: -0.02em;
+        margin-bottom: 16px;
+      }
+
+      .path p {
+        font-size: 15px;
+        color: var(--text-mid);
+        line-height: 1.75;
+        max-width: 520px;
+        margin-bottom: 24px;
+      }
+
+      .path-link {
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--text);
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        padding-bottom: 4px;
+        border-bottom: 1px solid var(--text);
+        transition: all 0.3s var(--ease);
+        display: inline-block;
+      }
+      .path-link:hover {
+        opacity: 0.6;
+      }
+
+      /* ===== TRUST QUOTE ===== */
+      .trust {
+        background: var(--bg-alt);
+        padding: 160px 0;
+        text-align: center;
+      }
+
+      .trust-quote {
+        font-size: var(--size-display);
+        font-weight: 300;
+        line-height: 1.35;
+        letter-spacing: -0.025em;
+        max-width: 720px;
+        margin: 0 auto;
+      }
+
+      .trust-quote p {
+        margin-bottom: 0.3em;
+      }
+
+      .trust-sub {
+        margin-top: 48px;
+        font-size: 13px;
+        color: var(--text-mid);
+        line-height: 1.7;
+        letter-spacing: 0.02em;
+      }
+
+      @media (max-width: 720px) {
+        .trust {
+          padding: 100px 0;
+        }
+      }
+
+      /* ===== CTA SECTION ===== */
+      .cta-section {
+        text-align: center;
+        padding: 140px 0;
+      }
+
+      .cta-section h2 {
+        font-size: var(--size-section);
+        font-weight: 400;
+        letter-spacing: -0.03em;
+        margin-bottom: 16px;
+        line-height: 1.2;
+      }
+
+      .cta-sub {
+        color: var(--text-mid);
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 48px;
+        max-width: 440px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .cta-buttons {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 24px;
+      }
+
+      .cta-note {
+        margin-top: 24px;
+        font-size: 12px;
+        color: var(--text-dim);
+        line-height: 1.6;
+      }
+
+      /* ===== FOOTER ===== */
+      footer {
+        padding: 80px 0 60px;
+        border-top: 1px solid var(--border);
+        text-align: center;
+      }
+
+      .foot-logo {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+      }
+
+      .foot-loc {
+        font-size: var(--size-small);
+        color: var(--text-dim);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-bottom: 36px;
+      }
+
+      .foot-line {
+        font-size: 14px;
+        line-height: 1.6;
+        color: var(--text-mid);
+        max-width: 400px;
+        margin: 0 auto;
+        font-weight: 300;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="label reveal">Mira</div>
+        <h1 class="reveal d1">
+          <span class="line">Arkadaşını tanıt,</span>
+          <span class="line serif-italic">birini bulalım.</span>
+        </h1>
+        <p class="hero-sub reveal d2">
+          Bir arkadaşın seni anlatsın, biz de sana yakışanı bulalım. Her hafta
+          üç öneri, her biri özenle seçilmiş. Sen kullandıkça biz seni
+          öğreniriz.
+        </p>
+        <div class="hero-ctas reveal d3">
+          <a href="#join" class="btn btn-primary">Seni tanıyalım</a>
+          <a href="#join" class="btn btn-secondary" data-choice="introduce"
+            >Bir arkadaşım için geldim</a
+          >
+        </div>
+        <div class="hero-foot reveal d4">2.400+ kişiyle birlikte, bire bir</div>
+      </div>
+    </section>
+
+    <!-- ===== SOCIAL PROOF BAR ===== -->
+    <section class="proof">
+      <div class="wrap-wide">
+        <div class="proof-grid reveal">
+          <div class="proof-item">
+            <div class="proof-num">2.400+</div>
+            <div class="proof-label">Kişiyi Tanıyoruz</div>
+          </div>
+          <div class="proof-item">
+            <div class="proof-num">6. hafta</div>
+            <div class="proof-label">Ortalama Uyum Noktası</div>
+          </div>
+          <div class="proof-item">
+            <div class="proof-num">%72</div>
+            <div class="proof-label">Sohbete Dönüşüyor</div>
+          </div>
+          <div class="proof-item">
+            <div class="proof-num">3 kişi</div>
+            <div class="proof-label">Her Hafta, Sana Özel</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROBLEM ===== -->
+    <section class="problem">
+      <div class="problem-text reveal">
+        <p>
+          Diğer uygulamalar sana yüzlerce insan gösterir.<br />
+          Seç, kaydır, unut.<br />
+          Her hafta aynı döngü — yalnız başına.
+        </p>
+        <p>
+          Seni tanırız. Ne istediğini anlarız.<br />
+          Sonra sana üç kişi getiririz — özenle, bilerek.
+        </p>
+        <p>Her hafta biraz daha iyi. Çünkü her tercihinden öğreniriz.</p>
+      </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section class="how">
+      <div class="wrap">
+        <div class="label reveal">Süreç</div>
+
+        <div class="step reveal">
+          <div class="step-num">01</div>
+          <div class="step-body">
+            <h3>Önce biz seni tanırız.</h3>
+            <p>
+              Bir arkadaşın seni anlatır — seni tanımayanların göremeyeceği
+              şeyleri yazar. Biz de sana sorular sorarız. Neye değer verdiğini,
+              nasıl sevdiğini, neden şimdiye kadar olmadığını anlamaya
+              çalışırız. Acelemiz yok.
+            </p>
+          </div>
+        </div>
+
+        <div class="step reveal">
+          <div class="step-num">02</div>
+          <div class="step-body">
+            <h3>Her hafta sana üç kişi öneriyoruz.</h3>
+            <p>
+              Yüzlerce profil değil — üç kişi. Her biri senin için düşünülmüş.
+              Kimi beğendiğini, kimi geçtiğini görürüz. Bir sonraki hafta
+              öneriler biraz daha isabetli olur. Altıncı haftada seni ciddi
+              ciddi tanıyoruz — ve sen de bize güveniyorsun.
+            </p>
+          </div>
+        </div>
+
+        <div class="step reveal">
+          <div class="step-num">03</div>
+          <div class="step-body">
+            <h3>Eşleşince yanınızda oluruz.</h3>
+            <p>
+              Sohbet başlar. İsterseniz Blindside oynarsınız — aynı soruları
+              birbirinizi görmeden yanıtlarsınız, sonuçlar aynı anda açılır. İlk
+              adımda birbirinizi nasıl gördüğünüzü anlarsınız. Biz de bu
+              eşleşmeden öğreniriz — bir sonraki önerimiz daha iyi olur.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="testimonials">
+      <div class="wrap-wide">
+        <div class="label reveal">Onlar da öyle hissediyordu</div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial reveal">
+            <p class="testimonial-text">
+              "Başka uygulamalardan sonra burada ilk kez birinin beni anlamaya
+              çalıştığını hissettim. Üçüncü haftada gelen öneriyle tanıştım — üç
+              saatlik bir kahve içtik. Fark, sistemin beni tanımasıydı."
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">D</div>
+              <div>
+                <div class="testimonial-name">Deniz, 29</div>
+                <div class="testimonial-detail">Kadıköy</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial reveal d1">
+            <p class="testimonial-text">
+              "Arkadaşımı tanıttım. İki hafta sonra eşleşti. 'Beni bu kadar iyi
+              tanıyan birini nasıl buldular?' diye sordu. Cevap basit — onu ben
+              anlattım, sistem de dinledi."
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">E</div>
+              <div>
+                <div class="testimonial-name">Ece, 31</div>
+                <div class="testimonial-detail">Beşiktaş</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial reveal d2">
+            <p class="testimonial-text">
+              "İlk hafta 'haftada üç kişi mi, ciddi misiniz?' dedim. Altıncı
+              haftada önerilerin ne kadar isabetli olduğunu görünce anladım — az
+              ama doğru. Biri gerçekten beni dinliyormuş."
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">K</div>
+              <div>
+                <div class="testimonial-name">Kaan, 33</div>
+                <div class="testimonial-detail">Nişantaşı</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DIFFERENCE ===== -->
+    <section class="diff">
+      <div class="wrap-wide">
+        <div class="label reveal">Fark ne</div>
+        <div class="diff-grid">
+          <div class="diff-col diff-other reveal">
+            <h4>Diğerleri</h4>
+            <ul>
+              <li>Seni tanımadan yüzlerce kişi gösterir</li>
+              <li>Fotoğrafa bakarsın, karar verirsin</li>
+              <li>Eşleşirsin, kimse yazmaz</li>
+              <li>Her hafta aynı döngü, sıfır gelişme</li>
+              <li>Yalnız başınasın</li>
+            </ul>
+          </div>
+          <div class="diff-divider reveal d1"></div>
+          <div class="diff-col diff-mira reveal d2">
+            <h4>Mira</h4>
+            <ul>
+              <li>Önce seni tanırız, sonra öneriyoruz</li>
+              <li>Önce karakter, sonra fotoğraf</li>
+              <li>Her hafta 3 kişi — sana göre seçilmiş</li>
+              <li>Her tercihinden öğreniriz, öneriler keskinleşir</li>
+              <li>Süreç boyunca yanındayız</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TWO PATHS ===== -->
+    <section class="paths">
+      <div class="wrap">
+        <h2 class="reveal">Nereden başlamak istersin?</h2>
+
+        <div class="path reveal">
+          <span class="path-arrow">→</span>
+          <h3>Doğru insanı arıyorum</h3>
+          <p>
+            Bize kendinden bahset. Kim olduğunu, neye değer verdiğini anlamamıza
+            izin ver. Her hafta sana üç kişi önerelim. Sen değerlendir, biz
+            öğrenelim. Her geçen hafta seni daha iyi tanırız — öneriler daha
+            isabetli olur. Bu bir süreç ve biz başından sonuna yanındayız.
+          </p>
+          <a href="#join" class="path-link">Seni tanıyalım</a>
+        </div>
+
+        <div class="path reveal">
+          <span class="path-arrow">↗</span>
+          <h3>Bir arkadaşımı tanıştırmak istiyorum</h3>
+          <p>
+            Doğru insanı hak eden birini tanıyorsun. Onu sen anlat — kim
+            olduğunu, nasıl sevdiğini, neyi hak ettiğini. Biz senin gözünden
+            başlarız. Katılıp katılmamak ona kalmış. Eşleştiğinde sana da haber
+            veririz.
+          </p>
+          <a href="#join" class="path-link" data-choice="introduce"
+            >Onu anlat</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TRUST QUOTE ===== -->
+    <section class="trust">
+      <div class="wrap">
+        <div class="trust-quote reveal">
+          <p>Sana yüzlerce insan gösterip</p>
+          <p>"seç birini" demiyoruz.</p>
+          <p>Seni tanıyoruz. Sana birini buluyoruz.</p>
+          <p>Ve her hafta biraz daha iyi anlıyoruz.</p>
+        </div>
+        <div class="trust-sub reveal d2">
+          Bu bir algoritma değil — bir ilişki.<br />
+          Seninle Mira arasında kurulan bir güven.
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA SECTION ===== -->
+    <section class="cta-section" id="join">
+      <div class="wrap">
+        <h2 class="reveal">Hazırsan, biz de hazırız.</h2>
+        <p class="cta-sub reveal d1">
+          Seni tanımamız birkaç dakika sürer.<br />
+          Doğru insanı bulmamız birkaç hafta. Ama buluruz.
+        </p>
+
+        <div class="cta-buttons reveal d2">
+          <a href="#" class="btn btn-primary" id="ctaStart">Seni tanıyalım</a>
+          <a href="#" class="btn btn-secondary" id="ctaIntroduce"
+            >Bir arkadaşım için geldim</a
+          >
+        </div>
+
+        <p class="cta-note reveal d3">
+          Ücretsiz. Kart bilgisi gerekmez. 2 dakikada başlarsın.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <div class="foot-logo">Mira</div>
+      <div class="foot-loc">Istanbul · 2025</div>
+      <p class="foot-line">
+        Seni tanımadan sana birini bulamayız. O yüzden önce seni tanıyoruz.
+      </p>
+    </footer>
+
+    <script>
+      // Reveal on scroll
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("in");
+              io.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.12, rootMargin: "0px 0px -40px 0px" },
+      );
+
+      document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+      // Fire hero reveals immediately on load
+      window.addEventListener("load", () => {
+        document
+          .querySelectorAll(".hero .reveal")
+          .forEach((el) => el.classList.add("in"));
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-    // Fire hero reveals immediately on load
-    window.addEventListener('load', () => {
-      document.querySelectorAll('.hero .reveal').forEach(el => el.classList.add('in'));
-    });
-  </script>
-</body>
+    </script>
+  </body>
 </html>
