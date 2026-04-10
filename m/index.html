@@ -12,13 +12,22 @@
   </script>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-    <title>Mira — Arkadaşını tanıt, birini bulalım</title>
-    <meta name="description" content="Bir arkadaşın seni anlatsın, biz de sana yakışanı bulalım. Her hafta üç öneri, özenle seçilmiş." />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>Mira — Arkadaşını tanıt, ona birini bulalım</title>
+    <meta
+      name="description"
+      content="Bir arkadaşın seni anlatsın, biz de sana yakışanı bulalım. Her hafta üç öneri, özenle seçilmiş."
+    />
     <link rel="canonical" href="https://blindside.to/m/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/m/style.css?v=1" />
   </head>
   <body>
@@ -28,13 +37,21 @@
         <div class="logo-mark">M</div>
         <h1 class="syne logo-text">Mira</h1>
         <p class="tagline" data-i18n="splash_tagline">
-          Arkadaşını tanıt, birini bulalım.
+          Arkadaşını tanıt, ona birini bulalım.
         </p>
         <div class="splash-cta">
-          <button class="btn btn-primary" onclick="showAuth('onboarding')" data-i18n="splash_get_started">
+          <button
+            class="btn btn-primary"
+            onclick="showAuth('onboarding')"
+            data-i18n="splash_get_started"
+          >
             Başla
           </button>
-          <button class="btn btn-ghost" onclick="showAuth('home')" data-i18n="splash_have_account">
+          <button
+            class="btn btn-ghost"
+            onclick="showAuth('home')"
+            data-i18n="splash_have_account"
+          >
             Hesabım var
           </button>
         </div>
@@ -45,48 +62,130 @@
       <div id="auth" class="screen">
         <div id="authStep1" class="auth-step">
           <div class="logo-mark" style="font-size: 36px">M</div>
-          <h2 class="syne" style="font-size: 22px; letter-spacing: -0.5px" data-i18n="auth_pick_username">
+          <h2
+            class="syne"
+            style="font-size: 22px; letter-spacing: -0.5px"
+            data-i18n="auth_pick_username"
+          >
             Adını seç
           </h2>
-          <p style="font-size: 13px; color: var(--text-dim); margin-bottom: 24px" data-i18n="auth_pick_subtitle">
+          <p
+            style="font-size: 13px; color: var(--text-dim); margin-bottom: 24px"
+            data-i18n="auth_pick_subtitle"
+          >
             Partnerin seni tanısın diye bir isim yeter
           </p>
-          <input type="text" id="authUsername" class="auth-input" data-i18n-placeholder="guest_placeholder" placeholder="Adın..." maxlength="20" autocomplete="off" autocapitalize="off" />
+          <input
+            type="text"
+            id="authUsername"
+            class="auth-input"
+            data-i18n-placeholder="guest_placeholder"
+            placeholder="Adın..."
+            maxlength="20"
+            autocomplete="off"
+            autocapitalize="off"
+          />
           <div id="authError" class="auth-error"></div>
-          <button class="btn btn-primary" style="width: 100%; margin-top: 12px" onclick="doAuthStep1()" id="authBtn" data-i18n="auth_continue">
+          <button
+            class="btn btn-primary"
+            style="width: 100%; margin-top: 12px"
+            onclick="doAuthStep1()"
+            id="authBtn"
+            data-i18n="auth_continue"
+          >
             Devam et
           </button>
         </div>
 
         <div id="authStep2Login" class="auth-step" style="display: none">
           <div style="font-size: 36px; margin-bottom: 8px">M</div>
-          <h2 class="syne" style="font-size: 22px; letter-spacing: -0.5px" data-i18n="auth_welcome_back">
+          <h2
+            class="syne"
+            style="font-size: 22px; letter-spacing: -0.5px"
+            data-i18n="auth_welcome_back"
+          >
             Tekrar hoşgeldin
           </h2>
-          <p class="auth-greeting" id="loginGreeting" style="font-size: 14px; color: var(--text-mid); margin-bottom: 20px"></p>
-          <input type="password" id="loginPassword" class="auth-input" data-i18n-placeholder="auth_password_placeholder" placeholder="Şifren..." autocomplete="current-password" />
+          <p
+            class="auth-greeting"
+            id="loginGreeting"
+            style="font-size: 14px; color: var(--text-mid); margin-bottom: 20px"
+          ></p>
+          <input
+            type="password"
+            id="loginPassword"
+            class="auth-input"
+            data-i18n-placeholder="auth_password_placeholder"
+            placeholder="Şifren..."
+            autocomplete="current-password"
+          />
           <div id="loginError" class="auth-error"></div>
-          <button class="btn btn-primary" style="width: 100%; margin-top: 12px" onclick="doLogin()" id="loginBtn" data-i18n="auth_sign_in">
+          <button
+            class="btn btn-primary"
+            style="width: 100%; margin-top: 12px"
+            onclick="doLogin()"
+            id="loginBtn"
+            data-i18n="auth_sign_in"
+          >
             Giriş yap
           </button>
-          <button class="btn btn-ghost" style="width: 100%" onclick="authGoBack()" data-i18n="auth_back">
+          <button
+            class="btn btn-ghost"
+            style="width: 100%"
+            onclick="authGoBack()"
+            data-i18n="auth_back"
+          >
             Geri
           </button>
         </div>
 
         <div id="authStep2Signup" class="auth-step" style="display: none">
           <div style="font-size: 36px; margin-bottom: 8px">M</div>
-          <h2 class="syne" style="font-size: 22px; letter-spacing: -0.5px" data-i18n="auth_create_account_title">
+          <h2
+            class="syne"
+            style="font-size: 22px; letter-spacing: -0.5px"
+            data-i18n="auth_create_account_title"
+          >
             Hesap oluştur
           </h2>
-          <p class="auth-greeting" id="signupGreeting" style="font-size: 14px; color: var(--text-mid); margin-bottom: 20px"></p>
-          <input type="password" id="signupPassword" class="auth-input" data-i18n-placeholder="auth_create_password_placeholder" placeholder="Şifre oluştur..." autocomplete="new-password" />
-          <input type="password" id="signupPasswordConfirm" class="auth-input" data-i18n-placeholder="auth_confirm_password_placeholder" placeholder="Şifreyi onayla..." autocomplete="new-password" style="margin-top: 8px" />
+          <p
+            class="auth-greeting"
+            id="signupGreeting"
+            style="font-size: 14px; color: var(--text-mid); margin-bottom: 20px"
+          ></p>
+          <input
+            type="password"
+            id="signupPassword"
+            class="auth-input"
+            data-i18n-placeholder="auth_create_password_placeholder"
+            placeholder="Şifre oluştur..."
+            autocomplete="new-password"
+          />
+          <input
+            type="password"
+            id="signupPasswordConfirm"
+            class="auth-input"
+            data-i18n-placeholder="auth_confirm_password_placeholder"
+            placeholder="Şifreyi onayla..."
+            autocomplete="new-password"
+            style="margin-top: 8px"
+          />
           <div id="signupError" class="auth-error"></div>
-          <button class="btn btn-primary" style="width: 100%; margin-top: 12px" onclick="doSignup()" id="signupBtn" data-i18n="auth_create_account">
+          <button
+            class="btn btn-primary"
+            style="width: 100%; margin-top: 12px"
+            onclick="doSignup()"
+            id="signupBtn"
+            data-i18n="auth_create_account"
+          >
             Hesap oluştur
           </button>
-          <button class="btn btn-ghost" style="width: 100%" onclick="authGoBack()" data-i18n="auth_back">
+          <button
+            class="btn btn-ghost"
+            style="width: 100%"
+            onclick="authGoBack()"
+            data-i18n="auth_back"
+          >
             Geri
           </button>
         </div>
@@ -96,18 +195,45 @@
       <div id="guestAuth" class="screen">
         <div class="invite-pill" data-i18n="guest_invited">Davet edildin!</div>
         <div style="font-size: 36px; margin-bottom: 8px">M</div>
-        <h2 class="syne" style="font-size: 22px; letter-spacing: -0.5px" data-i18n="guest_title">
+        <h2
+          class="syne"
+          style="font-size: 22px; letter-spacing: -0.5px"
+          data-i18n="guest_title"
+        >
           Oyuna katıl
         </h2>
-        <p style="font-size: 13px; color: var(--text-dim); margin-bottom: 24px" data-i18n="guest_subtitle">
+        <p
+          style="font-size: 13px; color: var(--text-dim); margin-bottom: 24px"
+          data-i18n="guest_subtitle"
+        >
           Oynamak için bir isim yeter
         </p>
-        <input type="text" id="guestName" class="auth-input" data-i18n-placeholder="guest_placeholder" placeholder="Adın..." maxlength="20" autocomplete="off" autocapitalize="off" />
+        <input
+          type="text"
+          id="guestName"
+          class="auth-input"
+          data-i18n-placeholder="guest_placeholder"
+          placeholder="Adın..."
+          maxlength="20"
+          autocomplete="off"
+          autocapitalize="off"
+        />
         <div id="guestAuthError" class="auth-error"></div>
-        <button class="btn btn-primary" style="width: 100%; margin-top: 12px" onclick="doGuestAuth()" id="guestAuthBtn" data-i18n="guest_play">
+        <button
+          class="btn btn-primary"
+          style="width: 100%; margin-top: 12px"
+          onclick="doGuestAuth()"
+          id="guestAuthBtn"
+          data-i18n="guest_play"
+        >
           Misafir olarak oyna
         </button>
-        <button class="btn btn-ghost" style="width: 100%" onclick="guestToFullAuth()" data-i18n="guest_have_account">
+        <button
+          class="btn btn-ghost"
+          style="width: 100%"
+          onclick="guestToFullAuth()"
+          data-i18n="guest_have_account"
+        >
           Hesabım var
         </button>
         <div class="lang-selector" id="guestLangSelector"></div>
@@ -115,27 +241,48 @@
 
       <!-- ONBOARDING -->
       <div id="onboarding" class="screen">
-        <h2 class="syne" style="font-size: 22px; letter-spacing: -0.5px" data-i18n="onboarding_title">
+        <h2
+          class="syne"
+          style="font-size: 22px; letter-spacing: -0.5px"
+          data-i18n="onboarding_title"
+        >
           Nasıl çalışır
         </h2>
         <div class="onboarding-slides">
           <div class="onboarding-slide">
             <div class="slide-emoji">01</div>
-            <div class="slide-title" data-i18n="onboarding_step1_title">Bir deste seç</div>
-            <div class="slide-desc" data-i18n="onboarding_step1_desc">Sana uygun soru destesini seç</div>
+            <div class="slide-title" data-i18n="onboarding_step1_title">
+              Bir deste seç
+            </div>
+            <div class="slide-desc" data-i18n="onboarding_step1_desc">
+              Sana uygun soru destesini seç
+            </div>
           </div>
           <div class="onboarding-slide">
             <div class="slide-emoji">02</div>
-            <div class="slide-title" data-i18n="onboarding_step2_title">Gizlice yanıtla</div>
-            <div class="slide-desc" data-i18n="onboarding_step2_desc">İkiniz de aynı soruları yanıtlarsınız — kimse görmez</div>
+            <div class="slide-title" data-i18n="onboarding_step2_title">
+              Gizlice yanıtla
+            </div>
+            <div class="slide-desc" data-i18n="onboarding_step2_desc">
+              İkiniz de aynı soruları yanıtlarsınız — kimse görmez
+            </div>
           </div>
           <div class="onboarding-slide">
             <div class="slide-emoji">03</div>
-            <div class="slide-title" data-i18n="onboarding_step3_title">Birlikte açığa çıkarın</div>
-            <div class="slide-desc" data-i18n="onboarding_step3_desc">Yanıtlar ancak ikiniz de bitirince açılır</div>
+            <div class="slide-title" data-i18n="onboarding_step3_title">
+              Birlikte açığa çıkarın
+            </div>
+            <div class="slide-desc" data-i18n="onboarding_step3_desc">
+              Yanıtlar ancak ikiniz de bitirince açılır
+            </div>
           </div>
         </div>
-        <button class="btn btn-primary" style="width: 100%" onclick="goTo('home')" data-i18n="onboarding_cta">
+        <button
+          class="btn btn-primary"
+          style="width: 100%"
+          onclick="goTo('home')"
+          data-i18n="onboarding_cta"
+        >
           Başlayalım
         </button>
       </div>
@@ -145,13 +292,32 @@
         <div class="home-header">
           <div class="home-brand">
             <h1>Mira</h1>
-            <span id="homeUsername" style="font-size: 13px; color: var(--text-dim); cursor: pointer" onclick="switchUser()" title="switch user"></span>
+            <span
+              id="homeUsername"
+              style="font-size: 13px; color: var(--text-dim); cursor: pointer"
+              onclick="switchUser()"
+              title="switch user"
+            ></span>
           </div>
           <div class="home-actions">
-            <button class="theme-toggle" onclick="cycleLang()" title="Language" id="langCycleBtn" style="font-size: 13px; font-weight: 700; font-family: var(--font)">
+            <button
+              class="theme-toggle"
+              onclick="cycleLang()"
+              title="Language"
+              id="langCycleBtn"
+              style="
+                font-size: 13px;
+                font-weight: 700;
+                font-family: var(--font);
+              "
+            >
               <span id="langCycleFlag"></span>
             </button>
-            <button class="theme-toggle" onclick="toggleSettings()" title="Customize">
+            <button
+              class="theme-toggle"
+              onclick="toggleSettings()"
+              title="Customize"
+            >
               <span class="icon-moon">L</span>
               <span class="icon-sun">D</span>
             </button>
@@ -159,33 +325,101 @@
         </div>
 
         <div class="home-tabs" id="homeTabs">
-          <button class="home-tab active" data-filter="all" onclick="setHomeFilter('all')" data-i18n="home_all">Tümü</button>
-          <button class="home-tab" data-filter="active" onclick="setHomeFilter('active')" data-i18n="home_active">Aktif</button>
-          <button class="home-tab" data-filter="completed" onclick="setHomeFilter('completed')" data-i18n="home_completed">Biten</button>
+          <button
+            class="home-tab active"
+            data-filter="all"
+            onclick="setHomeFilter('all')"
+            data-i18n="home_all"
+          >
+            Tümü
+          </button>
+          <button
+            class="home-tab"
+            data-filter="active"
+            onclick="setHomeFilter('active')"
+            data-i18n="home_active"
+          >
+            Aktif
+          </button>
+          <button
+            class="home-tab"
+            data-filter="completed"
+            onclick="setHomeFilter('completed')"
+            data-i18n="home_completed"
+          >
+            Biten
+          </button>
         </div>
 
         <div class="fab-wrap">
-          <button class="fab" onclick="goTo('packs')" data-i18n="home_new_session">+ Yeni oturum</button>
+          <button
+            class="fab"
+            onclick="goTo('packs')"
+            data-i18n="home_new_session"
+          >
+            + Yeni oturum
+          </button>
         </div>
 
         <div id="homeSessions"></div>
 
         <nav class="bottom-nav" id="bottomNav">
-          <button class="nav-item active" data-nav="home" onclick="goTo('home')">
+          <button
+            class="nav-item active"
+            data-nav="home"
+            onclick="goTo('home')"
+          >
             <span class="nav-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" />
+              </svg>
             </span>
             <span data-i18n="nav_home">Ana Sayfa</span>
           </button>
           <button class="nav-item" data-nav="packs" onclick="goTo('packs')">
             <span class="nav-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" />
+              </svg>
             </span>
             <span data-i18n="nav_packs">Desteler</span>
           </button>
           <button class="nav-item" data-nav="profile" onclick="goToProfile()">
             <span class="nav-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
             </span>
             <span data-i18n="nav_profile">Profil</span>
           </button>
@@ -197,20 +431,62 @@
         <div class="packs-header">
           <div class="top-bar">
             <button class="btn-icon" onclick="goTo('home')">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M19 12H5" />
+                <path d="M12 19l-7-7 7-7" />
+              </svg>
             </button>
             <h2 data-i18n="nav_packs">Desteler</h2>
           </div>
           <div class="mode-toggle" id="modeToggle">
-            <button class="mode-toggle-btn active" data-mode="partner" onclick="setPackMode('partner')">
+            <button
+              class="mode-toggle-btn active"
+              data-mode="partner"
+              onclick="setPackMode('partner')"
+            >
               <span class="mode-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
               </span>
               <span data-i18n="mode_partner">Partner</span>
             </button>
-            <button class="mode-toggle-btn" data-mode="self" onclick="setPackMode('self')">
+            <button
+              class="mode-toggle-btn"
+              data-mode="self"
+              onclick="setPackMode('self')"
+            >
               <span class="mode-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                  <circle cx="12" cy="7" r="4" />
+                </svg>
               </span>
               <span data-i18n="mode_self">Kendine</span>
             </button>
@@ -225,23 +501,71 @@
           <div class="featured-scroll" id="packsFeatured"></div>
         </div>
 
-        <div class="packs-section-label" data-i18n="packs_collections">Koleksiyonlar</div>
+        <div class="packs-section-label" data-i18n="packs_collections">
+          Koleksiyonlar
+        </div>
         <div class="collections-grid" id="collectionsGrid"></div>
 
-        <div class="packs-section-label" data-i18n="packs_all">Tüm desteler</div>
+        <div class="packs-section-label" data-i18n="packs_all">
+          Tüm desteler
+        </div>
         <div class="packs-list" id="packsGrid"></div>
 
         <nav class="bottom-nav">
           <button class="nav-item" data-nav="home" onclick="goTo('home')">
-            <span class="nav-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
+            <span class="nav-icon"
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" /></svg
+            ></span>
             <span data-i18n="nav_home">Ana Sayfa</span>
           </button>
-          <button class="nav-item active" data-nav="packs" onclick="goTo('packs')">
-            <span class="nav-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>
+          <button
+            class="nav-item active"
+            data-nav="packs"
+            onclick="goTo('packs')"
+          >
+            <span class="nav-icon"
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" /></svg
+            ></span>
             <span data-i18n="nav_packs">Desteler</span>
           </button>
           <button class="nav-item" data-nav="profile" onclick="goToProfile()">
-            <span class="nav-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+            <span class="nav-icon"
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" /></svg
+            ></span>
             <span data-i18n="nav_profile">Profil</span>
           </button>
         </nav>
@@ -252,9 +576,53 @@
         <div class="coll-detail-header" id="collDetailHeader"></div>
         <div class="packs-list" id="collDetailGrid"></div>
         <nav class="bottom-nav">
-          <button class="nav-item" data-nav="home" onclick="goTo('home')"><span class="nav-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span><span data-i18n="nav_home">Ana Sayfa</span></button>
-          <button class="nav-item active" data-nav="packs" onclick="goTo('packs')"><span class="nav-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span><span data-i18n="nav_packs">Desteler</span></button>
-          <button class="nav-item" data-nav="profile" onclick="goToProfile()"><span class="nav-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><span data-i18n="nav_profile">Profil</span></button>
+          <button class="nav-item" data-nav="home" onclick="goTo('home')">
+            <span class="nav-icon"
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" /></svg></span
+            ><span data-i18n="nav_home">Ana Sayfa</span>
+          </button>
+          <button
+            class="nav-item active"
+            data-nav="packs"
+            onclick="goTo('packs')"
+          >
+            <span class="nav-icon"
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" /></svg></span
+            ><span data-i18n="nav_packs">Desteler</span>
+          </button>
+          <button class="nav-item" data-nav="profile" onclick="goToProfile()">
+            <span class="nav-icon"
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" /></svg></span
+            ><span data-i18n="nav_profile">Profil</span>
+          </button>
         </nav>
       </div>
 
@@ -262,9 +630,53 @@
       <div id="profile" class="screen">
         <div id="profileContent" style="padding-bottom: 100px"></div>
         <nav class="bottom-nav">
-          <button class="nav-item" data-nav="home" onclick="goTo('home')"><span class="nav-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span><span data-i18n="nav_home">Ana Sayfa</span></button>
-          <button class="nav-item" data-nav="packs" onclick="goTo('packs')"><span class="nav-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span><span data-i18n="nav_packs">Desteler</span></button>
-          <button class="nav-item active" data-nav="profile" onclick="goToProfile()"><span class="nav-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><span data-i18n="nav_profile">Profil</span></button>
+          <button class="nav-item" data-nav="home" onclick="goTo('home')">
+            <span class="nav-icon"
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" /></svg></span
+            ><span data-i18n="nav_home">Ana Sayfa</span>
+          </button>
+          <button class="nav-item" data-nav="packs" onclick="goTo('packs')">
+            <span class="nav-icon"
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" /></svg></span
+            ><span data-i18n="nav_packs">Desteler</span>
+          </button>
+          <button
+            class="nav-item active"
+            data-nav="profile"
+            onclick="goToProfile()"
+          >
+            <span class="nav-icon"
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" /></svg></span
+            ><span data-i18n="nav_profile">Profil</span>
+          </button>
         </nav>
       </div>
 
@@ -277,7 +689,19 @@
       <div id="invite" class="screen">
         <div class="top-bar" style="width: 100%">
           <button class="btn-icon" onclick="goTo('packs')">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M19 12H5" />
+              <path d="M12 19l-7-7 7-7" />
+            </svg>
           </button>
           <h2 id="invitePackName">Couples Edition</h2>
         </div>
@@ -288,31 +712,89 @@
           <div class="invite-avatar them">?</div>
         </div>
 
-        <h2 class="syne" style="font-size: 22px; letter-spacing: -0.5px" data-i18n="invite_title">
+        <h2
+          class="syne"
+          style="font-size: 22px; letter-spacing: -0.5px"
+          data-i18n="invite_title"
+        >
           Partnerine gönder
         </h2>
-        <p style="font-size: 13px; color: var(--text-dim)" data-i18n="invite_desc">
+        <p
+          style="font-size: 13px; color: var(--text-dim)"
+          data-i18n="invite_desc"
+        >
           Aynı soruları alacak. Yanıtlar ikiniz de bitirene kadar gizli.
         </p>
 
         <div class="link-box glass">
           <span class="link-text" id="inviteLink">...</span>
-          <button class="copy-btn" onclick="copyInviteLink(this)" data-i18n="invite_copy">Kopyala</button>
+          <button
+            class="copy-btn"
+            onclick="copyInviteLink(this)"
+            data-i18n="invite_copy"
+          >
+            Kopyala
+          </button>
         </div>
 
         <div class="share-row">
-          <button class="share-btn" title="WhatsApp" onclick="shareInvite('whatsapp')">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <button
+            class="share-btn"
+            title="WhatsApp"
+            onclick="shareInvite('whatsapp')"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+              />
+            </svg>
           </button>
           <button class="share-btn" title="SMS" onclick="shareInvite('sms')">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+              />
+            </svg>
           </button>
-          <button class="share-btn" title="Share" onclick="shareInvite('share')">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+          <button
+            class="share-btn"
+            title="Share"
+            onclick="shareInvite('share')"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="18" cy="5" r="3" />
+              <circle cx="6" cy="12" r="3" />
+              <circle cx="18" cy="19" r="3" />
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+            </svg>
           </button>
         </div>
 
-        <button class="btn btn-primary" style="width: 100%; margin-top: auto" onclick="startQuizAsCreator()" data-i18n="invite_start">
+        <button
+          class="btn btn-primary"
+          style="width: 100%; margin-top: auto"
+          onclick="startQuizAsCreator()"
+          data-i18n="invite_start"
+        >
           Yanıtlamaya başla
         </button>
       </div>
@@ -320,8 +802,24 @@
       <!-- QUIZ -->
       <div id="quiz" class="screen">
         <div class="quiz-top">
-          <button class="btn-icon" onclick="confirmQuit()" style="width: 36px; height: 36px; font-size: 14px">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+          <button
+            class="btn-icon"
+            onclick="confirmQuit()"
+            style="width: 36px; height: 36px; font-size: 14px"
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M19 12H5" />
+              <path d="M12 19l-7-7 7-7" />
+            </svg>
           </button>
           <div class="progress-wrap">
             <div class="progress-bar" id="quizProgress" style="width: 0%"></div>
@@ -330,8 +828,23 @@
         </div>
         <div class="quiz-body" id="quizBody"></div>
         <div class="quiz-footer">
-          <button class="btn btn-secondary" id="quizBackBtn" onclick="prevQuestion()" style="display: none" data-i18n="quiz_back">Geri</button>
-          <button class="btn btn-primary" id="quizNextBtn" onclick="nextQuestion()" data-i18n="quiz_next">İleri</button>
+          <button
+            class="btn btn-secondary"
+            id="quizBackBtn"
+            onclick="prevQuestion()"
+            style="display: none"
+            data-i18n="quiz_back"
+          >
+            Geri
+          </button>
+          <button
+            class="btn btn-primary"
+            id="quizNextBtn"
+            onclick="nextQuestion()"
+            data-i18n="quiz_next"
+          >
+            İleri
+          </button>
         </div>
       </div>
 
@@ -343,33 +856,76 @@
           <div class="duo-circle you">
             <div class="duo-ripple"></div>
             <div class="duo-ripple r2"></div>
-            <div class="duo-orbit-track"><div class="duo-orbit-dot"></div><div class="duo-orbit-dot d2"></div><div class="duo-orbit-dot d3"></div></div>
+            <div class="duo-orbit-track">
+              <div class="duo-orbit-dot"></div>
+              <div class="duo-orbit-dot d2"></div>
+              <div class="duo-orbit-dot d3"></div>
+            </div>
             <div class="duo-avatar" id="waitingAvatarYou"></div>
           </div>
           <div class="duo-circle them">
             <div class="duo-ripple"></div>
             <div class="duo-ripple r2"></div>
-            <div class="duo-orbit-track"><div class="duo-orbit-dot"></div><div class="duo-orbit-dot d2"></div><div class="duo-orbit-dot d3"></div></div>
+            <div class="duo-orbit-track">
+              <div class="duo-orbit-dot"></div>
+              <div class="duo-orbit-dot d2"></div>
+              <div class="duo-orbit-dot d3"></div>
+            </div>
             <div class="duo-avatar" id="waitingAvatarThem">?</div>
           </div>
-          <div class="duo-particles"><div class="particle p1"></div><div class="particle p2"></div><div class="particle p3"></div><div class="particle p4"></div><div class="particle p5"></div><div class="particle p6"></div></div>
+          <div class="duo-particles">
+            <div class="particle p1"></div>
+            <div class="particle p2"></div>
+            <div class="particle p3"></div>
+            <div class="particle p4"></div>
+            <div class="particle p5"></div>
+            <div class="particle p6"></div>
+          </div>
         </div>
-        <h2 class="syne" style="font-size: 24px; letter-spacing: -0.5px" data-i18n="waiting_title">
+        <h2
+          class="syne"
+          style="font-size: 24px; letter-spacing: -0.5px"
+          data-i18n="waiting_title"
+        >
           Yanıtların kilitlendi
         </h2>
-        <p id="waitingDesc" style="font-size: 14px; color: var(--text-dim); line-height: 1.5" data-i18n="waiting_default_desc">
+        <p
+          id="waitingDesc"
+          style="font-size: 14px; color: var(--text-dim); line-height: 1.5"
+          data-i18n="waiting_default_desc"
+        >
           Partnerinin bitirmesini bekliyoruz...
         </p>
         <div class="waiting-partner-progress">
           <div class="dot-pulse"></div>
-          <span id="waitingStatus" data-i18n="waiting_checking">kontrol ediliyor...</span>
+          <span id="waitingStatus" data-i18n="waiting_checking"
+            >kontrol ediliyor...</span
+          >
         </div>
-        <p id="waitingShareLabel" style="font-size: 12px; color: var(--text-dim); margin-top: 24px" data-i18n="waiting_share_code">
+        <p
+          id="waitingShareLabel"
+          style="font-size: 12px; color: var(--text-dim); margin-top: 24px"
+          data-i18n="waiting_share_code"
+        >
           Bu kodu partnerinle paylaş:
         </p>
-        <div id="waitingShareBox" class="link-box glass" style="margin-top: 8px">
-          <span class="link-text" id="waitingCode" style="font-size: 20px; letter-spacing: 4px; font-weight: 700"></span>
-          <button class="copy-btn" onclick="copyInviteLink(this)" data-i18n="waiting_copy_link">Linki kopyala</button>
+        <div
+          id="waitingShareBox"
+          class="link-box glass"
+          style="margin-top: 8px"
+        >
+          <span
+            class="link-text"
+            id="waitingCode"
+            style="font-size: 20px; letter-spacing: 4px; font-weight: 700"
+          ></span>
+          <button
+            class="copy-btn"
+            onclick="copyInviteLink(this)"
+            data-i18n="waiting_copy_link"
+          >
+            Linki kopyala
+          </button>
         </div>
       </div>
 
@@ -387,26 +943,65 @@
       <!-- STRANGER SCREENS (hidden but needed for JS) -->
       <div id="strangerLobby" class="screen">
         <div class="stranger-lobby-content">
-          <button class="btn-icon stranger-back-btn" onclick="goTo('home')"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg></button>
+          <button class="btn-icon stranger-back-btn" onclick="goTo('home')">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M19 12H5" />
+              <path d="M12 19l-7-7 7-7" />
+            </svg>
+          </button>
           <div class="stranger-hero-icon">M</div>
-          <h2 class="syne stranger-title" data-i18n="stranger_meet">Yabancıyla tanış</h2>
-          <p class="stranger-subtitle-text" data-i18n="stranger_tagline">Aynı sorular. Gizli yanıtlar. Uyum var mı bak.</p>
-          <button class="btn btn-primary stranger-find-btn" onclick="enterStrangerQueue()" data-i18n="stranger_find">Eşleşme bul</button>
-          <p class="stranger-note" data-i18n="stranger_subtitle">Yeni biriyle rastgele bir deste oynayacaksın</p>
+          <h2 class="syne stranger-title" data-i18n="stranger_meet">
+            Yabancıyla tanış
+          </h2>
+          <p class="stranger-subtitle-text" data-i18n="stranger_tagline">
+            Aynı sorular. Gizli yanıtlar. Uyum var mı bak.
+          </p>
+          <button
+            class="btn btn-primary stranger-find-btn"
+            onclick="enterStrangerQueue()"
+            data-i18n="stranger_find"
+          >
+            Eşleşme bul
+          </button>
+          <p class="stranger-note" data-i18n="stranger_subtitle">
+            Yeni biriyle rastgele bir deste oynayacaksın
+          </p>
         </div>
       </div>
       <div id="strangerQueue" class="screen">
         <div class="stranger-queue-content">
-          <div class="stranger-radar"><div class="radar-ring r1"></div><div class="radar-ring r2"></div><div class="radar-ring r3"></div><div class="radar-dot"></div></div>
+          <div class="stranger-radar">
+            <div class="radar-ring r1"></div>
+            <div class="radar-ring r2"></div>
+            <div class="radar-ring r3"></div>
+            <div class="radar-dot"></div>
+          </div>
           <h2 class="syne" data-i18n="stranger_looking">Birini arıyoruz...</h2>
           <div class="stranger-elapsed" id="strangerElapsed">0:00</div>
-          <button class="btn btn-ghost" onclick="leaveStrangerQueue()" data-i18n="stranger_cancel">İptal</button>
+          <button
+            class="btn btn-ghost"
+            onclick="leaveStrangerQueue()"
+            data-i18n="stranger_cancel"
+          >
+            İptal
+          </button>
         </div>
       </div>
       <div id="strangerMatched" class="screen">
         <div class="stranger-matched-content">
-          <div class="stranger-match-pop"><div class="stranger-match-avatar" id="strangerMatchAvatar"></div></div>
-          <h2 class="syne stranger-found-text" data-i18n="stranger_found">Birini bulduk!</h2>
+          <div class="stranger-match-pop">
+            <div class="stranger-match-avatar" id="strangerMatchAvatar"></div>
+          </div>
+          <h2 class="syne stranger-found-text" data-i18n="stranger_found">
+            Birini bulduk!
+          </h2>
           <p class="stranger-pack-info" id="strangerPackInfo"></p>
         </div>
       </div>
@@ -415,10 +1010,29 @@
           <div class="stranger-vote-avatar" id="strangerVoteAvatar"></div>
           <h2 class="syne" id="strangerVoteTitle">Uyum var mı?</h2>
           <div class="stranger-vote-buttons">
-            <button class="btn btn-primary stranger-vote-yes" onclick="submitStrangerVote('yes')" data-i18n="stranger_vote_yes">Evet, sohbet</button>
-            <button class="btn btn-ghost stranger-vote-no" onclick="submitStrangerVote('no')" data-i18n="stranger_vote_no">Yok, sonraki</button>
+            <button
+              class="btn btn-primary stranger-vote-yes"
+              onclick="submitStrangerVote('yes')"
+              data-i18n="stranger_vote_yes"
+            >
+              Evet, sohbet
+            </button>
+            <button
+              class="btn btn-ghost stranger-vote-no"
+              onclick="submitStrangerVote('no')"
+              data-i18n="stranger_vote_no"
+            >
+              Yok, sonraki
+            </button>
           </div>
-          <p class="stranger-vote-waiting" id="strangerVoteWaiting" style="display:none" data-i18n="stranger_waiting_vote">Yanıtını bekliyoruz...</p>
+          <p
+            class="stranger-vote-waiting"
+            id="strangerVoteWaiting"
+            style="display: none"
+            data-i18n="stranger_waiting_vote"
+          >
+            Yanıtını bekliyoruz...
+          </p>
         </div>
       </div>
       <div id="strangerResult" class="screen">
@@ -427,8 +1041,20 @@
           <h2 class="syne" id="strangerResultTitle"></h2>
           <p id="strangerResultDesc" class="stranger-result-desc"></p>
           <div class="stranger-result-actions">
-            <button class="btn btn-primary" onclick="enterStrangerQueue()" data-i18n="stranger_play_again">Yeni birini bul</button>
-            <button class="btn btn-ghost" onclick="goTo('home')" data-i18n="stranger_back">Ana sayfaya dön</button>
+            <button
+              class="btn btn-primary"
+              onclick="enterStrangerQueue()"
+              data-i18n="stranger_play_again"
+            >
+              Yeni birini bul
+            </button>
+            <button
+              class="btn btn-ghost"
+              onclick="goTo('home')"
+              data-i18n="stranger_back"
+            >
+              Ana sayfaya dön
+            </button>
           </div>
         </div>
       </div>
@@ -437,37 +1063,102 @@
       <div class="modal-overlay" id="submitModal">
         <div class="modal-box">
           <h3 class="syne" data-i18n="modal_title">Yanıtlarını kilitle?</h3>
-          <p data-i18n="modal_desc">Gönderdikten sonra değiştiremezsin. Partnerin bilgilendirilecek.</p>
-          <button class="btn btn-primary" onclick="submitAnswers()" data-i18n="modal_confirm">Kilitle</button>
-          <button class="btn btn-ghost" onclick="closeModal()" data-i18n="modal_cancel">Geri dön</button>
+          <p data-i18n="modal_desc">
+            Gönderdikten sonra değiştiremezsin. Partnerin bilgilendirilecek.
+          </p>
+          <button
+            class="btn btn-primary"
+            onclick="submitAnswers()"
+            data-i18n="modal_confirm"
+          >
+            Kilitle
+          </button>
+          <button
+            class="btn btn-ghost"
+            onclick="closeModal()"
+            data-i18n="modal_cancel"
+          >
+            Geri dön
+          </button>
         </div>
       </div>
 
       <div class="modal-overlay" id="deleteModal">
         <div class="modal-box">
           <h3 class="syne" data-i18n="delete_title">Bu oturumu sil?</h3>
-          <p data-i18n="delete_desc">Listenden kaldırılacak. Bu geri alınamaz.</p>
-          <button class="btn btn-primary" style="background: #dc2626; border-color: #dc2626" onclick="confirmDeleteSession()" data-i18n="delete_confirm">Sil</button>
-          <button class="btn btn-ghost" onclick="closeDeleteModal()" data-i18n="delete_cancel">İptal</button>
+          <p data-i18n="delete_desc">
+            Listenden kaldırılacak. Bu geri alınamaz.
+          </p>
+          <button
+            class="btn btn-primary"
+            style="background: #dc2626; border-color: #dc2626"
+            onclick="confirmDeleteSession()"
+            data-i18n="delete_confirm"
+          >
+            Sil
+          </button>
+          <button
+            class="btn btn-ghost"
+            onclick="closeDeleteModal()"
+            data-i18n="delete_cancel"
+          >
+            İptal
+          </button>
         </div>
       </div>
 
       <div class="modal-overlay" id="saveAccountModal">
         <div class="modal-box">
           <h3 class="syne" data-i18n="save_title">Hesabını kaydet?</h3>
-          <p data-i18n="save_desc">Şifre belirle, geçmişini gör, yeni oturumlar başlat.</p>
-          <input type="password" id="saveAccPassword" class="auth-input" data-i18n-placeholder="auth_create_password_placeholder" placeholder="Şifre oluştur..." autocomplete="new-password" style="text-align: left" />
-          <input type="password" id="saveAccPasswordConfirm" class="auth-input" data-i18n-placeholder="auth_confirm_password_placeholder" placeholder="Şifreyi onayla..." autocomplete="new-password" style="text-align: left; margin-top: 8px" />
+          <p data-i18n="save_desc">
+            Şifre belirle, geçmişini gör, yeni oturumlar başlat.
+          </p>
+          <input
+            type="password"
+            id="saveAccPassword"
+            class="auth-input"
+            data-i18n-placeholder="auth_create_password_placeholder"
+            placeholder="Şifre oluştur..."
+            autocomplete="new-password"
+            style="text-align: left"
+          />
+          <input
+            type="password"
+            id="saveAccPasswordConfirm"
+            class="auth-input"
+            data-i18n-placeholder="auth_confirm_password_placeholder"
+            placeholder="Şifreyi onayla..."
+            autocomplete="new-password"
+            style="text-align: left; margin-top: 8px"
+          />
           <div id="saveAccError" class="auth-error"></div>
-          <button class="btn btn-primary" onclick="saveGuestAccount()" data-i18n="save_confirm">Kaydet</button>
-          <button class="btn btn-ghost" onclick="closeSaveAccountModal()" data-i18n="save_skip">Şimdilik geç</button>
+          <button
+            class="btn btn-primary"
+            onclick="saveGuestAccount()"
+            data-i18n="save_confirm"
+          >
+            Kaydet
+          </button>
+          <button
+            class="btn btn-ghost"
+            onclick="closeSaveAccountModal()"
+            data-i18n="save_skip"
+          >
+            Şimdilik geç
+          </button>
         </div>
       </div>
 
       <!-- PREMIUM MODAL -->
-      <div class="modal-overlay premium-overlay" id="premiumModal" onclick="if (event.target === this) closePremiumModal();">
+      <div
+        class="modal-overlay premium-overlay"
+        id="premiumModal"
+        onclick="if (event.target === this) closePremiumModal();"
+      >
         <div class="premium-modal">
-          <button class="premium-close" onclick="closePremiumModal()">&times;</button>
+          <button class="premium-close" onclick="closePremiumModal()">
+            &times;
+          </button>
           <div class="premium-pack-banner" style="display: none"></div>
           <div class="premium-hero">
             <div class="premium-icon-glow"></div>
@@ -475,12 +1166,27 @@
             <h2 class="premium-modal-title syne">Mira+</h2>
             <p class="premium-modal-subtitle">Daha derine in</p>
           </div>
-          <div class="premium-limited-badge"><span class="premium-limited-dot"></span><span class="premium-limited-tag">Sınırlı süre — %50 indirim</span></div>
+          <div class="premium-limited-badge">
+            <span class="premium-limited-dot"></span
+            ><span class="premium-limited-tag">Sınırlı süre — %50 indirim</span>
+          </div>
           <div class="premium-features">
-            <div class="premium-feature"><span class="premium-feature-check">✓</span><span class="premium-feature-text">30+ soru destesi</span></div>
-            <div class="premium-feature"><span class="premium-feature-check">✓</span><span class="premium-feature-text">Derin ilişki analizi</span></div>
-            <div class="premium-feature"><span class="premium-feature-check">✓</span><span class="premium-feature-text">AI ilişki danışmanı</span></div>
-            <div class="premium-feature"><span class="premium-feature-check">✓</span><span class="premium-feature-text">Sınırsız oturum</span></div>
+            <div class="premium-feature">
+              <span class="premium-feature-check">✓</span
+              ><span class="premium-feature-text">30+ soru destesi</span>
+            </div>
+            <div class="premium-feature">
+              <span class="premium-feature-check">✓</span
+              ><span class="premium-feature-text">Derin ilişki analizi</span>
+            </div>
+            <div class="premium-feature">
+              <span class="premium-feature-check">✓</span
+              ><span class="premium-feature-text">AI ilişki danışmanı</span>
+            </div>
+            <div class="premium-feature">
+              <span class="premium-feature-check">✓</span
+              ><span class="premium-feature-text">Sınırsız oturum</span>
+            </div>
           </div>
           <div class="premium-pricing">
             <div class="premium-price-row">
@@ -489,32 +1195,116 @@
               <span class="premium-price-period">/ay</span>
             </div>
           </div>
-          <button class="btn btn-primary premium-cta-btn" onclick="mockPurchasePremium()">Ücretsiz dene</button>
+          <button
+            class="btn btn-primary premium-cta-btn"
+            onclick="mockPurchasePremium()"
+          >
+            Ücretsiz dene
+          </button>
           <div class="premium-social">
-            <div class="premium-avatars"><span class="premium-avatar-dot"></span><span class="premium-avatar-dot"></span><span class="premium-avatar-dot"></span><span class="premium-avatar-dot"></span><span class="premium-avatar-dot"></span></div>
+            <div class="premium-avatars">
+              <span class="premium-avatar-dot"></span
+              ><span class="premium-avatar-dot"></span
+              ><span class="premium-avatar-dot"></span
+              ><span class="premium-avatar-dot"></span
+              ><span class="premium-avatar-dot"></span>
+            </div>
             <div class="premium-social-proof">2.400+ kişi yükseltti</div>
           </div>
           <div class="premium-guarantee">Deneyenlerin %94'ü memnun</div>
-          <button class="btn btn-ghost premium-restore-btn" onclick="mockPurchasePremium()">Satın almayı geri yükle</button>
+          <button
+            class="btn btn-ghost premium-restore-btn"
+            onclick="mockPurchasePremium()"
+          >
+            Satın almayı geri yükle
+          </button>
         </div>
       </div>
 
       <!-- SETTINGS -->
-      <div class="settings-backdrop" id="settingsBackdrop" onclick="toggleSettings()"></div>
+      <div
+        class="settings-backdrop"
+        id="settingsBackdrop"
+        onclick="toggleSettings()"
+      ></div>
       <div class="settings-panel" id="settingsPanel">
         <div class="settings-handle"></div>
         <div class="settings-label" data-i18n="settings_mode">Mod</div>
         <div class="theme-mode-row">
-          <button class="theme-mode-btn" id="modeBtn-dark" onclick="setTheme('dark')" data-i18n="settings_dark">Koyu</button>
-          <button class="theme-mode-btn active" id="modeBtn-light" onclick="setTheme('light')" data-i18n="settings_light">Açık</button>
+          <button
+            class="theme-mode-btn"
+            id="modeBtn-dark"
+            onclick="setTheme('dark')"
+            data-i18n="settings_dark"
+          >
+            Koyu
+          </button>
+          <button
+            class="theme-mode-btn active"
+            id="modeBtn-light"
+            onclick="setTheme('light')"
+            data-i18n="settings_light"
+          >
+            Açık
+          </button>
         </div>
         <div class="settings-label" data-i18n="settings_accent">Renk</div>
         <div class="accent-row">
-          <button class="accent-swatch" data-accent="sunset" onclick="setAccent('sunset')"><div class="swatch-inner"><div class="half" style="background: #7c3aed"></div><div class="half" style="background: #ec4899"></div></div><span class="check">✓</span></button>
-          <button class="accent-swatch active" data-accent="ocean" onclick="setAccent('ocean')"><div class="swatch-inner"><div class="half" style="background: #0ea5e9"></div><div class="half" style="background: #6366f1"></div></div><span class="check">✓</span></button>
-          <button class="accent-swatch" data-accent="ember" onclick="setAccent('ember')"><div class="swatch-inner"><div class="half" style="background: #f97316"></div><div class="half" style="background: #ef4444"></div></div><span class="check">✓</span></button>
-          <button class="accent-swatch" data-accent="mint" onclick="setAccent('mint')"><div class="swatch-inner"><div class="half" style="background: #10b981"></div><div class="half" style="background: #06b6d4"></div></div><span class="check">✓</span></button>
-          <button class="accent-swatch" data-accent="candy" onclick="setAccent('candy')"><div class="swatch-inner"><div class="half" style="background: #e879f9"></div><div class="half" style="background: #fb923c"></div></div><span class="check">✓</span></button>
+          <button
+            class="accent-swatch"
+            data-accent="sunset"
+            onclick="setAccent('sunset')"
+          >
+            <div class="swatch-inner">
+              <div class="half" style="background: #7c3aed"></div>
+              <div class="half" style="background: #ec4899"></div>
+            </div>
+            <span class="check">✓</span>
+          </button>
+          <button
+            class="accent-swatch active"
+            data-accent="ocean"
+            onclick="setAccent('ocean')"
+          >
+            <div class="swatch-inner">
+              <div class="half" style="background: #0ea5e9"></div>
+              <div class="half" style="background: #6366f1"></div>
+            </div>
+            <span class="check">✓</span>
+          </button>
+          <button
+            class="accent-swatch"
+            data-accent="ember"
+            onclick="setAccent('ember')"
+          >
+            <div class="swatch-inner">
+              <div class="half" style="background: #f97316"></div>
+              <div class="half" style="background: #ef4444"></div>
+            </div>
+            <span class="check">✓</span>
+          </button>
+          <button
+            class="accent-swatch"
+            data-accent="mint"
+            onclick="setAccent('mint')"
+          >
+            <div class="swatch-inner">
+              <div class="half" style="background: #10b981"></div>
+              <div class="half" style="background: #06b6d4"></div>
+            </div>
+            <span class="check">✓</span>
+          </button>
+          <button
+            class="accent-swatch"
+            data-accent="candy"
+            onclick="setAccent('candy')"
+          >
+            <div class="swatch-inner">
+              <div class="half" style="background: #e879f9"></div>
+              <div class="half" style="background: #fb923c"></div>
+            </div>
+            <span class="check">✓</span>
+          </button>
         </div>
       </div>
 
