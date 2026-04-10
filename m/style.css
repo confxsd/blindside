@@ -400,42 +400,120 @@ html, body, #app {
 }
 
 /* ===== MIRA MATCHES WIDGET ===== */
-.mira-section-header .mira-section-title { display: block; }
-.mira-section-sub {
-  display: block;
-  font-size: 11px;
-  color: #999;
-  font-weight: 400;
-  margin-top: 2px;
+.mira-matches-section {
+  margin: 8px 16px 24px;
+  padding: 20px 8px 8px;
+  background: linear-gradient(180deg, #f5f9ff 0%, #ffffff 100%);
+  border: 1px solid #e4ecfa;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
 }
-[data-theme="dark"] .mira-section-sub { color: rgba(255,255,255,0.4); }
-.mira-section-link {
+.mira-matches-section::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(37,99,235,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+[data-theme="dark"] .mira-matches-section {
+  background: linear-gradient(180deg, rgba(37,99,235,0.05) 0%, rgba(255,255,255,0.01) 100%);
+  border-color: rgba(37,99,235,0.15);
+}
+
+.mira-matches-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 16px 16px;
+  position: relative;
+  z-index: 1;
+}
+.mira-matches-header-left { flex: 1; min-width: 0; }
+.mira-matches-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #2563EB;
+  background: rgba(37,99,235,0.1);
+  padding: 4px 10px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+}
+.mira-matches-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #2563EB;
+  box-shadow: 0 0 0 0 rgba(37,99,235,0.6);
+  animation: matches-pulse 2s ease-out infinite;
+}
+@keyframes matches-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37,99,235,0.6); }
+  70% { box-shadow: 0 0 0 6px rgba(37,99,235,0); }
+  100% { box-shadow: 0 0 0 0 rgba(37,99,235,0); }
+}
+.mira-matches-title {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #0a0a0a;
+  margin-bottom: 4px;
+  line-height: 1.25;
+}
+[data-theme="dark"] .mira-matches-title { color: #f0f0f0; }
+.mira-matches-subtitle {
   font-size: 11px;
-  font-weight: 500;
+  color: #888;
+  line-height: 1.5;
+}
+[data-theme="dark"] .mira-matches-subtitle { color: rgba(255,255,255,0.5); }
+
+.mira-matches-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: #2563EB;
   text-decoration: none;
-  padding: 4px 10px;
+  padding: 6px 12px;
   border-radius: 100px;
-  background: #eef4ff;
+  background: #fff;
+  border: 1px solid #dbeafe;
   transition: all 0.2s ease;
+  flex-shrink: 0;
 }
-.mira-section-link:hover { background: #dbeafe; }
-[data-theme="dark"] .mira-section-link {
-  background: rgba(37,99,235,0.12);
+.mira-matches-all:hover {
+  background: #2563EB;
+  color: #fff;
+  border-color: #2563EB;
+}
+[data-theme="dark"] .mira-matches-all {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(37,99,235,0.3);
 }
 
 .mira-matches {
-  padding: 0 24px 16px;
   display: flex;
   flex-direction: column;
   gap: 8px;
+  position: relative;
+  z-index: 1;
 }
 
 .mira-match-card {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 14px;
   padding: 14px 16px;
   background: #fff;
@@ -443,43 +521,54 @@ html, body, #app {
   border-radius: 14px;
   text-decoration: none;
   color: inherit;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
+  position: relative;
 }
 [data-theme="dark"] .mira-match-card {
-  background: rgba(255,255,255,0.03);
+  background: rgba(255,255,255,0.04);
   border-color: rgba(255,255,255,0.08);
 }
 .mira-match-card:hover {
-  border-color: #c7d9f7;
+  border-color: #2563EB;
   transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(37,99,235,0.08);
+  box-shadow: 0 4px 12px rgba(37,99,235,0.1);
 }
-[data-theme="dark"] .mira-match-card:hover {
-  border-color: rgba(37,99,235,0.3);
+.mira-match-card.is-new {
+  border-color: #2563EB;
+  background: linear-gradient(180deg, #f5f9ff 0%, #ffffff 60%);
+}
+[data-theme="dark"] .mira-match-card.is-new {
+  background: linear-gradient(180deg, rgba(37,99,235,0.08) 0%, rgba(255,255,255,0.02) 60%);
 }
 
 .mira-match-avatar {
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #eef4ff 0%, #dbeafe 100%);
-  color: #2563EB;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563EB 100%);
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 600;
   flex-shrink: 0;
-  border: 1px solid #d4e0f7;
-}
-[data-theme="dark"] .mira-match-avatar {
-  background: rgba(37,99,235,0.15);
-  border-color: rgba(37,99,235,0.25);
+  box-shadow: 0 2px 6px rgba(37,99,235,0.25);
 }
 
-.mira-match-body { flex: 1; min-width: 0; }
+.mira-match-body {
+  flex: 1;
+  min-width: 0;
+}
+.mira-match-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 3px;
+  flex-wrap: wrap;
+}
 .mira-match-name {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   color: #0a0a0a;
   letter-spacing: -0.01em;
@@ -487,10 +576,40 @@ html, body, #app {
 [data-theme="dark"] .mira-match-name { color: #f0f0f0; }
 .mira-match-meta {
   font-size: 12px;
-  color: #888;
-  margin-top: 2px;
+  color: #666;
+  margin-bottom: 4px;
 }
-[data-theme="dark"] .mira-match-meta { color: rgba(255,255,255,0.5); }
+[data-theme="dark"] .mira-match-meta { color: rgba(255,255,255,0.55); }
+.mira-match-bio {
+  font-size: 12px;
+  color: #999;
+  line-height: 1.4;
+  font-style: italic;
+}
+[data-theme="dark"] .mira-match-bio { color: rgba(255,255,255,0.45); }
+
+.mira-match-badge {
+  font-size: 9px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 100px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+.mira-match-badge.new {
+  background: #2563EB;
+  color: #fff;
+}
+.mira-match-badge.expiring {
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+}
+[data-theme="dark"] .mira-match-badge.expiring {
+  background: rgba(220,38,38,0.15);
+  border-color: rgba(220,38,38,0.3);
+}
 
 .mira-match-timer {
   display: flex;
@@ -503,51 +622,57 @@ html, body, #app {
   background: #f0fdf4;
   color: #16a34a;
   flex-shrink: 0;
+  border: 1px solid #bbf7d0;
 }
 .mira-match-timer.soon {
   background: #fffbeb;
   color: #d97706;
+  border-color: #fde68a;
 }
 .mira-match-timer.urgent {
   background: #fef2f2;
   color: #dc2626;
+  border-color: #fecaca;
 }
 [data-theme="dark"] .mira-match-timer {
   background: rgba(22,163,74,0.12);
+  border-color: rgba(22,163,74,0.25);
 }
 [data-theme="dark"] .mira-match-timer.soon {
   background: rgba(217,119,6,0.12);
+  border-color: rgba(217,119,6,0.25);
 }
 [data-theme="dark"] .mira-match-timer.urgent {
   background: rgba(220,38,38,0.12);
+  border-color: rgba(220,38,38,0.25);
 }
 
 .mira-matches-empty {
   display: flex;
   gap: 14px;
   padding: 20px;
-  background: #fafafa;
-  border: 1px dashed #e0e0e0;
+  background: #fff;
+  border: 1px dashed #d4e0f7;
   border-radius: 14px;
   align-items: center;
 }
 [data-theme="dark"] .mira-matches-empty {
   background: rgba(255,255,255,0.02);
-  border-color: rgba(255,255,255,0.1);
+  border-color: rgba(37,99,235,0.2);
 }
 .mira-matches-empty-icon {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: #f0f0f0;
-  color: #999;
+  background: #eef4ff;
+  color: #2563EB;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
 [data-theme="dark"] .mira-matches-empty-icon {
-  background: rgba(255,255,255,0.05);
+  background: rgba(37,99,235,0.12);
 }
 .mira-matches-empty-title {
   font-size: 13px;
