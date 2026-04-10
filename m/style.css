@@ -270,8 +270,7 @@ h3 { font-family: var(--font); font-weight: 500; letter-spacing: -0.02em; }
 [data-theme="dark"] .icon-sun { display: inline; }
 
 .home-tabs {
-  display: flex; gap: 4px; padding: 16px 24px 12px;
-  position: sticky; top: 52px; background: var(--bg); z-index: 9;
+  display: flex; gap: 4px; padding: 0;
 }
 .home-tab {
   padding: 8px 16px; border-radius: 100px;
@@ -1645,6 +1644,198 @@ h3 { font-family: var(--font); font-weight: 500; letter-spacing: -0.02em; }
 
 /* ===== RESULTS INSIGHTS BTN ===== */
 .results-insights-btn { }
+
+/* ===== MIRA GREETING ===== */
+.mira-greeting {
+  padding: 20px 24px 8px;
+}
+.mira-greeting-title {
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+.mira-greeting-sub {
+  font-size: 14px;
+  color: var(--text-mid);
+}
+
+/* ===== MIRA FEATURE CARDS ===== */
+.mira-features {
+  padding: 12px 24px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.mira-feature-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.25s var(--ease);
+}
+.mira-feature-card:hover {
+  border-color: var(--text-mid);
+}
+.mira-feature-card:active {
+  transform: scale(0.99);
+}
+.mira-feature-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-mid);
+  flex-shrink: 0;
+  transition: all 0.25s var(--ease);
+}
+.mira-feature-icon-accent {
+  background: var(--accent-1-bg);
+  border-color: var(--accent-1-border);
+  color: var(--accent-1);
+}
+.mira-feature-body {
+  flex: 1;
+  min-width: 0;
+}
+.mira-feature-title {
+  font-size: 14px;
+  font-weight: 500;
+}
+.mira-feature-desc {
+  font-size: 12px;
+  color: var(--text-mid);
+  margin-top: 2px;
+  line-height: 1.4;
+}
+.mira-feature-arrow {
+  color: var(--text-dim);
+  flex-shrink: 0;
+  transition: transform 0.25s var(--ease);
+}
+.mira-feature-card:hover .mira-feature-arrow {
+  transform: translateX(2px);
+}
+.mira-feature-badge {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 100px;
+  background: var(--accent-1-bg);
+  color: var(--accent-1);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  flex-shrink: 0;
+}
+.mira-feature-accent {
+  border-color: var(--accent-1-border);
+  background: rgba(37,99,235,0.02);
+}
+
+/* ===== MIRA COMPANION CARD ===== */
+.mira-companion-card {
+  margin: 12px 24px 8px;
+  padding: 20px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.mira-companion-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.mira-companion-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--text);
+  color: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+.mira-companion-name {
+  font-size: 13px;
+  font-weight: 500;
+}
+.mira-companion-status {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  color: var(--text-dim);
+}
+.mira-companion-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #16a34a;
+  animation: pulse 2s ease-in-out infinite;
+}
+.mira-companion-bubble {
+  font-size: 14px;
+  color: var(--text-mid);
+  line-height: 1.65;
+  padding: 14px 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 12px;
+}
+.mira-companion-prompts {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.mira-companion-prompt {
+  padding: 7px 16px;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+  background: transparent;
+  font-family: var(--font);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-mid);
+  cursor: pointer;
+  transition: all 0.2s var(--ease);
+}
+.mira-companion-prompt:hover {
+  border-color: var(--text-mid);
+  color: var(--text);
+}
+
+/* ===== SESSIONS SECTION HEADER ===== */
+.mira-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px 8px;
+}
+.mira-section-title {
+  font-size: 15px;
+  font-weight: 500;
+}
+.home-tabs-inline {
+  display: flex;
+  gap: 4px;
+}
+.home-tabs-inline .home-tab {
+  padding: 5px 12px;
+  font-size: 11px;
+}
 
 /* ===== LANGUAGE SELECTOR ===== */
 .lang-selector {

@@ -292,12 +292,6 @@
         <div class="home-header">
           <div class="home-brand">
             <h1>Mira</h1>
-            <span
-              id="homeUsername"
-              style="font-size: 13px; color: var(--text-dim); cursor: pointer"
-              onclick="switchUser()"
-              title="switch user"
-            ></span>
           </div>
           <div class="home-actions">
             <button
@@ -305,60 +299,84 @@
               onclick="cycleLang()"
               title="Language"
               id="langCycleBtn"
-              style="
-                font-size: 13px;
-                font-weight: 700;
-                font-family: var(--font);
-              "
+              style="font-size: 13px; font-weight: 700; font-family: var(--font)"
             >
               <span id="langCycleFlag"></span>
             </button>
-            <button
-              class="theme-toggle"
-              onclick="toggleSettings()"
-              title="Customize"
-            >
+            <button class="theme-toggle" onclick="toggleSettings()" title="Customize">
               <span class="icon-moon">L</span>
               <span class="icon-sun">D</span>
             </button>
           </div>
         </div>
 
-        <div class="home-tabs" id="homeTabs">
-          <button
-            class="home-tab active"
-            data-filter="all"
-            onclick="setHomeFilter('all')"
-            data-i18n="home_all"
-          >
-            Tümü
-          </button>
-          <button
-            class="home-tab"
-            data-filter="active"
-            onclick="setHomeFilter('active')"
-            data-i18n="home_active"
-          >
-            Aktif
-          </button>
-          <button
-            class="home-tab"
-            data-filter="completed"
-            onclick="setHomeFilter('completed')"
-            data-i18n="home_completed"
-          >
-            Biten
-          </button>
+        <!-- Greeting -->
+        <div class="mira-greeting" id="miraGreeting">
+          <span id="homeUsername" style="display:none"></span>
+          <h2 class="mira-greeting-title" id="miraGreetingTitle">Merhaba.</h2>
+          <p class="mira-greeting-sub">Bugün kimi keşfetmek istersin?</p>
+        </div>
+
+        <!-- Feature Cards -->
+        <div class="mira-features">
+          <div class="mira-feature-card" onclick="goTo('packs')">
+            <div class="mira-feature-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <div class="mira-feature-body">
+              <div class="mira-feature-title">Oyna</div>
+              <div class="mira-feature-desc">Soru destesi seç, partnerinle oyna</div>
+            </div>
+            <div class="mira-feature-arrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+
+          <div class="mira-feature-card mira-feature-accent" onclick="goToProfile()">
+            <div class="mira-feature-icon mira-feature-icon-accent">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+            </div>
+            <div class="mira-feature-body">
+              <div class="mira-feature-title">Karakter Analizi</div>
+              <div class="mira-feature-desc">Oynadıkça seni tanırız, desenlerini çıkarırız</div>
+            </div>
+            <div class="mira-feature-badge">Yakında</div>
+          </div>
+        </div>
+
+        <!-- Mira Companion Card -->
+        <div class="mira-companion-card">
+          <div class="mira-companion-top">
+            <div class="mira-companion-avatar">M</div>
+            <div>
+              <div class="mira-companion-name">Mira Asistan</div>
+              <div class="mira-companion-status">
+                <span class="mira-companion-dot"></span>
+                Aktif
+              </div>
+            </div>
+          </div>
+          <div class="mira-companion-bubble" id="miraCompanionBubble">
+            Henüz seni yeterince tanımıyorum. Birkaç deste oyna, sana özel içgörüler üreteyim.
+          </div>
+          <div class="mira-companion-prompts">
+            <button class="mira-companion-prompt" onclick="goTo('packs')">Bir deste oyna</button>
+            <button class="mira-companion-prompt" onclick="goToProfile()">Profilimi gör</button>
+          </div>
+        </div>
+
+        <!-- Sessions -->
+        <div class="mira-section-header">
+          <span class="mira-section-title">Oturumların</span>
+          <div class="home-tabs-inline" id="homeTabs">
+            <button class="home-tab active" data-filter="all" onclick="setHomeFilter('all')" data-i18n="home_all">Tümü</button>
+            <button class="home-tab" data-filter="active" onclick="setHomeFilter('active')" data-i18n="home_active">Aktif</button>
+            <button class="home-tab" data-filter="completed" onclick="setHomeFilter('completed')" data-i18n="home_completed">Biten</button>
+          </div>
         </div>
 
         <div class="fab-wrap">
-          <button
-            class="fab"
-            onclick="goTo('packs')"
-            data-i18n="home_new_session"
-          >
-            + Yeni oturum
-          </button>
+          <button class="fab" onclick="goTo('packs')" data-i18n="home_new_session">+ Yeni oturum</button>
         </div>
 
         <div id="homeSessions"></div>
@@ -1315,5 +1333,34 @@
     <script src="/lang.js?v=2"></script>
     <script src="/packs.js?v=2"></script>
     <script src="/app.js?v=2"></script>
+    <script>
+      // Mira: personalized greeting on home screen
+      const _origGoTo = window.goTo;
+      const _greetingSet = { done: false };
+      const _origLoadHome = window.loadHomeSessions;
+      if (_origLoadHome) {
+        window.loadHomeSessions = async function() {
+          await _origLoadHome.apply(this, arguments);
+          if (!_greetingSet.done && window.currentUser) {
+            _greetingSet.done = true;
+            const h = new Date().getHours();
+            const g = h < 12 ? 'Gunaydin' : h < 18 ? 'Merhaba' : 'Iyi aksamlar';
+            const name = currentUser.username || '';
+            const el = document.getElementById('miraGreetingTitle');
+            if (el) el.textContent = g + ', ' + name + '.';
+            // Update companion bubble based on session count
+            const bubble = document.getElementById('miraCompanionBubble');
+            if (bubble && window._cachedSessions && _cachedSessions.length > 0) {
+              const completed = _cachedSessions.filter(s => s.status === 'complete').length;
+              if (completed >= 3) {
+                bubble.textContent = 'Seni tanımaya başlıyorum. ' + completed + ' oturum tamamladın — desenlerin belirginleşiyor. Devam et!';
+              } else if (completed >= 1) {
+                bubble.textContent = completed + ' oturum tamamladın. Birkaç tane daha oyna, sana özel içgörüler çıkarayım.';
+              }
+            }
+          }
+        };
+      }
+    </script>
   </body>
 </html>
