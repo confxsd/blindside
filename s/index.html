@@ -498,7 +498,11 @@
         <div id="homeSessions"></div>
 
         <nav class="bottom-nav" id="bottomNav">
-          <button class="nav-item active" data-nav="home" onclick="goTo('home')">
+          <button
+            class="nav-item active"
+            data-nav="home"
+            onclick="goTo('home')"
+          >
             <span class="nav-icon">🏠</span>
             <span data-i18n="nav_home">Home</span>
           </button>
@@ -570,7 +574,11 @@
             <span class="nav-icon">🏠</span>
             <span data-i18n="nav_home">Home</span>
           </button>
-          <button class="nav-item active" data-nav="packs" onclick="goTo('packs')">
+          <button
+            class="nav-item active"
+            data-nav="packs"
+            onclick="goTo('packs')"
+          >
             <span class="nav-icon">🃏</span>
             <span data-i18n="nav_packs">Decks</span>
           </button>
@@ -590,7 +598,11 @@
             <span class="nav-icon">🏠</span>
             <span data-i18n="nav_home">Home</span>
           </button>
-          <button class="nav-item active" data-nav="packs" onclick="goTo('packs')">
+          <button
+            class="nav-item active"
+            data-nav="packs"
+            onclick="goTo('packs')"
+          >
             <span class="nav-icon">🃏</span>
             <span data-i18n="nav_packs">Decks</span>
           </button>
@@ -613,7 +625,11 @@
             <span class="nav-icon">🃏</span>
             <span data-i18n="nav_packs">Decks</span>
           </button>
-          <button class="nav-item active" data-nav="profile" onclick="goToProfile()">
+          <button
+            class="nav-item active"
+            data-nav="profile"
+            onclick="goToProfile()"
+          >
             <span class="nav-icon">✦</span>
             <span data-i18n="nav_profile">You</span>
           </button>
@@ -792,7 +808,11 @@
         >
           share this code with your partner:
         </p>
-        <div id="waitingShareBox" class="link-box glass" style="margin-top: 8px">
+        <div
+          id="waitingShareBox"
+          class="link-box glass"
+          style="margin-top: 8px"
+        >
           <span
             class="link-text"
             id="waitingCode"
@@ -822,12 +842,26 @@
       <!-- STRANGER: LOBBY -->
       <div id="strangerLobby" class="screen">
         <div class="stranger-lobby-content">
-          <button class="btn-icon stranger-back-btn" onclick="goTo('home')">←</button>
+          <button class="btn-icon stranger-back-btn" onclick="goTo('home')">
+            ←
+          </button>
           <div class="stranger-hero-icon">🫣</div>
-          <h2 class="syne stranger-title" data-i18n="stranger_meet">meet a stranger</h2>
-          <p class="stranger-subtitle-text" data-i18n="stranger_tagline">same questions. blind answers. see if you vibe.</p>
-          <button class="btn btn-primary stranger-find-btn" onclick="enterStrangerQueue()" data-i18n="stranger_find">find a match</button>
-          <p class="stranger-note" data-i18n="stranger_subtitle">you'll play a random pack with someone new</p>
+          <h2 class="syne stranger-title" data-i18n="stranger_meet">
+            meet a stranger
+          </h2>
+          <p class="stranger-subtitle-text" data-i18n="stranger_tagline">
+            same questions. blind answers. see if you vibe.
+          </p>
+          <button
+            class="btn btn-primary stranger-find-btn"
+            onclick="enterStrangerQueue()"
+            data-i18n="stranger_find"
+          >
+            find a match
+          </button>
+          <p class="stranger-note" data-i18n="stranger_subtitle">
+            you'll play a random pack with someone new
+          </p>
         </div>
       </div>
 
@@ -840,9 +874,17 @@
             <div class="radar-ring r3"></div>
             <div class="radar-dot"></div>
           </div>
-          <h2 class="syne" data-i18n="stranger_looking">looking for someone...</h2>
+          <h2 class="syne" data-i18n="stranger_looking">
+            looking for someone...
+          </h2>
           <div class="stranger-elapsed" id="strangerElapsed">0:00</div>
-          <button class="btn btn-ghost" onclick="leaveStrangerQueue()" data-i18n="stranger_cancel">cancel</button>
+          <button
+            class="btn btn-ghost"
+            onclick="leaveStrangerQueue()"
+            data-i18n="stranger_cancel"
+          >
+            cancel
+          </button>
         </div>
       </div>
 
@@ -852,7 +894,9 @@
           <div class="stranger-match-pop">
             <div class="stranger-match-avatar" id="strangerMatchAvatar"></div>
           </div>
-          <h2 class="syne stranger-found-text" data-i18n="stranger_found">found someone!</h2>
+          <h2 class="syne stranger-found-text" data-i18n="stranger_found">
+            found someone!
+          </h2>
           <p class="stranger-pack-info" id="strangerPackInfo"></p>
         </div>
       </div>
@@ -863,10 +907,29 @@
           <div class="stranger-vote-avatar" id="strangerVoteAvatar"></div>
           <h2 class="syne" id="strangerVoteTitle">vibe with them?</h2>
           <div class="stranger-vote-buttons">
-            <button class="btn btn-primary stranger-vote-yes" onclick="submitStrangerVote('yes')" data-i18n="stranger_vote_yes">yes, chat</button>
-            <button class="btn btn-ghost stranger-vote-no" onclick="submitStrangerVote('no')" data-i18n="stranger_vote_no">nah, next</button>
+            <button
+              class="btn btn-primary stranger-vote-yes"
+              onclick="submitStrangerVote('yes')"
+              data-i18n="stranger_vote_yes"
+            >
+              yes, chat
+            </button>
+            <button
+              class="btn btn-ghost stranger-vote-no"
+              onclick="submitStrangerVote('no')"
+              data-i18n="stranger_vote_no"
+            >
+              nah, next
+            </button>
           </div>
-          <p class="stranger-vote-waiting" id="strangerVoteWaiting" style="display:none" data-i18n="stranger_waiting_vote">waiting for their answer...</p>
+          <p
+            class="stranger-vote-waiting"
+            id="strangerVoteWaiting"
+            style="display: none"
+            data-i18n="stranger_waiting_vote"
+          >
+            waiting for their answer...
+          </p>
         </div>
       </div>
 
@@ -877,8 +940,20 @@
           <h2 class="syne" id="strangerResultTitle"></h2>
           <p id="strangerResultDesc" class="stranger-result-desc"></p>
           <div class="stranger-result-actions">
-            <button class="btn btn-primary" onclick="enterStrangerQueue()" data-i18n="stranger_play_again">find someone new</button>
-            <button class="btn btn-ghost" onclick="goTo('home')" data-i18n="stranger_back">back home</button>
+            <button
+              class="btn btn-primary"
+              onclick="enterStrangerQueue()"
+              data-i18n="stranger_play_again"
+            >
+              find someone new
+            </button>
+            <button
+              class="btn btn-ghost"
+              onclick="goTo('home')"
+              data-i18n="stranger_back"
+            >
+              back home
+            </button>
           </div>
         </div>
       </div>
@@ -1033,8 +1108,8 @@
           <!-- Pricing -->
           <div class="premium-pricing">
             <div class="premium-price-row">
-              <span class="premium-price-was">$9.99</span>
-              <span class="premium-price-current">$4.99</span>
+              <span class="premium-price-was">$19.99</span>
+              <span class="premium-price-current">$9.99</span>
               <span class="premium-price-period">/month</span>
             </div>
           </div>

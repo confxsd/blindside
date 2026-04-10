@@ -308,11 +308,19 @@
               onclick="cycleLang()"
               title="Language"
               id="langCycleBtn"
-              style="font-size: 13px; font-weight: 700; font-family: var(--font)"
+              style="
+                font-size: 13px;
+                font-weight: 700;
+                font-family: var(--font);
+              "
             >
               <span id="langCycleFlag"></span>
             </button>
-            <button class="theme-toggle" onclick="toggleSettings()" title="Customize">
+            <button
+              class="theme-toggle"
+              onclick="toggleSettings()"
+              title="Customize"
+            >
               <span class="icon-moon">L</span>
               <span class="icon-sun">D</span>
             </button>
@@ -321,7 +329,7 @@
 
         <!-- Greeting -->
         <div class="mira-greeting" id="miraGreeting">
-          <span id="homeUsername" style="display:none"></span>
+          <span id="homeUsername" style="display: none"></span>
           <h2 class="mira-greeting-title" id="miraGreetingTitle">Merhaba.</h2>
           <p class="mira-greeting-sub">Bugün kimi keşfetmek istersin?</p>
         </div>
@@ -330,24 +338,67 @@
         <div class="mira-features">
           <div class="mira-feature-card" onclick="goTo('packs')">
             <div class="mira-feature-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" />
+              </svg>
             </div>
             <div class="mira-feature-body">
               <div class="mira-feature-title">Oyna</div>
-              <div class="mira-feature-desc">Soru destesi seç, partnerinle oyna</div>
+              <div class="mira-feature-desc">
+                Soru destesi seç, partnerinle oyna
+              </div>
             </div>
             <div class="mira-feature-arrow">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14" />
+                <path d="M12 5l7 7-7 7" />
+              </svg>
             </div>
           </div>
 
-          <div class="mira-feature-card mira-feature-accent" onclick="goToProfile()">
+          <div
+            class="mira-feature-card mira-feature-accent"
+            onclick="goToProfile()"
+          >
             <div class="mira-feature-icon mira-feature-icon-accent">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 16v-4" />
+                <path d="M12 8h.01" />
+              </svg>
             </div>
             <div class="mira-feature-body">
               <div class="mira-feature-title">Karakter Analizi</div>
-              <div class="mira-feature-desc">Oynadıkça seni tanırız, desenlerini çıkarırız</div>
+              <div class="mira-feature-desc">
+                Oynadıkça seni tanırız, desenlerini çıkarırız
+              </div>
             </div>
             <div class="mira-feature-badge">Yakında</div>
           </div>
@@ -366,11 +417,16 @@
             </div>
           </div>
           <div class="mira-companion-bubble" id="miraCompanionBubble">
-            Henüz seni yeterince tanımıyorum. Birkaç deste oyna, sana özel içgörüler üreteyim.
+            Henüz seni yeterince tanımıyorum. Birkaç deste oyna, sana özel
+            içgörüler üreteyim.
           </div>
           <div class="mira-companion-prompts">
-            <button class="mira-companion-prompt" onclick="goTo('packs')">Bir deste oyna</button>
-            <button class="mira-companion-prompt" onclick="goToProfile()">Profilimi gör</button>
+            <button class="mira-companion-prompt" onclick="goTo('packs')">
+              Bir deste oyna
+            </button>
+            <button class="mira-companion-prompt" onclick="goToProfile()">
+              Profilimi gör
+            </button>
           </div>
         </div>
 
@@ -378,14 +434,41 @@
         <div class="mira-section-header">
           <span class="mira-section-title">Oturumların</span>
           <div class="home-tabs-inline" id="homeTabs">
-            <button class="home-tab active" data-filter="all" onclick="setHomeFilter('all')" data-i18n="home_all">Tümü</button>
-            <button class="home-tab" data-filter="active" onclick="setHomeFilter('active')" data-i18n="home_active">Aktif</button>
-            <button class="home-tab" data-filter="completed" onclick="setHomeFilter('completed')" data-i18n="home_completed">Biten</button>
+            <button
+              class="home-tab active"
+              data-filter="all"
+              onclick="setHomeFilter('all')"
+              data-i18n="home_all"
+            >
+              Tümü
+            </button>
+            <button
+              class="home-tab"
+              data-filter="active"
+              onclick="setHomeFilter('active')"
+              data-i18n="home_active"
+            >
+              Aktif
+            </button>
+            <button
+              class="home-tab"
+              data-filter="completed"
+              onclick="setHomeFilter('completed')"
+              data-i18n="home_completed"
+            >
+              Biten
+            </button>
           </div>
         </div>
 
         <div class="fab-wrap">
-          <button class="fab" onclick="goTo('packs')" data-i18n="home_new_session">+ Yeni oturum</button>
+          <button
+            class="fab"
+            onclick="goTo('packs')"
+            data-i18n="home_new_session"
+          >
+            + Yeni oturum
+          </button>
         </div>
 
         <div id="homeSessions"></div>
@@ -523,11 +606,28 @@
         <!-- Info box -->
         <div class="mira-packs-info">
           <div class="mira-packs-info-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 16v-4" />
+              <path d="M12 8h.01" />
+            </svg>
           </div>
           <div>
             <div class="mira-packs-info-title">Nasıl çalışır?</div>
-            <div class="mira-packs-info-text">Bir deste seç, linki partnerine gönder. İkiniz de aynı soruları gizlice yanıtlayın — sonuçlar aynı anda açılır. Birbirinizi ne kadar tanıdığınızı görün.</div>
+            <div class="mira-packs-info-text">
+              Bir deste seç, linki partnerine gönder. İkiniz de aynı soruları
+              gizlice yanıtlayın — sonuçlar aynı anda açılır. Birbirinizi ne
+              kadar tanıdığınızı görün.
+            </div>
           </div>
         </div>
 
@@ -726,17 +826,33 @@
       <!-- DECK INTRO -->
       <div id="deckIntro" class="screen">
         <div class="deck-intro-wrap">
-          <div class="top-bar" style="width:100%;padding:16px 20px">
+          <div class="top-bar" style="width: 100%; padding: 16px 20px">
             <button class="btn-icon" onclick="goTo('packs')">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M19 12H5" />
+                <path d="M12 19l-7-7 7-7" />
+              </svg>
             </button>
           </div>
 
           <div class="deck-intro-hero">
             <div class="deck-intro-emoji" id="deckIntroEmoji">💕</div>
             <div class="deck-intro-label" id="deckIntroCount">10 soru</div>
-            <h1 class="deck-intro-title" id="deckIntroTitle">Couples Edition</h1>
-            <p class="deck-intro-desc" id="deckIntroDesc">Birbirinizi ne kadar tanıyorsunuz?</p>
+            <h1 class="deck-intro-title" id="deckIntroTitle">
+              Couples Edition
+            </h1>
+            <p class="deck-intro-desc" id="deckIntroDesc">
+              Birbirinizi ne kadar tanıyorsunuz?
+            </p>
           </div>
 
           <div class="deck-intro-steps">
@@ -744,28 +860,47 @@
               <div class="deck-intro-step-num">1</div>
               <div class="deck-intro-step-body">
                 <div class="deck-intro-step-title">Oturum oluştur</div>
-                <div class="deck-intro-step-text">Linki al, partnerinle paylaş.</div>
+                <div class="deck-intro-step-text">
+                  Linki al, partnerinle paylaş.
+                </div>
               </div>
             </div>
             <div class="deck-intro-step">
               <div class="deck-intro-step-num">2</div>
               <div class="deck-intro-step-body">
                 <div class="deck-intro-step-title">Gizlice yanıtlayın</div>
-                <div class="deck-intro-step-text">İkiniz de aynı soruları, birbirinizi görmeden.</div>
+                <div class="deck-intro-step-text">
+                  İkiniz de aynı soruları, birbirinizi görmeden.
+                </div>
               </div>
             </div>
             <div class="deck-intro-step">
               <div class="deck-intro-step-num">3</div>
               <div class="deck-intro-step-body">
                 <div class="deck-intro-step-title">Birlikte açığa çıkarın</div>
-                <div class="deck-intro-step-text">Herkes bitirince sonuçlar aynı anda açılır.</div>
+                <div class="deck-intro-step-text">
+                  Herkes bitirince sonuçlar aynı anda açılır.
+                </div>
               </div>
             </div>
           </div>
 
           <div class="deck-intro-tip">
             <div class="deck-intro-tip-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 16v-4" />
+                <path d="M12 8h.01" />
+              </svg>
             </div>
             <div>
               <strong>İpucu:</strong> Dürüst ol. Doğru ya da yanlış cevap yok —
@@ -777,9 +912,24 @@
           <div class="deck-intro-footer">
             <button class="btn btn-primary deck-intro-cta" id="deckIntroStart">
               Oturum oluştur
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:6px"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                style="margin-left: 6px"
+              >
+                <path d="M5 12h14" />
+                <path d="M12 5l7 7-7 7" />
+              </svg>
             </button>
-            <p class="deck-intro-note">Oturumu oluşturduğunda link hemen hazır olur.</p>
+            <p class="deck-intro-note">
+              Oturumu oluşturduğunda link hemen hazır olur.
+            </p>
           </div>
         </div>
       </div>
@@ -1289,8 +1439,8 @@
           </div>
           <div class="premium-pricing">
             <div class="premium-price-row">
-              <span class="premium-price-was">$9.99</span>
-              <span class="premium-price-current">$4.99</span>
+              <span class="premium-price-was">$19.99</span>
+              <span class="premium-price-current">$9.99</span>
               <span class="premium-price-period">/ay</span>
             </div>
           </div>
@@ -1416,18 +1566,26 @@
     <script src="/app.js?v=4"></script>
     <script>
       // Mira: intercept selectPack to show deck intro first
-      (function() {
+      (function () {
         let pendingPackKey = null;
         const origSelectPack = window.selectPack;
 
-        window.selectPack = function(key) {
+        window.selectPack = function (key) {
           // Check premium gate
-          if (typeof isPremium !== 'undefined' && !isPremium && typeof isPackFree === 'function' && !isPackFree(key)) {
-            if (typeof showPremiumModal === 'function') showPremiumModal(key);
+          if (
+            typeof isPremium !== "undefined" &&
+            !isPremium &&
+            typeof isPackFree === "function" &&
+            !isPackFree(key)
+          ) {
+            if (typeof showPremiumModal === "function") showPremiumModal(key);
             return;
           }
 
-          const def = (typeof packDefs !== 'undefined') ? packDefs.find(p => p.key === key) : null;
+          const def =
+            typeof packDefs !== "undefined"
+              ? packDefs.find((p) => p.key === key)
+              : null;
           if (!def) return;
 
           // Solo packs → skip intro, go directly
@@ -1437,22 +1595,26 @@
 
           // Show deck intro
           pendingPackKey = key;
-          document.getElementById('deckIntroEmoji').textContent = def.emoji || '💕';
-          document.getElementById('deckIntroTitle').textContent = i18n.t(def.nameKey) || key;
-          document.getElementById('deckIntroDesc').textContent = i18n.t(def.descKey) || '';
-          document.getElementById('deckIntroCount').textContent = i18n.t(def.countKey) || '';
-          goTo('deckIntro');
+          document.getElementById("deckIntroEmoji").textContent =
+            def.emoji || "💕";
+          document.getElementById("deckIntroTitle").textContent =
+            i18n.t(def.nameKey) || key;
+          document.getElementById("deckIntroDesc").textContent =
+            i18n.t(def.descKey) || "";
+          document.getElementById("deckIntroCount").textContent =
+            i18n.t(def.countKey) || "";
+          goTo("deckIntro");
         };
 
         // Wire up the start button
-        document.addEventListener('DOMContentLoaded', () => {
-          const startBtn = document.getElementById('deckIntroStart');
+        document.addEventListener("DOMContentLoaded", () => {
+          const startBtn = document.getElementById("deckIntroStart");
           if (startBtn) {
-            startBtn.addEventListener('click', async () => {
+            startBtn.addEventListener("click", async () => {
               if (!pendingPackKey) return;
               startBtn.disabled = true;
               const orig = startBtn.innerHTML;
-              startBtn.innerHTML = 'Oluşturuluyor...';
+              startBtn.innerHTML = "Oluşturuluyor...";
               try {
                 await origSelectPack(pendingPackKey);
               } finally {
@@ -1469,23 +1631,34 @@
       const _greetingSet = { done: false };
       const _origLoadHome = window.loadHomeSessions;
       if (_origLoadHome) {
-        window.loadHomeSessions = async function() {
+        window.loadHomeSessions = async function () {
           await _origLoadHome.apply(this, arguments);
           if (!_greetingSet.done && window.currentUser) {
             _greetingSet.done = true;
             const h = new Date().getHours();
-            const g = h < 12 ? 'Gunaydin' : h < 18 ? 'Merhaba' : 'Iyi aksamlar';
-            const name = currentUser.username || '';
-            const el = document.getElementById('miraGreetingTitle');
-            if (el) el.textContent = g + ', ' + name + '.';
+            const g = h < 12 ? "Gunaydin" : h < 18 ? "Merhaba" : "Iyi aksamlar";
+            const name = currentUser.username || "";
+            const el = document.getElementById("miraGreetingTitle");
+            if (el) el.textContent = g + ", " + name + ".";
             // Update companion bubble based on session count
-            const bubble = document.getElementById('miraCompanionBubble');
-            if (bubble && window._cachedSessions && _cachedSessions.length > 0) {
-              const completed = _cachedSessions.filter(s => s.status === 'complete').length;
+            const bubble = document.getElementById("miraCompanionBubble");
+            if (
+              bubble &&
+              window._cachedSessions &&
+              _cachedSessions.length > 0
+            ) {
+              const completed = _cachedSessions.filter(
+                (s) => s.status === "complete",
+              ).length;
               if (completed >= 3) {
-                bubble.textContent = 'Seni tanımaya başlıyorum. ' + completed + ' oturum tamamladın — desenlerin belirginleşiyor. Devam et!';
+                bubble.textContent =
+                  "Seni tanımaya başlıyorum. " +
+                  completed +
+                  " oturum tamamladın — desenlerin belirginleşiyor. Devam et!";
               } else if (completed >= 1) {
-                bubble.textContent = completed + ' oturum tamamladın. Birkaç tane daha oyna, sana özel içgörüler çıkarayım.';
+                bubble.textContent =
+                  completed +
+                  " oturum tamamladın. Birkaç tane daha oyna, sana özel içgörüler çıkarayım.";
               }
             }
           }
