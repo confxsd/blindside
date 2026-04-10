@@ -399,6 +399,94 @@ html, body, #app {
   display: none;
 }
 
+/* ===== MIRA SUBSCRIPTION BANNER ===== */
+.mira-sub-banner {
+  display: flex !important;
+  align-items: center;
+  gap: 14px;
+  margin: 4px 16px 16px;
+  padding: 18px 20px;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%) !important;
+  border-radius: 16px;
+  text-decoration: none;
+  color: #fff !important;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease;
+  box-shadow: 0 4px 16px rgba(15,23,42,0.15);
+  min-height: 72px;
+  box-sizing: border-box;
+}
+.mira-sub-banner::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle, rgba(37,99,235,0.4) 0%, transparent 70%);
+  pointer-events: none;
+}
+.mira-sub-banner:hover {
+  transform: translateY(-1px);
+}
+.mira-sub-banner-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563EB 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(37,99,235,0.4);
+  z-index: 1;
+}
+.mira-sub-banner-body {
+  flex: 1;
+  min-width: 0;
+  z-index: 1;
+}
+.mira-sub-banner-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 3px;
+  flex-wrap: wrap;
+}
+.mira-sub-banner-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.mira-sub-banner-days {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 100px;
+  background: rgba(59,130,246,0.25);
+  color: #93c5fd;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.mira-sub-banner-text {
+  font-size: 12px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.4;
+}
+.mira-sub-banner-arrow {
+  color: rgba(255,255,255,0.5);
+  flex-shrink: 0;
+  z-index: 1;
+  transition: transform 0.25s ease;
+}
+.mira-sub-banner:hover .mira-sub-banner-arrow {
+  transform: translateX(3px);
+  color: #fff;
+}
+
 /* ===== MIRA MATCHES WIDGET ===== */
 .mira-matches-section {
   margin: 8px 16px 24px;
@@ -504,11 +592,12 @@ html, body, #app {
 }
 
 .mira-matches {
-  display: flex;
-  flex-direction: column;
+  display: flex !important;
+  flex-direction: column !important;
   gap: 8px;
   position: relative;
   z-index: 1;
+  padding: 0 8px;
 }
 
 .mira-match-card {
