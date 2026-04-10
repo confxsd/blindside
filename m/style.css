@@ -385,5 +385,32 @@ h3 { font-weight: 500; }
   display: none;
 }
 
+/* ===== PACKS INFO BOX ===== */
+.mira-packs-info {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin: 0 24px 20px;
+  padding: 16px 18px;
+  background: var(--accent-1-bg);
+  border: 1px solid var(--accent-1-border);
+  border-radius: var(--radius);
+}
+.mira-packs-info-icon {
+  flex-shrink: 0;
+  color: var(--accent-1);
+  margin-top: 1px;
+}
+.mira-packs-info-title {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.mira-packs-info-text {
+  font-size: 13px;
+  color: var(--text-mid);
+  line-height: 1.55;
+}
+
 /* ===== SEO SECTION HIDE ===== */
 .seo-landing { display: none; }
