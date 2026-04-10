@@ -123,6 +123,20 @@
         display: inline-block;
       }
 
+      .hero-logo {
+        display: block;
+        height: 48px;
+        width: auto;
+        margin: 0 auto 40px;
+        object-fit: contain;
+      }
+      @media (max-width: 720px) {
+        .hero-logo {
+          height: 40px;
+          margin-bottom: 28px;
+        }
+      }
+
       .serif-italic {
         font-style: normal;
         font-weight: 300;
@@ -793,7 +807,7 @@
     <!-- ===== HERO ===== -->
     <section class="hero">
       <div class="hero-inner">
-        <div class="label reveal" style="font-size: large">Mira</div>
+        <img src="/mira-logo.png" alt="Mira" class="hero-logo reveal" />
         <h1 class="reveal d1">
           <span class="line">Arkadaşını tanıt,</span>
           <span class="line serif-italic">ona birini bulalım.</span>
