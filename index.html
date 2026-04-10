@@ -665,16 +665,20 @@
         background: var(--bg-alt);
         padding: 160px 0;
         text-align: center;
-        position: relative;
-        overflow: hidden;
       }
 
-      .trust-bg {
-        position: absolute;
-        inset: 0;
-        background: url('abstract.png') center center / cover no-repeat;
-        opacity: 0.45;
-        pointer-events: none;
+      /* ===== ABSTRACT BREAK ===== */
+      .break-img {
+        padding: 40px 0;
+        text-align: center;
+      }
+
+      .break-img img {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
       }
 
       .trust-quote {
@@ -882,6 +886,10 @@
       </div>
     </section>
 
+    <div class="break-img">
+      <img src="abstract.png" alt="" loading="lazy">
+    </div>
+
     <!-- ===== HOW IT WORKS ===== -->
     <section class="how">
       <div class="wrap">
@@ -1047,7 +1055,6 @@
 
     <!-- ===== TRUST QUOTE ===== -->
     <section class="trust">
-      <div class="trust-bg"></div>
       <div class="wrap">
         <div class="trust-quote reveal">
           <p>Sana yüzlerce insan gösterip</p>
