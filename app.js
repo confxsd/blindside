@@ -812,7 +812,7 @@ function copyInviteLink(btn) {
 
 function shareInvite(method) {
   const url = getInviteUrl();
-  const text = 'take this blind quiz with me!';
+  const text = 'Mira\'da benimle oyna!';
   if (method === 'share' && navigator.share) {
     navigator.share({ title: 'Mira', text, url }).catch(() => {});
   } else if (method === 'whatsapp') {
@@ -2929,12 +2929,12 @@ function buildReceipt() {
 }
 
 function shareReceipt() {
-  const shareText = _lastVibeReport?.share_text || 'We just did a blind reveal — check our results!';
+  const shareText = _lastVibeReport?.share_text || 'Mira\'da gizli yanit oyunu oynadik — sonuclara bak!';
   if (navigator.share) {
     navigator.share({
       title: 'Mira',
       text: shareText,
-      url: 'https://Mirato'
+      url: 'https://blindside.to/m/'
     }).catch(() => {});
   } else {
     const btn = event.target;

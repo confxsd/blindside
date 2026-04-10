@@ -1,31 +1,31 @@
 const PACK_NAMES = {
-  couples: '💕 Couples',
-  bestfriends: '👯 Best Friends',
-  deeptalk: '🌊 Deep Talk',
-  '36questions': '❤️‍🔥 36 Questions',
-  hottakes: '🌶️ Hot Takes',
-  redflags: '🚩 Red Flags',
-  chaotic: '🎲 Chaotic',
-  fungames: '🎉 Fun Games',
-  worldtaste: '🌍 World & Taste',
-  ethics: '⚖️ Ethics',
-  situations: '😱 Situations',
-  livingtogether: '🏠 Living Together',
-  soulspirit: '🕊️ Soul & Spirit',
-  attachment: '🔗 Attachment',
-  innermirror: '🪞 Inner Mirror',
-  stresstype: '🧊 Stress Type',
-  lovelang: '💌 Love Language',
-  shadow: '🌑 Shadow',
-  emotionalage: '🎭 Emotional Age',
-  boundaries: '🚧 Boundaries',
-  selfsabotage: '🪤 Self Sabotage',
-  partnertype: '🐕 Partner Archetype',
-  partnerera: '👑 Partner Era',
-  couplestory: '📖 Couple Story',
-  whattheyhide: '🎭 What They Hide',
-  flirtguess: '😏 Flirt & Guess',
-  desirematch: '🔥 Desire Match',
+  couples: '💕 Ciftler',
+  bestfriends: '👯 Yakin Arkadaslar',
+  deeptalk: '🌊 Derin Sohbet',
+  '36questions': '❤️‍🔥 36 Soru',
+  hottakes: '🌶️ Cesur Yorumlar',
+  redflags: '🚩 Kirmizi Bayraklar',
+  chaotic: '🎲 Kaotik',
+  fungames: '🎉 Eglenceli',
+  worldtaste: '🌍 Dunya & Zevk',
+  ethics: '⚖️ Etik',
+  situations: '😱 Durumlar',
+  livingtogether: '🏠 Birlikte Yasam',
+  soulspirit: '🕊️ Ruh & Tin',
+  attachment: '🔗 Baglanma',
+  innermirror: '🪞 Ic Ayna',
+  stresstype: '🧊 Stres Tipi',
+  lovelang: '💌 Ask Dili',
+  shadow: '🌑 Golge',
+  emotionalage: '🎭 Duygusal Yas',
+  boundaries: '🚧 Sinirlar',
+  selfsabotage: '🪤 Kendine Sabotaj',
+  partnertype: '🐕 Partner Tipi',
+  partnerera: '👑 Partner Donemi',
+  couplestory: '📖 Cift Hikayesi',
+  whattheyhide: '🎭 Gizledikleri',
+  flirtguess: '😏 Flort & Tahmin',
+  desirematch: '🔥 Arzu Eslesmesi',
 };
 
 const OG_BOT_UA = /bot|crawl|slurp|spider|facebookexternalhit|whatsapp|telegrambot|twitterbot|linkedinbot|discordbot|slack/i;
@@ -57,8 +57,8 @@ export async function onRequest(context) {
     const session = data.session;
     const packName = PACK_NAMES[session.pack_key] || session.pack_key;
     const creator = session.creator_username || 'someone';
-    const title = `${creator} invited you to play blindside.`;
-    const description = `${packName} — same questions, blind answers, one reveal. 🫣`;
+    const title = `${creator} seni Mira'da oynamaya davet etti.`;
+    const description = `${packName} — aynı sorular, gizli yanıtlar, birlikte açığa çıkar.`;
     const ogImage = `${url.origin}/og-image.png`;
 
     const html = `<!DOCTYPE html>
@@ -72,7 +72,7 @@ export async function onRequest(context) {
   <meta property="og:title" content="${title}">
   <meta property="og:description" content="${description}">
   <meta property="og:image" content="${ogImage}">
-  <meta property="og:site_name" content="blindside.">
+  <meta property="og:site_name" content="Mira">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${title}">
   <meta name="twitter:description" content="${description}">
