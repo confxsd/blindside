@@ -684,7 +684,7 @@ function renderHomeSessions() {
 
       html += `<div class="session-card-wrap" data-code="${s.code}">
         <div class="session-card glass" onclick="resumeSession('${s.code}')">
-          <div class="s-icon" style="background:rgba(124,58,237,0.1)">${emoji}</div>
+          <div class="s-icon" style="background:var(--accent-1-bg)">${emoji}</div>
           <div class="s-info">
             <div class="s-title">${packName}</div>
             <div class="s-sub">${partner ? i18n.t('home_with') + ' ' + partner : i18n.t('home_waiting_partner')} · ${s.code}</div>
@@ -1195,7 +1195,7 @@ function renderProfile() {
         <span class="profile-build-tag ${completedCount >= 1 ? 'done' : ''}">👥 ${completedCount} sessions</span>
         <span class="profile-build-tag ${questionsAnswered >= 50 ? 'done' : ''}">💬 ${questionsAnswered} answers</span>
       </div>
-      <button class="profile-build-cta" onclick="goToHome()">Play a pack to grow your profile</button>
+      <button class="profile-build-cta" onclick="goTo('packs')">Profil icin deste oyna</button>
     </div>
 
     <div class="profile-insights-card" onclick="goToInsights()">
