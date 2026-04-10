@@ -300,7 +300,7 @@
       <div id="home" class="screen">
         <div class="home-header">
           <div class="home-brand">
-            <img src="/mira-w-img.png" alt="Mira" class="mira-logo-img" />
+            <img src="/mira-logo.png" alt="Mira" class="mira-logo-img" />
           </div>
           <div class="home-actions">
             <button
@@ -337,16 +337,46 @@
         <!-- Subscription Banner -->
         <a href="/pricing.html" class="mira-sub-banner">
           <div class="mira-sub-banner-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+              />
+            </svg>
           </div>
           <div class="mira-sub-banner-body">
             <div class="mira-sub-banner-top">
               <span class="mira-sub-banner-title">İlk haftan ücretsiz</span>
-              <span class="mira-sub-banner-days" id="miraSubDaysLeft">7 gün kaldı</span>
+              <span class="mira-sub-banner-days" id="miraSubDaysLeft"
+                >7 gün kaldı</span
+              >
             </div>
-            <div class="mira-sub-banner-text">Sürekli kullanmak için üyeliğe geç — ayda $10'dan başlıyor.</div>
+            <div class="mira-sub-banner-text">
+              Sürekli kullanmak için üyeliğe geç — ayda $10'dan başlıyor.
+            </div>
           </div>
-          <svg class="mira-sub-banner-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          <svg
+            class="mira-sub-banner-arrow"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M5 12h14" />
+            <path d="M12 5l7 7-7 7" />
+          </svg>
         </a>
 
         <!-- Matches Widget -->
@@ -358,11 +388,25 @@
                 Aktif öneriler
               </div>
               <h3 class="mira-matches-title">Senin için seçtiklerimiz</h3>
-              <p class="mira-matches-subtitle">Maks. 3 kişi · Her 2 günde bir yenilenir · 7 gün geçerli</p>
+              <p class="mira-matches-subtitle">
+                Maks. 3 kişi · Her 2 günde bir yenilenir · 7 gün geçerli
+              </p>
             </div>
             <a href="/matches.html" class="mira-matches-all">
               Tümü
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14" />
+                <path d="M12 5l7 7-7 7" />
+              </svg>
             </a>
           </div>
           <div class="mira-matches" id="miraMatches"></div>
@@ -1661,14 +1705,62 @@
       })();
 
       // Mira: matches widget — rotating weekly suggestions
-      (function() {
+      (function () {
         const POOL = [
-          { id: 1, initial: 'E', name: 'Elif', age: 28, hood: 'Kadıköy', compat: 82, bio: 'Meraklı, sakin, iyi dinleyen' },
-          { id: 2, initial: 'D', name: 'Deniz', age: 31, hood: 'Cihangir', compat: 74, bio: 'Maceracı, mizahlı, açık fikirli' },
-          { id: 3, initial: 'A', name: 'Ada', age: 27, hood: 'Beşiktaş', compat: 68, bio: 'Düşünceli, kararlı, dürüst' },
-          { id: 4, initial: 'M', name: 'Mert', age: 30, hood: 'Nişantaşı', compat: 79, bio: 'Yaratıcı, empatik, sanatsever' },
-          { id: 5, initial: 'Z', name: 'Zeynep', age: 26, hood: 'Moda', compat: 85, bio: 'Enerjik, sıcak, yolculuk seven' },
-          { id: 6, initial: 'C', name: 'Can', age: 32, hood: 'Beyoğlu', compat: 71, bio: 'Sakin, zarif, kitap kurdu' },
+          {
+            id: 1,
+            initial: "E",
+            name: "Elif",
+            age: 28,
+            hood: "Kadıköy",
+            compat: 82,
+            bio: "Meraklı, sakin, iyi dinleyen",
+          },
+          {
+            id: 2,
+            initial: "D",
+            name: "Deniz",
+            age: 31,
+            hood: "Cihangir",
+            compat: 74,
+            bio: "Maceracı, mizahlı, açık fikirli",
+          },
+          {
+            id: 3,
+            initial: "A",
+            name: "Ada",
+            age: 27,
+            hood: "Beşiktaş",
+            compat: 68,
+            bio: "Düşünceli, kararlı, dürüst",
+          },
+          {
+            id: 4,
+            initial: "M",
+            name: "Mert",
+            age: 30,
+            hood: "Nişantaşı",
+            compat: 79,
+            bio: "Yaratıcı, empatik, sanatsever",
+          },
+          {
+            id: 5,
+            initial: "Z",
+            name: "Zeynep",
+            age: 26,
+            hood: "Moda",
+            compat: 85,
+            bio: "Enerjik, sıcak, yolculuk seven",
+          },
+          {
+            id: 6,
+            initial: "C",
+            name: "Can",
+            age: 32,
+            hood: "Beyoğlu",
+            compat: 71,
+            bio: "Sakin, zarif, kitap kurdu",
+          },
         ];
         const MAX_MATCHES = 3;
         const DAY_MS = 24 * 60 * 60 * 1000;
@@ -1677,7 +1769,11 @@
 
         function loadMatches() {
           let data = null;
-          try { data = JSON.parse(localStorage.getItem('mira-matches-v2') || 'null'); } catch {}
+          try {
+            data = JSON.parse(
+              localStorage.getItem("mira-matches-v2") || "null",
+            );
+          } catch {}
           const now = Date.now();
 
           if (!data || !Array.isArray(data.matches)) {
@@ -1690,19 +1786,26 @@
               return {
                 ...pick,
                 poolId: pick.id,
-                addedAt: now - ((5 - i * 2) * DAY_MS),
+                addedAt: now - (5 - i * 2) * DAY_MS,
               };
             });
-            data = { matches: staggered, lastRotation: now, nextId: POOL.length };
-            localStorage.setItem('mira-matches-v2', JSON.stringify(data));
+            data = {
+              matches: staggered,
+              lastRotation: now,
+              nextId: POOL.length,
+            };
+            localStorage.setItem("mira-matches-v2", JSON.stringify(data));
             return data.matches;
           }
 
           // Remove expired (older than 1 week)
-          data.matches = data.matches.filter(m => now - m.addedAt < WEEK_MS);
+          data.matches = data.matches.filter((m) => now - m.addedAt < WEEK_MS);
 
           // Rotate: every 2 days, replace oldest
-          while (now - data.lastRotation >= ROTATION_MS && data.matches.length > 0) {
+          while (
+            now - data.lastRotation >= ROTATION_MS &&
+            data.matches.length > 0
+          ) {
             data.matches.sort((a, b) => a.addedAt - b.addedAt);
             data.matches.shift();
             data.lastRotation += ROTATION_MS;
@@ -1710,10 +1813,11 @@
 
           // Fill up to MAX_MATCHES
           while (data.matches.length < MAX_MATCHES) {
-            const usedIds = new Set(data.matches.map(m => m.poolId));
-            const available = POOL.filter(p => !usedIds.has(p.id));
+            const usedIds = new Set(data.matches.map((m) => m.poolId));
+            const available = POOL.filter((p) => !usedIds.has(p.id));
             if (available.length === 0) break;
-            const pick = available[Math.floor(Math.random() * available.length)];
+            const pick =
+              available[Math.floor(Math.random() * available.length)];
             data.matches.push({
               ...pick,
               poolId: pick.id,
@@ -1721,7 +1825,7 @@
             });
           }
 
-          localStorage.setItem('mira-matches-v2', JSON.stringify(data));
+          localStorage.setItem("mira-matches-v2", JSON.stringify(data));
           return data.matches;
         }
 
@@ -1737,7 +1841,7 @@
         }
 
         function renderMatches() {
-          const container = document.getElementById('miraMatches');
+          const container = document.getElementById("miraMatches");
           if (!container) return;
           const matches = loadMatches();
           // Sort newest first
@@ -1758,23 +1862,27 @@
             return;
           }
 
-          container.innerHTML = matches.map(m => {
-            const days = daysRemaining(m.addedAt);
-            const old = daysOld(m.addedAt);
-            const isNew = old < 1;
-            const isDisappearing = days <= 2;
-            const urgencyClass = days <= 2 ? 'urgent' : days <= 4 ? 'soon' : '';
-            const daysText = days === 1 ? '1 gün' : days + ' gün';
+          container.innerHTML = matches
+            .map((m) => {
+              const days = daysRemaining(m.addedAt);
+              const old = daysOld(m.addedAt);
+              const isNew = old < 1;
+              const isDisappearing = days <= 2;
+              const urgencyClass =
+                days <= 2 ? "urgent" : days <= 4 ? "soon" : "";
+              const daysText = days === 1 ? "1 gün" : days + " gün";
 
-            let statusBadge = '';
-            if (isNew) {
-              statusBadge = '<span class="mira-match-badge new">✨ Yeni</span>';
-            } else if (isDisappearing) {
-              statusBadge = '<span class="mira-match-badge expiring">⏳ Bitiyor</span>';
-            }
+              let statusBadge = "";
+              if (isNew) {
+                statusBadge =
+                  '<span class="mira-match-badge new">✨ Yeni</span>';
+              } else if (isDisappearing) {
+                statusBadge =
+                  '<span class="mira-match-badge expiring">⏳ Bitiyor</span>';
+              }
 
-            return `
-              <a href="/matches.html" class="mira-match-card ${isNew ? 'is-new' : ''}">
+              return `
+              <a href="/matches.html" class="mira-match-card ${isNew ? "is-new" : ""}">
                 <div class="mira-match-avatar">${m.initial}</div>
                 <div class="mira-match-body">
                   <div class="mira-match-top">
@@ -1790,22 +1898,23 @@
                 </div>
               </a>
             `;
-          }).join('');
+            })
+            .join("");
         }
 
         // Render on home screen activation
         const origGoTo = window.goTo;
         if (origGoTo) {
-          window.goTo = function(screen) {
+          window.goTo = function (screen) {
             const result = origGoTo.apply(this, arguments);
-            if (screen === 'home') setTimeout(renderMatches, 50);
+            if (screen === "home") setTimeout(renderMatches, 50);
             return result;
           };
         }
 
         // Initial render after DOM load
-        if (document.readyState === 'loading') {
-          document.addEventListener('DOMContentLoaded', renderMatches);
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", renderMatches);
         } else {
           renderMatches();
         }

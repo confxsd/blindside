@@ -8,13 +8,20 @@
 
 /* Override root defaults (dark mode base) with Mira blue accent */
 :root {
-  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
-  --accent-1: #2563EB; --accent-2: #3B82F6;
-  --accent-1-glow: rgba(37,99,235,0.12); --accent-2-glow: rgba(59,130,246,0.1);
-  --accent-1-bg: rgba(37,99,235,0.06); --accent-1-border: rgba(37,99,235,0.2);
-  --accent-2-bg: rgba(59,130,246,0.06); --accent-2-border: rgba(59,130,246,0.15);
-  --purple: var(--accent-1); --purple-glow: var(--accent-1-glow);
-  --pink: var(--accent-2); --pink-glow: var(--accent-2-glow);
+  --font:
+    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  --accent-1: #2563eb;
+  --accent-2: #3b82f6;
+  --accent-1-glow: rgba(37, 99, 235, 0.12);
+  --accent-2-glow: rgba(59, 130, 246, 0.1);
+  --accent-1-bg: rgba(37, 99, 235, 0.06);
+  --accent-1-border: rgba(37, 99, 235, 0.2);
+  --accent-2-bg: rgba(59, 130, 246, 0.06);
+  --accent-2-border: rgba(59, 130, 246, 0.15);
+  --purple: var(--accent-1);
+  --purple-glow: var(--accent-1-glow);
+  --pink: var(--accent-2);
+  --pink-glow: var(--accent-2-glow);
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -22,79 +29,120 @@
 [data-theme="light"] {
   --bg: #ffffff !important;
   --bg2: #f5f5f5 !important;
-  --surface: rgba(0,0,0,0.03) !important;
-  --surface-hover: rgba(0,0,0,0.06) !important;
+  --surface: rgba(0, 0, 0, 0.03) !important;
+  --surface-hover: rgba(0, 0, 0, 0.06) !important;
   --border: #e0e0e0 !important;
   --text: #0a0a0a !important;
   --text-dim: #a0a0a0 !important;
   --text-mid: #767676 !important;
-  --nav-bg: rgba(255,255,255,0.92) !important;
-  --modal-bg: rgba(255,255,255,0.75) !important;
+  --nav-bg: rgba(255, 255, 255, 0.92) !important;
+  --modal-bg: rgba(255, 255, 255, 0.75) !important;
   --card-bg: #ffffff !important;
   --card-border: #e0e0e0 !important;
-  --card-shadow: 0 1px 3px rgba(0,0,0,0.06) !important;
-  --card-shadow-lg: 0 4px 16px rgba(0,0,0,0.08) !important;
-  --card-shadow-hover: 0 8px 24px rgba(0,0,0,0.1) !important;
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.06) !important;
+  --card-shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+  --card-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.1) !important;
   --card-inner-glow: none !important;
-  --dashed-border: rgba(0,0,0,0.15) !important;
-  --answer-hover-border: rgba(0,0,0,0.14) !important;
-  --accent-1: #2563EB; --accent-2: #3B82F6;
-  --accent-1-glow: rgba(37,99,235,0.12); --accent-2-glow: rgba(59,130,246,0.1);
-  --accent-1-bg: rgba(37,99,235,0.06); --accent-1-border: rgba(37,99,235,0.2);
-  --accent-2-bg: rgba(59,130,246,0.06); --accent-2-border: rgba(59,130,246,0.15);
+  --dashed-border: rgba(0, 0, 0, 0.15) !important;
+  --answer-hover-border: rgba(0, 0, 0, 0.14) !important;
+  --accent-1: #2563eb;
+  --accent-2: #3b82f6;
+  --accent-1-glow: rgba(37, 99, 235, 0.12);
+  --accent-2-glow: rgba(59, 130, 246, 0.1);
+  --accent-1-bg: rgba(37, 99, 235, 0.06);
+  --accent-1-border: rgba(37, 99, 235, 0.2);
+  --accent-2-bg: rgba(59, 130, 246, 0.06);
+  --accent-2-border: rgba(59, 130, 246, 0.15);
 }
 
 /* Override dark theme */
 [data-theme="dark"] {
   --bg: #0a0a0a !important;
   --bg2: #141414 !important;
-  --surface: rgba(255,255,255,0.05) !important;
-  --surface-hover: rgba(255,255,255,0.08) !important;
-  --border: rgba(255,255,255,0.1) !important;
+  --surface: rgba(255, 255, 255, 0.05) !important;
+  --surface-hover: rgba(255, 255, 255, 0.08) !important;
+  --border: rgba(255, 255, 255, 0.1) !important;
   --text: #f0f0f0 !important;
-  --text-dim: rgba(255,255,255,0.35) !important;
-  --text-mid: rgba(255,255,255,0.55) !important;
-  --nav-bg: rgba(10,10,10,0.92) !important;
-  --modal-bg: rgba(0,0,0,0.7) !important;
+  --text-dim: rgba(255, 255, 255, 0.35) !important;
+  --text-mid: rgba(255, 255, 255, 0.55) !important;
+  --nav-bg: rgba(10, 10, 10, 0.92) !important;
+  --modal-bg: rgba(0, 0, 0, 0.7) !important;
   --card-bg: #141414 !important;
-  --card-border: rgba(255,255,255,0.08) !important;
-  --card-shadow: 0 1px 3px rgba(0,0,0,0.3) !important;
-  --card-shadow-lg: 0 4px 16px rgba(0,0,0,0.4) !important;
-  --dashed-border: rgba(255,255,255,0.15) !important;
-  --accent-1: #2563EB; --accent-2: #3B82F6;
-  --accent-1-glow: rgba(37,99,235,0.12); --accent-2-glow: rgba(59,130,246,0.1);
-  --accent-1-bg: rgba(37,99,235,0.06); --accent-1-border: rgba(37,99,235,0.2);
-  --accent-2-bg: rgba(59,130,246,0.06); --accent-2-border: rgba(59,130,246,0.15);
+  --card-border: rgba(255, 255, 255, 0.08) !important;
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+  --card-shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
+  --dashed-border: rgba(255, 255, 255, 0.15) !important;
+  --accent-1: #2563eb;
+  --accent-2: #3b82f6;
+  --accent-1-glow: rgba(37, 99, 235, 0.12);
+  --accent-2-glow: rgba(59, 130, 246, 0.1);
+  --accent-1-bg: rgba(37, 99, 235, 0.06);
+  --accent-1-border: rgba(37, 99, 235, 0.2);
+  --accent-2-bg: rgba(59, 130, 246, 0.06);
+  --accent-2-border: rgba(59, 130, 246, 0.15);
 }
 
 /* Override all accent themes to Mira blue */
-[data-accent="sunset"], [data-accent="ocean"], [data-accent="ember"],
-[data-accent="mint"], [data-accent="candy"] {
-  --accent-1: #2563EB !important; --accent-2: #3B82F6 !important;
-  --accent-1-glow: rgba(37,99,235,0.12) !important;
-  --accent-2-glow: rgba(59,130,246,0.1) !important;
-  --accent-1-bg: rgba(37,99,235,0.06) !important;
-  --accent-1-border: rgba(37,99,235,0.2) !important;
-  --accent-2-bg: rgba(59,130,246,0.06) !important;
-  --accent-2-border: rgba(59,130,246,0.15) !important;
+[data-accent="sunset"],
+[data-accent="ocean"],
+[data-accent="ember"],
+[data-accent="mint"],
+[data-accent="candy"] {
+  --accent-1: #2563eb !important;
+  --accent-2: #3b82f6 !important;
+  --accent-1-glow: rgba(37, 99, 235, 0.12) !important;
+  --accent-2-glow: rgba(59, 130, 246, 0.1) !important;
+  --accent-1-bg: rgba(37, 99, 235, 0.06) !important;
+  --accent-1-border: rgba(37, 99, 235, 0.2) !important;
+  --accent-2-bg: rgba(59, 130, 246, 0.06) !important;
+  --accent-2-border: rgba(59, 130, 246, 0.15) !important;
 }
 
 /* ===== FONT OVERRIDE ===== */
-html, body,
-.syne, h1, h2, h3,
-.btn, .fab, .home-tab, .copy-btn, .mode-toggle-btn,
-.auth-input, .nav-item, input, textarea, select, button {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+html,
+body,
+.syne,
+h1,
+h2,
+h3,
+.btn,
+.fab,
+.home-tab,
+.copy-btn,
+.mode-toggle-btn,
+.auth-input,
+.nav-item,
+input,
+textarea,
+select,
+button {
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif !important;
 }
-.syne, h1, h2, h3 {
+.syne,
+h1,
+h2,
+h3 {
   letter-spacing: -0.03em;
 }
-h1 { font-weight: 600; }
-h2 { font-weight: 500; }
-h3 { font-weight: 500; }
+h1 {
+  font-weight: 600;
+}
+h2 {
+  font-weight: 500;
+}
+h3 {
+  font-weight: 500;
+}
 
 /* White background override */
-html, body, #app {
+html,
+body,
+#app {
   background: var(--bg) !important;
 }
 
@@ -146,14 +194,23 @@ html, body, #app {
 
 /* ===== SPLASH OVERRIDE ===== */
 .logo-mark {
-  width: 64px; height: 64px; border-radius: 50%;
-  background: var(--text); color: var(--bg);
-  display: flex; align-items: center; justify-content: center;
-  font-family: var(--font); font-size: 28px; font-weight: 600;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--text);
+  color: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font);
+  font-size: 28px;
+  font-weight: 600;
   letter-spacing: -0.03em;
 }
 .logo-text {
-  font-size: 32px; font-weight: 600; letter-spacing: -0.04em;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.04em;
 }
 
 /* ===== ONBOARDING OVERRIDE ===== */
@@ -184,7 +241,8 @@ html, body, #app {
 .profile-name {
   font-family: var(--font);
 }
-.profile-stat-val, .profile-stat-num {
+.profile-stat-val,
+.profile-stat-num {
   font-family: var(--font);
   font-weight: 300;
   letter-spacing: -0.04em;
@@ -292,7 +350,7 @@ html, body, #app {
 }
 .mira-feature-accent {
   border-color: var(--accent-1-border);
-  background: rgba(37,99,235,0.02);
+  background: rgba(37, 99, 235, 0.02);
 }
 
 /* ===== MIRA COMPANION CARD ===== */
@@ -340,7 +398,15 @@ html, body, #app {
   background: #16a34a;
   animation: pulse 2s ease-in-out infinite;
 }
-@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
 
 .mira-companion-bubble {
   font-size: 14px;
@@ -402,7 +468,7 @@ html, body, #app {
 /* ===== MIRA LOGO IMAGE ===== */
 .mira-logo-img {
   display: block;
-  height: 28px;
+  height: 48px;
   width: auto;
   object-fit: contain;
 }
@@ -421,22 +487,29 @@ html, body, #app {
   position: relative;
   overflow: hidden;
   transition: transform 0.25s ease;
-  box-shadow: 0 4px 16px rgba(15,23,42,0.15);
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.15);
   min-height: 72px;
   box-sizing: border-box;
   flex-shrink: 0;
 }
-.mira-features, .mira-companion-card, .mira-greeting, #homeSessions {
+.mira-features,
+.mira-companion-card,
+.mira-greeting,
+#homeSessions {
   flex-shrink: 0;
 }
 .mira-sub-banner::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -40px;
   right: -40px;
   width: 140px;
   height: 140px;
-  background: radial-gradient(circle, rgba(37,99,235,0.4) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(37, 99, 235, 0.4) 0%,
+    transparent 70%
+  );
   pointer-events: none;
 }
 .mira-sub-banner:hover {
@@ -446,13 +519,13 @@ html, body, #app {
   width: 40px;
   height: 40px;
   border-radius: 12px;
-  background: linear-gradient(135deg, #3b82f6 0%, #2563EB 100%);
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  box-shadow: 0 2px 8px rgba(37,99,235,0.4);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.4);
   z-index: 1;
 }
 .mira-sub-banner-body {
@@ -478,18 +551,18 @@ html, body, #app {
   font-weight: 600;
   padding: 2px 8px;
   border-radius: 100px;
-  background: rgba(59,130,246,0.25);
+  background: rgba(59, 130, 246, 0.25);
   color: #93c5fd;
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
 .mira-sub-banner-text {
   font-size: 12px;
-  color: rgba(255,255,255,0.65);
+  color: rgba(255, 255, 255, 0.65);
   line-height: 1.4;
 }
 .mira-sub-banner-arrow {
-  color: rgba(255,255,255,0.5);
+  color: rgba(255, 255, 255, 0.5);
   flex-shrink: 0;
   z-index: 1;
   transition: transform 0.25s ease;
@@ -513,8 +586,12 @@ html, body, #app {
   flex-shrink: 0 !important;
 }
 [data-theme="dark"] .mira-matches-section {
-  background: linear-gradient(180deg, rgba(37,99,235,0.05) 0%, rgba(255,255,255,0.01) 100%) !important;
-  border-color: rgba(37,99,235,0.15) !important;
+  background: linear-gradient(
+    180deg,
+    rgba(37, 99, 235, 0.05) 0%,
+    rgba(255, 255, 255, 0.01) 100%
+  ) !important;
+  border-color: rgba(37, 99, 235, 0.15) !important;
 }
 
 .mira-matches-header {
@@ -525,7 +602,10 @@ html, body, #app {
   position: relative;
   z-index: 1;
 }
-.mira-matches-header-left { flex: 1; min-width: 0; }
+.mira-matches-header-left {
+  flex: 1;
+  min-width: 0;
+}
 .mira-matches-badge {
   display: inline-flex;
   align-items: center;
@@ -534,8 +614,8 @@ html, body, #app {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #2563EB;
-  background: rgba(37,99,235,0.1);
+  color: #2563eb;
+  background: rgba(37, 99, 235, 0.1);
   padding: 4px 10px;
   border-radius: 100px;
   margin-bottom: 10px;
@@ -544,14 +624,20 @@ html, body, #app {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #2563EB;
-  box-shadow: 0 0 0 0 rgba(37,99,235,0.6);
+  background: #2563eb;
+  box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.6);
   animation: matches-pulse 2s ease-out infinite;
 }
 @keyframes matches-pulse {
-  0% { box-shadow: 0 0 0 0 rgba(37,99,235,0.6); }
-  70% { box-shadow: 0 0 0 6px rgba(37,99,235,0); }
-  100% { box-shadow: 0 0 0 0 rgba(37,99,235,0); }
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(37, 99, 235, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+  }
 }
 .mira-matches-title {
   font-size: 18px;
@@ -561,13 +647,17 @@ html, body, #app {
   margin-bottom: 4px;
   line-height: 1.25;
 }
-[data-theme="dark"] .mira-matches-title { color: #f0f0f0; }
+[data-theme="dark"] .mira-matches-title {
+  color: #f0f0f0;
+}
 .mira-matches-subtitle {
   font-size: 11px;
   color: #888;
   line-height: 1.5;
 }
-[data-theme="dark"] .mira-matches-subtitle { color: rgba(255,255,255,0.5); }
+[data-theme="dark"] .mira-matches-subtitle {
+  color: rgba(255, 255, 255, 0.5);
+}
 
 .mira-matches-all {
   display: inline-flex;
@@ -577,7 +667,7 @@ html, body, #app {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: #2563EB;
+  color: #2563eb;
   text-decoration: none;
   padding: 6px 12px;
   border-radius: 100px;
@@ -587,13 +677,13 @@ html, body, #app {
   flex-shrink: 0;
 }
 .mira-matches-all:hover {
-  background: #2563EB;
+  background: #2563eb;
   color: #fff;
-  border-color: #2563EB;
+  border-color: #2563eb;
 }
 [data-theme="dark"] .mira-matches-all {
-  background: rgba(255,255,255,0.05);
-  border-color: rgba(37,99,235,0.3);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(37, 99, 235, 0.3);
 }
 
 .mira-matches {
@@ -619,27 +709,31 @@ html, body, #app {
   position: relative;
 }
 [data-theme="dark"] .mira-match-card {
-  background: rgba(255,255,255,0.04);
-  border-color: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.08);
 }
 .mira-match-card:hover {
-  border-color: #2563EB;
+  border-color: #2563eb;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(37,99,235,0.1);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
 }
 .mira-match-card.is-new {
-  border-color: #2563EB;
+  border-color: #2563eb;
   background: linear-gradient(180deg, #f5f9ff 0%, #ffffff 60%);
 }
 [data-theme="dark"] .mira-match-card.is-new {
-  background: linear-gradient(180deg, rgba(37,99,235,0.08) 0%, rgba(255,255,255,0.02) 60%);
+  background: linear-gradient(
+    180deg,
+    rgba(37, 99, 235, 0.08) 0%,
+    rgba(255, 255, 255, 0.02) 60%
+  );
 }
 
 .mira-match-avatar {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #3b82f6 0%, #2563EB 100%);
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
   color: #fff;
   display: flex;
   align-items: center;
@@ -647,7 +741,7 @@ html, body, #app {
   font-size: 18px;
   font-weight: 600;
   flex-shrink: 0;
-  box-shadow: 0 2px 6px rgba(37,99,235,0.25);
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
 }
 
 .mira-match-body {
@@ -667,20 +761,26 @@ html, body, #app {
   color: #0a0a0a;
   letter-spacing: -0.01em;
 }
-[data-theme="dark"] .mira-match-name { color: #f0f0f0; }
+[data-theme="dark"] .mira-match-name {
+  color: #f0f0f0;
+}
 .mira-match-meta {
   font-size: 12px;
   color: #666;
   margin-bottom: 4px;
 }
-[data-theme="dark"] .mira-match-meta { color: rgba(255,255,255,0.55); }
+[data-theme="dark"] .mira-match-meta {
+  color: rgba(255, 255, 255, 0.55);
+}
 .mira-match-bio {
   font-size: 12px;
   color: #999;
   line-height: 1.4;
   font-style: italic;
 }
-[data-theme="dark"] .mira-match-bio { color: rgba(255,255,255,0.45); }
+[data-theme="dark"] .mira-match-bio {
+  color: rgba(255, 255, 255, 0.45);
+}
 
 .mira-match-badge {
   font-size: 9px;
@@ -692,7 +792,7 @@ html, body, #app {
   white-space: nowrap;
 }
 .mira-match-badge.new {
-  background: #2563EB;
+  background: #2563eb;
   color: #fff;
 }
 .mira-match-badge.expiring {
@@ -701,8 +801,8 @@ html, body, #app {
   border: 1px solid #fecaca;
 }
 [data-theme="dark"] .mira-match-badge.expiring {
-  background: rgba(220,38,38,0.15);
-  border-color: rgba(220,38,38,0.3);
+  background: rgba(220, 38, 38, 0.15);
+  border-color: rgba(220, 38, 38, 0.3);
 }
 
 .mira-match-timer {
@@ -729,16 +829,16 @@ html, body, #app {
   border-color: #fecaca;
 }
 [data-theme="dark"] .mira-match-timer {
-  background: rgba(22,163,74,0.12);
-  border-color: rgba(22,163,74,0.25);
+  background: rgba(22, 163, 74, 0.12);
+  border-color: rgba(22, 163, 74, 0.25);
 }
 [data-theme="dark"] .mira-match-timer.soon {
-  background: rgba(217,119,6,0.12);
-  border-color: rgba(217,119,6,0.25);
+  background: rgba(217, 119, 6, 0.12);
+  border-color: rgba(217, 119, 6, 0.25);
 }
 [data-theme="dark"] .mira-match-timer.urgent {
-  background: rgba(220,38,38,0.12);
-  border-color: rgba(220,38,38,0.25);
+  background: rgba(220, 38, 38, 0.12);
+  border-color: rgba(220, 38, 38, 0.25);
 }
 
 .mira-matches-empty {
@@ -751,22 +851,22 @@ html, body, #app {
   align-items: center;
 }
 [data-theme="dark"] .mira-matches-empty {
-  background: rgba(255,255,255,0.02);
-  border-color: rgba(37,99,235,0.2);
+  background: rgba(255, 255, 255, 0.02);
+  border-color: rgba(37, 99, 235, 0.2);
 }
 .mira-matches-empty-icon {
   width: 36px;
   height: 36px;
   border-radius: 50%;
   background: #eef4ff;
-  color: #2563EB;
+  color: #2563eb;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
 [data-theme="dark"] .mira-matches-empty-icon {
-  background: rgba(37,99,235,0.12);
+  background: rgba(37, 99, 235, 0.12);
 }
 .mira-matches-empty-title {
   font-size: 13px;
@@ -774,13 +874,17 @@ html, body, #app {
   color: #0a0a0a;
   margin-bottom: 2px;
 }
-[data-theme="dark"] .mira-matches-empty-title { color: #f0f0f0; }
+[data-theme="dark"] .mira-matches-empty-title {
+  color: #f0f0f0;
+}
 .mira-matches-empty-text {
   font-size: 12px;
   color: #888;
   line-height: 1.5;
 }
-[data-theme="dark"] .mira-matches-empty-text { color: rgba(255,255,255,0.5); }
+[data-theme="dark"] .mira-matches-empty-text {
+  color: rgba(255, 255, 255, 0.5);
+}
 
 /* ===== DECK INTRO SCREEN ===== */
 .deck-intro-wrap {
@@ -805,7 +909,7 @@ html, body, #app {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: #2563EB;
+  color: #2563eb;
   background: #eef4ff;
   padding: 5px 12px;
   border-radius: 100px;
@@ -819,7 +923,9 @@ html, body, #app {
   color: #0a0a0a;
   line-height: 1.2;
 }
-[data-theme="dark"] .deck-intro-title { color: #f0f0f0; }
+[data-theme="dark"] .deck-intro-title {
+  color: #f0f0f0;
+}
 .deck-intro-desc {
   font-size: 15px;
   color: #666;
@@ -827,7 +933,9 @@ html, body, #app {
   max-width: 320px;
   margin: 0 auto;
 }
-[data-theme="dark"] .deck-intro-desc { color: rgba(255,255,255,0.6); }
+[data-theme="dark"] .deck-intro-desc {
+  color: rgba(255, 255, 255, 0.6);
+}
 
 .deck-intro-steps {
   padding: 0 24px;
@@ -846,14 +954,14 @@ html, body, #app {
   border-radius: 12px;
 }
 [data-theme="dark"] .deck-intro-step {
-  background: rgba(255,255,255,0.03);
-  border-color: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.08);
 }
 .deck-intro-step-num {
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: #2563EB;
+  background: #2563eb;
   color: #fff;
   display: flex;
   align-items: center;
@@ -873,13 +981,17 @@ html, body, #app {
   margin-bottom: 3px;
   color: #0a0a0a;
 }
-[data-theme="dark"] .deck-intro-step-title { color: #f0f0f0; }
+[data-theme="dark"] .deck-intro-step-title {
+  color: #f0f0f0;
+}
 .deck-intro-step-text {
   font-size: 13px;
   color: #666;
   line-height: 1.5;
 }
-[data-theme="dark"] .deck-intro-step-text { color: rgba(255,255,255,0.55); }
+[data-theme="dark"] .deck-intro-step-text {
+  color: rgba(255, 255, 255, 0.55);
+}
 
 .deck-intro-tip {
   margin: 0 24px 24px;
@@ -895,18 +1007,20 @@ html, body, #app {
   line-height: 1.6;
 }
 [data-theme="dark"] .deck-intro-tip {
-  background: rgba(37,99,235,0.06);
-  border-color: rgba(37,99,235,0.15);
-  color: rgba(255,255,255,0.6);
+  background: rgba(37, 99, 235, 0.06);
+  border-color: rgba(37, 99, 235, 0.15);
+  color: rgba(255, 255, 255, 0.6);
 }
 .deck-intro-tip strong {
   color: #0a0a0a;
   font-weight: 600;
 }
-[data-theme="dark"] .deck-intro-tip strong { color: #f0f0f0; }
+[data-theme="dark"] .deck-intro-tip strong {
+  color: #f0f0f0;
+}
 .deck-intro-tip-icon {
   flex-shrink: 0;
-  color: #2563EB;
+  color: #2563eb;
   margin-top: 1px;
 }
 
@@ -925,7 +1039,9 @@ html, body, #app {
   color: #999;
   margin-top: 10px;
 }
-[data-theme="dark"] .deck-intro-note { color: rgba(255,255,255,0.4); }
+[data-theme="dark"] .deck-intro-note {
+  color: rgba(255, 255, 255, 0.4);
+}
 
 /* ===== PACKS INFO BOX ===== */
 .mira-packs-info {
@@ -939,8 +1055,8 @@ html, body, #app {
   border-radius: 16px;
 }
 [data-theme="dark"] .mira-packs-info {
-  background: rgba(37,99,235,0.06);
-  border-color: rgba(37,99,235,0.15);
+  background: rgba(37, 99, 235, 0.06);
+  border-color: rgba(37, 99, 235, 0.15);
 }
 .mira-packs-info-icon {
   flex-shrink: 0;
@@ -951,10 +1067,10 @@ html, body, #app {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #2563EB;
+  color: #2563eb;
 }
 [data-theme="dark"] .mira-packs-info-icon {
-  background: rgba(37,99,235,0.15);
+  background: rgba(37, 99, 235, 0.15);
 }
 .mira-packs-info-title {
   font-size: 14px;
@@ -972,8 +1088,10 @@ html, body, #app {
   line-height: 1.65;
 }
 [data-theme="dark"] .mira-packs-info-text {
-  color: rgba(255,255,255,0.5);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 /* ===== SEO SECTION HIDE ===== */
-.seo-landing { display: none; }
+.seo-landing {
+  display: none;
+}
