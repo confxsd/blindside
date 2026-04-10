@@ -245,8 +245,20 @@
         margin-left: calc(-50vw + 50%);
         overflow: hidden;
         padding: 48px 0 0;
-        mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
-        -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+        mask-image: linear-gradient(
+          to right,
+          transparent,
+          black 15%,
+          black 85%,
+          transparent
+        );
+        -webkit-mask-image: linear-gradient(
+          to right,
+          transparent,
+          black 15%,
+          black 85%,
+          transparent
+        );
       }
 
       .carousel-track {
@@ -257,8 +269,12 @@
       }
 
       @keyframes scroll-left {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-50%); }
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
       }
 
       .avatar-circle {
@@ -791,8 +807,8 @@
           Her hafta aynı döngü — yalnız başına.
         </p>
         <p>
-          Seni tanırız. Ne istediğini anlarız.<br />
-          Sonra sana üç kişi getiririz — özenle, bilerek.
+          Mira seni tanır. Ne istediğini anlar.<br />
+          Sonra sana üç kişi getiririz — özenle seçilmiş.
         </p>
         <p>Her hafta biraz daha iyi</p>
       </div>
