@@ -386,7 +386,7 @@ const i18n = {
       profile_manage: "manage subscription",
       profile_manage_info: "subscription management will be available soon",
       profile_cancel: "cancel plan",
-      profile_cancel_confirm: "are you sure you want to cancel blindside+?",
+      profile_cancel_confirm: "are you sure you want to cancel Mira+?",
       profile_feat_packs: "all packs",
       profile_feat_insights: "deep insights",
       profile_feat_advisor: "AI advisor",
@@ -425,7 +425,7 @@ const i18n = {
       vibe_100_intro:
         "<strong>Every. Single. One.</strong> You matched on all of them. This is either beautiful or terrifying. Probably both.",
       // Premium
-      premium_title: "unlock blindside+",
+      premium_title: "unlock Mira+",
       premium_subtitle: "go deeper with your person",
       premium_price: "$4.99",
       premium_period: "/month",
@@ -438,13 +438,13 @@ const i18n = {
       premium_feature_unlimited: "unlimited sessions",
       premium_social_proof: "12,400+ couples upgraded this month",
       premium_lock_label: "pro",
-      premium_banner_text: "this pack is part of blindside+",
+      premium_banner_text: "this pack is part of Mira+",
       premium_limited: "limited time — 50% off",
       premium_guarantee: "loved by 94% of couples who tried it",
       premium_trial_note: "cancel anytime — no charge during trial",
       // Insights & Advisor
       insights_title: "deep insights",
-      insights_unlock: "unlock deep insights with blindside+",
+      insights_unlock: "unlock deep insights with Mira+",
       insights_coming_soon:
         "full insights launching soon — you'll be first to know",
       insight_communication: "communication style match",
@@ -456,7 +456,7 @@ const i18n = {
       insight_next_steps: "personalized next steps",
       insight_strengths: "your core strengths",
       advisor_title: "AI advisor",
-      advisor_unlock: "get personalized advice with blindside+",
+      advisor_unlock: "get personalized advice with Mira+",
       advisor_coming_soon: "AI advisor launching soon — stay tuned",
       advisor_teaser_msg:
         "based on your answers, i noticed something interesting about how you two communicate...",
@@ -927,7 +927,7 @@ const i18n = {
       profile_manage_info: "abonelik yönetimi yakında kullanılabilir olacak",
       profile_cancel: "planı iptal et",
       profile_cancel_confirm:
-        "blindside+ iptal etmek istediğinize emin misiniz?",
+        "Mira+ iptal etmek istediğinize emin misiniz?",
       profile_feat_packs: "tüm paketler",
       profile_feat_insights: "derin analizler",
       profile_feat_advisor: "AI danışman",
@@ -962,7 +962,7 @@ const i18n = {
       vibe_100_intro:
         "<strong>Her. Bir. Tanesi.</strong> Hepsinde eşleştiniz. Bu ya güzel ya da korkutucu. Muhtemelen ikisi de.",
       // Premium
-      premium_title: "blindside+ aç",
+      premium_title: "Mira+ aç",
       premium_subtitle: "ilişkinizi derinleştirin",
       premium_price: "$4.99",
       premium_period: "/ay",
@@ -975,13 +975,13 @@ const i18n = {
       premium_feature_unlimited: "sınırsız oturum",
       premium_social_proof: "bu ay 12.400+ çift yükseltti",
       premium_lock_label: "pro",
-      premium_banner_text: "bu paket blindside+ kapsamında",
+      premium_banner_text: "bu paket Mira+ kapsamında",
       premium_limited: "sınırlı süre — %50 indirim",
       premium_guarantee: "deneyen çiftlerin %94'ü tarafından sevildi",
       premium_trial_note:
         "istediğin zaman iptal et — deneme süresince ücret yok",
       insights_title: "derin analizler",
-      insights_unlock: "blindside+ ile derin analizlerin kilidini aç",
+      insights_unlock: "Mira+ ile derin analizlerin kilidini aç",
       insights_coming_soon: "tam analizler yakında — ilk sen öğreneceksin",
       insight_communication: "iletişim tarzı uyumu",
       insight_compatibility: "duygusal uyumluluk puanı",
@@ -992,7 +992,7 @@ const i18n = {
       insight_next_steps: "kişiselleştirilmiş sonraki adımlar",
       insight_strengths: "temel güçlü yönlerin",
       advisor_title: "AI danışman",
-      advisor_unlock: "blindside+ ile kişisel tavsiye al",
+      advisor_unlock: "Mira+ ile kişisel tavsiye al",
       advisor_coming_soon: "AI danışman yakında — takipte kal",
       advisor_teaser_msg:
         "cevaplarınıza dayanarak, ikinizin iletişim şekli hakkında ilginç bir şey fark ettim...",
@@ -1448,7 +1448,7 @@ const i18n = {
       profile_manage: "จัดการการสมัคร",
       profile_manage_info: "การจัดการการสมัครจะพร้อมใช้งานเร็วๆ นี้",
       profile_cancel: "ยกเลิกแผน",
-      profile_cancel_confirm: "คุณแน่ใจหรือว่าต้องการยกเลิก blindside+?",
+      profile_cancel_confirm: "คุณแน่ใจหรือว่าต้องการยกเลิก Mira+?",
       profile_feat_packs: "ทุกแพ็ค",
       profile_feat_insights: "วิเคราะห์เชิงลึก",
       profile_feat_advisor: "ที่ปรึกษา AI",
@@ -1483,7 +1483,7 @@ const i18n = {
       vibe_100_intro:
         "<strong>ทุก. คำถาม. เลย.</strong> ตรงกันหมด นี่มันสวยงามหรือน่ากลัว อาจจะทั้งสองอย่าง",
       // Premium
-      premium_title: "ปลดล็อก blindside+",
+      premium_title: "ปลดล็อก Mira+",
       premium_subtitle: "ลึกซึ้งยิ่งขึ้นกับคนของคุณ",
       premium_price: "$4.99",
       premium_period: "/เดือน",
@@ -1496,12 +1496,12 @@ const i18n = {
       premium_feature_unlimited: "เซสชันไม่จำกัด",
       premium_social_proof: "12,400+ คู่อัปเกรดเดือนนี้",
       premium_lock_label: "pro",
-      premium_banner_text: "แพ็คนี้อยู่ใน blindside+",
+      premium_banner_text: "แพ็คนี้อยู่ใน Mira+",
       premium_limited: "เวลาจำกัด — ลด 50%",
       premium_guarantee: "94% ของคู่รักที่ลองแล้วชอบ",
       premium_trial_note: "ยกเลิกได้ตลอดเวลา — ไม่เสียค่าใช้จ่ายระหว่างทดลอง",
       insights_title: "วิเคราะห์เชิงลึก",
-      insights_unlock: "ปลดล็อกการวิเคราะห์เชิงลึกกับ blindside+",
+      insights_unlock: "ปลดล็อกการวิเคราะห์เชิงลึกกับ Mira+",
       insights_coming_soon: "การวิเคราะห์เต็มรูปแบบเปิดตัวเร็วๆ นี้",
       insight_communication: "ความเข้ากันของสไตล์การสื่อสาร",
       insight_compatibility: "คะแนนความเข้ากันทางอารมณ์",
@@ -1512,7 +1512,7 @@ const i18n = {
       insight_next_steps: "ขั้นตอนถัดไปส่วนบุคคล",
       insight_strengths: "จุดแข็งหลักของคุณ",
       advisor_title: "ที่ปรึกษา AI",
-      advisor_unlock: "รับคำแนะนำส่วนตัวกับ blindside+",
+      advisor_unlock: "รับคำแนะนำส่วนตัวกับ Mira+",
       advisor_coming_soon: "ที่ปรึกษา AI เปิดตัวเร็วๆ นี้",
       advisor_teaser_msg:
         "จากคำตอบของคุณ ฉันสังเกตเห็นสิ่งที่น่าสนใจเกี่ยวกับวิธีการสื่อสารของคุณสองคน...",

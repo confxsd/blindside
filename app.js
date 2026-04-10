@@ -814,7 +814,7 @@ function shareInvite(method) {
   const url = getInviteUrl();
   const text = 'take this blind quiz with me!';
   if (method === 'share' && navigator.share) {
-    navigator.share({ title: 'blindside.', text, url }).catch(() => {});
+    navigator.share({ title: 'Mira', text, url }).catch(() => {});
   } else if (method === 'whatsapp') {
     window.open('https://wa.me/?text=' + encodeURIComponent(text + ' ' + url));
   } else if (method === 'sms') {
@@ -1103,7 +1103,7 @@ function renderProfile() {
       <div class="profile-plan-top">
         <div class="profile-plan-icon">+</div>
         <div>
-          <div class="profile-plan-name">blindside+</div>
+          <div class="profile-plan-name">Mira+</div>
           <div class="profile-plan-badge">${i18n.t('profile_plan_active')}</div>
         </div>
       </div>
@@ -1181,7 +1181,7 @@ function renderProfile() {
     <!-- Profile Building Card -->
     <div class="profile-build-card">
       <div class="profile-build-header">
-        <div class="profile-build-badge">🧬 your blindside profile</div>
+        <div class="profile-build-badge">🧬 Mira profil</div>
       </div>
       <div class="profile-build-progress">
         <div class="profile-build-bar">
@@ -2352,7 +2352,7 @@ function renderVibeCard(report, pct, vibeTitle, myName, partnerName) {
         </div>
 
         <div class="vc-footer">
-          <span class="vc-brand">blindside.</span>
+          <span class="vc-brand">Mira</span>
           ${report.vibe_tag ? `<span class="vc-tag">${report.vibe_tag}</span>` : ''}
         </div>
       </div>
@@ -2411,7 +2411,7 @@ function renderFallbackCard(pct, vibeTitle, myName, partnerName) {
           <div class="vc-pct">${pct}%</div>
           <div class="vc-vibe">${vibeTitle}</div>
         </div>
-        <div class="vc-footer"><span class="vc-brand">blindside.</span></div>
+        <div class="vc-footer"><span class="vc-brand">Mira</span></div>
       </div>
     </div>
   `;
@@ -2813,7 +2813,7 @@ async function buildSoloReceipt() {
     </div>
     ${answersHtml}
     <div class="story-outro">
-      <div class="story-brand">blindside.</div>
+      <div class="story-brand">Mira</div>
       <div class="story-date">${dateStr}</div>
     </div>
     <div class="story-actions">
@@ -2932,9 +2932,9 @@ function shareReceipt() {
   const shareText = _lastVibeReport?.share_text || 'We just did a blind reveal — check our results!';
   if (navigator.share) {
     navigator.share({
-      title: 'blindside. vibe check',
+      title: 'Mira',
       text: shareText,
-      url: 'https://blindside.to'
+      url: 'https://Mirato'
     }).catch(() => {});
   } else {
     const btn = event.target;
