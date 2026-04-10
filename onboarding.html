@@ -604,271 +604,165 @@
       </div>
 
       <div id="formWrap">
-        <!-- STEP 1: Basics -->
+        <!-- STEP 1: Register (simple) -->
         <div class="form-step active" data-step="1">
           <div class="step-header">
-            <h1>Önce seni tanıyalım.</h1>
-            <p>Temel birkaç bilgiyle başlayalım. Sonrası daha eğlenceli.</p>
+            <h1>Seni taniyalim.</h1>
+            <p>Hesap olustur, gerisini birlikte hallederiz.</p>
           </div>
 
           <div class="field">
-            <label>Adın</label>
-            <input
-              type="text"
-              id="name"
-              placeholder="Adın"
-              autocomplete="given-name"
-              required
-            />
+            <label>Adin</label>
+            <input type="text" id="name" placeholder="Adin" autocomplete="given-name" required />
+          </div>
+
+          <div class="field">
+            <label>E-posta</label>
+            <input type="email" id="email" placeholder="ornek@email.com" autocomplete="email" required />
+          </div>
+
+          <div class="field">
+            <label>Sifre</label>
+            <input type="password" id="password" placeholder="En az 4 karakter" autocomplete="new-password" required />
+          </div>
+
+          <div id="authError" style="color:#dc2626;font-size:12px;min-height:18px;margin-top:4px"></div>
+
+          <div class="form-actions">
+            <button type="button" class="btn btn-primary" id="toStep2">Hesap olustur</button>
+          </div>
+
+          <p style="font-size:12px;color:var(--text-dim);text-align:center;margin-top:16px">
+            Profilini sonra tamamlayabilirsin.
+          </p>
+        </div>
+
+        <!-- STEP 2: Basics (age, gender, neighborhood) -->
+        <div class="form-step" data-step="2">
+          <div class="step-header">
+            <h1>Temel bilgiler.</h1>
+            <p>Sana uygun birini bulmamiz icin birkaç bilgi.</p>
           </div>
 
           <div class="field-row">
             <div class="field">
-              <label>Yaşın</label>
-              <input
-                type="number"
-                id="age"
-                placeholder="28"
-                min="18"
-                max="60"
-                autocomplete="off"
-                required
-              />
+              <label>Yasin</label>
+              <input type="number" id="age" placeholder="28" min="18" max="60" autocomplete="off" required />
             </div>
             <div class="field">
               <label>Cinsiyet</label>
               <div class="gender-pills" id="genderPills">
                 <div class="gender-pill" data-value="male">Erkek</div>
-                <div class="gender-pill" data-value="female">Kadın</div>
-                <div class="gender-pill" data-value="other">Diğer</div>
+                <div class="gender-pill" data-value="female">Kadin</div>
+                <div class="gender-pill" data-value="other">Diger</div>
               </div>
             </div>
           </div>
 
           <div class="field">
-            <label>Nerelisin (Istanbul)?</label>
+            <label>Semt (Istanbul)</label>
             <select id="neighborhood" required>
-              <option value="" disabled selected>Semt seç</option>
-              <option value="kadikoy">Kadıköy</option>
-              <option value="besiktas">Beşiktaş</option>
+              <option value="" disabled selected>Semt sec</option>
+              <option value="kadikoy">Kadikoy</option>
+              <option value="besiktas">Besiktas</option>
               <option value="cihangir">Cihangir</option>
-              <option value="nisantasi">Nişantaşı</option>
+              <option value="nisantasi">Nisantasi</option>
               <option value="moda">Moda</option>
-              <option value="uskudar">Üsküdar</option>
-              <option value="beyoglu">Beyoğlu</option>
-              <option value="other">Diğer</option>
+              <option value="uskudar">Uskudar</option>
+              <option value="beyoglu">Beyoglu</option>
+              <option value="other">Diger</option>
             </select>
           </div>
 
           <div class="form-actions">
-            <button type="button" class="btn btn-primary" id="toStep2">
-              Devam et
-            </button>
+            <button type="button" class="btn btn-primary" id="toStep3">Devam et</button>
           </div>
         </div>
 
-        <!-- STEP 2: Values & Lifestyle -->
-        <div class="form-step" data-step="2">
+        <!-- STEP 3: Values & Lifestyle -->
+        <div class="form-step" data-step="3">
           <div class="step-header">
-            <h1>Biraz daha yakından.</h1>
-            <p>
-              Seni tanımak için birkaç soru. Doğru ya da yanlış yok — sadece
-              sen.
-            </p>
+            <h1>Biraz daha yakindan.</h1>
+            <p>Dogru ya da yanlis yok — sadece sen.</p>
           </div>
 
           <div class="pill-group">
-            <div class="pill-group-label">Seni en iyi tanımlayan üç şey?</div>
-            <div class="pill-group-hint">En fazla 3 seç</div>
+            <div class="pill-group-label">Seni en iyi tanimlayan uc sey?</div>
+            <div class="pill-group-hint">En fazla 3 sec</div>
             <div class="pills" data-group="traits" data-max="3">
-              <div class="pill">Meraklı</div>
+              <div class="pill">Merakli</div>
               <div class="pill">Sakin</div>
               <div class="pill">Enerjik</div>
-              <div class="pill">Düşünceli</div>
-              <div class="pill">Maceracı</div>
-              <div class="pill">Yaratıcı</div>
-              <div class="pill">Kararlı</div>
+              <div class="pill">Dusunceli</div>
+              <div class="pill">Maceraci</div>
+              <div class="pill">Yaratici</div>
+              <div class="pill">Kararli</div>
               <div class="pill">Empatik</div>
             </div>
           </div>
 
           <div class="pill-group">
-            <div class="pill-group-label">Hafta sonu nasıl geçer?</div>
-            <div class="pill-group-hint">En fazla 3 seç</div>
+            <div class="pill-group-label">Hafta sonu nasil gecer?</div>
+            <div class="pill-group-hint">En fazla 3 sec</div>
             <div class="pills" data-group="weekend" data-max="3">
-              <div class="pill">Doğada</div>
+              <div class="pill">Dogada</div>
               <div class="pill">Kafede kitapla</div>
-              <div class="pill">Arkadaşlarla dışarıda</div>
+              <div class="pill">Arkadaslarla disarida</div>
               <div class="pill">Evde film</div>
               <div class="pill">Spor</div>
-              <div class="pill">Yeni bir yer keşfetmek</div>
+              <div class="pill">Yeni bir yer kesfetmek</div>
             </div>
           </div>
 
           <div class="pill-group">
-            <div class="pill-group-label">Bir ilişkide en önemli şey?</div>
-            <div class="pill-group-hint">En fazla 2 seç</div>
+            <div class="pill-group-label">Bir iliskide en onemli sey?</div>
+            <div class="pill-group-hint">En fazla 2 sec</div>
             <div class="pills" data-group="values" data-max="2">
-              <div class="pill">Güven</div>
-              <div class="pill">İletişim</div>
+              <div class="pill">Guven</div>
+              <div class="pill">Iletisim</div>
               <div class="pill">Mizah</div>
-              <div class="pill">Bağımsızlık</div>
+              <div class="pill">Bagimsizlik</div>
               <div class="pill">Samimiyet</div>
-              <div class="pill">Ortak değerler</div>
+              <div class="pill">Ortak degerler</div>
             </div>
           </div>
 
           <div class="form-actions">
-            <button type="button" class="btn btn-back" id="backTo1">
-              Geri
-            </button>
-            <button type="button" class="btn btn-primary" id="toStep3">
-              Devam et
-            </button>
+            <button type="button" class="btn btn-back" id="backTo2">Geri</button>
+            <button type="button" class="btn btn-primary" id="toStep4">Devam et</button>
           </div>
         </div>
 
-        <!-- STEP 3: What you're looking for -->
-        <div class="form-step" data-step="3">
-          <div class="step-header">
-            <h1>Kimi arıyorsun?</h1>
-            <p>
-              Tam bir tarif beklemiyor — ama ne istediğini anlamak istiyoruz.
-            </p>
-          </div>
-
-          <div class="field">
-            <label>Yaş aralığı</label>
-            <div class="age-range">
-              <input
-                type="number"
-                id="ageMin"
-                placeholder="24"
-                min="18"
-                max="60"
-              />
-              <span class="age-range-sep">—</span>
-              <input
-                type="number"
-                id="ageMax"
-                placeholder="34"
-                min="18"
-                max="60"
-              />
-            </div>
-          </div>
-
-          <div class="field">
-            <label>Nasıl biri seni mutlu eder?</label>
-            <textarea
-              id="idealPerson"
-              placeholder="Birkaç cümleyle anlat. Neye değer verir, nasıl konuşur, yanında olmak nasıl hissettirir?"
-            ></textarea>
-            <p class="field-hint">
-              Fiziksel değil — kişilik olarak düşün. 2–3 cümle yeterli.
-            </p>
-          </div>
-
-          <div class="field">
-            <label>Kesinlikle olmaması gereken şey?</label>
-            <textarea
-              id="dealbreaker"
-              placeholder="Kısa ve net. Neyi tolere edemezsin?"
-            ></textarea>
-          </div>
-
-          <div class="form-actions">
-            <button type="button" class="btn btn-back" id="backTo2">
-              Geri
-            </button>
-            <button type="button" class="btn btn-primary" id="toStep4">
-              Devam et
-            </button>
-          </div>
-        </div>
-
-        <!-- STEP 4: Contact & Vouch -->
+        <!-- STEP 4: What you're looking for -->
         <div class="form-step" data-step="4">
           <div class="step-header">
-            <h1>Son bir adım.</h1>
-            <p>Sana ulaşabilmemiz ve sürecin başlaması için.</p>
+            <h1>Kimi ariyorsun?</h1>
+            <p>Tam bir tarif beklemiyor — ama ne istedigini anlamak istiyoruz.</p>
           </div>
 
           <div class="field">
-            <label>Kullanıcı adın</label>
-            <input
-              type="text"
-              id="username"
-              placeholder="kullaniciadi"
-              autocomplete="username"
-              required
-            />
-            <p class="field-hint">Oyunlarda ve profilinde görünecek.</p>
-          </div>
-
-          <div class="field">
-            <label>Şifre</label>
-            <input
-              type="password"
-              id="password"
-              placeholder="En az 4 karakter"
-              autocomplete="new-password"
-              required
-            />
-          </div>
-
-          <div class="field">
-            <label>E-posta adresin</label>
-            <input
-              type="email"
-              id="email"
-              placeholder="ornek@email.com"
-              autocomplete="email"
-              required
-            />
-            <p class="field-hint">
-              Her Pazartesi önerilerin buraya gelecek. Spam yok, söz.
-            </p>
-          </div>
-
-          <div id="authError" style="color:#dc2626;font-size:12px;min-height:18px;margin-bottom:8px"></div>
-
-          <div class="optional-section">
-            <div class="optional-label">Bonus: Arkadaşın</div>
-            <p class="optional-desc">
-              Bir arkadaşın seni tanıtırsa profilin öne çıkar. Seni anlatabilen
-              birinin adını ve e-postasını bırak — ona bir davet gönderelim.
-            </p>
-
-            <div class="field-row">
-              <div class="field">
-                <label>Arkadaşının adı</label>
-                <input
-                  type="text"
-                  id="vouchName"
-                  placeholder="Adı"
-                  autocomplete="off"
-                />
-              </div>
-              <div class="field">
-                <label>E-postası</label>
-                <input
-                  type="email"
-                  id="vouchEmail"
-                  placeholder="ornek@email.com"
-                  autocomplete="off"
-                />
-              </div>
+            <label>Yas araligi</label>
+            <div class="age-range">
+              <input type="number" id="ageMin" placeholder="24" min="18" max="60" />
+              <span class="age-range-sep">—</span>
+              <input type="number" id="ageMax" placeholder="34" min="18" max="60" />
             </div>
           </div>
 
+          <div class="field">
+            <label>Nasil biri seni mutlu eder?</label>
+            <textarea id="idealPerson" placeholder="Birkac cumleyle anlat. Neye deger verir, nasil konusur, yaninda olmak nasil hissettirir?"></textarea>
+            <p class="field-hint">Fiziksel degil — kisilik olarak dusun.</p>
+          </div>
+
+          <div class="field">
+            <label>Kesinlikle olmamasi gereken sey?</label>
+            <textarea id="dealbreaker" placeholder="Kisa ve net. Neyi tolere edemezsin?"></textarea>
+          </div>
+
           <div class="form-actions">
-            <button type="button" class="btn btn-back" id="backTo3">
-              Geri
-            </button>
-            <button type="button" class="btn btn-primary" id="submitForm">
-              Tamamla
-            </button>
+            <button type="button" class="btn btn-back" id="backTo3">Geri</button>
+            <button type="button" class="btn btn-primary" id="submitForm">Tamamla</button>
           </div>
         </div>
       </div>
@@ -1003,63 +897,28 @@
         });
       });
 
-      // Step navigation
-      document.getElementById("toStep2").addEventListener("click", () => {
+      let authUserId = null;
+
+      // ===== STEP 1: Create account =====
+      document.getElementById("toStep2").addEventListener("click", async () => {
         const name = document.getElementById("name").value.trim();
-        const age = document.getElementById("age").value;
-        const hood = document.getElementById("neighborhood").value;
-        if (!name || !age || !selectedGender || !hood) return;
-        showStep(2);
-      });
-
-      document.getElementById("toStep3").addEventListener("click", () => {
-        const traits = document.querySelectorAll('[data-group="traits"] .pill.selected').length;
-        const weekend = document.querySelectorAll('[data-group="weekend"] .pill.selected').length;
-        const values = document.querySelectorAll('[data-group="values"] .pill.selected').length;
-        if (traits === 0 || weekend === 0 || values === 0) return;
-        showStep(3);
-      });
-
-      document.getElementById("toStep4").addEventListener("click", () => {
-        const ideal = document.getElementById("idealPerson").value.trim();
-        if (!ideal) return;
-        showStep(4);
-      });
-
-      document.getElementById("backTo1").addEventListener("click", () => showStep(1));
-      document.getElementById("backTo2").addEventListener("click", () => showStep(2));
-      document.getElementById("backTo3").addEventListener("click", () => showStep(3));
-
-      // ===== SUBMIT: Create account + save profile =====
-      document.getElementById("submitForm").addEventListener("click", async () => {
-        const username = document.getElementById("username").value.trim();
-        const password = document.getElementById("password").value;
         const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value;
         const errorEl = document.getElementById("authError");
         errorEl.textContent = '';
 
-        if (!username || username.length < 2) {
-          errorEl.textContent = 'Kullanici adi en az 2 karakter olmali.';
-          return;
-        }
-        if (!password || password.length < 4) {
-          errorEl.textContent = 'Sifre en az 4 karakter olmali.';
-          return;
-        }
-        if (!email || !email.includes("@")) {
-          errorEl.textContent = 'Gecerli bir e-posta gir.';
-          return;
-        }
+        if (!name || name.length < 2) { errorEl.textContent = 'Adin en az 2 karakter olmali.'; return; }
+        if (!email || !email.includes("@")) { errorEl.textContent = 'Gecerli bir e-posta gir.'; return; }
+        if (!password || password.length < 4) { errorEl.textContent = 'Sifre en az 4 karakter olmali.'; return; }
 
-        // Disable button
-        const btn = document.getElementById("submitForm");
-        const origText = btn.textContent;
+        const btn = document.getElementById("toStep2");
         btn.disabled = true;
-        btn.innerHTML = '<span class="auth-spinner"></span> Hesap olusturuluyor...';
+        btn.innerHTML = '<span class="auth-spinner"></span> Olusturuluyor...';
 
         try {
-          // Create account via Blindside API
-          const res = await fetch(API + '/auth', {
+          // Use name as username for the Blindside API
+          const username = name.toLowerCase().replace(/[^a-z0-9]/g, '') + Math.floor(Math.random() * 100);
+          const res = await fetch(AUTH_API + '/auth', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ username, password })
@@ -1069,79 +928,112 @@
           if (data.error) {
             errorEl.textContent = data.error;
             btn.disabled = false;
-            btn.textContent = origText;
+            btn.textContent = 'Hesap olustur';
             return;
           }
 
-          // Store auth in localStorage (same keys as app.js)
+          authUserId = data.user.id;
           localStorage.setItem('bs-user', JSON.stringify(data.user));
           localStorage.setItem('bs-user-id', data.user.id);
           localStorage.removeItem('bs-guest');
 
-          // Collect profile data
-          const getSelected = (group) =>
-            Array.from(document.querySelectorAll(`[data-group="${group}"] .pill.selected`))
-              .map((p) => p.textContent);
+          // Save minimal profile to localStorage immediately
+          localStorage.setItem('mira-profile', JSON.stringify({
+            name, email, username, userId: data.user.id,
+            referral: pendingReferral ? { code: pendingReferral.code, referrerName: pendingReferral.referrerName } : null,
+            createdAt: new Date().toISOString()
+          }));
 
-          const profileData = {
-            name: document.getElementById("name").value.trim(),
-            age: parseInt(document.getElementById("age").value),
-            gender: selectedGender,
-            neighborhood: document.getElementById("neighborhood").value,
-            traits: getSelected("traits"),
-            weekend: getSelected("weekend"),
-            values: getSelected("values"),
-            ageMin: parseInt(document.getElementById("ageMin").value) || null,
-            ageMax: parseInt(document.getElementById("ageMax").value) || null,
-            idealPerson: document.getElementById("idealPerson").value.trim(),
-            dealbreaker: document.getElementById("dealbreaker").value.trim(),
-            email: email,
-            username: username,
-            phone: document.getElementById("phone").value.trim(),
-            referredBy: pendingReferral ? pendingReferral.code : null,
-            referrerName: pendingReferral ? pendingReferral.referrerName : null,
-          };
-
-          // Save profile to DB
-          try {
-            await fetch(LOCAL_API + '/profiles', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json', 'X-User-Id': data.user.id },
-              body: JSON.stringify(profileData)
-            });
-          } catch {}
-
-          // Mark invite as joined in DB
+          // Mark invite as joined
           if (pendingReferral && pendingReferral.code) {
-            try {
-              await fetch(LOCAL_API + '/invites/' + encodeURIComponent(pendingReferral.code), {
-                method: 'PUT',
-                headers: { 'Content-Type': 'application/json', 'X-User-Id': data.user.id },
-                body: JSON.stringify({ joinedByName: profileData.name })
-              });
-            } catch {}
+            fetch(LOCAL_API + '/invites/' + encodeURIComponent(pendingReferral.code), {
+              method: 'PUT',
+              headers: { 'Content-Type': 'application/json', 'X-User-Id': data.user.id },
+              body: JSON.stringify({ joinedByName: name })
+            }).catch(() => {});
             localStorage.removeItem('mira-pending-referral');
           }
 
-          // Also keep in localStorage for offline/dashboard use
-          const localProfile = { ...profileData, userId: data.user.id, createdAt: new Date().toISOString() };
-          if (pendingReferral) {
-            localProfile.referral = { code: pendingReferral.code, referrerName: pendingReferral.referrerName };
-          }
-          localStorage.setItem("mira-profile", JSON.stringify(localProfile));
-
-          // Show success
-          document.getElementById("formWrap").style.display = "none";
-          document.getElementById("referralBanner").style.display = "none";
-          document.querySelector(".top-bar").style.display = "none";
-          document.querySelector(".progress-track").style.display = "none";
-          document.getElementById("successState").classList.add("show");
-
+          showStep(2);
         } catch (e) {
           errorEl.textContent = 'Bir hata olustu. Tekrar dene.';
           btn.disabled = false;
-          btn.textContent = origText;
+          btn.textContent = 'Hesap olustur';
         }
+      });
+
+      // ===== STEP 2 → 3 =====
+      document.getElementById("toStep3").addEventListener("click", () => {
+        const age = document.getElementById("age").value;
+        const hood = document.getElementById("neighborhood").value;
+        if (!age || !selectedGender || !hood) return;
+        showStep(3);
+      });
+
+      // ===== STEP 3 → 4 =====
+      document.getElementById("toStep4").addEventListener("click", () => {
+        const traits = document.querySelectorAll('[data-group="traits"] .pill.selected').length;
+        const weekend = document.querySelectorAll('[data-group="weekend"] .pill.selected').length;
+        const values = document.querySelectorAll('[data-group="values"] .pill.selected').length;
+        if (traits === 0 || weekend === 0 || values === 0) return;
+        showStep(4);
+      });
+
+      document.getElementById("backTo2").addEventListener("click", () => showStep(2));
+      document.getElementById("backTo3").addEventListener("click", () => showStep(3));
+
+      // ===== STEP 4: Save full profile =====
+      document.getElementById("submitForm").addEventListener("click", async () => {
+        const btn = document.getElementById("submitForm");
+        btn.disabled = true;
+        btn.innerHTML = '<span class="auth-spinner"></span> Kaydediliyor...';
+
+        const getSelected = (group) =>
+          Array.from(document.querySelectorAll(`[data-group="${group}"] .pill.selected`))
+            .map((p) => p.textContent);
+
+        const profileData = {
+          name: document.getElementById("name").value.trim(),
+          email: document.getElementById("email").value.trim(),
+          username: localStorage.getItem('bs-user') ? JSON.parse(localStorage.getItem('bs-user')).username : '',
+          age: parseInt(document.getElementById("age").value) || null,
+          gender: selectedGender,
+          neighborhood: document.getElementById("neighborhood").value,
+          traits: getSelected("traits"),
+          weekend: getSelected("weekend"),
+          values: getSelected("values"),
+          ageMin: parseInt(document.getElementById("ageMin").value) || null,
+          ageMax: parseInt(document.getElementById("ageMax").value) || null,
+          idealPerson: document.getElementById("idealPerson").value.trim(),
+          dealbreaker: document.getElementById("dealbreaker").value.trim(),
+          referredBy: pendingReferral ? pendingReferral.code : null,
+          referrerName: pendingReferral ? pendingReferral.referrerName : null,
+        };
+
+        const userId = authUserId || localStorage.getItem('bs-user-id');
+
+        // Save to DB
+        try {
+          await fetch(LOCAL_API + '/profiles', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'X-User-Id': userId },
+            body: JSON.stringify(profileData)
+          });
+        } catch {}
+
+        // Update localStorage
+        const localProfile = { ...profileData, userId, createdAt: new Date().toISOString() };
+        if (pendingReferral) {
+          localProfile.referral = { code: pendingReferral.code, referrerName: pendingReferral.referrerName };
+        }
+        localStorage.setItem("mira-profile", JSON.stringify(localProfile));
+
+        // Show success
+        document.getElementById("formWrap").style.display = "none";
+        document.getElementById("referralBanner").style.display = "none";
+        document.querySelector(".top-bar").style.display = "none";
+        document.querySelector(".progress-track").style.display = "none";
+        document.getElementById("successState").classList.add("show");
       });
     </script>
   </body>
