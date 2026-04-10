@@ -402,39 +402,49 @@ html, body, #app {
 /* ===== PACKS INFO BOX ===== */
 .mira-packs-info {
   display: flex;
-  gap: 14px;
+  gap: 16px;
   align-items: flex-start;
-  margin: 0 24px 20px;
-  padding: 18px 20px;
-  background: #eef4ff;
-  border: 1px solid #c7d9f7;
-  border-radius: 12px;
+  margin: 4px 24px 24px;
+  padding: 20px;
+  background: #f0f5ff;
+  border: 1px solid #d4e0f7;
+  border-radius: 16px;
 }
 [data-theme="dark"] .mira-packs-info {
-  background: rgba(37,99,235,0.08);
-  border-color: rgba(37,99,235,0.2);
+  background: rgba(37,99,235,0.06);
+  border-color: rgba(37,99,235,0.15);
 }
 .mira-packs-info-icon {
   flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #dbeafe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #2563EB;
-  margin-top: 1px;
+}
+[data-theme="dark"] .mira-packs-info-icon {
+  background: rgba(37,99,235,0.15);
 }
 .mira-packs-info-title {
   font-size: 14px;
   font-weight: 600;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   color: #0a0a0a;
+  letter-spacing: -0.01em;
 }
 [data-theme="dark"] .mira-packs-info-title {
   color: #f0f0f0;
 }
 .mira-packs-info-text {
   font-size: 13px;
-  color: #555;
-  line-height: 1.6;
+  color: #666;
+  line-height: 1.65;
 }
 [data-theme="dark"] .mira-packs-info-text {
-  color: rgba(255,255,255,0.55);
+  color: rgba(255,255,255,0.5);
 }
 
 /* ===== SEO SECTION HIDE ===== */
