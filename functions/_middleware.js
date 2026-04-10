@@ -33,6 +33,7 @@ const OG_BOT_UA = /bot|crawl|slurp|spider|facebookexternalhit|whatsapp|telegramb
 export async function onRequest(context) {
   const { request } = context;
   const url = new URL(request.url);
+  const ua = request.headers.get('user-agent') || '';
   const joinCode = url.searchParams.get('join');
 
   // Handle ?ref= invite links for OG previews
@@ -65,7 +66,6 @@ export async function onRequest(context) {
     return context.next();
   }
 
-  const ua = request.headers.get('user-agent') || '';
   if (!OG_BOT_UA.test(ua)) {
     return context.next();
   }
