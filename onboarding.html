@@ -26,8 +26,8 @@
         --accent-hover: #333333;
         --blue: #2563eb;
         --blue-light: #dbeafe;
-        --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
-          sans-serif;
+        --font:
+          "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         --ease: cubic-bezier(0.16, 1, 0.3, 1);
       }
 
@@ -631,14 +631,13 @@
           <div class="step-header">
             <h1>Biraz daha yakından.</h1>
             <p>
-              Seni tanımak için birkaç soru. Doğru ya da yanlış yok — sadece sen.
+              Seni tanımak için birkaç soru. Doğru ya da yanlış yok — sadece
+              sen.
             </p>
           </div>
 
           <div class="pill-group">
-            <div class="pill-group-label">
-              Seni en iyi tanımlayan üç şey?
-            </div>
+            <div class="pill-group-label">Seni en iyi tanımlayan üç şey?</div>
             <div class="pill-group-hint">En fazla 3 seç</div>
             <div class="pills" data-group="traits" data-max="3">
               <div class="pill">Meraklı</div>
@@ -666,9 +665,7 @@
           </div>
 
           <div class="pill-group">
-            <div class="pill-group-label">
-              Bir ilişkide en önemli şey?
-            </div>
+            <div class="pill-group-label">Bir ilişkide en önemli şey?</div>
             <div class="pill-group-hint">En fazla 2 seç</div>
             <div class="pills" data-group="values" data-max="2">
               <div class="pill">Güven</div>
@@ -770,18 +767,8 @@
             </p>
           </div>
 
-          <div class="field">
-            <label>Telefon (isteğe bağlı)</label>
-            <input
-              type="tel"
-              id="phone"
-              placeholder="05XX XXX XX XX"
-              autocomplete="tel"
-            />
-          </div>
-
           <div class="optional-section">
-            <div class="optional-label">Bonus: Kefil</div>
+            <div class="optional-label">Bonus: Arkadaşın</div>
             <p class="optional-desc">
               Bir arkadaşın seni tanıtırsa profilin öne çıkar. Seni anlatabilen
               birinin adını ve e-postasını bırak — ona bir davet gönderelim.
@@ -836,15 +823,13 @@
         </div>
         <h2>Seni tanıdık.</h2>
         <p>
-          İlk önerilerini hazırlıyoruz. Her Pazartesi sana üç kişi gelecek —
-          her biri sana göre seçilmiş.
+          İlk önerilerini hazırlıyoruz. Her Pazartesi sana üç kişi gelecek — her
+          biri sana göre seçilmiş.
         </p>
         <p class="success-detail">
           İlk önerilerin birkaç gün içinde e-postana gelecek.
         </p>
-        <a href="/matches.html" class="btn btn-primary"
-          >Önerilerimi gör</a
-        >
+        <a href="/dashboard.html" class="btn btn-primary">Panelime git</a>
       </div>
     </div>
 
@@ -964,9 +949,7 @@
         // Collect all data
         const getSelected = (group) =>
           Array.from(
-            document.querySelectorAll(
-              `[data-group="${group}"] .pill.selected`,
-            ),
+            document.querySelectorAll(`[data-group="${group}"] .pill.selected`),
           ).map((p) => p.textContent);
 
         const profile = {

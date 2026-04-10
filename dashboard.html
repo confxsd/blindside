@@ -1,0 +1,921 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mira — Anasayfa</title>
+    <meta
+      name="description"
+      content="Mira seni tanıyor. Her hafta sana özel üç öneri."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #ffffff;
+        --bg-alt: #f5f5f5;
+        --text: #0a0a0a;
+        --text-mid: #767676;
+        --text-dim: #a0a0a0;
+        --border: #e0e0e0;
+        --accent: #0a0a0a;
+        --accent-hover: #333333;
+        --blue: #2563eb;
+        --blue-light: #dbeafe;
+        --green: #16a34a;
+        --green-light: #dcfce7;
+        --orange: #ea580c;
+        --orange-light: #fff7ed;
+        --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        --ease: cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        -webkit-text-size-adjust: 100%;
+      }
+
+      body {
+        font-family: var(--font);
+        font-size: 15px;
+        line-height: 1.65;
+        color: var(--text);
+        background: var(--bg);
+        font-weight: 400;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        min-height: 100vh;
+      }
+
+      ::selection {
+        background: var(--text);
+        color: var(--bg);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      /* ===== PAGE ===== */
+      .page {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 0 24px 80px;
+      }
+
+      @media (max-width: 720px) {
+        .page {
+          padding: 0 20px 60px;
+        }
+      }
+
+      /* ===== TOP BAR ===== */
+      .top-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+        margin-bottom: 8px;
+      }
+
+      .logo {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--text);
+      }
+
+      .top-actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .invite-link {
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--text-mid);
+        padding: 8px 16px;
+        border: 1px solid var(--border);
+        border-radius: 100px;
+        transition: all 0.3s var(--ease);
+      }
+      .invite-link:hover {
+        border-color: var(--text-mid);
+        color: var(--text);
+      }
+
+      .profile-btn {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: var(--bg-alt);
+        border: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--text-mid);
+        cursor: pointer;
+        transition: all 0.3s var(--ease);
+      }
+      .profile-btn:hover {
+        border-color: var(--text-mid);
+        color: var(--text);
+      }
+
+      /* ===== REVEAL ===== */
+      .reveal {
+        opacity: 0;
+        transform: translateY(16px);
+        transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+      }
+      .reveal.in {
+        opacity: 1;
+        transform: none;
+      }
+      .d1 { transition-delay: 0.1s; }
+      .d2 { transition-delay: 0.2s; }
+      .d3 { transition-delay: 0.3s; }
+      .d4 { transition-delay: 0.4s; }
+      .d5 { transition-delay: 0.5s; }
+
+      /* ===== GREETING ===== */
+      .greeting {
+        padding: 32px 0 40px;
+      }
+
+      .greeting h1 {
+        font-size: clamp(28px, 5vw, 38px);
+        font-weight: 400;
+        letter-spacing: -0.03em;
+        line-height: 1.15;
+        margin-bottom: 8px;
+      }
+
+      .greeting p {
+        font-size: 15px;
+        color: var(--text-mid);
+        line-height: 1.7;
+      }
+
+      /* ===== WEEKLY CARD ===== */
+      .weekly-card {
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: 24px;
+        transition: border-color 0.3s var(--ease);
+      }
+      .weekly-card:hover {
+        border-color: var(--text-mid);
+      }
+
+      .weekly-card-inner {
+        padding: 28px;
+        display: block;
+        cursor: pointer;
+      }
+
+      .weekly-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .weekly-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 11px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--blue);
+        padding: 5px 12px;
+        background: var(--blue-light);
+        border-radius: 100px;
+      }
+
+      .weekly-badge-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--blue);
+        animation: pulse 2s ease-in-out infinite;
+      }
+
+      @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.4; }
+      }
+
+      .weekly-timer {
+        font-size: 12px;
+        color: var(--text-dim);
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .weekly-timer svg {
+        width: 13px;
+        height: 13px;
+      }
+
+      .weekly-title {
+        font-size: 22px;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        line-height: 1.3;
+        margin-bottom: 12px;
+      }
+
+      .weekly-desc {
+        font-size: 14px;
+        color: var(--text-mid);
+        line-height: 1.65;
+        margin-bottom: 24px;
+      }
+
+      /* Mini match previews */
+      .weekly-previews {
+        display: flex;
+        gap: 12px;
+      }
+
+      .weekly-preview {
+        flex: 1;
+        padding: 14px;
+        background: var(--bg-alt);
+        border-radius: 8px;
+        text-align: center;
+      }
+
+      .weekly-preview-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: var(--bg);
+        border: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        font-weight: 500;
+        color: var(--text-mid);
+        margin: 0 auto 8px;
+      }
+
+      .weekly-preview-name {
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--text);
+      }
+
+      .weekly-preview-meta {
+        font-size: 11px;
+        color: var(--text-dim);
+        margin-top: 2px;
+      }
+
+      .weekly-cta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 24px;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--text);
+        padding: 14px;
+        border: 1px solid var(--border);
+        border-radius: 100px;
+        transition: all 0.3s var(--ease);
+      }
+
+      .weekly-cta svg {
+        width: 16px;
+        height: 16px;
+        transition: transform 0.3s var(--ease);
+      }
+
+      .weekly-card:hover .weekly-cta {
+        border-color: var(--text);
+      }
+      .weekly-card:hover .weekly-cta svg {
+        transform: translateX(3px);
+      }
+
+      /* ===== PROFILE CARD ===== */
+      .profile-card {
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 28px;
+        margin-bottom: 24px;
+      }
+
+      .profile-card-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 24px;
+      }
+
+      .profile-card-label {
+        font-size: 11px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--text-dim);
+        margin-bottom: 4px;
+      }
+
+      .profile-card-title {
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+      }
+
+      .profile-completion {
+        text-align: right;
+      }
+
+      .profile-pct {
+        font-size: 24px;
+        font-weight: 300;
+        letter-spacing: -0.04em;
+        line-height: 1;
+        color: var(--text);
+      }
+
+      .profile-pct-label {
+        font-size: 10px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--text-dim);
+        margin-top: 2px;
+      }
+
+      /* Completion bar */
+      .completion-bar {
+        width: 100%;
+        height: 3px;
+        background: var(--border);
+        border-radius: 2px;
+        margin-bottom: 24px;
+        overflow: hidden;
+      }
+
+      .completion-fill {
+        height: 100%;
+        background: var(--blue);
+        border-radius: 2px;
+        transition: width 1.2s var(--ease);
+      }
+
+      /* Profile traits */
+      .profile-traits {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 20px;
+      }
+
+      .profile-trait {
+        padding: 5px 12px;
+        border-radius: 100px;
+        font-size: 12px;
+        color: var(--text-mid);
+        border: 1px solid var(--border);
+      }
+
+      /* Profile details grid */
+      .profile-details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+
+      .profile-detail {
+        padding: 14px 16px;
+        background: var(--bg-alt);
+        border-radius: 8px;
+      }
+
+      .profile-detail-label {
+        font-size: 10px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--text-dim);
+        margin-bottom: 4px;
+      }
+
+      .profile-detail-value {
+        font-size: 15px;
+        font-weight: 500;
+        color: var(--text);
+      }
+
+      /* ===== VOUCH STATUS ===== */
+      .vouch-card {
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 28px;
+        margin-bottom: 24px;
+      }
+
+      .vouch-card-label {
+        font-size: 11px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--text-dim);
+        margin-bottom: 16px;
+      }
+
+      .vouch-status {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 16px 0;
+      }
+
+      .vouch-status + .vouch-status {
+        border-top: 1px solid var(--border);
+      }
+
+      .vouch-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      .vouch-icon svg {
+        width: 16px;
+        height: 16px;
+      }
+
+      .vouch-icon.pending {
+        background: var(--orange-light);
+        color: var(--orange);
+      }
+
+      .vouch-icon.done {
+        background: var(--green-light);
+        color: var(--green);
+      }
+
+      .vouch-icon.empty {
+        background: var(--bg-alt);
+        color: var(--text-dim);
+      }
+
+      .vouch-info {
+        flex: 1;
+      }
+
+      .vouch-name {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--text);
+      }
+
+      .vouch-detail {
+        font-size: 12px;
+        color: var(--text-dim);
+        margin-top: 2px;
+      }
+
+      .vouch-add {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--text-mid);
+        margin-top: 16px;
+        padding-bottom: 2px;
+        border-bottom: 1px solid var(--border);
+        transition: all 0.3s var(--ease);
+      }
+      .vouch-add:hover {
+        color: var(--text);
+        border-color: var(--text);
+      }
+
+      /* ===== STATS ROW ===== */
+      .stats-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        margin-bottom: 24px;
+      }
+
+      .stat-card {
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .stat-num {
+        font-size: 28px;
+        font-weight: 300;
+        letter-spacing: -0.04em;
+        line-height: 1;
+        color: var(--text);
+        margin-bottom: 6px;
+      }
+
+      .stat-label {
+        font-size: 10px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--text-dim);
+      }
+
+      @media (max-width: 480px) {
+        .stats-row {
+          grid-template-columns: 1fr;
+        }
+        .stat-card {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          text-align: left;
+          padding: 16px 20px;
+        }
+        .stat-num {
+          margin-bottom: 0;
+          font-size: 24px;
+        }
+      }
+
+      /* ===== MIRA NOTE ===== */
+      .mira-note {
+        padding: 24px 28px;
+        background: var(--bg-alt);
+        border-radius: 12px;
+        margin-bottom: 24px;
+        position: relative;
+      }
+
+      .mira-note-label {
+        font-size: 10px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--blue);
+        margin-bottom: 8px;
+      }
+
+      .mira-note p {
+        font-size: 14px;
+        color: var(--text);
+        line-height: 1.7;
+        font-style: italic;
+      }
+
+      /* ===== FOOTER ===== */
+      .footer {
+        text-align: center;
+        padding: 40px 0;
+        border-top: 1px solid var(--border);
+      }
+
+      .footer p {
+        font-size: 13px;
+        color: var(--text-dim);
+        line-height: 1.6;
+      }
+
+      .footer a {
+        color: var(--text-mid);
+        border-bottom: 1px solid var(--border);
+        transition: all 0.3s var(--ease);
+      }
+      .footer a:hover {
+        color: var(--text);
+        border-color: var(--text);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="top-bar">
+        <a href="/" class="logo">Mira</a>
+        <div class="top-actions">
+          <a href="/invite.html" class="invite-link">Arkadaşını tanıt</a>
+          <div class="profile-btn" id="profileBtn"></div>
+        </div>
+      </div>
+
+      <!-- Greeting -->
+      <div class="greeting reveal">
+        <h1 id="greetingTitle">Merhaba.</h1>
+        <p id="greetingDesc">
+          Bu hafta sana üç kişi seçtik. Oku, düşün, karar ver.
+        </p>
+      </div>
+
+      <!-- Weekly Matches Card -->
+      <a href="/matches.html" style="text-decoration: none; color: inherit">
+        <div class="weekly-card reveal d1">
+          <div class="weekly-card-inner">
+            <div class="weekly-top">
+              <div class="weekly-badge">
+                <div class="weekly-badge-dot"></div>
+                Yeni öneriler
+              </div>
+              <div class="weekly-timer">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+                6 gün kaldı
+              </div>
+            </div>
+
+            <div class="weekly-title">Bu haftanın önerilerin hazır.</div>
+            <div class="weekly-desc">
+              Üç kişi, her biri senin için düşünülmüş. Karakterlerine bak,
+              kefil notlarını oku, karar ver.
+            </div>
+
+            <div class="weekly-previews" id="matchPreviews">
+              <div class="weekly-preview">
+                <div class="weekly-preview-avatar">E</div>
+                <div class="weekly-preview-name">Elif, 28</div>
+                <div class="weekly-preview-meta">%82 uyum</div>
+              </div>
+              <div class="weekly-preview">
+                <div class="weekly-preview-avatar">D</div>
+                <div class="weekly-preview-name">Deniz, 31</div>
+                <div class="weekly-preview-meta">%74 uyum</div>
+              </div>
+              <div class="weekly-preview">
+                <div class="weekly-preview-avatar">A</div>
+                <div class="weekly-preview-name">Ada, 27</div>
+                <div class="weekly-preview-meta">%68 uyum</div>
+              </div>
+            </div>
+
+            <div class="weekly-cta">
+              Önerileri gör
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14" />
+                <path d="M12 5l7 7-7 7" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Mira Note -->
+      <div class="mira-note reveal d2">
+        <div class="mira-note-label">Mira'dan not</div>
+        <p>
+          İlk haftanın önerileri daha genel olabilir — seni henüz tam
+          tanımıyoruz. Her beğeni ve geçişinle seni daha iyi öğreniriz.
+          Altıncı haftaya kadar sabret.
+        </p>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-row reveal d3">
+        <div class="stat-card">
+          <div class="stat-num">1</div>
+          <div class="stat-label">Hafta</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">3</div>
+          <div class="stat-label">Öneri</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">0</div>
+          <div class="stat-label">Eşleşme</div>
+        </div>
+      </div>
+
+      <!-- Profile Summary -->
+      <div class="profile-card reveal d3">
+        <div class="profile-card-top">
+          <div>
+            <div class="profile-card-label">Profilin</div>
+            <div class="profile-card-title" id="profileName">-</div>
+          </div>
+          <div class="profile-completion">
+            <div class="profile-pct" id="profilePct">0%</div>
+            <div class="profile-pct-label">Tamamlandı</div>
+          </div>
+        </div>
+
+        <div class="completion-bar">
+          <div class="completion-fill" id="completionFill" style="width: 0%"></div>
+        </div>
+
+        <div class="profile-traits" id="profileTraits"></div>
+
+        <div class="profile-details" id="profileDetails">
+          <div class="profile-detail">
+            <div class="profile-detail-label">Semt</div>
+            <div class="profile-detail-value" id="detailHood">-</div>
+          </div>
+          <div class="profile-detail">
+            <div class="profile-detail-label">Yaş</div>
+            <div class="profile-detail-value" id="detailAge">-</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vouch Status -->
+      <div class="vouch-card reveal d4">
+        <div class="vouch-card-label">Kefil durumu</div>
+        <div id="vouchList"></div>
+        <a href="/invite.html" class="vouch-add">
+          Başka birini davet et
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M5 12h14" />
+            <path d="M12 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="footer">
+        <p>
+          <a href="/">Ana sayfa</a> &middot;
+          <a href="/invite.html">Arkadaşını tanıt</a>
+        </p>
+      </div>
+    </div>
+
+    <script>
+      // Load profile from localStorage
+      const profile = JSON.parse(
+        localStorage.getItem("mira-profile") || "{}",
+      );
+
+      // Greeting
+      const hour = new Date().getHours();
+      let timeGreeting = "Merhaba";
+      if (hour < 12) timeGreeting = "Günaydın";
+      else if (hour < 18) timeGreeting = "İyi günler";
+      else timeGreeting = "İyi akşamlar";
+
+      if (profile.name) {
+        document.getElementById("greetingTitle").textContent =
+          `${timeGreeting}, ${profile.name}.`;
+        document.getElementById("profileBtn").textContent = profile.name
+          .charAt(0)
+          .toUpperCase();
+      } else {
+        document.getElementById("greetingTitle").textContent =
+          `${timeGreeting}.`;
+        document.getElementById("profileBtn").textContent = "?";
+      }
+
+      // Profile card
+      const hoodNames = {
+        kadikoy: "Kadıköy",
+        besiktas: "Beşiktaş",
+        cihangir: "Cihangir",
+        nisantasi: "Nişantaşı",
+        moda: "Moda",
+        uskudar: "Üsküdar",
+        beyoglu: "Beyoğlu",
+        other: "Diğer",
+      };
+
+      if (profile.name) {
+        document.getElementById("profileName").textContent = profile.name;
+        document.getElementById("detailAge").textContent = profile.age || "-";
+        document.getElementById("detailHood").textContent =
+          hoodNames[profile.neighborhood] || "-";
+
+        // Traits
+        const traitsEl = document.getElementById("profileTraits");
+        const allTraits = [
+          ...(profile.traits || []),
+          ...(profile.weekend || []),
+          ...(profile.values || []),
+        ];
+        traitsEl.innerHTML = allTraits
+          .map((t) => `<span class="profile-trait">${t}</span>`)
+          .join("");
+
+        // Completion
+        let filled = 0;
+        let total = 8;
+        if (profile.name) filled++;
+        if (profile.age) filled++;
+        if (profile.gender) filled++;
+        if (profile.neighborhood) filled++;
+        if (profile.traits && profile.traits.length) filled++;
+        if (profile.idealPerson) filled++;
+        if (profile.email) filled++;
+        if (profile.vouch && profile.vouch.name) filled++;
+        const pct = Math.round((filled / total) * 100);
+        document.getElementById("profilePct").textContent = pct + "%";
+        setTimeout(() => {
+          document.getElementById("completionFill").style.width = pct + "%";
+        }, 400);
+      }
+
+      // Vouch status
+      const vouchList = document.getElementById("vouchList");
+      if (profile.vouch && profile.vouch.name) {
+        vouchList.innerHTML = `
+          <div class="vouch-status">
+            <div class="vouch-icon pending">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <div class="vouch-info">
+              <div class="vouch-name">${profile.vouch.name}</div>
+              <div class="vouch-detail">Davet gönderildi — yanıt bekleniyor</div>
+            </div>
+          </div>
+        `;
+      } else {
+        vouchList.innerHTML = `
+          <div class="vouch-status">
+            <div class="vouch-icon empty">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <div class="vouch-info">
+              <div class="vouch-name">Henüz kefil yok</div>
+              <div class="vouch-detail">Bir arkadaşın seni tanıtırsa profilin öne çıkar</div>
+            </div>
+          </div>
+        `;
+      }
+
+      // Reveal on load
+      window.addEventListener("load", () => {
+        document
+          .querySelectorAll(".reveal")
+          .forEach((el) => el.classList.add("in"));
+      });
+    </script>
+  </body>
+</html>
