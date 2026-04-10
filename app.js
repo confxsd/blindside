@@ -880,6 +880,12 @@ function setPackMode(mode) {
   document.querySelectorAll('.mode-toggle-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.mode === mode);
   });
+  const infoText = document.getElementById('packsInfoText');
+  if (infoText) {
+    const key = mode === 'self' ? 'packs_info_self' : 'packs_info_partner';
+    infoText.setAttribute('data-i18n', key);
+    infoText.textContent = i18n.t(key);
+  }
   renderPacksFeatured();
   renderCollections();
   renderPacksGridCards();
