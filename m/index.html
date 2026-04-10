@@ -1874,9 +1874,14 @@
                   '<span class="mira-match-badge expiring">⏳ Bitiyor</span>';
               }
 
+              const poolEntry = POOL.find((p) => p.id === m.poolId);
+              const imgSrc = poolEntry?.img || m.img;
+              const avatarInner = imgSrc
+                ? `<img src="${imgSrc}" alt="${m.name}" />`
+                : m.initial;
               return `
               <a href="/matches.html" class="mira-match-card ${isNew ? "is-new" : ""}">
-                <div class="mira-match-avatar">${m.initial}</div>
+                <div class="mira-match-avatar">${avatarInner}</div>
                 <div class="mira-match-body">
                   <div class="mira-match-top">
                     <span class="mira-match-name">${m.name}, ${m.age}</span>
