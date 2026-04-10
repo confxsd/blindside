@@ -35,6 +35,31 @@ export async function onRequest(context) {
   const url = new URL(request.url);
   const joinCode = url.searchParams.get('join');
 
+  // Handle ?ref= invite links for OG previews
+  const refCode = url.searchParams.get('ref');
+  const refBy = url.searchParams.get('by');
+  if (refCode && OG_BOT_UA.test(ua)) {
+    const name = refBy ? decodeURIComponent(refBy) : 'Bir arkadas';
+    const title = `${name} seni Mira'ya davet etti.`;
+    const description = 'Dogru insani hak ediyorsun. Profilini olustur, Mira sana ozel birini bulsun.';
+    const ogImage = `${url.origin}/og-image.png`;
+    const html = `<!DOCTYPE html>
+<html><head>
+  <meta charset="UTF-8"><title>${title}</title>
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="${url.href}">
+  <meta property="og:title" content="${title}">
+  <meta property="og:description" content="${description}">
+  <meta property="og:image" content="${ogImage}">
+  <meta property="og:site_name" content="Mira">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${title}">
+  <meta name="twitter:description" content="${description}">
+  <meta http-equiv="refresh" content="0;url=${url.href}">
+</head><body></body></html>`;
+    return new Response(html, { headers: { 'Content-Type': 'text/html;charset=UTF-8' } });
+  }
+
   // Only intercept requests with ?join= from crawlers/bots
   if (!joinCode) {
     return context.next();

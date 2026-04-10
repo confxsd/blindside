@@ -676,7 +676,7 @@
             <div class="weekly-title">Bu haftanın önerilerin hazır.</div>
             <div class="weekly-desc">
               Üç kişi, her biri senin için düşünülmüş. Karakterlerine bak,
-              kefil notlarını oku, karar ver.
+              arkadas notlarini oku, karar ver.
             </div>
 
             <div class="weekly-previews" id="matchPreviews">
@@ -772,25 +772,46 @@
         </div>
       </div>
 
-      <!-- Vouch Status -->
+      <!-- Referral badge (if user was referred) -->
+      <div class="vouch-card reveal d4" id="referralCard" style="display:none">
+        <div class="vouch-card-label">Davet</div>
+        <div class="vouch-status">
+          <div class="vouch-icon done">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <div class="vouch-info">
+            <div class="vouch-name" id="referredByName">-</div>
+            <div class="vouch-detail">Seni davet etti</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Invite a friend -->
       <div class="vouch-card reveal d4">
-        <div class="vouch-card-label">Kefil durumu</div>
-        <div id="vouchList"></div>
-        <a href="/invite.html" class="vouch-add">
-          Başka birini davet et
-          <svg
-            width="12"
-            height="12"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M5 12h14" />
-            <path d="M12 5l7 7-7 7" />
-          </svg>
+        <div class="vouch-card-label">Arkadas davet et</div>
+        <p style="font-size:13px;color:var(--text-mid);line-height:1.6;margin-bottom:16px">
+          Davet linkini paylas, arkadasin profil olusturduğunda sana bagli olur.
+        </p>
+        <div id="inviteGenSection">
+          <button onclick="generateInviteLink()" style="width:100%;padding:12px;border-radius:100px;border:1px solid var(--border);background:transparent;font-family:var(--font);font-size:13px;font-weight:500;color:var(--text);cursor:pointer;text-transform:uppercase;letter-spacing:0.04em;transition:all 0.3s" id="genInviteBtn">Davet linki olustur</button>
+        </div>
+        <div id="inviteLinkResult" style="display:none">
+          <div style="display:flex;align-items:center;gap:8px;padding:10px 14px;background:var(--bg-alt);border:1px solid var(--border);border-radius:8px;margin-bottom:12px">
+            <span id="dashInviteLink" style="flex:1;font-size:11px;word-break:break-all;color:var(--text);font-weight:500"></span>
+            <button onclick="copyDashInvite()" style="font-family:var(--font);font-size:10px;font-weight:600;padding:5px 12px;border-radius:100px;background:var(--text);color:var(--bg);border:none;cursor:pointer;text-transform:uppercase;letter-spacing:0.06em;white-space:nowrap" id="dashCopyBtn">Kopyala</button>
+          </div>
+          <div style="display:flex;gap:8px">
+            <button onclick="dashShare('whatsapp')" style="flex:1;padding:10px;border-radius:100px;border:1px solid var(--border);background:transparent;font-family:var(--font);font-size:11px;font-weight:500;color:var(--text-mid);cursor:pointer">WhatsApp</button>
+            <button onclick="dashShare('sms')" style="flex:1;padding:10px;border-radius:100px;border:1px solid var(--border);background:transparent;font-family:var(--font);font-size:11px;font-weight:500;color:var(--text-mid);cursor:pointer">SMS</button>
+          </div>
+        </div>
+
+        <!-- Sent invites list -->
+        <div id="sentInvitesList" style="margin-top:16px"></div>
+
+        <a href="/invite.html" class="vouch-add" style="margin-top:16px">
+          Arkadas olarak tanit
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" /><path d="M12 5l7 7-7 7" /></svg>
         </a>
       </div>
 
@@ -875,41 +896,79 @@
         }, 400);
       }
 
-      // Vouch status
-      const vouchList = document.getElementById("vouchList");
-      if (profile.vouch && profile.vouch.name) {
-        vouchList.innerHTML = `
-          <div class="vouch-status">
-            <div class="vouch-icon pending">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"/>
-                <polyline points="12 6 12 12 16 14"/>
-              </svg>
-            </div>
-            <div class="vouch-info">
-              <div class="vouch-name">${profile.vouch.name}</div>
-              <div class="vouch-detail">Davet gönderildi — yanıt bekleniyor</div>
-            </div>
-          </div>
-        `;
-      } else {
-        vouchList.innerHTML = `
-          <div class="vouch-status">
-            <div class="vouch-icon empty">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                <circle cx="9" cy="7" r="4"/>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-              </svg>
-            </div>
-            <div class="vouch-info">
-              <div class="vouch-name">Henüz kefil yok</div>
-              <div class="vouch-detail">Bir arkadaşın seni tanıtırsa profilin öne çıkar</div>
-            </div>
-          </div>
-        `;
+      // Referral display
+      if (profile.referral && profile.referral.referrerName) {
+        const card = document.getElementById('referralCard');
+        card.style.display = '';
+        document.getElementById('referredByName').textContent = profile.referral.referrerName;
       }
+
+      // Invite link generation
+      let dashInviteUrl = '';
+
+      function generateInviteLink() {
+        const name = profile.name || profile.username || 'Arkadas';
+        const code = Math.random().toString(36).substring(2, 10);
+        dashInviteUrl = window.location.origin + '/onboarding.html?ref=' + code + '&by=' + encodeURIComponent(name);
+
+        // Store invite
+        const invites = JSON.parse(localStorage.getItem('mira-invites') || '[]');
+        invites.push({
+          code,
+          referrerName: name,
+          createdAt: new Date().toISOString(),
+          status: 'pending'
+        });
+        localStorage.setItem('mira-invites', JSON.stringify(invites));
+
+        // Show link
+        document.getElementById('inviteGenSection').style.display = 'none';
+        document.getElementById('inviteLinkResult').style.display = 'block';
+        document.getElementById('dashInviteLink').textContent = dashInviteUrl;
+
+        renderSentInvites();
+      }
+
+      function copyDashInvite() {
+        navigator.clipboard.writeText(dashInviteUrl).catch(() => {});
+        const btn = document.getElementById('dashCopyBtn');
+        btn.textContent = 'Kopyalandi!';
+        setTimeout(() => { btn.textContent = 'Kopyala'; }, 2000);
+      }
+
+      function dashShare(method) {
+        const text = 'Mira\'da sana ozel bir davet!';
+        if (method === 'whatsapp') {
+          window.open('https://wa.me/?text=' + encodeURIComponent(text + ' ' + dashInviteUrl));
+        } else if (method === 'sms') {
+          window.open('sms:?body=' + encodeURIComponent(text + ' ' + dashInviteUrl));
+        }
+      }
+
+      // Render sent invites
+      function renderSentInvites() {
+        const invites = JSON.parse(localStorage.getItem('mira-invites') || '[]');
+        const el = document.getElementById('sentInvitesList');
+        if (invites.length === 0) { el.innerHTML = ''; return; }
+
+        el.innerHTML = '<div style="font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.12em;color:var(--text-dim);margin-bottom:8px">Gonderilen davetler</div>' +
+          invites.slice(-5).reverse().map(inv => `
+            <div style="display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border)">
+              <div style="width:28px;height:28px;border-radius:50%;background:var(--bg-alt);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--text-dim);flex-shrink:0">
+                ${inv.friendName ? inv.friendName.charAt(0).toUpperCase() : '?'}
+              </div>
+              <div style="flex:1;min-width:0">
+                <div style="font-size:13px;font-weight:500">${inv.friendName || 'Davet linki'}</div>
+                <div style="font-size:11px;color:var(--text-dim)">${new Date(inv.createdAt).toLocaleDateString('tr-TR')}</div>
+              </div>
+              <div style="font-size:10px;font-weight:600;padding:3px 8px;border-radius:100px;background:${inv.status === 'joined' ? 'var(--green-light)' : 'var(--orange-light)'};color:${inv.status === 'joined' ? 'var(--green)' : 'var(--orange)'};text-transform:uppercase;letter-spacing:0.06em">
+                ${inv.status === 'joined' ? 'Katildi' : 'Bekliyor'}
+              </div>
+            </div>
+          `).join('');
+      }
+
+      renderSentInvites();
 
       // Reveal on load
       window.addEventListener("load", () => {
