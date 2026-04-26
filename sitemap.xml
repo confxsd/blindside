@@ -8,7 +8,7 @@
   </url>
   <url>
     <loc>https://blindside.to/blog/</loc>
-    <lastmod>2026-04-25</lastmod>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -129,6 +129,12 @@
   <url>
     <loc>https://blindside.to/blog/fun-couple-challenges</loc>
     <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://blindside.to/blog/relationship-questions-to-ask-before-marriage</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
