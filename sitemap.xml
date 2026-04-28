@@ -8,7 +8,7 @@
   </url>
   <url>
     <loc>https://blindside.to/blog/</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -141,6 +141,12 @@
   <url>
     <loc>https://blindside.to/blog/how-to-reconnect-with-your-partner</loc>
     <lastmod>2026-04-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://blindside.to/blog/truth-or-dare-couples</loc>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
