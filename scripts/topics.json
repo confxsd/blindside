@@ -139,15 +139,16 @@
       "tag": "Date Night",
       "angle": "Questions that turn an ordinary dinner into an unforgettable date night",
       "date": "2026-05-01"
-    }
-  ],
-  "queue": [
+    },
     {
       "slug": "romantic-games-for-couples",
       "keyword": "romantic games for couples",
       "tag": "Games",
-      "angle": "Games that bring back the butterflies — romantic without being cheesy"
-    },
+      "angle": "Games that bring back the butterflies — romantic without being cheesy",
+      "date": "2026-05-02"
+    }
+  ],
+  "queue": [
     {
       "slug": "couples-therapy-questions",
       "keyword": "couples therapy questions",
