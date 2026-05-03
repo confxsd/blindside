@@ -146,15 +146,16 @@
       "tag": "Games",
       "angle": "Games that bring back the butterflies — romantic without being cheesy",
       "date": "2026-05-02"
-    }
-  ],
-  "queue": [
+    },
     {
       "slug": "couples-therapy-questions",
       "keyword": "couples therapy questions",
       "tag": "Psychology",
-      "angle": "Questions therapists actually ask — try them at home before booking a session"
-    },
+      "angle": "Questions therapists actually ask — try them at home before booking a session",
+      "date": "2026-05-03"
+    }
+  ],
+  "queue": [
     {
       "slug": "never-have-i-ever-couples",
       "keyword": "never have i ever for couples",
