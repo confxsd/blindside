@@ -181,15 +181,16 @@
       "tag": "Games",
       "angle": "The classic Mr & Mrs game — updated questions for modern couples",
       "date": "2026-05-08"
-    }
-  ],
-  "queue": [
+    },
     {
       "slug": "how-to-keep-a-relationship-exciting",
       "keyword": "how to keep a relationship exciting",
       "tag": "Advice",
-      "angle": "The science of novelty — why relationships get boring and how to fix it"
-    },
+      "angle": "The science of novelty — why relationships get boring and how to fix it",
+      "date": "2026-05-09"
+    }
+  ],
+  "queue": [
     {
       "slug": "texting-games-for-couples",
       "keyword": "texting games for couples",
