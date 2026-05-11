@@ -195,15 +195,16 @@
       "tag": "Games",
       "angle": "Fun texting games to play when you can't be together",
       "date": "2026-05-10"
-    }
-  ],
-  "queue": [
+    },
     {
       "slug": "compatibility-test-for-couples",
       "keyword": "compatibility test for couples",
       "tag": "Quizzes",
-      "angle": "Are you actually compatible? These questions reveal the truth"
-    },
+      "angle": "Are you actually compatible? These questions reveal the truth",
+      "date": "2026-05-11"
+    }
+  ],
+  "queue": [
     {
       "slug": "pillow-talk-questions",
       "keyword": "pillow talk questions for couples",
