@@ -202,15 +202,16 @@
       "tag": "Quizzes",
       "angle": "Are you actually compatible? These questions reveal the truth",
       "date": "2026-05-11"
-    }
-  ],
-  "queue": [
+    },
     {
       "slug": "pillow-talk-questions",
       "keyword": "pillow talk questions for couples",
       "tag": "Relationships",
-      "angle": "Quiet bedtime questions that deepen your connection every night"
-    },
+      "angle": "Quiet bedtime questions that deepen your connection every night",
+      "date": "2026-05-12"
+    }
+  ],
+  "queue": [
     {
       "slug": "gottman-method-couples",
       "keyword": "Gottman method for couples",
