@@ -209,15 +209,16 @@
       "tag": "Relationships",
       "angle": "Quiet bedtime questions that deepen your connection every night",
       "date": "2026-05-12"
-    }
-  ],
-  "queue": [
+    },
     {
       "slug": "gottman-method-couples",
       "keyword": "Gottman method for couples",
       "tag": "Psychology",
-      "angle": "The research-backed framework that predicts which couples stay together"
-    },
+      "angle": "The research-backed framework that predicts which couples stay together",
+      "date": "2026-05-15"
+    }
+  ],
+  "queue": [
     {
       "slug": "couples-drinking-games",
       "keyword": "couples drinking games",
