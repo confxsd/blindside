@@ -244,15 +244,16 @@
       "tag": "Games",
       "angle": "200+ this or that questions — from lighthearted to surprisingly deep",
       "date": "2026-05-19"
-    }
-  ],
-  "queue": [
+    },
     {
       "slug": "fun-things-to-do-with-your-partner",
       "keyword": "fun things to do with your partner",
       "tag": "Date Night",
-      "angle": "Beyond the usual — unexpected activities that couples actually love"
-    },
+      "angle": "Beyond the usual — unexpected activities that couples actually love",
+      "date": "2026-05-20"
+    }
+  ],
+  "queue": [
     {
       "slug": "relationship-goals-real-vs-fake",
       "keyword": "relationship goals",
