@@ -293,15 +293,16 @@
       "tag": "Games",
       "angle": "The classic 21 questions game reinvented for couples who want to go deeper",
       "date": "2026-05-26"
-    }
-  ],
-  "queue": [
+    },
     {
       "slug": "how-to-build-trust-in-a-relationship",
       "keyword": "how to build trust in a relationship",
       "tag": "Advice",
-      "angle": "Trust isn't built in grand gestures — it's the small moments that count"
-    },
+      "angle": "Trust isn't built in grand gestures — it's the small moments that count",
+      "date": "2026-05-27"
+    }
+  ],
+  "queue": [
     {
       "slug": "couples-retreat-at-home",
       "keyword": "couples retreat at home",
