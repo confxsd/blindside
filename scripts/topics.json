@@ -314,15 +314,16 @@
       "tag": "Reviews",
       "angle": "Apps that actually help your relationship — honest reviews from real couples",
       "date": "2026-05-29"
-    }
-  ],
-  "queue": [
+    },
     {
       "slug": "what-makes-a-good-relationship",
       "keyword": "what makes a good relationship",
       "tag": "Psychology",
-      "angle": "According to 50 years of research — the traits that matter most"
-    },
+      "angle": "According to 50 years of research — the traits that matter most",
+      "date": "2026-05-30"
+    }
+  ],
+  "queue": [
     {
       "slug": "funny-couple-questions",
       "keyword": "funny questions for couples",
