@@ -321,15 +321,16 @@
       "tag": "Psychology",
       "angle": "According to 50 years of research — the traits that matter most",
       "date": "2026-05-30"
-    }
-  ],
-  "queue": [
+    },
     {
       "slug": "funny-couple-questions",
       "keyword": "funny questions for couples",
       "tag": "Games",
-      "angle": "Questions that will have you both laughing (and maybe arguing about pizza toppings)"
-    },
+      "angle": "Questions that will have you both laughing (and maybe arguing about pizza toppings)",
+      "date": "2026-05-31"
+    }
+  ],
+  "queue": [
     {
       "slug": "relationship-anxiety-signs",
       "keyword": "relationship anxiety",
