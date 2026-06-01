@@ -328,15 +328,16 @@
       "tag": "Games",
       "angle": "Questions that will have you both laughing (and maybe arguing about pizza toppings)",
       "date": "2026-05-31"
-    }
-  ],
-  "queue": [
+    },
     {
       "slug": "relationship-anxiety-signs",
       "keyword": "relationship anxiety",
       "tag": "Psychology",
-      "angle": "When worry takes over — understanding and managing relationship anxiety"
-    },
+      "angle": "When worry takes over — understanding and managing relationship anxiety",
+      "date": "2026-06-01"
+    }
+  ],
+  "queue": [
     {
       "slug": "how-to-be-more-romantic",
       "keyword": "how to be more romantic",
