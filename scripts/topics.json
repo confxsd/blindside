@@ -349,15 +349,16 @@
       "tag": "Date Night",
       "angle": "50 amazing dates that cost less than a takeout order",
       "date": "2026-06-03"
-    }
-  ],
-  "queue": [
+    },
     {
       "slug": "vulnerability-in-relationships",
       "keyword": "vulnerability in relationships",
       "tag": "Psychology",
-      "angle": "Why being vulnerable is the bravest thing you can do for your relationship"
-    },
+      "angle": "Why being vulnerable is the bravest thing you can do for your relationship",
+      "date": "2026-06-04"
+    }
+  ],
+  "queue": [
     {
       "slug": "how-often-should-couples-talk",
       "keyword": "how often should couples talk",
