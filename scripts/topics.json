@@ -370,15 +370,16 @@
       "tag": "Date Night",
       "angle": "Everything you need for the perfect two-player game night at home",
       "date": "2026-06-06"
-    }
-  ],
-  "queue": [
+    },
     {
       "slug": "most-important-questions-relationship",
       "keyword": "most important questions in a relationship",
       "tag": "Relationships",
-      "angle": "The questions that matter most — according to therapists and long-term couples"
-    },
+      "angle": "The questions that matter most — according to therapists and long-term couples",
+      "date": "2026-06-07"
+    }
+  ],
+  "queue": [
     {
       "slug": "green-flags-in-relationships",
       "keyword": "green flags in relationships",
