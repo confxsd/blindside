@@ -405,15 +405,16 @@
       "tag": "Relationships",
       "angle": "Daily and weekly emotional check-ins that keep your relationship healthy",
       "date": "2026-06-12"
-    }
-  ],
-  "queue": [
+    },
     {
       "slug": "couple-communication-games",
       "keyword": "communication games for couples",
       "tag": "Games",
-      "angle": "Games that secretly improve your communication (while being actually fun)"
-    },
+      "angle": "Games that secretly improve your communication (while being actually fun)",
+      "date": "2026-06-13"
+    }
+  ],
+  "queue": [
     {
       "slug": "why-do-couples-stop-talking",
       "keyword": "why do couples stop talking",
