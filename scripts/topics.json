@@ -412,15 +412,16 @@
       "tag": "Games",
       "angle": "Games that secretly improve your communication (while being actually fun)",
       "date": "2026-06-13"
-    }
-  ],
-  "queue": [
+    },
     {
       "slug": "why-do-couples-stop-talking",
       "keyword": "why do couples stop talking",
       "tag": "Psychology",
-      "angle": "The slow drift apart — why it happens and how to reverse it"
-    },
+      "angle": "The slow drift apart — why it happens and how to reverse it",
+      "date": "2026-06-14"
+    }
+  ],
+  "queue": [
     {
       "slug": "best-questions-for-new-couples",
       "keyword": "questions for new couples",
